@@ -23689,3 +23689,19 @@ a.border-link:hover {
 .anchor {
   position: relative;
 }
+
+.main-feature-p {
+  font-size: 1.3rem;
+}
+
+.main-section-div {
+  font-size: 21px;
+  line-height: 34px
+}
+
+
+a.btn.member-social-network {
+  font-size: 1.4rem;
+  width: 2.5rem;
+  height: 2.5rem
+}
