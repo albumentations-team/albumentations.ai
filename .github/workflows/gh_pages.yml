@@ -1,0 +1,37 @@
+name: Build GitHub Pages
+
+on:
+  push:
+    branches: master
+  schedule:
+    - cron:  '0 5 * * *'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout gh-pages
+        uses: actions/checkout@v2
+        with:
+          path: gh_pages
+          ref: gh-pages
+      - name: Build site
+        run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit filesdate +"%Y-%m-%d_%H-%M-%S"
+        run: |
+          cd ${GITHUB_WORKSPACE}/gh_pages
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Build $(date +"%Y-%m-%d %H:%M:%S"). ${GITHUB_SHA::8}. Event: ${GITHUB_EVENT_NAME}."
+      - name: Push changes
+        uses: ad-m/github-push-action@fe38f0a751bf9149f0270cc1fe20bf9156854365
+        with:
+          directory: ${{ github.workspace }}/gh_pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages

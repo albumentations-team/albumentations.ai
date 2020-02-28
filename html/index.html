@@ -1,0 +1,168 @@
+{% extends "_base.html" %}
+{% block title %}Albumentations: fast and flexible image augmentations{% endblock %}{% block extra_title %}{% endblock %}
+{% block content %}
+<div class="container space-top-1 space-top-sm-3 space-bottom-0 space-bottom-sm-2">
+    <div class="row justify-content-lg-between mb-7">
+        <div class="col-12 col-md-7 mb-7 mb-lg-0">
+            <div class="mb-5">
+                <h1 class="h2 font-weight-medium mb-3" style="font-size: 2.5rem">Do more with
+                    less data</h1>
+                <div style="font-size:18px" id="hero-block">
+                    <p>Albumentations is a computer vision tool that boosts the performance of
+                        deep convolutional neural networks.</p>
+                    <p>The library is widely used in <a href="{{ base_url }}/whos_using#industry">industry</a>, <a href="{{ base_url }}/whos_using#research">deep
+                        learning research</a>, <a href="{{ base_url }}/whos_using#competitions">machine learning competitions</a>,
+                        and <a href="{{ base_url }}/whos_using#open-source">open source projects</a>.</p>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-12 col-lg-8 col-xl-7">
+                        <a href="https://github.com/albumentations-team/albumentations" target="_blank" class="btn btn-outline-primary btn-wide mb-0 mb-sm-2 mr-0">
+                        <span class="btn-padding"><i
+                                class="fab fa-github"></i> View on GitHub</span>
+                            <span class="btn-divider-left btn-padding"><i class="fa fa-star"></i> {{ stars_count }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+            <img src="./assets/img/custom/top_image.jpg"
+                 style="width: 350px">
+        </div>
+    </div>
+</div>
+<div class="bg-light">
+    <div class="container space-1 space-lg-1">
+        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-4">
+            <h2 class="font-weight-medium">Why Albumentations</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 main-section-div">
+                Albumentations is a Python library for fast and flexible <a href="#"
+                                                                            style="border-bottom: 1px dotted #377dff"
+                                                                            data-toggle="tooltip"
+                                                                            data-placement="top"
+                                                                            data-boundary="window"
+                                                                            title="Data augmentation is a commonly used technique for increasing both the size and the diversity of labeled training sets by leveraging input transformations that preserve output labels. In computer vision, image augmentations have become a common regularization technique to combat overfitting in deep convolutional neural networks and are ubiquitously used to improve performance on various tasks.">image
+                augmentations</a>. Albumentations efficiently implements a rich variety of
+                image transform operations that are optimized for performance, and does so
+                while providing a concise, yet powerful image augmentation interface for
+                different computer vision tasks, including object classification, segmentation,
+                and detection.
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-features-block">
+    <div class="container space-top-1 space-top-sm-2">
+        <div class="row align-items-lg-center">
+            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                <div class="pr-lg-4">
+                    <h2 class="h3 font-weight-semi-bold">Different tasks</h2>
+                    <p class="mb-0 main-feature-p">Albumentations supports different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, and pose estimation.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6"><img class="img-fluid" src="./assets/img/custom/tasks.jpg"></div>
+        </div>
+    </div>
+    <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-lg-center">
+            <div class="col-12 col-sm-6 order-lg-2 mb-7 mt-2 mb-lg-0">
+                <div class="pl-lg-4">
+                    <h2 class="h3 font-weight-semi-bold">Different domains</h2>
+                    <p class="mb-0 main-feature-p">
+                        Albumentations works well with data from different domains: photos, medical images, satellite imagery, manufacturing and industrial applications, Generative Adversarial Networks.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 order-lg-1">
+                <img src="./assets/img/custom/domains.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-7 mb-7 mb-lg-0">
+                <div class="pr-lg-4">
+                    <h2 class="h3 font-weight-semi-bold">Seamless integration with deep
+                        learning frameworks</h2>
+                    <p class="mb-0 main-feature-p">
+                        Albumentations can work with various deep learning frameworks such as <a href="https://pytorch.org" target="_blank" class="border-link">PyTorch</a> and <a href="https://keras.io/" target="_blank" class="border-link">Keras</a>.
+                        The library is a part of the <a
+                            href="https://pytorch.org/ecosystem/" target="_blank" class="link">PyTorch
+                        ecosystem</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 order-lg-1">
+                <img src="./assets/img/custom/deep_learning_frameworks.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="container space-bottom-1 space-bottom-sm-2">
+        <div class="row align-items-lg-center">
+            <div class="col-lg-9 order-lg-2 mb-7 mt-2 mb-lg-0">
+                <div class="pl-lg-4">
+                    <h2 class="h3 font-weight-semi-bold"> It is free and open source
+                    </h2>
+                    <p class="mb-0 main-feature-p">
+                        Albumentations is MIT licensed. See the <a class="border-link" href="https://github.com/albumentations-team/albumentations" target="_blank">project on GitHub</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 order-lg-1">
+                <img src="./assets/img/custom/github_large.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light">
+    <div class="container space-0 space-sm-1">
+        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-4 mt-4 mt-sm-2">
+            <h2 class="font-weight-medium">Getting started</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 main-section-div">
+                Albumentations requires Python 3.5 or higher. To install the library from PyPI run
+                <div class="p-3 mt-2 mb-2 bg-white"
+                     style="font-size:21px; border: 1px solid #777; border-radius: 0.5rem">pip
+                    install albumentations
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2 mb-2">
+            <div class="col-12 main-section-div">
+                <a class="btn btn-sm btn-primary btn-wide transition-3d-hover mt-1 mb-1 mt-sm-0"
+                   href="https://github.com/albumentations-team/albumentations_examples" target="_blank">View examples<span
+                        class="fas fa-angle-right ml-2"></span></a>
+                <a class="btn btn-sm btn-primary btn-wide transition-3d-hover mt-1 mt-sm-0 mb-1"
+                   href="https://albumentations.readthedocs.io/en/latest/" target="_blank">Open documentation<span
+                        class="fas fa-angle-right ml-2"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

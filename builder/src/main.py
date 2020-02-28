@@ -1,0 +1,124 @@
+import json
+import os
+from urllib.request import urlopen
+
+import click
+import pypandoc as pypandoc
+from PIL import Image
+
+from lib import staticjinja
+from lib.formatters import get_prepared_citations
+from lib.github import GitHubClient
+from lib.parsers import parse_used_by
+
+
+TOP_REPOSITORIES_LIMIT = 10
+CACHE_FILES = ("stars_count.json", "contributors.json", "top_repositories.json", "img_industry.json")
+
+
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+@click.option("--use-reloader", is_flag=True)
+@click.option("--data-dir", type=str, envvar="DATA_DIR", required=True)
+@click.option("--build-dir", type=str, envvar="BUILD_DIR", required=True)
+@click.option("--cache-dir", type=str, envvar="CACHE_DIR", required=True)
+@click.option("--searchpath", type=str, envvar="SEARCHPATH", required=True)
+@click.option("--base-url", type=str, envvar="BASE_URL", required=True)
+def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url):
+
+    for f in CACHE_FILES:
+        if not os.path.exists(os.path.join(cache_dir, f)):
+            raise FileNotFoundError(f"Cached file {f} doesn't exist. Run `make fetch-data` to cache the latest data.")
+
+    with open(os.path.join(cache_dir, "stars_count.json")) as f:
+        stars_count = json.load(f)
+
+    with open(os.path.join(cache_dir, "contributors.json")) as f:
+        contributors = json.load(f)
+
+    with open(os.path.join(cache_dir, "top_repositories.json")) as f:
+        top_repositories = json.load(f)
+
+    with open(os.path.join(cache_dir, "img_industry.json")) as f:
+        img_industry = json.load(f)
+
+    with open(os.path.join(data_dir, "team.json")) as f:
+        team = json.load(f)
+
+    with open(os.path.join(data_dir, "competitions.json")) as f:
+        competitions = json.load(f)
+
+    with open(os.path.join(data_dir, "citations.json")) as f:
+        citations = json.load(f)
+        prepared_citations = get_prepared_citations(citations)
+
+    staticjinja.build(
+        build_dir=build_dir,
+        searchpath=searchpath,
+        staticpaths=["assets/"],
+        use_reloader=use_reloader,
+        env_globals={"base_url": base_url},
+        contexts=[
+            ("index.html", {"stars_count": stars_count}),
+            (
+                "whos_using.html",
+                {
+                    "citations": prepared_citations,
+                    "competitions": competitions,
+                    "top_repositories": top_repositories,
+                    "img_industry": img_industry,
+                },
+            ),
+            ("team.html", {"team": team, "contributors": contributors}),
+        ],
+    )
+
+
+@cli.command()
+@click.option("--github-token", type=str, envvar="GITHUB_TOKEN", required=True)
+@click.option("--data-dir", type=str, envvar="DATA_DIR", required=True)
+@click.option("--cache-dir", type=str, envvar="CACHE_DIR", required=True)
+@click.option("--img-industry-cache-dir", type=str, envvar="IMG_INDUSTRY_CACHE_DIR", required=True)
+@click.option("--repository", envvar="REPOSITORY", required=True)
+def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, repository):
+    client = GitHubClient(access_token=github_token,)
+
+    stars_count = client.get_repository_stars_rounded(repository)
+
+    with open(os.path.join(data_dir, "repo_names.json")) as f:
+        repo_names = json.load(f)
+
+    top_repositories = client.get_top_repositories(repo_names, limit=TOP_REPOSITORIES_LIMIT)
+
+    with open(os.path.join(cache_dir, "top_repositories.json"), "w") as f:
+        json.dump(top_repositories, f)
+
+    with open(os.path.join(cache_dir, "stars_count.json"), "w") as f:
+        json.dump(stars_count, f)
+
+    readme_md = client.get_repository_file_content(repository, "README.md")
+    readme_html = pypandoc.convert_text(readme_md, "html", format="md")
+    used_by = parse_used_by(readme_html)
+
+    with open(os.path.join(cache_dir, "img_industry.json"), "w") as f:
+        json.dump(used_by, f)
+
+    for company in used_by:
+        img = Image.open(urlopen(company["img_url"]))
+        img.save(os.path.join(img_industry_cache_dir, company["img_filename"]))
+
+    with open(os.path.join(data_dir, "team.json")) as f:
+        team = json.load(f)
+        team_github_usernames = [member["github"] for member in team]
+
+    contributors = client.get_contributors(repository=repository, exclude_contributors=team_github_usernames,)
+    with open(os.path.join(cache_dir, "contributors.json"), "w") as f:
+        json.dump(contributors, f)
+
+
+if __name__ == "__main__":
+    cli()

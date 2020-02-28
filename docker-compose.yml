@@ -1,0 +1,41 @@
+version: '3'
+services:
+  builder:
+    container_name: builder
+    build:
+      context: .
+      dockerfile: builder/Dockerfile
+    tty: true
+    environment:
+      - BASE_URL=http://localhost:3000
+      - DATA_DIR=/data
+      - BUILD_DIR=/_build
+      - CACHE_DIR=/_cache
+      - IMG_INDUSTRY_CACHE_DIR=/builder/src/html/assets/img/industry
+      - SEARCHPATH=html
+      - REPOSITORY=albumentations-team/albumentations
+      - GITHUB_TOKEN
+    volumes:
+      - ./data:/data
+      - ./builder/src:/builder/src
+      - ./html:/builder/src/html
+      - _build:/_build
+      - _cache:/_cache
+      - _img_industry_cache:/builder/src/html/assets/img/industry
+    command:
+      build --use-reloader
+  browser_sync:
+    container_name: browser_sync
+    build:
+      context: .
+      dockerfile: ./browser_sync/Dockerfile
+    ports:
+      - "127.0.0.1:${PORT}:3000"
+    tty: true
+    volumes:
+      - _build:/_build
+
+volumes:
+  _build:
+  _cache:
+  _img_industry_cache:
