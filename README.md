@@ -16,7 +16,7 @@ To do that, you need to generate a [personal access token](https://help.github.c
 3. Fetch required data from GitHub API: `GITHUB_TOKEN=<PERSONAL_ACCESS_TOKEN> make fetch-data`, e.g. `GITHUB_TOKEN=123a make fetch-data`.
 4. Start the development server: `make dev`.
 5. Open http://localhost:3000 in your browser to see the current version of the site.
-6. When you change templates or static assets site pages, the browser will reload all changed pages.
+6. When you change templates or static assets, the browser will reload all changed pages.
 
 ## Directory structure
 - [browser_sync](./browser_sync) - Files for a Docker service that automatically reloads changes pages in the browser.
