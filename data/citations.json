@@ -1,1 +1,900 @@
-[{"title": "Automatic instrument segmentation in robot-assisted surgery using deep learning", "url": "https://ieeexplore.ieee.org/abstract/document/8614125/", "author_links": {"AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra", "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra", "AA Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"}, "author": ["AA Shvets", "A Rakhlin", "AA Kalinin"], "abstract": "Semantic segmentation of robotic instruments is an important problem for the robot-assisted surgery. One of the main challenges is to correctly detect an instrument's position for the tracking and pose estimation in the vicinity of surgical scenes. Accurate pixel-wise \u2026", "eprint": "https://arxiv.org/pdf/1803.01207"}, {"title": "Angiodysplasia detection and localization using deep convolutional neural networks", "url": "https://ieeexplore.ieee.org/abstract/document/8614123/", "author_links": {"AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra", "VI Iglovikov": "https://scholar.google.com/citations?user=vkjh9X0AAAAJ&hl=en&oi=sra", "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra"}, "author": ["AA Shvets", "VI Iglovikov", "A Rakhlin"], "abstract": "Accurate detection and localization for angiodysplasia lesions is an important problem in early stage diagnostics of gastrointestinal bleeding and anemia. Gold standard for angiodysplasia detection and localization is performed using wireless capsule endoscopy \u2026", "eprint": "https://arxiv.org/pdf/1804.08024"}, {"title": "Automatic salt deposits segmentation: A deep learning approach", "url": "https://arxiv.org/abs/1812.01429", "author_links": {"I Ashrapov": "https://scholar.google.com/citations?user=eTn5PTIAAAAJ&hl=en&oi=sra"}, "author": ["M Karchevskiy", "I Ashrapov", "L Kozinkin"], "abstract": "One of the most important applications of seismic reflection is the hydrocarbon exploration which is closely related to salt deposits analysis. This problem is very important even nowadays due to it's non-linear nature. Taking into account the recent developments in deep \u2026", "eprint": "https://arxiv.org/pdf/1812.01429"}, {"title": "U-NetPlus: a modified encoder-decoder U-Net architecture for semantic and instance segmentation of surgical instrument", "url": "https://arxiv.org/abs/1902.08994", "author_links": {"SM Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra", "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"}, "author": ["SM Hasan", "CA Linte"], "abstract": "Conventional therapy approaches limit surgeons' dexterity control due to limited field-of-view. With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the \u2026", "eprint": "https://arxiv.org/pdf/1902.08994"}, {"title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better", "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html", "author_links": {"O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra", "T Martyniuk": "https://scholar.google.com/citations?user=Ur0vgfMAAAAJ&hl=en&oi=sra", "J Wu": "https://scholar.google.com/citations?user=5wXwjysAAAAJ&hl=en&oi=sra"}, "author": ["O Kupyn", "T Martyniuk", "J Wu"], "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a \u2026", "eprint": "http://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"}, {"title": "Breast tumor cellularity assessment using deep neural networks", "url": "http://openaccess.thecvf.com/content_ICCVW_2019/html/VRMI/Rakhlin_Breast_Tumor_Cellularity_Assessment_Using_Deep_Neural_Networks_ICCVW_2019_paper.html", "author_links": {"A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra", "A Tiulpin": "https://scholar.google.com/citations?user=EFE2gpQAAAAJ&hl=en&oi=sra", "AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra"}, "author": ["A Rakhlin", "A Tiulpin", "AA Shvets"], "abstract": "Breast cancer is one of the main causes of death worldwide. Histopathological cellularity assessment of residual tumors in post-surgical tissues is used to analyze a tumor's response to a therapy. Correct cellularity assessment increases the chances of getting an appropriate \u2026", "eprint": "http://openaccess.thecvf.com/content_ICCVW_2019/papers/VRMI/Rakhlin_Breast_Tumor_Cellularity_Assessment_Using_Deep_Neural_Networks_ICCVW_2019_paper.pdf"}, {"title": "General Purpose (GenP) Bioimage Ensemble of Handcrafted and Learned Features with Data Augmentation", "url": "https://arxiv.org/abs/1904.08084", "author_links": {"L Nanni": "https://scholar.google.com/citations?user=5NSGzcQAAAAJ&hl=en&oi=sra", "S Brahnam": "https://scholar.google.com/citations?user=sYF3eJkAAAAJ&hl=en&oi=sra", "S Ghidoni": "https://scholar.google.com/citations?user=s5PIk-4AAAAJ&hl=en&oi=sra", "G Maguolo": "https://scholar.google.com/citations?user=Df9a1YkAAAAJ&hl=en&oi=sra"}, "author": ["L Nanni", "S Brahnam", "S Ghidoni", "G Maguolo"], "abstract": "Bioimage classification plays a crucial role in many biological problems. Here we present a new General Purpose (GenP) ensemble that boosts performance by combining local features, dense sampling features, and deep learning approaches. We propose an \u2026", "eprint": "https://arxiv.org/pdf/1904.08084"}, {"title": "Camera Model Identification Using Convolutional Neural Networks", "url": "https://ieeexplore.ieee.org/abstract/document/8622031/", "author_links": {"A Kuzin": "https://scholar.google.com/citations?user=lHjLPBsAAAAJ&hl=en&oi=sra", "I Kibardin": "https://scholar.google.com/citations?user=h1BJKdsAAAAJ&hl=en&oi=sra"}, "author": ["A Kuzin", "A Fattakhov", "I Kibardin"], "abstract": "Source camera identification is the process of determining which camera or model has been used to capture an image. In recent years, there has been a rapid growth of research interest in the domain of forensics. In the current work, we describe our Deep Learning approach to \u2026", "eprint": "https://arxiv.org/pdf/1810.02981"}, {"title": "Semi-Supervised Segmentation of Salt Bodies in Seismic Images using an Ensemble of Convolutional Neural Networks", "url": "https://link.springer.com/chapter/10.1007/978-3-030-33676-9_15", "author_links": {"A Sanakoyeu": "https://scholar.google.com/citations?user=3JmMPIEAAAAJ&hl=en&oi=sra"}, "author": ["Y Babakhin", "A Sanakoyeu", "H Kitamura"], "abstract": "Seismic image analysis plays a crucial role in a wide range of industrial applications and has been receiving significant attention. One of the essential challenges of seismic imaging is detecting subsurface salt structure which is indispensable for the identification of \u2026", "eprint": "https://arxiv.org/pdf/1904.04445"}, {"title": "Deep convolutions for in-depth automated rock typing", "url": "https://www.sciencedirect.com/science/article/pii/S0098300419304686", "author_links": {"EE Baraboshkin": "https://scholar.google.com/citations?user=pexX9UAAAAAJ&hl=en&oi=sra", "LS Ismailova": "https://scholar.google.com/citations?user=-ZP9a8YAAAAJ&hl=en&oi=sra", "DM Orlov": "https://scholar.google.com/citations?user=jP69FIgAAAAJ&hl=en&oi=sra"}, "author": ["EE Baraboshkin", "LS Ismailova", "DM Orlov"], "abstract": "The description of rocks is one of the most time-consuming tasks in the everyday work of a geologist, especially when very accurate description is required. We here present a method that reduces the time needed for accurate description of rocks, enabling the geologist to \u2026", "eprint": "https://arxiv.org/pdf/1909.10227"}, {"title": "Data augmentation from RGB to chlorophyll fluorescence imaging Application to leaf segmentation of Arabidopsis thaliana from top view images", "url": "http://openaccess.thecvf.com/content_CVPRW_2019/html/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.html", "author_links": {"S Samiei": "https://scholar.google.com/citations?user=64L4ImgAAAAJ&hl=en&oi=sra", "P Rasti": "https://scholar.google.com/citations?user=hl8Jyr4AAAAJ&hl=en&oi=sra"}, "author": ["N Sapoukhina", "S Samiei", "P Rasti"], "abstract": "In this report we investigate various strategies to boost the performance for leaf segmentation of Arabidopsis thaliana in chlorophyll fluorescent imaging without any manual annotation. Direct conversion of RGB images to gray levels picked from CVPPP challenge or \u2026", "eprint": "http://openaccess.thecvf.com/content_CVPRW_2019/papers/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.pdf"}, {"title": "A load frame for in situ tomography at PETRA III", "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11113/1111318/A-load-frame-for-in-situ-tomography-at-PETRA-III/10.1117/12.2530445.short", "author_links": {"J Moosmann": "https://scholar.google.com/citations?user=vcib-DsAAAAJ&hl=en&oi=sra"}, "author": ["J Moosmann", "DCF Wieland"], "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is \u2026"}, {"title": "Adapting Convolutional Neural Networks for Geographical Domain Shift", "url": "https://arxiv.org/abs/1901.06345", "author_links": {"P Ostyakov": "https://scholar.google.com/citations?user=mREcLI8AAAAJ&hl=en&oi=sra", "SI Nikolenko": "https://scholar.google.com/citations?user=_lk95cEAAAAJ&hl=en&oi=sra"}, "author": ["P Ostyakov", "SI Nikolenko"], "abstract": "We present the winning solution for the Inclusive Images Competition organized as part of the Conference on Neural Information Processing Systems (NeurIPS 2018) Competition Track. The competition was organized to study ways to cope with domain shift in image \u2026", "eprint": "https://arxiv.org/pdf/1901.06345"}, {"title": "Self-supervised learning for dense depth estimation in monocular endoscopy", "url": "https://arxiv.org/abs/1902.07766", "author_links": {"X Liu": "https://scholar.google.com/citations?user=qMxRGQkAAAAJ&hl=en&oi=sra", "A Sinha": "https://scholar.google.com/citations?user=RrhxYCAAAAAJ&hl=en&oi=sra", "GD Hager": "https://scholar.google.com/citations?user=ivApfKcAAAAJ&hl=en&oi=sra", "A Reiter": "https://scholar.google.com/citations?user=CxKgqz0AAAAJ&hl=en&oi=sra"}, "author": ["X Liu", "A Sinha", "M Ishii", "GD Hager", "A Reiter"], "abstract": "We present a self-supervised approach to training convolutional neural networks for dense depth estimation from monocular endoscopy data without a priori modeling of anatomy or shading. Our method only requires monocular endoscopic video and a multi-view stereo \u2026", "eprint": "https://arxiv.org/pdf/1902.07766"}, {"title": "Safe augmentation: Learning task-specific transformations from data", "url": "https://arxiv.org/abs/1907.12896", "author_links": {"O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra"}, "author": ["I Baran", "O Kupyn", "A Kravchenko"], "abstract": "Data augmentation is widely used as a part of the training process applied to deep learning models, especially in the computer vision domain. Currently, common data augmentation techniques are designed manually. Therefore they require expert knowledge and time \u2026", "eprint": "https://arxiv.org/pdf/1907.12896"}, {"title": "On-line hazard detection algorithm for precision lunar landing using semantic segmentation", "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2020-0462", "author_links": {"R Moghe": "https://scholar.google.com/citations?user=LRxUA1YAAAAJ&hl=en&oi=sra", "R Zanetti": "https://scholar.google.com/citations?user=ugUlsMQAAAAJ&hl=en&oi=sra"}, "author": ["R Moghe", "R Zanetti"], "abstract": "NASA's Autonomous Landing and Hazard Avoidance Technology project has three core functionalities, namely, Terrain Relative navigation, Hazard Detection and Avoidance and Hazard Relative Navigation. In this paper, we present a real time machine learning based \u2026"}, {"title": "Retinopathy Diagnosis Using Semi-supervised Multi-channel Generative Adversarial Network", "url": "https://link.springer.com/chapter/10.1007/978-3-030-32956-3_22", "author_links": {"Y Xu": "https://scholar.google.com/citations?user=0jP8f7sAAAAJ&hl=en&oi=sra", "B Lei": "https://scholar.google.com/citations?user=B4mpDHgAAAAJ&hl=en&oi=sra"}, "author": ["Y Xie", "Q Wan", "G Chen", "Y Xu", "B Lei"], "abstract": "Various kinds of retinopathy are the leading causes of blindness in human being, and with the rapid development of fundus images (FI) analysis in recent years, deep learning has became the focus while using Computer-Aided-Diagnosis (CAD) system to diagnose \u2026"}, {"title": "A Battery-Powered Friend: Towards Embedded Emotion Recognition", "url": "http://files.coldattic.info/stanford/cs231n/CS231n_project.pdf", "author_links": {}, "author": ["P Shved"], "abstract": "In this project, we set out to build a smiling robot: an embedded, battery-powered device that\u201d smiles back\u201d when a human subject in front of it smiles. We define a problem of building a neural system that would power the smiling robot. We prepare the dataset, apply \u2026", "eprint": "http://files.coldattic.info/stanford/cs231n/CS231n_project.pdf"}, {"title": "Analysis of medical images using deep learning", "url": "https://kola.opus.hbz-nrw.de/opus45-kola/files/2028/final_thesis.pdf", "author_links": {}, "author": ["A Utegulov"], "abstract": "Since the invention of U-net architecture in 2015, convolutional networks based on its encoder-decoder approach significantly improved results in image analysis challenges. It has been proven that such architectures can also be successfully applied in different \u2026", "eprint": "https://kola.opus.hbz-nrw.de/opus45-kola/files/2028/final_thesis.pdf"}, {"title": "Online Augmentation for Quality Improvement of Neural Networks for Classification of Single-Channel Electrocardiograms", "url": "https://link.springer.com/chapter/10.1007/978-3-030-39575-9_5", "author_links": {}, "author": ["V Guryanova"], "abstract": "Currently, on the market, there are mobile devices that are capable of reading a person's single-lead electrocardiogram (ECG). These ECGs can be used to solve problems of determining various diseases. Neural networks are onearameters of augmentations of the \u2026"}, {"title": "A Framework for Knowing Who is Doing What in Aerial Surveillance Videos", "url": "https://ieeexplore.ieee.org/abstract/document/8753491/", "author_links": {"F Yang": "https://scholar.google.com/citations?user=LndV87gAAAAJ&hl=en&oi=sra", "S Sakti": "https://scholar.google.com/citations?user=E0uhtlkAAAAJ&hl=en&oi=sra"}, "author": ["F Yang", "S Sakti", "Y Wu", "S Nakamura"], "abstract": "Ultra-high-resolution aerial videos are used to relieve the shortage of surveillance system in sparsely populated regions. For realistic application purpose, it is important to automatically analyze \u201cwho is doing what?\u201d in such videos. Although atomic visual action (AVA) detection \u2026", "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08753491.pdf"}, {"title": "U-NetPlus: A Modified Encoder-Decoder U-Net Architecture for Semantic and Instance Segmentation of Surgical Instruments from Laparoscopic Images", "url": "https://ieeexplore.ieee.org/abstract/document/8856791/", "author_links": {"SMK Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra", "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"}, "author": ["SMK Hasan", "CA Linte"], "abstract": "With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the position of the surgical instruments in a surgical scene, and accurate detection & \u2026"}, {"title": "Bayesian Feature Pyramid Networks for Automatic Multi-label Segmentation of Chest X-rays and Assessment of Cardio-Thoratic Ratio", "url": "https://link.springer.com/chapter/10.1007/978-3-030-40605-9_11", "author_links": {"I Melekhov": "https://scholar.google.com/citations?user=BXNprrsAAAAJ&hl=en&oi=sra"}, "author": ["R Solovyev", "I Melekhov", "T Lesonen"], "abstract": "Cardiothoratic ratio (CTR) estimated from chest radiographs is a marker indicative of cardiomegaly, the presence of which is in the criteria for heart failure diagnosis. Existing methods for automatic assessment of CTR are driven by Deep Learning-based \u2026", "eprint": "https://arxiv.org/pdf/1908.02924"}, {"title": "Segmentation of the Left Ventricle on EchoCG Images Using MultiResUnet", "url": "https://ieeexplore.ieee.org/abstract/document/8958128/", "author_links": {}, "author": ["A Sheka", "V Samun", "T Chumarnaya"], "abstract": "We compared the segmentation quality obtained with the following network architectures: Unet, Wide Unet, Unet++ and MultiResUnet. The MultiResUnet architecture has shown improved quality in other medical image segmentation tasks. It is applied to the problem of \u2026"}, {"title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks", "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1", "author_links": {}, "author": ["\u00c1 Casado-Garc\u00eda", "C Dom\u00ednguez"], "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that \u2026", "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"}, {"title": "Benchmark for Generic Product Detection: A strong baseline for Dense Object Detection", "url": "https://arxiv.org/abs/1912.09476", "author_links": {"S Kant": "https://scholar.google.com/citations?user=2ZKGf24AAAAJ&hl=en&oi=sra", "MM Srivastava": "https://scholar.google.com/citations?user=Xw0GUGIAAAAJ&hl=en&oi=sra"}, "author": ["S Varadarajan", "S Kant", "MM Srivastava"], "abstract": "Object detection in densely packed scenes is a new area where standard object detectors fail to train well (Goldman et al., 2019). We show that the performance of the standard object detectors on densely packed scenes is superior when it is trained on normal scenes rather \u2026", "eprint": "https://arxiv.org/pdf/1912.09476"}, {"title": "The Inclusive Images Competition", "url": "https://link.springer.com/chapter/10.1007/978-3-030-29135-8_6", "author_links": {"J Atwood": "https://scholar.google.com/citations?user=cYk1Xg4AAAAJ&hl=en&oi=sra", "Y Halpern": "https://scholar.google.com/citations?user=sU6x0E0AAAAJ&hl=en&oi=sra", "P Baljekar": "https://scholar.google.com/citations?user=HcXvGuMAAAAJ&hl=en&oi=sra"}, "author": ["J Atwood", "Y Halpern", "P Baljekar", "E Breck"], "abstract": "Popular large image classification datasets that are drawn from the web present Eurocentric and Americentric biases that negatively impact the generalizability of models trained on them Shreya Shankar et al.(No classification without representation: Assessing geodiversity \u2026"}, {"title": "How well do U-Net-based segmentation trained on adult cardiac magnetic resonance imaging data generalise to rare congenital heart diseases for surgical planning?", "url": "https://arxiv.org/abs/2002.04392", "author_links": {"A Tandon": "https://scholar.google.com/citations?user=R95fbxQAAAAJ&hl=en&oi=sra", "T Hussain": "https://scholar.google.com/citations?user=bpqSV6cAAAAJ&hl=en&oi=sra"}, "author": ["S Koehler", "A Tandon", "T Hussain", "H Latus"], "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two \u2026", "eprint": "https://arxiv.org/pdf/2002.04392"}, {"title": "Deep learning for skin lesion classification: augment, train, and ensemble= Aprendizado profundo para classifica\u00e7\u00e3o de les\u00f5es de pele: aumento, treino e conjunto", "url": "http://repositorio.unicamp.br/handle/REPOSIP/335713", "author_links": {"FVM Perez": "https://scholar.google.com/citations?user=14vRKS8AAAAJ&hl=en&oi=sra"}, "author": ["FVM Perez"], "abstract": "A detec\u00e7\u00e3o precoce \u00e9 fundamental para um paciente com melanoma, o tipo mais letal de c\u00e2ncer de pele. O diagn\u00f3stico automatizado de melanoma pode melhorar o atendimento ao paciente, ampliando e acelerando o tratamento, especialmente com o crescimento no \u2026", "eprint": "http://repositorio.unicamp.br/bitstream/REPOSIP/335713/1/Perez_FabioViniciusMoreira_M.pdf"}, {"title": "Physical Cue based Depth-Sensing by Color Coding with Deaberration Network", "url": "https://arxiv.org/abs/1908.00329", "author_links": {}, "author": ["N Mishima", "T Kozakaya", "A Moriya", "R Okada"], "abstract": "Color-coded aperture (CCA) methods can physically measure the depth of a scene given by physical cues from a single-shot image of a monocular camera. However, they are vulnerable to actual lens aberrations in real scenes because they assume an ideal lens for \u2026", "eprint": "https://arxiv.org/pdf/1908.00329"}, {"title": "Cloud Recognition and Masking of Earth Observation Imagery-An Optimized approach for Automatic Labeling of Sentinel-2 Imagery for Object Detection", "url": "https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2619036", "author_links": {}, "author": ["LM Ellefsen"], "abstract": "In this project we have developed three different methods for analyzing Sentinel-2 satellite images containing ships, and determining whether the ship is obscured by a cloud or not. Our motivation for this work is to find the optimal method for correctly labeling images for use \u2026", "eprint": "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2619036/no.ntnu%3Ainspera%3A2469660.pdf?sequence=1"}, {"title": "A Deep 3D Object Pose Estimation Framework for Robots with RGB-D Sensors", "url": "https://digitalcommons.wpi.edu/etd-theses/1287/", "author_links": {"AY Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra"}, "author": ["AY Wagh"], "abstract": "The task of object detection and pose estimation has widely been done using template matching techniques. However, these algorithms are sensitive to outliers and occlusions, and have high latency due to their iterative nature. Recent research in computer vision and \u2026", "eprint": "https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=2286&context=etd-theses"}, {"title": "Urban Sound Tagging using Convolutional Neural Networks", "url": "https://arxiv.org/abs/1909.12699", "author_links": {"S Adapa": "https://scholar.google.com/citations?user=SJUsAwsAAAAJ&hl=en&oi=sra"}, "author": ["S Adapa"], "abstract": "In this paper, we propose a framework for environmental sound classification in a low-data context (less than 100 labeled examples per class). We show that using pre-trained image classification models along with the usage of data augmentation techniques results in higher \u2026", "eprint": "https://arxiv.org/pdf/1909.12699"}, {"title": "The Impact of Padding on Image Classification by Using Pre-trained Convolutional Neural Networks", "url": "https://link.springer.com/chapter/10.1007/978-3-030-30645-8_31", "author_links": {"A Ortis": "https://scholar.google.com/citations?user=gcztqXgAAAAJ&hl=en&oi=sra", "S Battiato": "https://scholar.google.com/citations?user=OplbtHgAAAAJ&hl=en&oi=sra"}, "author": ["H Tang", "A Ortis", "S Battiato"], "abstract": "The work presented in this paper aims to investigate the effect of pre-processing on image classification by using CNN pre-trained models. By considering how different quality factors of the input images affect the performances of a CNN based classifier, we propose a pre \u2026"}, {"title": "GAN-SMOTE: A Generative Adversarial Network approach to Synthetic Minority Oversampling for One-Hot Encoded Data", "url": "http://ajiips.com.au/papers/V15.2/v15n2_33-39.pdf", "author_links": {}, "author": ["M Scott", "J Plested"], "abstract": "Small unbalanced datasets remain a serious impediment to the implementation of cutting-edge machine learning in an industry setting. This paper proposes GAN-SMOTE, a novel approach to synthetic minority class oversampling using a generative adversarial network \u2026", "eprint": "http://ajiips.com.au/papers/V15.2/v15n2_33-39.pdf"}, {"title": "Real-Time Tracking of Guidewire Robot Tips Using Deep Convolutional Neural Networks on Successive Localized Frames", "url": "https://ieeexplore.ieee.org/abstract/document/8886572/", "author_links": {"I Ullah": "https://scholar.google.com/citations?user=eod9uX0AAAAJ&hl=en&oi=sra", "P Chikontwe": "https://scholar.google.com/citations?user=8jHbkMcAAAAJ&hl=en&oi=sra", "SH Park": "https://scholar.google.com/citations?user=PHLTD4sAAAAJ&hl=en&oi=sra"}, "author": ["I Ullah", "P Chikontwe", "SH Park"], "abstract": "Studies are proceeded to stabilize cardiac surgery using thin micro-guidewires and catheter robots. To control the robot to a desired position and pose, it is necessary to accurately track the robot tip in real time but tracking and accurately delineating the thin and small tip is \u2026", "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08886572.pdf"}, {"title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection", "url": "https://ieeexplore.ieee.org/abstract/document/8966436/", "author_links": {"JM Saavedra": "https://scholar.google.com/citations?user=eN5q1XMAAAAJ&hl=en&oi=sra"}, "author": ["FS Herrera", "JM Saavedra"], "abstract": "We propose modifications to the RetinaNet architecture and Focal Loss [1] to improve the effectiveness of them in the context of object detection. We show that through normalizing the embeddings generated by each receptive field in the feature map, classifying them using \u2026"}, {"title": "Cell Nuclear Morphology Analysis Using 3D Shape Modeling, Machine Learning and Visual Analytics", "url": "https://deepblue.lib.umich.edu/handle/2027.42/147598", "author_links": {"A Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"}, "author": ["A Kalinin"], "abstract": "Quantitative analysis of morphological changes in a cell nucleus is important for the understanding of nuclear architecture and its relationship with cell differentiation, development, proliferation, and disease. Changes in the nuclear form are associated with \u2026", "eprint": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/147598/akalinin_1.pdf?sequence=1"}, {"title": "Deep Depth From Aberration Map", "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kashiwagi_Deep_Depth_From_Aberration_Map_ICCV_2019_paper.html", "author_links": {}, "author": ["M Kashiwagi", "N Mishima"], "abstract": "Passive and convenient depth estimation from single-shot image is still an open problem. Existing depth from defocus methods require multiple input images or special hardware customization. Recent deep monocular depth estimation is also limited to an image with \u2026", "eprint": "http://openaccess.thecvf.com/content_ICCV_2019/papers/Kashiwagi_Deep_Depth_From_Aberration_Map_ICCV_2019_paper.pdf"}, {"title": "Augmentation-Based Object Detection for Winter Time Applications", "url": "https://ieeexplore.ieee.org/abstract/document/8875557/", "author_links": {"R Yagfarov": "https://scholar.google.com/citations?user=TH9msn4AAAAJ&hl=en&oi=sra", "V Ostankovich": "https://scholar.google.com/citations?user=TSGRhvEAAAAJ&hl=en&oi=sra"}, "author": ["R Yagfarov", "V Ostankovich"], "abstract": "Despite the significant advancements in object detection, there is still a number of detection tasks that are challenging and difficult. To eliminate them and to push forward the research in this area a technological\" IceVision\" Challenge was organized in Russia in 2019. The \u2026", "eprint": "https://www.researchgate.net/profile/Rauf_Yagfarov/publication/336728688_Augmentation-Based_Object_Detection_for_Winter_Time_Applications/links/5e257ba692851cafc3936168/Augmentation-Based-Object-Detection-for-Winter-Time-Applications.pdf"}, {"title": "Automatic lesion boundary detection in dermoscopy", "url": "https://arxiv.org/abs/1812.00877", "author_links": {}, "author": ["G Kechyn"], "abstract": "This manuscript addresses the problem of the automatic lesion boundary detection in dermoscopy, using deep neural networks. An approach is based on the adaptation of the U-net convolutional neural network with skip connections for lesion boundary segmentation \u2026", "eprint": "https://arxiv.org/pdf/1812.00877"}, {"title": "Visual Anomaly Detection For Automatic Quality Control", "url": "https://boa.unimib.it/handle/10281/241219", "author_links": {"F Piccoli": "https://scholar.google.com/citations?user=qBoFeZoAAAAJ&hl=en&oi=sra"}, "author": ["F Piccoli"], "abstract": "Automatic quality control is one of the key ingredients for the fourth industrial revolution that will lead to the development of the so called industry 4.0. In this context, a crucial element is a production-compatible-time detection of defects, anomalies or product failures. This thesis \u2026", "eprint": "https://boa.unimib.it/bitstream/10281/241219/2/phd_unimib_713064.pdf"}, {"title": "The Effects of Augmented Training Dataset on Performance of Convolutional Neural Networks in Face Recognition System", "url": "https://ieeexplore.ieee.org/abstract/document/8859979/", "author_links": {"MA Kutlug\u00fcn": "https://scholar.google.com/citations?user=iwnbq5QAAAAJ&hl=en&oi=sra", "Y Sirin": "https://scholar.google.com/citations?user=5OMHK2gAAAAJ&hl=en&oi=sra"}, "author": ["MA Kutlug\u00fcn", "Y Sirin"], "abstract": "Nowadays, deep learning methods have been used in many areas such as big data analysis, speech and image processing with the increasing processing power and the development of graphics processors. In particular, face recognition systems have become \u2026", "eprint": "https://annals-csis.org/Volume_18/drp/pdf/181.pdf"}, {"title": "Automatic phantom test pattern classification through transfer learning with deep neural networks", "url": "https://arxiv.org/abs/2001.08189", "author_links": {"J Solomon": "https://scholar.google.com/citations?user=ZBvfqsIAAAAJ&hl=en&oi=sra", "E Samei": "https://scholar.google.com/citations?user=JlTG4gEAAAAJ&hl=en&oi=sra"}, "author": ["RB Fricks", "J Solomon", "E Samei"], "abstract": "Imaging phantoms are test patterns used to measure image quality in computer tomography (CT) systems. A new phantom platform (Mercury Phantom, Gammex) provides test patterns for estimating the task transfer function (TTF) or noise power spectrum (NPF) and simulates \u2026", "eprint": "https://arxiv.org/pdf/2001.08189"}, {"title": "Deep Learning for Skin Lesion Classification: Augment, Train, and Ensemble", "author_links": {"FVM Perez": "https://scholar.google.com/citations?user=14vRKS8AAAAJ&hl=en&oi=sra"}, "author": ["FVM Perez"]}, {"title": "\u6b8b\u5dee\u5bc6\u96c6\u76f8\u5bf9\u5e73\u5747 CGAN \u7684\u56fe\u50cf\u914d\u51c6\u65b9\u6cd5", "url": "http://www.cjig.cn/jig/ch/reader/download_new_edit_content.aspx?edit_id=20190926091554001&file_no=201903270000001&journal_id=jig", "author_links": {}, "author": ["\u738b\u4e3d\u82b3\uff0c \u5f20\u7a0b\u7a0b\uff0c \u79e6\u54c1\u4e50\uff0c \u853a\u7d20\u73cd\uff0c \u9ad8\u5a9b\uff0c \u7aa6\u6770\u4eae"], "abstract": "\u76ee\u7684\u9488\u5bf9\u73b0\u6709\u57fa\u4e8e\u56fe\u50cf\u5408\u6210\u7684\u914d\u51c6\u7b97\u6cd5\u4e2d\u5408\u6210\u6a21\u578b\u9c81\u68d2\u6027\u5dee\u53ca\u5408\u6210\u56fe\u50cf\u7279\u5f81\u4fe1\u606f\u8868\u793a\u4e0d\u8db3\u5bfc\u81f4\u914d\u51c6\u7cbe\u5ea6\u4e0d\u9ad8\u7684\u95ee\u9898, \u63d0\u51fa\u4e86\u57fa\u4e8e\u6b8b\u5dee\u5bc6\u96c6\u76f8\u5bf9\u5e73\u5747\u6761\u4ef6\u751f\u6210\u5bf9\u6297\u7f51\u7edc(RD-RaCGAN) \u7684\u591a\u6a21\u6001\u8111\u90e8\u56fe\u50cf\u914d\u51c6\u65b9\u6cd5. \u65b9\u6cd5\u9996\u5148, \u7ed3\u5408\u76f8\u5bf9\u5e73\u5747\u751f\u6210\u5bf9\u6297\u7f51\u7edc\u4e2d\u7684\u76f8\u5bf9\u5e73\u5747\u9274\u522b\u5668\u80fd\u591f \u2026", "eprint": "http://www.cjig.cn/jig/ch/reader/download_new_edit_content.aspx?edit_id=20190926091554001&file_no=201903270000001&journal_id=jig"}]
+[
+    {
+        "title": "Automatic instrument segmentation in robot-assisted surgery using deep learning",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8614125/",
+        "author_links": {
+            "AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra",
+            "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra",
+            "AA Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "AA Shvets",
+            "A Rakhlin",
+            "AA Kalinin"
+        ],
+        "abstract": "Semantic segmentation of robotic instruments is an important problem for the robot-assisted surgery. One of the main challenges is to correctly detect an instrument's position for the tracking and pose estimation in the vicinity of surgical scenes. Accurate pixel-wise …",
+        "eprint": "https://arxiv.org/pdf/1803.01207"
+    },
+    {
+        "title": "Angiodysplasia detection and localization using deep convolutional neural networks",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8614123/",
+        "author_links": {
+            "AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra",
+            "VI Iglovikov": "https://scholar.google.com/citations?user=vkjh9X0AAAAJ&hl=en&oi=sra",
+            "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "AA Shvets",
+            "VI Iglovikov",
+            "A Rakhlin"
+        ],
+        "abstract": "Accurate detection and localization for angiodysplasia lesions is an important problem in early stage diagnostics of gastrointestinal bleeding and anemia. Gold standard for angiodysplasia detection and localization is performed using wireless capsule endoscopy …",
+        "eprint": "https://arxiv.org/pdf/1804.08024"
+    },
+    {
+        "title": "Automatic salt deposits segmentation: A deep learning approach",
+        "url": "https://arxiv.org/abs/1812.01429",
+        "author_links": {
+            "I Ashrapov": "https://scholar.google.com/citations?user=eTn5PTIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Karchevskiy",
+            "I Ashrapov",
+            "L Kozinkin"
+        ],
+        "abstract": "One of the most important applications of seismic reflection is the hydrocarbon exploration which is closely related to salt deposits analysis. This problem is very important even nowadays due to it's non-linear nature. Taking into account the recent developments in deep …",
+        "eprint": "https://arxiv.org/pdf/1812.01429"
+    },
+    {
+        "title": "U-NetPlus: a modified encoder-decoder U-Net architecture for semantic and instance segmentation of surgical instrument",
+        "url": "https://arxiv.org/abs/1902.08994",
+        "author_links": {
+            "SM Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra",
+            "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "SM Hasan",
+            "CA Linte"
+        ],
+        "abstract": "Conventional therapy approaches limit surgeons' dexterity control due to limited field-of-view. With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the …",
+        "eprint": "https://arxiv.org/pdf/1902.08994"
+    },
+    {
+        "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
+        "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html",
+        "author_links": {
+            "O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra",
+            "T Martyniuk": "https://scholar.google.com/citations?user=Ur0vgfMAAAAJ&hl=en&oi=sra",
+            "J Wu": "https://scholar.google.com/citations?user=5wXwjysAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "O Kupyn",
+            "T Martyniuk",
+            "J Wu"
+        ],
+        "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
+        "eprint": "http://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
+    },
+    {
+        "title": "Breast tumor cellularity assessment using deep neural networks",
+        "url": "http://openaccess.thecvf.com/content_ICCVW_2019/html/VRMI/Rakhlin_Breast_Tumor_Cellularity_Assessment_Using_Deep_Neural_Networks_ICCVW_2019_paper.html",
+        "author_links": {
+            "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra",
+            "A Tiulpin": "https://scholar.google.com/citations?user=EFE2gpQAAAAJ&hl=en&oi=sra",
+            "AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Rakhlin",
+            "A Tiulpin",
+            "AA Shvets"
+        ],
+        "abstract": "Breast cancer is one of the main causes of death worldwide. Histopathological cellularity assessment of residual tumors in post-surgical tissues is used to analyze a tumor's response to a therapy. Correct cellularity assessment increases the chances of getting an appropriate …",
+        "eprint": "http://openaccess.thecvf.com/content_ICCVW_2019/papers/VRMI/Rakhlin_Breast_Tumor_Cellularity_Assessment_Using_Deep_Neural_Networks_ICCVW_2019_paper.pdf"
+    },
+    {
+        "title": "General Purpose (GenP) Bioimage Ensemble of Handcrafted and Learned Features with Data Augmentation",
+        "url": "https://arxiv.org/abs/1904.08084",
+        "author_links": {
+            "L Nanni": "https://scholar.google.com/citations?user=5NSGzcQAAAAJ&hl=en&oi=sra",
+            "S Brahnam": "https://scholar.google.com/citations?user=sYF3eJkAAAAJ&hl=en&oi=sra",
+            "S Ghidoni": "https://scholar.google.com/citations?user=s5PIk-4AAAAJ&hl=en&oi=sra",
+            "G Maguolo": "https://scholar.google.com/citations?user=Df9a1YkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "L Nanni",
+            "S Brahnam",
+            "S Ghidoni",
+            "G Maguolo"
+        ],
+        "abstract": "Bioimage classification plays a crucial role in many biological problems. Here we present a new General Purpose (GenP) ensemble that boosts performance by combining local features, dense sampling features, and deep learning approaches. We propose an …",
+        "eprint": "https://arxiv.org/pdf/1904.08084"
+    },
+    {
+        "title": "Camera Model Identification Using Convolutional Neural Networks",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8622031/",
+        "author_links": {
+            "A Kuzin": "https://scholar.google.com/citations?user=lHjLPBsAAAAJ&hl=en&oi=sra",
+            "I Kibardin": "https://scholar.google.com/citations?user=h1BJKdsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Kuzin",
+            "A Fattakhov",
+            "I Kibardin"
+        ],
+        "abstract": "Source camera identification is the process of determining which camera or model has been used to capture an image. In recent years, there has been a rapid growth of research interest in the domain of forensics. In the current work, we describe our Deep Learning approach to …",
+        "eprint": "https://arxiv.org/pdf/1810.02981"
+    },
+    {
+        "title": "Semi-Supervised Segmentation of Salt Bodies in Seismic Images using an Ensemble of Convolutional Neural Networks",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-33676-9_15",
+        "author_links": {
+            "A Sanakoyeu": "https://scholar.google.com/citations?user=3JmMPIEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Babakhin",
+            "A Sanakoyeu",
+            "H Kitamura"
+        ],
+        "abstract": "Seismic image analysis plays a crucial role in a wide range of industrial applications and has been receiving significant attention. One of the essential challenges of seismic imaging is detecting subsurface salt structure which is indispensable for the identification of …",
+        "eprint": "https://arxiv.org/pdf/1904.04445"
+    },
+    {
+        "title": "Deep convolutions for in-depth automated rock typing",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0098300419304686",
+        "author_links": {
+            "EE Baraboshkin": "https://scholar.google.com/citations?user=pexX9UAAAAAJ&hl=en&oi=sra",
+            "LS Ismailova": "https://scholar.google.com/citations?user=-ZP9a8YAAAAJ&hl=en&oi=sra",
+            "DM Orlov": "https://scholar.google.com/citations?user=jP69FIgAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "EE Baraboshkin",
+            "LS Ismailova",
+            "DM Orlov"
+        ],
+        "abstract": "The description of rocks is one of the most time-consuming tasks in the everyday work of a geologist, especially when very accurate description is required. We here present a method that reduces the time needed for accurate description of rocks, enabling the geologist to …",
+        "eprint": "https://arxiv.org/pdf/1909.10227"
+    },
+    {
+        "title": "Data augmentation from RGB to chlorophyll fluorescence imaging Application to leaf segmentation of Arabidopsis thaliana from top view images",
+        "url": "http://openaccess.thecvf.com/content_CVPRW_2019/html/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.html",
+        "author_links": {
+            "S Samiei": "https://scholar.google.com/citations?user=64L4ImgAAAAJ&hl=en&oi=sra",
+            "P Rasti": "https://scholar.google.com/citations?user=hl8Jyr4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Sapoukhina",
+            "S Samiei",
+            "P Rasti"
+        ],
+        "abstract": "In this report we investigate various strategies to boost the performance for leaf segmentation of Arabidopsis thaliana in chlorophyll fluorescent imaging without any manual annotation. Direct conversion of RGB images to gray levels picked from CVPPP challenge or …",
+        "eprint": "http://openaccess.thecvf.com/content_CVPRW_2019/papers/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.pdf"
+    },
+    {
+        "title": "A load frame for in situ tomography at PETRA III",
+        "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11113/1111318/A-load-frame-for-in-situ-tomography-at-PETRA-III/10.1117/12.2530445.short",
+        "author_links": {
+            "J Moosmann": "https://scholar.google.com/citations?user=vcib-DsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Moosmann",
+            "DCF Wieland"
+        ],
+        "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is …"
+    },
+    {
+        "title": "Adapting Convolutional Neural Networks for Geographical Domain Shift",
+        "url": "https://arxiv.org/abs/1901.06345",
+        "author_links": {
+            "P Ostyakov": "https://scholar.google.com/citations?user=mREcLI8AAAAJ&hl=en&oi=sra",
+            "SI Nikolenko": "https://scholar.google.com/citations?user=_lk95cEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "P Ostyakov",
+            "SI Nikolenko"
+        ],
+        "abstract": "We present the winning solution for the Inclusive Images Competition organized as part of the Conference on Neural Information Processing Systems (NeurIPS 2018) Competition Track. The competition was organized to study ways to cope with domain shift in image …",
+        "eprint": "https://arxiv.org/pdf/1901.06345"
+    },
+    {
+        "title": "Bayesian feature pyramid networks for automatic multi-label segmentation of chest X-rays and assessment of cardio-thoratic ratio",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-40605-9_11",
+        "author_links": {
+            "I Melekhov": "https://scholar.google.com/citations?user=BXNprrsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Solovyev",
+            "I Melekhov",
+            "T Lesonen"
+        ],
+        "abstract": "Cardiothoratic ratio (CTR) estimated from chest radiographs is a marker indicative of cardiomegaly, the presence of which is in the criteria for heart failure diagnosis. Existing methods for automatic assessment of CTR are driven by Deep Learning-based …",
+        "eprint": "https://arxiv.org/pdf/1908.02924"
+    },
+    {
+        "title": "Self-supervised learning for dense depth estimation in monocular endoscopy",
+        "url": "https://arxiv.org/abs/1902.07766",
+        "author_links": {
+            "X Liu": "https://scholar.google.com/citations?user=qMxRGQkAAAAJ&hl=en&oi=sra",
+            "A Sinha": "https://scholar.google.com/citations?user=RrhxYCAAAAAJ&hl=en&oi=sra",
+            "GD Hager": "https://scholar.google.com/citations?user=ivApfKcAAAAJ&hl=en&oi=sra",
+            "A Reiter": "https://scholar.google.com/citations?user=CxKgqz0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "X Liu",
+            "A Sinha",
+            "M Ishii",
+            "GD Hager",
+            "A Reiter"
+        ],
+        "abstract": "We present a self-supervised approach to training convolutional neural networks for dense depth estimation from monocular endoscopy data without a priori modeling of anatomy or shading. Our method only requires monocular endoscopic video and a multi-view stereo …",
+        "eprint": "https://arxiv.org/pdf/1902.07766"
+    },
+    {
+        "title": "Dense Dilated Convolutions' Merging Network for Land Cover Classification",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9027099/",
+        "author_links": {
+            "M Kampffmeyer": "https://scholar.google.com/citations?user=9lDh2UgAAAAJ&hl=en&oi=sra",
+            "R Jenssen": "https://scholar.google.com/citations?user=HiviXjIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Q Liu",
+            "M Kampffmeyer",
+            "R Jenssen"
+        ],
+        "abstract": "Land cover classification of remote sensing images is a challenging task due to limited amounts of annotated data, highly imbalanced classes, frequent incorrect pixel-level annotations, and an inherent complexity in the semantic segmentation task. In this article, we …",
+        "eprint": "https://arxiv.org/pdf/2003.04027"
+    },
+    {
+        "title": "StandardGAN: Multi-source Domain Adaptation for Semantic Segmentation of Very High Resolution Satellite Images by Data Standardization",
+        "url": "https://arxiv.org/abs/2004.06402",
+        "author_links": {
+            "O Tasar": "https://scholar.google.com/citations?user=sluW_egAAAAJ&hl=en&oi=sra",
+            "Y Tarabalka": "https://scholar.google.com/citations?user=N5raVlIAAAAJ&hl=en&oi=sra",
+            "P Alliez": "https://scholar.google.com/citations?user=nQuoXgwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "O Tasar",
+            "Y Tarabalka",
+            "A Giros",
+            "P Alliez"
+        ],
+        "abstract": "Domain adaptation for semantic segmentation has recently been actively studied to increase the generalization capabilities of deep learning models. The vast majority of the domain adaptation methods tackle single-source case, where the model trained on a single source …",
+        "eprint": "https://arxiv.org/pdf/2004.06402"
+    },
+    {
+        "title": "Safe augmentation: Learning task-specific transformations from data",
+        "url": "https://arxiv.org/abs/1907.12896",
+        "author_links": {
+            "O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "I Baran",
+            "O Kupyn",
+            "A Kravchenko"
+        ],
+        "abstract": "Data augmentation is widely used as a part of the training process applied to deep learning models, especially in the computer vision domain. Currently, common data augmentation techniques are designed manually. Therefore they require expert knowledge and time …",
+        "eprint": "https://arxiv.org/pdf/1907.12896"
+    },
+    {
+        "title": "EasyAug: An automatic textual data augmentation platform for classification tasks",
+        "url": "https://dl.acm.org/doi/abs/10.1145/3366424.3383552",
+        "author_links": {
+            "X Shen": "https://scholar.google.com/citations?user=BWfPrE4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Qiu",
+            "B Xu",
+            "J Zhang",
+            "Y Wang",
+            "X Shen"
+        ],
+        "abstract": "Imbalanced data is a perennial problem that impedes the learning abilities of current machine learning-based classification models. One approach to address it is to leverage data augmentation to expand the training set. For image data, there are a number of suitable …",
+        "eprint": "https://dl.acm.org/doi/pdf/10.1145/3366424.3383552"
+    },
+    {
+        "title": "On-line hazard detection algorithm for precision lunar landing using semantic segmentation",
+        "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2020-0462",
+        "author_links": {
+            "R Moghe": "https://scholar.google.com/citations?user=LRxUA1YAAAAJ&hl=en&oi=sra",
+            "R Zanetti": "https://scholar.google.com/citations?user=ugUlsMQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Moghe",
+            "R Zanetti"
+        ],
+        "abstract": "NASA's Autonomous Landing and Hazard Avoidance Technology project has three core functionalities, namely, Terrain Relative navigation, Hazard Detection and Avoidance and Hazard Relative Navigation. In this paper, we present a real time machine learning based …"
+    },
+    {
+        "title": "Video Face Manipulation Detection Through Ensemble of CNNs",
+        "url": "https://arxiv.org/abs/2004.07676",
+        "author_links": {
+            "N Bonettini": "https://scholar.google.com/citations?user=YTzuZ9IAAAAJ&hl=en&oi=sra",
+            "S Mandelli": "https://scholar.google.com/citations?user=Uhql1ccAAAAJ&hl=en&oi=sra",
+            "L Bondi": "https://scholar.google.com/citations?user=fWhDIgQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Bonettini",
+            "ED Cannas",
+            "S Mandelli",
+            "L Bondi"
+        ],
+        "abstract": "In the last few years, several techniques for facial manipulation in videos have been successfully developed and made available to the masses (ie, FaceSwap, deepfake, etc.). These methods enable anyone to easily edit faces in video sequences with incredibly …",
+        "eprint": "https://arxiv.org/pdf/2004.07676"
+    },
+    {
+        "title": "Retinopathy Diagnosis Using Semi-supervised Multi-channel Generative Adversarial Network",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-32956-3_22",
+        "author_links": {
+            "Y Xu": "https://scholar.google.com/citations?user=0jP8f7sAAAAJ&hl=en&oi=sra",
+            "B Lei": "https://scholar.google.com/citations?user=B4mpDHgAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Xie",
+            "Q Wan",
+            "G Chen",
+            "Y Xu",
+            "B Lei"
+        ],
+        "abstract": "Various kinds of retinopathy are the leading causes of blindness in human being, and with the rapid development of fundus images (FI) analysis in recent years, deep learning has became the focus while using Computer-Aided-Diagnosis (CAD) system to diagnose …"
+    },
+    {
+        "title": "Neural Mesh Refiner for 6-DoF Pose Estimation",
+        "url": "https://arxiv.org/abs/2003.07561",
+        "author_links": {
+            "X Qi": "https://scholar.google.com/citations?user=odjSydQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "D Wu",
+            "Y Chen",
+            "X Qi",
+            "Y Jian",
+            "W Chen",
+            "R Xiao"
+        ],
+        "abstract": "How can we effectively utilise the 2D monocular image information for recovering the 6D pose (6-DoF) of the visual objects? Deep learning has shown to be effective for robust and real-time monocular pose estimation. Oftentimes, the network learns to regress the 6-DoF …",
+        "eprint": "https://arxiv.org/pdf/2003.07561"
+    },
+    {
+        "title": "A Battery-Powered Friend: Towards Embedded Emotion Recognition",
+        "url": "http://files.coldattic.info/stanford/cs231n/CS231n_project.pdf",
+        "author_links": {},
+        "author": [
+            "P Shved"
+        ],
+        "abstract": "In this project, we set out to build a smiling robot: an embedded, battery-powered device that” smiles back” when a human subject in front of it smiles. We define a problem of building a neural system that would power the smiling robot. We prepare the dataset, apply …",
+        "eprint": "http://files.coldattic.info/stanford/cs231n/CS231n_project.pdf"
+    },
+    {
+        "title": "Analysis of medical images using deep learning",
+        "url": "https://kola.opus.hbz-nrw.de/opus45-kola/files/2028/final_thesis.pdf",
+        "author_links": {},
+        "author": [
+            "A Utegulov"
+        ],
+        "abstract": "Since the invention of U-net architecture in 2015, convolutional networks based on its encoder-decoder approach significantly improved results in image analysis challenges. It has been proven that such architectures can also be successfully applied in different …",
+        "eprint": "https://kola.opus.hbz-nrw.de/opus45-kola/files/2028/final_thesis.pdf"
+    },
+    {
+        "title": "Online Augmentation for Quality Improvement of Neural Networks for Classification of Single-Channel Electrocardiograms",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-39575-9_5",
+        "author_links": {},
+        "author": [
+            "V Guryanova"
+        ],
+        "abstract": "Currently, on the market, there are mobile devices that are capable of reading a person's single-lead electrocardiogram (ECG). These ECGs can be used to solve problems of determining various diseases. Neural networks are onearameters of augmentations of the …"
+    },
+    {
+        "title": "Artificial Intelligence in Quantitative Ultrasound Imaging: A Review",
+        "url": "https://arxiv.org/abs/2003.11658",
+        "author_links": {
+            "B Zhou": "https://scholar.google.com/citations?user=opP-BmMAAAAJ&hl=en&oi=sra",
+            "X Yang": "https://scholar.google.com/citations?user=Bl9R8ZQAAAAJ&hl=en&oi=sra",
+            "T Liu": "https://scholar.google.com/citations?user=UC3sPL4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "B Zhou",
+            "X Yang",
+            "T Liu"
+        ],
+        "abstract": "Quantitative ultrasound (QUS) imaging is a reliable, fast and inexpensive technique to extract physically descriptive parameters for assessing pathologies. Despite its safety and efficacy, QUS suffers from several major drawbacks: poor imaging quality, inter-and intra …",
+        "eprint": "https://arxiv.org/pdf/2003.11658"
+    },
+    {
+        "title": "A Framework for Knowing Who is Doing What in Aerial Surveillance Videos",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8753491/",
+        "author_links": {
+            "F Yang": "https://scholar.google.com/citations?user=LndV87gAAAAJ&hl=en&oi=sra",
+            "S Sakti": "https://scholar.google.com/citations?user=E0uhtlkAAAAJ&hl=en&oi=sra",
+            "Y Wu": "https://scholar.google.com/citations?user=vwOQ-UIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "F Yang",
+            "S Sakti",
+            "Y Wu",
+            "S Nakamura"
+        ],
+        "abstract": "Ultra-high-resolution aerial videos are used to relieve the shortage of surveillance system in sparsely populated regions. For realistic application purpose, it is important to automatically analyze “who is doing what?” in such videos. Although atomic visual action (AVA) detection …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08753491.pdf"
+    },
+    {
+        "title": "U-NetPlus: A Modified Encoder-Decoder U-Net Architecture for Semantic and Instance Segmentation of Surgical Instruments from Laparoscopic Images",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8856791/",
+        "author_links": {
+            "SMK Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra",
+            "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "SMK Hasan",
+            "CA Linte"
+        ],
+        "abstract": "With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the position of the surgical instruments in a surgical scene, and accurate detection & …"
+    },
+    {
+        "title": "Segmentation of the Left Ventricle on EchoCG Images Using MultiResUnet",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8958128/",
+        "author_links": {},
+        "author": [
+            "A Sheka",
+            "V Samun",
+            "T Chumarnaya"
+        ],
+        "abstract": "We compared the segmentation quality obtained with the following network architectures: Unet, Wide Unet, Unet++ and MultiResUnet. The MultiResUnet architecture has shown improved quality in other medical image segmentation tasks. It is applied to the problem of …"
+    },
+    {
+        "title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks",
+        "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1",
+        "author_links": {},
+        "author": [
+            "Á Casado-García",
+            "C Domínguez"
+        ],
+        "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
+        "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
+    },
+    {
+        "title": "Benchmark for Generic Product Detection: A strong baseline for Dense Object Detection",
+        "url": "https://arxiv.org/abs/1912.09476",
+        "author_links": {
+            "S Kant": "https://scholar.google.com/citations?user=2ZKGf24AAAAJ&hl=en&oi=sra",
+            "MM Srivastava": "https://scholar.google.com/citations?user=Xw0GUGIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Varadarajan",
+            "S Kant",
+            "MM Srivastava"
+        ],
+        "abstract": "Object detection in densely packed scenes is a new area where standard object detectors fail to train well (Goldman et al., 2019). We show that the performance of the standard object detectors on densely packed scenes is superior when it is trained on normal scenes rather …",
+        "eprint": "https://arxiv.org/pdf/1912.09476"
+    },
+    {
+        "title": "The Inclusive Images Competition",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-29135-8_6",
+        "author_links": {
+            "J Atwood": "https://scholar.google.com/citations?user=cYk1Xg4AAAAJ&hl=en&oi=sra",
+            "Y Halpern": "https://scholar.google.com/citations?user=sU6x0E0AAAAJ&hl=en&oi=sra",
+            "P Baljekar": "https://scholar.google.com/citations?user=HcXvGuMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Atwood",
+            "Y Halpern",
+            "P Baljekar",
+            "E Breck"
+        ],
+        "abstract": "Popular large image classification datasets that are drawn from the web present Eurocentric and Americentric biases that negatively impact the generalizability of models trained on them Shreya Shankar et al.(No classification without representation: Assessing geodiversity …"
+    },
+    {
+        "title": "ENDOSCOPY ARTEFACT DETECTION AND SEGMENTATION USING DEEP CONVOLUTIONAL NEURAL NETWORK",
+        "url": "http://ceur-ws.org/Vol-2595/endoCV2020_paper_id_26.pdf",
+        "author_links": {},
+        "author": [
+            "H Chen",
+            "C Lian",
+            "L Wang"
+        ],
+        "abstract": "Endoscopy Artefact Detection and Segmentation (EAD2020) includes 3 sub-tasks: Multi-class artefact detection, Semantic segmentation and Out-of-sample generalisation. This manuscript summarizes our solution. The challenge can be considered …",
+        "eprint": "http://ceur-ws.org/Vol-2595/endoCV2020_paper_id_26.pdf"
+    },
+    {
+        "title": "Automatic Sorting of Dwarf Minke Whale Underwater Images",
+        "url": "https://www.mdpi.com/2078-2489/11/4/200",
+        "author_links": {
+            "DA Konovalov": "https://scholar.google.com/citations?user=EeFUMYYAAAAJ&hl=en&oi=sra",
+            "RA Birtles": "https://scholar.google.com/citations?user=kwioRWAAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "DA Konovalov",
+            "N Swinhoe",
+            "DB Efremova",
+            "RA Birtles"
+        ],
+        "abstract": "A predictable aggregation of dwarf minke whales (Balaenoptera acutorostrata subspecies) occurs annually in the Australian waters of the northern Great Barrier Reef in June–July, which has been the subject of a long-term photo-identification study. Researchers from the …",
+        "eprint": "https://www.mdpi.com/2078-2489/11/4/200/pdf"
+    },
+    {
+        "title": "Deep learning for skin lesion classification: augment, train, and ensemble= Aprendizado profundo para classificação de lesões de pele: aumento, treino e conjunto",
+        "url": "http://repositorio.unicamp.br/handle/REPOSIP/335713",
+        "author_links": {
+            "FVM Perez": "https://scholar.google.com/citations?user=OaGbs9sAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "FVM Perez"
+        ],
+        "abstract": "A detecção precoce é fundamental para um paciente com melanoma, o tipo mais letal de câncer de pele. O diagnóstico automatizado de melanoma pode melhorar o atendimento ao paciente, ampliando e acelerando o tratamento, especialmente com o crescimento no …",
+        "eprint": "http://repositorio.unicamp.br/bitstream/REPOSIP/335713/1/Perez_FabioViniciusMoreira_M.pdf"
+    },
+    {
+        "title": "Data Preprocessing via Multi-sequences MRI Mixture to Improve Brain Tumor Segmentation",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-45385-5_62",
+        "author_links": {
+            "V Groza": "https://scholar.google.com/citations?user=okJ4_XcAAAAJ&hl=en&oi=sra",
+            "E Pavlovskiy": "https://scholar.google.com/citations?user=rPbZTCQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "V Groza",
+            "B Tuchinov",
+            "E Pavlovskiy",
+            "E Amelina"
+        ],
+        "abstract": "Automatic brain tumor segmentation is one of the crucial problems nowadays among other directions and domains where daily clinical workflow requires to put a lot of efforts while studying computer tomography (CT) or structural magnetic resonance imaging (MRI) scans …"
+    },
+    {
+        "title": "Physical Cue based Depth-Sensing by Color Coding with Deaberration Network",
+        "url": "https://arxiv.org/abs/1908.00329",
+        "author_links": {},
+        "author": [
+            "N Mishima",
+            "T Kozakaya",
+            "A Moriya",
+            "R Okada"
+        ],
+        "abstract": "Color-coded aperture (CCA) methods can physically measure the depth of a scene given by physical cues from a single-shot image of a monocular camera. However, they are vulnerable to actual lens aberrations in real scenes because they assume an ideal lens for …",
+        "eprint": "https://arxiv.org/pdf/1908.00329"
+    },
+    {
+        "title": "Cloud Recognition and Masking of Earth Observation Imagery-An Optimized approach for Automatic Labeling of Sentinel-2 Imagery for Object Detection",
+        "url": "https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2619036",
+        "author_links": {},
+        "author": [
+            "LM Ellefsen"
+        ],
+        "abstract": "In this project we have developed three different methods for analyzing Sentinel-2 satellite images containing ships, and determining whether the ship is obscured by a cloud or not. Our motivation for this work is to find the optimal method for correctly labeling images for use …",
+        "eprint": "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2619036/no.ntnu%3Ainspera%3A2469660.pdf?sequence=1"
+    },
+    {
+        "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches WPI Technical Report WPI-CS-TR-19-02",
+        "url": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf",
+        "author_links": {
+            "A Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Wagh"
+        ],
+        "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
+        "eprint": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf"
+    },
+    {
+        "title": "A Deep 3D Object Pose Estimation Framework for Robots with RGB-D Sensors",
+        "url": "https://digitalcommons.wpi.edu/etd-theses/1287/",
+        "author_links": {
+            "AY Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "AY Wagh"
+        ],
+        "abstract": "The task of object detection and pose estimation has widely been done using template matching techniques. However, these algorithms are sensitive to outliers and occlusions, and have high latency due to their iterative nature. Recent research in computer vision and …",
+        "eprint": "https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=2286&context=etd-theses"
+    },
+    {
+        "title": "Urban Sound Tagging using Convolutional Neural Networks",
+        "url": "https://arxiv.org/abs/1909.12699",
+        "author_links": {
+            "S Adapa": "https://scholar.google.com/citations?user=SJUsAwsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Adapa"
+        ],
+        "abstract": "In this paper, we propose a framework for environmental sound classification in a low-data context (less than 100 labeled examples per class). We show that using pre-trained image classification models along with the usage of data augmentation techniques results in higher …",
+        "eprint": "https://arxiv.org/pdf/1909.12699"
+    },
+    {
+        "title": "Seismic Interpretation of Partially Labeled 3D Cube with Neural Networks",
+        "url": "https://www.earthdoc.org/content/papers/10.3997/2214-4609.202032091",
+        "author_links": {},
+        "author": [
+            "A Zhuchkov",
+            "D Prokhorov",
+            "V Gusev"
+        ],
+        "abstract": "We propose to solve seismic interpretation problem by manually labelling very small (0.5%) fraction of inline and crossline sections of the seismic cube, followed by automatic segmentation of the rest of the cube by a neural network model. There are several methods …"
+    },
+    {
+        "title": "How well do U-Net-based segmentation trained on adult cardiac magnetic resonance imaging data generalize to rare congenital heart diseases for surgical planning?",
+        "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11315/113151K/How-well-do-U-Net-based-segmentation-trained-on-adult/10.1117/12.2550651.short",
+        "author_links": {
+            "A Tandon": "https://scholar.google.com/citations?user=R95fbxQAAAAJ&hl=en&oi=sra",
+            "T Hussain": "https://scholar.google.com/citations?user=zhwu1p0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Koehler",
+            "A Tandon",
+            "T Hussain"
+        ],
+        "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …",
+        "eprint": "https://arxiv.org/pdf/2002.04392"
+    },
+    {
+        "title": "Encoder-Recurrent Decoder Network for Single Image Dehazing",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9052993/",
+        "author_links": {
+            "TH Vu": "https://scholar.google.com/citations?user=z95S1VsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Dang",
+            "TH Vu",
+            "JC Wang"
+        ],
+        "abstract": "This paper develops a deep learning model, called Encoder-Recurrent Decoder Network (ERDN), which recovers the clear image from a degrade hazy image without using the atmospheric scattering model. The proposed model consists of two key components-an …"
+    },
+    {
+        "title": "The Impact of Padding on Image Classification by Using Pre-trained Convolutional Neural Networks",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-30645-8_31",
+        "author_links": {
+            "A Ortis": "https://scholar.google.com/citations?user=gcztqXgAAAAJ&hl=en&oi=sra",
+            "S Battiato": "https://scholar.google.com/citations?user=OplbtHgAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Tang",
+            "A Ortis",
+            "S Battiato"
+        ],
+        "abstract": "The work presented in this paper aims to investigate the effect of pre-processing on image classification by using CNN pre-trained models. By considering how different quality factors of the input images affect the performances of a CNN based classifier, we propose a pre …"
+    },
+    {
+        "title": "GAN-SMOTE: A Generative Adversarial Network approach to Synthetic Minority Oversampling for One-Hot Encoded Data",
+        "url": "http://ajiips.com.au/papers/V15.2/v15n2_33-39.pdf",
+        "author_links": {
+            "J Plested": "https://scholar.google.com/citations?user=ymqZJN0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Scott",
+            "J Plested"
+        ],
+        "abstract": "Small unbalanced datasets remain a serious impediment to the implementation of cutting-edge machine learning in an industry setting. This paper proposes GAN-SMOTE, a novel approach to synthetic minority class oversampling using a generative adversarial network …",
+        "eprint": "http://ajiips.com.au/papers/V15.2/v15n2_33-39.pdf"
+    },
+    {
+        "title": "Real-Time Tracking of Guidewire Robot Tips Using Deep Convolutional Neural Networks on Successive Localized Frames",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8886572/",
+        "author_links": {
+            "I Ullah": "https://scholar.google.com/citations?user=eod9uX0AAAAJ&hl=en&oi=sra",
+            "P Chikontwe": "https://scholar.google.com/citations?user=8jHbkMcAAAAJ&hl=en&oi=sra",
+            "SH Park": "https://scholar.google.com/citations?user=PHLTD4sAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "I Ullah",
+            "P Chikontwe",
+            "SH Park"
+        ],
+        "abstract": "Studies are proceeded to stabilize cardiac surgery using thin micro-guidewires and catheter robots. To control the robot to a desired position and pose, it is necessary to accurately track the robot tip in real time but tracking and accurately delineating the thin and small tip is …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08886572.pdf"
+    },
+    {
+        "title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8966436/",
+        "author_links": {
+            "JM Saavedra": "https://scholar.google.com/citations?user=eN5q1XMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "FS Herrera",
+            "JM Saavedra"
+        ],
+        "abstract": "We propose modifications to the RetinaNet architecture and Focal Loss [1] to improve the effectiveness of them in the context of object detection. We show that through normalizing the embeddings generated by each receptive field in the feature map, classifying them using …"
+    },
+    {
+        "title": "An Efficient Solution for Semantic Segmentation of Three Ground‐based Cloud Datasets",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019EA001040",
+        "author_links": {},
+        "author": [
+            "Q Song",
+            "Z Cui",
+            "P Liu"
+        ],
+        "abstract": "The machine learning approach has shown its state‐of‐the‐art ability to handle segmentation and detection tasks. It is increasingly employed to extract patterns and spatiotemporal features from the ever‐increasing stream of Earth system data. However …",
+        "eprint": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2019EA001040"
+    },
+    {
+        "title": "Cell Nuclear Morphology Analysis Using 3D Shape Modeling, Machine Learning and Visual Analytics",
+        "url": "https://deepblue.lib.umich.edu/handle/2027.42/147598",
+        "author_links": {
+            "A Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Kalinin"
+        ],
+        "abstract": "Quantitative analysis of morphological changes in a cell nucleus is important for the understanding of nuclear architecture and its relationship with cell differentiation, development, proliferation, and disease. Changes in the nuclear form are associated with …",
+        "eprint": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/147598/akalinin_1.pdf?sequence=1"
+    },
+    {
+        "title": "DAugNet: Unsupervised, Multi-source, Multi-target, and Life-long Domain Adaptation for Semantic Segmentation of Satellite Images",
+        "url": "https://arxiv.org/abs/2005.06216",
+        "author_links": {
+            "O Tasar": "https://scholar.google.com/citations?user=sluW_egAAAAJ&hl=en&oi=sra",
+            "Y Tarabalka": "https://scholar.google.com/citations?user=N5raVlIAAAAJ&hl=en&oi=sra",
+            "P Alliez": "https://scholar.google.com/citations?user=nQuoXgwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "O Tasar",
+            "A Giros",
+            "Y Tarabalka",
+            "P Alliez"
+        ],
+        "abstract": "The domain adaptation of satellite images has recently gained an increasing attention to overcome the limited generalization abilities of machine learning models when segmenting large-scale satellite images. Most of the existing approaches seek for adapting the model …",
+        "eprint": "https://arxiv.org/pdf/2005.06216"
+    },
+    {
+        "title": "Deep Depth From Aberration Map",
+        "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kashiwagi_Deep_Depth_From_Aberration_Map_ICCV_2019_paper.html",
+        "author_links": {},
+        "author": [
+            "M Kashiwagi",
+            "N Mishima"
+        ],
+        "abstract": "Passive and convenient depth estimation from single-shot image is still an open problem. Existing depth from defocus methods require multiple input images or special hardware customization. Recent deep monocular depth estimation is also limited to an image with …",
+        "eprint": "http://openaccess.thecvf.com/content_ICCV_2019/papers/Kashiwagi_Deep_Depth_From_Aberration_Map_ICCV_2019_paper.pdf"
+    },
+    {
+        "title": "Contextual Pyramid Attention Network for Building Segmentation in Aerial Imagery",
+        "url": "https://arxiv.org/abs/2004.07018",
+        "author_links": {
+            "C Sebastian": "https://scholar.google.com/citations?user=FzH85ygAAAAJ&hl=en&oi=sra",
+            "R Imbriaco": "https://scholar.google.com/citations?user=XpMAoOgAAAAJ&hl=en&oi=sra",
+            "E Bondarev": "https://scholar.google.com/citations?user=zfaaI_EAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "C Sebastian",
+            "R Imbriaco",
+            "E Bondarev"
+        ],
+        "abstract": "Building extraction from aerial images has several applications in problems such as urban planning, change detection, and disaster management. With the increasing availability of data, Convolutional Neural Networks (CNNs) for semantic segmentation of remote sensing …",
+        "eprint": "https://arxiv.org/pdf/2004.07018"
+    },
+    {
+        "title": "Augmentation-Based Object Detection for Winter Time Applications",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8875557/",
+        "author_links": {
+            "R Yagfarov": "https://scholar.google.com/citations?user=TH9msn4AAAAJ&hl=en&oi=sra",
+            "V Ostankovich": "https://scholar.google.com/citations?user=TSGRhvEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Yagfarov",
+            "V Ostankovich"
+        ],
+        "abstract": "Despite the significant advancements in object detection, there is still a number of detection tasks that are challenging and difficult. To eliminate them and to push forward the research in this area a technological\" IceVision\" Challenge was organized in Russia in 2019. The …",
+        "eprint": "https://www.researchgate.net/profile/Rauf_Yagfarov/publication/336728688_Augmentation-Based_Object_Detection_for_Winter_Time_Applications/links/5e257ba692851cafc3936168/Augmentation-Based-Object-Detection-for-Winter-Time-Applications.pdf"
+    },
+    {
+        "title": "Automatic lesion boundary detection in dermoscopy",
+        "url": "https://arxiv.org/abs/1812.00877",
+        "author_links": {},
+        "author": [
+            "G Kechyn"
+        ],
+        "abstract": "This manuscript addresses the problem of the automatic lesion boundary detection in dermoscopy, using deep neural networks. An approach is based on the adaptation of the U-net convolutional neural network with skip connections for lesion boundary segmentation …",
+        "eprint": "https://arxiv.org/pdf/1812.00877"
+    },
+    {
+        "title": "Visual Anomaly Detection For Automatic Quality Control",
+        "url": "https://boa.unimib.it/handle/10281/241219",
+        "author_links": {
+            "F Piccoli": "https://scholar.google.com/citations?user=qBoFeZoAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "F Piccoli"
+        ],
+        "abstract": "Automatic quality control is one of the key ingredients for the fourth industrial revolution that will lead to the development of the so called industry 4.0. In this context, a crucial element is a production-compatible-time detection of defects, anomalies or product failures. This thesis …",
+        "eprint": "https://boa.unimib.it/bitstream/10281/241219/2/phd_unimib_713064.pdf"
+    },
+    {
+        "title": "When Texture Matters: Texture-Focused Cnns Outperform General Data Augmentation and Pretraining in Oral Cancer Detection",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9098424/",
+        "author_links": {
+            "H Harlin": "https://scholar.google.com/citations?user=wXWl-68AAAAJ&hl=en&oi=sra",
+            "J Lindblad": "https://scholar.google.com/citations?user=BtuFYvQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "E Wetzer",
+            "J Gay",
+            "H Harlin",
+            "J Lindblad"
+        ],
+        "abstract": "Early detection is essential to reduce cancer mortality. Oral cancer could be subject to screening programs (similar as for cervical cancer) by collecting Pap smear samples at any dentist visit. However, manual analysis of the resulting massive amount of data is …"
+    },
+    {
+        "title": "The Effects of Augmented Training Dataset on Performance of Convolutional Neural Networks in Face Recognition System",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8859979/",
+        "author_links": {
+            "MA Kutlugün": "https://scholar.google.com/citations?user=iwnbq5QAAAAJ&hl=en&oi=sra",
+            "Y Sirin": "https://scholar.google.com/citations?user=5OMHK2gAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "MA Kutlugün",
+            "Y Sirin"
+        ],
+        "abstract": "Nowadays, deep learning methods have been used in many areas such as big data analysis, speech and image processing with the increasing processing power and the development of graphics processors. In particular, face recognition systems have become …",
+        "eprint": "https://annals-csis.org/Volume_18/drp/pdf/181.pdf"
+    },
+    {
+        "title": "Understanding the decisions of CNNs: an in-model approach",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0167865520301240",
+        "author_links": {
+            "K Fernandes": "https://scholar.google.com/citations?user=FhbkV-wAAAAJ&hl=en&oi=sra",
+            "LÃF Teixeira": "https://scholar.google.com/citations?user=WLOWIngoRCoC&hl=en&oi=sra"
+        },
+        "author": [
+            "I Rio-Torto",
+            "K Fernandes",
+            "LÃF Teixeira"
+        ],
+        "abstract": "With the outstanding predictive performance of Convolutional Neural Networks on different tasks and their widespread use in real-world scenarios, it is essential to understand and trust these black-box models. While most of the literature focuses on post-model methods, we …"
+    },
+    {
+        "title": "Automatic phantom test pattern classification through transfer learning with deep neural networks",
+        "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11312/113122Q/Automatic-phantom-test-pattern-classification-through-transfer-learning-with-deep/10.1117/12.2549366.short",
+        "author_links": {
+            "J Solomon": "https://scholar.google.com/citations?user=ZBvfqsIAAAAJ&hl=en&oi=sra",
+            "E Samei": "https://scholar.google.com/citations?user=JlTG4gEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "RB Fricks",
+            "J Solomon",
+            "E Samei"
+        ],
+        "abstract": "Imaging phantoms are test patterns used to measure image quality in computer tomography (CT) systems. A new phantom platform (Mercury Phantom, Gammex) provides test patterns for estimating the task transfer function (TTF) or noise power spectrum (NPF) and simulates …",
+        "eprint": "https://arxiv.org/pdf/2001.08189"
+    },
+    {
+        "title": "Monitoring sugar crystallization with deep neural networks",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0260877420300637",
+        "author_links": {
+            "J Zhang": "https://scholar.google.com/citations?user=C2ftS4sAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Zhang",
+            "Y Meng",
+            "J Wu",
+            "J Qin",
+            "T Yao",
+            "S Yu"
+        ],
+        "abstract": "Human labor still play an important role in cane sugar crystallization process. Automation control is essential to reduce human labor. An accurate image classification system is the basis for automation control of the cane sugar crystallization process. This paper builds a …"
+    },
+    {
+        "title": "Deep Learning object detection architectures in ADAS",
+        "url": "http://oa.upm.es/58762/1/TFM_URTZI_OTAMENDI_ETXABE.pdf",
+        "author_links": {},
+        "author": [
+            "UO Etxabe",
+            "AG Basauri"
+        ],
+        "abstract": "Advances in computing capacity and the existence of large quantities data have accelerated progress in the application of machine learning techniques in different fields. Mobile robotics, autonomous driving and driving assistance systems (ADAS) are clear exponents of …",
+        "eprint": "http://oa.upm.es/58762/1/TFM_URTZI_OTAMENDI_ETXABE.pdf"
+    },
+    {
+        "title": "Deep Learning for Skin Lesion Classification: Augment, Train, and Ensemble",
+        "author_links": {
+            "FVM Perez": "https://scholar.google.com/citations?user=14vRKS8AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "FVM Perez"
+        ]
+    },
+    {
+        "title": "残差密集相对平均 CGAN 的图像配准方法",
+        "url": "http://www.cjig.cn/jig/ch/reader/download_new_edit_content.aspx?edit_id=20190926091554001&file_no=201903270000001&journal_id=jig",
+        "author_links": {},
+        "author": [
+            "王丽芳， 张程程， 秦品乐， 蔺素珍， 高媛， 窦杰亮"
+        ],
+        "abstract": "目的针对现有基于图像合成的配准算法中合成模型鲁棒性差及合成图像特征信息表示不足导致配准精度不高的问题, 提出了基于残差密集相对平均条件生成对抗网络(RD-RaCGAN) 的多模态脑部图像配准方法. 方法首先, 结合相对平均生成对抗网络中的相对平均鉴别器能够 …",
+        "eprint": "http://www.cjig.cn/jig/ch/reader/download_new_edit_content.aspx?edit_id=20190926091554001&file_no=201903270000001&journal_id=jig"
+    }
+]
