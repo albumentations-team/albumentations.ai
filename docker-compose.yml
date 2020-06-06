@@ -4,7 +4,7 @@ services:
     container_name: builder
     build:
       context: .
-      dockerfile: builder/Dockerfile
+      dockerfile: ./builder/Dockerfile
     tty: true
     environment:
       - BASE_URL=http://localhost:3000
@@ -34,6 +34,18 @@ services:
     tty: true
     volumes:
       - _build:/_build
+  mkdocs:
+    container_name: mkdocs
+    build:
+      context: .
+      dockerfile: ./mkdocs/Dockerfile
+    ports:
+      - "127.0.0.1:${MKDOCS_PORT}:8000"
+    tty: true
+    volumes:
+      - ./mkdocs/src:/mkdocs/src
+    command:
+      serve --dev-addr 0.0.0.0:8000
 
 volumes:
   _build:

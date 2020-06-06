@@ -1,0 +1,34 @@
+site_name: Albumentations Docs
+nav:
+  - Documentation Overview: 'index.md'
+
+plugins:
+  - mknotebooks:
+     enable_default_jupyter_cell_styling: false
+     enable_default_pandas_dataframe_styling: false
+
+features:
+- tabs
+
+markdown_extensions:
+  - codehilite
+
+theme:
+  name: material
+  palette:
+    primary: "white"
+    accent: "white"
+  custom_dir: custom_theme/
+  logo: images/logo.png
+  favicon: images/logo.png
+
+extra_css:
+  - css/extra.css
+
+repo_name: albumentations
+repo_url: https://github.com/albumentations-team/albumentations
+site_url: https://albumentations.ai
+
+edit_uri: 'https://github.com/albumentations-team/albumentations.ai/mkdocs/src/docs'
+
+site_dir: /site

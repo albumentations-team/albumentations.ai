@@ -1,0 +1,13 @@
+
+  {% extends "base.html" %}
+  {% block site_nav %}
+  {% if nav %}
+    <div class="md-sidebar md-sidebar--primary">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/nav.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
