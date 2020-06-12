@@ -572,6 +572,23 @@
         "eprint": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf"
     },
     {
+        "title": "Weighted Ensemble Object Detection with Optimized Coefficients for Remote Sensing Images",
+        "url": "https://www.mdpi.com/2220-9964/9/6/370",
+        "author_links": {
+            "N Barışçı": "https://scholar.google.com/citations?user=0qMaYIcAAAAJ&hl=en&oi=sra",
+            "A Çetin": "https://scholar.google.com/citations?user=5Qv3g4UAAAAJ&hl=en&oi=sra",
+            "U Ergün": "https://scholar.google.com/citations?user=YSnytKcAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Körez",
+            "N Barışçı",
+            "A Çetin",
+            "U Ergün"
+        ],
+        "abstract": "The detection of objects in very high-resolution (VHR) remote sensing images has become increasingly popular with the enhancement of remote sensing technologies. High-resolution images from aircrafts or satellites contain highly detailed and mixed backgrounds that …",
+        "eprint": "https://www.mdpi.com/2220-9964/9/6/370/pdf"
+    },
+    {
         "title": "A Deep 3D Object Pose Estimation Framework for Robots with RGB-D Sensors",
         "url": "https://digitalcommons.wpi.edu/etd-theses/1287/",
         "author_links": {
@@ -758,6 +775,23 @@
         "eprint": "https://arxiv.org/pdf/2004.07018"
     },
     {
+        "title": "A Novel Approach to Data Augmentation for Pavement Distress Segmentation",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0166361519310516",
+        "author_links": {
+            "D Mazzini": "https://scholar.google.com/citations?user=J84UgwIAAAAJ&hl=en&oi=sra",
+            "P Napoletano": "https://scholar.google.com/citations?user=-1Va_uwAAAAJ&hl=en&oi=sra",
+            "F Piccoli": "https://scholar.google.com/citations?user=qBoFeZoAAAAJ&hl=en&oi=sra",
+            "R Schettini": "https://scholar.google.com/citations?user=O4TctG0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "D Mazzini",
+            "P Napoletano",
+            "F Piccoli",
+            "R Schettini"
+        ],
+        "abstract": "Accurate semantic segmentation ground-truths are difficult and expensive to obtain. On the other hand, the most promising approaches to automatically tackle this task, ie Deep Convolutional Neural Networks (CNNs), require high volumes of labeled data. We propose …"
+    },
+    {
         "title": "Augmentation-Based Object Detection for Winter Time Applications",
         "url": "https://ieeexplore.ieee.org/abstract/document/8875557/",
         "author_links": {
@@ -797,6 +831,7 @@
         "title": "When Texture Matters: Texture-Focused Cnns Outperform General Data Augmentation and Pretraining in Oral Cancer Detection",
         "url": "https://ieeexplore.ieee.org/abstract/document/9098424/",
         "author_links": {
+            "E Wetzer": "https://scholar.google.com/citations?user=qSc3kA8AAAAJ&hl=en&oi=sra",
             "H Harlin": "https://scholar.google.com/citations?user=wXWl-68AAAAJ&hl=en&oi=sra",
             "J Lindblad": "https://scholar.google.com/citations?user=BtuFYvQAAAAJ&hl=en&oi=sra"
         },
