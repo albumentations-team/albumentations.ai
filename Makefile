@@ -20,6 +20,7 @@ fetch-data: check-env-github-token build-builder
 
 prod: check-env-github-token build-builder fetch-data
 	docker-compose run -u $(CURRENT_USER) -v ${PROD_BUILD_DIR}:${PROD_BUILD_DIR} -e BUILD_DIR=$(PROD_BUILD_DIR) builder build --base-url $(PROD_SITE)
+	ls -lt ${PROD_BUILD_DIR}
 	docker-compose run -u $(CURRENT_USER) -v ${PROD_BUILD_DIR}/docs:/site mkdocs build
 
 build-builder:
