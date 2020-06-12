@@ -1,0 +1,17 @@
+@media screen and (min-width: 76.25em) {
+  .md-content {
+    max-width: 80%;
+  }
+}
+
+.md-typeset a {
+  text-decoration: underline;
+}
+
+p.image-with-caption {
+  text-align: center;
+  color: #777;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}

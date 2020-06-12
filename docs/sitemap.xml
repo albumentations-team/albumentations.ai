@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+     <loc>https://albumentations.ai/</loc>
+     <lastmod>2020-06-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/introduction/image_augmentation/</loc>
+     <lastmod>2020-06-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/introduction/why_you_need_a_dedicated_library_for_image_augmentation/</loc>
+     <lastmod>2020-06-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>
