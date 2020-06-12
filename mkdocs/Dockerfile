@@ -10,6 +10,8 @@ RUN apt-get update \
     pandoc \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -y nodejs
+
 COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade pip
