@@ -110,6 +110,20 @@
         "eprint": "https://arxiv.org/pdf/1904.08084"
     },
     {
+        "title": "Moiré pattern removal via attentive fractal network",
+        "url": "http://openaccess.thecvf.com/content_CVPRW_2020/html/w31/Xu_Moire_Pattern_Removal_via_Attentive_Fractal_Network_CVPRW_2020_paper.html",
+        "author_links": {
+            "Q Sun": "https://scholar.google.com/citations?user=nuFmEOcAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "D Xu",
+            "Y Chu",
+            "Q Sun"
+        ],
+        "abstract": "Moire patterns are commonly seen artifacts when taking photos of screens and other objects with high-frequency textures. It's challenging to remove the moire patterns considering its complex color and shape. In this work, we propose an Attentive Fractal Network to effectively …",
+        "eprint": "http://openaccess.thecvf.com/content_CVPRW_2020/papers/w31/Xu_Moire_Pattern_Removal_via_Attentive_Fractal_Network_CVPRW_2020_paper.pdf"
+    },
+    {
         "title": "Camera Model Identification Using Convolutional Neural Networks",
         "url": "https://ieeexplore.ieee.org/abstract/document/8622031/",
         "author_links": {
@@ -245,20 +259,18 @@
     },
     {
         "title": "StandardGAN: Multi-source Domain Adaptation for Semantic Segmentation of Very High Resolution Satellite Images by Data Standardization",
-        "url": "https://arxiv.org/abs/2004.06402",
+        "url": "http://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tasar_StandardGAN_Multi-Source_Domain_Adaptation_for_Semantic_Segmentation_of_Very_High_CVPRW_2020_paper.html",
         "author_links": {
             "O Tasar": "https://scholar.google.com/citations?user=sluW_egAAAAJ&hl=en&oi=sra",
-            "Y Tarabalka": "https://scholar.google.com/citations?user=N5raVlIAAAAJ&hl=en&oi=sra",
-            "P Alliez": "https://scholar.google.com/citations?user=nQuoXgwAAAAJ&hl=en&oi=sra"
+            "Y Tarabalka": "https://scholar.google.com/citations?user=N5raVlIAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "O Tasar",
             "Y Tarabalka",
-            "A Giros",
-            "P Alliez"
+            "A Giros"
         ],
-        "abstract": "Domain adaptation for semantic segmentation has recently been actively studied to increase the generalization capabilities of deep learning models. The vast majority of the domain adaptation methods tackle single-source case, where the model trained on a single source …",
-        "eprint": "https://arxiv.org/pdf/2004.06402"
+        "abstract": "Domain adaptation for semantic segmentation has recently been actively studied to increase the generalization capabilities of deep learning models. The vast majority of the domain adaptation methods tackle single-source case, where the model trained on a single …",
+        "eprint": "http://openaccess.thecvf.com/content_CVPRW_2020/papers/w11/Tasar_StandardGAN_Multi-Source_Domain_Adaptation_for_Semantic_Segmentation_of_Very_High_CVPRW_2020_paper.pdf"
     },
     {
         "title": "Safe augmentation: Learning task-specific transformations from data",
