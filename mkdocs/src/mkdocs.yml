@@ -15,6 +15,10 @@ plugins:
 features:
 - tabs
 
+google_analytics:
+  - UA-158065353-1
+  - auto
+
 markdown_extensions:
   - codehilite
   - attr_list
