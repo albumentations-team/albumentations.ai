@@ -40,6 +40,6 @@ repo_name: albumentations
 repo_url: https://github.com/albumentations-team/albumentations
 site_url: https://albumentations.ai
 
-edit_uri: 'https://github.com/albumentations-team/albumentations.ai/mkdocs/src/docs'
+edit_uri: 'https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs'
 
 site_dir: /site
