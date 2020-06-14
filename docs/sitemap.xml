@@ -15,5 +15,13 @@
      <loc>https://albumentations.ai/introduction/why_albumentations/</loc>
      <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/getting_started/installation/</loc>
+     <lastmod>2020-06-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/getting_started/augmenting_images/</loc>
+     <lastmod>2020-06-14</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
