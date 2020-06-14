@@ -42,6 +42,8 @@ services:
     ports:
       - "127.0.0.1:${MKDOCS_PORT}:8000"
     tty: true
+    environment:
+      - GOOGLE_ANALYTICS_TID
     volumes:
       - ./mkdocs/src:/mkdocs/src
     command:

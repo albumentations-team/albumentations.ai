@@ -5,6 +5,9 @@ nav:
     - 'What is image augmentation and how it can improve the performance of deep neural networks': 'introduction/image_augmentation.md'
     - 'Why you need a dedicated library for image augmentation': introduction/why_you_need_a_dedicated_library_for_image_augmentation.md
     - 'Why Albumentations': introduction/why_albumentations.md
+  - Getting Started:
+    - 'Installation': 'getting_started/installation.md'
+    - 'Augmenting images': 'getting_started/augmenting_images.md'
 
 plugins:
   - mknotebooks:
@@ -17,13 +20,14 @@ features:
 - tabs
 
 google_analytics:
-  - UA-158065353-1
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
   - auto
 
 markdown_extensions:
   - codehilite
   - attr_list
   - admonition
+  - pymdownx.superfences
 
 theme:
   name: material

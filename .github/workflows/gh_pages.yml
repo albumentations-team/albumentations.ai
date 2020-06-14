@@ -22,6 +22,7 @@ jobs:
         run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_ANALYTICS_TID: UA-158065353-1
       - name: Commit filesdate +"%Y-%m-%d_%H-%M-%S"
         run: |
           cd ${GITHUB_WORKSPACE}/gh_pages
