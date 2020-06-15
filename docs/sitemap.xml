@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://albumentations.ai/</loc>
-     <lastmod>2020-06-14</lastmod>
+     <lastmod>2020-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/introduction/image_augmentation/</loc>
-     <lastmod>2020-06-14</lastmod>
+     <lastmod>2020-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/introduction/why_you_need_a_dedicated_library_for_image_augmentation/</loc>
-     <lastmod>2020-06-14</lastmod>
+     <lastmod>2020-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/introduction/why_albumentations/</loc>
-     <lastmod>2020-06-14</lastmod>
+     <lastmod>2020-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/getting_started/installation/</loc>
-     <lastmod>2020-06-14</lastmod>
+     <lastmod>2020-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/getting_started/augmenting_images/</loc>
-     <lastmod>2020-06-14</lastmod>
+     <lastmod>2020-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
