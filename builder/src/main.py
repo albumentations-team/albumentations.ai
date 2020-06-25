@@ -28,7 +28,8 @@ def cli():
 @click.option("--cache-dir", type=str, envvar="CACHE_DIR", required=True)
 @click.option("--searchpath", type=str, envvar="SEARCHPATH", required=True)
 @click.option("--base-url", type=str, envvar="BASE_URL", required=True)
-def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url):
+@click.option("--mkdocs-port", type=str, envvar="MKDOCS_PORT", default=None)
+def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mkdocs_port):
 
     for f in CACHE_FILES:
         if not os.path.exists(os.path.join(cache_dir, f)):
@@ -61,7 +62,7 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url):
         searchpath=searchpath,
         staticpaths=["assets/"],
         use_reloader=use_reloader,
-        env_globals={"base_url": base_url},
+        env_globals={"base_url": base_url, "mkdocs_port": mkdocs_port},
         contexts=[
             ("index.html", {"stars_count": stars_count}),
             (

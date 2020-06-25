@@ -15,6 +15,7 @@ services:
       - SEARCHPATH=html
       - REPOSITORY=albumentations-team/albumentations
       - GITHUB_TOKEN
+      - MKDOCS_PORT
     volumes:
       - ./data:/data
       - ./builder/src:/builder/src
