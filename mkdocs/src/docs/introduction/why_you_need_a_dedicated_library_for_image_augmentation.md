@@ -1,3 +1,4 @@
+# Why you need a dedicated library for image augmentation
 
 At first glance, image augmentations look very simple; you apply basic transformations to an image: mirroring, cropping, changing brightness and contrast, etc.
 

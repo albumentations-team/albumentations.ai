@@ -1,0 +1,4 @@
+"""([^^]) → """\n    $1
+Image types → Image-Types
+\(int, int\) → [int, int]
+\(float, float\) → [float, float]

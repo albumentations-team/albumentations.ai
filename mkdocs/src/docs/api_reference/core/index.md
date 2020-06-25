@@ -1,0 +1,3 @@
+- [Composition API (albumentations.core.composition)](composition.md)
+- [Serialization API (albumentations.core.serialization)](serialization.md)
+- [Transforms Interface (albumentations.core.transforms_interface)](transforms_interface.md)

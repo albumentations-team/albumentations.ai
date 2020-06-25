@@ -1,3 +1,5 @@
+# Why Albumentations
+
 ### A single interface to work with images, masks, bounding boxes, and key points.
 Albumentations provides a single interface to work with different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, pose estimation, etc.
 
@@ -16,5 +18,5 @@ Albumentations allows to easily add new augmentations and use them in computer v
 ### Rigorous testing
 Bugs in the augmentation pipeline could silently corrupt the input data. They can easily go unnoticed, but the performance of the models trained with incorrect data will degrade. Albumentations has an extensive test suite that helps to discover bugs during development.
 
-### it is open source and MIT licensed
+### It is open source and MIT licensed
 You can find the source code on [GitHub](https://github.com/albumentations-team/albumentations){target=_blank}.

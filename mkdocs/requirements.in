@@ -2,3 +2,7 @@ mkdocs
 mkdocs-material
 mknotebooks
 Pygments
+mkdocs-awesome-pages-plugin
+mkdocstrings
+torch
+torchvision

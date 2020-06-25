@@ -1,13 +1,4 @@
 site_name: Albumentations Documentation
-nav:
-  - Welcome: 'index.md'
-  - Introduction:
-    - 'What is image augmentation and how it can improve the performance of deep neural networks': 'introduction/image_augmentation.md'
-    - 'Why you need a dedicated library for image augmentation': introduction/why_you_need_a_dedicated_library_for_image_augmentation.md
-    - 'Why Albumentations': introduction/why_albumentations.md
-  - Getting Started:
-    - 'Installation': 'getting_started/installation.md'
-    - 'Augmenting images': 'getting_started/augmenting_images.md'
 
 plugins:
   - mknotebooks:
@@ -15,6 +6,18 @@ plugins:
      enable_default_pandas_dataframe_styling: false
   - search:
       prebuild_index: true
+  - awesome-pages
+  - mkdocstrings:
+      handlers:
+        python:
+          rendering:
+            show_source: false
+          selection:
+            docstring_style: google  # this is the default
+            docstring_options:
+              replace_admonitions: yes
+      watch:
+        - /albumentations
 
 features:
 - tabs

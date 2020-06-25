@@ -1,3 +1,5 @@
+# Image augmentation for classification
+
 We can divide the process of image augmentation into four steps:
 
 1. Import albumentations and a library to read images from the disk (e.g., OpenCV).
@@ -121,7 +123,7 @@ another_transformed_image = transform(image=another_image)["image"]
 
     ``` python
     transform = A.Compose([
-        A.RandomBrightnessContrast(brightness_limit=1, contrast_limit=1, p=1),
+        A.RandomBrightnessContrast(brightness_limit=1, contrast_limit=1, p=1.0),
     ])
     transformed_image_1 = transform(image=image)['image']
     transformed_image_2 = transform(image=image)['image']
