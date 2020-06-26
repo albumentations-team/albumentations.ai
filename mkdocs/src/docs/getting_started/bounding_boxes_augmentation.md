@@ -17,17 +17,17 @@ An example image with a bounding box from the COCO dataset
 
 ### pascal_voc
 `pascal_voc` is a format used by the [Pascal VOC dataset](http://host.robots.ox.ac.uk/pascal/VOC/){target=_blank}.
-Coordinates of a bounding box are encoded with four values in pixels: `[x_min, x_max, y_min, y_max]`. `x_min` and `x_max` are coordinates of the beginning and end of the bounding box on the x-axis. `y_min` and `y_max` are coordinates of the beginning and end of the bounding box on the y-axis.
+Coordinates of a bounding box are encoded with four values in pixels: `[x_min, y_min, x_max, y_max]`.  `x_min` and `y_min` are coordinates of the top-left corner of the bounding box. `x_max` and `y_max` are coordinates of bottom-right corner of the bounding box.
 
-Coordinates of the example bounding box in this format are `[98, 420, 345, 462]`.
+Coordinates of the example bounding box in this format are `[98, 345, 420, 462]`.
 
 ### albumentations
 
-`albumentations` is similar to `pascal_voc`, because it also uses four values `[x_min, x_max, y_min, y_max]` to represent a bounding box. But unlike `pascal_voc`, `albumentations` uses normalized values. To normalize values, we divide coordinates in pixels for the x- and y-axis by the width and the height of the image.
+`albumentations` is similar to `pascal_voc`, because it also uses four values `[x_min, y_min, x_max, y_max]` to represent a bounding box. But unlike `pascal_voc`, `albumentations` uses normalized values. To normalize values, we divide coordinates in pixels for the x- and y-axis by the width and the height of the image.
 
-Coordinates of the example bounding box in this format are `[98 / 640, 420 / 640, 345 / 480, 462 / 480]` which are `[0.153125, 0.65625, 0.71875, 0.9625]`.
+Coordinates of the example bounding box in this format are `[98 / 640, 345 / 480, 420 / 640, 462 / 480]` which are `[0.153125, 0.71875, 0.65625, 0.9625]`.
 
-Albumentations uses this format internally to work with bounding boxes and augment them. A popular dataset [Open Images](https://storage.googleapis.com/openimages/web/index.html){target=_blank} also uses this format to represent coordinates of bounding boxes.
+Albumentations uses this format internally to work with bounding boxes and augment them.
 
 ### coco
 `coco` is a format used by the [Common Objects in Context \(COCO\)](http://cocodataset.org/){target=_blank} dataset.
@@ -39,7 +39,7 @@ Coordinates of the example bounding box in this format are `[98, 345, 322, 117]`
 ### yolo
 In `yolo`, a bounding box is represented by four values `[x_center, y_center, width, height]`. `x_center` and `y_center` are the normalized coordinates of the center of the bounding box. To make coordinates normalized, we take pixel values of x and y, which marks the center of the bounding box on the x- and y-axis. Then we divide the value of x by the width of the image and value of y by the height of the image. `width` and `height` represent the width and the height of the bounding box. They are normalized as well.
 
-Coordinates of the example bounding box in this format are `[((420 + 98) / 2) / 640, ((462 + 365) / 2) / 640, 322 / 640, 117 / 480]` which are `[0.4046875, 0.64609375, 0.503125, 0.24375]`.
+Coordinates of the example bounding box in this format are `[((420 + 98) / 2) / 640, ((462 + 365) / 2) / 480, 322 / 640, 117 / 480]` which are `[0.4046875, 0.8614583, 0.503125, 0.24375]`.
 
 
 ![How different formats represent coordinates of a bounding box](../images/getting_started/augmenting_bboxes/bbox_formats.jpg "How different formats represent coordinates of a bounding box")
