@@ -18,11 +18,19 @@ jobs:
         with:
           path: gh_pages
           ref: gh-pages
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7x'
+      - name: Install required Python libraries
+        run: pip install lxml
       - name: Build site
         run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_ANALYTICS_TID: UA-158065353-1
+      - name: Generate sitemap
+        run: python tools/generate_sitemap.py ${GITHUB_WORKSPACE}/gh_pages
       - name: Commit filesdate +"%Y-%m-%d_%H-%M-%S"
         run: |
           cd ${GITHUB_WORKSPACE}/gh_pages
