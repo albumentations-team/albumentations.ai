@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://albumentations.ai/docs/introduction/why_albumentations/" rel="canonical"/>
+<link href="https://albumentations.ai/docs/getting_started/image_augmentation/" rel="canonical"/>
 <link href="../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
-<title>Why Albumentations - Albumentations Documentation</title>
+<title>Image augmentation for classification - Albumentations Documentation</title>
 <link href="../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
@@ -26,7 +26,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#why-albumentations">
+<a class="md-skip" href="#image-augmentation-for-classification">
           Skip to content
         </a>
 </div>
@@ -164,8 +164,8 @@
       Welcome to Albumentations documentation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-2">
       Introduction to image augmentation
       <span class="md-nav__icon md-icon">
@@ -181,77 +181,25 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+<a class="md-nav__link" href="../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
       What is image augmentation and how it can improve the performance of deep neural networks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+<a class="md-nav__link" href="../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
       Why you need a dedicated library for image augmentation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Why Albumentations
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Why Albumentations">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/why_albumentations/" title="Why Albumentations">
       Why Albumentations
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#a-single-interface-to-work-with-images-masks-bounding-boxes-and-key-points">
-    A single interface to work with images, masks, bounding boxes, and key points.
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#battle-tested">
-    Battle-tested
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#high-performance">
-    High performance
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diverse-set-of-supported-augmentations">
-    Diverse set of supported augmentations
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#extensibility">
-    Extensibility
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rigorous-testing">
-    Rigorous testing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#it-is-open-source-and-mit-licensed">
-    It is open source and MIT licensed
-  </a>
 </li>
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-3">
       Getting started with Albumentations
       <span class="md-nav__icon md-icon">
@@ -267,22 +215,68 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/installation/" title="Installation">
+<a class="md-nav__link" href="../installation/" title="Installation">
       Installation
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/image_augmentation/" title="Image augmentation for classification">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Image augmentation for classification
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-import-the-required-libraries">
+    Step 1. Import the required libraries.
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+<a class="md-nav__link" href="#step-2-define-an-augmentation-pipeline">
+    Step 2. Define an augmentation pipeline.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-read-images-from-the-disk">
+    Step 3. Read images from the disk.
+  </a>
+<nav aria-label="Step 3. Read images from the disk." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pillow">
+    Pillow
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images">
+    Step 4. Pass images to the augmentation pipeline and receive augmented images.
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mask_augmentation/" title="Mask augmentation for segmentation">
       Mask augmentation for segmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+<a class="md-nav__link" href="../bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
       Bounding boxes augmentation for object detection
     </a>
 </li>
@@ -466,24 +460,97 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/introduction/why_albumentations.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/image_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="why-albumentations">Why Albumentations</h1>
-<h3 id="a-single-interface-to-work-with-images-masks-bounding-boxes-and-key-points">A single interface to work with images, masks, bounding boxes, and key points.</h3>
-<p>Albumentations provides a single interface to work with different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, pose estimation, etc.</p>
-<h3 id="battle-tested">Battle-tested</h3>
-<p>The library is widely used in <a href="https://albumentations.ai/whos_using#industry" target="_blank">industry</a>, <a href="https://albumentations.ai/whos_using#research" target="_blank">deep learning research</a>, <a href="https://albumentations.ai/whos_using#competitions" target="_blank">machine learning competitions</a>, and <a href="https://albumentations.ai/whos_using#open-source" target="_blank">open source projects</a>.</p>
-<h3 id="high-performance">High performance</h3>
-<p>Albumentations optimized for maximum speed and performance. Under the hood, the library uses highly optimized functions from OpenCV and NumPy for data processing. We have a <a href="https://github.com/albumentations-team/albumentations#benchmarking-results" target="_blank">regularly updated benchmark</a> that compares the speed of popular image augmentations libraries for the most common image transformations. Albumentations demonstrates the best performance in most cases.</p>
-<h3 id="diverse-set-of-supported-augmentations">Diverse set of supported augmentations</h3>
-<p>Albumentations supports more than 60 different image augmentations.</p>
-<h3 id="extensibility">Extensibility</h3>
-<p>Albumentations allows to easily add new augmentations and use them in computer vision pipelines through a single interface along with built-in transformations.</p>
-<h3 id="rigorous-testing">Rigorous testing</h3>
-<p>Bugs in the augmentation pipeline could silently corrupt the input data. They can easily go unnoticed, but the performance of the models trained with incorrect data will degrade. Albumentations has an extensive test suite that helps to discover bugs during development.</p>
-<h3 id="it-is-open-source-and-mit-licensed">It is open source and MIT licensed</h3>
-<p>You can find the source code on <a href="https://github.com/albumentations-team/albumentations" target="_blank">GitHub</a>.</p>
+<h1 id="image-augmentation-for-classification">Image augmentation for classification</h1>
+<p>We can divide the process of image augmentation into four steps:</p>
+<ol>
+<li>Import albumentations and a library to read images from the disk (e.g., OpenCV).</li>
+<li>Define an augmentation pipeline.</li>
+<li>Read images from the disk.</li>
+<li>Pass images to the augmentation pipeline and receive augmented images.</li>
+</ol>
+<h2 id="step-1-import-the-required-libraries">Step 1. Import the required libraries.</h2>
+<ul>
+<li>Import Albumentations</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
+</code></pre></div>
+<ul>
+<li>Import a library to read images from the disk. In this example, we will use <a href="https://opencv.org/" target="_blank">OpenCV</a>. It is an open-source computer vision library that supports many image formats. Albumentations has OpenCV as a dependency, so you already have OpenCV installed.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
+</code></pre></div>
+<h2 id="step-2-define-an-augmentation-pipeline">Step 2. Define an augmentation pipeline.</h2>
+<p>To define an augmentation pipeline, you need to create an instance of the <code>Compose</code> class. As an argument to the <code>Compose</code> class, you need to pass a list of augmentations you want to apply. A call to <code>Compose</code> will return a transform function that will perform image augmentation.</p>
+<p>Let's look at an example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="p">])</span>
+</code></pre></div>
+<p>In the example, <code>Compose</code> receives a list with three augmentations: <code>A.RandomCrop</code>, <code>A.HorizontalFlip</code>, and <code>A.RandomBrighntessContrast</code>. You can find the full list of all available augmentations <a href="https://github.com/albumentations-team/albumentations#pixel-level-transforms" target="_blank">in the GitHub repository</a> and <a href="https://albumentations.readthedocs.io/en/latest/api/augmentations.html" target="_blank">in the API Docs</a>. A demo playground that demonstrates how augmentations will transform the input image is available at <a href="https://albumentations-demo.herokuapp.com" target="_blank">https://albumentations-demo.herokuapp.com</a>.</p>
+<p>To create an augmentation, you create an instance of the required augmentation class and pass augmentation parameters to it. <code>A.RandomCrop</code> receives two parameters, <code>height</code> and <code>width</code>. <code>A.RandomCrop(width=256, height=256)</code> means that <code>A.RandomCrop</code> will take an input image, extract a random patch with size 256 by 256 pixels from it and then pass the result to the next augmentation in the pipeline (in this case to <code>A.HorizontalFlip</code>).</p>
+<p><code>A.HorizontalFlip</code> in this example has one parameter named <code>p</code>. <code>p</code> is a special parameter that is supported by almost all augmentations. It controls the probability of applying the augmentation. <code>p=0.5</code> means that with a probability of 50%, the transform will flip the image horizontally, and with a probability of 50%, the transform won't modify the input image.</p>
+<p><code>A.RandomBrighntessContrast</code> in the example also has one parameter, <code>p</code>. With a probability of 20%, this augmentation will change the brightness and contrast of the image received from <code>A.HorizontalFlip</code>. And with a probability of 80%, it will keep the received image unchanged.</p>
+<p class="image-with-caption"><img alt="A visualized version of the augmentation pipeline" src="../../images/getting_started/augmenting_images/augmentation_pipeline_visualized.jpg" title="A visualized version of the augmentation pipeline">
+A visualized version of the augmentation pipeline. You pass an image to it, the image goes through all transformations, and then you receive an augmented image from the pipeline.</img></p>
+<h2 id="step-3-read-images-from-the-disk">Step 3. Read images from the disk.</h2>
+<p>To pass an image to the augmentation pipeline, you need to read it from the disk. The pipeline expects to receive an image in the form of a NumPy array. If it is a color image, it should have three channels in the following order: Red, Green, Blue (so a regular RGB image).</p>
+<p>To read images from the disk, you can use <a href="https://opencv.org/" target="_blank">OpenCV</a> - a popular library for image processing. It supports a lot of input formats and is installed along with Albumentations since Albumentations utilizes that library under the hood for a lot of augmentations.</p>
+<p>To import OpenCV</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
+</code></pre></div>
+<p>To read an image with OpenCV</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/image.jpg"</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+</code></pre></div>
+Note the usage of <code>cv2.cvtColor</code>. <a href="https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/" target="_blank">For historical reasons</a>, OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.</p>
+<div class="admonition note">
+<p>Besides OpenCV, you can use other image processing libraries.</p>
+<h4 id="pillow">Pillow</h4>
+<p><a href="https://pillow.readthedocs.io/" target="_blank">Pillow</a> is a popular Python image processing library.</p>
+<ul>
+<li>Install Pillow</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    pip install pillow
+</code></pre></div>
+<ul>
+<li>Import Pillow and NumPy (we need NumPy to convert a Pillow image to a NumPy array. NumPy is already installed along with Albumentations).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
+<ul>
+<li>Read an image with Pillow and convert it to a NumPy array.
+<div class="highlight"><pre><span></span><code><span class="n">pillow_image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"image.jpg"</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">pillow_image</span><span class="p">)</span>
+</code></pre></div></li>
+</ul>
+</div>
+<h2 id="step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images">Step 4. Pass images to the augmentation pipeline and receive augmented images.</h2>
+<p>To pass an image to the augmentation pipeline you need to call the <code>transform</code> function created by a call to <code>A.Compose</code> at Step 2. In the <code>image</code> argument to that function, you need to pass an image that you want to augment.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
+</code></pre></div>
+<p><code>transform</code> will return a dictionary with a single key <code>image</code>. Value at that key will contain an augmented image.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s2">"image"</span><span class="p">]</span>
+</code></pre></div>
+<p>To augment the next image, you need to call <code>transform</code> again and pass a new image as the <code>image</code> argument:</p>
+<div class="highlight"><pre><span></span><code><span class="n">another_transformed_image</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">another_image</span><span class="p">)[</span><span class="s2">"image"</span><span class="p">]</span>
+</code></pre></div>
+<div class="admonition note">
+<p>Each augmentation will change the input image with the probability set by the parameter <code>p</code>. Also, many augmentations have parameters that control the magnitude of changes that will be applied to an image. For example, <code>A.RandomBrightnessContrast</code> has two parameters: <code>brightness_limit</code> that controls the magnitude of adjusting brightness and <code>contrast_limit</code> that controls the magnitude of adjusting contrast. The bigger the value, the more the augmentation will change an image. During augmentation, a magnitude of the transformation is sampled from a uniform distribution limited by <code>brightness_limit</code> and <code>contrast_limit</code>. That means that if you make multiple calls to <code>transform</code> with the same input image, you will get a different output image each time.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">brightness_limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">contrast_limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="n">transformed_image_1</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)[</span><span class="s1">'image'</span><span class="p">]</span>
+<span class="n">transformed_image_2</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)[</span><span class="s1">'image'</span><span class="p">]</span>
+<span class="n">transformed_image_3</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)[</span><span class="s1">'image'</span><span class="p">]</span>
+</code></pre></div>
+<p><img alt="Passing the same image multiple times to transform will produce different output images" src="../../images/getting_started/augmenting_images/transform_multiple_times.jpg" title="Passing the same image multiple times to transform will produce different output images"/></p>
+</div>
 </article>
 </div>
 </div>
@@ -515,7 +582,7 @@
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../why_you_need_a_dedicated_library_for_image_augmentation/" rel="prev" title="Why you need a dedicated library for image augmentation">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../installation/" rel="prev" title="Installation">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -524,18 +591,18 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Why you need a dedicated library for image augmentation
+                Installation
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../../getting_started/installation/" rel="next" title="Installation">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../mask_augmentation/" rel="next" title="Mask augmentation for segmentation">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Mask augmentation for segmentation
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

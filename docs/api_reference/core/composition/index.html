@@ -5,18 +5,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://albumentations.ai/docs/introduction/why_albumentations/" rel="canonical"/>
-<link href="../../images/logo.png" rel="shortcut icon"/>
+<link href="https://albumentations.ai/docs/api_reference/core/composition/" rel="canonical"/>
+<link href="../../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
-<title>Why Albumentations - Albumentations Documentation</title>
-<link href="../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<title>Composition API (core.composition) - Albumentations Documentation</title>
+<link href="../../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-<link href="../../css/extra.css" rel="stylesheet"/>
-<link href="../../css/ansi-colours.css" rel="stylesheet"/>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="../../../css/ansi-colours.css" rel="stylesheet"/>
 <link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
@@ -26,7 +26,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#why-albumentations">
+<a class="md-skip" href="#composition-api-corecomposition">
           Skip to content
         </a>
 </div>
@@ -35,7 +35,7 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
 <a aria-label="Albumentations Documentation" class="md-header-nav__button md-logo" href="https://albumentations.ai/docs" title="Albumentations Documentation">
-<img alt="logo" src="../../images/logo.png"/>
+<img alt="logo" src="../../../images/logo.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
@@ -125,7 +125,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Albumentations Documentation" class="md-nav__button md-logo" href="https://albumentations.ai/docs" title="Albumentations Documentation">
-<img alt="logo" src="../../images/logo.png"/>
+<img alt="logo" src="../../../images/logo.png"/>
 </a>
     Albumentations Documentation
   </label>
@@ -160,12 +160,12 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../.." title="Welcome to Albumentations documentation">
+<a class="md-nav__link" href="../../.." title="Welcome to Albumentations documentation">
       Welcome to Albumentations documentation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-2">
       Introduction to image augmentation
       <span class="md-nav__icon md-icon">
@@ -181,71 +181,19 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+<a class="md-nav__link" href="../../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
       What is image augmentation and how it can improve the performance of deep neural networks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+<a class="md-nav__link" href="../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
       Why you need a dedicated library for image augmentation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Why Albumentations
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Why Albumentations">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/why_albumentations/" title="Why Albumentations">
       Why Albumentations
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#a-single-interface-to-work-with-images-masks-bounding-boxes-and-key-points">
-    A single interface to work with images, masks, bounding boxes, and key points.
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#battle-tested">
-    Battle-tested
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#high-performance">
-    High performance
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diverse-set-of-supported-augmentations">
-    Diverse set of supported augmentations
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#extensibility">
-    Extensibility
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rigorous-testing">
-    Rigorous testing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#it-is-open-source-and-mit-licensed">
-    It is open source and MIT licensed
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -267,30 +215,30 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/installation/" title="Installation">
+<a class="md-nav__link" href="../../../getting_started/installation/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/image_augmentation/" title="Image augmentation for classification">
+<a class="md-nav__link" href="../../../getting_started/image_augmentation/" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+<a class="md-nav__link" href="../../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
       Mask augmentation for segmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+<a class="md-nav__link" href="../../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
       Bounding boxes augmentation for object detection
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
       API Reference
       <span class="md-nav__icon md-icon">
@@ -306,12 +254,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/" title="Index">
+<a class="md-nav__link" href="../../" title="Index">
       Index
     </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" id="nav-4-2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" id="nav-4-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-4-2">
       Core API
       <span class="md-nav__icon md-icon">
@@ -327,22 +275,69 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/" title="Index">
+<a class="md-nav__link" href="../" title="Index">
       Index
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/composition/" title="Composition API (core.composition)">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Composition API (core.composition)
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Composition API (core.composition)">
       Composition API (core.composition)
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition">
+    albumentations.core.composition
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
+<a class="md-nav__link" href="#albumentations.core.composition.BboxParams">
+    BboxParams
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition.Compose">
+    Compose
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition.KeypointParams">
+    KeypointParams
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition.OneOf">
+    OneOf
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition.PerChannel">
+    PerChannel
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transforms_interface/" title="Transforms Interface (core.transforms_interface)">
       Transforms Interface (core.transforms_interface)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/serialization/" title="Serialization API (core.serialization)">
+<a class="md-nav__link" href="../serialization/" title="Serialization API (core.serialization)">
       Serialization API (core.serialization)
     </a>
 </li>
@@ -366,27 +361,27 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/" title="Index">
+<a class="md-nav__link" href="../../augmentations/" title="Index">
       Index
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/transforms/" title="Transforms (augmentations.transforms)">
+<a class="md-nav__link" href="../../augmentations/transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/functional/" title="Functional transforms (augmentations.functional)">
+<a class="md-nav__link" href="../../augmentations/functional/" title="Functional transforms (augmentations.functional)">
       Functional transforms (augmentations.functional)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+<a class="md-nav__link" href="../../augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
       Helper functions for working with bounding boxes (augmentations.bbox_utils)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+<a class="md-nav__link" href="../../augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
       Helper functions for working with keypoints (augmentations.keypoints_utils)
     </a>
 </li>
@@ -410,12 +405,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/imgaug/" title="Index">
+<a class="md-nav__link" href="../../imgaug/" title="Index">
       Index
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/imgaug/transforms/" title="Transforms (imgaug.transforms)">
+<a class="md-nav__link" href="../../imgaug/transforms/" title="Transforms (imgaug.transforms)">
       Transforms (imgaug.transforms)
     </a>
 </li>
@@ -439,12 +434,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/pytorch/" title="Index">
+<a class="md-nav__link" href="../../pytorch/" title="Index">
       Index
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/pytorch/transforms/" title="Transforms (pytorch.transforms)">
+<a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
     </a>
 </li>
@@ -455,7 +450,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../contributing/" title="Contributing">
+<a class="md-nav__link" href="../../../contributing/" title="Contributing">
       Contributing
     </a>
 </li>
@@ -466,24 +461,294 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/introduction/why_albumentations.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/core/composition.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="why-albumentations">Why Albumentations</h1>
-<h3 id="a-single-interface-to-work-with-images-masks-bounding-boxes-and-key-points">A single interface to work with images, masks, bounding boxes, and key points.</h3>
-<p>Albumentations provides a single interface to work with different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, pose estimation, etc.</p>
-<h3 id="battle-tested">Battle-tested</h3>
-<p>The library is widely used in <a href="https://albumentations.ai/whos_using#industry" target="_blank">industry</a>, <a href="https://albumentations.ai/whos_using#research" target="_blank">deep learning research</a>, <a href="https://albumentations.ai/whos_using#competitions" target="_blank">machine learning competitions</a>, and <a href="https://albumentations.ai/whos_using#open-source" target="_blank">open source projects</a>.</p>
-<h3 id="high-performance">High performance</h3>
-<p>Albumentations optimized for maximum speed and performance. Under the hood, the library uses highly optimized functions from OpenCV and NumPy for data processing. We have a <a href="https://github.com/albumentations-team/albumentations#benchmarking-results" target="_blank">regularly updated benchmark</a> that compares the speed of popular image augmentations libraries for the most common image transformations. Albumentations demonstrates the best performance in most cases.</p>
-<h3 id="diverse-set-of-supported-augmentations">Diverse set of supported augmentations</h3>
-<p>Albumentations supports more than 60 different image augmentations.</p>
-<h3 id="extensibility">Extensibility</h3>
-<p>Albumentations allows to easily add new augmentations and use them in computer vision pipelines through a single interface along with built-in transformations.</p>
-<h3 id="rigorous-testing">Rigorous testing</h3>
-<p>Bugs in the augmentation pipeline could silently corrupt the input data. They can easily go unnoticed, but the performance of the models trained with incorrect data will degrade. Albumentations has an extensive test suite that helps to discover bugs during development.</p>
-<h3 id="it-is-open-source-and-mit-licensed">It is open source and MIT licensed</h3>
-<p>You can find the source code on <a href="https://github.com/albumentations-team/albumentations" target="_blank">GitHub</a>.</p>
+<h1 id="composition-api-corecomposition">Composition API (core.composition)</h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#albumentations.core.composition" id="albumentations.core.composition" style="visibility: hidden; width: 0; height: 0;">
+</h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.BboxParams">
+<code>BboxParams</code>
+</h2>
+<div class="doc doc-contents">
+<p>Parameters of bounding boxes</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format</code></td>
+<td><code>str</code></td>
+<td>
+<p>format of bounding boxes. Should be 'coco', 'pascal_voc', 'albumentations' or 'yolo'.</p>
+<p>The <code>coco</code> format
+    <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
+The <code>pascal_voc</code> format
+    <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
+The <code>albumentations</code> format
+    is like <code>pascal_voc</code>, but normalized,
+    in other words: [x_min, y_min, x_max, y_max]<code>, e.g. [0.2, 0.3, 0.4, 0.5].
+The</code>yolo<code>format</code>[x, y, width, height]<code>, e.g. [0.1, 0.2, 0.3, 0.4];</code>x<code>,</code>y<code>- normalized bbox center;</code>width<code>,</code>height` - normalized bbox width and height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>label_fields</code></td>
+<td><code>list</code></td>
+<td>
+<p>list of fields that are joined with boxes, e.g labels.
+Should be same type as boxes.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>min_area</code></td>
+<td><code>float</code></td>
+<td>
+<p>minimum area of a bounding box. All bounding boxes whose
+visible area in pixels is less than this value will be removed. Default: 0.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>min_visibility</code></td>
+<td><code>float</code></td>
+<td>
+<p>minimum fraction of area for a bounding box
+to remain this box in list. Default: 0.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.Compose">
+<code>Compose</code>
+</h2>
+<div class="doc doc-contents">
+<p>Compose transforms and handle all transformations regrading bounding boxes</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transforms</code></td>
+<td><code>list</code></td>
+<td>
+<p>list of transformations to compose.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>bbox_params</code></td>
+<td><code>BboxParams</code></td>
+<td>
+<p>Parameters for bounding boxes transforms</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>keypoint_params</code></td>
+<td><code>KeypointParams</code></td>
+<td>
+<p>Parameters for keypoints transforms</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>additional_targets</code></td>
+<td><code>dict</code></td>
+<td>
+<p>Dict with keys - new target name, values - old target name. ex: {'image2': 'image'}</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying all list of transforms. Default: 1.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.KeypointParams">
+<code>KeypointParams</code>
+</h2>
+<div class="doc doc-contents">
+<p>Parameters of keypoints</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format</code></td>
+<td><code>str</code></td>
+<td>
+<p>format of keypoints. Should be 'xy', 'yx', 'xya', 'xys', 'xyas', 'xysa'.</p>
+<p>x - X coordinate,</p>
+<p>y - Y coordinate</p>
+<p>s - Keypoint scale</p>
+<p>a - Keypoint orientation in radians or degrees (depending on KeypointParams.angle_in_degrees)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>label_fields</code></td>
+<td><code>list</code></td>
+<td>
+<p>list of fields that are joined with keypoints, e.g labels.
+Should be same type as keypoints.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>remove_invisible</code></td>
+<td><code>bool</code></td>
+<td>
+<p>to remove invisible points after transform or not</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angle_in_degrees</code></td>
+<td><code>bool</code></td>
+<td>
+<p>angle in degrees or radians in 'xya', 'xyas', 'xysa' keypoints</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.OneOf">
+<code>OneOf</code>
+</h2>
+<div class="doc doc-contents">
+<p>Select one of transforms to apply</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transforms</code></td>
+<td><code>list</code></td>
+<td>
+<p>list of transformations to compose.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying selected transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.PerChannel">
+<code>PerChannel</code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply transformations per-channel</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transforms</code></td>
+<td><code>list</code></td>
+<td>
+<p>list of transformations to compose.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>channels</code></td>
+<td><code>list</code></td>
+<td>
+<p>channels to apply the transform to. Pass None to apply to all.
+             Default: None (apply to all)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>
@@ -515,7 +780,7 @@
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../why_you_need_a_dedicated_library_for_image_augmentation/" rel="prev" title="Why you need a dedicated library for image augmentation">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../" rel="prev" title="Index">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -524,18 +789,18 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Why you need a dedicated library for image augmentation
+                Index
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../../getting_started/installation/" rel="next" title="Installation">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../transforms_interface/" rel="next" title="Transforms Interface (core.transforms_interface)">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Transforms Interface (core.transforms_interface)
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
@@ -555,14 +820,14 @@
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
-          base: "../..",
+          base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://albumentations.ai/docs/introduction/why_albumentations/" rel="canonical"/>
+<link href="https://albumentations.ai/docs/getting_started/mask_augmentation/" rel="canonical"/>
 <link href="../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
-<title>Why Albumentations - Albumentations Documentation</title>
+<title>Mask augmentation for segmentation - Albumentations Documentation</title>
 <link href="../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
@@ -26,7 +26,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#why-albumentations">
+<a class="md-skip" href="#mask-augmentation-for-segmentation">
           Skip to content
         </a>
 </div>
@@ -164,8 +164,8 @@
       Welcome to Albumentations documentation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-2">
       Introduction to image augmentation
       <span class="md-nav__icon md-icon">
@@ -181,77 +181,25 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+<a class="md-nav__link" href="../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
       What is image augmentation and how it can improve the performance of deep neural networks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+<a class="md-nav__link" href="../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
       Why you need a dedicated library for image augmentation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Why Albumentations
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Why Albumentations">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/why_albumentations/" title="Why Albumentations">
       Why Albumentations
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#a-single-interface-to-work-with-images-masks-bounding-boxes-and-key-points">
-    A single interface to work with images, masks, bounding boxes, and key points.
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#battle-tested">
-    Battle-tested
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#high-performance">
-    High performance
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diverse-set-of-supported-augmentations">
-    Diverse set of supported augmentations
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#extensibility">
-    Extensibility
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rigorous-testing">
-    Rigorous testing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#it-is-open-source-and-mit-licensed">
-    It is open source and MIT licensed
-  </a>
 </li>
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-3">
       Getting started with Albumentations
       <span class="md-nav__icon md-icon">
@@ -267,22 +215,54 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/installation/" title="Installation">
+<a class="md-nav__link" href="../installation/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/image_augmentation/" title="Image augmentation for classification">
+<a class="md-nav__link" href="../image_augmentation/" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Mask augmentation for segmentation
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Mask augmentation for segmentation">
       Mask augmentation for segmentation
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps-1-and-2-import-the-required-libraries-and-define-an-augmentation-pipeline">
+    Steps 1 and 2. Import the required libraries and define an augmentation pipeline.
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+<a class="md-nav__link" href="#step-3-read-images-and-masks-from-the-disk">
+    Step 3. Read images and masks from the disk.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-pass-image-and-masks-to-the-augmentation-pipeline-and-receive-augmented-images-and-masks">
+    Step 4. Pass image and masks to the augmentation pipeline and receive augmented images and masks.
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
       Bounding boxes augmentation for object detection
     </a>
 </li>
@@ -466,24 +446,67 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/introduction/why_albumentations.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/mask_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="why-albumentations">Why Albumentations</h1>
-<h3 id="a-single-interface-to-work-with-images-masks-bounding-boxes-and-key-points">A single interface to work with images, masks, bounding boxes, and key points.</h3>
-<p>Albumentations provides a single interface to work with different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, pose estimation, etc.</p>
-<h3 id="battle-tested">Battle-tested</h3>
-<p>The library is widely used in <a href="https://albumentations.ai/whos_using#industry" target="_blank">industry</a>, <a href="https://albumentations.ai/whos_using#research" target="_blank">deep learning research</a>, <a href="https://albumentations.ai/whos_using#competitions" target="_blank">machine learning competitions</a>, and <a href="https://albumentations.ai/whos_using#open-source" target="_blank">open source projects</a>.</p>
-<h3 id="high-performance">High performance</h3>
-<p>Albumentations optimized for maximum speed and performance. Under the hood, the library uses highly optimized functions from OpenCV and NumPy for data processing. We have a <a href="https://github.com/albumentations-team/albumentations#benchmarking-results" target="_blank">regularly updated benchmark</a> that compares the speed of popular image augmentations libraries for the most common image transformations. Albumentations demonstrates the best performance in most cases.</p>
-<h3 id="diverse-set-of-supported-augmentations">Diverse set of supported augmentations</h3>
-<p>Albumentations supports more than 60 different image augmentations.</p>
-<h3 id="extensibility">Extensibility</h3>
-<p>Albumentations allows to easily add new augmentations and use them in computer vision pipelines through a single interface along with built-in transformations.</p>
-<h3 id="rigorous-testing">Rigorous testing</h3>
-<p>Bugs in the augmentation pipeline could silently corrupt the input data. They can easily go unnoticed, but the performance of the models trained with incorrect data will degrade. Albumentations has an extensive test suite that helps to discover bugs during development.</p>
-<h3 id="it-is-open-source-and-mit-licensed">It is open source and MIT licensed</h3>
-<p>You can find the source code on <a href="https://github.com/albumentations-team/albumentations" target="_blank">GitHub</a>.</p>
+<h1 id="mask-augmentation-for-segmentation">Mask augmentation for segmentation</h1>
+<p>For instance and semantic segmentation tasks, you need to augment both the input image and one or more output masks.</p>
+<p>Albumentations ensures that the input image and the output mask will receive the same set of augmentations with the same parameters.</p>
+<p>The process of augmenting images and masks looks very similar to the <a href="../image_augmentation/">regular image-only augmentation</a>.</p>
+<ol>
+<li>You import the required libraries.</li>
+<li>You define an augmentation pipeline.</li>
+<li>You read images and masks from the disk.</li>
+<li>You pass an image and one or more masks to the augmentation pipeline and receive augmented images and masks.</li>
+</ol>
+<h2 id="steps-1-and-2-import-the-required-libraries-and-define-an-augmentation-pipeline">Steps 1 and 2. Import the required libraries and define an augmentation pipeline.</h2>
+<p><a href="../image_augmentation/">Image augmentation for classification</a> described Steps 1 and 2 in great detail. These are the same steps for the simultaneous augmentation of images and masks.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="p">])</span>
+</code></pre></div>
+<h2 id="step-3-read-images-and-masks-from-the-disk">Step 3. Read images and masks from the disk.</h2>
+<ul>
+<li>Reading an image</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/image.jpg"</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>For semantic segmentation, you usually read one mask per image. Albumentations expects the mask to be a NumPy array. The height and width of the mask should have the same values as the height and width of the image.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">mask</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/mask.png"</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>For instance segmentation, you sometimes need to read multiple masks per image. Then you create a list that contains all the masks.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">mask_1</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/mask_1.png"</span><span class="p">)</span>
+<span class="n">mask_2</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/mask_2.png"</span><span class="p">)</span>
+<span class="n">mask_3</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/mask_3.png"</span><span class="p">)</span>
+<span class="n">masks</span> <span class="o">=</span> <span class="p">[</span><span class="n">mask_1</span><span class="p">,</span> <span class="n">mask_2</span><span class="p">,</span> <span class="n">mask_3</span><span class="p">]</span>
+</code></pre></div>
+<div class="admonition note">
+<p>Some datasets use other formats to store masks. For example, they can use Run-Length Encoding or Polygon coordinates. In that case, you need to convert a mask to a NumPy before augmenting it with Albumentations. Often dataset authors provide special libraries and tools to simplify the conversion.</p>
+</div>
+<h2 id="step-4-pass-image-and-masks-to-the-augmentation-pipeline-and-receive-augmented-images-and-masks">Step 4. Pass image and masks to the augmentation pipeline and receive augmented images and masks.</h2>
+<p>If the image has one associated mask, you need to call <code>transform</code> with two arguments: <code>image</code> and <code>mask</code>. In <code>image</code> you should pass the input image, in <code>mask</code> you should pass the output mask. <code>transform</code> will return a dictionary with two keys: <code>image</code> will contain the augmented image, and <code>mask</code> will contain the augmented mask.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
+<span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
+<span class="n">transformed_mask</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'mask'</span><span class="p">]</span>
+</code></pre></div>
+<p><img alt="An image and a mask before and after augmentation.
+" src="../../images/getting_started/augmenting_masks/inria_image_and_mask.jpg" title="An image and a mask before and after augmentation."/></p>
+<p class="image-with-caption">An image and a mask before and after augmentation. Inria Aerial Image Labeling dataset contains aerial photos as well as their segmentation masks. Each pixel of the mask is marked as 1 if the pixel belongs to the class <code>building</code> and 0 otherwise.</p>
+<p>If the image has multiple associated masks, you should use the <code>masks</code> argument instead of <code>mask</code>. In <code>masks</code> you should pass a list of masks.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">masks</span><span class="o">=</span><span class="n">masks</span><span class="p">)</span>
+<span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
+<span class="n">transformed_masks</span><span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'masks'</span><span class="p">]</span>
+</code></pre></div>
 </article>
 </div>
 </div>
@@ -515,7 +538,7 @@
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../why_you_need_a_dedicated_library_for_image_augmentation/" rel="prev" title="Why you need a dedicated library for image augmentation">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../image_augmentation/" rel="prev" title="Image augmentation for classification">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -524,18 +547,18 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Why you need a dedicated library for image augmentation
+                Image augmentation for classification
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../../getting_started/installation/" rel="next" title="Installation">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../bounding_boxes_augmentation/" rel="next" title="Bounding boxes augmentation for object detection">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Bounding boxes augmentation for object detection
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

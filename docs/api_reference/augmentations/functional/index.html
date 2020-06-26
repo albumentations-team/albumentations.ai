@@ -1,0 +1,2956 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://albumentations.ai/docs/api_reference/augmentations/functional/" rel="canonical"/>
+<link href="../../../images/logo.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
+<title>Functional transforms (augmentations.functional) - Albumentations Documentation</title>
+<link href="../../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="../../../css/ansi-colours.css" rel="stylesheet"/>
+<link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body data-md-color-accent="white" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#functional-transforms-augmentationsfunctional">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Albumentations Documentation" class="md-header-nav__button md-logo" href="https://albumentations.ai/docs" title="Albumentations Documentation">
+<img alt="logo" src="../../../images/logo.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title">
+<div class="header-menu-item">
+<a href="https://albumentations.ai">Home</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations.ai/whos_using">Who's using Albumentations</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+</div>
+<div class="header-menu-item header-menu-item-selected">
+<a href="https://albumentations.ai/docs/">Docs</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations.ai/team">Team</a>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header-nav__source">
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Repository containing source -->
+<a class="md-source" href="https://github.com/albumentations-team/albumentations/" target="_blank" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    albumentations
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Albumentations Documentation" class="md-nav__button md-logo" href="https://albumentations.ai/docs" title="Albumentations Documentation">
+<img alt="logo" src="../../../images/logo.png"/>
+</a>
+    Albumentations Documentation
+  </label>
+<div class="md-nav__source">
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Repository containing source -->
+<a class="md-source" href="https://github.com/albumentations-team/albumentations/" target="_blank" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    albumentations
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../.." title="Welcome to Albumentations documentation">
+      Welcome to Albumentations documentation
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+      Introduction to image augmentation
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Introduction to image augmentation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Introduction to image augmentation
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+      What is image augmentation and how it can improve the performance of deep neural networks
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+      Why you need a dedicated library for image augmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/why_albumentations/" title="Why Albumentations">
+      Why Albumentations
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Getting started with Albumentations
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Getting started with Albumentations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Getting started with Albumentations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/installation/" title="Installation">
+      Installation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/image_augmentation/" title="Image augmentation for classification">
+      Image augmentation for classification
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+      Mask augmentation for segmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+      Bounding boxes augmentation for object detection
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      API Reference
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="API Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        API Reference
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" id="nav-4-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-2">
+      Core API
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Core API" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-2">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Core API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/composition/" title="Composition API (core.composition)">
+      Composition API (core.composition)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
+      Transforms Interface (core.transforms_interface)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/serialization/" title="Serialization API (core.serialization)">
+      Serialization API (core.serialization)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" id="nav-4-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-3">
+      Augmentations
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Augmentations" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Augmentations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transforms/" title="Transforms (augmentations.transforms)">
+      Transforms (augmentations.transforms)
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Functional transforms (augmentations.functional)
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Functional transforms (augmentations.functional)">
+      Functional transforms (augmentations.functional)
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional">
+    albumentations.augmentations.functional
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.add_fog">
+    add_fog()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.add_rain">
+    add_rain()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.add_shadow">
+    add_shadow()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.add_snow">
+    add_snow()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.add_sun_flare">
+    add_sun_flare()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_crop">
+    bbox_crop()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_flip">
+    bbox_flip()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_hflip">
+    bbox_hflip()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_rot90">
+    bbox_rot90()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_rotate">
+    bbox_rotate()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_transpose">
+    bbox_transpose()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.bbox_vflip">
+    bbox_vflip()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.crop_bbox_by_coords">
+    crop_bbox_by_coords()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.crop_keypoint_by_coords">
+    crop_keypoint_by_coords()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.elastic_transform">
+    elastic_transform()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.elastic_transform_approx">
+    elastic_transform_approx()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.equalize">
+    equalize()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.fancy_pca">
+    fancy_pca()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.grid_distortion">
+    grid_distortion()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.iso_noise">
+    iso_noise()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_center_crop">
+    keypoint_center_crop()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_flip">
+    keypoint_flip()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_hflip">
+    keypoint_hflip()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_random_crop">
+    keypoint_random_crop()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_rot90">
+    keypoint_rot90()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_rotate">
+    keypoint_rotate()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_scale">
+    keypoint_scale()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_transpose">
+    keypoint_transpose()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.keypoint_vflip">
+    keypoint_vflip()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.multiply">
+    multiply()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.optical_distortion">
+    optical_distortion()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.posterize">
+    posterize()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.preserve_channel_dim">
+    preserve_channel_dim()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.preserve_shape">
+    preserve_shape()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.py3round">
+    py3round()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.solarize">
+    solarize()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.functional.swap_tiles_on_image">
+    swap_tiles_on_image()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+      Helper functions for working with bounding boxes (augmentations.bbox_utils)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+      Helper functions for working with keypoints (augmentations.keypoints_utils)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" id="nav-4-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-4">
+      ImgAug Helpers
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="ImgAug Helpers" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        ImgAug Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../imgaug/" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../imgaug/transforms/" title="Transforms (imgaug.transforms)">
+      Transforms (imgaug.transforms)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" id="nav-4-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-5">
+      PyTorch Helpers
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="PyTorch Helpers" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        PyTorch Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pytorch/" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
+      Transforms (pytorch.transforms)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../contributing/" title="Contributing">
+      Contributing
+    </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/functional.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="functional-transforms-augmentationsfunctional">Functional transforms (augmentations.functional)</h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#albumentations.augmentations.functional" id="albumentations.augmentations.functional" style="visibility: hidden; width: 0; height: 0;">
+</h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.add_fog">
+<code class="highlight language-python">
+add_fog<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">fog_coef</span><span class="p">,</span> <span class="n">alpha_coef</span><span class="p">,</span> <span class="n">haze_list</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Add fog to the image.</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>fog_coef</code></td>
+<td><code>float</code></td>
+<td>
+<p>Fog coefficient.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>alpha_coef</code></td>
+<td><code>float</code></td>
+<td>
+<p>Alpha coefficient.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>haze_list</code></td>
+<td><code>list</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.add_rain">
+<code class="highlight language-python">
+add_rain<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">slant</span><span class="p">,</span> <span class="n">drop_length</span><span class="p">,</span> <span class="n">drop_width</span><span class="p">,</span> <span class="n">drop_color</span><span class="p">,</span> <span class="n">blur_value</span><span class="p">,</span> <span class="n">brightness_coefficient</span><span class="p">,</span> <span class="n">rain_drops</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>slant</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>drop_length</code></td>
+<td><code></code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>drop_width</code></td>
+<td><code></code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>drop_color</code></td>
+<td><code></code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>blur_value</code></td>
+<td><code>int</code></td>
+<td>
+<p>Rainy view are blurry.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>brightness_coefficient</code></td>
+<td><code>float</code></td>
+<td>
+<p>Rainy days are usually shady.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rain_drops</code></td>
+<td><code></code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.add_shadow">
+<code class="highlight language-python">
+add_shadow<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">vertices_list</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Add shadows to the image.</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>vertices_list</code></td>
+<td><code>list</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.add_snow">
+<code class="highlight language-python">
+add_snow<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">snow_point</span><span class="p">,</span> <span class="n">brightness_coeff</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Bleaches out pixels, imitation snow.</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>snow_point</code></td>
+<td><code></code></td>
+<td>
+<p>Number of show points.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>brightness_coeff</code></td>
+<td><code></code></td>
+<td>
+<p>Brightness coefficient.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.add_sun_flare">
+<code class="highlight language-python">
+add_sun_flare<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">flare_center_x</span><span class="p">,</span> <span class="n">flare_center_y</span><span class="p">,</span> <span class="n">src_radius</span><span class="p">,</span> <span class="n">src_color</span><span class="p">,</span> <span class="n">circles</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Add sun flare.</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>flare_center_x</code></td>
+<td><code>float</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>flare_center_y</code></td>
+<td><code>float</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>src_radius</code></td>
+<td><code></code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>src_color</code></td>
+<td><code>int, int, int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>circles</code></td>
+<td><code>list</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_crop">
+<code class="highlight language-python">
+bbox_crop<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop a bounding box.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>x_min</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>y_min</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>x_max</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>y_max</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A cropped bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_flip">
+<code class="highlight language-python">
+bbox_flip<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip a bounding box either vertically, horizontally or both depending on the value of <code>d</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>
+<p>if value of <code>d</code> is not -1, 0 or 1.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_hflip">
+<code class="highlight language-python">
+bbox_hflip<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip a bounding box horizontally around the y-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_rot90">
+<code class="highlight language-python">
+bbox_rot90<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotates a bounding box by 90 degrees CCW (see np.rot90)</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box tuple (x_min, y_min, x_max, y_max).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>factor</code></td>
+<td><code>int</code></td>
+<td>
+<p>Number of CCW rotations. Must be in set {0, 1, 2, 3} See np.rot90.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box tuple (x_min, y_min, x_max, y_max).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_rotate">
+<code class="highlight language-python">
+bbox_rotate<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotates a bounding box by angle degrees.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angle</code></td>
+<td><code>int</code></td>
+<td>
+<p>Angle of rotation in degrees.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code></code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_transpose">
+<code class="highlight language-python">
+bbox_transpose<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Transposes a bounding box along given axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>axis</code></td>
+<td><code>int</code></td>
+<td>
+<p>0 - main axis, 1 - secondary axis.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box tuple <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>
+<p>If axis not equal to 0 or 1.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.bbox_vflip">
+<code class="highlight language-python">
+bbox_vflip<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip a bounding box vertically around the x-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.crop_bbox_by_coords">
+<code class="highlight language-python">
+crop_bbox_by_coords<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop a bounding box using the provided coordinates of bottom-left and top-right corners in pixels and the
+required height and width of the crop.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bbox</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A cropped box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_coords</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>Crop coordinates <code>(x1, y1, x2, y2)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_height</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_width</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image rows.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image cols.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A cropped bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.crop_keypoint_by_coords">
+<code class="highlight language-python">
+crop_keypoint_by_coords<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop a keypoint using the provided coordinates of bottom-left and top-right corners in pixels and the
+required height and width of the crop.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_coords</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>Crop box coords <code>(x1, x2, y1, y2)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop</code></td>
+<td><code>height (int</code></td>
+<td>
+<p>Crop height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_width</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code></code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.elastic_transform">
+<code class="highlight language-python">
+elastic_transform<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">alpha_affine</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">approximate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Elastic deformation of images as described in [Simard2003]_ (with modifications).
+Based on https://gist.github.com/erniejunior/601cdf56d2b424757de5</p>
+<p>.. [Simard2003] Simard, Steinkraus and Platt, "Best Practices for
+     Convolutional Neural Networks applied to Visual Document Analysis", in
+     Proc. of the International Conference on Document Analysis and
+     Recognition, 2003.</p>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.elastic_transform_approx">
+<code class="highlight language-python">
+elastic_transform_approx<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">alpha_affine</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Elastic deformation of images as described in [Simard2003]_ (with modifications for speed).
+Based on https://gist.github.com/erniejunior/601cdf56d2b424757de5</p>
+<p>.. [Simard2003] Simard, Steinkraus and Platt, "Best Practices for
+     Convolutional Neural Networks applied to Visual Document Analysis", in
+     Proc. of the International Conference on Document Analysis and
+     Recognition, 2003.</p>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.equalize">
+<code class="highlight language-python">
+equalize<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'cv'</span><span class="p">,</span> <span class="n">by_channels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Equalize the image histogram.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>RGB or grayscale image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>An optional mask.  If given, only the pixels selected by
+the mask are included in the analysis. Maybe 1 channel or 3 channel array.</p>
+</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td>
+<p>{'cv', 'pil'}. Use OpenCV or Pillow equalization method.</p>
+</td>
+<td><code>'cv'</code></td>
+</tr>
+<tr>
+<td><code>by_channels</code></td>
+<td><code>bool</code></td>
+<td>
+<p>If True, use equalization by channels separately,
+else convert image to YCbCr representation and use equalization by <code>Y</code> channel.</p>
+</td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Equalized image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.fancy_pca">
+<code class="highlight language-python">
+fancy_pca<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Perform 'Fancy PCA' augmentation from:
+http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code></code></td>
+<td>
+<p>numpy array with (h, w, rgb) shape, as ints between 0-255)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>alpha</code></td>
+<td><code></code></td>
+<td>
+<p>how much to perturb/scale the eigen vecs and vals
+    the paper used std=0.1</p>
+</td>
+<td><code>0.1</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code></code></td>
+<td>
+<p>numpy image-like array as float range(0, 1)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.grid_distortion">
+<code class="highlight language-python">
+grid_distortion<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">num_steps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">xsteps</span><span class="o">=</span><span class="p">(),</span> <span class="n">ysteps</span><span class="o">=</span><span class="p">(),</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p>http://pythology.blogspot.sg/2014/03/interpolation-on-regular-distorted-grid.html</p>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.iso_noise">
+<code class="highlight language-python">
+iso_noise<span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">color_shift</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">intensity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply poisson noise to image to simulate camera sensor noise.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Input image, currently, only RGB, uint8 images are supported.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>color_shift</code></td>
+<td><code>float</code></td>
+<td></td>
+<td><code>0.05</code></td>
+</tr>
+<tr>
+<td><code>intensity</code></td>
+<td><code>float</code></td>
+<td>
+<p>Multiplication factor for noise values. Values of ~0.5 are produce noticeable,
+       yet acceptable level of noise.</p>
+</td>
+<td><code>0.5</code></td>
+</tr>
+<tr>
+<td><code>random_state</code></td>
+<td><code></code></td>
+<td></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>**kwargs</code></td>
+<td><code></code></td>
+<td></td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Noised image</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_center_crop">
+<code class="highlight language-python">
+keypoint_center_crop<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Keypoint center crop.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_height</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_width</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>h_start</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop height start.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>w_start</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop width start.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_flip">
+<code class="highlight language-python">
+keypoint_flip<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip a keypoint either vertically, horizontally or both depending on the value of <code>d</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><code>int</code></td>
+<td>
+<p>Number of flip. Must be -1, 0 or 1:
+* 0 - vertical flip,
+* 1 - horizontal flip,
+* -1 - vertical and horizontal flip.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>
+<p>if value of <code>d</code> is not -1, 0 or 1.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_hflip">
+<code class="highlight language-python">
+keypoint_hflip<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip a keypoint horizontally around the y-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_random_crop">
+<code class="highlight language-python">
+keypoint_random_crop<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">crop_height</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">,</span> <span class="n">h_start</span><span class="p">,</span> <span class="n">w_start</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Keypoint random crop.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code></code></td>
+<td>
+<p>(tuple): A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_height</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>crop_width</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>h_start</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop height start.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>w_start</code></td>
+<td><code>int</code></td>
+<td>
+<p>Crop width start.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code></code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_rot90">
+<code class="highlight language-python">
+keypoint_rot90<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotates a keypoint by 90 degrees CCW (see np.rot90)</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>factor</code></td>
+<td><code>int</code></td>
+<td>
+<p>Number of CCW rotations. Must be in range [0;3] See np.rot90.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>
+<p>if factor not in set {0, 1, 2, 3}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_rotate">
+<code class="highlight language-python">
+keypoint_rotate<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotate a keypoint by angle.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angle</code></td>
+<td><code>float</code></td>
+<td>
+<p>Rotation angle.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_scale">
+<code class="highlight language-python">
+keypoint_scale<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">scale_x</span><span class="p">,</span> <span class="n">scale_y</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Scales a keypoint by scale_x and scale_y.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>scale_x</code></td>
+<td><code>int</code></td>
+<td>
+<p>Scale coefficient x-axis.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>scale_y</code></td>
+<td><code>int</code></td>
+<td>
+<p>Scale coefficient y-axis.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code></code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_transpose">
+<code class="highlight language-python">
+keypoint_transpose<span class="p">(</span><span class="n">keypoint</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotate a keypoint by angle.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.keypoint_vflip">
+<code class="highlight language-python">
+keypoint_vflip<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip a keypoint vertically around the x-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>cols(</code></td>
+<td><code>int</code></td>
+<td>
+<p>Image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tuple</code></td>
+<td>
+<p>A keypoint <code>(x, y, angle, scale)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.multiply">
+<code class="highlight language-python">
+multiply<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>multiplier</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Multiplier coefficient.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image multiplied by <code>multiplier</code> coefficient.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.optical_distortion">
+<code class="highlight language-python">
+optical_distortion<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Barrel / pincushion distortion. Unconventional augment.</p>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p>|  https://stackoverflow.com/questions/6199636/formulas-for-barrel-pincushion-distortion
+|  https://stackoverflow.com/questions/10364201/image-transformation-in-opencv
+|  https://stackoverflow.com/questions/2477774/correcting-fisheye-distortion-programmatically
+|  http://www.coldvision.io/2017/03/02/advanced-lane-finding-using-opencv/</p>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.posterize">
+<code class="highlight language-python">
+posterize<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">bits</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Reduce the number of bits for each color channel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>image to posterize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>bits</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of high bits. Must be in range [0, 8]</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Image with reduced color channels.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.preserve_channel_dim">
+<code class="highlight language-python">
+preserve_channel_dim<span class="p">(</span><span class="n">func</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Preserve dummy channel dim.</p>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.preserve_shape">
+<code class="highlight language-python">
+preserve_shape<span class="p">(</span><span class="n">func</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Preserve shape of the image</p>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.py3round">
+<code class="highlight language-python">
+py3round<span class="p">(</span><span class="n">number</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Unified rounding in all python versions.</p>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.solarize">
+<code class="highlight language-python">
+solarize<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Invert all pixel values above a threshold.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>The image to solarize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td><code>int</code></td>
+<td>
+<p>All pixels above this greyscale level are inverted.</p>
+</td>
+<td><code>128</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy.ndarray</code></td>
+<td>
+<p>Solarized image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.functional.swap_tiles_on_image">
+<code class="highlight language-python">
+swap_tiles_on_image<span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">tiles</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Swap tiles on image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>Input image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>tiles</code></td>
+<td><code>np.ndarray</code></td>
+<td>
+<p>array of tuples(
+current_left_up_corner_row, current_left_up_corner_col,
+old_left_up_corner_row, old_left_up_corner_col,
+height_tile, width_tile)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.ndarray</code></td>
+<td>
+<p>Output image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Application footer -->
+<footer class="md-footer">
+<!-- Link to previous and/or next page -->
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<!-- Link to previous page -->
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../transforms/" rel="prev" title="Transforms (augmentations.transforms)">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Transforms (augmentations.transforms)
+              </div>
+</div>
+</a>
+<!-- Link to next page -->
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../bbox_utils/" rel="next" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Helper functions for working with bounding boxes (augmentations.bbox_utils)
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<!-- Further information -->
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
+<div class="md-footer-copyright">
+</div>
+<!-- Social links -->
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>

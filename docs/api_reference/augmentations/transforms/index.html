@@ -1,0 +1,4920 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://albumentations.ai/docs/api_reference/augmentations/transforms/" rel="canonical"/>
+<link href="../../../images/logo.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
+<title>Transforms (augmentations.transforms) - Albumentations Documentation</title>
+<link href="../../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="../../../css/ansi-colours.css" rel="stylesheet"/>
+<link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body data-md-color-accent="white" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#transforms-augmentationstransforms">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Albumentations Documentation" class="md-header-nav__button md-logo" href="https://albumentations.ai/docs" title="Albumentations Documentation">
+<img alt="logo" src="../../../images/logo.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title">
+<div class="header-menu-item">
+<a href="https://albumentations.ai">Home</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations.ai/whos_using">Who's using Albumentations</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+</div>
+<div class="header-menu-item header-menu-item-selected">
+<a href="https://albumentations.ai/docs/">Docs</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations.ai/team">Team</a>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header-nav__source">
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Repository containing source -->
+<a class="md-source" href="https://github.com/albumentations-team/albumentations/" target="_blank" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    albumentations
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Albumentations Documentation" class="md-nav__button md-logo" href="https://albumentations.ai/docs" title="Albumentations Documentation">
+<img alt="logo" src="../../../images/logo.png"/>
+</a>
+    Albumentations Documentation
+  </label>
+<div class="md-nav__source">
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Repository containing source -->
+<a class="md-source" href="https://github.com/albumentations-team/albumentations/" target="_blank" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    albumentations
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../.." title="Welcome to Albumentations documentation">
+      Welcome to Albumentations documentation
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+      Introduction to image augmentation
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Introduction to image augmentation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Introduction to image augmentation
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+      What is image augmentation and how it can improve the performance of deep neural networks
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+      Why you need a dedicated library for image augmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/why_albumentations/" title="Why Albumentations">
+      Why Albumentations
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Getting started with Albumentations
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Getting started with Albumentations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Getting started with Albumentations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/installation/" title="Installation">
+      Installation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/image_augmentation/" title="Image augmentation for classification">
+      Image augmentation for classification
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+      Mask augmentation for segmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+      Bounding boxes augmentation for object detection
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      API Reference
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="API Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        API Reference
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" id="nav-4-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-2">
+      Core API
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Core API" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-2">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Core API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/composition/" title="Composition API (core.composition)">
+      Composition API (core.composition)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
+      Transforms Interface (core.transforms_interface)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../core/serialization/" title="Serialization API (core.serialization)">
+      Serialization API (core.serialization)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" id="nav-4-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-3">
+      Augmentations
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Augmentations" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Augmentations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Transforms (augmentations.transforms)
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Transforms (augmentations.transforms)">
+      Transforms (augmentations.transforms)
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms">
+    albumentations.augmentations.transforms
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Blur">
+    Blur
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.CenterCrop">
+    CenterCrop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ChannelDropout">
+    ChannelDropout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ChannelShuffle">
+    ChannelShuffle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.CLAHE">
+    CLAHE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.CoarseDropout">
+    CoarseDropout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Crop">
+    Crop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists">
+    CropNonEmptyMaskIfExists
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Cutout">
+    Cutout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Downscale">
+    Downscale
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ElasticTransform">
+    ElasticTransform
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Equalize">
+    Equalize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.FancyPCA">
+    FancyPCA
+  </a>
+<nav aria-label="FancyPCA" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.FancyPCA.__init__">
+    __init__()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Flip">
+    Flip
+  </a>
+<nav aria-label="Flip" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Flip.apply">
+    apply()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.FromFloat">
+    FromFloat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.GaussianBlur">
+    GaussianBlur
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.GaussNoise">
+    GaussNoise
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.GlassBlur">
+    GlassBlur
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.GridDistortion">
+    GridDistortion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.GridDropout">
+    GridDropout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.HorizontalFlip">
+    HorizontalFlip
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.HueSaturationValue">
+    HueSaturationValue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ImageCompression">
+    ImageCompression
+  </a>
+<nav aria-label="ImageCompression" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ImageCompression.ImageCompressionType">
+    ImageCompressionType
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.InvertImg">
+    InvertImg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ISONoise">
+    ISONoise
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.JpegCompression">
+    JpegCompression
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Lambda">
+    Lambda
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.LongestMaxSize">
+    LongestMaxSize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.MaskDropout">
+    MaskDropout
+  </a>
+<nav aria-label="MaskDropout" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.MaskDropout.__init__">
+    __init__()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.MedianBlur">
+    MedianBlur
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.MotionBlur">
+    MotionBlur
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.MultiplicativeNoise">
+    MultiplicativeNoise
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Normalize">
+    Normalize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.OpticalDistortion">
+    OpticalDistortion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.PadIfNeeded">
+    PadIfNeeded
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Posterize">
+    Posterize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomBrightness">
+    RandomBrightness
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomBrightnessContrast">
+    RandomBrightnessContrast
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomContrast">
+    RandomContrast
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomCrop">
+    RandomCrop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomCropNearBBox">
+    RandomCropNearBBox
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomFog">
+    RandomFog
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomGamma">
+    RandomGamma
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomGridShuffle">
+    RandomGridShuffle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomRain">
+    RandomRain
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomResizedCrop">
+    RandomResizedCrop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomRotate90">
+    RandomRotate90
+  </a>
+<nav aria-label="RandomRotate90" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomRotate90.apply">
+    apply()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomScale">
+    RandomScale
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomShadow">
+    RandomShadow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop">
+    RandomSizedBBoxSafeCrop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomSizedCrop">
+    RandomSizedCrop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomSnow">
+    RandomSnow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomSunFlare">
+    RandomSunFlare
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Resize">
+    Resize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.RGBShift">
+    RGBShift
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Rotate">
+    Rotate
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ShiftScaleRotate">
+    ShiftScaleRotate
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.SmallestMaxSize">
+    SmallestMaxSize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Solarize">
+    Solarize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ToFloat">
+    ToFloat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ToGray">
+    ToGray
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.ToSepia">
+    ToSepia
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Transpose">
+    Transpose
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.VerticalFlip">
+    VerticalFlip
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functional/" title="Functional transforms (augmentations.functional)">
+      Functional transforms (augmentations.functional)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+      Helper functions for working with bounding boxes (augmentations.bbox_utils)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+      Helper functions for working with keypoints (augmentations.keypoints_utils)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" id="nav-4-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-4">
+      ImgAug Helpers
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="ImgAug Helpers" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        ImgAug Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../imgaug/" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../imgaug/transforms/" title="Transforms (imgaug.transforms)">
+      Transforms (imgaug.transforms)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" id="nav-4-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-5">
+      PyTorch Helpers
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="PyTorch Helpers" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        PyTorch Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pytorch/" title="Index">
+      Index
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
+      Transforms (pytorch.transforms)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../contributing/" title="Contributing">
+      Contributing
+    </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/transforms.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="transforms-augmentationstransforms">Transforms (augmentations.transforms)</h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#albumentations.augmentations.transforms" id="albumentations.augmentations.transforms" style="visibility: hidden; width: 0; height: 0;">
+</h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Blur">
+<code>Blur</code>
+</h2>
+<div class="doc doc-contents">
+<p>Blur the input image using a random-sized kernel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int, [int, int]</code></td>
+<td>
+<p>maximum kernel size for blurring the input image.
+Should be in range [3, inf). Default: (3, 7).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.CenterCrop">
+<code>CenterCrop</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop the central part of the input.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>height of the crop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>width of the crop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to use uint8 images as input.
+Otherwise the operation will require internal conversion
+float32 -&gt; uint8 -&gt; float32 that causes worse performance.</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ChannelDropout">
+<code>ChannelDropout</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly Drop Channels in the input Image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_drop_range</code></td>
+<td><code>[int, int]</code></td>
+<td>
+<p>range from which we choose the number of channels to drop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>fill_value</code></td>
+<td><code>int, float</code></td>
+<td>
+<p>pixel value for the dropped channel.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, uint16, unit32, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ChannelShuffle">
+<code>ChannelShuffle</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly rearrange channels of the input RGB image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.CLAHE">
+<code>CLAHE</code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply Contrast Limited Adaptive Histogram Equalization to the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clip_limit</code></td>
+<td><code>float or [float, float]</code></td>
+<td>
+<p>upper threshold value for contrast limiting.
+If clip_limit is a single float value, the range will be (1, clip_limit). Default: (1, 4).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>tile_grid_size</code></td>
+<td><code>[int, int]</code></td>
+<td>
+<p>size of grid for histogram equalization. Default: (8, 8).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.CoarseDropout">
+<code>CoarseDropout</code>
+</h2>
+<div class="doc doc-contents">
+<p>CoarseDropout of the rectangular regions in the image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_holes</code></td>
+<td><code>int</code></td>
+<td>
+<p>Maximum number of regions to zero out.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>max_height</code></td>
+<td><code>int</code></td>
+<td>
+<p>Maximum height of the hole.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>max_width</code></td>
+<td><code>int</code></td>
+<td>
+<p>Maximum width of the hole.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>min_holes</code></td>
+<td><code>int</code></td>
+<td>
+<p>Minimum number of regions to zero out. If <code>None</code>,
+<code>min_holes</code> is be set to <code>max_holes</code>. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>min_height</code></td>
+<td><code>int</code></td>
+<td>
+<p>Minimum height of the hole. Default: None. If <code>None</code>,
+<code>min_height</code> is set to <code>max_height</code>. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>min_width</code></td>
+<td><code>int</code></td>
+<td>
+<p>Minimum width of the hole. If <code>None</code>, <code>min_height</code> is
+set to <code>max_width</code>. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>fill_value</code></td>
+<td><code>int, float, lisf of int, list of float</code></td>
+<td>
+<p>value for dropped pixels.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<p>Reference:
+|  https://arxiv.org/abs/1708.04552
+|  https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py
+|  https://github.com/aleju/imgaug/blob/master/imgaug/augmenters/arithmetic.py</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Crop">
+<code>Crop</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop region from image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x_min</code></td>
+<td><code>int</code></td>
+<td>
+<p>Minimum upper left x coordinate.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>y_min</code></td>
+<td><code>int</code></td>
+<td>
+<p>Minimum upper left y coordinate.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>x_max</code></td>
+<td><code>int</code></td>
+<td>
+<p>Maximum lower right x coordinate.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>y_max</code></td>
+<td><code>int</code></td>
+<td>
+<p>Maximum lower right y coordinate.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.CropNonEmptyMaskIfExists">
+<code>CropNonEmptyMaskIfExists</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop area with mask if mask is non-empty, else make random crop.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>vertical size of crop in pixels</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>horizontal size of crop in pixels</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>ignore_values</code></td>
+<td><code>list of int</code></td>
+<td>
+<p>values to ignore in mask, <code>0</code> values are always ignored
+(e.g. if background value is 5 set <code>ignore_values=[5]</code> to ignore)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>ignore_channels</code></td>
+<td><code>list of int</code></td>
+<td>
+<p>channels to ignore in mask
+(e.g. if background is a first channel set <code>ignore_channels=[0]</code> to ignore)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Cutout">
+<code>Cutout</code>
+</h2>
+<div class="doc doc-contents">
+<p>CoarseDropout of the square regions in the image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>num_holes</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of regions to zero out</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>max_h_size</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum height of the hole</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>max_w_size</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum width of the hole</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>fill_value</code></td>
+<td><code>int, float, lisf of int, list of float</code></td>
+<td>
+<p>value for dropped pixels.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<p>Reference:
+|  https://arxiv.org/abs/1708.04552
+|  https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py
+|  https://github.com/aleju/imgaug/blob/master/imgaug/augmenters/arithmetic.py</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Downscale">
+<code>Downscale</code>
+</h2>
+<div class="doc doc-contents">
+<p>Decreases image quality by downscaling and upscaling back.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale_min</code></td>
+<td><code>float</code></td>
+<td>
+<p>lower bound on the image scale. Should be &lt; 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>scale_max</code></td>
+<td><code>float</code></td>
+<td>
+<p>lower bound on the image scale. Should be .</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code></code></td>
+<td>
+<p>cv2 interpolation method. cv2.INTER_NEAREST by default</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ElasticTransform">
+<code>ElasticTransform</code>
+</h2>
+<div class="doc doc-contents">
+<p>Elastic deformation of images as described in [Simard2003]_ (with modifications).
+Based on https://gist.github.com/erniejunior/601cdf56d2b424757de5</p>
+<p>.. [Simard2003] Simard, Steinkraus and Platt, "Best Practices for
+     Convolutional Neural Networks applied to Visual Document Analysis", in
+     Proc. of the International Conference on Document Analysis and
+     Recognition, 2003.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alpha</code></td>
+<td><code>float</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>sigma</code></td>
+<td><code>float</code></td>
+<td>
+<p>Gaussian filter parameter.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>alpha_affine</code></td>
+<td><code>float</code></td>
+<td>
+<p>The range will be (-alpha_affine, alpha_affine)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>approximate</code></td>
+<td><code>boolean</code></td>
+<td>
+<p>Whether to smooth displacement map with fixed kernel size.
+                   Enabling this option gives ~2X speedup on large images.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Equalize">
+<code>Equalize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Equalize the image histogram.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td>
+<p>{'cv', 'pil'}. Use OpenCV or Pillow equalization method.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>by_channels</code></td>
+<td><code>bool</code></td>
+<td>
+<p>If True, use equalization by channels separately,
+else convert image to YCbCr representation and use equalization by <code>Y</code> channel.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask</code></td>
+<td><code>np.ndarray, callable</code></td>
+<td>
+<p>If given, only the pixels selected by
+the mask are included in the analysis. Maybe 1 channel or 3 channel array or callable.
+Function signature must include <code>image</code> argument.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_params</code></td>
+<td><code>list of str</code></td>
+<td>
+<p>Params for mask function.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.FancyPCA">
+<code>FancyPCA</code>
+</h2>
+<div class="doc doc-contents">
+<p>Augment RGB image using FancyPCA from Krizhevsky's paper
+"ImageNet Classification with Deep Convolutional Neural Networks"</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alpha</code></td>
+<td><code>float</code></td>
+<td>
+<p>how much to perturb/scale the eigen vecs and vals.
+scale is samples from gaussian distribution (mu=0, sigma=alpha)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>3-channel uint8 images only</p>
+</div>
+<div class="admonition credit">
+<p class="admonition-title">Credit</p>
+<p>http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+https://deshanadesai.github.io/notes/Fancy-PCA-with-Scikit-Image
+https://pixelatedbrian.github.io/2018-04-29-fancy_pca/</p>
+</div>
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.transforms.FancyPCA.__init__">
+<code class="highlight language-python">
+__init__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Flip">
+<code>Flip</code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip the input either horizontally, vertically or both horizontally and vertically.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.transforms.Flip.apply">
+<code class="highlight language-python">
+apply<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code></td>
+<td><code>int</code></td>
+<td>
+<p>code that specifies how to flip the input. 0 for vertical flipping, 1 for horizontal flipping,
+    -1 for both vertical and horizontal flipping (which is also could be seen as rotating the input by
+    180 degrees).</p>
+</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.FromFloat">
+<code>FromFloat</code>
+</h2>
+<div class="doc doc-contents">
+<p>Take an input array where all values should lie in the range [0, 1.0], multiply them by <code>max_value</code> and then
+cast the resulted value to a type specified by <code>dtype</code>. If <code>max_value</code> is None the transform will try to infer
+the maximum value for the data type from the <code>dtype</code> argument.</p>
+<p>This is the inverse transform for :class:<code>~albumentations.augmentations.transforms.ToFloat</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_value</code></td>
+<td><code>float</code></td>
+<td>
+<p>maximum possible input value. Default: None.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>dtype</code></td>
+<td><code>string or numpy data type</code></td>
+<td>
+<p>data type of the output. See the <code>'Data types' page from the NumPy docs</code>_.
+Default: 'uint16'.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>float32</p>
+</div>
+<p>.. _'Data types' page from the NumPy docs:
+   https://docs.scipy.org/doc/numpy/user/basics.types.html</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.GaussianBlur">
+<code>GaussianBlur</code>
+</h2>
+<div class="doc doc-contents">
+<p>Blur the input image using using a Gaussian filter with a random kernel size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum Gaussian kernel size for blurring the input image.
+Must be zero or odd and in range [3, inf). Default: (3, 7).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.GaussNoise">
+<code>GaussNoise</code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply gaussian noise to the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>var_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>variance range for noise. If var_limit is a single float, the range
+will be (0, var_limit). Default: (10.0, 50.0).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mean</code></td>
+<td><code>float</code></td>
+<td>
+<p>mean of the noise. Default: 0</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.GlassBlur">
+<code>GlassBlur</code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply glass noise to the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sigma</code></td>
+<td><code>float</code></td>
+<td>
+<p>standard deviation for Gaussian kernel.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>max_delta</code></td>
+<td><code>int</code></td>
+<td>
+<p>max distance between pixels which are swapped.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>iterations</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of repeats.
+Should be in range [1, inf). Default: (2).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td>
+<p>mode of computation: fast or exact. Default: "fast".</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<p>Reference:
+|  https://arxiv.org/abs/1903.12261
+|  https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.GridDistortion">
+<code>GridDistortion</code>
+</h2>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>num_steps</code></td>
+<td><code>int</code></td>
+<td>
+<p>count of grid cells on each side.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>distort_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td>
+<p>If distort_limit is a single float, the range
+will be (-distort_limit, distort_limit). Default: (-0.03, 0.03).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.GridDropout">
+<code>GridDropout</code>
+</h2>
+<div class="doc doc-contents">
+<p>GridDropout, drops out rectangular regions of an image and the corresponding mask in a grid fashion.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ratio</code></td>
+<td><code>float</code></td>
+<td>
+<p>the ratio of the mask holes to the unit_size (same for horizontal and vertical directions).
+Must be between 0 and 1. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>unit_size_min</code></td>
+<td><code>int</code></td>
+<td>
+<p>minimum size of the grid unit. Must be between 2 and the image shorter edge.
+If 'None', holes_number_x and holes_number_y are used to setup the grid. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>unit_size_max</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum size of the grid unit. Must be between 2 and the image shorter edge.
+If 'None', holes_number_x and holes_number_y are used to setup the grid. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>holes_number_x</code></td>
+<td><code>int</code></td>
+<td>
+<p>the number of grid units in x direction. Must be between 1 and image width//2.
+If 'None', grid unit width is set as image_width//10. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>holes_number_y</code></td>
+<td><code>int</code></td>
+<td>
+<p>the number of grid units in y direction. Must be between 1 and image height//2.
+If <code>None</code>, grid unit height is set equal to the grid unit width or image height, whatever is smaller.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>shift_x</code></td>
+<td><code>int</code></td>
+<td>
+<p>offsets of the grid start in x direction from (0,0) coordinate.
+Clipped between 0 and grid unit_width - hole_width. Default: 0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>shift_y</code></td>
+<td><code>int</code></td>
+<td>
+<p>offsets of the grid start in y direction from (0,0) coordinate.
+Clipped between 0 and grid unit height - hole_height. Default: 0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>random_offset</code></td>
+<td><code>boolean</code></td>
+<td>
+<p>weather to offset the grid randomly between 0 and grid unit size - hole size
+If 'True', entered shift_x, shift_y are ignored and set randomly. Default: <code>False</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>fill_value</code></td>
+<td><code>int</code></td>
+<td>
+<p>value for the dropped pixels. Default = 0</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_fill_value</code></td>
+<td><code>int</code></td>
+<td>
+<p>value for the dropped pixels in mask.
+If <code>None</code>, tranformation is not applied to the mask. Default: <code>None</code>.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="admonition references">
+<p class="admonition-title">References</p>
+<p>https://arxiv.org/abs/2001.04086</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.HorizontalFlip">
+<code>HorizontalFlip</code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip the input horizontally around the y-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.HueSaturationValue">
+<code>HueSaturationValue</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly change hue, saturation and value of the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hue_shift_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range for changing hue. If hue_shift_limit is a single int, the range
+will be (-hue_shift_limit, hue_shift_limit). Default: (-20, 20).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>sat_shift_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range for changing saturation. If sat_shift_limit is a single int,
+the range will be (-sat_shift_limit, sat_shift_limit). Default: (-30, 30).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>val_shift_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range for changing value. If val_shift_limit is a single int, the range
+will be (-val_shift_limit, val_shift_limit). Default: (-20, 20).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ImageCompression">
+<code>ImageCompression</code>
+</h2>
+<div class="doc doc-contents">
+<p>Decrease Jpeg, WebP compression of an image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quality_lower</code></td>
+<td><code>float</code></td>
+<td>
+<p>lower bound on the image quality.
+                   Should be in [0, 100] range for jpeg and [1, 100] for webp.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>quality_upper</code></td>
+<td><code>float</code></td>
+<td>
+<p>upper bound on the image quality.
+                   Should be in [0, 100] range for jpeg and [1, 100] for webp.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>compression_type</code></td>
+<td><code>ImageCompressionType</code></td>
+<td>
+<p>should be ImageCompressionType.JPEG or ImageCompressionType.WEBP.
+Default: ImageCompressionType.JPEG</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h3 class="doc doc-heading" id="albumentations.augmentations.transforms.ImageCompression.ImageCompressionType">
+<code>ImageCompressionType</code>
+</h3>
+<div class="doc doc-contents">
+<p>An enumeration.</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.InvertImg">
+<code>InvertImg</code>
+</h2>
+<div class="doc doc-contents">
+<p>Invert the input image by subtracting pixel values from 255.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ISONoise">
+<code>ISONoise</code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply camera sensor noise.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color_shift</code></td>
+<td><code>[float, float]</code></td>
+<td>
+<p>variance range for color hue change.
+Measured as a fraction of 360 degree Hue angle in HLS colorspace.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>intensity</code></td>
+<td><code>[float, float]</code></td>
+<td>
+<p>Multiplicative factor that control strength
+of color and luminace noise.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.JpegCompression">
+<code>JpegCompression</code>
+</h2>
+<div class="doc doc-contents">
+<p>Decrease Jpeg compression of an image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quality_lower</code></td>
+<td><code>float</code></td>
+<td>
+<p>lower bound on the jpeg quality. Should be in [0, 100] range</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>quality_upper</code></td>
+<td><code>float</code></td>
+<td>
+<p>upper bound on the jpeg quality. Should be in [0, 100] range</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Lambda">
+<code>Lambda</code>
+</h2>
+<div class="doc doc-contents">
+<p>A flexible transformation class for using user-defined transformation functions per targets.
+Function signature must include **kwargs to accept optinal arguments like interpolation method, image size, etc:</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td><code>callable</code></td>
+<td>
+<p>Image transformation function.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask</code></td>
+<td><code>callable</code></td>
+<td>
+<p>Mask transformation function.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>callable</code></td>
+<td>
+<p>Keypoint transformation function.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>bbox</code></td>
+<td><code>callable</code></td>
+<td>
+<p>BBox transformation function.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>always_apply</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Indicates whether this transformation should be always applied.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>Any</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.LongestMaxSize">
+<code>LongestMaxSize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Rescale an image so that maximum side is equal to max_size, keeping the aspect ratio of the initial image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_size</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum size of the image after the transformation.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>interpolation method. Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.MaskDropout">
+<code>MaskDropout</code>
+</h2>
+<div class="doc doc-contents">
+<p>Image &amp; mask augmentation that zero out mask and image regions corresponding
+to randomly chosen object instance from mask.</p>
+<p>Mask must be single-channel image, zero values treated as background.
+Image can be any number of channels.</p>
+<p>Inspired by https://www.kaggle.com/c/severstal-steel-defect-detection/discussion/114254</p>
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.transforms.MaskDropout.__init__">
+<code class="highlight language-python">
+__init__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_objects</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask_fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+</h3>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_objects</code></td>
+<td><code></code></td>
+<td>
+<p>Maximum number of labels that can be zeroed out. Can be tuple, in this case it's [min, max]</p>
+</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>image_fill_value</code></td>
+<td><code></code></td>
+<td>
+<p>Fill value to use when filling image.
+Can be 'inpaint' to apply inpaining (works only  for 3-chahnel images)</p>
+</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>mask_fill_value</code></td>
+<td><code></code></td>
+<td>
+<p>Fill value to use when filling mask.</p>
+</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.MedianBlur">
+<code>MedianBlur</code>
+</h2>
+<div class="doc doc-contents">
+<p>Blur the input image using using a median filter with a random aperture linear size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum aperture linear size for blurring the input image.
+Must be odd and in range [3, inf). Default: (3, 7).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.MotionBlur">
+<code>MotionBlur</code>
+</h2>
+<div class="doc doc-contents">
+<p>Apply motion blur to the input image using a random-sized kernel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum kernel size for blurring the input image.
+Should be in range [3, inf). Default: (3, 7).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.MultiplicativeNoise">
+<code>MultiplicativeNoise</code>
+</h2>
+<div class="doc doc-contents">
+<p>Multiply image to random number or array of numbers.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>multiplier</code></td>
+<td><code>float or tuple of floats</code></td>
+<td>
+<p>If single float image will be multiplied to this number.
+If tuple of float multiplier will be in range <code>[multiplier[0], multiplier[1])</code>. Default: (0.9, 1.1).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>per_channel</code></td>
+<td><code>bool</code></td>
+<td>
+<p>If <code>False</code>, same values for all channels will be used.
+If <code>True</code> use sample values for each channels. Default False.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>elementwise</code></td>
+<td><code>bool</code></td>
+<td>
+<p>If <code>False</code> multiply multiply all pixels in an image with a random value sampled once.
+If <code>True</code> Multiply image pixels with values that are pixelwise randomly sampled. Defaule: False.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>Any</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Normalize">
+<code>Normalize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Divide pixel values by 255 = 2**8 - 1, subtract mean per channel and divide by std per channel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mean</code></td>
+<td><code>float, list of float</code></td>
+<td>
+<p>mean values</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>std</code></td>
+<td><code> (float, list of float</code></td>
+<td>
+<p>std values</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>max_pixel_value</code></td>
+<td><code>float</code></td>
+<td>
+<p>maximum possible pixel value</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.OpticalDistortion">
+<code>OpticalDistortion</code>
+</h2>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>distort_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td>
+<p>If distort_limit is a single float, the range
+will be (-distort_limit, distort_limit). Default: (-0.05, 0.05).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>shift_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td>
+<p>If shift_limit is a single float, the range
+will be (-shift_limit, shift_limit). Default: (-0.05, 0.05).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.PadIfNeeded">
+<code>PadIfNeeded</code>
+</h2>
+<div class="doc doc-contents">
+<p>Pad side of the image / max if side is less than desired number.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min_height</code></td>
+<td><code>int</code></td>
+<td>
+<p>minimal result image height.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>min_width</code></td>
+<td><code>int</code></td>
+<td>
+<p>minimal result image width.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>OpenCV border mode.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of int, lisft of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of int,
+        lisft of float</code></td>
+<td>
+<p>padding value for mask if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bbox, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Posterize">
+<code>Posterize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Reduce the number of bits for each color channel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>num_bits</code></td>
+<td><code>[int, int] or int,
+      or list of ints [r, g, b],
+      or list of ints [[r1, r1], [g1, g2], [b1, b2]]</code></td>
+<td>
+<p>number of high bits.
+If num_bits is a single value, the range will be [num_bits, num_bits].
+Must be in range [0, 8]. Default: 4.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+image</p>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomBrightness">
+<code>RandomBrightness</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly change brightness of the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>factor range for changing brightness.
+If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomBrightnessContrast">
+<code>RandomBrightnessContrast</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly change brightness and contrast of the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brightness_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>factor range for changing brightness.
+If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>contrast_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>factor range for changing contrast.
+If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>brightness_by_max</code></td>
+<td><code>Boolean</code></td>
+<td>
+<p>If True adjust contrast by image dtype maximum,
+else adjust contrast by image mean.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomContrast">
+<code>RandomContrast</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly change contrast of the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>factor range for changing contrast.
+If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomCrop">
+<code>RandomCrop</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop a random part of the input.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>height of the crop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>width of the crop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomCropNearBBox">
+<code>RandomCropNearBBox</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop bbox from image with random shift by x,y coordinates</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_part_shift</code></td>
+<td><code>float</code></td>
+<td>
+<p>float value in (0.0, 1.0) range. Default 0.3</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomFog">
+<code>RandomFog</code>
+</h2>
+<div class="doc doc-contents">
+<p>Simulates fog for the image</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fog_coef_lower</code></td>
+<td><code>float</code></td>
+<td>
+<p>lower limit for fog intensity coefficient. Should be in [0, 1] range.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>fog_coef_upper</code></td>
+<td><code>float</code></td>
+<td>
+<p>upper limit for fog intensity coefficient. Should be in [0, 1] range.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>alpha_coef</code></td>
+<td><code>float</code></td>
+<td>
+<p>transparency of the fog circles. Should be in [0, 1] range.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomGamma">
+<code>RandomGamma</code>
+</h2>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gamma_limit</code></td>
+<td><code>float or [float, float]</code></td>
+<td>
+<p>If gamma_limit is a single float value,
+the range will be (-gamma_limit, gamma_limit). Default: (80, 120).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>eps</code></td>
+<td><code></code></td>
+<td>
+<p>Deprecated.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomGridShuffle">
+<code>RandomGridShuffle</code>
+</h2>
+<div class="doc doc-contents">
+<p>Random shuffle grid's cells on image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grid</code></td>
+<td><code>[int, int]</code></td>
+<td>
+<p>size of grid for splitting image.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomRain">
+<code>RandomRain</code>
+</h2>
+<div class="doc doc-contents">
+<p>Adds rain effects.</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slant_lower</code></td>
+<td><code></code></td>
+<td>
+<p>should be in range [-20, 20].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>slant_upper</code></td>
+<td><code></code></td>
+<td>
+<p>should be in range [-20, 20].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>drop_length</code></td>
+<td><code></code></td>
+<td>
+<p>should be in range [0, 100].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>drop_width</code></td>
+<td><code></code></td>
+<td>
+<p>should be in range [1, 5].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>drop_color</code></td>
+<td><code>list of (r, g, b</code></td>
+<td>
+<p>rain lines color.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>blur_value</code></td>
+<td><code>int</code></td>
+<td>
+<p>rainy view are blurry</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>brightness_coefficient</code></td>
+<td><code>float</code></td>
+<td>
+<p>rainy days are usually shady. Should be in range [0, 1].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rain_type</code></td>
+<td><code></code></td>
+<td>
+<p>One of [None, "drizzle", "heavy", "torrestial"]</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomResizedCrop">
+<code>RandomResizedCrop</code>
+</h2>
+<div class="doc doc-contents">
+<p>Torchvision's variant of crop a random part of the input and rescale it to some size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>height after crop and resize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>width after crop and resize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td><code>[float, float]</code></td>
+<td>
+<p>range of size of the origin size cropped</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>ratio</code></td>
+<td><code>[float, float]</code></td>
+<td>
+<p>range of aspect ratio of the origin aspect ratio cropped</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomRotate90">
+<code>RandomRotate90</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly rotate the input by 90 degrees zero or more times.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomRotate90.apply">
+<code class="highlight language-python">
+apply<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+</h3>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>factor</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of times the input will be rotated by 90 degrees.</p>
+</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomScale">
+<code>RandomScale</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly resize the input. Output image size is different from the input image size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>scaling factor range. If scale_limit is a single float value, the
+range will be (1 - scale_limit, 1 + scale_limit). Default: (0.9, 1.1).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomShadow">
+<code>RandomShadow</code>
+</h2>
+<div class="doc doc-contents">
+<p>Simulates shadows for the image</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shadow_roi</code></td>
+<td><code>float, float, float, float</code></td>
+<td>
+<p>region of the image where shadows
+will appear (x_min, y_min, x_max, y_max). All values should be in range [0, 1].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>num_shadows_lower</code></td>
+<td><code>int</code></td>
+<td>
+<p>Lower limit for the possible number of shadows.
+Should be in range [0, <code>num_shadows_upper</code>].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>num_shadows_upper</code></td>
+<td><code>int</code></td>
+<td>
+<p>Lower limit for the possible number of shadows.
+Should be in range [<code>num_shadows_lower</code>, inf].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>shadow_dimension</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of edges in the shadow polygons</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop">
+<code>RandomSizedBBoxSafeCrop</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop a random part of the input and rescale it to some size without loss of bboxes.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>height after crop and resize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>width after crop and resize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>erosion_rate</code></td>
+<td><code>float</code></td>
+<td>
+<p>erosion rate applied on input image height before crop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSizedCrop">
+<code>RandomSizedCrop</code>
+</h2>
+<div class="doc doc-contents">
+<p>Crop a random part of the input and rescale it to some size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min_max_height</code></td>
+<td><code>[int, int]</code></td>
+<td>
+<p>crop size limits.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>height after crop and resize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>width after crop and resize.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>w2h_ratio</code></td>
+<td><code>float</code></td>
+<td>
+<p>aspect ratio of crop.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSnow">
+<code>RandomSnow</code>
+</h2>
+<div class="doc doc-contents">
+<p>Bleach out some pixel values simulating snow.</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>snow_point_lower</code></td>
+<td><code>float</code></td>
+<td>
+<p>lower_bond of the amount of snow. Should be in [0, 1] range</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>snow_point_upper</code></td>
+<td><code>float</code></td>
+<td>
+<p>upper_bond of the amount of snow. Should be in [0, 1] range</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>brightness_coeff</code></td>
+<td><code>float</code></td>
+<td>
+<p>larger number will lead to a more snow on the image. Should be &gt;= 0</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSunFlare">
+<code>RandomSunFlare</code>
+</h2>
+<div class="doc doc-contents">
+<p>Simulates Sun Flare for the image</p>
+<p>From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flare_roi</code></td>
+<td><code>float, float, float, float</code></td>
+<td>
+<p>region of the image where flare will
+appear (x_min, y_min, x_max, y_max). All values should be in range [0, 1].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angle_lower</code></td>
+<td><code>float</code></td>
+<td>
+<p>should be in range [0, <code>angle_upper</code>].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>angle_upper</code></td>
+<td><code>float</code></td>
+<td>
+<p>should be in range [<code>angle_lower</code>, 1].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>num_flare_circles_lower</code></td>
+<td><code>int</code></td>
+<td>
+<p>lower limit for the number of flare circles.
+Should be in range [0, <code>num_flare_circles_upper</code>].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>num_flare_circles_upper</code></td>
+<td><code>int</code></td>
+<td>
+<p>upper limit for the number of flare circles.
+Should be in range [<code>num_flare_circles_lower</code>, inf].</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>src_radius</code></td>
+<td><code>int</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>src_color</code></td>
+<td><code>int, int, int</code></td>
+<td>
+<p>color of the flare</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Resize">
+<code>Resize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Resize the input to the given height and width.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>desired height of the output.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>desired width of the output.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RGBShift">
+<code>RGBShift</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly shift values for each channel of the input RGB image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r_shift_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range for changing values for the red channel. If r_shift_limit is a single
+int, the range will be (-r_shift_limit, r_shift_limit). Default: (-20, 20).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>g_shift_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range for changing values for the green channel. If g_shift_limit is a
+single int, the range  will be (-g_shift_limit, g_shift_limit). Default: (-20, 20).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>b_shift_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range for changing values for the blue channel. If b_shift_limit is a single
+int, the range will be (-b_shift_limit, b_shift_limit). Default: (-20, 20).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Rotate">
+<code>Rotate</code>
+</h2>
+<div class="doc doc-contents">
+<p>Rotate the input by an angle selected randomly from the uniform distribution.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range from which a random angle is picked. If limit is a single int
+an angle is picked from (-limit, limit). Default: (-90, 90)</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ShiftScaleRotate">
+<code>ShiftScaleRotate</code>
+</h2>
+<div class="doc doc-contents">
+<p>Randomly apply affine transforms: translate, scale and rotate the input.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shift_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>shift factor range for both height and width. If shift_limit
+is a single float value, the range will be (-shift_limit, shift_limit). Absolute values for lower and
+upper bounds should lie in range [0, 1]. Default: (-0.0625, 0.0625).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>scale_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td>
+<p>scaling factor range. If scale_limit is a single float value, the
+range will be (-scale_limit, scale_limit). Default: (-0.1, 0.1).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>rotate_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>rotation range. If rotate_limit is a single int value, the
+range will be (-rotate_limit, rotate_limit). Default: (-45, 45).</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of int, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of int,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.SmallestMaxSize">
+<code>SmallestMaxSize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Rescale an image so that minimum side is equal to max_size, keeping the aspect ratio of the initial image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_size</code></td>
+<td><code>int</code></td>
+<td>
+<p>maximum size of smallest side of the image after the transformation.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>interpolation method. Default: cv2.INTER_LINEAR.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Solarize">
+<code>Solarize</code>
+</h2>
+<div class="doc doc-contents">
+<p>Invert all pixel values above a threshold.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>threshold</code></td>
+<td><code>[int, int] or int, or [float, float] or float</code></td>
+<td>
+<p>range for solarizing threshold.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>If</code></td>
+<td><code>threshold is a single value, the range will be [threshold, threshold]. Default</code></td>
+<td>
+<p>128.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>any</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ToFloat">
+<code>ToFloat</code>
+</h2>
+<div class="doc doc-contents">
+<p>Divide pixel values by <code>max_value</code> to get a float32 output array where all values lie in the range [0, 1.0].
+If <code>max_value</code> is None the transform will try to infer the maximum value by inspecting the data type of the input
+image.</p>
+<p>See Also:
+    :class:<code>~albumentations.augmentations.transforms.FromFloat</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_value</code></td>
+<td><code>float</code></td>
+<td>
+<p>maximum possible input value. Default: None.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.0.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>any type</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ToGray">
+<code>ToGray</code>
+</h2>
+<div class="doc doc-contents">
+<p>Convert the input RGB image to grayscale. If the mean pixel value for the resulting image is greater
+than 127, invert the resulting grayscale image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ToSepia">
+<code>ToSepia</code>
+</h2>
+<div class="doc doc-contents">
+<p>Applies sepia filter to the input RGB image</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Transpose">
+<code>Transpose</code>
+</h2>
+<div class="doc doc-contents">
+<p>Transpose the input by swapping rows and columns.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.VerticalFlip">
+<code>VerticalFlip</code>
+</h2>
+<div class="doc doc-contents">
+<p>Flip the input vertically around the x-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints</p>
+</div>
+<div class="admonition image-types">
+<p class="admonition-title">Image-types</p>
+<p>uint8, float32</p>
+</div>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Application footer -->
+<footer class="md-footer">
+<!-- Link to previous and/or next page -->
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<!-- Link to previous page -->
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../" rel="prev" title="Index">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </div>
+</div>
+</a>
+<!-- Link to next page -->
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../functional/" rel="next" title="Functional transforms (augmentations.functional)">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Functional transforms (augmentations.functional)
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<!-- Further information -->
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
+<div class="md-footer-copyright">
+</div>
+<!-- Social links -->
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>
