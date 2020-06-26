@@ -540,19 +540,19 @@
 An example image with a bounding box from the COCO dataset</img></p>
 <h3 id="pascal_voc">pascal_voc</h3>
 <p><code>pascal_voc</code> is a format used by the <a href="http://host.robots.ox.ac.uk/pascal/VOC/" target="_blank">Pascal VOC dataset</a>.
-Coordinates of a bounding box are encoded with four values in pixels: <code>[x_min, x_max, y_min, y_max]</code>. <code>x_min</code> and <code>x_max</code> are coordinates of the beginning and end of the bounding box on the x-axis. <code>y_min</code> and <code>y_max</code> are coordinates of the beginning and end of the bounding box on the y-axis.</p>
-<p>Coordinates of the example bounding box in this format are <code>[98, 420, 345, 462]</code>.</p>
+Coordinates of a bounding box are encoded with four values in pixels: <code>[x_min, y_min, x_max, y_max]</code>.  <code>x_min</code> and <code>y_min</code> are coordinates of the top-left corner of the bounding box. <code>x_max</code> and <code>y_max</code> are coordinates of bottom-right corner of the bounding box.</p>
+<p>Coordinates of the example bounding box in this format are <code>[98, 345, 420, 462]</code>.</p>
 <h3 id="albumentations">albumentations</h3>
-<p><code>albumentations</code> is similar to <code>pascal_voc</code>, because it also uses four values <code>[x_min, x_max, y_min, y_max]</code> to represent a bounding box. But unlike <code>pascal_voc</code>, <code>albumentations</code> uses normalized values. To normalize values, we divide coordinates in pixels for the x- and y-axis by the width and the height of the image.</p>
-<p>Coordinates of the example bounding box in this format are <code>[98 / 640, 420 / 640, 345 / 480, 462 / 480]</code> which are <code>[0.153125, 0.65625, 0.71875, 0.9625]</code>.</p>
-<p>Albumentations uses this format internally to work with bounding boxes and augment them. A popular dataset <a href="https://storage.googleapis.com/openimages/web/index.html" target="_blank">Open Images</a> also uses this format to represent coordinates of bounding boxes.</p>
+<p><code>albumentations</code> is similar to <code>pascal_voc</code>, because it also uses four values <code>[x_min, y_min, x_max, y_max]</code> to represent a bounding box. But unlike <code>pascal_voc</code>, <code>albumentations</code> uses normalized values. To normalize values, we divide coordinates in pixels for the x- and y-axis by the width and the height of the image.</p>
+<p>Coordinates of the example bounding box in this format are <code>[98 / 640, 345 / 480, 420 / 640, 462 / 480]</code> which are <code>[0.153125, 0.71875, 0.65625, 0.9625]</code>.</p>
+<p>Albumentations uses this format internally to work with bounding boxes and augment them.</p>
 <h3 id="coco">coco</h3>
 <p><code>coco</code> is a format used by the <a href="http://cocodataset.org/" target="_blank">Common Objects in Context (COCO)</a> dataset.</p>
 <p>In <code>coco</code>, a bounding box is defined by four values in pixels <code>[x_min, y_min, width, height]</code>. They are coordinates of the top-left corner along with the width and height of the bounding box.</p>
 <p>Coordinates of the example bounding box in this format are <code>[98, 345, 322, 117]</code>.</p>
 <h3 id="yolo">yolo</h3>
 <p>In <code>yolo</code>, a bounding box is represented by four values <code>[x_center, y_center, width, height]</code>. <code>x_center</code> and <code>y_center</code> are the normalized coordinates of the center of the bounding box. To make coordinates normalized, we take pixel values of x and y, which marks the center of the bounding box on the x- and y-axis. Then we divide the value of x by the width of the image and value of y by the height of the image. <code>width</code> and <code>height</code> represent the width and the height of the bounding box. They are normalized as well.</p>
-<p>Coordinates of the example bounding box in this format are <code>[((420 + 98) / 2) / 640, ((462 + 365) / 2) / 640, 322 / 640, 117 / 480]</code> which are <code>[0.4046875, 0.64609375, 0.503125, 0.24375]</code>.</p>
+<p>Coordinates of the example bounding box in this format are <code>[((420 + 98) / 2) / 640, ((462 + 365) / 2) / 480, 322 / 640, 117 / 480]</code> which are <code>[0.4046875, 0.8614583, 0.503125, 0.24375]</code>.</p>
 <p class="image-with-caption"><img alt="How different formats represent coordinates of a bounding box" src="../../images/getting_started/augmenting_bboxes/bbox_formats.jpg" title="How different formats represent coordinates of a bounding box">
 How different formats represent coordinates of a bounding box</img></p>
 <h2 id="bounding-boxes-augmentation">Bounding boxes augmentation</h2>
