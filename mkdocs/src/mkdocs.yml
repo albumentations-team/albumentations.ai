@@ -19,9 +19,6 @@ plugins:
       watch:
         - /albumentations
 
-features:
-- tabs
-
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
   - auto

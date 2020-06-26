@@ -1,0 +1,38 @@
+<header class="md-header" data-md-component="header">
+    <nav class="md-header-nav md-grid" aria-label="{{ lang.t('header.title') }}">
+      <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo" aria-label="{{ config.site_name }}">
+        {% include "partials/logo.html" %}
+      </a>
+      <label class="md-header-nav__button md-icon" for="__drawer">
+        {% include ".icons/material/menu" ~ ".svg" %}
+      </label>
+      <div class="md-header-nav__title">
+          <div class="header-menu-item">
+            <a href="https://albumentations.ai">Home</a>
+          </div>
+          <div class="header-menu-item header-large-menu-item">
+            <a href="https://albumentations.ai/whos_using">Who's using Albumentations</a>
+          </div>
+          <div class="header-menu-item header-large-menu-item">
+            <a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+          </div>
+          <div class="header-menu-item header-menu-item-selected">
+            <a href="https://albumentations.ai/docs/">Docs</a>
+          </div>
+          <div class="header-menu-item header-large-menu-item">
+            <a href="https://albumentations.ai/team">Team</a>
+          </div>
+      </div>
+      {% if "search" in config["plugins"] %}
+        <label class="md-header-nav__button md-icon" for="__search">
+          {% include ".icons/material/magnify.svg" %}
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+      {% if config.repo_url %}
+        <div class="md-header-nav__source">
+          {% include "partials/source.html" %}
+        </div>
+      {% endif %}
+    </nav>
+  </header>
