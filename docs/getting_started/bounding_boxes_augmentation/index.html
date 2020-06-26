@@ -552,7 +552,7 @@ Coordinates of a bounding box are encoded with four values in pixels: <code>[x_m
 <p>Coordinates of the example bounding box in this format are <code>[98, 345, 322, 117]</code>.</p>
 <h3 id="yolo">yolo</h3>
 <p>In <code>yolo</code>, a bounding box is represented by four values <code>[x_center, y_center, width, height]</code>. <code>x_center</code> and <code>y_center</code> are the normalized coordinates of the center of the bounding box. To make coordinates normalized, we take pixel values of x and y, which marks the center of the bounding box on the x- and y-axis. Then we divide the value of x by the width of the image and value of y by the height of the image. <code>width</code> and <code>height</code> represent the width and the height of the bounding box. They are normalized as well.</p>
-<p>Coordinates of the example bounding box in this format are <code>[(420 - 98) / 640, (462 - 365) / 640, 322 / 640, 117 / 480]</code> which are <code>[0.503125, 0.1515625, 0.503125, 0.24375]</code>.</p>
+<p>Coordinates of the example bounding box in this format are <code>[((420 + 98) / 2) / 640, ((462 + 365) / 2) / 640, 322 / 640, 117 / 480]</code> which are <code>[0.4046875, 0.64609375, 0.503125, 0.24375]</code>.</p>
 <p class="image-with-caption"><img alt="How different formats represent coordinates of a bounding box" src="../../images/getting_started/augmenting_bboxes/bbox_formats.jpg" title="How different formats represent coordinates of a bounding box">
 How different formats represent coordinates of a bounding box</img></p>
 <h2 id="bounding-boxes-augmentation">Bounding boxes augmentation</h2>
