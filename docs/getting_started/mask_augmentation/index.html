@@ -501,7 +501,7 @@
 </code></pre></div>
 <p><img alt="An image and a mask before and after augmentation.
 " src="../../images/getting_started/augmenting_masks/inria_image_and_mask.jpg" title="An image and a mask before and after augmentation."/></p>
-<p class="image-with-caption">An image and a mask before and after augmentation. Inria Aerial Image Labeling dataset contains aerial photos as well as their segmentation masks. Each pixel of the mask is marked as 1 if the pixel belongs to the class <code>building</code> and 0 otherwise.</p>
+<p><strong>An image and a mask before and after augmentation. Inria Aerial Image Labeling dataset contains aerial photos as well as their segmentation masks. Each pixel of the mask is marked as 1 if the pixel belongs to the class <code>building</code> and 0 otherwise.</strong></p>
 <p>If the image has multiple associated masks, you should use the <code>masks</code> argument instead of <code>mask</code>. In <code>masks</code> you should pass a list of masks.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">masks</span><span class="o">=</span><span class="n">masks</span><span class="p">)</span>
 <span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
