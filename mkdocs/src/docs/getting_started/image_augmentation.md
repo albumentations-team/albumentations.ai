@@ -15,7 +15,7 @@ We can divide the process of image augmentation into four steps:
 import albumentations as A
 ```
 
-- Import a library to read images from the disk. In this example, we will use [OpenCV](https://opencv.org/){target=_blank}. It is an open-source computer vision library that supports many image formats. Albumentations has OpenCV as a dependency, so you already have OpenCV installed.
+- Import a library to read images from the disk. In this example, we will use [OpenCV](https://opencv.org/). It is an open-source computer vision library that supports many image formats. Albumentations has OpenCV as a dependency, so you already have OpenCV installed.
 
 ``` python
 import cv2
@@ -36,7 +36,7 @@ transform = A.Compose([
 
 ```
 
-In the example, `Compose` receives a list with three augmentations: `A.RandomCrop`, `A.HorizontalFlip`, and `A.RandomBrighntessContrast`. You can find the full list of all available augmentations [in the GitHub repository](https://github.com/albumentations-team/albumentations#pixel-level-transforms){target=_blank} and [in the API Docs](https://albumentations.readthedocs.io/en/latest/api/augmentations.html){target=_blank}. A demo playground that demonstrates how augmentations will transform the input image is available at [https://albumentations-demo.herokuapp.com](https://albumentations-demo.herokuapp.com){target=_blank}.
+In the example, `Compose` receives a list with three augmentations: `A.RandomCrop`, `A.HorizontalFlip`, and `A.RandomBrighntessContrast`. You can find the full list of all available augmentations [in the GitHub repository](https://github.com/albumentations-team/albumentations#pixel-level-transforms) and [in the API Docs](https://albumentations.readthedocs.io/en/latest/api/augmentations.html). A demo playground that demonstrates how augmentations will transform the input image is available at [https://albumentations-demo.herokuapp.com](https://albumentations-demo.herokuapp.com).
 
 To create an augmentation, you create an instance of the required augmentation class and pass augmentation parameters to it. `A.RandomCrop` receives two parameters, `height` and `width`. `A.RandomCrop(width=256, height=256)` means that `A.RandomCrop` will take an input image, extract a random patch with size 256 by 256 pixels from it and then pass the result to the next augmentation in the pipeline (in this case to `A.HorizontalFlip`).
 
@@ -45,15 +45,14 @@ To create an augmentation, you create an instance of the required augmentation c
 `A.RandomBrighntessContrast` in the example also has one parameter, `p`. With a probability of 20%, this augmentation will change the brightness and contrast of the image received from `A.HorizontalFlip`. And with a probability of 80%, it will keep the received image unchanged.
 
 ![A visualized version of the augmentation pipeline](../images/getting_started/augmenting_images/augmentation_pipeline_visualized.jpg "A visualized version of the augmentation pipeline")
-A visualized version of the augmentation pipeline. You pass an image to it, the image goes through all transformations, and then you receive an augmented image from the pipeline.
-{: .image-with-caption }
+**A visualized version of the augmentation pipeline. You pass an image to it, the image goes through all transformations, and then you receive an augmented image from the pipeline.**
 
 
 ## Step 3. Read images from the disk.
 
 To pass an image to the augmentation pipeline, you need to read it from the disk. The pipeline expects to receive an image in the form of a NumPy array. If it is a color image, it should have three channels in the following order: Red, Green, Blue (so a regular RGB image).
 
-To read images from the disk, you can use [OpenCV](https://opencv.org/){target=_blank} - a popular library for image processing. It supports a lot of input formats and is installed along with Albumentations since Albumentations utilizes that library under the hood for a lot of augmentations.
+To read images from the disk, you can use [OpenCV](https://opencv.org/) - a popular library for image processing. It supports a lot of input formats and is installed along with Albumentations since Albumentations utilizes that library under the hood for a lot of augmentations.
 
 To import OpenCV
 
@@ -68,13 +67,13 @@ To read an image with OpenCV
 image = cv2.imread("/path/to/image.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ```
-Note the usage of `cv2.cvtColor`. [For historical reasons](https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/){target=_blank}, OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.
+Note the usage of `cv2.cvtColor`. [For historical reasons](https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/), OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.
 
 !!! note ""
     Besides OpenCV, you can use other image processing libraries.
 
     #### Pillow
-    [Pillow](https://pillow.readthedocs.io/){target=_blank} is a popular Python image processing library.
+    [Pillow](https://pillow.readthedocs.io/) is a popular Python image processing library.
 
     - Install Pillow
 

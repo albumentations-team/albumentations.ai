@@ -2,7 +2,7 @@
 
 At first glance, image augmentations look very simple; you apply basic transformations to an image: mirroring, cropping, changing brightness and contrast, etc.
 
-There are a lot of libraries that could do such image transformations. Here is an example of how you could use [Pillow](https://pillow.readthedocs.io/){target=_blank}, a popular image processing library for Python, to make simple augmentations.
+There are a lot of libraries that could do such image transformations. Here is an example of how you could use [Pillow](https://pillow.readthedocs.io/), a popular image processing library for Python, to make simple augmentations.
 
 ``` python
 from PIL import Image, ImageEnhance
@@ -45,21 +45,17 @@ There are two types of image augmentations: pixel-level augmentations and spatia
 Pixel-level augmentations change the values of pixels of the original image, but they don't change the output mask. Image transformations such as changing brightness or contrast of adjusting values of the RGB-palette of the image are pixel-level augmentations.
 
 ![Example of a pixel-level augmentation](../images/introduction/dedicated_library/pixel_level_augmentation_for_inria_dataset.jpg)
-We modify the input image by adjusting its brightness, but we keep the output mask intact.
-{: .image-with-caption }
+**We modify the input image by adjusting its brightness, but we keep the output mask intact.**
 
 On the contrary, spatial-level augmentations change both the image and the mask. When you apply image transformations such as mirroring or rotation or cropping a part of the input image, you also need to apply the same transformation to the output label to preserve its correctness.
 
 ![Example of a spatial-level augmentation](../images/introduction/dedicated_library/spatial_level_augmentation_for_inria_dataset.jpg)
-We rotate both the input image and the output mask. We use the same set of transformations with the same parameters, both for the image and the mask.
-{: .image-with-caption }
+**We rotate both the input image and the output mask. We use the same set of transformations with the same parameters, both for the image and the mask.**
 
 The same is true for object detection tasks. For pixel-level augmentations, you only need to change the input image. With spatial-level augmentations, you need to apply the same transformation not only to the image but for bounding boxes coordinates as well. After applying spatial-level augmentations, you need to update coordinates of bounding boxes to represent the correct locations of objects on the augmented image.
 
 ![Example of pixel- and spatial-level augmentations for object detection](../images/introduction/dedicated_library/pixel_and_spatial_level_augmentations_for_object_detection.jpg)
-Pixel-level augmentations such as brightness adjustment change only the input image but not the coordinates of bounding boxes. Spatial-level augmentations such as mirroring and cropping a part of the image change both the input image and the bounding boxes' coordinates.
-{: .image-with-caption }
-
+**Pixel-level augmentations such as brightness adjustment change only the input image but not the coordinates of bounding boxes. Spatial-level augmentations such as mirroring and cropping a part of the image change both the input image and the bounding boxes' coordinates.**
 
 
 Albumentations knows how to correctly apply transformation both to the input data as well as the output labels.

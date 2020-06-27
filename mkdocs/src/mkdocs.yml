@@ -18,6 +18,9 @@ plugins:
               replace_admonitions: yes
       watch:
         - /albumentations
+  - mkdocs-simple-hooks:
+      hooks:
+        on_page_content: "hooks:external_links_target_blank"
 
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]

@@ -69,11 +69,7 @@ transformed_mask = transformed['mask']
 ![An image and a mask before and after augmentation.
 ](../images/getting_started/augmenting_masks/inria_image_and_mask.jpg "An image and a mask before and after augmentation.")
 
-An image and a mask before and after augmentation. Inria Aerial Image Labeling dataset contains aerial photos as well as their segmentation masks. Each pixel of the mask is marked as 1 if the pixel belongs to the class `building` and 0 otherwise.
-{: .image-with-caption }
-
-
-
+**An image and a mask before and after augmentation. Inria Aerial Image Labeling dataset contains aerial photos as well as their segmentation masks. Each pixel of the mask is marked as 1 if the pixel belongs to the class `building` and 0 otherwise.**
 
 
 If the image has multiple associated masks, you should use the `masks` argument instead of `mask`. In `masks` you should pass a list of masks.

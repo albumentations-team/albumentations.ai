@@ -4,5 +4,7 @@ mknotebooks
 Pygments
 mkdocs-awesome-pages-plugin
 mkdocstrings
+mkdocs-simple-hooks
+beautifulsoup4
 torch
 torchvision

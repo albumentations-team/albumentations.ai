@@ -5,7 +5,7 @@
 #    pip-compile
 #
 attrs==19.3.0             # via jsonschema
-beautifulsoup4==4.9.1     # via mkdocstrings
+beautifulsoup4==4.9.1     # via -r requirements.in, mkdocstrings
 bleach==3.1.5             # via nbconvert
 click==7.1.2              # via mkdocs, nltk
 decorator==4.4.2          # via traitlets
@@ -27,7 +27,8 @@ mistune==0.8.4            # via nbconvert
 mkdocs-awesome-pages-plugin==2.2.1  # via -r requirements.in
 mkdocs-material-extensions==1.0  # via mkdocs-material
 mkdocs-material==5.2.2    # via -r requirements.in, mkdocs-material-extensions
-mkdocs==1.1.2             # via -r requirements.in, mkdocs-awesome-pages-plugin, mkdocs-material, mkdocstrings, mknotebooks
+mkdocs-simple-hooks==0.1.1  # via -r requirements.in
+mkdocs==1.1.2             # via -r requirements.in, mkdocs-awesome-pages-plugin, mkdocs-material, mkdocs-simple-hooks, mkdocstrings, mknotebooks
 mkdocstrings==0.12.0      # via -r requirements.in
 mknotebooks==0.3.6        # via -r requirements.in
 nbconvert==5.6.1          # via mknotebooks

@@ -48,7 +48,7 @@ services:
     volumes:
       - ./mkdocs/src:/mkdocs/src
     command:
-      serve --dev-addr 0.0.0.0:8000
+      serve --dirtyreload --dev-addr 0.0.0.0:8000
 
 volumes:
   _build:
