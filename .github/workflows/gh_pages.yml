@@ -24,9 +24,9 @@ jobs:
           docker pull albumentations/albumentationsai_builder:latest
           docker pull albumentations/albumentationsai_mkdocs:latest
       - name: Tag Docker images
-          run: |
-            docker tag albumentations/albumentationsai_builder:latest albumentationsai_builder
-            docker tag albumentations/albumentationsai_mkdocs:latest albumentationsai_mkdocs
+        run: |
+          docker tag albumentations/albumentationsai_builder:latest albumentationsai_builder
+          docker tag albumentations/albumentationsai_mkdocs:latest albumentationsai_mkdocs
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkout gh-pages
