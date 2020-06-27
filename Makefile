@@ -23,10 +23,10 @@ prod: check-env-github-token build-builder fetch-data
 	docker-compose run -v ${PROD_BUILD_DIR}/docs:/site mkdocs build
 
 build-builder:
-	docker-compose build --build-arg BUILDKIT_INLINE_CACHE=1 builder
+	docker-compose build builder
 
 build-browser-sync:
-	docker-compose build --build-arg BUILDKIT_INLINE_CACHE=1 browser_sync
+	docker-compose build browser_sync
 
 build-mkdocs:
 	docker-compose build mkdocs
