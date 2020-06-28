@@ -1,6 +1,6 @@
 import json
 import os
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 
 import click
 import pypandoc as pypandoc
@@ -14,6 +14,7 @@ from lib.parsers import parse_used_by
 
 TOP_REPOSITORIES_LIMIT = 10
 CACHE_FILES = ("stars_count.json", "contributors.json", "top_repositories.json", "img_industry.json")
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
 
 
 @click.group()
@@ -109,7 +110,9 @@ def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, reposi
         json.dump(used_by, f)
 
     for company in used_by:
-        img = Image.open(urlopen(company["img_url"]))
+        req = Request(company["img_url"])
+        req.add_header("User-Agent", USER_AGENT)
+        img = Image.open(urlopen(req))
         img.save(os.path.join(img_industry_cache_dir, company["img_filename"]))
 
     with open(os.path.join(data_dir, "team.json")) as f:
