@@ -310,8 +310,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2you-can-pass-labels-for-bounding-boxes-as-a-separate-list">
-    2.You can pass labels for bounding boxes as a separate list.
+<a class="md-nav__link" href="#2you-can-pass-labels-for-bounding-boxes-as-a-separate-list-the-preferred-way">
+    2.You can pass labels for bounding boxes as a separate list (the preferred way).
   </a>
 </li>
 </ul>
@@ -337,8 +337,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-pass-class-labels-in-a-separate-argument-to-transform">
-    2. Pass class labels in a separate argument to transform.
+<a class="md-nav__link" href="#2-pass-class-labels-in-a-separate-argument-to-transform-the-preferred-way">
+    2. Pass class labels in a separate argument to transform (the preferred way).
   </a>
 </li>
 </ul>
@@ -346,6 +346,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keypoints_augmentation/" title="Keypoints augmentation">
+      Keypoints augmentation
+    </a>
 </li>
 </ul>
 </nav>
@@ -556,7 +561,7 @@ Coordinates of a bounding box are encoded with four values in pixels: <code>[x_m
 <p><img alt="How different formats represent coordinates of a bounding box" src="../../images/getting_started/augmenting_bboxes/bbox_formats.jpg" title="How different formats represent coordinates of a bounding box">
 <strong>How different formats represent coordinates of a bounding box</strong></img></p>
 <h2 id="bounding-boxes-augmentation">Bounding boxes augmentation</h2>
-<p>Just like with images and masks augmentation, the process of augmenting bounding boxes consists of 4 steps.</p>
+<p>Just like with <a href="../image_augmentation/">images</a> and <a href="../mask_augmentation/">masks</a> augmentation, the process of augmenting bounding boxes consists of 4 steps.</p>
 <ol>
 <li>You import the required libraries.</li>
 <li>You define an augmentation pipeline.</li>
@@ -612,7 +617,7 @@ Note that unlike image and masks augmentation, <code>Compose</code> now has an a
 <p>Class labels could be of any type: integer, string, or any other Python data type. For example, integer values as class labels will look the following: <code>[23, 74, 295, 388, 18]</code>, <code>[377, 294, 252, 161, 17]</code>, and <code>[333, 421, 49, 49, 37].</code></p>
 </div>
 <p>Also, you can use multiple class values for each bounding box, for example <code>[23, 74, 295, 388, 'dog', 'animal']</code>, <code>[377, 294, 252, 161, 'cat', 'animal']</code>, and <code>[333, 421, 49, 49, 'sports ball', 'item']</code>.</p>
-<h4 id="2you-can-pass-labels-for-bounding-boxes-as-a-separate-list">2.You can pass labels for bounding boxes as a separate list.</h4>
+<h4 id="2you-can-pass-labels-for-bounding-boxes-as-a-separate-list-the-preferred-way">2.You can pass labels for bounding boxes as a separate list (the preferred way).</h4>
 <p>For example, if you have three bounding boxes like <code>[23, 74, 295, 388]</code>, <code>[377, 294, 252, 161]</code>, and <code>[333, 421, 49, 49]</code> you can create a separate list with values like <code>['cat', 'dog', 'sports ball']</code>, or <code>[18, 17, 37]</code> that contains class labels for those bounding boxes. Next, you pass that list with class labels as a separate argument to the <code>transform</code> function. Albumentations needs to know the names of all those lists with class labels to join them with augmented bounding boxes correctly. Then, if a bounding box is dropped after augmentation because it is no longer visible, Albumentations will drop the class label for that box as well. Use <code>label_fields</code> parameter to set names for all arguments in <code>transform</code> that will contain label descriptions for bounding boxes (more on that in Step 4).</p>
 <h2 id="step-3-read-images-and-bounding-boxes-from-the-disk">Step 3. Read images and bounding boxes from the disk.</h2>
 <p>Read an image from the disk.</p>
@@ -656,7 +661,7 @@ you can add a class label for each bounding box as an additional element of the 
 </code></pre></div>
 <p><img alt="Example input and output data for bounding boxes augmentation" src="../../images/getting_started/augmenting_bboxes/bbox_augmentation_example.jpg" title="Example input and output data for bounding boxes augmentation"/>
 <strong>Example input and output data for bounding boxes augmentation</strong></p>
-<h4 id="2-pass-class-labels-in-a-separate-argument-to-transform">2. Pass class labels in a separate argument to <code>transform</code>.</h4>
+<h4 id="2-pass-class-labels-in-a-separate-argument-to-transform-the-preferred-way">2. Pass class labels in a separate argument to <code>transform</code> (the preferred way).</h4>
 <p>Let's say you have coordinates of three bounding boxes
 <div class="highlight"><pre><span></span><code><span class="n">bboxes</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">295</span><span class="p">,</span> <span class="mi">388</span><span class="p">],</span>
@@ -667,7 +672,7 @@ you can add a class label for each bounding box as an additional element of the 
 <p>You can create a separate list that contains class labels for those bounding boxes:</p>
 <div class="highlight"><pre><span></span><code><span class="n">class_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'cat'</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">,</span> <span class="s1">'parrot'</span><span class="p">]</span>
 </code></pre></div>
-<p>Then you pass both bounding boxes and class labels to <code>transform</code>. Note that to pass class labels, you need to use the name of the argument that you declared in <code>label_fields</code> when creating an instance of Compose in step 2. In our cse, we set the name of the argument to <code>class_labels</code>.</p>
+<p>Then you pass both bounding boxes and class labels to <code>transform</code>. Note that to pass class labels, you need to use the name of the argument that you declared in <code>label_fields</code> when creating an instance of Compose in step 2. In our case, we set the name of the argument to <code>class_labels</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bboxes</span><span class="o">=</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">class_labels</span><span class="o">=</span><span class="n">class_labels</span><span class="p">)</span>
 <span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
 <span class="n">transformed_bboxes</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'bboxes'</span><span class="p">]</span>
@@ -680,17 +685,17 @@ you can add a class label for each bounding box as an additional element of the 
     <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">),</span>
     <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
     <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
-<span class="p">],</span> <span class="n">bbox_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">BboxParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'coco'</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">,</span> <span class="s1">'class_category'</span><span class="p">])))</span>
+<span class="p">],</span> <span class="n">bbox_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">BboxParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'coco'</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">,</span> <span class="s1">'class_categories'</span><span class="p">])))</span>
 </code></pre></div>
 <p>you can use those multiple arguments to pass info about class labels, like</p>
 <div class="highlight"><pre><span></span><code><span class="n">class_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'cat'</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">,</span> <span class="s1">'parrot'</span><span class="p">]</span>
-<span class="n">class_category</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'animal'</span><span class="p">,</span> <span class="s1">'animal'</span><span class="p">,</span> <span class="s1">'item'</span><span class="p">]</span>
+<span class="n">class_categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'animal'</span><span class="p">,</span> <span class="s1">'animal'</span><span class="p">,</span> <span class="s1">'item'</span><span class="p">]</span>
 
-<span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bboxes</span><span class="o">=</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">class_labels</span><span class="o">=</span><span class="n">class_labels</span><span class="p">,</span> <span class="n">class_category</span><span class="o">=</span><span class="n">class_category</span><span class="p">)</span>
+<span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bboxes</span><span class="o">=</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">class_labels</span><span class="o">=</span><span class="n">class_labels</span><span class="p">,</span> <span class="n">class_categories</span><span class="o">=</span><span class="n">class_categories</span><span class="p">)</span>
 <span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
 <span class="n">transformed_bboxes</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'bboxes'</span><span class="p">]</span>
 <span class="n">transformed_class_labels</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">]</span>
-<span class="n">transformed_class_category</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'class_category'</span><span class="p">]</span>
+<span class="n">transformed_class_categories</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'class_categories'</span><span class="p">]</span>
 </code></pre></div>
 </article>
 </div>
@@ -737,13 +742,13 @@ you can add a class label for each bounding box as an additional element of the 
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../../api_reference/" rel="next" title="Index">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../keypoints_augmentation/" rel="next" title="Keypoints augmentation">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Index
+                Keypoints augmentation
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

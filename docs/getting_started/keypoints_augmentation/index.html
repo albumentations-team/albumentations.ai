@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://albumentations.ai/docs/getting_started/image_augmentation/" rel="canonical"/>
+<link href="https://albumentations.ai/docs/getting_started/keypoints_augmentation/" rel="canonical"/>
 <link href="../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
-<title>Image augmentation for classification - Albumentations Documentation</title>
+<title>Keypoints augmentation - Albumentations Documentation</title>
 <link href="../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
@@ -26,7 +26,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#image-augmentation-for-classification">
+<a class="md-skip" href="#keypoints-augmentation">
           Skip to content
         </a>
 </div>
@@ -219,56 +219,10 @@
       Installation
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Image augmentation for classification
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Image augmentation for classification">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../image_augmentation/" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-1-import-the-required-libraries">
-    Step 1. Import the required libraries.
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-2-define-an-augmentation-pipeline">
-    Step 2. Define an augmentation pipeline.
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-3-read-images-from-the-disk">
-    Step 3. Read images from the disk.
-  </a>
-<nav aria-label="Step 3. Read images from the disk." class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pillow">
-    Pillow
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images">
-    Step 4. Pass images to the augmentation pipeline and receive augmented images.
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../mask_augmentation/" title="Mask augmentation for segmentation">
@@ -280,10 +234,76 @@
       Bounding boxes augmentation for object detection
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../keypoints_augmentation/" title="Keypoints augmentation">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Keypoints augmentation
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Keypoints augmentation">
       Keypoints augmentation
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-formats-for-keypoints-coordinates">
+    Supported formats for keypoints' coordinates.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#augmenting-keypoints">
+    Augmenting keypoints
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-import-the-required-libraries">
+    Step 1. Import the required libraries.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-define-an-augmentation-pipeline">
+    Step 2. Define an augmentation pipeline.
+  </a>
+<nav aria-label="Step 2. Define an augmentation pipeline." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#label_fields">
+    label_fields
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove_invisible">
+    remove_invisible
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#angle_in_degrees">
+    angle_in_degrees
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-read-images-and-keypoints-from-the-disk">
+    3. Read images and keypoints from the disk.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes">
+    Step 4. Pass an image and keypoints to the augmentation pipeline and receive augmented images and boxes.
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -465,96 +485,159 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/image_augmentation.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/keypoints_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="image-augmentation-for-classification">Image augmentation for classification</h1>
-<p>We can divide the process of image augmentation into four steps:</p>
+<h1 id="keypoints-augmentation">Keypoints augmentation</h1>
+<p>Computer vision tasks such as human pose estimation, face detection, and emotion recognition usually work with keypoints on the image.</p>
+<p>In the case of pose estimation, keypoints mark human joints such as shoulder, elbow, wrist, knee, etc.</p>
+<p><img alt="Keypoints annotations along with visualized edges between keypoints. Images are from the COCO dataset." src="../../images/getting_started/augmenting_keypoints/keypoints_example_coco.jpg" title="Keypoints annotations along with visualized edges between keypoints. Images are from the COCO dataset.">
+<strong>Keypoints annotations along with visualized edges between keypoints. Images are from the <a href="https://cocodataset.org/" target="_blank">COCO dataset</a>.</strong></img></p>
+<p>In the case of face detection, keypoints mark important areas of the face such as eyes, nose, corners of the mouth, etc.</p>
+<p><img alt="Facial keypoints" src="../../images/getting_started/augmenting_keypoints/facial_keypoints.jpg" title="Facial keypoints.">
+<strong>Facial keypoints. Source: the "Facial Keypoints Detection" competition on <a href="https://www.kaggle.com/c/facial-keypoints-detection" target="_blank">Kaggle</a>.</strong></img></p>
+<p>To define a keypoint, you usually need two values, x and y coordinates of the keypoint. Coordinates of the keypoint are calculated with respect to the top-left corner of the image which has <code>(x, y)</code> coordinates <code>(0, 0)</code>. Often keypoints have associated labels such as <code>right_elbow</code>, <code>left_wrist</code>, etc.</p>
+<p><img alt="An example image with five keypoints from the COCO dataset" src="../../images/getting_started/augmenting_keypoints/keypoints_coco_example.jpg" title="An example image with five keypoints from the COCO dataset"/>
+<strong>An example image with five keypoints from the COCO dataset</strong></p>
+<p>Some classical computer vision algorithms, such as SIFT, may use four values to describe a keypoint. In addition to the x and y coordinates, there are keypoint scale and keypoint angle. Albumentations support those values as well.</p>
+<p><img alt="A keypoint may also has associated scale and angle values." src="../../images/getting_started/augmenting_keypoints/keypoint_with_scale_and_angle.jpg" title="A keypoint may also has associated scale and angle values."/>
+<strong>A keypoint may also has associated scale and angle values</strong></p>
+<h2 id="supported-formats-for-keypoints-coordinates">Supported formats for keypoints' coordinates.</h2>
+<ul>
+<li>
+<p><code>xy</code>. A keypoint is defined by x and y coordinates in pixels.</p>
+</li>
+<li>
+<p><code>yx</code>. A keypoint is defined by y and x coordinates in pixels.</p>
+</li>
+<li>
+<p><code>xya</code>. A keypoint is defined by x and y coordinates in pixels and the angle.</p>
+</li>
+<li>
+<p><code>xys</code>. A keypoint is defined by x and y coordinates in pixels, and the scale.</p>
+</li>
+<li>
+<p><code>xyas</code>. A keypoint is defined by x and y coordinates in pixels, the angle, and the scale.</p>
+</li>
+<li>
+<p><code>xysa</code>. A keypoint is defined by x and y coordinates in pixels, the scale, and the angle.</p>
+</li>
+</ul>
+<h2 id="augmenting-keypoints">Augmenting keypoints</h2>
+<p>The process of augmenting keypoints looks very similar to the bounding boxes augmentation. It consists of 4 steps.</p>
 <ol>
-<li>Import albumentations and a library to read images from the disk (e.g., OpenCV).</li>
-<li>Define an augmentation pipeline.</li>
-<li>Read images from the disk.</li>
-<li>Pass images to the augmentation pipeline and receive augmented images.</li>
+<li>You import the required libraries.</li>
+<li>You define an augmentation pipeline.</li>
+<li>You read images and keypoints from the disk.</li>
+<li>You pass an image and keypoints to the augmentation pipeline and receive augmented images and keypoints.</li>
 </ol>
 <h2 id="step-1-import-the-required-libraries">Step 1. Import the required libraries.</h2>
-<ul>
-<li>Import Albumentations</li>
-</ul>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
-</code></pre></div>
-<ul>
-<li>Import a library to read images from the disk. In this example, we will use <a href="https://opencv.org/" target="_blank">OpenCV</a>. It is an open-source computer vision library that supports many image formats. Albumentations has OpenCV as a dependency, so you already have OpenCV installed.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
 </code></pre></div>
 <h2 id="step-2-define-an-augmentation-pipeline">Step 2. Define an augmentation pipeline.</h2>
-<p>To define an augmentation pipeline, you need to create an instance of the <code>Compose</code> class. As an argument to the <code>Compose</code> class, you need to pass a list of augmentations you want to apply. A call to <code>Compose</code> will return a transform function that will perform image augmentation.</p>
-<p>Let's look at an example:</p>
+<p>Here an example of a minimal declaration of an augmentation pipeline that works with keypoints.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
-    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span>
-    <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">330</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">330</span><span class="p">),</span>
     <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
-<span class="p">])</span>
+<span class="p">],</span> <span class="n">keypoint_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">KeypointParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">))</span>
 </code></pre></div>
-<p>In the example, <code>Compose</code> receives a list with three augmentations: <code>A.RandomCrop</code>, <code>A.HorizontalFlip</code>, and <code>A.RandomBrighntessContrast</code>. You can find the full list of all available augmentations <a href="https://github.com/albumentations-team/albumentations#pixel-level-transforms" target="_blank">in the GitHub repository</a> and <a href="https://albumentations.readthedocs.io/en/latest/api/augmentations.html" target="_blank">in the API Docs</a>. A demo playground that demonstrates how augmentations will transform the input image is available at <a href="https://albumentations-demo.herokuapp.com" target="_blank">https://albumentations-demo.herokuapp.com</a>.</p>
-<p>To create an augmentation, you create an instance of the required augmentation class and pass augmentation parameters to it. <code>A.RandomCrop</code> receives two parameters, <code>height</code> and <code>width</code>. <code>A.RandomCrop(width=256, height=256)</code> means that <code>A.RandomCrop</code> will take an input image, extract a random patch with size 256 by 256 pixels from it and then pass the result to the next augmentation in the pipeline (in this case to <code>A.HorizontalFlip</code>).</p>
-<p><code>A.HorizontalFlip</code> in this example has one parameter named <code>p</code>. <code>p</code> is a special parameter that is supported by almost all augmentations. It controls the probability of applying the augmentation. <code>p=0.5</code> means that with a probability of 50%, the transform will flip the image horizontally, and with a probability of 50%, the transform won't modify the input image.</p>
-<p><code>A.RandomBrighntessContrast</code> in the example also has one parameter, <code>p</code>. With a probability of 20%, this augmentation will change the brightness and contrast of the image received from <code>A.HorizontalFlip</code>. And with a probability of 80%, it will keep the received image unchanged.</p>
-<p><img alt="A visualized version of the augmentation pipeline" src="../../images/getting_started/augmenting_images/augmentation_pipeline_visualized.jpg" title="A visualized version of the augmentation pipeline">
-<strong>A visualized version of the augmentation pipeline. You pass an image to it, the image goes through all transformations, and then you receive an augmented image from the pipeline.</strong></img></p>
-<h2 id="step-3-read-images-from-the-disk">Step 3. Read images from the disk.</h2>
-<p>To pass an image to the augmentation pipeline, you need to read it from the disk. The pipeline expects to receive an image in the form of a NumPy array. If it is a color image, it should have three channels in the following order: Red, Green, Blue (so a regular RGB image).</p>
-<p>To read images from the disk, you can use <a href="https://opencv.org/" target="_blank">OpenCV</a> - a popular library for image processing. It supports a lot of input formats and is installed along with Albumentations since Albumentations utilizes that library under the hood for a lot of augmentations.</p>
-<p>To import OpenCV</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
+<p>Note that just like with bounding boxes, <code>Compose</code> has an additional parameter that defines the format for keypoints' coordinates. In the case of keypoints, it is called <code>keypoint_params</code>. Here we pass an instance of <code>A.KeypointParams</code> that says that <code>xy</code> coordinates format should be used.</p>
+<p>Besides <code>format</code>, <code>A.KeypointParams</code> supports a few more settings.</p>
+<p>Here is an example of <code>Compose</code> that shows all available settings with <code>A.KeypointParams</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">330</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">330</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="p">],</span> <span class="n">keypoint_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">KeypointParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">],</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </code></pre></div>
-<p>To read an image with OpenCV</p>
+<h3 id="label_fields"><code>label_fields</code></h3>
+<p>In some computer vision tasks, keypoints have not only coordinates but associated labels as well. For example, in pose estimation, each keypoint has a label such as <code>elbow</code>, <code>knee</code> or <code>wrist</code>. You need to pass those labels in a separate argument (or arguments, because you can use multiple fields) to the <code>transform</code> function that will augment keypoints. <code>label_fields</code> defines names of those fields. Step 4 describes how you need to use the <code>transform</code> function.</p>
+<h3 id="remove_invisible"><code>remove_invisible</code></h3>
+<p>After the augmentation, some keypoints may become invisible because they will be located outside of the augmented image's visible area. For example, if you crop a part of the image, all the keypoints outside of the cropped area will become invisible.
+If <code>remove_invisible</code> is set to <code>True</code>, Albumentations won't return invisible keypoints. <code>remove_invisible</code> is set to <code>True</code> by default, so if you don't pass that argument, Albumentations won't return invisible keypoints.</p>
+<h3 id="angle_in_degrees"><code>angle_in_degrees</code></h3>
+<p>If <code>angle_in_degrees</code> is set to <code>True</code> (this is the default value), then Albumentations expects that the angle value in formats <code>xya</code>, <code>xyas</code>, and <code>xysa</code> is defined in angles. If <code>angle_in_degrees</code> is set to <code>False</code>, Albumentations expects that the angle value is specified in radians.</p>
+<p>This setting doesn't affect <code>xy</code> and <code>yx</code> formats, because those formats don't use angles.</p>
+<h2 id="3-read-images-and-keypoints-from-the-disk">3. Read images and keypoints from the disk.</h2>
+<p>Read an image from the disk.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/image.jpg"</span><span class="p">)</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
 </code></pre></div>
-Note the usage of <code>cv2.cvtColor</code>. <a href="https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/" target="_blank">For historical reasons</a>, OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.</p>
-<div class="admonition note">
-<p>Besides OpenCV, you can use other image processing libraries.</p>
-<h4 id="pillow">Pillow</h4>
-<p><a href="https://pillow.readthedocs.io/" target="_blank">Pillow</a> is a popular Python image processing library.</p>
-<ul>
-<li>Install Pillow</li>
-</ul>
-<div class="highlight"><pre><span></span><code>    pip install pillow
+Keypoints can be stored on the disk in different serialization formats: JSON, XML, YAML, CSV, etc. So the code to read keypoints depends on the actual format of data on the disk.</p>
+<p>After you read the data from the disk, you need to prepare keypoints for Albumentations.</p>
+<p>Albumentations expects that keypoint will be represented as a list of lists. Each list contains information about a single keypoint. A definition of keypoint should have two to four elements depending on the selected format of keypoints. The first two elements are x and y coordinates of a keypoint in pixels (or y and x coordinates in the <code>yx</code> format). The third and fourth elements may be the angle and the scale of keypoint if you select a format that uses those values.</p>
+<h2 id="step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes">Step 4. Pass an image and keypoints to the augmentation pipeline and receive augmented images and boxes.</h2>
+<p>Let's say you have an example image with five keypoints.</p>
+<p>A list with those five keypoints' coordinates in the <code>xy</code> format will look the following:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">keypoints</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">264</span><span class="p">,</span> <span class="mi">203</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">86</span><span class="p">,</span> <span class="mi">88</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">254</span><span class="p">,</span> <span class="mi">160</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">193</span><span class="p">,</span> <span class="mi">103</span><span class="p">),</span>
+<span class="p">]</span>
 </code></pre></div>
-<ul>
-<li>Import Pillow and NumPy (we need NumPy to convert a Pillow image to a NumPy array. NumPy is already installed along with Albumentations).</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+Then you pass those keypoints to the <code>transform</code> function along with the image and receive the augmented versions of image and keypoints.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">keypoints</span><span class="o">=</span><span class="n">keypoints</span><span class="p">)</span>
+<span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
+<span class="n">transformed_keypoints</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'keypoints'</span><span class="p">]</span>
 </code></pre></div>
-<ul>
-<li>Read an image with Pillow and convert it to a NumPy array.
-<div class="highlight"><pre><span></span><code><span class="n">pillow_image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"image.jpg"</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">pillow_image</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
-</div>
-<h2 id="step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images">Step 4. Pass images to the augmentation pipeline and receive augmented images.</h2>
-<p>To pass an image to the augmentation pipeline you need to call the <code>transform</code> function created by a call to <code>A.Compose</code> at Step 2. In the <code>image</code> argument to that function, you need to pass an image that you want to augment.</p>
-<div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
+<p><img alt="The augmented image with augmented keypoints" src="../../images/getting_started/augmenting_keypoints/augmented_image_with_keypoints.jpg" title="The augmented image with augmented keypoints"/>
+<strong>The augmented image with augmented keypoints</strong></p>
+<p>If you set <code>remove_invisible</code> to <code>False</code> in <code>keypoint_params</code>, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right elbow is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.</p>
+<p><img alt="When remove_invisible is set to False Albumentations will return all keypoints, even those located outside the image" src="../../images/getting_started/augmenting_keypoints/invisible_keypoints.jpg" title="When remove_invisible is set to False Albumentations will return all keypoints, even those located outside the image"/>
+<strong>When <code>remove_invisible</code> is set to <code>False</code> Albumentations will return all keypoints, even those located outside the image</strong></p>
+<p>If keypoints have associated class labels, you need to create a list that contains those labels:</p>
+<div class="highlight"><pre><span></span><code><span class="n">class_labels</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'left_elbow'</span><span class="p">,</span>
+    <span class="s1">'right_elbow'</span><span class="p">,</span>
+    <span class="s1">'left_wrist'</span><span class="p">,</span>
+    <span class="s1">'right_wrist'</span><span class="p">,</span>
+    <span class="s1">'right_hip'</span><span class="p">,</span>
+<span class="p">]</span>
 </code></pre></div>
-<p><code>transform</code> will return a dictionary with a single key <code>image</code>. Value at that key will contain an augmented image.</p>
-<div class="highlight"><pre><span></span><code><span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s2">"image"</span><span class="p">]</span>
-</code></pre></div>
-<p>To augment the next image, you need to call <code>transform</code> again and pass a new image as the <code>image</code> argument:</p>
-<div class="highlight"><pre><span></span><code><span class="n">another_transformed_image</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">another_image</span><span class="p">)[</span><span class="s2">"image"</span><span class="p">]</span>
-</code></pre></div>
-<div class="admonition note">
-<p>Each augmentation will change the input image with the probability set by the parameter <code>p</code>. Also, many augmentations have parameters that control the magnitude of changes that will be applied to an image. For example, <code>A.RandomBrightnessContrast</code> has two parameters: <code>brightness_limit</code> that controls the magnitude of adjusting brightness and <code>contrast_limit</code> that controls the magnitude of adjusting contrast. The bigger the value, the more the augmentation will change an image. During augmentation, a magnitude of the transformation is sampled from a uniform distribution limited by <code>brightness_limit</code> and <code>contrast_limit</code>. That means that if you make multiple calls to <code>transform</code> with the same input image, you will get a different output image each time.</p>
+<p>Also, you need to declare the name of the argument to <code>transform</code> that will contain those labels. For declaration, you need to use the <code>label_fields</code> parameters of <code>A.KeypointParams</code>.</p>
+<p>For example, we could use the <code>class_labels</code> name for the argument with labels.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
-    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">brightness_limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">contrast_limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
-<span class="p">])</span>
-<span class="n">transformed_image_1</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)[</span><span class="s1">'image'</span><span class="p">]</span>
-<span class="n">transformed_image_2</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)[</span><span class="s1">'image'</span><span class="p">]</span>
-<span class="n">transformed_image_3</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)[</span><span class="s1">'image'</span><span class="p">]</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">330</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">330</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="p">],</span> <span class="n">keypoint_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">KeypointParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">]))</span>
 </code></pre></div>
-<p><img alt="Passing the same image multiple times to transform will produce different output images" src="../../images/getting_started/augmenting_images/transform_multiple_times.jpg" title="Passing the same image multiple times to transform will produce different output images"/></p>
+<p>Next, you pass both keypoints' coordinates and class labels to <code>transform</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">keypoints</span><span class="o">=</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">class_labels</span><span class="o">=</span><span class="n">class_labels</span><span class="p">)</span>
+<span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
+<span class="n">transformed_keypoints</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'keypoints'</span><span class="p">]</span>
+<span class="n">transformed_class_labels</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">]</span>
+</code></pre></div>
+<p>Note that <code>label_fields</code> expects a list, so you can set multiple fields that contain labels for your keypoints. So if you declare Compose like</p>
+<div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">330</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">330</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="p">],</span> <span class="n">keypoint_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">KeypointParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">,</span> <span class="s1">'class_sides'</span><span class="p">]))</span>
+</code></pre></div>
+<p>you can use those multiple arguments to pass info about class labels, like</p>
+<div class="highlight"><pre><span></span><code><span class="n">class_labels</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'left_elbow'</span><span class="p">,</span>
+    <span class="s1">'right_elbow'</span><span class="p">,</span>
+    <span class="s1">'left_wrist'</span><span class="p">,</span>
+    <span class="s1">'right_wrist'</span><span class="p">,</span>
+    <span class="s1">'right_hip'</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">class_sides</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'left'</span><span class="p">,</span> <span class="s1">'right'</span><span class="p">,</span> <span class="s1">'left'</span><span class="p">,</span> <span class="s1">'right'</span><span class="p">,</span> <span class="s1">'right'</span><span class="p">]</span>
+
+<span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">keypoints</span><span class="o">=</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">class_labels</span><span class="o">=</span><span class="n">class_labels</span><span class="p">,</span> <span class="n">class_sides</span><span class="o">=</span><span class="n">class_sides</span><span class="p">)</span>
+<span class="n">transformed_class_sides</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'class_sides'</span><span class="p">]</span>
+<span class="n">transformed_class_labels</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">]</span>
+<span class="n">transformed_keypoints</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'keypoints'</span><span class="p">]</span>
+<span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
+</code></pre></div>
+<p><img alt="Example input and output data for keypoints augmentation with two separate arguments for class labels" src="../../images/getting_started/augmenting_keypoints/augmented_image_keypoints_and_class_labels.jpg" title="Example input and output data for keypoints augmentation with two separate arguments for class labels"/>
+<strong>Example input and output data for keypoints augmentation with two separate arguments for class labels</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some augmentations may affect class labels and make them incorrect. For example, the <code>HorizontalFlip</code> augmentation mirrors the input image. When you apply that augmentation to keypoints that mark the side of body parts (left or right), those keypoints will point to the wrong side (since <code>left</code> on the mirrored image becomes <code>right</code>). So when you are creating an augmentation pipeline look carefully which augmentations. could be applied to the input data.</p>
+<p><img alt="HorizontalFlip may make keypoints' labels incorrect" src="../../images/getting_started/augmenting_keypoints/applying_horizontal_flip_to_keypoints.jpg" title="HorizontalFlip may make keypoints' labels incorrect"/>
+<code>HorizontalFlip</code> may make keypoints' labels incorrect</p>
 </div>
 </article>
 </div>
@@ -587,7 +670,7 @@ Note the usage of <code>cv2.cvtColor</code>. <a href="https://www.learnopencv.co
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../installation/" rel="prev" title="Installation">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../bounding_boxes_augmentation/" rel="prev" title="Bounding boxes augmentation for object detection">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -596,18 +679,18 @@ Note the usage of <code>cv2.cvtColor</code>. <a href="https://www.learnopencv.co
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Installation
+                Bounding boxes augmentation for object detection
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../mask_augmentation/" rel="next" title="Mask augmentation for segmentation">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../api_reference/" rel="next" title="Index">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mask augmentation for segmentation
+                Index
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
