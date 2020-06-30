@@ -20,6 +20,7 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 - [Image augmentation for classification](getting_started/image_augmentation.md)
 - [Mask augmentation for segmentation](getting_started/mask_augmentation.md)
 - [Bounding boxes augmentation for object detection](getting_started/bounding_boxes_augmentation.md)
+- [Keypoints augmentation](getting_started/keypoints_augmentation.md)
 
 
 ## Other topics

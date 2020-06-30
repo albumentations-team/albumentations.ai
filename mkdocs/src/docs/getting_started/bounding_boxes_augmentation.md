@@ -47,7 +47,7 @@ Coordinates of the example bounding box in this format are `[((420 + 98) / 2) / 
 
 ## Bounding boxes augmentation
 
-Just like with images and masks augmentation, the process of augmenting bounding boxes consists of 4 steps.
+Just like with [images](image_augmentation.md) and [masks](mask_augmentation.md) augmentation, the process of augmenting bounding boxes consists of 4 steps.
 
 1. You import the required libraries.
 2. You define an augmentation pipeline.
@@ -138,7 +138,7 @@ For the image above, bounding boxes with class labels will become `[23, 74, 295,
 
 Also, you can use multiple class values for each bounding box, for example `[23, 74, 295, 388, 'dog', 'animal']`, `[377, 294, 252, 161, 'cat', 'animal']`, and `[333, 421, 49, 49, 'sports ball', 'item']`.
 
-#### 2.You can pass labels for bounding boxes as a separate list.
+#### 2.You can pass labels for bounding boxes as a separate list (the preferred way).
 
 For example, if you have three bounding boxes like `[23, 74, 295, 388]`, `[377, 294, 252, 161]`, and `[333, 421, 49, 49]` you can create a separate list with values like `['cat', 'dog', 'sports ball']`, or `[18, 17, 37]` that contains class labels for those bounding boxes. Next, you pass that list with class labels as a separate argument to the `transform` function. Albumentations needs to know the names of all those lists with class labels to join them with augmented bounding boxes correctly. Then, if a bounding box is dropped after augmentation because it is no longer visible, Albumentations will drop the class label for that box as well. Use `label_fields` parameter to set names for all arguments in `transform` that will contain label descriptions for bounding boxes (more on that in Step 4).
 
@@ -207,7 +207,7 @@ transformed_bboxes = transformed['bboxes']
 **Example input and output data for bounding boxes augmentation**
 
 
-#### 2. Pass class labels in a separate argument to `transform`.
+#### 2. Pass class labels in a separate argument to `transform` (the preferred way).
 
 Let's say you have coordinates of three bounding boxes
 ``` python
@@ -224,7 +224,7 @@ You can create a separate list that contains class labels for those bounding box
 class_labels = ['cat', 'dog', 'parrot']
 ```
 
-Then you pass both bounding boxes and class labels to `transform`. Note that to pass class labels, you need to use the name of the argument that you declared in `label_fields` when creating an instance of Compose in step 2. In our cse, we set the name of the argument to `class_labels`.
+Then you pass both bounding boxes and class labels to `transform`. Note that to pass class labels, you need to use the name of the argument that you declared in `label_fields` when creating an instance of Compose in step 2. In our case, we set the name of the argument to `class_labels`.
 
 ``` python
 
@@ -245,18 +245,18 @@ transform = A.Compose([
     A.RandomCrop(width=450, height=450),
     A.HorizontalFlip(p=0.5),
     A.RandomBrightnessContrast(p=0.2),
-], bbox_params=A.BboxParams(format='coco', label_fields=['class_labels', 'class_category'])))
+], bbox_params=A.BboxParams(format='coco', label_fields=['class_labels', 'class_categories'])))
 ```
 
 you can use those multiple arguments to pass info about class labels, like
 
 ``` python
 class_labels = ['cat', 'dog', 'parrot']
-class_category = ['animal', 'animal', 'item']
+class_categories = ['animal', 'animal', 'item']
 
-transformed = transform(image=image, bboxes=bboxes, class_labels=class_labels, class_category=class_category)
+transformed = transform(image=image, bboxes=bboxes, class_labels=class_labels, class_categories=class_categories)
 transformed_image = transformed['image']
 transformed_bboxes = transformed['bboxes']
 transformed_class_labels = transformed['class_labels']
-transformed_class_category = transformed['class_category']
+transformed_class_categories = transformed['class_categories']
 ```
