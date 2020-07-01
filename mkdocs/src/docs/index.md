@@ -24,6 +24,7 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 - [Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints](getting_started/simultaneous_augmentation.md)
 
 ## Other topics
+- [Blog posts, podcasts and talks about Albumentations](blog_posts_podcasts_talks.md)
 - [Contributing](contributing.md)
 
 ## API Reference
