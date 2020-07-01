@@ -25,6 +25,7 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 
 ## Other topics
 - [Blog posts, podcasts and talks about Albumentations](blog_posts_podcasts_talks.md)
+- [Books that mention Albumentations](books.md)
 - [Contributing](contributing.md)
 
 ## API Reference
