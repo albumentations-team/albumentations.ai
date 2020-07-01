@@ -8,7 +8,6 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 
 ["API Reference"](#api-reference) contains Albumentations' methods and classes.
 
-
 ## Introduction to image augmentation
 
 - [What is image augmentation and how it can improve the performance of deep neural networks](introduction/image_augmentation.md)
@@ -23,9 +22,11 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 - [Keypoints augmentation](getting_started/keypoints_augmentation.md)
 - [Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints](getting_started/simultaneous_augmentation.md)
 
+## External resources
+- [Blog posts, podcasts and talks about Albumentations](external_resources/blog_posts_podcasts_talks.md)
+- [Books that mention Albumentations](external_resources/books.md)
+
 ## Other topics
-- [Blog posts, podcasts and talks about Albumentations](blog_posts_podcasts_talks.md)
-- [Books that mention Albumentations](books.md)
 - [Contributing](contributing.md)
 
 ## API Reference

@@ -20,13 +20,14 @@ COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r /mkdocs/requirements.txt
 
-# Preprocess the source code of Albumentations to deal with mkdocstrings' quirks.
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations.git /albumentations
 RUN pip install -e /albumentations
 
 COPY ./mkdocs/entrypoint.sh /mkdocs/entrypoint.sh
 COPY ./mkdocs/replacements.txt /mkdocs/replacements.txt
 COPY ./mkdocs/src /mkdocs/src
+
+# Preprocess the source code of Albumentations to deal with mkdocstrings' quirks.
 RUN ~/.cargo/bin/rargs -d ' → ' ~/.cargo/bin/sd '{1}' '{2}' $(~/.cargo/bin/fd --full-path /albumentations -e .py) < /mkdocs/replacements.txt
 
 ENV PYTHONPATH "${PYTHONPATH}:/mkdocs/src:/albumentations"
