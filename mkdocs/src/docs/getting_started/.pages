@@ -5,3 +5,4 @@ arrange:
   - mask_augmentation.md
   - bounding_boxes_augmentation.md
   - keypoints_augmentation.md
+  - simultaneous_augmentation.md
