@@ -96,15 +96,15 @@
      <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://albumentations.ai/docs/blog_posts_podcasts_talks/</loc>
-     <lastmod>2020-07-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/books/</loc>
-     <lastmod>2020-07-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://albumentations.ai/docs/contributing/</loc>
+     <lastmod>2020-07-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/external_resources/blog_posts_podcasts_talks/</loc>
+     <lastmod>2020-07-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/external_resources/books/</loc>
      <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
