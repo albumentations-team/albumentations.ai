@@ -573,12 +573,12 @@
 <h2 id="different-annotations-formats">Different annotations formats</h2>
 <p>Bounding boxes are rectangles that mark objects on an image. There are multiple formats of bounding boxes annotations. Each format uses its specific representation of bouning boxes coordinates. Albumentations supports four formats: <code>pascal_voc</code>, <code>albumentations</code>, <code>coco</code>, and <code>yolo</code> .</p>
 <p>Let's take a look at each of those formats and how they represent coordinates of bounding boxes.</p>
-<p>As an example, we will use an image from the dataset named <a href="http://cocodataset.org/">Common Objects in Context</a>. It contains one bounding box that marks a cat. The image width is 640 pixels, and its height is 480 pixels. The width of the bounding box is 322 pixels, and its height is 117 pixels.</p>
+<p>As an example, we will use an image from the dataset named <a href="http://cocodataset.org/" target="_blank">Common Objects in Context</a>. It contains one bounding box that marks a cat. The image width is 640 pixels, and its height is 480 pixels. The width of the bounding box is 322 pixels, and its height is 117 pixels.</p>
 <p>The bounding box has the following <code>(x, y)</code> coordinates of its corners: top-left is <code>(x_min, y_min)</code> or <code>(98px, 345px)</code>, top-right is <code>(x_max, y_min)</code> or <code>(420px, 345px)</code>, bottom-left is <code>(x_min, y_max)</code> or <code>(98px, 462px)</code>, bottom-right is <code>(x_max, y_max)</code> or <code>(420px, 462px)</code>. As you see, coordinates of the bounding box's corners are calculated with respect to the top-left corner of the image which has <code>(x, y)</code> coordinates <code>(0, 0)</code>.</p>
 <p><img alt="An example image with a bounding box from the COCO dataset" src="../../images/getting_started/augmenting_bboxes/bbox_example.jpg" title="An example image with a bounding box from the COCO dataset">
 <strong>An example image with a bounding box from the COCO dataset</strong></img></p>
 <h3 id="pascal_voc">pascal_voc</h3>
-<p><code>pascal_voc</code> is a format used by the <a href="http://host.robots.ox.ac.uk/pascal/VOC/">Pascal VOC dataset</a>.
+<p><code>pascal_voc</code> is a format used by the <a href="http://host.robots.ox.ac.uk/pascal/VOC/" target="_blank">Pascal VOC dataset</a>.
 Coordinates of a bounding box are encoded with four values in pixels: <code>[x_min, y_min, x_max, y_max]</code>.  <code>x_min</code> and <code>y_min</code> are coordinates of the top-left corner of the bounding box. <code>x_max</code> and <code>y_max</code> are coordinates of bottom-right corner of the bounding box.</p>
 <p>Coordinates of the example bounding box in this format are <code>[98, 345, 420, 462]</code>.</p>
 <h3 id="albumentations">albumentations</h3>
@@ -586,7 +586,7 @@ Coordinates of a bounding box are encoded with four values in pixels: <code>[x_m
 <p>Coordinates of the example bounding box in this format are <code>[98 / 640, 345 / 480, 420 / 640, 462 / 480]</code> which are <code>[0.153125, 0.71875, 0.65625, 0.9625]</code>.</p>
 <p>Albumentations uses this format internally to work with bounding boxes and augment them.</p>
 <h3 id="coco">coco</h3>
-<p><code>coco</code> is a format used by the <a href="http://cocodataset.org/">Common Objects in Context (COCO)</a> dataset.</p>
+<p><code>coco</code> is a format used by the <a href="http://cocodataset.org/" target="_blank">Common Objects in Context (COCO)</a> dataset.</p>
 <p>In <code>coco</code>, a bounding box is defined by four values in pixels <code>[x_min, y_min, width, height]</code>. They are coordinates of the top-left corner along with the width and height of the bounding box.</p>
 <p>Coordinates of the example bounding box in this format are <code>[98, 345, 322, 117]</code>.</p>
 <h3 id="yolo">yolo</h3>
