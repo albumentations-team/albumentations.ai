@@ -1,6 +1,4 @@
-FROM python:3.8.1
-
-RUN mkdir /mkdocs
+FROM python:3.8.3
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -10,10 +8,10 @@ RUN apt-get update \
     pandoc \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -y nodejs
-
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN ~/.cargo/bin/cargo install fd-find sd && ~/.cargo/bin/cargo install --git https://github.com/lotabout/rargs.git
+
+RUN mkdir /mkdocs
 
 COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 
