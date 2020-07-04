@@ -281,6 +281,11 @@
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets.">
+      A list of transforms and their supported targets.
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -493,7 +498,7 @@
 <a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="why-you-need-a-dedicated-library-for-image-augmentation">Why you need a dedicated library for image augmentation</h1>
+<h1 id="why-you-need-a-dedicated-library-for-image-augmentation">Why you need a dedicated library for image augmentation<a class="headerlink" href="#why-you-need-a-dedicated-library-for-image-augmentation" title="Permanent link">¶</a></h1>
 <p>At first glance, image augmentations look very simple; you apply basic transformations to an image: mirroring, cropping, changing brightness and contrast, etc.</p>
 <p>There are a lot of libraries that could do such image transformations. Here is an example of how you could use <a href="https://pillow.readthedocs.io/" target="_blank">Pillow</a>, a popular image processing library for Python, to make simple augmentations.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageEnhance</span>
@@ -510,7 +515,7 @@
 <p><img alt="Example of image transformations with Pillow" src="../../images/introduction/dedicated_library/pillow_transformations.jpg"/></p>
 <p>However, this approach has many limitations, and it doesn't handle all cases with image augmentation. An image augmentation library such as Albumentations gives you a lot of advantages.</p>
 <p>Here is a list of few pitfalls that augmentation libraries can handle very well.</p>
-<h2 id="the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks">The need to apply the same transform to an image and for labels for segmentation, object detection, and keypoint detection tasks.</h2>
+<h2 id="the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks">The need to apply the same transform to an image and for labels for segmentation, object detection, and keypoint detection tasks.<a class="headerlink" href="#the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks" title="Permanent link">¶</a></h2>
 <p>For image classification, you need to modify only an input image and keep output labels intact because output labels are invariant to image modifications.</p>
 <p><img alt="Examples of augmented images and their respective labels for the image classification task" src="../../images/introduction/dedicated_library/augmentation_classification.jpg"/></p>
 <div class="admonition note">
@@ -531,10 +536,10 @@
 <p><img alt="Example of pixel- and spatial-level augmentations for object detection" src="../../images/introduction/dedicated_library/pixel_and_spatial_level_augmentations_for_object_detection.jpg"/>
 <strong>Pixel-level augmentations such as brightness adjustment change only the input image but not the coordinates of bounding boxes. Spatial-level augmentations such as mirroring and cropping a part of the image change both the input image and the bounding boxes' coordinates.</strong></p>
 <p>Albumentations knows how to correctly apply transformation both to the input data as well as the output labels.</p>
-<h2 id="working-with-probabilities">Working with probabilities</h2>
+<h2 id="working-with-probabilities">Working with probabilities<a class="headerlink" href="#working-with-probabilities" title="Permanent link">¶</a></h2>
 <p>During training, you usually want to apply augmentations with a probability of less than 100% since you also need to have the original images in your training pipeline. Also, it is beneficial to be able to control the magnitude of image augmentation, how much does the augmentation change the original image. If the original dataset is large, you could apply only the basic augmentations with probability around 10-30% and with a small magnitude of changes. If the dataset is small, you need to act more aggressively with augmentations to prevent overfitting of neural networks, so you usually need to increase the probability of applying each augmentation to 40-50% and increase the magnitude of changes the augmentation makes to the image.</p>
 <p>Image augmentation libraries allow you to set the required probabilities and the magnitude of values for each transformation.</p>
-<h2 id="declarative-definition-of-the-augmentation-pipeline-and-unified-interface">Declarative definition of the augmentation pipeline and unified interface</h2>
+<h2 id="declarative-definition-of-the-augmentation-pipeline-and-unified-interface">Declarative definition of the augmentation pipeline and unified interface<a class="headerlink" href="#declarative-definition-of-the-augmentation-pipeline-and-unified-interface" title="Permanent link">¶</a></h2>
 <p>Usually, you want to apply not a single augmentation, but a set of augmentations with specific parameters such as probability and magnitude of changes. Augmentation libraries allow you to declare such a pipeline in a single place and then use it for image transformation through a unified interface. Some libraries can store and load transformation parameters to formats such as JSON, YAML, etc.</p>
 <p>Here is an example definition of an augmentation pipeline. This pipeline will first crop a random 512px x 512px part of the input image. Then with probability 30%, it will randomly change brightness and contrast of that crop. Finally, with probability 30%, it will horizontally flip the resulting image.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
@@ -545,7 +550,7 @@
     <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
 <span class="p">])</span>
 </code></pre></div>
-<h2 id="rigorous-testing">Rigorous testing</h2>
+<h2 id="rigorous-testing">Rigorous testing<a class="headerlink" href="#rigorous-testing" title="Permanent link">¶</a></h2>
 <p>A bug in the augmentation pipeline could easily go unnoticed. A buggy pipeline could silently corrupt input data. There won't be any exceptions and code failures, but the performance of trained neural networks will degrade because they received a garbage input during training. Augmentation libraries usually have large test suites that capture regressions during development. Also large user base helps to find unnoticed bugs and report them to developers.</p>
 </article>
 </div>

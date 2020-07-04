@@ -244,6 +244,11 @@
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets.">
+      A list of transforms and their supported targets.
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -368,6 +373,65 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.__all__">
+    __all__
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.keypoint_formats">
+    keypoint_formats
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor">
+    KeypointsProcessor
+  </a>
+<nav aria-label="KeypointsProcessor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.default_data_name">
+    default_data_name
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.check">
+    check()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.convert_from_albumentations">
+    convert_from_albumentations()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.convert_to_albumentations">
+    convert_to_albumentations()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.ensure_data_valid">
+    ensure_data_valid()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.ensure_transforms_valid">
+    ensure_transforms_valid()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.filter">
+    filter()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.angle_to_2pi_range">
+    angle_to_2pi_range()
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.check_keypoint">
     check_keypoint()
   </a>
@@ -375,6 +439,36 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.check_keypoints">
     check_keypoints()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.convert_keypoint_from_albumentations">
+    convert_keypoint_from_albumentations()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.convert_keypoint_to_albumentations">
+    convert_keypoint_to_albumentations()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.convert_keypoints_from_albumentations">
+    convert_keypoints_from_albumentations()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.convert_keypoints_to_albumentations">
+    convert_keypoints_to_albumentations()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.filter_keypoints">
+    filter_keypoints()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.keypoints_utils.keypoint_has_extra_data">
+    keypoint_has_extra_data()
   </a>
 </li>
 </ul>
@@ -488,28 +582,722 @@
 <a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/keypoints_utils.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="helper-functions-for-working-with-keypoints-augmentationskeypoints_utils">Helper functions for working with keypoints (augmentations.keypoints_utils)</h1>
+<h1 id="helper-functions-for-working-with-keypoints-augmentationskeypoints_utils">Helper functions for working with keypoints (augmentations.keypoints_utils)<a class="headerlink" href="#helper-functions-for-working-with-keypoints-augmentationskeypoints_utils" title="Permanent link">¶</a></h1>
 <div class="doc doc-object doc-module">
 <h2 class="hidden-toc" href="#albumentations.augmentations.keypoints_utils" id="albumentations.augmentations.keypoints_utils" style="visibility: hidden; width: 0; height: 0;">
-</h2>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents first">
 <div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.__all__">
+<code class="highlight">
+__all__        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.__all__" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.keypoint_formats">
+<code class="highlight">
+keypoint_formats        </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.keypoint_formats" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor">
+<code>KeypointsProcessor</code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.default_data_name">
+<code class="highlight">
+default_data_name        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.default_data_name" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.check">
+<code class="highlight language-python">
+check<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.check" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>57
+58</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">check_keypoints</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.convert_from_albumentations">
+<code class="highlight language-python">
+convert_from_albumentations<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.convert_from_albumentations" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">convert_from_albumentations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">convert_keypoints_from_albumentations</span><span class="p">(</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">format</span><span class="p">,</span>
+        <span class="n">rows</span><span class="p">,</span>
+        <span class="n">cols</span><span class="p">,</span>
+        <span class="n">check_validity</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">remove_invisible</span><span class="p">,</span>
+        <span class="n">angle_in_degrees</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">angle_in_degrees</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.convert_to_albumentations">
+<code class="highlight language-python">
+convert_to_albumentations<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.convert_to_albumentations" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">convert_to_albumentations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">convert_keypoints_to_albumentations</span><span class="p">(</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">format</span><span class="p">,</span>
+        <span class="n">rows</span><span class="p">,</span>
+        <span class="n">cols</span><span class="p">,</span>
+        <span class="n">check_validity</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">remove_invisible</span><span class="p">,</span>
+        <span class="n">angle_in_degrees</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">angle_in_degrees</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.ensure_data_valid">
+<code class="highlight language-python">
+ensure_data_valid<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.ensure_data_valid" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>29
+30
+31
+32
+33
+34
+35</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">ensure_data_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">label_fields</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">label_fields</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">"Your 'label_fields' are not valid - them must have same names as params in "</span>
+                <span class="s2">"'keypoint_params' dict"</span>
+            <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.ensure_transforms_valid">
+<code class="highlight language-python">
+ensure_transforms_valid<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transforms</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.ensure_transforms_valid" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">ensure_transforms_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transforms</span><span class="p">):</span>
+    <span class="c1"># IAA-based augmentations supports only transformation of xy keypoints.</span>
+    <span class="c1"># If your keypoints formats is other than 'xy' we emit warning to let user</span>
+    <span class="c1"># be aware that angle and size will not be modified.</span>
+
+    <span class="kn">from</span> <span class="nn">albumentations.imgaug.transforms</span> <span class="kn">import</span> <span class="n">DualIAATransform</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">format</span> <span class="o">!=</span> <span class="s2">"xy"</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">DualIAATransform</span><span class="p">):</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">"</span><span class="si">{}</span><span class="s2"> transformation supports only 'xy' keypoints "</span>
+                    <span class="s2">"augmentation. You have '</span><span class="si">{}</span><span class="s2">' keypoints format. Scale "</span>
+                    <span class="s2">"and angle WILL NOT BE transformed."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">transform</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="k">break</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.KeypointsProcessor.filter">
+<code class="highlight language-python">
+filter<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.KeypointsProcessor.filter" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>54
+55</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">filter_keypoints</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">remove_invisible</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.angle_to_2pi_range">
+<code class="highlight language-python">
+angle_to_2pi_range<span class="p">(</span><span class="n">angle</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.angle_to_2pi_range" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>19
+20
+21</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">angle_to_2pi_range</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
+    <span class="n">two_pi</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">return</span> <span class="n">angle</span> <span class="o">%</span> <span class="n">two_pi</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.check_keypoint">
 <code class="highlight language-python">
 check_keypoint<span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
-</h2>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.check_keypoint" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Check if keypoint coordinates are less than image shapes</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">check_keypoint</span><span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Check if keypoint coordinates are less than image shapes"""</span>
+
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="s2">"x"</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">],</span> <span class="n">kp</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="n">cols</span><span class="p">,</span> <span class="n">rows</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">"Expected </span><span class="si">{name}</span><span class="s2"> for keypoint </span><span class="si">{kp}</span><span class="s2"> "</span>
+                <span class="s2">"to be in the range [0.0, </span><span class="si">{size}</span><span class="s2">], got </span><span class="si">{value}</span><span class="s2">."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kp</span><span class="o">=</span><span class="n">kp</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+            <span class="p">)</span>
+
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">kp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Keypoint angle must be in range [0, 2 * PI). Got: </span><span class="si">{angle}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="n">angle</span><span class="p">))</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.check_keypoints">
 <code class="highlight language-python">
 check_keypoints<span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
-</h2>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.check_keypoints" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Check if keypoints boundaries are less than image shapes</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 97
+ 98
+ 99
+100
+101
+102</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">check_keypoints</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Check if keypoints boundaries are less than image shapes"""</span>
+
+    <span class="k">for</span> <span class="n">kp</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="p">:</span>
+        <span class="n">check_keypoint</span><span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.convert_keypoint_from_albumentations">
+<code class="highlight language-python">
+convert_keypoint_from_albumentations<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">target_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.convert_keypoint_from_albumentations" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">convert_keypoint_from_albumentations</span><span class="p">(</span>
+    <span class="n">keypoint</span><span class="p">,</span> <span class="n">target_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">):</span>
+    <span class="c1"># type (tuple, str, int, int, bool, bool) -&gt; tuple</span>
+    <span class="k">if</span> <span class="n">target_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">keypoint_formats</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Unknown target_format </span><span class="si">{}</span><span class="s2">. Supported formats are: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">target_format</span><span class="p">,</span> <span class="n">keypoint_formats</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">check_validity</span><span class="p">:</span>
+        <span class="n">check_keypoint</span><span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+
+    <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">angle_to_2pi_range</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">angle_in_degrees</span><span class="p">:</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"xy"</span><span class="p">:</span>
+        <span class="n">kp</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"yx"</span><span class="p">:</span>
+        <span class="n">kp</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"xya"</span><span class="p">:</span>
+        <span class="n">kp</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"xys"</span><span class="p">:</span>
+        <span class="n">kp</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"xyas"</span><span class="p">:</span>
+        <span class="n">kp</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"xysa"</span><span class="p">:</span>
+        <span class="n">kp</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">kp</span> <span class="o">+</span> <span class="n">tail</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.convert_keypoint_to_albumentations">
+<code class="highlight language-python">
+convert_keypoint_to_albumentations<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">source_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.convert_keypoint_to_albumentations" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">convert_keypoint_to_albumentations</span><span class="p">(</span>
+    <span class="n">keypoint</span><span class="p">,</span> <span class="n">source_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">source_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">keypoint_formats</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Unknown target_format </span><span class="si">{}</span><span class="s2">. Supported formats are: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source_format</span><span class="p">,</span> <span class="n">keypoint_formats</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"xy"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"yx"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"xya"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">a</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"xys"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"xyas"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">s</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+    <span class="k">elif</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"xysa"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+
+    <span class="k">if</span> <span class="n">angle_in_degrees</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+    <span class="n">keypoint</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle_to_2pi_range</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">s</span><span class="p">)</span> <span class="o">+</span> <span class="n">tail</span>
+    <span class="k">if</span> <span class="n">check_validity</span><span class="p">:</span>
+        <span class="n">check_keypoint</span><span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">keypoint</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.convert_keypoints_from_albumentations">
+<code class="highlight language-python">
+convert_keypoints_from_albumentations<span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">target_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.convert_keypoints_from_albumentations" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>195
+196
+197
+198
+199
+200
+201</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">convert_keypoints_from_albumentations</span><span class="p">(</span>
+    <span class="n">keypoints</span><span class="p">,</span> <span class="n">target_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="n">convert_keypoint_from_albumentations</span><span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="n">target_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">kp</span> <span class="ow">in</span> <span class="n">keypoints</span>
+    <span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.convert_keypoints_to_albumentations">
+<code class="highlight language-python">
+convert_keypoints_to_albumentations<span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">source_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.convert_keypoints_to_albumentations" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>186
+187
+188
+189
+190
+191
+192</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">convert_keypoints_to_albumentations</span><span class="p">(</span>
+    <span class="n">keypoints</span><span class="p">,</span> <span class="n">source_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="n">convert_keypoint_to_albumentations</span><span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="n">source_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">kp</span> <span class="ow">in</span> <span class="n">keypoints</span>
+    <span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.filter_keypoints">
+<code class="highlight language-python">
+filter_keypoints<span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.filter_keypoints" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">filter_keypoints</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">remove_invisible</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">keypoints</span>
+
+    <span class="n">resulting_keypoints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">kp</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">kp</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">cols</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">resulting_keypoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resulting_keypoints</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.keypoints_utils.keypoint_has_extra_data">
+<code class="highlight language-python">
+keypoint_has_extra_data<span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.keypoints_utils.keypoint_has_extra_data" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/keypoints_utils.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>120
+121</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">keypoint_has_extra_data</span><span class="p">(</span><span class="n">kp</span><span class="p">,</span> <span class="nb">format</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">kp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
 </div>
 </div>
 </div>

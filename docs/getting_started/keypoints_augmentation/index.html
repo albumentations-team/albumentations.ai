@@ -310,6 +310,11 @@
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transforms_and_targets/" title="A list of transforms and their supported targets.">
+      A list of transforms and their supported targets.
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -522,7 +527,7 @@
 <a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/keypoints_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="keypoints-augmentation">Keypoints augmentation</h1>
+<h1 id="keypoints-augmentation">Keypoints augmentation<a class="headerlink" href="#keypoints-augmentation" title="Permanent link">¶</a></h1>
 <p>Computer vision tasks such as human pose estimation, face detection, and emotion recognition usually work with keypoints on the image.</p>
 <p>In the case of pose estimation, keypoints mark human joints such as shoulder, elbow, wrist, knee, etc.</p>
 <p><img alt="Keypoints annotations along with visualized edges between keypoints. Images are from the COCO dataset." src="../../images/getting_started/augmenting_keypoints/keypoints_example_coco.jpg" title="Keypoints annotations along with visualized edges between keypoints. Images are from the COCO dataset.">
@@ -536,7 +541,7 @@
 <p>Some classical computer vision algorithms, such as SIFT, may use four values to describe a keypoint. In addition to the x and y coordinates, there are keypoint scale and keypoint angle. Albumentations support those values as well.</p>
 <p><img alt="A keypoint may also has associated scale and angle values." src="../../images/getting_started/augmenting_keypoints/keypoint_with_scale_and_angle.jpg" title="A keypoint may also has associated scale and angle values."/>
 <strong>A keypoint may also has associated scale and angle values</strong></p>
-<h2 id="supported-formats-for-keypoints-coordinates">Supported formats for keypoints' coordinates.</h2>
+<h2 id="supported-formats-for-keypoints-coordinates">Supported formats for keypoints' coordinates.<a class="headerlink" href="#supported-formats-for-keypoints-coordinates" title="Permanent link">¶</a></h2>
 <ul>
 <li>
 <p><code>xy</code>. A keypoint is defined by x and y coordinates in pixels.</p>
@@ -557,7 +562,7 @@
 <p><code>xysa</code>. A keypoint is defined by x and y coordinates in pixels, the scale, and the angle.</p>
 </li>
 </ul>
-<h2 id="augmenting-keypoints">Augmenting keypoints</h2>
+<h2 id="augmenting-keypoints">Augmenting keypoints<a class="headerlink" href="#augmenting-keypoints" title="Permanent link">¶</a></h2>
 <p>The process of augmenting keypoints looks very similar to the bounding boxes augmentation. It consists of 4 steps.</p>
 <ol>
 <li>You import the required libraries.</li>
@@ -565,11 +570,11 @@
 <li>You read images and keypoints from the disk.</li>
 <li>You pass an image and keypoints to the augmentation pipeline and receive augmented images and keypoints.</li>
 </ol>
-<h2 id="step-1-import-the-required-libraries">Step 1. Import the required libraries.</h2>
+<h2 id="step-1-import-the-required-libraries">Step 1. Import the required libraries.<a class="headerlink" href="#step-1-import-the-required-libraries" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
 </code></pre></div>
-<h2 id="step-2-define-an-augmentation-pipeline">Step 2. Define an augmentation pipeline.</h2>
+<h2 id="step-2-define-an-augmentation-pipeline">Step 2. Define an augmentation pipeline.<a class="headerlink" href="#step-2-define-an-augmentation-pipeline" title="Permanent link">¶</a></h2>
 <p>Here an example of a minimal declaration of an augmentation pipeline that works with keypoints.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
     <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">330</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">330</span><span class="p">),</span>
@@ -584,15 +589,15 @@
     <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
 <span class="p">],</span> <span class="n">keypoint_params</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">KeypointParams</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'class_labels'</span><span class="p">],</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </code></pre></div>
-<h3 id="label_fields"><code>label_fields</code></h3>
+<h3 id="label_fields"><code>label_fields</code><a class="headerlink" href="#label_fields" title="Permanent link">¶</a></h3>
 <p>In some computer vision tasks, keypoints have not only coordinates but associated labels as well. For example, in pose estimation, each keypoint has a label such as <code>elbow</code>, <code>knee</code> or <code>wrist</code>. You need to pass those labels in a separate argument (or arguments, because you can use multiple fields) to the <code>transform</code> function that will augment keypoints. <code>label_fields</code> defines names of those fields. Step 4 describes how you need to use the <code>transform</code> function.</p>
-<h3 id="remove_invisible"><code>remove_invisible</code></h3>
+<h3 id="remove_invisible"><code>remove_invisible</code><a class="headerlink" href="#remove_invisible" title="Permanent link">¶</a></h3>
 <p>After the augmentation, some keypoints may become invisible because they will be located outside of the augmented image's visible area. For example, if you crop a part of the image, all the keypoints outside of the cropped area will become invisible.
 If <code>remove_invisible</code> is set to <code>True</code>, Albumentations won't return invisible keypoints. <code>remove_invisible</code> is set to <code>True</code> by default, so if you don't pass that argument, Albumentations won't return invisible keypoints.</p>
-<h3 id="angle_in_degrees"><code>angle_in_degrees</code></h3>
+<h3 id="angle_in_degrees"><code>angle_in_degrees</code><a class="headerlink" href="#angle_in_degrees" title="Permanent link">¶</a></h3>
 <p>If <code>angle_in_degrees</code> is set to <code>True</code> (this is the default value), then Albumentations expects that the angle value in formats <code>xya</code>, <code>xyas</code>, and <code>xysa</code> is defined in angles. If <code>angle_in_degrees</code> is set to <code>False</code>, Albumentations expects that the angle value is specified in radians.</p>
 <p>This setting doesn't affect <code>xy</code> and <code>yx</code> formats, because those formats don't use angles.</p>
-<h2 id="3-read-images-and-keypoints-from-the-disk">3. Read images and keypoints from the disk.</h2>
+<h2 id="3-read-images-and-keypoints-from-the-disk">3. Read images and keypoints from the disk.<a class="headerlink" href="#3-read-images-and-keypoints-from-the-disk" title="Permanent link">¶</a></h2>
 <p>Read an image from the disk.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"/path/to/image.jpg"</span><span class="p">)</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
@@ -600,7 +605,7 @@ If <code>remove_invisible</code> is set to <code>True</code>, Albumentations won
 Keypoints can be stored on the disk in different serialization formats: JSON, XML, YAML, CSV, etc. So the code to read keypoints depends on the actual format of data on the disk.</p>
 <p>After you read the data from the disk, you need to prepare keypoints for Albumentations.</p>
 <p>Albumentations expects that keypoint will be represented as a list of lists. Each list contains information about a single keypoint. A definition of keypoint should have two to four elements depending on the selected format of keypoints. The first two elements are x and y coordinates of a keypoint in pixels (or y and x coordinates in the <code>yx</code> format). The third and fourth elements may be the angle and the scale of keypoint if you select a format that uses those values.</p>
-<h2 id="step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes">Step 4. Pass an image and keypoints to the augmentation pipeline and receive augmented images and boxes.</h2>
+<h2 id="step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes">Step 4. Pass an image and keypoints to the augmentation pipeline and receive augmented images and boxes.<a class="headerlink" href="#step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes" title="Permanent link">¶</a></h2>
 <p>Let's say you have an example image with five keypoints.</p>
 <p>A list with those five keypoints' coordinates in the <code>xy</code> format will look the following:</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">keypoints</span> <span class="o">=</span> <span class="p">[</span>

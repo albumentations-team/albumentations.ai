@@ -290,6 +290,11 @@
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transforms_and_targets/" title="A list of transforms and their supported targets.">
+      A list of transforms and their supported targets.
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -502,7 +507,7 @@
 <a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/image_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="image-augmentation-for-classification">Image augmentation for classification</h1>
+<h1 id="image-augmentation-for-classification">Image augmentation for classification<a class="headerlink" href="#image-augmentation-for-classification" title="Permanent link">¶</a></h1>
 <p>We can divide the process of image augmentation into four steps:</p>
 <ol>
 <li>Import albumentations and a library to read images from the disk (e.g., OpenCV).</li>
@@ -510,7 +515,7 @@
 <li>Read images from the disk.</li>
 <li>Pass images to the augmentation pipeline and receive augmented images.</li>
 </ol>
-<h2 id="step-1-import-the-required-libraries">Step 1. Import the required libraries.</h2>
+<h2 id="step-1-import-the-required-libraries">Step 1. Import the required libraries.<a class="headerlink" href="#step-1-import-the-required-libraries" title="Permanent link">¶</a></h2>
 <ul>
 <li>Import Albumentations</li>
 </ul>
@@ -521,7 +526,7 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
 </code></pre></div>
-<h2 id="step-2-define-an-augmentation-pipeline">Step 2. Define an augmentation pipeline.</h2>
+<h2 id="step-2-define-an-augmentation-pipeline">Step 2. Define an augmentation pipeline.<a class="headerlink" href="#step-2-define-an-augmentation-pipeline" title="Permanent link">¶</a></h2>
 <p>To define an augmentation pipeline, you need to create an instance of the <code>Compose</code> class. As an argument to the <code>Compose</code> class, you need to pass a list of augmentations you want to apply. A call to <code>Compose</code> will return a transform function that will perform image augmentation.</p>
 <p>Let's look at an example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
@@ -536,7 +541,7 @@
 <p><code>A.RandomBrighntessContrast</code> in the example also has one parameter, <code>p</code>. With a probability of 20%, this augmentation will change the brightness and contrast of the image received from <code>A.HorizontalFlip</code>. And with a probability of 80%, it will keep the received image unchanged.</p>
 <p><img alt="A visualized version of the augmentation pipeline" src="../../images/getting_started/augmenting_images/augmentation_pipeline_visualized.jpg" title="A visualized version of the augmentation pipeline">
 <strong>A visualized version of the augmentation pipeline. You pass an image to it, the image goes through all transformations, and then you receive an augmented image from the pipeline.</strong></img></p>
-<h2 id="step-3-read-images-from-the-disk">Step 3. Read images from the disk.</h2>
+<h2 id="step-3-read-images-from-the-disk">Step 3. Read images from the disk.<a class="headerlink" href="#step-3-read-images-from-the-disk" title="Permanent link">¶</a></h2>
 <p>To pass an image to the augmentation pipeline, you need to read it from the disk. The pipeline expects to receive an image in the form of a NumPy array. If it is a color image, it should have three channels in the following order: Red, Green, Blue (so a regular RGB image).</p>
 <p>To read images from the disk, you can use <a href="https://opencv.org/" target="_blank">OpenCV</a> - a popular library for image processing. It supports a lot of input formats and is installed along with Albumentations since Albumentations utilizes that library under the hood for a lot of augmentations.</p>
 <p>To import OpenCV</p>
@@ -549,7 +554,7 @@
 Note the usage of <code>cv2.cvtColor</code>. <a href="https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/" target="_blank">For historical reasons</a>, OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.</p>
 <div class="admonition note">
 <p>Besides OpenCV, you can use other image processing libraries.</p>
-<h4 id="pillow">Pillow</h4>
+<h4 id="pillow">Pillow<a class="headerlink" href="#pillow" title="Permanent link">¶</a></h4>
 <p><a href="https://pillow.readthedocs.io/" target="_blank">Pillow</a> is a popular Python image processing library.</p>
 <ul>
 <li>Install Pillow</li>
@@ -569,7 +574,7 @@ Note the usage of <code>cv2.cvtColor</code>. <a href="https://www.learnopencv.co
 </code></pre></div></li>
 </ul>
 </div>
-<h2 id="step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images">Step 4. Pass images to the augmentation pipeline and receive augmented images.</h2>
+<h2 id="step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images">Step 4. Pass images to the augmentation pipeline and receive augmented images.<a class="headerlink" href="#step-4-pass-images-to-the-augmentation-pipeline-and-receive-augmented-images" title="Permanent link">¶</a></h2>
 <p>To pass an image to the augmentation pipeline you need to call the <code>transform</code> function created by a call to <code>A.Compose</code> at Step 2. In the <code>image</code> argument to that function, you need to pass an image that you want to augment.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div>

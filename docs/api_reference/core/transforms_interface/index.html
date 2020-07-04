@@ -244,6 +244,11 @@
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets.">
+      A list of transforms and their supported targets.
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -319,14 +324,109 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.__all__">
+    __all__
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform">
     BasicTransform
   </a>
 <nav aria-label="BasicTransform" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.call_backup">
+    call_backup
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.target_dependence">
+    target_dependence
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.targets">
+    targets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.targets_as_params">
+    targets_as_params
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.__call__">
+    __call__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.__repr__">
+    __repr__()
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.add_targets">
     add_targets()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.apply">
+    apply()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.apply_with_params">
+    apply_with_params()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_base_init_args">
+    get_base_init_args()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_class_fullname">
+    get_class_fullname()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_dict_with_id">
+    get_dict_with_id()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_params">
+    get_params()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_params_dependent_on_targets">
+    get_params_dependent_on_targets()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_transform_init_args">
+    get_transform_init_args()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.get_transform_init_args_names">
+    get_transform_init_args_names()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.set_deterministic">
+    set_deterministic()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.BasicTransform.update_params">
+    update_params()
   </a>
 </li>
 </ul>
@@ -336,16 +436,93 @@
 <a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform">
     DualTransform
   </a>
+<nav aria-label="DualTransform" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.targets">
+    targets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.apply_to_bbox">
+    apply_to_bbox()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.apply_to_bboxes">
+    apply_to_bboxes()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.apply_to_keypoint">
+    apply_to_keypoint()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.apply_to_keypoints">
+    apply_to_keypoints()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.apply_to_mask">
+    apply_to_mask()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.DualTransform.apply_to_masks">
+    apply_to_masks()
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.core.transforms_interface.ImageOnlyTransform">
     ImageOnlyTransform
   </a>
+<nav aria-label="ImageOnlyTransform" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.ImageOnlyTransform.targets">
+    targets
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.core.transforms_interface.NoOp">
     NoOp
   </a>
+<nav aria-label="NoOp" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.NoOp.apply">
+    apply()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.NoOp.apply_to_bbox">
+    apply_to_bbox()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.NoOp.apply_to_keypoint">
+    apply_to_keypoint()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.NoOp.apply_to_mask">
+    apply_to_mask()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.transforms_interface.NoOp.get_transform_init_args_names">
+    get_transform_init_args_names()
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.core.transforms_interface.to_tuple">
@@ -512,23 +689,243 @@
 <a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/core/transforms_interface.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="transforms-interface-coretransforms_interface">Transforms Interface (core.transforms_interface)</h1>
+<h1 id="transforms-interface-coretransforms_interface">Transforms Interface (core.transforms_interface)<a class="headerlink" href="#transforms-interface-coretransforms_interface" title="Permanent link">¶</a></h1>
 <div class="doc doc-object doc-module">
 <h2 class="hidden-toc" href="#albumentations.core.transforms_interface" id="albumentations.core.transforms_interface" style="visibility: hidden; width: 0; height: 0;">
-</h2>
+<a class="headerlink" href="#albumentations.core.transforms_interface" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents first">
 <div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h2 class="doc doc-heading" id="albumentations.core.transforms_interface.__all__">
+<code class="highlight">
+__all__        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.__all__" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+</div>
+</div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform">
 <code>BasicTransform</code>
-</h2>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.call_backup">
+<code class="highlight">
+call_backup        </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.call_backup" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.target_dependence">
+<code class="highlight">
+target_dependence        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.target_dependence" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.targets">
+<code class="highlight">
+targets        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.targets" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.targets_as_params">
+<code class="highlight">
+targets_as_params        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.targets_as_params" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.__call__">
+<code class="highlight language-python">
+__call__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.__call__" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">replay_mode</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">applied_in_replay</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_with_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">kwargs</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">always_apply</span> <span class="ow">or</span> <span class="n">force_apply</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">),</span> <span class="s2">"</span><span class="si">{}</span><span class="s2"> requires </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span>
+            <span class="p">)</span>
+            <span class="n">targets_as_params</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">}</span>
+            <span class="n">params_dependent_on_targets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_params_dependent_on_targets</span><span class="p">(</span><span class="n">targets_as_params</span><span class="p">)</span>
+            <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params_dependent_on_targets</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">deterministic</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">:</span>
+                <span class="n">warn</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_class_fullname</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" could work incorrectly in ReplayMode for other input data"</span>
+                    <span class="s2">" because its' params depend on targets."</span>
+                <span class="p">)</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">save_key</span><span class="p">][</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_with_params</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">kwargs</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.__init__">
+<code class="highlight language-python">
+__init__<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.__init__" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">always_apply</span> <span class="o">=</span> <span class="n">always_apply</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># replay mode params</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">deterministic</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">save_key</span> <span class="o">=</span> <span class="s2">"replay"</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">replay_mode</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">applied_in_replay</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.__repr__">
+<code class="highlight language-python">
+__repr__<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.__repr__" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>113
+114
+115
+116</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_base_init_args</span><span class="p">()</span>
+    <span class="n">state</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_transform_init_args</span><span class="p">())</span>
+    <span class="k">return</span> <span class="s2">"</span><span class="si">{name}</span><span class="s2">(</span><span class="si">{args}</span><span class="s2">)"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">format_args</span><span class="p">(</span><span class="n">state</span><span class="p">))</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.add_targets">
 <code class="highlight language-python">
 add_targets<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_targets</span><span class="p">)</span> </code>
-</h3>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.add_targets" title="Permanent link">¶</a></h3>
 <div class="doc doc-contents">
 <p>Add targets to transform them the same way as one of existing targets
     ex: {'target_image': 'image'}
@@ -539,6 +936,411 @@ add_targets<span class="p">(</span><span class="bp">self</span><span class="p">,
 <span class="err">    additional_targets (dict): keys - new target name, values - old target name. ex: {'image2': 'image'}</span>
 </code></pre>
 </div>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">add_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_targets</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">Add targets to transform them the same way as one of existing targets</span>
+<span class="sd">    ex: {'target_image': 'image'}</span>
+<span class="sd">    ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}</span>
+<span class="sd">    by the way you must have at least one object with key 'image'</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        additional_targets (dict): keys - new target name, values - old target name. ex: {'image2': 'image'}</span>
+<span class="sd">    """</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span> <span class="o">=</span> <span class="n">additional_targets</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.apply">
+<code class="highlight language-python">
+apply<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.apply" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>126
+127</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.apply_with_params">
+<code class="highlight language-python">
+apply_with_params<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">force_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.apply_with_params" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_with_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">force_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># skipcq: PYL-W0613</span>
+    <span class="k">if</span> <span class="n">params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">kwargs</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_params</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">arg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">target_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_target_function</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="n">target_dependencies</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_dependence</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="p">[])}</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">target_function</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">target_dependencies</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_base_init_args">
+<code class="highlight language-python">
+get_base_init_args<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_base_init_args" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>183
+184</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_base_init_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"always_apply"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">always_apply</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">}</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_class_fullname">
+<code class="highlight language-python">
+get_class_fullname<span class="p">()</span> </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_class_fullname" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>173
+174
+175</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">get_class_fullname</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">"</span><span class="si">{cls.__module__}</span><span class="s2">.</span><span class="si">{cls.__name__}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_dict_with_id">
+<code class="highlight language-python">
+get_dict_with_id<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_dict_with_id" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>195
+196
+197
+198</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_dict_with_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_to_dict</span><span class="p">()</span>
+    <span class="n">d</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">d</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_params">
+<code class="highlight language-python">
+get_params<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_params" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>129
+130</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{}</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_params_dependent_on_targets">
+<code class="highlight language-python">
+get_params_dependent_on_targets<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_params_dependent_on_targets" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>168
+169
+170
+171</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_params_dependent_on_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+        <span class="s2">"Method get_params_dependent_on_targets is not implemented in class "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_transform_init_args">
+<code class="highlight language-python">
+get_transform_init_args<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_transform_init_args" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>186
+187</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_transform_init_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_transform_init_args_names</span><span class="p">()}</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.get_transform_init_args_names">
+<code class="highlight language-python">
+get_transform_init_args_names<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.get_transform_init_args_names" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>177
+178
+179
+180
+181</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_transform_init_args_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+        <span class="s2">"Class </span><span class="si">{name}</span><span class="s2"> is not serializable because the `get_transform_init_args_names` method is not "</span>
+        <span class="s2">"implemented"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_class_fullname</span><span class="p">())</span>
+    <span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.set_deterministic">
+<code class="highlight language-python">
+set_deterministic<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="p">,</span> <span class="n">save_key</span><span class="o">=</span><span class="s1">'replay'</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.set_deterministic" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>107
+108
+109
+110
+111</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">set_deterministic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="p">,</span> <span class="n">save_key</span><span class="o">=</span><span class="s2">"replay"</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">save_key</span> <span class="o">!=</span> <span class="s2">"params"</span><span class="p">,</span> <span class="s2">"params save_key is reserved"</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">deterministic</span> <span class="o">=</span> <span class="n">flag</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">save_key</span> <span class="o">=</span> <span class="n">save_key</span>
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.update_params">
+<code class="highlight language-python">
+update_params<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.update_params" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>139
+140
+141
+142
+143
+144
+145</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">update_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"interpolation"</span><span class="p">):</span>
+        <span class="n">params</span><span class="p">[</span><span class="s2">"interpolation"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolation</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"fill_value"</span><span class="p">):</span>
+        <span class="n">params</span><span class="p">[</span><span class="s2">"fill_value"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_value</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">"cols"</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"rows"</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+    <span class="k">return</span> <span class="n">params</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
 </div>
 </div>
 </div>
@@ -547,30 +1349,362 @@ add_targets<span class="p">(</span><span class="bp">self</span><span class="p">,
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform">
 <code>DualTransform</code>
-</h2>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Transform for segmentation task.</p>
 <div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.targets">
+<code class="highlight">
+targets        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.targets" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.apply_to_bbox">
+<code class="highlight language-python">
+apply_to_bbox<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.apply_to_bbox" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>216
+217</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Method apply_to_bbox is not implemented in class "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.apply_to_bboxes">
+<code class="highlight language-python">
+apply_to_bboxes<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bboxes</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.apply_to_bboxes" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>222
+223</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_bboxes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bboxes</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_to_bbox</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]),</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span> <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.apply_to_keypoint">
+<code class="highlight language-python">
+apply_to_keypoint<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoint</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.apply_to_keypoint" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>219
+220</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_keypoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoint</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Method apply_to_keypoint is not implemented in class "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.apply_to_keypoints">
+<code class="highlight language-python">
+apply_to_keypoints<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.apply_to_keypoints" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>225
+226</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_keypoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_to_keypoint</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]),</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span> <span class="k">for</span> <span class="n">keypoint</span> <span class="ow">in</span> <span class="n">keypoints</span><span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.apply_to_mask">
+<code class="highlight language-python">
+apply_to_mask<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.apply_to_mask" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>228
+229</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_NEAREST</span> <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">"interpolation"</span> <span class="k">else</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform.apply_to_masks">
+<code class="highlight language-python">
+apply_to_masks<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">masks</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform.apply_to_masks" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>231
+232</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_masks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">masks</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_to_mask</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">mask</span> <span class="ow">in</span> <span class="n">masks</span><span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.ImageOnlyTransform">
 <code>ImageOnlyTransform</code>
-</h2>
+<a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Transform applied to image only.</p>
 <div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.ImageOnlyTransform.targets">
+<code class="highlight">
+targets        </code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-property"><code>property</code></small>
+<small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+</span>
+<a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform.targets" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp">
 <code>NoOp</code>
-</h2>
+<a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Does nothing</p>
 <div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp.apply">
+<code class="highlight language-python">
+apply<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.NoOp.apply" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>256
+257</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">img</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp.apply_to_bbox">
+<code class="highlight language-python">
+apply_to_bbox<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.NoOp.apply_to_bbox" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>253
+254</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">bbox</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp.apply_to_keypoint">
+<code class="highlight language-python">
+apply_to_keypoint<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoint</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.NoOp.apply_to_keypoint" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>250
+251</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_keypoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoint</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">keypoint</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp.apply_to_mask">
+<code class="highlight language-python">
+apply_to_mask<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.NoOp.apply_to_mask" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>259
+260</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">apply_to_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">img</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp.get_transform_init_args_names">
+<code class="highlight language-python">
+get_transform_init_args_names<span class="p">(</span><span class="bp">self</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.core.transforms_interface.NoOp.get_transform_init_args_names" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>262
+263</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_transform_init_args_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">()</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -578,7 +1712,7 @@ add_targets<span class="p">(</span><span class="bp">self</span><span class="p">,
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.to_tuple">
 <code class="highlight language-python">
 to_tuple<span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
-</h2>
+<a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Convert input argument to min-max tuple</p>
 <p><strong>Parameters:</strong></p>
@@ -620,6 +1754,84 @@ If value is tuple, return value would be value + offset (broadcasted).</p>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">to_tuple</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Convert input argument to min-max tuple</span>
+<span class="sd">    Args:</span>
+<span class="sd">        param (scalar, tuple or list of 2+ elements): Input value.</span>
+<span class="sd">            If value is scalar, return value would be (offset - value, offset + value).</span>
+<span class="sd">            If value is tuple, return value would be value + offset (broadcasted).</span>
+<span class="sd">        low:  Second element of tuple can be passed as optional argument</span>
+<span class="sd">        bias: An offset factor added to each element</span>
+<span class="sd">    """</span>
+
+    <span class="k">if</span> <span class="n">low</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Arguments low and bias are mutually exclusive"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">param</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">low</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">param</span> <span class="o">=</span> <span class="o">-</span><span class="n">param</span><span class="p">,</span> <span class="o">+</span><span class="n">param</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">param</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span> <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">param</span> <span class="k">else</span> <span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">low</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+        <span class="n">param</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Argument param must be either scalar (int, float) or tuple"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bias</span> <span class="o">+</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">param</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
 </div>
 </div>
 </div>
