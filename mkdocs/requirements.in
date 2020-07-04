@@ -5,4 +5,5 @@ Pygments
 mkdocs-awesome-pages-plugin
 mkdocstrings
 mkdocs-simple-hooks
+mkdocs-macros-plugin
 beautifulsoup4

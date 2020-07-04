@@ -12,3 +12,11 @@ Albumentations requires Python 3.5 or higher.
 ``` Bash
     pip install -U git+https://github.com/albumentations-team/albumentations
 ```
+
+## Install the latest stable version from conda-forge
+If you are using Anaconda or Miniconda you can install Albumentations from conda-forge:
+
+``` Bash
+conda install -c conda-forge imgaug
+conda install -c conda-forge albumentations
+```

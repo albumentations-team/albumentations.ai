@@ -11,7 +11,8 @@ plugins:
       handlers:
         python:
           rendering:
-            show_source: false
+            show_source: true
+            show_if_no_docstring: true
           selection:
             docstring_style: google  # this is the default
             docstring_options:
@@ -21,6 +22,7 @@ plugins:
   - mkdocs-simple-hooks:
       hooks:
         on_page_content: "hooks:external_links_target_blank"
+  - macros
 
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
@@ -31,6 +33,9 @@ markdown_extensions:
   - attr_list
   - admonition
   - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
 
 theme:
   name: material

@@ -73,6 +73,7 @@ transform = A.Compose([
     A.RandomBrightnessContrast(p=0.2),
 ], bbox_params=A.BboxParams(format='coco'))
 ```
+
 Note that unlike image and masks augmentation, `Compose` now has an additional parameter `bbox_params`. You need to pass an instance of `A.BboxParams` to that argument. `A.BboxParams` specifies settings for working with bounding boxes. `format` sets the format for bounding boxes coordinates.
 
 It can either be `pascal_voc`, `albumentations`, `coco` or `yolo`. This value is required because Albumentation needs to know the coordinates' source format for bounding boxes to apply augmentations correctly.
