@@ -11,6 +11,7 @@ from make_transforms_docs import (
 
 
 def define_env(env):
+    site_url = env._conf["site_url"]
     transforms_info = get_transforms_info()
     for transform in transforms_info.values():
         if not transform["docs_link"]:
@@ -19,10 +20,11 @@ def define_env(env):
             transform["docs_link"]
             .replace(
                 "https://albumentations.readthedocs.io/en/latest/api/augmentations.html",
-                "/api_reference/augmentations/transforms/",
+                site_url + "api_reference/augmentations/transforms/",
             )
             .replace(
-                "https://albumentations.readthedocs.io/en/latest/api/imgaug.html", "/api_reference/imgaug/transforms/",
+                "https://albumentations.readthedocs.io/en/latest/api/imgaug.html",
+                site_url + "api_reference/imgaug/transforms/",
             )
         )
     image_only_transforms = {transform: info for transform, info in transforms_info.items() if info["image_only"]}

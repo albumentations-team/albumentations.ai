@@ -51,7 +51,7 @@ extra_css:
 
 repo_name: albumentations
 repo_url: https://github.com/albumentations-team/albumentations
-site_url: https://albumentations.ai/docs
+site_url: https://albumentations.ai/docs/
 
 edit_uri: 'https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs'
 
