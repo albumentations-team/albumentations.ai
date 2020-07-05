@@ -496,6 +496,10 @@
 <h1 id="simultaneous-augmentation-of-multiple-targets-masks-bounding-boxes-keypoints">Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.<a class="headerlink" href="#simultaneous-augmentation-of-multiple-targets-masks-bounding-boxes-keypoints" title="Permanent link">¶</a></h1>
 <p>Albumentations can apply the same set of transformations to the input images and all the targets that are passed to <code>transform</code>: masks, bounding boxes, and keypoints.</p>
 <p>Please refer to articles <a href="../image_augmentation/">Image augmentation for classification</a>, <a href="../mask_augmentation/">Mask augmentation for segmentation</a>, <a href="../bounding_boxes_augmentation/">Bounding boxes augmentation for object detection</a>, and <a href="../keypoints_augmentation/">Keypoints augmentation</a> for the detailed description of each data type.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some transforms in Albumentation don't support bounding boxes or keypoints. If you try to use them you will get an exception. Please refer to <a href="../transforms_and_targets/">this article</a> to check whether a transform can augment bounding boxes and keypoints.</p>
+</div>
 <p>Below is an example, how you can simultaneously augment the input image, mask, bounding boxes with their labels, and keypoints with their labels. Note that the only required argument to <code>transform</code> is <code>image</code>; all other arguments are optional, and you can combine them in any way.</p>
 <h2 id="step-1-define-compose-with-parameters-that-specify-formats-for-bounding-boxes-and-keypoints">Step 1. Define <code>Compose</code> with parameters that specify formats for bounding boxes and keypoints.<a class="headerlink" href="#step-1-define-compose-with-parameters-that-specify-formats-for-bounding-boxes-and-keypoints" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
