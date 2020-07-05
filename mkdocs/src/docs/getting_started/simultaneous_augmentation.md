@@ -4,6 +4,10 @@ Albumentations can apply the same set of transformations to the input images and
 
 Please refer to articles [Image augmentation for classification](image_augmentation.md), [Mask augmentation for segmentation](mask_augmentation.md), [Bounding boxes augmentation for object detection](bounding_boxes_augmentation.md), and [Keypoints augmentation](keypoints_augmentation.md) for the detailed description of each data type.
 
+
+!!! note "Note"
+    Some transforms in Albumentation don't support bounding boxes or keypoints. If you try to use them you will get an exception. Please refer to [this article](transforms_and_targets.md) to check whether a transform can augment bounding boxes and keypoints.
+
 Below is an example, how you can simultaneously augment the input image, mask, bounding boxes with their labels, and keypoints with their labels. Note that the only required argument to `transform` is `image`; all other arguments are optional, and you can combine them in any way.
 
 ## Step 1. Define `Compose` with parameters that specify formats for bounding boxes and keypoints.

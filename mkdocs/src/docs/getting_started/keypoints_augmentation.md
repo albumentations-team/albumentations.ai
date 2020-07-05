@@ -49,6 +49,9 @@ The process of augmenting keypoints looks very similar to the bounding boxes aug
 3. You read images and keypoints from the disk.
 4. You pass an image and keypoints to the augmentation pipeline and receive augmented images and keypoints.
 
+!!! note "Note"
+    Some transforms in Albumentation don't support keypoints. If you try to use them you will get an exception. Please refer to [this article](transforms_and_targets.md) to check whether a transform can augment keypoints.
+
 ## Step 1. Import the required libraries.
 
 ``` python

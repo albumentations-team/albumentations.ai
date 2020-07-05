@@ -54,6 +54,8 @@ Just like with [images](image_augmentation.md) and [masks](mask_augmentation.md)
 3. You read images and bounding boxes from the disk.
 4. You pass an image and bounding boxes to the augmentation pipeline and receive augmented images and boxes.
 
+!!! note "Note"
+    Some transforms in Albumentation don't support bounding boxes. If you try to use them you will get an exception. Please refer to [this article](transforms_and_targets.md) to check whether a transform can augment bounding boxes.
 
 ## Step 1. Import the required libraries.
 
