@@ -8,13 +8,14 @@
 <link href="https://albumentations.ai/docs/getting_started/simultaneous_augmentation/" rel="canonical"/>
 <link href="../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
-<title>Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints. - Albumentations Documentation</title>
+<title>Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints - Albumentations Documentation</title>
 <link href="../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
 <link href="../../css/extra.css" rel="stylesheet"/>
 <link href="../../css/ansi-colours.css" rel="stylesheet"/>
 <link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
@@ -64,25 +65,12 @@
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </label>
-<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
-</button>
 </form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
-            Initializing search
-          </div>
-<ol class="md-search-result__list"></ol>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="md-header-nav__source">
@@ -242,13 +230,13 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-        Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
+        Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
         <span class="md-nav__icon md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
 </span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.">
-      Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
+<a class="md-nav__link md-nav__link--active" href="./" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+      Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
     </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -277,8 +265,8 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../transforms_and_targets/" title="A list of transforms and their supported targets.">
-      A list of transforms and their supported targets.
+<a class="md-nav__link" href="../transforms_and_targets/" title="A list of transforms and their supported targets">
+      A list of transforms and their supported targets
     </a>
 </li>
 </ul>
@@ -493,7 +481,7 @@
 <a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/simultaneous_augmentation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="simultaneous-augmentation-of-multiple-targets-masks-bounding-boxes-keypoints">Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.<a class="headerlink" href="#simultaneous-augmentation-of-multiple-targets-masks-bounding-boxes-keypoints" title="Permanent link">¶</a></h1>
+<h1 id="simultaneous-augmentation-of-multiple-targets-masks-bounding-boxes-keypoints">Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints<a class="headerlink" href="#simultaneous-augmentation-of-multiple-targets-masks-bounding-boxes-keypoints" title="Permanent link">¶</a></h1>
 <p>Albumentations can apply the same set of transformations to the input images and all the targets that are passed to <code>transform</code>: masks, bounding boxes, and keypoints.</p>
 <p>Please refer to articles <a href="../image_augmentation/">Image augmentation for classification</a>, <a href="../mask_augmentation/">Mask augmentation for segmentation</a>, <a href="../bounding_boxes_augmentation/">Bounding boxes augmentation for object detection</a>, and <a href="../keypoints_augmentation/">Keypoints augmentation</a> for the detailed description of each data type.</p>
 <div class="admonition note">
@@ -576,13 +564,13 @@
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../transforms_and_targets/" rel="next" title="A list of transforms and their supported targets.">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../transforms_and_targets/" rel="next" title="A list of transforms and their supported targets">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                A list of transforms and their supported targets.
+                A list of transforms and their supported targets
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
@@ -613,5 +601,7 @@
           }, typeof search !== "undefined" && search)
         })
       </script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="../../js/extra.js"></script>
 </body>
 </html>
