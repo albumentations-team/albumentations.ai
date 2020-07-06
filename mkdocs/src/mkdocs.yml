@@ -4,15 +4,14 @@ plugins:
   - mknotebooks:
      enable_default_jupyter_cell_styling: false
      enable_default_pandas_dataframe_styling: false
-  - search:
-      prebuild_index: python
+     execute: false
   - awesome-pages
   - mkdocstrings:
       handlers:
         python:
           rendering:
-            show_source: true
-            show_if_no_docstring: true
+            show_source: false
+            show_if_no_docstring: false
           selection:
             docstring_style: google  # this is the default
             docstring_options:
@@ -47,7 +46,12 @@ theme:
   favicon: images/logo.png
 
 extra_css:
+  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
   - css/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js
+  - js/extra.js
 
 repo_name: albumentations
 repo_url: https://github.com/albumentations-team/albumentations

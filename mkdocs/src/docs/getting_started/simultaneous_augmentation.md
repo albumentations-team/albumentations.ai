@@ -1,4 +1,4 @@
-# Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints.
+# Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
 
 Albumentations can apply the same set of transformations to the input images and all the targets that are passed to `transform`: masks, bounding boxes, and keypoints.
 

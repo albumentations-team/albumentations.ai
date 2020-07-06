@@ -23,12 +23,10 @@
             <a href="https://albumentations.ai/team">Team</a>
           </div>
       </div>
-      {% if "search" in config["plugins"] %}
         <label class="md-header-nav__button md-icon" for="__search">
           {% include ".icons/material/magnify.svg" %}
         </label>
         {% include "partials/search.html" %}
-      {% endif %}
       {% if config.repo_url %}
         <div class="md-header-nav__source">
           {% include "partials/source.html" %}
