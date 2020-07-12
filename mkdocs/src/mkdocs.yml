@@ -20,8 +20,11 @@ plugins:
         - /albumentations
   - mkdocs-simple-hooks:
       hooks:
-        on_page_content: "hooks:external_links_target_blank"
+        on_pre_page: "hooks:on_pre_page"
+        on_page_content: "hooks:on_page_content"
+        on_nav: "hooks:on_nav"
   - macros
+
 
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
@@ -32,6 +35,7 @@ markdown_extensions:
   - attr_list
   - admonition
   - pymdownx.superfences
+  - pymdownx.magiclink
   - tables
   - toc:
       permalink: true
@@ -58,5 +62,7 @@ repo_url: https://github.com/albumentations-team/albumentations
 site_url: https://albumentations.ai/docs/
 
 edit_uri: 'https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs'
+notebook_github_uri: https://github.com/albumentations-team/albumentations_examples/tree/master/notebooks/
+notebook_colab_uri: https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/
 
 site_dir: /site

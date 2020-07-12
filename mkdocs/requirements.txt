@@ -25,11 +25,12 @@ markdown==3.2.2           # via mkdocs, mkdocs-material, pymdown-extensions
 markupsafe==1.1.1         # via jinja2
 mistune==0.8.4            # via nbconvert
 mkdocs-awesome-pages-plugin==2.2.1  # via -r requirements.in
+mkdocs-exclude==1.0.2     # via -r requirements.in
 mkdocs-macros-plugin==0.4.9  # via -r requirements.in
 mkdocs-material-extensions==1.0  # via mkdocs-material
 mkdocs-material==5.2.2    # via -r requirements.in, mkdocs-macros-plugin, mkdocs-material-extensions
 mkdocs-simple-hooks==0.1.1  # via -r requirements.in
-mkdocs==1.1.2             # via -r requirements.in, mkdocs-awesome-pages-plugin, mkdocs-macros-plugin, mkdocs-material, mkdocs-simple-hooks, mkdocstrings, mknotebooks
+mkdocs==1.1.2             # via -r requirements.in, mkdocs-awesome-pages-plugin, mkdocs-exclude, mkdocs-macros-plugin, mkdocs-material, mkdocs-simple-hooks, mkdocstrings, mknotebooks
 mkdocstrings==0.12.0      # via -r requirements.in
 mknotebooks==0.3.6        # via -r requirements.in
 nbconvert==5.6.1          # via mknotebooks

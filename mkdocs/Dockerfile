@@ -15,6 +15,9 @@ COPY ./mkdocs/src /mkdocs/src
 # Preprocess the source code of Albumentations to deal with mkdocstrings' quirks.
 RUN ~/.cargo/bin/rargs -d ' → ' ~/.cargo/bin/sd '{1}' '{2}' $(~/.cargo/bin/fd --full-path /albumentations -e .py) < /mkdocs/replacements.txt
 
+RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
+RUN cp -r /albumentations_examples/notebooks/ /mkdocs/src/docs/examples/
+
 ENV PYTHONPATH "${PYTHONPATH}:/mkdocs/src:/albumentations"
 
 WORKDIR /mkdocs/src

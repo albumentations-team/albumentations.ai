@@ -2,5 +2,6 @@ arrange:
   - index.md
   - introduction
   - getting_started
+  - examples
   - api_reference
   - contributing.md

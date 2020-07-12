@@ -47,8 +47,9 @@ services:
       - GOOGLE_ANALYTICS_TID
     volumes:
       - ./mkdocs/src:/mkdocs/src
+      - /mkdocs/src/docs/examples/
     command:
-      serve --dirtyreload --dev-addr 0.0.0.0:8000
+      serve --dev-addr 0.0.0.0:8000
 
 volumes:
   _build:
