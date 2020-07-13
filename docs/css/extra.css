@@ -56,3 +56,118 @@ p img {
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
   font-size: 1.3em
 }
+
+.run-in-colab-button a {
+  width: 15rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.view-on-github-button a {
+  width: 15rem;
+  color: #333;
+  text-decoration: none;
+
+}
+
+.md-typeset a.btn {
+  text-decoration: none;
+}
+
+
+.md-typeset .btn {
+  display: inline-block;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  border: 1px solid transparent
+}
+
+.md-typeset .btn-round {
+  border-radius: 4px !important
+}
+
+.md-typeset .md-typeset .btn i {
+  margin-right: 5px
+}
+
+.md-typeset .md-typeset .btn.btn-large i {
+  font-size: 24px
+}
+
+.md-typeset .button {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.md-typeset .btn.btn-large {
+  font-size: 20px;
+  padding: 18px 25px
+}
+
+.md-typeset .btn.btn-medium {
+  font-size: 14px;
+  padding: 10px 22px
+}
+
+.md-typeset .btn.btn-small {
+  font-size: 11px;
+  padding: 2px 14px;
+  letter-spacing: 1px
+}
+
+.md-typeset .btn.btn-very-small {
+  font-size: 9px;
+  padding: 1px 12px;
+  letter-spacing: 1px
+}
+
+.md-typeset .highlight-button {
+  border: 2px solid #777;
+  display: inline-block;
+  padding: 8px 20px 9px;
+  font-size: 12px;
+  color: #222;
+  background-color: transparent
+}
+
+.md-typeset .highlight-button:hover {
+  background-color: #efefef;
+  border: 2px solid #777;
+  color: #222;
+}
+
+
+.md-typeset .highlight-button:active, .md-typeset .highlight-button:focus {
+  color: #222;
+  border: 2px solid #777;
+  color: #222;
+}
+
+.md-typeset .highlight-button i {
+  color: #000
+}
+
+.md-typeset .highlight-button:hover i {
+  color: #fff
+}
+
+.highlight-button svg{
+  float: left;
+  margin-right: 0.5em;
+}
+
+.colab-button svg {
+  position: relative;
+  top: 8px;
+}
+
+
+.github-button svg {
+  position: relative;
+  top: 2px;
+}
+
+.output_subarea pre {
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
