@@ -743,7 +743,7 @@ We will use images and data from the <a href="https://www.kaggle.com/c/tgs-salt-
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-UNet type architecture requires input image size be divisible by $2^N$, where $N$ is the number of maxpooling layers. In the vanilla UNet $N=5$  $\Longrightarrow$, we need to pad input images to the closest divisible by $2^5 = 32$ number, which is 128. This operation may be performed using <a href="https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.PadIfNeeded" target="_blank"><strong>PadIfNeeded</strong></a> transformation. It pads both the image and the mask on all four sides. Padding type (zero, constant, reflection) may be specified. The default padding is reflection padding.
+UNet type architecture requires input image size be divisible by <span><span class="MathJax_Preview">2^N</span><script type="math/tex">2^N</script></span>, where <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> is the number of maxpooling layers. In the vanilla UNet <span><span class="MathJax_Preview">N=5</span><script type="math/tex">N=5</script></span> <span><span class="MathJax_Preview">\Longrightarrow</span><script type="math/tex">\Longrightarrow</script></span>, we need to pad input images to the closest divisible by <span><span class="MathJax_Preview">2^5 = 32</span><script type="math/tex">2^5 = 32</script></span> number, which is 128. This operation may be performed using <a href="https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.PadIfNeeded" target="_blank"><strong>PadIfNeeded</strong></a> transformation. It pads both the image and the mask on all four sides. Padding type (zero, constant, reflection) may be specified. The default padding is reflection padding.
 </div>
 </div></p>
 </div>
@@ -1353,6 +1353,7 @@ Many non-spatial transformations like <a href="https://albumentations.readthedoc
         })
       </script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="../../js/extra.js"></script>
 </body>
 </html>
