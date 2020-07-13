@@ -2,4 +2,3 @@ _build/
 .idea/
 __pycache__
 data/cache/*
-mkdocs/src/docs/examples/*

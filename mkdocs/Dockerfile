@@ -16,7 +16,7 @@ COPY ./mkdocs/src /mkdocs/src
 RUN ~/.cargo/bin/rargs -d ' → ' ~/.cargo/bin/sd '{1}' '{2}' $(~/.cargo/bin/fd --full-path /albumentations -e .py) < /mkdocs/replacements.txt
 
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
-RUN cp -r /albumentations_examples/notebooks/ /mkdocs/src/docs/examples/
+RUN cp -rf /albumentations_examples/notebooks/*.ipynb /mkdocs/src/docs/examples
 
 ENV PYTHONPATH "${PYTHONPATH}:/mkdocs/src:/albumentations"
 
