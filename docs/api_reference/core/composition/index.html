@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://albumentations.ai/docs/api_reference/core/composition/" rel="canonical"/>
 <link href="../../../images/logo.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
 <title>Composition API (core.composition) - Albumentations Documentation</title>
-<link href="../../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,7 +18,6 @@
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="../../../css/ansi-colours.css" rel="stylesheet"/>
-<link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
@@ -340,11 +339,6 @@
         API Reference
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" id="nav-5-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-5-2">
@@ -361,11 +355,6 @@
         Core API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -448,11 +437,6 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/" title="Index">
-      Index
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../augmentations/transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
     </a>
@@ -492,11 +476,6 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../imgaug/" title="Index">
-      Index
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../imgaug/transforms/" title="Transforms (imgaug.transforms)">
       Transforms (imgaug.transforms)
     </a>
@@ -520,11 +499,6 @@
         PyTorch Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../pytorch/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
@@ -588,18 +562,20 @@
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.composition.BboxParams">
-<code>BboxParams</code>
-<a class="headerlink" href="#albumentations.core.composition.BboxParams" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.core.composition.BboxParams</strong></code>
+<code>
+<span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_area</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_visibility</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L391" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.composition.BboxParams" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Parameters of bounding boxes</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -617,7 +593,6 @@ The <code>albumentations</code> format
     in other words: [x_min, y_min, x_max, y_max]<code>, e.g. [0.2, 0.3, 0.4, 0.5].
 The</code>yolo<code>format</code>[x, y, width, height]<code>, e.g. [0.1, 0.2, 0.3, 0.4];</code>x<code>,</code>y<code>- normalized bbox center;</code>width<code>,</code>height` - normalized bbox width and height.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>label_fields</code></td>
@@ -626,7 +601,6 @@ The</code>yolo<code>format</code>[x, y, width, height]<code>, e.g. [0.1, 0.2, 0.
 <p>list of fields that are joined with boxes, e.g labels.
 Should be same type as boxes.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>min_area</code></td>
@@ -635,7 +609,6 @@ Should be same type as boxes.</p>
 <p>minimum area of a bounding box. All bounding boxes whose
 visible area in pixels is less than this value will be removed. Default: 0.0.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>min_visibility</code></td>
@@ -644,7 +617,6 @@ visible area in pixels is less than this value will be removed. Default: 0.0.</p
 <p>minimum fraction of area for a bounding box
 to remain this box in list. Default: 0.0.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
@@ -654,18 +626,20 @@ to remain this box in list. Default: 0.0.</p>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.composition.Compose">
-<code>Compose</code>
-<a class="headerlink" href="#albumentations.core.composition.Compose" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.core.composition.Compose</strong></code>
+<code>
+<span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">bbox_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keypoint_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">additional_targets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L165" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.composition.Compose" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Compose transforms and handle all transformations regrading bounding boxes</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -675,7 +649,6 @@ to remain this box in list. Default: 0.0.</p>
 <td>
 <p>list of transformations to compose.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>bbox_params</code></td>
@@ -683,7 +656,6 @@ to remain this box in list. Default: 0.0.</p>
 <td>
 <p>Parameters for bounding boxes transforms</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>keypoint_params</code></td>
@@ -691,7 +663,6 @@ to remain this box in list. Default: 0.0.</p>
 <td>
 <p>Parameters for keypoints transforms</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>additional_targets</code></td>
@@ -699,7 +670,6 @@ to remain this box in list. Default: 0.0.</p>
 <td>
 <p>Dict with keys - new target name, values - old target name. ex: {'image2': 'image'}</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -707,7 +677,6 @@ to remain this box in list. Default: 0.0.</p>
 <td>
 <p>probability of applying all list of transforms. Default: 1.0.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
@@ -717,18 +686,20 @@ to remain this box in list. Default: 0.0.</p>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.composition.KeypointParams">
-<code>KeypointParams</code>
-<a class="headerlink" href="#albumentations.core.composition.KeypointParams" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.core.composition.KeypointParams</strong></code>
+<code>
+<span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L424" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.composition.KeypointParams" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Parameters of keypoints</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -742,7 +713,6 @@ to remain this box in list. Default: 0.0.</p>
 <p>s - Keypoint scale</p>
 <p>a - Keypoint orientation in radians or degrees (depending on KeypointParams.angle_in_degrees)</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>label_fields</code></td>
@@ -751,7 +721,6 @@ to remain this box in list. Default: 0.0.</p>
 <p>list of fields that are joined with keypoints, e.g labels.
 Should be same type as keypoints.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>remove_invisible</code></td>
@@ -759,7 +728,6 @@ Should be same type as keypoints.</p>
 <td>
 <p>to remove invisible points after transform or not</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>angle_in_degrees</code></td>
@@ -767,7 +735,6 @@ Should be same type as keypoints.</p>
 <td>
 <p>angle in degrees or radians in 'xya', 'xyas', 'xysa' keypoints</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
@@ -777,18 +744,20 @@ Should be same type as keypoints.</p>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.composition.OneOf">
-<code>OneOf</code>
-<a class="headerlink" href="#albumentations.core.composition.OneOf" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.core.composition.OneOf</strong></code>
+<code>
+<span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L218" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.composition.OneOf" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Select one of transforms to apply</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -798,7 +767,6 @@ Should be same type as keypoints.</p>
 <td>
 <p>list of transformations to compose.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -806,7 +774,6 @@ Should be same type as keypoints.</p>
 <td>
 <p>probability of applying selected transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
@@ -816,18 +783,20 @@ Should be same type as keypoints.</p>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.composition.PerChannel">
-<code>PerChannel</code>
-<a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.core.composition.PerChannel</strong></code>
+<code>
+<span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L265" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Apply transformations per-channel</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -837,7 +806,6 @@ Should be same type as keypoints.</p>
 <td>
 <p>list of transformations to compose.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>channels</code></td>
@@ -846,7 +814,6 @@ Should be same type as keypoints.</p>
 <p>channels to apply the transform to. Pass None to apply to all.
              Default: None (apply to all)</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -854,7 +821,6 @@ Should be same type as keypoints.</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
@@ -937,13 +903,13 @@ Should be same type as keypoints.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

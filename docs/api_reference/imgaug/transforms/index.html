@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://albumentations.ai/docs/api_reference/imgaug/transforms/" rel="canonical"/>
 <link href="../../../images/logo.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
 <title>Transforms (imgaug.transforms) - Albumentations Documentation</title>
-<link href="../../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,7 +18,6 @@
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="../../../css/ansi-colours.css" rel="stylesheet"/>
-<link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
@@ -340,11 +339,6 @@
         API Reference
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" id="nav-5-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-5-2">
@@ -361,11 +355,6 @@
         Core API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../core/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../core/composition/" title="Composition API (core.composition)">
       Composition API (core.composition)
@@ -400,11 +389,6 @@
         Augmentations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../augmentations/transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
@@ -444,11 +428,6 @@
         ImgAug Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -531,11 +510,6 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pytorch/" title="Index">
-      Index
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
     </a>
@@ -598,18 +572,20 @@
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAAAdditiveGaussianNoise">
-<code>IAAAdditiveGaussianNoise</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAAAdditiveGaussianNoise</strong></code>
+<code>
+<span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mf">2.5500000000000003</span><span class="p">,</span> <span class="mf">12.75</span><span class="p">),</span> <span class="n">per_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L227" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Add gaussian noise to the input image.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -619,7 +595,6 @@
 <td>
 <p>mean of the normal distribution that generates the noise. Default: 0.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>scale</code></td>
@@ -628,7 +603,6 @@
 <p>standard deviation of the normal distribution that generates the noise.
 Default: (0.01 * 255, 0.05 * 255).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -636,22 +610,22 @@ Default: (0.01 * 255, 0.05 * 255).</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image</p>
-</div>
+<p>Targets:
+    image</p>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAAAffine">
-<code>IAAAffine</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAAAffine" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAAAffine</strong></code>
+<code>
+<span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">translate_percent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">translate_px</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rotate</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">shear</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'reflect'</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L293" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAAAffine" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Place a regular grid of points on the input and randomly move the neighbourhood of these point around
 via affine transformations.</p>
@@ -660,10 +634,9 @@ via affine transformations.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -673,32 +646,31 @@ via affine transformations.</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image, mask</p>
-</div>
+<p>Targets:
+    image, mask</p>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAAEmboss">
-<code>IAAEmboss</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAAEmboss" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAAEmboss</strong></code>
+<code>
+<span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">strength</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L142" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAAEmboss" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Emboss the input image and overlays the result with the original image.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -709,7 +681,6 @@ via affine transformations.</p>
 <p>range to choose the visibility of the embossed image. At 0, only the original image is
 visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>strength</code></td>
@@ -717,7 +688,6 @@ visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p>
 <td>
 <p>strength range of the embossing. Default: (0.2, 0.7).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -725,22 +695,22 @@ visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image</p>
-</div>
+<p>Targets:
+    image</p>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAAPerspective">
-<code>IAAPerspective</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAAPerspective" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAAPerspective</strong></code>
+<code>
+<span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">keep_size</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L349" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAAPerspective" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Perform a random four point perspective transform of the input.</p>
 <p>Note: This class introduce interpolation artifacts to mask if it has values other than {0;1}</p>
@@ -748,10 +718,9 @@ visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -762,7 +731,6 @@ visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p>
 <p>standard deviation of the normal distributions. These are used to sample
 the random distances of the subimage's corners from the full image's corners. Default: (0.05, 0.1).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -770,22 +738,22 @@ the random distances of the subimage's corners from the full image's corners. De
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image, mask</p>
-</div>
+<p>Targets:
+    image, mask</p>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAAPiecewiseAffine">
-<code>IAAPiecewiseAffine</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAAPiecewiseAffine" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAAPiecewiseAffine</strong></code>
+<code>
+<span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">nb_rows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nb_cols</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'constant'</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L259" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAAPiecewiseAffine" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Place a regular grid of points on the input and randomly move the neighbourhood of these point around
 via affine transformations.</p>
@@ -794,10 +762,9 @@ via affine transformations.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -807,7 +774,6 @@ via affine transformations.</p>
 <td>
 <p>factor range that determines how far each point is moved. Default: (0.03, 0.05).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>nb_rows</code></td>
@@ -815,7 +781,6 @@ via affine transformations.</p>
 <td>
 <p>number of rows of points that the regular grid should have. Default: 4.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>nb_cols</code></td>
@@ -823,7 +788,6 @@ via affine transformations.</p>
 <td>
 <p>number of columns of points that the regular grid should have. Default: 4.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -831,32 +795,31 @@ via affine transformations.</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image, mask</p>
-</div>
+<p>Targets:
+    image, mask</p>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAASharpen">
-<code>IAASharpen</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAASharpen" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAASharpen</strong></code>
+<code>
+<span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">lightness</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L199" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAASharpen" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Sharpen the input image and overlays the result with the original image.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -867,7 +830,6 @@ via affine transformations.</p>
 <p>range to choose the visibility of the sharpened image. At 0, only the original image is
 visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>lightness</code></td>
@@ -875,7 +837,6 @@ visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p>
 <td>
 <p>range to choose the lightness of the sharpened image. Default: (0.5, 1.0).</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -883,22 +844,22 @@ visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image</p>
-</div>
+<p>Targets:
+    image</p>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.imgaug.transforms.IAASuperpixels">
-<code>IAASuperpixels</code>
-<a class="headerlink" href="#albumentations.imgaug.transforms.IAASuperpixels" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.imgaug.transforms.IAASuperpixels</strong></code>
+<code>
+<span class="p">(</span><span class="n">p_replace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">n_segments</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L171" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.imgaug.transforms.IAASuperpixels" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>Completely or partially transform the input image to its superpixel representation. Uses skimage's version
 of the SLIC algorithm. May be slow.</p>
@@ -906,10 +867,9 @@ of the SLIC algorithm. May be slow.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -920,7 +880,6 @@ of the SLIC algorithm. May be slow.</p>
 <p>defines the probability of any superpixel area being replaced by the superpixel, i.e. by
 the average pixel color within its area. Default: 0.1.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>n_segments</code></td>
@@ -928,7 +887,6 @@ the average pixel color within its area. Default: 0.1.</p>
 <td>
 <p>target number of superpixels to generate. Default: 100.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -936,14 +894,11 @@ the average pixel color within its area. Default: 0.1.</p>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition targets">
-<p class="admonition-title">Targets</p>
-<p>image</p>
-</div>
+<p>Targets:
+    image</p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1023,13 +978,13 @@ the average pixel color within its area. Default: 0.1.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

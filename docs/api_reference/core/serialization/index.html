@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://albumentations.ai/docs/api_reference/core/serialization/" rel="canonical"/>
 <link href="../../../images/logo.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
 <title>Serialization API (core.serialization) - Albumentations Documentation</title>
-<link href="../../../assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,7 +18,6 @@
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="../../../css/ansi-colours.css" rel="stylesheet"/>
-<link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
@@ -340,11 +339,6 @@
         API Reference
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" id="nav-5-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-5-2">
@@ -361,11 +355,6 @@
         Core API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../composition/" title="Composition API (core.composition)">
       Composition API (core.composition)
@@ -457,11 +446,6 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/" title="Index">
-      Index
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../augmentations/transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
     </a>
@@ -501,11 +485,6 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../imgaug/" title="Index">
-      Index
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../imgaug/transforms/" title="Transforms (imgaug.transforms)">
       Transforms (imgaug.transforms)
     </a>
@@ -529,11 +508,6 @@
         PyTorch Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../pytorch/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
@@ -597,8 +571,11 @@
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.core.serialization.SerializableMeta">
-<code>SerializableMeta</code>
-<a class="headerlink" href="#albumentations.core.serialization.SerializableMeta" title="Permanent link">¶</a></h2>
+<code>class <strong>albumentations.core.serialization.SerializableMeta</strong></code>
+<code>
+</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L31" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.serialization.SerializableMeta" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
 <div class="doc doc-contents">
 <p>A metaclass that is used to register classes in <code>SERIALIZABLE_REGISTRY</code> so they can be found later
 while deserializing transformation pipeline using classes full names.</p>
@@ -606,7 +583,7 @@ while deserializing transformation pipeline using classes full names.</p>
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="albumentations.core.serialization.SerializableMeta.__new__">
 <code class="highlight language-python">
-__new__<span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">class_dict</span><span class="p">)</span> </code>
+albumentations.core.serialization.SerializableMeta.__new__<span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">class_dict</span><span class="p">)</span> </code>
 <span class="doc doc-properties">
 <small class="doc doc-property doc-property-special"><code>special</code></small>
 <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
@@ -621,18 +598,18 @@ __new__<span class="p">(</span><span class="bp">cls</span><span class="p">,</spa
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.core.serialization.from_dict">
-<code class="highlight language-python">
-from_dict<span class="p">(</span><span class="n">transform_dict</span><span class="p">,</span> <span class="n">lambda_transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+<code class="highlight language-python">def
+albumentations.core.serialization.from_dict<span class="p">(</span><span class="n">transform_dict</span><span class="p">,</span> <span class="n">lambda_transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L86" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -642,7 +619,6 @@ from_dict<span class="p">(</span><span class="n">transform_dict</span><span clas
 <td>
 <p>A dictionary with serialized transform pipeline.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>lambda_transforms</code></td>
@@ -653,7 +629,6 @@ This dictionary is required when you are restoring a pipeline that contains lamb
 in that dictionary should be named same as <code>name</code> arguments in respective lambda transforms from
 a serialized pipeline.</p>
 </td>
-<td><code>None</code></td>
 </tr>
 </tbody>
 </table>
@@ -661,8 +636,9 @@ a serialized pipeline.</p>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.core.serialization.load">
-<code class="highlight language-python">
-load<span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s1">'json'</span><span class="p">,</span> <span class="n">lambda_transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+<code class="highlight language-python">def
+albumentations.core.serialization.load<span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s1">'json'</span><span class="p">,</span> <span class="n">lambda_transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L138" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Load a serialized pipeline from a json or yaml file and construct a transform pipeline.</p>
@@ -670,10 +646,9 @@ load<span class="p">(</span><span class="n">filepath</span><span class="p">,</sp
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -683,7 +658,6 @@ load<span class="p">(</span><span class="n">filepath</span><span class="p">,</sp
 <td>
 <p>Transform to serialize.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>filepath</code></td>
@@ -691,7 +665,6 @@ load<span class="p">(</span><span class="n">filepath</span><span class="p">,</sp
 <td>
 <p>Filepath to read from.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>data_format</code></td>
@@ -699,7 +672,6 @@ load<span class="p">(</span><span class="n">filepath</span><span class="p">,</sp
 <td>
 <p>Serialization format. Should be either <code>json</code> or 'yaml'.</p>
 </td>
-<td><code>'json'</code></td>
 </tr>
 <tr>
 <td><code>lambda_transforms</code></td>
@@ -710,7 +682,6 @@ This dictionary is required when you are restoring a pipeline that contains lamb
 in that dictionary should be named same as <code>name</code> arguments in respective lambda transforms from
 a serialized pipeline.</p>
 </td>
-<td><code>None</code></td>
 </tr>
 </tbody>
 </table>
@@ -718,8 +689,9 @@ a serialized pipeline.</p>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.core.serialization.save">
-<code class="highlight language-python">
-save<span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s1">'json'</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span> </code>
+<code class="highlight language-python">def
+albumentations.core.serialization.save<span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s1">'json'</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L116" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline, serialize it and save a serialized version to a file
@@ -728,10 +700,9 @@ using either json or yaml format.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -741,7 +712,6 @@ using either json or yaml format.</p>
 <td>
 <p>Transform to serialize.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>filepath</code></td>
@@ -749,7 +719,6 @@ using either json or yaml format.</p>
 <td>
 <p>Filepath to write to.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 <tr>
 <td><code>data_format</code></td>
@@ -757,7 +726,6 @@ using either json or yaml format.</p>
 <td>
 <p>Serialization format. Should be either <code>json</code> or 'yaml'.</p>
 </td>
-<td><code>'json'</code></td>
 </tr>
 <tr>
 <td><code>on_not_implemented_error</code></td>
@@ -767,7 +735,6 @@ using either json or yaml format.</p>
 the <code>to_dict</code> method. If 'raise' then <code>NotImplementedError</code> is raised, if <code>warn</code> then the exception will be
 ignored and no transform arguments will be saved.</p>
 </td>
-<td><code>'raise'</code></td>
 </tr>
 </tbody>
 </table>
@@ -775,8 +742,9 @@ ignored and no transform arguments will be saved.</p>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.core.serialization.to_dict">
-<code class="highlight language-python">
-to_dict<span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span> </code>
+<code class="highlight language-python">def
+albumentations.core.serialization.to_dict<span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L37" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline and convert it to a serializable representation that uses only standard
@@ -785,10 +753,9 @@ python data types: dictionaries, lists, strings, integers, and floats.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -801,7 +768,6 @@ method and <code>on_not_implemented_error</code> equals to 'raise' then <code>No
 If <code>on_not_implemented_error</code> equals to 'warn' then <code>NotImplementedError</code> will be ignored
 but no transform parameters will be serialized.</p>
 </td>
-<td><em>required</em></td>
 </tr>
 </tbody>
 </table>
@@ -882,13 +848,13 @@ but no transform parameters will be serialized.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

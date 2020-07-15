@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://albumentations.ai/docs/" rel="canonical"/>
 <link href="images/logo.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-5.2.2" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
 <title>Albumentations Documentation</title>
-<link href="assets/stylesheets/main.a2408e81.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,7 +18,6 @@
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
 <link href="css/extra.css" rel="stylesheet"/>
 <link href="css/ansi-colours.css" rel="stylesheet"/>
-<link href="https://www.google-analytics.com" rel="preconnect dns-prefetch"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
@@ -174,6 +173,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#getting-started-with-albumentations">
     Getting started with Albumentations
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+    Examples
   </a>
 </li>
 <li class="md-nav__item">
@@ -382,11 +386,6 @@
         API Reference
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="api_reference/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" id="nav-5-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-5-2">
@@ -403,11 +402,6 @@
         Core API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="api_reference/core/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="api_reference/core/composition/" title="Composition API (core.composition)">
       Composition API (core.composition)
@@ -442,11 +436,6 @@
         Augmentations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="api_reference/augmentations/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="api_reference/augmentations/transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
@@ -487,11 +476,6 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="api_reference/imgaug/" title="Index">
-      Index
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="api_reference/imgaug/transforms/" title="Transforms (imgaug.transforms)">
       Transforms (imgaug.transforms)
     </a>
@@ -515,11 +499,6 @@
         PyTorch Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="api_reference/pytorch/" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="api_reference/pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
@@ -576,10 +555,11 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1 id="welcome-to-albumentations-documentation">Welcome to Albumentations documentation<a class="headerlink" href="#welcome-to-albumentations-documentation" title="Permanent link">¶</a></h1>
-<p>Albumentations is a fast and flexible image augmentation library. The library is widely used industry, deep learning research, machine learning competitions, and open source projects.</p>
+<p>Albumentations is a fast and flexible image augmentation library. The library is widely used in industry, deep learning research, machine learning competitions, and open source projects. Albumentations is written in Python, and it is licensed under the MIT license. The source code is available at <a href="https://github.com/albumentations-team/albumentations" target="_blank">https://github.com/albumentations-team/albumentations</a>.</p>
 <p>If you are new to image augmentation, start with articles in the <a href="#introduction-to-image-augmentation">"Introduction to image augmentation"</a> section. They describe what image augmentation is, how it can boost deep neural networks' performance, and why you should use Albumentations.</p>
-<p>Articles in the <a href="#getting-started-with-albumentations">"Getting started with Albumentations"</a> section show how you can use the library for different computer vision tasks: image classification, semantic segmentation, instance segmentation, and object detection.</p>
-<p><a href="#api-reference">"API Reference"</a> contains Albumentations' methods and classes.</p>
+<p>Articles in the <a href="#getting-started-with-albumentations">"Getting started with Albumentations"</a> section show how you can use the library for different computer vision tasks: image classification, semantic segmentation, instance segmentation, and object detection, keypoint detection.</p>
+<p>The <a href="#examples">"Examples"</a> section contains Jupyter Notebooks that demonstrate how to use various features of Albumentations. Each notebook includes a link to Google Colab, where you can run the code by yourself.</p>
+<p><a href="#api-reference">"API Reference"</a> contains description of Albumentations' methods and classes.</p>
 <h2 id="introduction-to-image-augmentation">Introduction to image augmentation<a class="headerlink" href="#introduction-to-image-augmentation" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="introduction/image_augmentation/">What is image augmentation and how it can improve the performance of deep neural networks</a></li>
@@ -596,6 +576,22 @@
 <li><a href="getting_started/simultaneous_augmentation/">Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints</a></li>
 <li><a href="getting_started/transforms_and_targets/">A list of transforms and their supported targets</a></li>
 </ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="/examples/example/">Defining a simple augmentation pipeline for image augmentation</a></li>
+<li><a href="/examples/example_16_bit_tiff/">Working with non-8-bit images</a></li>
+<li><a href="/examples/example_bboxes/">Using Albumentations to augment bounding boxes for object detection tasks</a></li>
+<li><a href="/examples/example_bboxes2/">How to use Albumentations for detection tasks if you need to keep all bounding boxes</a></li>
+<li><a href="/examples/example_kaggle_salt/">Using Albumentations for a semantic segmentation task</a></li>
+<li><a href="/examples/example_keypoints/">Using Albumentations to augment keypoints</a></li>
+<li><a href="/examples/example_multi_target/">Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints</a></li>
+<li><a href="/examples/example_weather_transforms/">Weather augmentations in Albumentations</a></li>
+<li><a href="/examples/migrating_from_torchvision_to_albumentations/">Migrating from torchvision to Albumentations</a></li>
+<li><a href="/examples/replay/">Debugging an augmentation pipeline with ReplayCompose</a></li>
+<li><a href="/examples/serialization/">How to save and load parameters of an augmentation pipeline</a></li>
+<li><a href="/examples/showcase/">Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.</a></li>
+<li><a href="/examples/tensorflow-example/">Using Albumentations with Tensorflow</a></li>
+</ul>
 <h2 id="external-resources">External resources<a class="headerlink" href="#external-resources" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="external_resources/blog_posts_podcasts_talks/">Blog posts, podcasts and talks about Albumentations</a></li>
@@ -608,10 +604,10 @@
 <h2 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="api_reference/">Index</a><ul>
-<li><a href="api_reference/core/">Core API <span><span class="MathJax_Preview">albumentations.core</span><script type="math/tex">albumentations.core</script></span></a></li>
-<li><a href="api_reference/augmentations/">Augmentations <span><span class="MathJax_Preview">albumentations.augmentations</span><script type="math/tex">albumentations.augmentations</script></span></a></li>
-<li><a href="api_reference/imgaug/">ImgAug Helpers <span><span class="MathJax_Preview">albumentations.imgaug</span><script type="math/tex">albumentations.imgaug</script></span></a></li>
-<li><a href="api_reference/pytorch/">PyTorch Helpers <span><span class="MathJax_Preview">albumentations.pytorch</span><script type="math/tex">albumentations.pytorch</script></span></a></li>
+<li><a href="api_reference/core/">Core API (albumentations.core)</a></li>
+<li><a href="api_reference/augmentations/">Augmentations (albumentations.augmentations)</a></li>
+<li><a href="api_reference/imgaug/">ImgAug Helpers (albumentations.imgaug)</a></li>
+<li><a href="api_reference/pytorch/">PyTorch Helpers (albumentations.pytorch)</a></li>
 </ul>
 </li>
 </ul>
@@ -674,13 +670,13 @@
 </footer>
 </div>
 <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
-<script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
