@@ -1,3 +1,2 @@
-"""([^^]) → """\n    $1
 \(int, int\) → [int, int]
 \(float, float\) → [float, float]
