@@ -573,7 +573,7 @@
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform">
 <code>class <strong>albumentations.core.transforms_interface.BasicTransform</strong></code>
 <code>
-<span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L65" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a></h2>
+<span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L63" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
@@ -585,14 +585,28 @@ albumentations.core.transforms_interface.BasicTransform.add_targets<span class="
 <a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.add_targets" title="Permanent link">¶</a></h3>
 <div class="doc doc-contents">
 <p>Add targets to transform them the same way as one of existing targets
-    ex: {'target_image': 'image'}
-    ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}
-    by the way you must have at least one object with key 'image'</p>
-<div class="codehilite">
-<pre><span></span><code><span class="n">Args</span><span class="o">:</span>
-    <span class="n">additional_targets</span> <span class="o">(</span><span class="n">dict</span><span class="o">):</span> <span class="n">keys</span> <span class="o">-</span> <span class="k">new</span> <span class="n">target</span> <span class="n">name</span><span class="o">,</span> <span class="n">values</span> <span class="o">-</span> <span class="n">old</span> <span class="n">target</span> <span class="n">name</span><span class="o">.</span> <span class="n">ex</span><span class="o">:</span> <span class="o">{</span><span class="s1">'image2'</span><span class="o">:</span> <span class="s1">'image'</span><span class="o">}</span>
-</code></pre>
-</div>
+ex: {'target_image': 'image'}
+ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}
+by the way you must have at least one object with key 'image'</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>additional_targets</code></td>
+<td><code>dict</code></td>
+<td>
+<p>keys - new target name, values - old target name. ex: {'image2': 'image'}</p>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -602,7 +616,7 @@ albumentations.core.transforms_interface.BasicTransform.add_targets<span class="
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.DualTransform">
 <code>class <strong>albumentations.core.transforms_interface.DualTransform</strong></code>
 <code>
-</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L216" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a></h2>
+</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L210" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
@@ -615,7 +629,7 @@ albumentations.core.transforms_interface.BasicTransform.add_targets<span class="
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.ImageOnlyTransform">
 <code>class <strong>albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <code>
-</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L240" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a></h2>
+</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L232" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
@@ -628,7 +642,7 @@ albumentations.core.transforms_interface.BasicTransform.add_targets<span class="
 <h2 class="doc doc-heading" id="albumentations.core.transforms_interface.NoOp">
 <code>class <strong>albumentations.core.transforms_interface.NoOp</strong></code>
 <code>
-</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L256" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a></h2>
+</code> <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L246" target="_blank">[view source on GitHub]</a></span> <a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
