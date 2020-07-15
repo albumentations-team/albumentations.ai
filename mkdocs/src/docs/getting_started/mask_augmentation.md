@@ -79,3 +79,7 @@ transformed = transform(image=image, masks=masks)
 transformed_image = transformed['image']
 transformed_masks= transformed['masks']
 ```
+
+## Examples
+- [Using Albumentations for a semantic segmentation task](/examples/example_kaggle_salt/)
+- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](/examples/showcase/)

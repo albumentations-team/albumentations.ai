@@ -213,3 +213,6 @@ transformed_image = transformed['image']
 
     ![HorizontalFlip may make keypoints' labels incorrect](../images/getting_started/augmenting_keypoints/applying_horizontal_flip_to_keypoints.jpg "HorizontalFlip may make keypoints' labels incorrect")
     `HorizontalFlip` may make keypoints' labels incorrect
+
+## Examples
+- [Using Albumentations to augment keypoints](/examples/example_keypoints/)

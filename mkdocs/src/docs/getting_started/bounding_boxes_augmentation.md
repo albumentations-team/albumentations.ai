@@ -263,3 +263,8 @@ transformed_bboxes = transformed['bboxes']
 transformed_class_labels = transformed['class_labels']
 transformed_class_categories = transformed['class_categories']
 ```
+
+## Examples
+- [Using Albumentations to augment bounding boxes for object detection tasks](/examples/example_bboxes/)
+- [How to use Albumentations for detection tasks if you need to keep all bounding boxes](/examples/example_bboxes2/)
+- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](/examples/showcase/)
