@@ -12,12 +12,14 @@ plugins:
           rendering:
             show_source: false
             show_if_no_docstring: false
+            show_object_full_path: true
           selection:
             docstring_style: google  # this is the default
             docstring_options:
-              replace_admonitions: yes
+              replace_admonitions: no
       watch:
         - /albumentations
+      custom_templates: mkdocstrings_theme
   - mkdocs-simple-hooks:
       hooks:
         on_pre_page: "hooks:on_pre_page"

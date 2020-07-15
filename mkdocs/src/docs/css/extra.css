@@ -171,3 +171,45 @@ p img {
   white-space: pre-wrap;
   word-break: keep-all;
 }
+
+.doc-heading {
+  background: rgba(68,138,255,.1);
+  border-top: .2rem solid #448aff;
+}
+
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+   display: table;
+}
+
+.doc-object {
+  margin-bottom: 3.5rem;
+}
+
+.doc-heading code {
+  font-size: 0.65em;
+}
+
+.doc-github-link {
+  font-size: 0.9rem;
+}
+
+.md-typeset__table code {
+  font-size: 1.1em
+}
+
+.md-typeset__table p {
+  font-size: 1.1em
+}
+
+.md-typeset__table th {
+  font-size: 1.1em
+}
+
+.md-typeset table:not([class]) td {
+  padding: .2rem .8rem;
+  vertical-align: middle;
+}

@@ -1,0 +1,19 @@
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Name</th>
+      <th style="width: 20%;">Type</th>
+      <th style="width: 60%;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for parameter in parameters %}
+      <tr>
+        <td><code>{{ parameter.name }}</code></td>
+        <td><code>{{ parameter.annotation }}</code></td>
+        <td>{{ parameter.description|convert_markdown }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

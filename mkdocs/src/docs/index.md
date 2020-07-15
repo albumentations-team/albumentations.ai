@@ -32,7 +32,7 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 
 ## API Reference
 - [Index](api_reference/index.md)
-    - [Core API \(albumentations.core\)](api_reference/core/index.md)
-    - [Augmentations \(albumentations.augmentations\)](api_reference/augmentations/index.md)
-    - [ImgAug Helpers \(albumentations.imgaug\)](api_reference/imgaug/index.md)
-    - [PyTorch Helpers \(albumentations.pytorch\)](api_reference/pytorch/index.md)
+    - [Core API (albumentations.core)](api_reference/core/index.md)
+    - [Augmentations (albumentations.augmentations)](api_reference/augmentations/index.md)
+    - [ImgAug Helpers (albumentations.imgaug)](api_reference/imgaug/index.md)
+    - [PyTorch Helpers (albumentations.pytorch)](api_reference/pytorch/index.md)

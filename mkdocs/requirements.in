@@ -3,8 +3,9 @@ mkdocs-material
 mknotebooks
 Pygments
 mkdocs-awesome-pages-plugin
-mkdocstrings
 mkdocs-simple-hooks
 mkdocs-macros-plugin
 mkdocs-exclude
 beautifulsoup4
+git+https://github.com/pawamoy/pytkdocs.git
+mkdocstrings
