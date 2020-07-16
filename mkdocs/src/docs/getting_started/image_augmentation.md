@@ -132,7 +132,7 @@ another_transformed_image = transform(image=another_image)["image"]
     ![Passing the same image multiple times to `transform` will produce different output images](../images/getting_started/augmenting_images/transform_multiple_times.jpg "Passing the same image multiple times to `transform` will produce different output images")
 
 ## Examples
-- [Defining a simple augmentation pipeline for image augmentation](/examples/example/)
-- [Working with non-8-bit images](/examples/example_16_bit_tiff/)
-- [Weather augmentations in Albumentations](/examples/example_weather_transforms/)
-- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](/examples/showcase/)
+- [Defining a simple augmentation pipeline for image augmentation](../../examples/example/)
+- [Working with non-8-bit images](../../examples/example_16_bit_tiff/)
+- [Weather augmentations in Albumentations](../../examples/example_weather_transforms/)
+- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](../../examples/showcase/)

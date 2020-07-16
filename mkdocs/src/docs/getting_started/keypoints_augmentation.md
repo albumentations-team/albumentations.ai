@@ -215,4 +215,4 @@ transformed_image = transformed['image']
     `HorizontalFlip` may make keypoints' labels incorrect
 
 ## Examples
-- [Using Albumentations to augment keypoints](/examples/example_keypoints/)
+- [Using Albumentations to augment keypoints](../../examples/example_keypoints/)

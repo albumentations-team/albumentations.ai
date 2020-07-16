@@ -51,4 +51,4 @@ transformed_keypoints_classes = transformed["keypoints_classes"]
 **The augmented version of the image and its targets**
 
 ## Examples
-- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](/examples/showcase/)
+- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](../../examples/showcase/)

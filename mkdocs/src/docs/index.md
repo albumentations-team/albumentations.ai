@@ -8,7 +8,7 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 
 The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate how to use various features of Albumentations. Each notebook includes a link to Google Colab, where you can run the code by yourself.
 
-["API Reference"](#api-reference) contains description of Albumentations' methods and classes.
+["API Reference"](#api-reference) contains the description of Albumentations' methods and classes.
 
 ## Introduction to image augmentation
 - [What is image augmentation and how it can improve the performance of deep neural networks](introduction/image_augmentation.md)
@@ -25,19 +25,19 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [A list of transforms and their supported targets](getting_started/transforms_and_targets.md)
 
 ## Examples
-- [Defining a simple augmentation pipeline for image augmentation](/examples/example/)
-- [Working with non-8-bit images](/examples/example_16_bit_tiff/)
-- [Using Albumentations to augment bounding boxes for object detection tasks](/examples/example_bboxes/)
-- [How to use Albumentations for detection tasks if you need to keep all bounding boxes](/examples/example_bboxes2/)
-- [Using Albumentations for a semantic segmentation task](/examples/example_kaggle_salt/)
-- [Using Albumentations to augment keypoints](/examples/example_keypoints/)
-- [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](/examples/example_multi_target/)
-- [Weather augmentations in Albumentations](/examples/example_weather_transforms/)
-- [Migrating from torchvision to Albumentations](/examples/migrating_from_torchvision_to_albumentations/)
-- [Debugging an augmentation pipeline with ReplayCompose](/examples/replay/)
-- [How to save and load parameters of an augmentation pipeline](/examples/serialization/)
-- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](/examples/showcase/)
-- [Using Albumentations with Tensorflow](/examples/tensorflow-example/)
+- [Defining a simple augmentation pipeline for image augmentation](examples/example/)
+- [Working with non-8-bit images](examples/example_16_bit_tiff/)
+- [Using Albumentations to augment bounding boxes for object detection tasks](examples/example_bboxes/)
+- [How to use Albumentations for detection tasks if you need to keep all bounding boxes](examples/example_bboxes2/)
+- [Using Albumentations for a semantic segmentation task](examples/example_kaggle_salt/)
+- [Using Albumentations to augment keypoints](examples/example_keypoints/)
+- [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](examples/example_multi_target/)
+- [Weather augmentations in Albumentations](examples/example_weather_transforms/)
+- [Migrating from torchvision to Albumentations](examples/migrating_from_torchvision_to_albumentations/)
+- [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
+- [How to save and load parameters of an augmentation pipeline](examples/serialization/)
+- [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](examples/showcase/)
+- [Using Albumentations with Tensorflow](examples/tensorflow-example/)
 
 
 ## External resources
