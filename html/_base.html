@@ -44,19 +44,14 @@
                         <li class="nav-item u-header__nav-item">
                             <a class="nav-link u-header__nav-link" href="{{ base_url }}/">Home</a>
                         </li>
-                        {#
                         <li class="nav-item u-header__nav-item">
-                            <a class="nav-link u-header__nav-link" href="{{ base_url }}/quickstart">Quickstart</a>
+                            <a class="nav-link u-header__nav-link" href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}">Docs</a>
                         </li>
-                        #}
                         <li class="nav-item u-header__nav-item">
                             <a class="nav-link u-header__nav-link" href="{{ base_url }}/whos_using">Who's using Albumentations</a>
                         </li>
                         <li class="nav-item u-header__nav-item">
                             <a class="nav-link u-header__nav-link" href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
-                        </li>
-                        <li class="nav-item u-header__nav-item">
-                            <a class="nav-link u-header__nav-link" href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}">Docs</a>
                         </li>
                         <li class="nav-item u-header__nav-item">
                             <a class="nav-link u-header__nav-link" href="{{ base_url }}/team">Team</a>
