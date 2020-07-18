@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://albumentations.ai/docs/getting_started/transforms_and_targets/" rel="canonical"/>
+<link href="https://albumentations.ai/docs/getting_started/setting_probabilities/" rel="canonical"/>
 <link href="../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
-<title>A list of transforms and their supported targets - Albumentations Documentation</title>
+<title>Setting probabilities for transforms in an augmentation pipeline - Albumentations Documentation</title>
 <link href="../../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
@@ -26,7 +26,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#a-list-of-transforms-and-their-supported-targets">
+<a class="md-skip" href="#setting-probabilities-for-transforms-in-an-augmentation-pipeline">
           Skip to content
         </a>
 </div>
@@ -231,16 +231,21 @@
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transforms_and_targets/" title="A list of transforms and their supported targets">
+      A list of transforms and their supported targets
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-        A list of transforms and their supported targets
+        Setting probabilities for transforms in an augmentation pipeline
         <span class="md-nav__icon md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
 </span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="A list of transforms and their supported targets">
-      A list of transforms and their supported targets
+<a class="md-nav__link md-nav__link--active" href="./" title="Setting probabilities for transforms in an augmentation pipeline">
+      Setting probabilities for transforms in an augmentation pipeline
     </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -251,22 +256,27 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pixel-level-transforms">
-    Pixel-level transforms
+<a class="md-nav__link" href="#p1">
+    p1
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spatial-level-transforms">
-    Spatial-level transforms
+<a class="md-nav__link" href="#p2">
+    p2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p3">
+    p3
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculations">
+    Example calculations
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
-      Setting probabilities for transforms in an augmentation pipeline
-    </a>
 </li>
 </ul>
 </nav>
@@ -536,305 +546,57 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/transforms_and_targets.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/setting_probabilities.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="a-list-of-transforms-and-their-supported-targets">A list of transforms and their supported targets<a class="headerlink" href="#a-list-of-transforms-and-their-supported-targets" title="Permanent link">¶</a></h1>
-<p>We can split all transforms into two groups: pixel-level transforms, and spatial-level transforms. Pixel-level transforms will change just an input image and will leave any additional targets such as masks, bounding boxes, and keypoints unchanged. Spatial-level transforms will simultaneously change both an input image as well as additional targets such as masks, bounding boxes, and keypoints. For the additional information, please refer to <a href="../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/#the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks">this section of "Why you need a dedicated library for image augmentation"</a>.</p>
-<h2 id="pixel-level-transforms">Pixel-level transforms<a class="headerlink" href="#pixel-level-transforms" title="Permanent link">¶</a></h2>
-<p>Here is a list of all available pixel-level transforms. You can apply a spatial-level transform to any target, and under the hood, the transform will change only the input image and return any other input targets such as masks, bounding boxes, or keypoints unchanged.</p>
+<h1 id="setting-probabilities-for-transforms-in-an-augmentation-pipeline">Setting probabilities for transforms in an augmentation pipeline<a class="headerlink" href="#setting-probabilities-for-transforms-in-an-augmentation-pipeline" title="Permanent link">¶</a></h1>
+<p>Each augmentation in Albumentations has a parameter named <code>p</code> that sets the probability of applying that augmentation to input data.</p>
+<p>The following augmentations have the default value of <code>p</code> set 1 (which means that by default they will be applied to each instance of input data): <code>Compose</code>, <code>ReplayCompose</code>, <code>CenterCrop</code>, <code>Crop</code>, <code>CropNonEmptyMaskIfExists</code>, <code>FromFloat</code>, <code>CenterCrop</code>, <code>Crop</code>, <code>CropNonEmptyMaskIfExists</code>, <code>FromFloat</code>, <code>IAACropAndPad</code>, <code>Lambda</code>, <code>LongestMaxSize</code>, <code>Normalize</code>, <code>PadIfNeeded</code>, <code>RandomCrop</code>, <code>RandomCropNearBBox</code>, <code>RandomResizedCrop</code>, <code>RandomSizedBBoxSafeCrop</code>, <code>RandomSizedCrop</code>, <code>Resize</code>, <code>SmallestMaxSize</code>, <code>ToFloat</code>.</p>
+<p>All other augmentations have the default value of <code>p</code> set 0.5, which means that by default, they will be applied to 50% of instances of input data.</p>
+<p>Let's take a look at the example:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="mf">0.85</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="mf">0.75</span>
+
+
+<span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">RandomRotate90</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="n">p2</span><span class="p">),</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">OneOf</span><span class="p">([</span>
+        <span class="n">A</span><span class="o">.</span><span class="n">IAAAdditiveGaussianNoise</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.9</span><span class="p">),</span>
+        <span class="n">A</span><span class="o">.</span><span class="n">GaussNoise</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.6</span><span class="p">),</span>
+    <span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="n">p3</span><span class="p">)</span>
+<span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="n">p1</span><span class="p">)</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">'some/image.jpg'</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+
+<span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
+<span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
+</code></pre></div>
+<p>We declare an augmentation pipeline. In this pipeline, we use three placeholder values to set probabilities: <code>p1</code>, <code>p2</code>, and <code>p3</code>. Let's take a closer look at them.</p>
+<h2 id="p1"><code>p1</code><a class="headerlink" href="#p1" title="Permanent link">¶</a></h2>
+<p><code>p1</code> sets the probability that the augmentation pipeline will apply augmentations at all.</p>
+<p>If <code>p1</code> is set to 0, then augmentations inside <code>Compose</code>
+will never be applied to the input image, so the augmentation pipeline will always return the input image unchanged.</p>
+<p>If <code>p1</code> is set to 1, then all augmentations inside <code>Compose</code> will have a chance to be applied. The example above contains two augmentations inside <code>Compose</code>: <code>RandomRotate90</code> and the <code>OneOf</code> block with two child augmentations (more on their probabilities later). Any value of <code>p1</code> between 0 and 1 means that augmentations inside <code>Compose</code> could be applied with the probability between 0 and 100%.</p>
+<p>If <code>p1</code> equals to 1 or <code>p1</code> is less than 1, but the random generator decides to apply augmentations inside Compose probabilities <code>p2</code> and <code>p3</code> come into play.</p>
+<h2 id="p2"><code>p2</code><a class="headerlink" href="#p2" title="Permanent link">¶</a></h2>
+<p>Each augmentation inside <code>Compose</code> has a probability of being applied. <code>p2</code> sets the probability of applying <code>RandomRotate90</code>. In the example above, <code>p2</code> equals 0.85, so <code>RandomRotate90</code> has an 85% chance to be applied to the input image.</p>
+<h2 id="p3"><code>p3</code><a class="headerlink" href="#p3" title="Permanent link">¶</a></h2>
+<p><code>p3</code> sets the probability of applying the <code>OneOf</code> block. If the random generator decided to apply <code>RandomRotate90</code> at the previous step, then <code>OneOf</code> will receive data augmented by it. If the random generator decided not to apply <code>RandomRotate90</code> then <code>OneOf</code> will receive the input data (that was passed to <code>Compose</code>) since <code>RandomRotate90</code> is skipped.</p>
+<p>The <code>OneOf</code>block applies one of the augmentations inside it. That means that if the random generator chooses to apply <code>OneOf</code> then one child augmentation from it will be applied to the input data.</p>
+<p>To decide which augmentation within the <code>OneOf</code> block is used, Albumentations uses the following rule:</p>
+<p>The <code>OneOf</code> block normalizes the probabilities of all augmentations inside it, so their probabilities sum up to 1. Next, <code>OneOf</code> chooses one of the augmentations inside it with a chance defined by its normalized probability and applies it to the input data. In the example above <code>IAAAdditiveGaussianNoise</code> has probability 0.9 and <code>GaussNoise</code> probability 0.6. After normalization, they become 0.6 and 0.4. Which means that <code>OneOf</code> will decide that it should use <code>IAAAdditiveGaussianNoise</code> with probability 0.6 and <code>GaussNoise</code> otherwise.</p>
+<h2 id="example-calculations">Example calculations<a class="headerlink" href="#example-calculations" title="Permanent link">¶</a></h2>
+<p>Thus, each augmentation in the example above will be applied with the probability:</p>
 <ul>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Blur">Blur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CLAHE">CLAHE</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelDropout">ChannelDropout</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">ChannelShuffle</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CoarseDropout">CoarseDropout</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Downscale">Downscale</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Equalize">Equalize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FancyPCA">FancyPCA</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FromFloat">FromFloat</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise">GaussNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur">GaussianBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GlassBlur">GlassBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue">HueSaturationValue</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise">IAAAdditiveGaussianNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAEmboss">IAAEmboss</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAASharpen">IAASharpen</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAASuperpixels">IAASuperpixels</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ISONoise">ISONoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">ImageCompression</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">InvertImg</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MedianBlur">MedianBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MotionBlur">MotionBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MultiplicativeNoise">MultiplicativeNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Normalize">Normalize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Posterize">Posterize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RGBShift">RGBShift</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast">RandomBrightnessContrast</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomFog">RandomFog</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGamma">RandomGamma</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRain">RandomRain</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomShadow">RandomShadow</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSnow">RandomSnow</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSunFlare">RandomSunFlare</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Solarize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToFloat">ToFloat</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToGray">ToGray</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToSepia">ToSepia</a></li>
+<li><code>RandomRotate90</code>: <code>p1</code> * <code>p2</code></li>
+<li><code>IAAAdditiveGaussianNoise</code>: <code>p1</code> * <code>p3</code> * (0.9 / (0.9 + 0.6))</li>
+<li><code>GaussianNoise</code>: <code>p1</code> * <code>p3</code> * (0.6 / (0.9 + 0.6))</li>
 </ul>
-<h2 id="spatial-level-transforms">Spatial-level transforms<a class="headerlink" href="#spatial-level-transforms" title="Permanent link">¶</a></h2>
-<p>Here is a table with spatial-level transforms and targets they support. If you try to apply a spatial-level transform to an unsupported target, Albumentations will raise an error.</p>
-<table>
-<thead>
-<tr>
-<th>Transform</th>
-<th align="center">Image</th>
-<th align="center">Masks</th>
-<th align="center">BBoxes</th>
-<th align="center">Keypoints</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CenterCrop">CenterCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Crop">Crop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists">CropNonEmptyMaskIfExists</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ElasticTransform">ElasticTransform</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Flip">Flip</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GridDistortion">GridDistortion</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GridDropout">GridDropout</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HorizontalFlip">HorizontalFlip</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAffine">IAAAffine</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAACropAndPad">IAACropAndPad</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAFliplr">IAAFliplr</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAFlipud">IAAFlipud</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAPerspective">IAAPerspective</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAPiecewiseAffine">IAAPiecewiseAffine</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Lambda">Lambda</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.LongestMaxSize">LongestMaxSize</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MaskDropout">MaskDropout</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>NoOp</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.OpticalDistortion">OpticalDistortion</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.PadIfNeeded">PadIfNeeded</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCrop">RandomCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCropNearBBox">RandomCropNearBBox</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGridShuffle">RandomGridShuffle</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomResizedCrop">RandomResizedCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRotate90">RandomRotate90</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomScale">RandomScale</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop">RandomSizedBBoxSafeCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedCrop">RandomSizedCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Resize">Resize</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Rotate">Rotate</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">ShiftScaleRotate</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.SmallestMaxSize">SmallestMaxSize</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Transpose">Transpose</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.VerticalFlip">VerticalFlip</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-</tbody>
-</table>
 </article>
 </div>
 </div>
@@ -866,7 +628,7 @@
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../simultaneous_augmentation/" rel="prev" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../transforms_and_targets/" rel="prev" title="A list of transforms and their supported targets">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -875,18 +637,18 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
+                A list of transforms and their supported targets
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../setting_probabilities/" rel="next" title="Setting probabilities for transforms in an augmentation pipeline">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../examples/example/" rel="next" title="Defining a simple augmentation pipeline for image augmentation">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Setting probabilities for transforms in an augmentation pipeline
+                Defining a simple augmentation pipeline for image augmentation
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
