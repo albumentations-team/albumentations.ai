@@ -36,27 +36,6 @@ p img {
   margin: 0 auto;
 }
 
-
-.algolia-autocomplete .ds-dropdown-menu {
-  width: 60rem;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  font-size: 1.75em
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-  font-size: 1.2em
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--title {
-  font-size: 1.4em
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--text {
-  font-size: 1.3em
-}
-
 .run-in-colab-button a {
   width: 15rem;
   color: #333;

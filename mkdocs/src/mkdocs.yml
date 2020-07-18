@@ -26,6 +26,8 @@ plugins:
         on_page_content: "hooks:on_page_content"
         on_nav: "hooks:on_nav"
   - macros
+  - search:
+      prebuild_index: python
 
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
@@ -52,11 +54,9 @@ theme:
   favicon: images/logo.png
 
 extra_css:
-  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
   - css/extra.css
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
   - js/extra.js
 
