@@ -58,7 +58,6 @@ extra_css:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
-  - js/extra.js
 
 repo_name: albumentations
 repo_url: https://github.com/albumentations-team/albumentations
