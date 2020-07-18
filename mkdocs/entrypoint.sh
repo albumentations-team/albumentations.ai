@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-mkdocs $@
+if [[ -z "${CONFIG_FILE}" ]]; then
+    mkdocs $@
+else
+    mkdocs  $@ --config-file ${CONFIG_FILE}
+fi

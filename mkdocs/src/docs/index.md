@@ -8,6 +8,7 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 
 The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate how to use various features of Albumentations. Each notebook includes a link to Google Colab, where you can run the code by yourself.
 
+
 ["API Reference"](#api-reference) contains the description of Albumentations' methods and classes.
 
 ## Introduction to image augmentation
@@ -23,6 +24,8 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Keypoints augmentation](getting_started/keypoints_augmentation.md)
 - [Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints](getting_started/simultaneous_augmentation.md)
 - [A list of transforms and their supported targets](getting_started/transforms_and_targets.md)
+- [Setting probabilities for transforms in an augmentation pipeline
+](getting_started/setting_probabilities.md)
 
 ## Examples
 - [Defining a simple augmentation pipeline for image augmentation](examples/example/)
@@ -38,7 +41,6 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](examples/showcase/)
 - [Using Albumentations with Tensorflow](examples/tensorflow-example/)
-
 
 ## External resources
 - [Blog posts, podcasts and talks about Albumentations](external_resources/blog_posts_podcasts_talks.md)

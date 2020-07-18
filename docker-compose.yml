@@ -45,6 +45,7 @@ services:
     tty: true
     environment:
       - GOOGLE_ANALYTICS_TID
+      - CONFIG_FILE
     volumes:
       - ./mkdocs/src:/mkdocs/src
       - /mkdocs/src/docs/examples/

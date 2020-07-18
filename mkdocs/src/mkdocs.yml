@@ -27,7 +27,6 @@ plugins:
         on_nav: "hooks:on_nav"
   - macros
 
-
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
   - auto
