@@ -8,7 +8,6 @@ Articles in the ["Getting started with Albumentations"](#getting-started-with-al
 
 The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate how to use various features of Albumentations. Each notebook includes a link to Google Colab, where you can run the code by yourself.
 
-
 ["API Reference"](#api-reference) contains the description of Albumentations' methods and classes.
 
 ## Introduction to image augmentation
@@ -47,6 +46,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Books that mention Albumentations](external_resources/books.md)
 
 ## Other topics
+- [Frequently Asked Questions](faq.md)
 - [Contributing](contributing.md)
 
 ## API Reference

@@ -3,6 +3,7 @@ arrange:
   - introduction
   - getting_started
   - examples
+  - faq.md
   - external_resources
   - api_reference
   - contributing.md
