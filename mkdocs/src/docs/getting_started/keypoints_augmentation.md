@@ -54,7 +54,7 @@ The process of augmenting keypoints looks very similar to the bounding boxes aug
 
 ## Step 1. Import the required libraries.
 
-``` python
+```python
 import albumentations as A
 import cv2
 ```
@@ -63,7 +63,7 @@ import cv2
 
 Here an example of a minimal declaration of an augmentation pipeline that works with keypoints.
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=330, height=330),
     A.RandomBrightnessContrast(p=0.2),
@@ -76,7 +76,7 @@ Besides `format`, `A.KeypointParams` supports a few more settings.
 
 Here is an example of `Compose` that shows all available settings with `A.KeypointParams`
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=330, height=330),
     A.RandomBrightnessContrast(p=0.2),
@@ -99,7 +99,7 @@ This setting doesn't affect `xy` and `yx` formats, because those formats don't u
 
 Read an image from the disk.
 
-``` python
+```python
 image = cv2.imread("/path/to/image.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ```
@@ -115,7 +115,7 @@ Let's say you have an example image with five keypoints.
 
 A list with those five keypoints' coordinates in the `xy` format will look the following:
 
-``` python
+```python
 keypoints = [
     (264, 203),
     (86, 88),
@@ -125,7 +125,7 @@ keypoints = [
 ```
 Then you pass those keypoints to the `transform` function along with the image and receive the augmented versions of image and keypoints.
 
-``` python
+```python
 transformed = transform(image=image, keypoints=keypoints)
 transformed_image = transformed['image']
 transformed_keypoints = transformed['keypoints']
@@ -142,7 +142,7 @@ If you set `remove_invisible` to `False` in `keypoint_params`, then Albumentatio
 
 If keypoints have associated class labels, you need to create a list that contains those labels:
 
-``` python
+```python
 class_labels = [
     'left_elbow',
     'right_elbow',
@@ -157,7 +157,7 @@ Also, you need to declare the name of the argument to `transform` that will cont
 For example, we could use the `class_labels` name for the argument with labels.
 
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=330, height=330),
     A.RandomBrightnessContrast(p=0.2),
@@ -167,7 +167,7 @@ transform = A.Compose([
 
 Next, you pass both keypoints' coordinates and class labels to `transform`.
 
-``` python
+```python
 
 transformed = transform(image=image, keypoints=keypoints, class_labels=class_labels)
 transformed_image = transformed['image']
@@ -177,7 +177,7 @@ transformed_class_labels = transformed['class_labels']
 
 Note that `label_fields` expects a list, so you can set multiple fields that contain labels for your keypoints. So if you declare Compose like
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=330, height=330),
     A.RandomBrightnessContrast(p=0.2),
@@ -187,7 +187,7 @@ transform = A.Compose([
 
 you can use those multiple arguments to pass info about class labels, like
 
-``` python
+```python
 class_labels = [
     'left_elbow',
     'right_elbow',

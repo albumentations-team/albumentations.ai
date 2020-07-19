@@ -11,13 +11,13 @@ We can divide the process of image augmentation into four steps:
 
 - Import Albumentations
 
-``` python
+```python
 import albumentations as A
 ```
 
 - Import a library to read images from the disk. In this example, we will use [OpenCV](https://opencv.org/). It is an open-source computer vision library that supports many image formats. Albumentations has OpenCV as a dependency, so you already have OpenCV installed.
 
-``` python
+```python
 import cv2
 ```
 
@@ -27,7 +27,7 @@ To define an augmentation pipeline, you need to create an instance of the `Compo
 
  Let's look at an example:
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=256, height=256),
     A.HorizontalFlip(p=0.5),
@@ -56,13 +56,13 @@ To read images from the disk, you can use [OpenCV](https://opencv.org/) - a popu
 
 To import OpenCV
 
-``` python
+```python
 import cv2
 ```
 
 To read an image with OpenCV
 
-``` python
+```python
 
 image = cv2.imread("/path/to/image.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -83,13 +83,13 @@ Note the usage of `cv2.cvtColor`. [For historical reasons](https://www.learnopen
 
     - Import Pillow and NumPy (we need NumPy to convert a Pillow image to a NumPy array. NumPy is already installed along with Albumentations).
 
-    ``` python
+    ```python
     from PIL import Image
     import numpy as np
     ```
 
     - Read an image with Pillow and convert it to a NumPy array.
-    ``` python
+    ```python
     pillow_image = Image.open("image.jpg")
     image = np.array(pillow_image)
     ```
@@ -100,27 +100,27 @@ Note the usage of `cv2.cvtColor`. [For historical reasons](https://www.learnopen
 
 To pass an image to the augmentation pipeline you need to call the `transform` function created by a call to `A.Compose` at Step 2. In the `image` argument to that function, you need to pass an image that you want to augment.
 
-``` python
+```python
 transformed = transform(image=image)
 ```
 
 `transform` will return a dictionary with a single key `image`. Value at that key will contain an augmented image.
 
-``` python
+```python
 transformed_image = transformed["image"]
 ```
 
 To augment the next image, you need to call `transform` again and pass a new image as the `image` argument:
 
 
-``` python
+```python
 another_transformed_image = transform(image=another_image)["image"]
 ```
 
 !!! note ""
     Each augmentation will change the input image with the probability set by the parameter `p`. Also, many augmentations have parameters that control the magnitude of changes that will be applied to an image. For example, `A.RandomBrightnessContrast` has two parameters: `brightness_limit` that controls the magnitude of adjusting brightness and `contrast_limit` that controls the magnitude of adjusting contrast. The bigger the value, the more the augmentation will change an image. During augmentation, a magnitude of the transformation is sampled from a uniform distribution limited by `brightness_limit` and `contrast_limit`. That means that if you make multiple calls to `transform` with the same input image, you will get a different output image each time.
 
-    ``` python
+    ```python
     transform = A.Compose([
         A.RandomBrightnessContrast(brightness_limit=1, contrast_limit=1, p=1.0),
     ])

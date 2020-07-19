@@ -15,7 +15,7 @@ The process of augmenting images and masks looks very similar to the [regular im
 
 [Image augmentation for classification](../getting_started/image_augmentation.md) described Steps 1 and 2 in great detail. These are the same steps for the simultaneous augmentation of images and masks.
 
-``` python
+```python
 import albumentations as A
 import cv2
 
@@ -30,7 +30,7 @@ transform = A.Compose([
 
 - Reading an image
 
-``` python
+```python
 image = cv2.imread("/path/to/image.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ```
@@ -38,13 +38,13 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 - For semantic segmentation, you usually read one mask per image. Albumentations expects the mask to be a NumPy array. The height and width of the mask should have the same values as the height and width of the image.
 
 
-``` python
+```python
 mask = cv2.imread("/path/to/mask.png")
 ```
 
 - For instance segmentation, you sometimes need to read multiple masks per image. Then you create a list that contains all the masks.
 
-``` python
+```python
 mask_1 = cv2.imread("/path/to/mask_1.png")
 mask_2 = cv2.imread("/path/to/mask_2.png")
 mask_3 = cv2.imread("/path/to/mask_3.png")
@@ -60,7 +60,7 @@ masks = [mask_1, mask_2, mask_3]
 
 If the image has one associated mask, you need to call `transform` with two arguments: `image` and `mask`. In `image` you should pass the input image, in `mask` you should pass the output mask. `transform` will return a dictionary with two keys: `image` will contain the augmented image, and `mask` will contain the augmented mask.
 
-``` python
+```python
 transformed = transform(image=image, mask=mask)
 transformed_image = transformed['image']
 transformed_mask = transformed['mask']
@@ -74,7 +74,7 @@ transformed_mask = transformed['mask']
 
 If the image has multiple associated masks, you should use the `masks` argument instead of `mask`. In `masks` you should pass a list of masks.
 
-``` python
+```python
 transformed = transform(image=image, masks=masks)
 transformed_image = transformed['image']
 transformed_masks= transformed['masks']

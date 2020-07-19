@@ -4,7 +4,7 @@ At first glance, image augmentations look very simple; you apply basic transform
 
 There are a lot of libraries that could do such image transformations. Here is an example of how you could use [Pillow](https://pillow.readthedocs.io/), a popular image processing library for Python, to make simple augmentations.
 
-``` python
+```python
 from PIL import Image, ImageEnhance
 
 image = Image.open("parrot.jpg")
@@ -72,7 +72,7 @@ Usually, you want to apply not a single augmentation, but a set of augmentations
 
 Here is an example definition of an augmentation pipeline. This pipeline will first crop a random 512px x 512px part of the input image. Then with probability 30%, it will randomly change brightness and contrast of that crop. Finally, with probability 30%, it will horizontally flip the resulting image.
 
-``` python
+```python
 import albumentations as A
 
 transform = A.Compose([

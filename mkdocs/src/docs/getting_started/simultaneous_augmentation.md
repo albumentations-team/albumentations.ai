@@ -12,7 +12,7 @@ Below is an example, how you can simultaneously augment the input image, mask, b
 
 ## Step 1. Define `Compose` with parameters that specify formats for bounding boxes and keypoints.
 
-``` python
+```python
 transform = A.Compose(
   [A.RandomCrop(width=330, height=330), A.RandomBrightnessContrast(p=0.2)],
   bbox_params=A.BboxParams(format="coco", label_fields=["bbox_classes"]),
@@ -30,7 +30,7 @@ For example, here is an image from the [COCO dataset](https://cocodataset.org/).
 
 
 ## Step 3. Pass all targets to `transform` and receive their augmented versions
-``` python
+```python
 transformed = transform(
   image=img,
   mask=mask,

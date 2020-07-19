@@ -59,7 +59,7 @@ Just like with [images](image_augmentation.md) and [masks](mask_augmentation.md)
 
 ## Step 1. Import the required libraries.
 
-``` python
+```python
 import albumentations as A
 import cv2
 ```
@@ -68,7 +68,7 @@ import cv2
 
 Here an example of a minimal declaration of an augmentation pipeline that works with bounding boxes.
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=450, height=450),
     A.HorizontalFlip(p=0.5),
@@ -85,7 +85,7 @@ Besides `format`, `A.BboxParams` supports a few more settings.
 Here is an example of `Compose` that shows all available settings with `A.BboxParams`:
 
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=450, height=450),
     A.HorizontalFlip(p=0.5),
@@ -149,7 +149,7 @@ For example, if you have three bounding boxes like `[23, 74, 295, 388]`, `[377, 
 
 Read an image from the disk.
 
-``` python
+```python
 image = cv2.imread("/path/to/image.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ```
@@ -167,7 +167,7 @@ As discussed in Step 2, there are two ways of passing class labels along with bo
 #### 1. Pass class labels along with coordinates.
 
 So, if you have coordinates of three bounding boxes that look like this:
-``` python
+```python
 bboxes = [
     [23, 74, 295, 388],
     [377, 294, 252, 161],
@@ -175,7 +175,7 @@ bboxes = [
 ]
 ```
 you can add a class label for each bounding box as an additional element of the list along with four coordinates. So now a list with bounding boxes and their coordinates will look the following:
-``` python
+```python
 bboxes = [
     [23, 74, 295, 388, 'dog'],
     [377, 294, 252, 161, 'cat'],
@@ -184,7 +184,7 @@ bboxes = [
 ```
 
 or with multiple labels per each bounding box:
-``` python
+```python
 bboxes = [
     [23, 74, 295, 388, 'dog', 'animal'],
     [377, 294, 252, 161, 'cat', 'animal'],
@@ -199,7 +199,7 @@ Next, you pass an image and bounding boxes for it to the `transform` function an
 
 
 
-``` python
+```python
 
 transformed = transform(image=image, bboxes=bboxes)
 transformed_image = transformed['image']
@@ -213,7 +213,7 @@ transformed_bboxes = transformed['bboxes']
 #### 2. Pass class labels in a separate argument to `transform` (the preferred way).
 
 Let's say you have coordinates of three bounding boxes
-``` python
+```python
 bboxes = [
     [23, 74, 295, 388],
     [377, 294, 252, 161],
@@ -223,13 +223,13 @@ bboxes = [
 
 You can create a separate list that contains class labels for those bounding boxes:
 
-``` python
+```python
 class_labels = ['cat', 'dog', 'parrot']
 ```
 
 Then you pass both bounding boxes and class labels to `transform`. Note that to pass class labels, you need to use the name of the argument that you declared in `label_fields` when creating an instance of Compose in step 2. In our case, we set the name of the argument to `class_labels`.
 
-``` python
+```python
 
 transformed = transform(image=image, bboxes=bboxes, class_labels=class_labels)
 transformed_image = transformed['image']
@@ -243,7 +243,7 @@ transformed_class_labels = transformed['class_labels']
 
 Note that `label_fields` expects a list, so you can set multiple fields that contain labels for your bounding boxes. So if you declare Compose like
 
-``` python
+```python
 transform = A.Compose([
     A.RandomCrop(width=450, height=450),
     A.HorizontalFlip(p=0.5),
@@ -253,7 +253,7 @@ transform = A.Compose([
 
 you can use those multiple arguments to pass info about class labels, like
 
-``` python
+```python
 class_labels = ['cat', 'dog', 'parrot']
 class_categories = ['animal', 'animal', 'item']
 
