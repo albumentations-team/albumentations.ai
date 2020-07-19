@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://albumentations.ai/docs/faq/" rel="canonical"/>
+<link href="../images/logo.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.4.0" name="generator"/>
+<title>Frequently Asked Questions - Albumentations Documentation</title>
+<link href="../assets/stylesheets/main.fe0cca5b.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.a46bcfb3.min.css" rel="stylesheet"/>
+<meta content="" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../css/extra.css" rel="stylesheet"/>
+<link href="../css/ansi-colours.css" rel="stylesheet"/>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body data-md-color-accent="white" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#frequently-asked-questions">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Albumentations Documentation" class="md-header-nav__button md-logo" href="https://albumentations.ai" title="Albumentations Documentation">
+<img alt="logo" src="../images/logo.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title">
+<div class="header-menu-item">
+<a href="https://albumentations.ai">Home</a>
+</div>
+<div class="header-menu-item header-menu-item-selected">
+<a href="https://albumentations.ai/docs/">Docs</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations.ai/whos_using">Who's using Albumentations</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+</div>
+<div class="header-menu-item header-large-menu-item">
+<a href="https://albumentations.ai/team">Team</a>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header-nav__source">
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Repository containing source -->
+<a class="md-source" href="https://github.com/albumentations-team/albumentations/" target="_blank" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    albumentations
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Albumentations Documentation" class="md-nav__button md-logo" href="https://albumentations.ai/docs/" title="Albumentations Documentation">
+<img alt="logo" src="../images/logo.png"/>
+</a>
+    Albumentations Documentation
+  </label>
+<div class="md-nav__source">
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Repository containing source -->
+<a class="md-source" href="https://github.com/albumentations-team/albumentations/" target="_blank" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    albumentations
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href=".." title="Welcome to Albumentations documentation">
+      Welcome to Albumentations documentation
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+      Introduction to image augmentation
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Introduction to image augmentation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Introduction to image augmentation
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+      What is image augmentation and how it can improve the performance of deep neural networks
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+      Why you need a dedicated library for image augmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/why_albumentations/" title="Why Albumentations">
+      Why Albumentations
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Getting started with Albumentations
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Getting started with Albumentations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Getting started with Albumentations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/installation/" title="Installation">
+      Installation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/image_augmentation/" title="Image augmentation for classification">
+      Image augmentation for classification
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+      Mask augmentation for segmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+      Bounding boxes augmentation for object detection
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/keypoints_augmentation/" title="Keypoints augmentation">
+      Keypoints augmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+      Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets">
+      A list of transforms and their supported targets
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
+      Setting probabilities for transforms in an augmentation pipeline
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      Examples
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Examples" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Examples
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example/" title="Defining a simple augmentation pipeline for image augmentation">
+      Defining a simple augmentation pipeline for image augmentation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_16_bit_tiff/" title="Working with non-8-bit images">
+      Working with non-8-bit images
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_bboxes/" title="Using Albumentations to augment bounding boxes for object detection tasks">
+      Using Albumentations to augment bounding boxes for object detection tasks
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_bboxes2/" title="How to use Albumentations for detection tasks if you need to keep all bounding boxes">
+      How to use Albumentations for detection tasks if you need to keep all bounding boxes
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_kaggle_salt/" title="Using Albumentations for a semantic segmentation task">
+      Using Albumentations for a semantic segmentation task
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_keypoints/" title="Using Albumentations to augment keypoints">
+      Using Albumentations to augment keypoints
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_multi_target/" title="Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints">
+      Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/example_weather_transforms/" title="Weather augmentations in Albumentations">
+      Weather augmentations in Albumentations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/migrating_from_torchvision_to_albumentations/" title="Migrating from torchvision to Albumentations">
+      Migrating from torchvision to Albumentations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/replay/" title="Debugging an augmentation pipeline with ReplayCompose">
+      Debugging an augmentation pipeline with ReplayCompose
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/serialization/" title="How to save and load parameters of an augmentation pipeline">
+      How to save and load parameters of an augmentation pipeline
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/showcase/" title="Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.">
+      Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../examples/tensorflow-example/" title="Using Albumentations with Tensorflow">
+      Using Albumentations with Tensorflow
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Frequently Asked Questions
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Frequently Asked Questions">
+      Frequently Asked Questions
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+    Installation
+  </a>
+<nav aria-label="Installation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem">
+    I am receiving an error message Failed building wheel for imagecodecs when I am trying to install Albumentations. How can I fix the problem?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory">
+    I successfully installed the library, but when I am trying to import it I receive an error ImportError: libXrender.so.1: cannot open shared object file: No such file or directory.
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+    Examples
+  </a>
+<nav aria-label="Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples">
+    Why do you call cv2.cvtColor(image, cv2.COLOR_BGR2RGB) in your examples?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+    Usage
+  </a>
+<nav aria-label="Usage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2">
+    Which transformation should I use to convert a NumPy array with an image or a mask to a PyTorch tensor: ToTensor() or ToTensorV2()?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used">
+    How can I find which augmentations were applied to the input data and which parameters they used?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it">
+    My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them">
+    I want to augment 16-bit TIFF images. Can Albumentations work with them?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-but-they-also-have-the-always_apply-parameter-that-can-either-be-true-or-false-what-is-the-difference-between-p-and-always_apply-is-always_applytrue-equals-to-p10">
+    Augmentations have a parameter named p that sets the probability of applying that augmentation, but they also have the always_apply parameter that can either be True or False. What is the difference between p and always_apply? Is always_apply=True equals to p=1.0?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug">
+    When I use augmentations with the border_mode parameter (such as Rotate) and set border_mode to cv2.BORDER_REFLECT or cv2.BORDER_REFLECT_101 Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations">
+    I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+      External resources
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="External resources" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        External resources
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../external_resources/blog_posts_podcasts_talks/" title="Blog posts, podcasts and talks about Albumentations">
+      Blog posts, podcasts and talks about Albumentations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../external_resources/books/" title="Books that mention Albumentations">
+      Books that mention Albumentations
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+      API Reference
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="API Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        API Reference
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2" id="nav-7-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-2">
+      Core API
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Core API" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-7-2">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Core API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/core/composition/" title="Composition API (core.composition)">
+      Composition API (core.composition)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
+      Transforms Interface (core.transforms_interface)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/core/serialization/" title="Serialization API (core.serialization)">
+      Serialization API (core.serialization)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-3" id="nav-7-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-3">
+      Augmentations
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Augmentations" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-7-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Augmentations
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/augmentations/transforms/" title="Transforms (augmentations.transforms)">
+      Transforms (augmentations.transforms)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/augmentations/functional/" title="Functional transforms (augmentations.functional)">
+      Functional transforms (augmentations.functional)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+      Helper functions for working with bounding boxes (augmentations.bbox_utils)
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+      Helper functions for working with keypoints (augmentations.keypoints_utils)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-4" id="nav-7-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-4">
+      ImgAug Helpers
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="ImgAug Helpers" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-7-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        ImgAug Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/imgaug/transforms/" title="Transforms (imgaug.transforms)">
+      Transforms (imgaug.transforms)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-5" id="nav-7-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-5">
+      PyTorch Helpers
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="PyTorch Helpers" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-7-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        PyTorch Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api_reference/pytorch/transforms/" title="Transforms (pytorch.transforms)">
+      Transforms (pytorch.transforms)
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributing/" title="Contributing">
+      Contributing
+    </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/faq.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">¶</a></h1>
+<p><strong>Installation</strong></p>
+<ul>
+<li><a href="#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem">I am receiving an error message <code>Failed building wheel for imagecodecs</code> when I am trying to install Albumentations. How can I fix the problem?</a></li>
+<li><a href="#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory">I successfully installed the library, but when I am trying to import it I receive an error <code>ImportError: libXrender.so.1: cannot open shared object file: No such file or directory</code>.</a></li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li><a href="#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples">Why do you call <code>cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</code> in your examples?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<ul>
+<li><a href="#which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2">Which transformation should I use to convert a NumPy array with an image or a mask to a PyTorch tensor: <code>ToTensor()</code> or <code>ToTensorV2()</code></a>?</li>
+<li><a href="#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used">How can I find which augmentations were applied to the input data and which parameters they used?</a></li>
+<li><a href="#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it">My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?</a></li>
+<li><a href="#i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them">I want to augment 16-bit TIFF images. Can Albumentations work with them?</a></li>
+<li><a href="#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-but-they-also-have-the-always_apply-parameter-that-can-either-be-true-or-false-what-is-the-difference-between-p-and-always_apply-is-always_applytrue-equals-to-p10">Augmentations have a parameter named <code>p</code> that sets the probability of applying that augmentation, but they also have the <code>always_apply</code> parameter that can either be <code>True</code> or <code>False</code>. What is the difference between <code>p</code> and <code>always_apply</code>? Is <code>always_apply=True</code> equals to <code>p=1.0</code>?</a></li>
+<li><a href="#when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug">When I use augmentations with the <code>border_mode</code> parameter (such as <code>Rotate</code>) and set <code>border_mode</code> to <code>cv2.BORDER_REFLECT</code> or <code>cv2.BORDER_REFLECT_101</code> Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?</a></li>
+<li><a href="#i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations">I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?</a></li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<h3 id="i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem">I am receiving an error message <code>Failed building wheel for imagecodecs</code> when I am trying to install Albumentations. How can I fix the problem?<a class="headerlink" href="#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem" title="Permanent link">¶</a></h3>
+<p>Try to update <code>pip</code> by running the following command:
+<div class="highlight"><pre><span></span><code>python3 -m pip install --upgrade pip
+</code></pre></div></p>
+<h3 id="i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory">I successfully installed the library, but when I am trying to import it I receive an error <code>ImportError: libXrender.so.1: cannot open shared object file: No such file or directory</code>.<a class="headerlink" href="#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory" title="Permanent link">¶</a></h3>
+<p>Probably your system doesn't have <code>libXrender</code>. To install the <code>libXrender</code> package on Ubuntu or Debian run:
+<div class="highlight"><pre><span></span><code> sudo apt-get update
+ sudo apt-get install libxrender1
+</code></pre></div></p>
+<p>To install the package on other operating systems, consult the documentation for the OS' package manager.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
+<h3 id="why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples">Why do you call <code>cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</code> in your examples?<a class="headerlink" href="#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples" title="Permanent link">¶</a></h3>
+<p><a href="https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/" target="_blank">For historical reasons</a>, OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
+<h3 id="which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2">Which transformation should I use to convert a NumPy array with an image or a mask to a PyTorch tensor: <code>ToTensor()</code> or <code>ToTensorV2()</code>?<a class="headerlink" href="#which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2" title="Permanent link">¶</a></h3>
+<p>Always use <a href="../api_reference/pytorch/transforms/#albumentations.pytorch.transforms.ToTensorV2"><code>ToTensorV2()</code></a>.</p>
+<p><code>ToTensor()</code> is a legacy transformation that contains complex and unnecessary logic for mask transformation. We don't want to break the existing pipelines that use that transformation, so instead of changing the behavior of the original <code>ToTensor()</code>, we created a new, more simple transformation.</p>
+<p><code>ToTensor()</code> is now deprecated and will be removed in future versions. For all new projects, you should always use ToTensorV2().</p>
+<h3 id="how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used">How can I find which augmentations were applied to the input data and which parameters they used?<a class="headerlink" href="#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used" title="Permanent link">¶</a></h3>
+<p>To save and inspect parameters of augmentations, you can replace Compose with ReplayCompose. ReplayCompose behaves just like regular Compose, but it also saves information about which augmentations were applied and which parameters were uses. Take a look at the example that shows how you can use ReplayCompose.</p>
+<h3 id="my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it">My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?<a class="headerlink" href="#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it" title="Permanent link">¶</a></h3>
+<p>Yes. You can define additional images, masks, bounding boxes, or keypoints through the <code>additional_targets</code> argument to <code>Compose</code>. You can then pass those additional targets to the augmentation pipeline, and Albumentations will augment them in the same way. See <a href="../examples/example_multi_target/">this example</a> for more info.</p>
+<h3 id="i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them">I want to augment 16-bit TIFF images. Can Albumentations work with them?<a class="headerlink" href="#i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them" title="Permanent link">¶</a></h3>
+<p>Yes. Albumentations can also work with non-8-bit images. See <a href="../examples/example_16_bit_tiff/">this example</a> for more info.</p>
+<h3 id="augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-but-they-also-have-the-always_apply-parameter-that-can-either-be-true-or-false-what-is-the-difference-between-p-and-always_apply-is-always_applytrue-equals-to-p10">Augmentations have a parameter named <code>p</code> that sets the probability of applying that augmentation, but they also have the <code>always_apply</code> parameter that can either be <code>True</code> or <code>False</code>. What is the difference between <code>p</code> and <code>always_apply</code>? Is <code>always_apply=True</code> equals to <code>p=1.0</code>?<a class="headerlink" href="#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-but-they-also-have-the-always_apply-parameter-that-can-either-be-true-or-false-what-is-the-difference-between-p-and-always_apply-is-always_applytrue-equals-to-p10" title="Permanent link">¶</a></h3>
+<p>When <code>always_apply</code> is set to <code>True</code>, Albumentations will always apply that transform, even if <code>p</code> is set to a value less than <code>1.0</code>. However, <code>always_apply=True</code> doesn't equal to <code>p=1.0</code> because with <code>always_apply=True</code>, Albumentations will apply a transform even in a case when top-level containers are not applied.</p>
+<p>Let's look at an example when a container <code>Compose</code> contains one augmentation <code>Resize</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
+<span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+</code></pre></div>
+<p>If you set <code>p=1.0</code> for <code>Resize</code> and <code>p=0.9</code> for <code>Compose</code>, then <code>Resize</code> has a 90% chance to be applied, because there is a 90% chance for <code>Compose</code> to be applied and if <code>Compose</code> is applied, there is a 100% chance for <code>Resize</code> to be applied.</p>
+<p>But if you set <code>always_apply=True</code> for <code>Resize</code>, Albumentations will apply it with 100% probability even if Albumentations decides not to apply the parent container (<code>Compose</code> in the example):</p>
+<div class="highlight"><pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+<span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug">When I use augmentations with the <code>border_mode</code> parameter (such as <code>Rotate</code>) and set <code>border_mode</code> to <code>cv2.BORDER_REFLECT</code> or <code>cv2.BORDER_REFLECT_101</code> Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?<a class="headerlink" href="#when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug" title="Permanent link">¶</a></h3>
+<p>Unfortunately, adding extra bounding boxes or keypoints to reflected regions of the image is not supported.
+You can change <code>border_mode</code> mode to <code>cv2.BORDER_CONSTANT</code> if this causes a significant impact on the training of your model.</p>
+<h3 id="i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations">I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?<a class="headerlink" href="#i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations" title="Permanent link">¶</a></h3>
+<p>You need to convert those annotations to one of the formats, supported by Albumentations. For the list of formats, please refer to <a href="../getting_started/bounding_boxes_augmentation/">this article</a>. Consult the documentation of the labeling service to see how you can export annotations in those formats.</p>
+</article>
+</div>
+</div>
+</main>
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Application footer -->
+<footer class="md-footer">
+<!-- Link to previous and/or next page -->
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<!-- Link to previous page -->
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../examples/tensorflow-example/" rel="prev" title="Using Albumentations with Tensorflow">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Using Albumentations with Tensorflow
+              </div>
+</div>
+</a>
+<!-- Link to next page -->
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../external_resources/blog_posts_podcasts_talks/" rel="next" title="Blog posts, podcasts and talks about Albumentations">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Blog posts, podcasts and talks about Albumentations
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<!-- Further information -->
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
+<div class="md-footer-copyright">
+</div>
+<!-- Social links -->
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+<script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
