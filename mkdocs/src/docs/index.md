@@ -1,6 +1,6 @@
 # Welcome to Albumentations documentation
 
-Albumentations is a fast and flexible image augmentation library. The library is widely used in industry, deep learning research, machine learning competitions, and open source projects. Albumentations is written in Python, and it is licensed under the MIT license. The source code is available at [https://github.com/albumentations-team/albumentations](https://github.com/albumentations-team/albumentations).
+Albumentations is a fast and flexible image augmentation library. The library is widely used in [industry](https://albumentations.ai/whos_using#industry), [deep learning research](https://albumentations.ai/whos_using#research), [machine learning competitions](https://albumentations.ai/whos_using#competitions), and [open source projects](https://albumentations.ai/whos_using#open-source). Albumentations is written in Python, and it is licensed under the MIT license. The source code is available at [https://github.com/albumentations-team/albumentations](https://github.com/albumentations-team/albumentations).
 
 If you are new to image augmentation, start with articles in the ["Introduction to image augmentation"](#introduction-to-image-augmentation) section. They describe what image augmentation is, how it can boost deep neural networks' performance, and why you should use Albumentations.
 

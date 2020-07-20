@@ -154,6 +154,7 @@ p img {
 .doc-heading {
   background: rgba(68,138,255,.1);
   border-top: .2rem solid #448aff;
+  scroll-margin-top: 2em !important;
 }
 
 .md-typeset__table {
