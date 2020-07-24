@@ -77,7 +77,7 @@ If the image has multiple associated masks, you should use the `masks` argument 
 ```python
 transformed = transform(image=image, masks=masks)
 transformed_image = transformed['image']
-transformed_masks= transformed['masks']
+transformed_masks = transformed['masks']
 ```
 
 ## Examples
