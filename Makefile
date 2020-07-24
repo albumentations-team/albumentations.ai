@@ -15,10 +15,13 @@ dev: build-images
 mkdocs-dev: build-mkdocs
 	MKDOCS_PORT=${MKDOCS_PORT} docker-compose up mkdocs
 
+site-dev: build-builder build-browser-sync
+	docker-compose up builder browser_sync
+
 fetch-data: check-env-github-token build-builder
 	docker-compose run builder fetch-data
 
-prod: check-env-github-token build-builder fetch-data
+prod: check-env-github-token build-builder build-mkdocs fetch-data
 	docker-compose run -u $(CURRENT_USER) -v ${PROD_BUILD_DIR}:${PROD_BUILD_DIR} -e BUILD_DIR=$(PROD_BUILD_DIR) builder build --base-url $(PROD_SITE)
 	docker-compose run -v ${PROD_BUILD_DIR}/docs:/site mkdocs build
 
