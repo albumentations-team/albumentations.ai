@@ -45,10 +45,10 @@
                             <a class="nav-link u-header__nav-link" href="{{ base_url }}/">Home</a>
                         </li>
                         <li class="nav-item u-header__nav-item">
-                            <a class="nav-link u-header__nav-link" href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}">Docs</a>
+                            <a class="nav-link u-header__nav-link" href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}">Documentation</a>
                         </li>
                         <li class="nav-item u-header__nav-item">
-                            <a class="nav-link u-header__nav-link" href="{{ base_url }}/whos_using">Who's using Albumentations</a>
+                            <a class="nav-link u-header__nav-link" href="{{ base_url }}/whos_using">Who's using</a>
                         </li>
                         <li class="nav-item u-header__nav-item">
                             <a class="nav-link u-header__nav-link" href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
@@ -76,19 +76,14 @@
                     <li class="list-inline-item pl-3">
                         <a class="list-group-item-action" href="{{ base_url }}/">Home</a>
                     </li>
-                    {#
                     <li class="list-inline-item pl-3">
-                        <a class="list-group-item-action " href="{{ base_url }}/quickstart">Quickstart</a>
+                        <a class="list-group-item-action" href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}" target="_blank">Documentation</a>
                     </li>
-                    #}
                     <li class="list-inline-item pl-3">
-                        <a class="list-group-item-action" href="{{ base_url }}/whos_using">Who's using Albumentations</a>
+                        <a class="list-group-item-action" href="{{ base_url }}/whos_using">Who's using</a>
                     </li>
                     <li class="list-inline-item pl-3">
                         <a class="list-group-item-action" href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
-                    </li>
-                    <li class="list-inline-item pl-3">
-                        <a class="list-group-item-action" href="https://albumentations.readthedocs.io/en/latest/" target="_blank">Docs</a>
                     </li>
                     <li class="list-inline-item pl-3">
                         <a class="list-group-item-action" href="{{ base_url }}/team">Team</a>
