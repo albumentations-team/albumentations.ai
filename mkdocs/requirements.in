@@ -7,5 +7,5 @@ mkdocs-simple-hooks
 mkdocs-macros-plugin
 mkdocs-exclude
 beautifulsoup4
-git+https://github.com/pawamoy/pytkdocs.git
+pytkdocs
 mkdocstrings
