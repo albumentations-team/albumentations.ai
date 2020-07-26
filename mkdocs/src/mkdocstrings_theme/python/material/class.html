@@ -2,7 +2,6 @@
 
 {% if config.show_if_no_docstring or class.has_contents %}
 <div class="doc doc-object doc-class">
-
   {% if not root or config.show_root_heading %}
 
   {% if root %}
@@ -24,9 +23,12 @@
       {% endfilter %}
             {% endif %}
     {% endfor %}
-</code> {% if ns.line_start is defined %}<span class="doc-github-link"><a
-        href="https://github.com/albumentations-team/albumentations/blob/master/{{ class.relative_file_path }}#L{{ ns.line_start }}"
-        target="_blank">[view source on GitHub]</a></span>{% endif %}
+</code> {% if ns.line_start is defined %}<span class="doc-github-link">
+    <a
+        href="https://github.com/albumentations-team/{% if class.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/master/{{ class.relative_file_path }}#L{{ ns.line_start }}"
+        target="_blank">[view source on GitHub]</a>
+
+</span>{% endif %}
     {% with properties = class.properties %}
     {% include "properties.html" with context %}
     {% endwith %}

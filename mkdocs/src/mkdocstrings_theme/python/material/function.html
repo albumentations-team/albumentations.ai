@@ -18,7 +18,7 @@
           {% endfilter %}
         </code>
     <span class="doc-github-link"><a
-        href="https://github.com/albumentations-team/albumentations/blob/master/{{ function.relative_file_path }}#L{{ function.source.line_start }}"
+        href="https://github.com/albumentations-team/{% if function.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/master/{{ function.relative_file_path }}#L{{ function.source.line_start }}"
         target="_blank">[view source on GitHub]</a></span>
     {% with properties = function.properties %}
     {% include "properties.html" with context %}
