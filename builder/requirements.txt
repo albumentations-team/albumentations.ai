@@ -18,7 +18,7 @@ idna==2.8                 # via requests
 jinja2==2.10.3            # via staticjinja
 markupsafe==1.1.1         # via jinja2
 pathtools==0.1.2          # via watchdog
-pillow==7.0.0             # via -r requirements.in
+pillow==7.2.0             # via -r requirements.in
 pygithub==1.45            # via -r requirements.in
 pyjwt==1.7.1              # via pygithub
 pypandoc==1.4             # via -r requirements.in
