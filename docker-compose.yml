@@ -14,6 +14,7 @@ services:
       - IMG_INDUSTRY_CACHE_DIR=/builder/src/html/assets/img/industry
       - SEARCHPATH=html
       - REPOSITORY=albumentations-team/albumentations
+      - ADDITIONAL_REPOSITORIES=albumentations-team/albumentations_examples
       - GITHUB_TOKEN
       - MKDOCS_PORT
     volumes:

@@ -59,7 +59,7 @@
             <div class="col-12">
                 <h3 class="text-center mt-3" style="font-size: 1.5rem">List of papers that cite
                     Albumentations</h3>
-                {% for citation in citations[:5] %}
+                {% for citation in citations[:10] %}
                 <div class="row  mb-3 mt-3"
                      style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
                     <div class="col-12" style="font-size: 1.05rem;">
@@ -74,16 +74,16 @@
                     <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse"
                        href="#citations-all"
                        role="button" aria-expanded="false" aria-controls="#citations-all"
-                       data-length="{{ citations[5:]|length }}" data-state="hidden">
-                        Show {{ citations[5:]|length }} more <i class="fa fa-angle-down"></i>
+                       data-length="{{ citations[10:]|length }}" data-state="hidden">
+                        Show {{ citations[10:]|length }} more <i class="fa fa-angle-down"></i>
                     </a>
                 </div>
                 <div id="citations-all" class="collapse">
-                    {% for citation in citations[5:] %}
+                    {% for citation in citations[10:] %}
                     <div class="row  mb-3 mt-3"
                          style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
                         <div class="col-12" style="font-size: 1.05rem;">
-                            {{ loop.index + 5 }}. {{ citation.title }}
+                            {{ loop.index + 10 }}. {{ citation.title }}
                         </div>
                         <div class="col-12 mt-1" style="font-size: 0.95rem">
                             {{ citation.date }} - {{ citation.authors }}

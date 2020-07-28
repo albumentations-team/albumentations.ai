@@ -262,7 +262,8 @@
             "SMK Hasan",
             "CA Linte"
         ],
-        "abstract": "With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the position of the surgical instruments in a surgical scene, and accurate detection & …"
+        "abstract": "With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the position of the surgical instruments in a surgical scene, and accurate detection & …",
+        "eprint": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7372295/"
     },
     {
         "title": "Moiré pattern removal via attentive fractal network",
@@ -295,6 +296,16 @@
         "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08886572.pdf"
     },
     {
+        "title": "Road Segmentation using U-Net architecture",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9121887/",
+        "author_links": {},
+        "author": [
+            "NYQ Abderrahim",
+            "S Abderrahim"
+        ],
+        "abstract": "The detection of objects has become a critical step to update ground cover information, and the availability of very high-resolution satellite images made us discover new classification methods that give us more details such as pixel classification. This study aims to explore the …"
+    },
+    {
         "title": "A load frame for in situ tomography at PETRA III",
         "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11113/1111318/A-load-frame-for-in-situ-tomography-at-PETRA-III/10.1117/12.2530445.full?webSyncID=9a0ce46e-9e6e-c7a4-9dab-6a0cbad05932&sessionGUID=9ad883c9-d902-bc99-93ce-d268bead49a2",
         "author_links": {
@@ -319,6 +330,22 @@
         ],
         "abstract": "We present the winning solution for the Inclusive Images Competition organized as part of the Conference on Neural Information Processing Systems (NeurIPS 2018) Competition Track. The competition was organized to study ways to cope with domain shift in image …",
         "eprint": "https://arxiv.org/pdf/1901.06345"
+    },
+    {
+        "title": "COVID-19 Prediction and Detection Using Deep Learning",
+        "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
+        "author_links": {
+            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
+            "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
+            "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Alazab",
+            "A Awajan",
+            "A Mesleh"
+        ],
+        "abstract": "(COVID-19) is one of the main challenges in the world, given the rapid spread of the disease. Recent statistics indicate that the number of people diagnosed with COVID-19 is increasing exponentially, with more than 1.6 million confirmed cases; the disease is …",
+        "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
     },
     {
         "title": "Dense Dilated Convolutions' Merging Network for Land Cover Classification",
@@ -405,8 +432,7 @@
             "Y Wang",
             "X Shen"
         ],
-        "abstract": "Imbalanced data is a perennial problem that impedes the learning abilities of current machine learning-based classification models. One approach to address it is to leverage data augmentation to expand the training set. For image data, there are a number of suitable …",
-        "eprint": "https://dl.acm.org/doi/pdf/10.1145/3366424.3383552"
+        "abstract": "Imbalanced data is a perennial problem that impedes the learning abilities of current machine learning-based classification models. One approach to address it is to leverage data augmentation to expand the training set. For image data, there are a number of suitable …"
     },
     {
         "title": "The Effects of Augmented Training Dataset on Performance of Convolutional Neural Networks in Face Recognition System",
@@ -423,6 +449,18 @@
         "eprint": "https://annals-csis.org/Volume_18/drp/pdf/181.pdf"
     },
     {
+        "title": "Greenhouse Segmentation on High-Resolution Optical Satellite Imagery using Deep Learning Techniques",
+        "url": "https://arxiv.org/abs/2007.11222",
+        "author_links": {},
+        "author": [
+            "O Baghirli",
+            "I Ibrahimli",
+            "T Mammadzada"
+        ],
+        "abstract": "Greenhouse segmentation has pivotal importance for climate-smart agricultural land-use planning. Deep learning-based approaches provide state-of-the-art performance in natural image segmentation. However, semantic segmentation on high-resolution optical satellite …",
+        "eprint": "https://arxiv.org/pdf/2007.11222"
+    },
+    {
         "title": "On-line hazard detection algorithm for precision lunar landing using semantic segmentation",
         "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2020-0462",
         "author_links": {
@@ -434,25 +472,6 @@
             "R Zanetti"
         ],
         "abstract": "NASA's Autonomous Landing and Hazard Avoidance Technology project has three core functionalities, namely, Terrain Relative navigation, Hazard Detection and Avoidance and Hazard Relative Navigation. In this paper, we present a real time machine learning based …"
-    },
-    {
-        "title": "COVID-19 Prediction and Detection Using Deep Learning",
-        "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
-        "author_links": {
-            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
-            "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
-            "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra",
-            "A Abraham": "https://scholar.google.com/citations?user=i95DGLQAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "M Alazab",
-            "A Awajan",
-            "A Mesleh",
-            "A Abraham",
-            "V Jatana"
-        ],
-        "abstract": "(COVID-19) is one of the main challenges in the world, given the rapid spread of the disease. Recent statistics indicate that the number of people diagnosed with COVID-19 is increasing exponentially, with more than 1.6 million confirmed cases; the disease is …",
-        "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
     },
     {
         "title": "Deep Learning object detection architectures in ADAS",
@@ -499,14 +518,15 @@
         "abstract": "Various kinds of retinopathy are the leading causes of blindness in human being, and with the rapid development of fundus images (FI) analysis in recent years, deep learning has became the focus while using Computer-Aided-Diagnosis (CAD) system to diagnose …"
     },
     {
-        "title": "Road Segmentation using U-Net architecture",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9121887/",
+        "title": "Method for Whale Re-identification Based on Siamese Nets and Adversarial Training",
+        "url": "https://link.springer.com/article/10.3103/S1060992X20020058",
         "author_links": {},
         "author": [
-            "NYQ Abderrahim",
-            "S Abderrahim"
+            "W Wang",
+            "RA Solovyev",
+            "AL Stempkovsky"
         ],
-        "abstract": "The detection of objects has become a critical step to update ground cover information, and the availability of very high-resolution satellite images made us discover new classification methods that give us more details such as pixel classification. This study aims to explore the …"
+        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …"
     },
     {
         "title": "Neural Mesh Refiner for 6-DoF Pose Estimation",
@@ -525,6 +545,18 @@
         ],
         "abstract": "How can we effectively utilise the 2D monocular image information for recovering the 6D pose (6-DoF) of the visual objects? Deep learning has shown to be effective for robust and real-time monocular pose estimation. Oftentimes, the network learns to regress the 6-DoF …",
         "eprint": "https://arxiv.org/pdf/2003.07561"
+    },
+    {
+        "title": "2nd Place Solution to ECCV 2020 VIPriors Object Detection Challenge",
+        "url": "https://arxiv.org/abs/2007.08849",
+        "author_links": {},
+        "author": [
+            "Y Gu",
+            "Y Pan",
+            "S Chen"
+        ],
+        "abstract": "In this report, we descibe our approach to the ECCV 2020 VIPriors Object Detection Challenge which took place from March to July in 2020. We show that by using state-of-the-art data augmentation strategies, model designs, and post-processing ensemble methods, it …",
+        "eprint": "https://arxiv.org/pdf/2007.08849"
     },
     {
         "title": "A Battery-Powered Friend: Towards Embedded Emotion Recognition",
@@ -570,6 +602,36 @@
         ],
         "abstract": "Quantitative ultrasound (QUS) imaging is a reliable, fast and inexpensive technique to extract physically descriptive parameters for assessing pathologies. Despite its safety and efficacy, QUS suffers from several major drawbacks: poor imaging quality, inter-and intra …",
         "eprint": "https://arxiv.org/pdf/2003.11658"
+    },
+    {
+        "title": "Estimating Displaced Populations from Overhead",
+        "url": "https://arxiv.org/abs/2006.14547",
+        "author_links": {
+            "A Hadzic": "https://scholar.google.com/citations?user=DlDme3IAAAAJ&hl=en&oi=sra",
+            "G Christie": "https://scholar.google.com/citations?user=LfVECroAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Hadzic",
+            "G Christie",
+            "J Freeman",
+            "A Dismer"
+        ],
+        "abstract": "We introduce a deep learning approach to perform fine-grained population estimation for displacement camps using high-resolution overhead imagery. We train and evaluate our approach on drone imagery cross-referenced with population data for refugee camps in …",
+        "eprint": "https://arxiv.org/pdf/2006.14547"
+    },
+    {
+        "title": "Landslide Segmentation with U-Net: Evaluating Different Sampling Methods and Patch Sizes",
+        "url": "https://arxiv.org/abs/2007.06672",
+        "author_links": {
+            "CH Grohmann": "https://scholar.google.com/citations?user=V3s8mq4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "LP Soares",
+            "HC Dias",
+            "CH Grohmann"
+        ],
+        "abstract": "Landslide inventory maps are crucial to validate predictive landslide models; however, since most mapping methods rely on visual interpretation or expert knowledge, detailed inventory maps are still lacking. This study used a fully convolutional deep learning model named U …",
+        "eprint": "https://arxiv.org/pdf/2007.06672"
     },
     {
         "title": "Segmentation of the Left Ventricle on EchoCG Images Using MultiResUnet",
@@ -676,7 +738,9 @@
     {
         "title": "Physical Cue based Depth-Sensing by Color Coding with Deaberration Network",
         "url": "https://arxiv.org/abs/1908.00329",
-        "author_links": {},
+        "author_links": {
+            "N Mishima": "https://scholar.google.com/citations?user=POm4UAMAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "N Mishima",
             "T Kozakaya",
@@ -704,6 +768,16 @@
         "author": [
             "FVM Perez"
         ]
+    },
+    {
+        "title": "Automation of Kidney Perfusion Analysis from Dynamic Phase-Contrast MRI using Deep Learning",
+        "url": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf",
+        "author_links": {},
+        "author": [
+            "AM MORA"
+        ],
+        "abstract": "Renal phase-contrast magnetic resonance imaging (PC-MRI) is an MRI modality where the phase component of the MR signal is made sensitive to the velocity of water molecules in the kidneys. PC-MRI is able to assess the Renal Blood Flow (RBF), which is an important …",
+        "eprint": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf"
     },
     {
         "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches WPI Technical Report WPI-CS-TR-19-02",
@@ -807,6 +881,33 @@
         "eprint": "https://arxiv.org/pdf/2006.07825"
     },
     {
+        "title": "Challenges in the deep learning-based semantic segmentation of benthic communities from Ortho-images",
+        "url": "https://link.springer.com/article/10.1007/s12518-020-00331-6",
+        "author_links": {
+            "M Corsini": "https://scholar.google.com/citations?user=jU8HCCkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Pavoni",
+            "M Corsini",
+            "N Pedersen",
+            "V Petrovic"
+        ],
+        "abstract": "Since the early days of the low-cost camera development, the collection of visual data has become a common practice in the underwater monitoring field. Nevertheless, video and image sequences are a trustworthy source of knowledge that remains partially untapped …",
+        "eprint": "http://vcg.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
+    },
+    {
+        "title": "CRNNS FOR URBAN SOUND TAGGING WITH SPATIOTEMPORAL CONTEXT",
+        "url": "http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Arnault_70_t5.pdf",
+        "author_links": {},
+        "author": [
+            "A Arnault",
+            "IMTL Douai",
+            "N Riche"
+        ],
+        "abstract": "This paper describes CRNNs we used to participate in Task 5 of the DCASE 2020 challenge. This task focuses on hierarchical multilabel urban sound tagging with spatiotemporal context. The code is available to our GitHub repository at https://github …",
+        "eprint": "http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Arnault_70_t5.pdf"
+    },
+    {
         "title": "Endoscopy Artefact Detection and Segmentation using Deep Convolutional Neural Network.",
         "url": "http://ceur-ws.org/Vol-2595/endoCV2020_paper_id_26.pdf",
         "author_links": {},
@@ -904,7 +1005,9 @@
     {
         "title": "Deep Depth From Aberration Map",
         "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kashiwagi_Deep_Depth_From_Aberration_Map_ICCV_2019_paper.html",
-        "author_links": {},
+        "author_links": {
+            "N Mishima": "https://scholar.google.com/citations?user=POm4UAMAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "M Kashiwagi",
             "N Mishima"
@@ -1042,5 +1145,19 @@
         ],
         "abstract": "Human labor still play an important role in cane sugar crystallization process. Automation control is essential to reduce human labor. An accurate image classification system is the basis for automation control of the cane sugar crystallization process. This paper builds a …",
         "eprint": "https://www.researchgate.net/profile/Jinlai_Zhang/publication/339125077_Monitoring_sugar_crystallization_with_Deep_Neural_Networks/links/5ed4d400458515294527a6a0/Monitoring-sugar-crystallization-with-Deep-Neural-Networks.pdf"
+    },
+    {
+        "title": "Flood detection with Sentinel-2 satellite images in crisis management systems",
+        "url": "http://idl.iscram.org/files/anastasiamoumtzidou/2020/2296_AnastasiaMoumtzidou_etal2020.pdf",
+        "author_links": {
+            "A Moumtzidou": "https://scholar.google.com/citations?user=4oUt-WsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Moumtzidou",
+            "M Bakratsas",
+            "S Andreadis"
+        ],
+        "abstract": "The increasing amount of falling rain may cause several problems especially in urban areas, which drainage system can often not handle this large amount in a short time. Confirming a flooded scene in a timely manner can help the authorities to take further actions to counter …",
+        "eprint": "http://idl.iscram.org/files/anastasiamoumtzidou/2020/2296_AnastasiaMoumtzidou_etal2020.pdf"
     }
 ]

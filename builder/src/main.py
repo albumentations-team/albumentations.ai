@@ -86,7 +86,8 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
 @click.option("--cache-dir", type=str, envvar="CACHE_DIR", required=True)
 @click.option("--img-industry-cache-dir", type=str, envvar="IMG_INDUSTRY_CACHE_DIR", required=True)
 @click.option("--repository", envvar="REPOSITORY", required=True)
-def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, repository):
+@click.option("--additional_repositories", envvar="ADDITIONAL_REPOSITORIES", multiple=True)
+def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, repository, additional_repositories):
     client = GitHubClient(access_token=github_token,)
 
     stars_count = client.get_repository_stars_rounded(repository)
@@ -119,9 +120,20 @@ def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, reposi
         team = json.load(f)
         team_github_usernames = [member["github"] for member in team]
 
-    contributors = client.get_contributors(repository=repository, exclude_contributors=team_github_usernames,)
+    contributors = client.get_contributors(repository=repository, exclude_contributors=team_github_usernames)
+    for repository in additional_repositories:
+        contributors += client.get_contributors(repository=repository, exclude_contributors=team_github_usernames)
+
+    deduplicated_contributors = []
+    seen_contributor_ids = set()
+    for contributor in contributors:
+        contributor_id = contributor["id"]
+        if contributor_id not in seen_contributor_ids:
+            deduplicated_contributors.append(contributor)
+            seen_contributor_ids.add(contributor_id)
+
     with open(os.path.join(cache_dir, "contributors.json"), "w") as f:
-        json.dump(contributors, f)
+        json.dump(deduplicated_contributors, f)
 
 
 if __name__ == "__main__":

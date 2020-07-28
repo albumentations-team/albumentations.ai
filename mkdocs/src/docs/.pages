@@ -7,4 +7,5 @@ arrange:
   - experimental
   - external_resources
   - api_reference
+  - release_notes.md
   - contributing.md
