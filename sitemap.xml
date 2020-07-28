@@ -108,6 +108,10 @@
      <lastmod>2020-07-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://albumentations.ai/docs/experimental/installation/</loc>
+     <lastmod>2020-07-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://albumentations.ai/docs/experimental/api_reference/augmentations/transforms/</loc>
      <lastmod>2020-07-28</lastmod>
      <changefreq>daily</changefreq>
@@ -173,6 +177,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/pytorch/transforms/</loc>
+     <lastmod>2020-07-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/release_notes/</loc>
      <lastmod>2020-07-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
