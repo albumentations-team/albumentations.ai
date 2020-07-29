@@ -22,6 +22,7 @@ RUN ~/.cargo/bin/rargs -d ' → ' ~/.cargo/bin/sd '{1}' '{2}' $(~/.cargo/bin/fd 
 
 RUN mkdir -p /mkdocs/src/docs/examples
 RUN cp -rf /albumentations_examples/notebooks/*.ipynb /mkdocs/src/docs/examples
+COPY ./mkdocs/src/docs/examples /mkdocs/src/docs/examples/
 
 ENV PYTHONPATH "${PYTHONPATH}:/mkdocs/src:/albumentations"
 

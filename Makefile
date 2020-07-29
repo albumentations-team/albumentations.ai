@@ -10,10 +10,10 @@ export PORT
 .PHONY: dev prod fetch-data build-builder build-browser-sync build-images check-env-github-token
 
 dev: build-images
-	MKDOCS_PORT=${MKDOCS_PORT} PORT=${PORT} docker-compose up
+	MKDOCS_PORT=${MKDOCS_PORT} PORT=${PORT} docker-compose up -V
 
 mkdocs-dev: build-mkdocs
-	MKDOCS_PORT=${MKDOCS_PORT} docker-compose up mkdocs
+	MKDOCS_PORT=${MKDOCS_PORT} docker-compose up -V mkdocs
 
 site-dev: build-builder build-browser-sync
 	docker-compose up builder browser_sync
