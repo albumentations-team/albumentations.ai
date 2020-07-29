@@ -5,18 +5,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://albumentations.ai/docs/getting_started/transforms_and_targets/" rel="canonical"/>
-<link href="../../images/logo.png" rel="shortcut icon"/>
+<link href="https://albumentations.ai/docs/examples/" rel="canonical"/>
+<link href="../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.0" name="generator"/>
-<title>A list of transforms and their supported targets - Albumentations Documentation</title>
-<link href="../../assets/stylesheets/main.b5d04df8.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.9ab2c1f8.min.css" rel="stylesheet"/>
+<title>List of examples - Albumentations Documentation</title>
+<link href="../assets/stylesheets/main.b5d04df8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.9ab2c1f8.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-<link href="../../css/extra.css" rel="stylesheet"/>
-<link href="../../css/ansi-colours.css" rel="stylesheet"/>
+<link href="../css/extra.css" rel="stylesheet"/>
+<link href="../css/ansi-colours.css" rel="stylesheet"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#a-list-of-transforms-and-their-supported-targets">
+<a class="md-skip" href="#list-of-examples">
           Skip to content
         </a>
 </div>
@@ -34,7 +34,7 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
 <a aria-label="Albumentations Documentation" class="md-header-nav__button md-logo" href="https://albumentations.ai" title="Albumentations Documentation">
-<img alt="logo" src="../../images/logo.png"/>
+<img alt="logo" src="../images/logo.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
@@ -124,7 +124,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Albumentations Documentation" class="md-nav__button md-logo" href="https://albumentations.ai/docs/" title="Albumentations Documentation">
-<img alt="logo" src="../../images/logo.png"/>
+<img alt="logo" src="../images/logo.png"/>
 </a>
     Albumentations Documentation
   </label>
@@ -159,7 +159,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../.." title="Welcome to Albumentations documentation">
+<a class="md-nav__link" href=".." title="Welcome to Albumentations documentation">
       Welcome to Albumentations documentation
     </a>
 </li>
@@ -180,25 +180,25 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+<a class="md-nav__link" href="../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
       What is image augmentation and how it can improve the performance of deep neural networks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+<a class="md-nav__link" href="../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
       Why you need a dedicated library for image augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/why_albumentations/" title="Why Albumentations">
+<a class="md-nav__link" href="../introduction/why_albumentations/" title="Why Albumentations">
       Why Albumentations
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-3">
       Getting started with Albumentations
       <span class="md-nav__icon md-icon">
@@ -214,77 +214,50 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../installation/" title="Installation">
+<a class="md-nav__link" href="../getting_started/installation/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../image_augmentation/" title="Image augmentation for classification">
+<a class="md-nav__link" href="../getting_started/image_augmentation/" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mask_augmentation/" title="Mask augmentation for segmentation">
+<a class="md-nav__link" href="../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
       Mask augmentation for segmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+<a class="md-nav__link" href="../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
       Bounding boxes augmentation for object detection
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../keypoints_augmentation/" title="Keypoints augmentation">
+<a class="md-nav__link" href="../getting_started/keypoints_augmentation/" title="Keypoints augmentation">
       Keypoints augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+<a class="md-nav__link" href="../getting_started/simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        A list of transforms and their supported targets
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="A list of transforms and their supported targets">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets">
       A list of transforms and their supported targets
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pixel-level-transforms">
-    Pixel-level transforms
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spatial-level-transforms">
-    Spatial-level transforms
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
+<a class="md-nav__link" href="../getting_started/setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
       Setting probabilities for transforms in an augmentation pipeline
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
       Examples
       <span class="md-nav__icon md-icon">
@@ -299,73 +272,74 @@
         Examples
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/" title="List of examples">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./" title="List of examples">
       List of examples
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example/" title="Defining a simple augmentation pipeline for image augmentation">
+<a class="md-nav__link" href="example/" title="Defining a simple augmentation pipeline for image augmentation">
       Defining a simple augmentation pipeline for image augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_16_bit_tiff/" title="Working with non-8-bit images">
+<a class="md-nav__link" href="example_16_bit_tiff/" title="Working with non-8-bit images">
       Working with non-8-bit images
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_bboxes/" title="Using Albumentations to augment bounding boxes for object detection tasks">
+<a class="md-nav__link" href="example_bboxes/" title="Using Albumentations to augment bounding boxes for object detection tasks">
       Using Albumentations to augment bounding boxes for object detection tasks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_bboxes2/" title="How to use Albumentations for detection tasks if you need to keep all bounding boxes">
+<a class="md-nav__link" href="example_bboxes2/" title="How to use Albumentations for detection tasks if you need to keep all bounding boxes">
       How to use Albumentations for detection tasks if you need to keep all bounding boxes
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_kaggle_salt/" title="Using Albumentations for a semantic segmentation task">
+<a class="md-nav__link" href="example_kaggle_salt/" title="Using Albumentations for a semantic segmentation task">
       Using Albumentations for a semantic segmentation task
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_keypoints/" title="Using Albumentations to augment keypoints">
+<a class="md-nav__link" href="example_keypoints/" title="Using Albumentations to augment keypoints">
       Using Albumentations to augment keypoints
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_multi_target/" title="Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints">
+<a class="md-nav__link" href="example_multi_target/" title="Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints">
       Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_weather_transforms/" title="Weather augmentations in Albumentations">
+<a class="md-nav__link" href="example_weather_transforms/" title="Weather augmentations in Albumentations">
       Weather augmentations in Albumentations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/migrating_from_torchvision_to_albumentations/" title="Migrating from torchvision to Albumentations">
+<a class="md-nav__link" href="migrating_from_torchvision_to_albumentations/" title="Migrating from torchvision to Albumentations">
       Migrating from torchvision to Albumentations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/replay/" title="Debugging an augmentation pipeline with ReplayCompose">
+<a class="md-nav__link" href="replay/" title="Debugging an augmentation pipeline with ReplayCompose">
       Debugging an augmentation pipeline with ReplayCompose
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/serialization/" title="How to save and load parameters of an augmentation pipeline">
+<a class="md-nav__link" href="serialization/" title="How to save and load parameters of an augmentation pipeline">
       How to save and load parameters of an augmentation pipeline
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/showcase/" title="Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.">
+<a class="md-nav__link" href="showcase/" title="Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.">
       Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/tensorflow-example/" title="Using Albumentations with Tensorflow">
+<a class="md-nav__link" href="tensorflow-example/" title="Using Albumentations with Tensorflow">
       Using Albumentations with Tensorflow
     </a>
 </li>
@@ -373,7 +347,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../faq/" title="Frequently Asked Questions">
+<a class="md-nav__link" href="../faq/" title="Frequently Asked Questions">
       Frequently Asked Questions
     </a>
 </li>
@@ -394,12 +368,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../experimental/overview/" title="Overview">
+<a class="md-nav__link" href="../experimental/overview/" title="Overview">
       Overview
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../experimental/installation/" title="Installation">
+<a class="md-nav__link" href="../experimental/installation/" title="Installation">
       Installation
     </a>
 </li>
@@ -436,7 +410,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../experimental/api_reference/augmentations/transforms/" title="Albumentations Experimental Transforms (augmentations.transforms)">
+<a class="md-nav__link" href="../experimental/api_reference/augmentations/transforms/" title="Albumentations Experimental Transforms (augmentations.transforms)">
       Albumentations Experimental Transforms (augmentations.transforms)
     </a>
 </li>
@@ -466,12 +440,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../external_resources/blog_posts_podcasts_talks/" title="Blog posts, podcasts and talks about Albumentations">
+<a class="md-nav__link" href="../external_resources/blog_posts_podcasts_talks/" title="Blog posts, podcasts and talks about Albumentations">
       Blog posts, podcasts and talks about Albumentations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../external_resources/books/" title="Books that mention Albumentations">
+<a class="md-nav__link" href="../external_resources/books/" title="Books that mention Albumentations">
       Books that mention Albumentations
     </a>
 </li>
@@ -511,17 +485,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/composition/" title="Composition API (core.composition)">
+<a class="md-nav__link" href="../api_reference/core/composition/" title="Composition API (core.composition)">
       Composition API (core.composition)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
+<a class="md-nav__link" href="../api_reference/core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
       Transforms Interface (core.transforms_interface)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/core/serialization/" title="Serialization API (core.serialization)">
+<a class="md-nav__link" href="../api_reference/core/serialization/" title="Serialization API (core.serialization)">
       Serialization API (core.serialization)
     </a>
 </li>
@@ -545,22 +519,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/transforms/" title="Transforms (augmentations.transforms)">
+<a class="md-nav__link" href="../api_reference/augmentations/transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/functional/" title="Functional transforms (augmentations.functional)">
+<a class="md-nav__link" href="../api_reference/augmentations/functional/" title="Functional transforms (augmentations.functional)">
       Functional transforms (augmentations.functional)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+<a class="md-nav__link" href="../api_reference/augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
       Helper functions for working with bounding boxes (augmentations.bbox_utils)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+<a class="md-nav__link" href="../api_reference/augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
       Helper functions for working with keypoints (augmentations.keypoints_utils)
     </a>
 </li>
@@ -584,7 +558,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/imgaug/transforms/" title="Transforms (imgaug.transforms)">
+<a class="md-nav__link" href="../api_reference/imgaug/transforms/" title="Transforms (imgaug.transforms)">
       Transforms (imgaug.transforms)
     </a>
 </li>
@@ -608,7 +582,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../api_reference/pytorch/transforms/" title="Transforms (pytorch.transforms)">
+<a class="md-nav__link" href="../api_reference/pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
     </a>
 </li>
@@ -619,12 +593,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../release_notes/" title="Release notes">
+<a class="md-nav__link" href="../release_notes/" title="Release notes">
       Release notes
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../contributing/" title="Contributing">
+<a class="md-nav__link" href="../contributing/" title="Contributing">
       Contributing
     </a>
 </li>
@@ -635,305 +609,25 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/transforms_and_targets.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/examples/index.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="a-list-of-transforms-and-their-supported-targets">A list of transforms and their supported targets<a class="headerlink" href="#a-list-of-transforms-and-their-supported-targets" title="Permanent link">¶</a></h1>
-<p>We can split all transforms into two groups: pixel-level transforms, and spatial-level transforms. Pixel-level transforms will change just an input image and will leave any additional targets such as masks, bounding boxes, and keypoints unchanged. Spatial-level transforms will simultaneously change both an input image as well as additional targets such as masks, bounding boxes, and keypoints. For the additional information, please refer to <a href="../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/#the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks">this section of "Why you need a dedicated library for image augmentation"</a>.</p>
-<h2 id="pixel-level-transforms">Pixel-level transforms<a class="headerlink" href="#pixel-level-transforms" title="Permanent link">¶</a></h2>
-<p>Here is a list of all available pixel-level transforms. You can apply a spatial-level transform to any target, and under the hood, the transform will change only the input image and return any other input targets such as masks, bounding boxes, or keypoints unchanged.</p>
+<h1 id="list-of-examples">List of examples<a class="headerlink" href="#list-of-examples" title="Permanent link">¶</a></h1>
 <ul>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Blur">Blur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CLAHE">CLAHE</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelDropout">ChannelDropout</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">ChannelShuffle</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CoarseDropout">CoarseDropout</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Downscale">Downscale</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Equalize">Equalize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FancyPCA">FancyPCA</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FromFloat">FromFloat</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise">GaussNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur">GaussianBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GlassBlur">GlassBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue">HueSaturationValue</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise">IAAAdditiveGaussianNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAEmboss">IAAEmboss</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAASharpen">IAASharpen</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAASuperpixels">IAASuperpixels</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ISONoise">ISONoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">ImageCompression</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">InvertImg</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MedianBlur">MedianBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MotionBlur">MotionBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MultiplicativeNoise">MultiplicativeNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Normalize">Normalize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Posterize">Posterize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RGBShift">RGBShift</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast">RandomBrightnessContrast</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomFog">RandomFog</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGamma">RandomGamma</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRain">RandomRain</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomShadow">RandomShadow</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSnow">RandomSnow</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSunFlare">RandomSunFlare</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Solarize</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToFloat">ToFloat</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToGray">ToGray</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToSepia">ToSepia</a></li>
+<li><a href="example/">Defining a simple augmentation pipeline for image augmentation</a></li>
+<li><a href="example_16_bit_tiff/">Working with non-8-bit images</a></li>
+<li><a href="example_bboxes/">Using Albumentations to augment bounding boxes for object detection tasks</a></li>
+<li><a href="example_bboxes2/">How to use Albumentations for detection tasks if you need to keep all bounding boxes</a></li>
+<li><a href="example_kaggle_salt/">Using Albumentations for a semantic segmentation task</a></li>
+<li><a href="example_keypoints/">Using Albumentations to augment keypoints</a></li>
+<li><a href="example_multi_target/">Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints</a></li>
+<li><a href="example_weather_transforms/">Weather augmentations in Albumentations</a></li>
+<li><a href="migrating_from_torchvision_to_albumentations/">Migrating from torchvision to Albumentations</a></li>
+<li><a href="replay/">Debugging an augmentation pipeline with ReplayCompose</a></li>
+<li><a href="serialization/">How to save and load parameters of an augmentation pipeline</a></li>
+<li><a href="showcase/">Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.</a></li>
+<li><a href="tensorflow-example/">Using Albumentations with Tensorflow</a></li>
 </ul>
-<h2 id="spatial-level-transforms">Spatial-level transforms<a class="headerlink" href="#spatial-level-transforms" title="Permanent link">¶</a></h2>
-<p>Here is a table with spatial-level transforms and targets they support. If you try to apply a spatial-level transform to an unsupported target, Albumentations will raise an error.</p>
-<table>
-<thead>
-<tr>
-<th>Transform</th>
-<th align="center">Image</th>
-<th align="center">Masks</th>
-<th align="center">BBoxes</th>
-<th align="center">Keypoints</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CenterCrop">CenterCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Crop">Crop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists">CropNonEmptyMaskIfExists</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ElasticTransform">ElasticTransform</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Flip">Flip</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GridDistortion">GridDistortion</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GridDropout">GridDropout</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HorizontalFlip">HorizontalFlip</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAffine">IAAAffine</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAACropAndPad">IAACropAndPad</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAFliplr">IAAFliplr</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAFlipud">IAAFlipud</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAPerspective">IAAPerspective</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAPiecewiseAffine">IAAPiecewiseAffine</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Lambda">Lambda</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.LongestMaxSize">LongestMaxSize</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MaskDropout">MaskDropout</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>NoOp</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.OpticalDistortion">OpticalDistortion</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.PadIfNeeded">PadIfNeeded</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCrop">RandomCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCropNearBBox">RandomCropNearBBox</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGridShuffle">RandomGridShuffle</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomResizedCrop">RandomResizedCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRotate90">RandomRotate90</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomScale">RandomScale</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop">RandomSizedBBoxSafeCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedCrop">RandomSizedCrop</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Resize">Resize</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Rotate">Rotate</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">ShiftScaleRotate</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.SmallestMaxSize">SmallestMaxSize</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Transpose">Transpose</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.VerticalFlip">VerticalFlip</a></td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
-</tr>
-</tbody>
-</table>
 </article>
 </div>
 </div>
@@ -965,7 +659,7 @@
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../simultaneous_augmentation/" rel="prev" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../getting_started/setting_probabilities/" rel="prev" title="Setting probabilities for transforms in an augmentation pipeline">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -974,18 +668,18 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
+                Setting probabilities for transforms in an augmentation pipeline
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../setting_probabilities/" rel="next" title="Setting probabilities for transforms in an augmentation pipeline">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="example/" rel="next" title="Defining a simple augmentation pipeline for image augmentation">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Setting probabilities for transforms in an augmentation pipeline
+                Defining a simple augmentation pipeline for image augmentation
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
@@ -1005,14 +699,14 @@
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.92ffa368.min.js"></script>
-<script src="../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../assets/javascripts/vendor.92ffa368.min.js"></script>
+<script src="../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
