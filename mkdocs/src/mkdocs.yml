@@ -68,3 +68,4 @@ notebook_github_uri: https://github.com/albumentations-team/albumentations_examp
 notebook_colab_uri: https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/
 
 site_dir: /site
+site_description: "Albumentations: fast and flexible image augmentations"
