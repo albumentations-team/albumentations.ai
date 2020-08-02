@@ -54,12 +54,13 @@
 </code></pre>
         </div>
     </div>
+    {% set num_visible_citations = 20 %}
     <div class="col-12">
         <div class="row">
             <div class="col-12">
                 <h3 class="text-center mt-3" style="font-size: 1.5rem">List of papers that cite
                     Albumentations</h3>
-                {% for citation in citations[:10] %}
+                {% for citation in citations[:num_visible_citations] %}
                 <div class="row  mb-3 mt-3"
                      style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
                     <div class="col-12" style="font-size: 1.05rem;">
@@ -74,16 +75,16 @@
                     <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse"
                        href="#citations-all"
                        role="button" aria-expanded="false" aria-controls="#citations-all"
-                       data-length="{{ citations[10:]|length }}" data-state="hidden">
-                        Show {{ citations[10:]|length }} more <i class="fa fa-angle-down"></i>
+                       data-length="{{ citations[num_visible_citations:]|length }}" data-state="hidden">
+                        Show {{ citations[num_visible_citations:]|length }} more <i class="fa fa-angle-down"></i>
                     </a>
                 </div>
                 <div id="citations-all" class="collapse">
-                    {% for citation in citations[10:] %}
+                    {% for citation in citations[num_visible_citations:] %}
                     <div class="row  mb-3 mt-3"
                          style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
                         <div class="col-12" style="font-size: 1.05rem;">
-                            {{ loop.index + 10 }}. {{ citation.title }}
+                            {{ loop.index + num_visible_citations }}. {{ citation.title }}
                         </div>
                         <div class="col-12 mt-1" style="font-size: 0.95rem">
                             {{ citation.date }} - {{ citation.authors }}
@@ -96,22 +97,24 @@
     </div>
 </div>
 <hr class="my-0">
+
+{% set num_visible_competitions = 20 %}
 <div class="container space-top-1 space-bottom-1">
     <div class="text-left mb-8">
         <h1 class="font-weight-medium text-center" id="competitions">Machine learning
             competitions</h1>
     </div>
-    {% for competition in competitions[:5] %}
+    {% for competition in competitions[:num_visible_competitions] %}
     {% include '_competition.j2' %}
     {% endfor %}
     <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse"
        href="#competitions-all"
        role="button" aria-expanded="false" aria-controls="#competitions-all"
-       data-length="{{ competitions[5:]|length }}" data-state="hidden">
-        Show {{ competitions[5:]|length }} more <i class="fa fa-angle-down"></i>
+       data-length="{{ competitions[num_visible_competitions:]|length }}" data-state="hidden">
+        Show {{ competitions[num_visible_competitions:]|length }} more <i class="fa fa-angle-down"></i>
     </a>
     <div id="competitions-all" class="collapse">
-        {% for competition in competitions[5:] %}
+        {% for competition in competitions[num_visible_competitions:] %}
         {% include '_competition.j2' %}
         {% endfor %}
     </div>
