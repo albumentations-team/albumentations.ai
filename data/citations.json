@@ -502,6 +502,18 @@
         "eprint": "https://arxiv.org/pdf/2004.07676"
     },
     {
+        "title": "Pneumothorax Segmentation with Effective Conditioned Post-Processing in Chest X-Ray",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9153444/",
+        "author_links": {
+            "V GROZA": "https://scholar.google.com/citations?user=okJ4_XcAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "V GROZA",
+            "A KUZIN"
+        ],
+        "abstract": "The automatic detection of abnormal elements in chest Xrays (CXR), such as pneumothorax, is important and challenging problem. Screening for unexpected findings or any surveys in the complicated conditions are the common scenarios for the radiologists in their clinical …"
+    },
+    {
         "title": "Retinopathy Diagnosis Using Semi-supervised Multi-channel Generative Adversarial Network",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-32956-3_22",
         "author_links": {
@@ -545,6 +557,20 @@
         ],
         "abstract": "How can we effectively utilise the 2D monocular image information for recovering the 6D pose (6-DoF) of the visual objects? Deep learning has shown to be effective for robust and real-time monocular pose estimation. Oftentimes, the network learns to regress the 6-DoF …",
         "eprint": "https://arxiv.org/pdf/2003.07561"
+    },
+    {
+        "title": "Speech Driven Talking Face Generation from a Single Image and an Emotion Condition",
+        "url": "https://arxiv.org/abs/2008.03592",
+        "author_links": {
+            "Z Duan": "https://scholar.google.com/citations?user=pJmAoJ4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "SE Eskimez",
+            "Y Zhang",
+            "Z Duan"
+        ],
+        "abstract": "Visual emotion expression plays an important role in audiovisual speech communication. In this work, we propose a novel approach to rendering visual emotion expression in speech-driven talking face generation. Specifically, we design an end-to-end talking face generation …",
+        "eprint": "https://arxiv.org/pdf/2008.03592"
     },
     {
         "title": "2nd Place Solution to ECCV 2020 VIPriors Object Detection Challenge",
@@ -602,6 +628,18 @@
         ],
         "abstract": "Quantitative ultrasound (QUS) imaging is a reliable, fast and inexpensive technique to extract physically descriptive parameters for assessing pathologies. Despite its safety and efficacy, QUS suffers from several major drawbacks: poor imaging quality, inter-and intra …",
         "eprint": "https://arxiv.org/pdf/2003.11658"
+    },
+    {
+        "title": "Data Preprocessing Via Compositions Multi-Channel MRI Images to Improve Brain Tumor Segmentation",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9153416/",
+        "author_links": {
+            "E Pavlovskiy": "https://scholar.google.com/citations?user=rPbZTCQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Tolstokulakov",
+            "E Pavlovskiy"
+        ],
+        "abstract": "Magnetic resonance imaging (MRI) stays one of the most essential noninvasive methods for brain diagnostics. It allows obtaining the detailed 3D image of the brain, including various types of soft tissues. In this paper, we compare the influence of the multichannel data …"
     },
     {
         "title": "Estimating Displaced Populations from Overhead",
@@ -795,6 +833,7 @@
         "title": "Weighted Ensemble Object Detection with Optimized Coefficients for Remote Sensing Images",
         "url": "https://www.mdpi.com/2220-9964/9/6/370",
         "author_links": {
+            "A Körez": "https://scholar.google.com/citations?user=F3yaGPwAAAAJ&hl=en&oi=sra",
             "N Barışçı": "https://scholar.google.com/citations?user=0qMaYIcAAAAJ&hl=en&oi=sra",
             "A Çetin": "https://scholar.google.com/citations?user=5Qv3g4UAAAAJ&hl=en&oi=sra",
             "U Ergün": "https://scholar.google.com/citations?user=YSnytKcAAAAJ&hl=en&oi=sra"
@@ -819,6 +858,20 @@
         ],
         "abstract": "The task of object detection and pose estimation has widely been done using template matching techniques. However, these algorithms are sensitive to outliers and occlusions, and have high latency due to their iterative nature. Recent research in computer vision and …",
         "eprint": "https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=2286&context=etd-theses"
+    },
+    {
+        "title": "Side-Scan Sonar Image Synthesis Based on Generative Adversarial Network for Images in Multiple Frequencies",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9137342/",
+        "author_links": {
+            "H Ko": "https://scholar.google.com/citations?user=G9v28v4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Jiang",
+            "B Ku",
+            "W Kim",
+            "H Ko"
+        ],
+        "abstract": "The side-scan sonar (SSS) is a critical sensor device used to explore underwater environments in the deep sea. Gathering SSS data, however, is an expensive and time-consuming task because it requires sensor towing and involves complicated field …"
     },
     {
         "title": "Urban Sound Tagging using Convolutional Neural Networks",
@@ -871,6 +924,24 @@
         "abstract": "This paper develops a deep learning model, called Encoder-Recurrent Decoder Network (ERDN), which recovers the clear image from a degrade hazy image without using the atmospheric scattering model. The proposed model consists of two key components-an …"
     },
     {
+        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
+        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
+        "author_links": {
+            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
+            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Feng",
+            "S Liu",
+            "Z Cheng",
+            "J Quiroz",
+            "P Chen",
+            "Q Lin"
+        ],
+        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
+        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/06/2020.08.03.20167007.full.pdf"
+    },
+    {
         "title": "Working with scale: 2nd place solution to Product Detection in Densely Packed Scenes [Technical Report]",
         "url": "https://arxiv.org/abs/2006.07825",
         "author_links": {},
@@ -884,7 +955,8 @@
         "title": "Challenges in the deep learning-based semantic segmentation of benthic communities from Ortho-images",
         "url": "https://link.springer.com/article/10.1007/s12518-020-00331-6",
         "author_links": {
-            "M Corsini": "https://scholar.google.com/citations?user=jU8HCCkAAAAJ&hl=en&oi=sra"
+            "M Corsini": "https://scholar.google.com/citations?user=jU8HCCkAAAAJ&hl=en&oi=sra",
+            "N Pedersen": "https://scholar.google.com/citations?user=k4Y2LsoAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "G Pavoni",
@@ -893,7 +965,7 @@
             "V Petrovic"
         ],
         "abstract": "Since the early days of the low-cost camera development, the collection of visual data has become a common practice in the underwater monitoring field. Nevertheless, video and image sequences are a trustworthy source of knowledge that remains partially untapped …",
-        "eprint": "http://vcg.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
+        "eprint": "http://cattedraledigitale.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
     },
     {
         "title": "CRNNS FOR URBAN SOUND TAGGING WITH SPATIOTEMPORAL CONTEXT",
@@ -960,6 +1032,19 @@
             "JM Saavedra"
         ],
         "abstract": "We propose modifications to the RetinaNet architecture and Focal Loss [1] to improve the effectiveness of them in the context of object detection. We show that through normalizing the embeddings generated by each receptive field in the feature map, classifying them using …"
+    },
+    {
+        "title": "On the Accuracy of CRNNs for Line-Based OCR: A Multi-Parameter Evaluation",
+        "url": "https://arxiv.org/abs/2008.02777",
+        "author_links": {
+            "M Burghardt": "https://scholar.google.com/citations?user=Upg83P0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "B Liebl",
+            "M Burghardt"
+        ],
+        "abstract": "We investigate how to train a high quality optical character recognition (OCR) model for difficult historical typefaces on degraded paper. Through extensive grid searches, we obtain a neural network architecture and a set of optimal data augmentation settings. We discuss …",
+        "eprint": "https://arxiv.org/pdf/2008.02777"
     },
     {
         "title": "An Efficient Solution for Semantic Segmentation of Three Ground‐based Cloud Datasets",
@@ -1049,6 +1134,20 @@
         "abstract": "Accurate semantic segmentation ground-truths are difficult and expensive to obtain. On the other hand, the most promising approaches to automatically tackle this task, ie Deep Convolutional Neural Networks (CNNs), require high volumes of labeled data. We propose …"
     },
     {
+        "title": "A Two-Stream Context-Aware ConvNet for Pavement Distress Detection",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9163538/",
+        "author_links": {
+            "A Tepljakov": "https://scholar.google.com/citations?user=QEePtsIAAAAJ&hl=en&oi=sra",
+            "A Riid": "https://scholar.google.com/citations?user=7vCMnyUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Lõuk",
+            "A Tepljakov",
+            "A Riid"
+        ],
+        "abstract": "Convolutional neural networks (ConvNets) are widely used for pavement distress analysis tasks in which features are typically extracted from a smaller image (eg $224\\times 224$) that has been cropped from an orthophoto. This paper introduces a ConvNet-based method …"
+    },
+    {
         "title": "Augmentation-Based Object Detection for Winter Time Applications",
         "url": "https://ieeexplore.ieee.org/abstract/document/8875557/",
         "author_links": {
@@ -1101,6 +1200,21 @@
         "abstract": "Early detection is essential to reduce cancer mortality. Oral cancer could be subject to screening programs (similar as for cervical cancer) by collecting Pap smear samples at any dentist visit. However, manual analysis of the resulting massive amount of data is …"
     },
     {
+        "title": "Accurate and Efficient Intracranial Hemorrhage Detection and Subtype Classification in 3D CT Scans with Convolutional and Long Short-Term Memory Neural …",
+        "url": "https://arxiv.org/abs/2008.00302",
+        "author_links": {
+            "RT Ionescu": "https://scholar.google.com/citations?user=qVbwC6QAAAAJ&hl=en&oi=sra",
+            "N Verga": "https://scholar.google.com/citations?user=9XUBPiEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Burduja",
+            "RT Ionescu",
+            "N Verga"
+        ],
+        "abstract": "In this paper, we present our system for the RSNA Intracranial Hemorrhage Detection challenge. The proposed system is based on a lightweight deep neural network architecture composed of a convolutional neural network (CNN) that takes as input individual CT slices …",
+        "eprint": "https://arxiv.org/pdf/2008.00302"
+    },
+    {
         "title": "Understanding the decisions of CNNs: an in-model approach",
         "url": "https://www.sciencedirect.com/science/article/pii/S0167865520301240",
         "author_links": {
@@ -1128,6 +1242,18 @@
         ],
         "abstract": "Imaging phantoms are test patterns used to measure image quality in computer tomography (CT) systems. A new phantom platform (Mercury Phantom, Gammex) provides test patterns for estimating the task transfer function (TTF) or noise power spectrum (NPF) and simulates …",
         "eprint": "https://arxiv.org/pdf/2001.08189"
+    },
+    {
+        "title": "ПРОБЛЕМЫ ДЕТЕКТИРОВАНИЯ ОБЪЕКТА НА ИЗОБРАЖЕНИИ В ЗАДАЧАХ ГЛУБОКОГО ОБУЧЕНИЯ В ОБЛАСТИ КОМПЬЮТЕРНОГО ЗРЕНИЯ НА …",
+        "url": "https://cyberleninka.ru/article/n/problemy-detektirovaniya-obekta-na-izobrazhenii-v-zadachah-glubokogo-obucheniya-v-oblasti-kompyuternogo-zreniya-na-osnove-svyortochnyh",
+        "author_links": {},
+        "author": [
+            "СВ Кравченко",
+            "АВ Алексеев",
+            "ЮА Орлова"
+        ],
+        "abstract": "В статье рассматривается последовательность шагов по сбору данных для последующего обучения свёрточной нейронной сети, используемой для решения задачи детектирования грызуна (крысы или мыши) в лабиринте для лабораторных …",
+        "eprint": "https://cyberleninka.ru/article/n/problemy-detektirovaniya-obekta-na-izobrazhenii-v-zadachah-glubokogo-obucheniya-v-oblasti-kompyuternogo-zreniya-na-osnove-svyortochnyh"
     },
     {
         "title": "Monitoring sugar crystallization with deep neural networks",
