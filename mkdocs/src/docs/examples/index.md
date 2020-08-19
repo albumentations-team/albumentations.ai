@@ -12,4 +12,10 @@
 - [Debugging an augmentation pipeline with ReplayCompose](replay/)
 - [How to save and load parameters of an augmentation pipeline](serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](showcase/)
-- [Using Albumentations with Tensorflow](tensorflow-example/)
+
+## Examples of how to use Albumentations with different deep learning frameworks
+- PyTorch
+    - [PyTorch and Albumentations for image classification](pytorch_classification/)
+    - [PyTorch and Albumentations for semantic segmentation](pytorch_semantic_segmentation/)
+- TensorFlow 2
+    - [Using Albumentations with Tensorflow](tensorflow-example/)

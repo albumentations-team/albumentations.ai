@@ -1,5 +1,11 @@
 # Release notes
 
+## Latest
+
+### Improvements
+- Albumentations now explicitly checks that all inputs to augmentations are named arguments and raise an exception otherwise. So if an augmentation receives input like `aug(image)` instead of `aug(image=image)`, Albumentations will raise an exception. PR [#560](https://github.com/albumentations-team/albumentations/pull/560).
+- `GaussianBlur` now supports the `sigma` parameter that sets standard deviation for Gaussian kernel. PR [#674](https://github.com/albumentations-team/albumentations/pull/674) and Issue [#673](https://github.com/albumentations-team/albumentations/issues/673).
+
 ## 0.4.6
 
 ### Improvements
