@@ -378,6 +378,24 @@
         "eprint": "http://openaccess.thecvf.com/content_CVPRW_2020/papers/w11/Tasar_StandardGAN_Multi-Source_Domain_Adaptation_for_Semantic_Segmentation_of_Very_High_CVPRW_2020_paper.pdf"
     },
     {
+        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
+        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
+        "author_links": {
+            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
+            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Feng",
+            "S Liu",
+            "Z Cheng",
+            "J Quiroz",
+            "P Chen",
+            "Q Lin"
+        ],
+        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
+        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/06/2020.08.03.20167007.full.pdf"
+    },
+    {
         "title": "The Impact of Padding on Image Classification by Using Pre-trained Convolutional Neural Networks",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-30645-8_31",
         "author_links": {
@@ -418,6 +436,20 @@
         ],
         "abstract": "Data augmentation is widely used as a part of the training process applied to deep learning models, especially in the computer vision domain. Currently, common data augmentation techniques are designed manually. Therefore they require expert knowledge and time …",
         "eprint": "https://arxiv.org/pdf/1907.12896"
+    },
+    {
+        "title": "A Two-Stream Context-Aware ConvNet for Pavement Distress Detection",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9163538/",
+        "author_links": {
+            "A Tepljakov": "https://scholar.google.com/citations?user=QEePtsIAAAAJ&hl=en&oi=sra",
+            "A Riid": "https://scholar.google.com/citations?user=7vCMnyUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Lõuk",
+            "A Tepljakov",
+            "A Riid"
+        ],
+        "abstract": "Convolutional neural networks (ConvNets) are widely used for pavement distress analysis tasks in which features are typically extracted from a smaller image (eg $224\\times 224$) that has been cropped from an orthophoto. This paper introduces a ConvNet-based method …"
     },
     {
         "title": "EasyAug: An automatic textual data augmentation platform for classification tasks",
@@ -808,6 +840,20 @@
         ]
     },
     {
+        "title": "AGUnet: Annotation-guided U-net for Fast One-shot Video Object Segmentation",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0031320320303836",
+        "author_links": {
+            "Y Yin": "https://scholar.google.com/citations?user=SDw9Lb4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Yin",
+            "D Xu",
+            "X Wang",
+            "L Zhang"
+        ],
+        "abstract": "The problem of semi-supervised video object segmentation has been popularly tackled by fine-tuning a general-purpose segmentation deep network on the annotated frame using hundreds of iterations of gradient descent. The time-consuming fine-tuning process …"
+    },
+    {
         "title": "Automation of Kidney Perfusion Analysis from Dynamic Phase-Contrast MRI using Deep Learning",
         "url": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf",
         "author_links": {},
@@ -911,6 +957,18 @@
         "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …"
     },
     {
+        "title": "Use of Images Augmentation and Implementation of Doubly Stochastic Models for Improving Accuracy of Recognition Algorithms Based on Convolutional Neural …",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9166000/",
+        "author_links": {
+            "NA Andriyanov": "https://scholar.google.com/citations?user=qvfBX5AAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "VE Dementyiev",
+            "NA Andriyanov"
+        ],
+        "abstract": "The article proposes methods for increasing the efficiency of pattern recognition in images using convolutional neural networks in conditions of insufficient reference images. It is proposed to use various kinds of image transformations to generate new images and …"
+    },
+    {
         "title": "Encoder-Recurrent Decoder Network for Single Image Dehazing",
         "url": "https://ieeexplore.ieee.org/abstract/document/9052993/",
         "author_links": {
@@ -922,24 +980,6 @@
             "JC Wang"
         ],
         "abstract": "This paper develops a deep learning model, called Encoder-Recurrent Decoder Network (ERDN), which recovers the clear image from a degrade hazy image without using the atmospheric scattering model. The proposed model consists of two key components-an …"
-    },
-    {
-        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
-        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
-        "author_links": {
-            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
-            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Y Feng",
-            "S Liu",
-            "Z Cheng",
-            "J Quiroz",
-            "P Chen",
-            "Q Lin"
-        ],
-        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
-        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/06/2020.08.03.20167007.full.pdf"
     },
     {
         "title": "Working with scale: 2nd place solution to Product Detection in Densely Packed Scenes [Technical Report]",
@@ -1132,20 +1172,6 @@
             "R Schettini"
         ],
         "abstract": "Accurate semantic segmentation ground-truths are difficult and expensive to obtain. On the other hand, the most promising approaches to automatically tackle this task, ie Deep Convolutional Neural Networks (CNNs), require high volumes of labeled data. We propose …"
-    },
-    {
-        "title": "A Two-Stream Context-Aware ConvNet for Pavement Distress Detection",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9163538/",
-        "author_links": {
-            "A Tepljakov": "https://scholar.google.com/citations?user=QEePtsIAAAAJ&hl=en&oi=sra",
-            "A Riid": "https://scholar.google.com/citations?user=7vCMnyUAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "R Lõuk",
-            "A Tepljakov",
-            "A Riid"
-        ],
-        "abstract": "Convolutional neural networks (ConvNets) are widely used for pavement distress analysis tasks in which features are typically extracted from a smaller image (eg $224\\times 224$) that has been cropped from an orthophoto. This paper introduces a ConvNet-based method …"
     },
     {
         "title": "Augmentation-Based Object Detection for Winter Time Applications",
