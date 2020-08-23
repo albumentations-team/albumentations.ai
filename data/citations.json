@@ -762,6 +762,22 @@
         "eprint": "https://arxiv.org/pdf/2002.04392"
     },
     {
+        "title": "Image Stylization for Robust Features",
+        "url": "https://arxiv.org/abs/2008.06959",
+        "author_links": {
+            "I Melekhov": "https://scholar.google.com/citations?user=BXNprrsAAAAJ&hl=en&oi=sra",
+            "GJ Brostow": "https://scholar.google.com/citations?user=CZiTv0gAAAAJ&hl=en&oi=sra",
+            "J Kannala": "https://scholar.google.com/citations?user=c4mWQPQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "I Melekhov",
+            "GJ Brostow",
+            "J Kannala"
+        ],
+        "abstract": "Local features that are robust to both viewpoint and appearance changes are crucial for many computer vision tasks. In this work we investigate if photorealistic image stylization improves robustness of local features to not only day-night, but also weather and season …",
+        "eprint": "https://arxiv.org/pdf/2008.06959"
+    },
+    {
         "title": "Automatic Sorting of Dwarf Minke Whale Underwater Images",
         "url": "https://www.mdpi.com/2078-2489/11/4/200",
         "author_links": {
