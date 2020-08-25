@@ -690,6 +690,21 @@
         "eprint": "https://arxiv.org/pdf/2006.14547"
     },
     {
+        "title": "Development and evaluation of deep learning-based segmentation of histologic structures in the kidney cortex with multiple histologic stains.",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0085253820309625",
+        "author_links": {
+            "AR Janowczyk": "https://scholar.google.com/citations?user=30jKRGcAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "CP Jayapandian",
+            "Y Chen",
+            "AR Janowczyk",
+            "MB Palmer"
+        ],
+        "abstract": "The application of deep learning for automated segmentation (delineation of boundaries) of histologic primitives (structures) from whole slide images can facilitate the establishment of novel protocols for kidney biopsy assessment. Here, we developed and validated deep …",
+        "eprint": "https://www.kidney-international.org/article/S0085-2538(20)30962-5/fulltext"
+    },
+    {
         "title": "Landslide Segmentation with U-Net: Evaluating Different Sampling Methods and Patch Sizes",
         "url": "https://arxiv.org/abs/2007.06672",
         "author_links": {
@@ -778,6 +793,20 @@
         "eprint": "https://arxiv.org/pdf/2008.06959"
     },
     {
+        "title": "Deep Learning Methods for Screening Pulmonary Tuberculosis Using Chest X-rays",
+        "url": "https://www.researchgate.net/profile/Maheshi_Dissanayake/publication/343736851_Deep_Learning_Methods_for_Screening_Pulmonary_Tuberculosis_Using_Chest_X-rays_Journal_Computer_Methods_in_Biomechanics_and_Biomedical_Engineering_Imaging_Visualization_TCIV_DOI_10108021681163202018085/links/5f3cd23f458515b7292c8748/Deep-Learning-Methods-for-Screening-Pulmonary-Tuberculosis-Using-Chest-X-rays-Journal-Computer-Methods-in-Biomechanics-and-Biomedical-Engineering-Imaging-Visualization-TCIV-DOI-101080-21681163202018.pdf",
+        "author_links": {
+            "C Dasanayaka": "https://scholar.google.com/citations?user=GJ7RQpYAAAAJ&hl=en&oi=sra",
+            "MB Dissanayake": "https://scholar.google.com/citations?user=TJ5YHPkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "C Dasanayaka",
+            "MB Dissanayake"
+        ],
+        "abstract": "Tuberculosis (TB) is a contagious bacterial airborne disease, and is one of the top 10 causes of death worldwide. According to the World Health Organization (WHO), around 1.8 billion people are infected with TB and 1.6 million deaths were reported in 2018. More …",
+        "eprint": "https://www.researchgate.net/profile/Maheshi_Dissanayake/publication/343736851_Deep_Learning_Methods_for_Screening_Pulmonary_Tuberculosis_Using_Chest_X-rays_Journal_Computer_Methods_in_Biomechanics_and_Biomedical_Engineering_Imaging_Visualization_TCIV_DOI_10108021681163202018085/links/5f3cd23f458515b7292c8748/Deep-Learning-Methods-for-Screening-Pulmonary-Tuberculosis-Using-Chest-X-rays-Journal-Computer-Methods-in-Biomechanics-and-Biomedical-Engineering-Imaging-Visualization-TCIV-DOI-101080-21681163202018.pdf"
+    },
+    {
         "title": "Automatic Sorting of Dwarf Minke Whale Underwater Images",
         "url": "https://www.mdpi.com/2078-2489/11/4/200",
         "author_links": {
@@ -837,13 +866,25 @@
         "eprint": "https://arxiv.org/pdf/1908.00329"
     },
     {
+        "title": "Fiscal classification using convolutional neural network",
+        "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11469/114691N/Fiscal-classification-using-convolutional-neural-network/10.1117/12.2568314.short",
+        "author_links": {
+            "BK Kaushik": "https://scholar.google.com/citations?user=k8ZqlzYAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Bindal",
+            "R Modi",
+            "BK Kaushik"
+        ],
+        "abstract": "Currency classification is an important task in computer vision. Traditional models extract relevant features (brightness, shape, colour etc.) through complex mathematical calculations. A deep learning approach towards fiscal classification by automatically …"
+    },
+    {
         "title": "Cloud Recognition and Masking of Earth Observation Imagery-An Optimized approach for Automatic Labeling of Sentinel-2 Imagery for Object Detection",
         "url": "https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2619036",
         "author_links": {},
         "author": [
             "LM Ellefsen"
         ],
-        "abstract": "I dette prosjektet har vi utviklet tre forskjellige metoder for å analysere Sentinel-2 satellitt-bilder som inneholder skip, med mål om å avgjøre om skipet er skjult av en sky. Vår motivasjon for denne oppgaven er å finne den optimale metoden for å kunne klassifisere …",
         "eprint": "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2619036/no.ntnu%3Ainspera%3A2469660.pdf?sequence=1"
     },
     {
