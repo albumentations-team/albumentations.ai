@@ -315,7 +315,8 @@
             "J Moosmann",
             "DCF Wieland"
         ],
-        "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is …"
+        "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is …",
+        "eprint": "/scholar?output=instlink&q=info:uQDFJoTbVIIJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=17231146475223878347&oi=lle"
     },
     {
         "title": "Adapting Convolutional Neural Networks for Geographical Domain Shift",
@@ -570,7 +571,8 @@
             "RA Solovyev",
             "AL Stempkovsky"
         ],
-        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …"
+        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …",
+        "eprint": "/scholar?output=instlink&q=info:HQHqGDottdgJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=4407933494574087788&oi=lle"
     },
     {
         "title": "Neural Mesh Refiner for 6-DoF Pose Estimation",
@@ -690,6 +692,20 @@
         "eprint": "https://arxiv.org/pdf/2006.14547"
     },
     {
+        "title": "Deep Learning Methods for Screening Pulmonary Tuberculosis Using Chest X-rays",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/21681163.2020.1808532?casa_token=-0xmTDKLSVMAAAAA:Bdvh5VC9__a_uB1ynkMTyi-_QHgaXWJimESqqB-KdMdSp9uGYQ3nWfRl_O25_YwS61N2bRfEQRpd-w",
+        "author_links": {
+            "C Dasanayaka": "https://scholar.google.com/citations?user=GJ7RQpYAAAAJ&hl=en&oi=sra",
+            "MB Dissanayake": "https://scholar.google.com/citations?user=TJ5YHPkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "C Dasanayaka",
+            "MB Dissanayake"
+        ],
+        "abstract": "Tuberculosis (TB) is a contagious bacterial airborne disease, and is one of the top 10 causes of death worldwide. According to the World Health Organisation, around 1.8 billion people are infected with TB and 1.6 million deaths were reported in 2018. More importantly …",
+        "eprint": "https://www.tandfonline.com/doi/pdf/10.1080/21681163.2020.1808532?casa_token=g0Q4lzlJOBYAAAAA:fMKIzV1rBvTr0kT5lnMii5S97zr6AmTQbJVOP1VJxRZoSbtEFSyMnnu7U1owDdjXyidccPf5uuzF0Q"
+    },
+    {
         "title": "Development and evaluation of deep learning-based segmentation of histologic structures in the kidney cortex with multiple histologic stains.",
         "url": "https://www.sciencedirect.com/science/article/pii/S0085253820309625",
         "author_links": {
@@ -793,20 +809,6 @@
         "eprint": "https://arxiv.org/pdf/2008.06959"
     },
     {
-        "title": "Deep Learning Methods for Screening Pulmonary Tuberculosis Using Chest X-rays",
-        "url": "https://www.researchgate.net/profile/Maheshi_Dissanayake/publication/343736851_Deep_Learning_Methods_for_Screening_Pulmonary_Tuberculosis_Using_Chest_X-rays_Journal_Computer_Methods_in_Biomechanics_and_Biomedical_Engineering_Imaging_Visualization_TCIV_DOI_10108021681163202018085/links/5f3cd23f458515b7292c8748/Deep-Learning-Methods-for-Screening-Pulmonary-Tuberculosis-Using-Chest-X-rays-Journal-Computer-Methods-in-Biomechanics-and-Biomedical-Engineering-Imaging-Visualization-TCIV-DOI-101080-21681163202018.pdf",
-        "author_links": {
-            "C Dasanayaka": "https://scholar.google.com/citations?user=GJ7RQpYAAAAJ&hl=en&oi=sra",
-            "MB Dissanayake": "https://scholar.google.com/citations?user=TJ5YHPkAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "C Dasanayaka",
-            "MB Dissanayake"
-        ],
-        "abstract": "Tuberculosis (TB) is a contagious bacterial airborne disease, and is one of the top 10 causes of death worldwide. According to the World Health Organization (WHO), around 1.8 billion people are infected with TB and 1.6 million deaths were reported in 2018. More …",
-        "eprint": "https://www.researchgate.net/profile/Maheshi_Dissanayake/publication/343736851_Deep_Learning_Methods_for_Screening_Pulmonary_Tuberculosis_Using_Chest_X-rays_Journal_Computer_Methods_in_Biomechanics_and_Biomedical_Engineering_Imaging_Visualization_TCIV_DOI_10108021681163202018085/links/5f3cd23f458515b7292c8748/Deep-Learning-Methods-for-Screening-Pulmonary-Tuberculosis-Using-Chest-X-rays-Journal-Computer-Methods-in-Biomechanics-and-Biomedical-Engineering-Imaging-Visualization-TCIV-DOI-101080-21681163202018.pdf"
-    },
-    {
         "title": "Automatic Sorting of Dwarf Minke Whale Underwater Images",
         "url": "https://www.mdpi.com/2078-2489/11/4/200",
         "author_links": {
@@ -866,6 +868,17 @@
         "eprint": "https://arxiv.org/pdf/1908.00329"
     },
     {
+        "title": "CRNNs for Urban Sound Tagging with spatiotemporal context",
+        "url": "https://arxiv.org/abs/2008.10413",
+        "author_links": {},
+        "author": [
+            "A Arnault",
+            "N Riche"
+        ],
+        "abstract": "This paper describes CRNNs we used to participate in Task 5 of the DCASE 2020 \nchallenge. This task focuses on hierarchical multi- label urban sound tagging with spatiotemporal \ncontext. The code is available to our GitHub repository at https://github.com/multitel …",
+        "eprint": "https://arxiv.org/pdf/2008.10413"
+    },
+    {
         "title": "Fiscal classification using convolutional neural network",
         "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11469/114691N/Fiscal-classification-using-convolutional-neural-network/10.1117/12.2568314.short",
         "author_links": {
@@ -876,7 +889,35 @@
             "R Modi",
             "BK Kaushik"
         ],
-        "abstract": "Currency classification is an important task in computer vision. Traditional models extract relevant features (brightness, shape, colour etc.) through complex mathematical calculations. A deep learning approach towards fiscal classification by automatically …"
+        "abstract": "Currency classification is an important task in computer vision. Traditional models extract relevant features (brightness, shape, colour etc.) through complex mathematical calculations. A deep learning approach towards fiscal classification by automatically …",
+        "eprint": "/scholar?output=instlink&q=info:TwuAjR7snmUJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=13774683797401419339&oi=lle"
+    },
+    {
+        "title": "CASS Studies",
+        "url": "http://heb-nic.in/cass/admin/freePDF/dws6odv8fhlttmd09r27.pdf",
+        "author_links": {},
+        "author": [
+            "HEB CASS"
+        ],
+        "abstract": "Data Augmentation defined as supplementing a data set with a data set that is created from information data set. It is very vast technique to improve the quality of modern image classifiers. The main example of data augmentation is image augmentation, whereas image …",
+        "eprint": "http://heb-nic.in/cass/admin/freePDF/dws6odv8fhlttmd09r27.pdf"
+    },
+    {
+        "title": "Not My Deepfake: Towards Plausible Deniability for Machine-Generated Media",
+        "url": "https://arxiv.org/abs/2008.09194",
+        "author_links": {
+            "B Zhang": "https://scholar.google.com/citations?user=Kt3J6NcAAAAJ&hl=en&oi=sra",
+            "I Shumailov": "https://scholar.google.com/citations?user=e-YbZyEAAAAJ&hl=en&oi=sra",
+            "N Papernot": "https://scholar.google.com/citations?user=cGxq0cMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "B Zhang",
+            "JP Zhou",
+            "I Shumailov",
+            "N Papernot"
+        ],
+        "abstract": "Progress in generative modelling, especially generative adversarial networks, have made it possible to efficiently synthesize and alter media at scale. Malicious individuals now rely on these machine-generated media, or deepfakes, to manipulate social discourse. In order to …",
+        "eprint": "https://arxiv.org/pdf/2008.09194"
     },
     {
         "title": "Cloud Recognition and Masking of Earth Observation Imagery-An Optimized approach for Automatic Labeling of Sentinel-2 Imagery for Object Detection",
@@ -900,7 +941,8 @@
         "title": "AGUnet: Annotation-guided U-net for Fast One-shot Video Object Segmentation",
         "url": "https://www.sciencedirect.com/science/article/pii/S0031320320303836",
         "author_links": {
-            "Y Yin": "https://scholar.google.com/citations?user=SDw9Lb4AAAAJ&hl=en&oi=sra"
+            "Y Yin": "https://scholar.google.com/citations?user=SDw9Lb4AAAAJ&hl=en&oi=sra",
+            "L Zhang": "https://scholar.google.com/citations?user=tAK5l1IAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "Y Yin",
@@ -909,6 +951,16 @@
             "L Zhang"
         ],
         "abstract": "The problem of semi-supervised video object segmentation has been popularly tackled by fine-tuning a general-purpose segmentation deep network on the annotated frame using hundreds of iterations of gradient descent. The time-consuming fine-tuning process …"
+    },
+    {
+        "title": "Deepfake detection using capsule networks with long short-term memory networks",
+        "url": "http://essay.utwente.nl/83028/",
+        "author_links": {},
+        "author": [
+            "A Mehra"
+        ],
+        "abstract": "With the recent advancement of technology, particularly with graphics processing and artificial intelligence algorithms, fake media generation has become easier. Using deep learning techniques like Deepfakes and FaceSwap, anyone can generate fake videos by …",
+        "eprint": "http://essay.utwente.nl/83028/1/Mehra_MA_EEMCS.pdf"
     },
     {
         "title": "Automation of Kidney Perfusion Analysis from Dynamic Phase-Contrast MRI using Deep Learning",
@@ -1011,7 +1063,8 @@
             "A Tandon",
             "T Hussain"
         ],
-        "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …"
+        "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …",
+        "eprint": "/scholar?output=instlink&q=info:ugTurh1lhkcJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=12883053543832155608&oi=lle"
     },
     {
         "title": "Use of Images Augmentation and Implementation of Doubly Stochastic Models for Improving Accuracy of Recognition Algorithms Based on Convolutional Neural …",
@@ -1063,18 +1116,6 @@
         ],
         "abstract": "Since the early days of the low-cost camera development, the collection of visual data has become a common practice in the underwater monitoring field. Nevertheless, video and image sequences are a trustworthy source of knowledge that remains partially untapped …",
         "eprint": "http://cattedraledigitale.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
-    },
-    {
-        "title": "CRNNS FOR URBAN SOUND TAGGING WITH SPATIOTEMPORAL CONTEXT",
-        "url": "http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Arnault_70_t5.pdf",
-        "author_links": {},
-        "author": [
-            "A Arnault",
-            "IMTL Douai",
-            "N Riche"
-        ],
-        "abstract": "This paper describes CRNNs we used to participate in Task 5 of the DCASE 2020 challenge. This task focuses on hierarchical multilabel urban sound tagging with spatiotemporal context. The code is available to our GitHub repository at https://github …",
-        "eprint": "http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Arnault_70_t5.pdf"
     },
     {
         "title": "Endoscopy Artefact Detection and Segmentation using Deep Convolutional Neural Network.",
@@ -1301,6 +1342,7 @@
         "title": "Understanding the decisions of CNNs: an in-model approach",
         "url": "https://www.sciencedirect.com/science/article/pii/S0167865520301240",
         "author_links": {
+            "I Rio-Torto": "https://scholar.google.com/citations?user=W1a8vwIAAAAJ&hl=en&oi=sra",
             "K Fernandes": "https://scholar.google.com/citations?user=FhbkV-wAAAAJ&hl=en&oi=sra",
             "LÃF Teixeira": "https://scholar.google.com/citations?user=WLOWIngoRCoC&hl=en&oi=sra"
         },
