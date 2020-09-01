@@ -134,7 +134,7 @@ transformed_keypoints = transformed['keypoints']
 ![The augmented image with augmented keypoints](../images/getting_started/augmenting_keypoints/augmented_image_with_keypoints.jpg "The augmented image with augmented keypoints")
 **The augmented image with augmented keypoints**
 
-If you set `remove_invisible` to `False` in `keypoint_params`, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right elbow is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.
+If you set `remove_invisible` to `False` in `keypoint_params`, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right hip is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.
 
 ![When `remove_invisible` is set to `False` Albumentations will return all keypoints, even those located outside the image](../images/getting_started/augmenting_keypoints/invisible_keypoints.jpg "When `remove_invisible` is set to `False` Albumentations will return all keypoints, even those located outside the image")
 **When `remove_invisible` is set to `False` Albumentations will return all keypoints, even those located outside the image**
@@ -209,7 +209,7 @@ transformed_image = transformed['image']
 **Example input and output data for keypoints augmentation with two separate arguments for class labels**
 
 !!! note
-    Some augmentations may affect class labels and make them incorrect. For example, the `HorizontalFlip` augmentation mirrors the input image. When you apply that augmentation to keypoints that mark the side of body parts (left or right), those keypoints will point to the wrong side (since `left` on the mirrored image becomes `right`). So when you are creating an augmentation pipeline look carefully which augmentations. could be applied to the input data.
+    Some augmentations may affect class labels and make them incorrect. For example, the `HorizontalFlip` augmentation mirrors the input image. When you apply that augmentation to keypoints that mark the side of body parts (left or right), those keypoints will point to the wrong side (since `left` on the mirrored image becomes `right`). So when you are creating an augmentation pipeline look carefully which augmentations could be applied to the input data.
 
     ![HorizontalFlip may make keypoints' labels incorrect](../images/getting_started/augmenting_keypoints/applying_horizontal_flip_to_keypoints.jpg "HorizontalFlip may make keypoints' labels incorrect")
     `HorizontalFlip` may make keypoints' labels incorrect
