@@ -38,7 +38,7 @@ Coordinates of the example bounding box in this format are `[98, 345, 322, 117]`
 ### yolo
 In `yolo`, a bounding box is represented by four values `[x_center, y_center, width, height]`. `x_center` and `y_center` are the normalized coordinates of the center of the bounding box. To make coordinates normalized, we take pixel values of x and y, which marks the center of the bounding box on the x- and y-axis. Then we divide the value of x by the width of the image and value of y by the height of the image. `width` and `height` represent the width and the height of the bounding box. They are normalized as well.
 
-Coordinates of the example bounding box in this format are `[((420 + 98) / 2) / 640, ((462 + 365) / 2) / 480, 322 / 640, 117 / 480]` which are `[0.4046875, 0.8614583, 0.503125, 0.24375]`.
+Coordinates of the example bounding box in this format are `[((420 + 98) / 2) / 640, ((462 + 345) / 2) / 480, 322 / 640, 117 / 480]` which are `[0.4046875, 0.840625, 0.503125, 0.24375]`.
 
 
 ![How different formats represent coordinates of a bounding box](../images/getting_started/augmenting_bboxes/bbox_formats.jpg "How different formats represent coordinates of a bounding box")
