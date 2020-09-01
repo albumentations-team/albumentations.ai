@@ -802,7 +802,7 @@ Then you pass those keypoints to the <code>transform</code> function along with 
 </code></pre></div>
 <p><img alt="The augmented image with augmented keypoints" src="../../images/getting_started/augmenting_keypoints/augmented_image_with_keypoints.jpg" title="The augmented image with augmented keypoints"/>
 <strong>The augmented image with augmented keypoints</strong></p>
-<p>If you set <code>remove_invisible</code> to <code>False</code> in <code>keypoint_params</code>, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right elbow is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.</p>
+<p>If you set <code>remove_invisible</code> to <code>False</code> in <code>keypoint_params</code>, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right hip is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.</p>
 <p><img alt="When remove_invisible is set to False Albumentations will return all keypoints, even those located outside the image" src="../../images/getting_started/augmenting_keypoints/invisible_keypoints.jpg" title="When remove_invisible is set to False Albumentations will return all keypoints, even those located outside the image"/>
 <strong>When <code>remove_invisible</code> is set to <code>False</code> Albumentations will return all keypoints, even those located outside the image</strong></p>
 <p>If keypoints have associated class labels, you need to create a list that contains those labels:</p>
@@ -854,7 +854,7 @@ Then you pass those keypoints to the <code>transform</code> function along with 
 <strong>Example input and output data for keypoints augmentation with two separate arguments for class labels</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Some augmentations may affect class labels and make them incorrect. For example, the <code>HorizontalFlip</code> augmentation mirrors the input image. When you apply that augmentation to keypoints that mark the side of body parts (left or right), those keypoints will point to the wrong side (since <code>left</code> on the mirrored image becomes <code>right</code>). So when you are creating an augmentation pipeline look carefully which augmentations. could be applied to the input data.</p>
+<p>Some augmentations may affect class labels and make them incorrect. For example, the <code>HorizontalFlip</code> augmentation mirrors the input image. When you apply that augmentation to keypoints that mark the side of body parts (left or right), those keypoints will point to the wrong side (since <code>left</code> on the mirrored image becomes <code>right</code>). So when you are creating an augmentation pipeline look carefully which augmentations could be applied to the input data.</p>
 <p><img alt="HorizontalFlip may make keypoints' labels incorrect" src="../../images/getting_started/augmenting_keypoints/applying_horizontal_flip_to_keypoints.jpg" title="HorizontalFlip may make keypoints' labels incorrect"/>
 <code>HorizontalFlip</code> may make keypoints' labels incorrect</p>
 </div>
