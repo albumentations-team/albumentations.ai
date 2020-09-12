@@ -4,5 +4,3 @@ requests
 html5lib
 bs4
 pygithub
-pypandoc
-Pillow>=7.1.0

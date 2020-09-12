@@ -1,15 +1,11 @@
 import json
 import os
-from urllib.request import urlopen, Request
 
 import click
-import pypandoc as pypandoc
-from PIL import Image
 
 from lib import staticjinja
 from lib.formatters import get_prepared_citations
 from lib.github import GitHubClient
-from lib.parsers import parse_used_by
 
 
 TOP_REPOSITORIES_LIMIT = 12
@@ -45,7 +41,7 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
     with open(os.path.join(cache_dir, "top_repositories.json")) as f:
         top_repositories = json.load(f)
 
-    with open(os.path.join(cache_dir, "img_industry.json")) as f:
+    with open(os.path.join(data_dir, "img_industry.json")) as f:
         img_industry = json.load(f)
 
     with open(os.path.join(data_dir, "team.json")) as f:
@@ -102,19 +98,6 @@ def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, reposi
 
     with open(os.path.join(cache_dir, "stars_count.json"), "w") as f:
         json.dump(stars_count, f)
-
-    readme_md = client.get_repository_file_content(repository, "README.md")
-    readme_html = pypandoc.convert_text(readme_md, "html", format="md")
-    used_by = parse_used_by(readme_html)
-
-    with open(os.path.join(cache_dir, "img_industry.json"), "w") as f:
-        json.dump(used_by, f)
-
-    for company in used_by:
-        req = Request(company["img_url"])
-        req.add_header("User-Agent", USER_AGENT)
-        img = Image.open(urlopen(req))
-        img.save(os.path.join(img_industry_cache_dir, company["img_filename"]))
 
     with open(os.path.join(data_dir, "team.json")) as f:
         team = json.load(f)
