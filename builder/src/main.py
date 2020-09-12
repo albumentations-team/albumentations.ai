@@ -9,7 +9,7 @@ from lib.github import GitHubClient
 
 
 TOP_REPOSITORIES_LIMIT = 12
-CACHE_FILES = ("stars_count.json", "contributors.json", "top_repositories.json", "img_industry.json")
+CACHE_FILES = ("stars_count.json", "contributors.json", "top_repositories.json")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
 
 
