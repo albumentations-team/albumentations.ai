@@ -80,10 +80,9 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
 @click.option("--github-token", type=str, envvar="GITHUB_TOKEN", required=True)
 @click.option("--data-dir", type=str, envvar="DATA_DIR", required=True)
 @click.option("--cache-dir", type=str, envvar="CACHE_DIR", required=True)
-@click.option("--img-industry-cache-dir", type=str, envvar="IMG_INDUSTRY_CACHE_DIR", required=True)
 @click.option("--repository", envvar="REPOSITORY", required=True)
 @click.option("--additional_repositories", envvar="ADDITIONAL_REPOSITORIES", multiple=True)
-def fetch_data(github_token, data_dir, cache_dir, img_industry_cache_dir, repository, additional_repositories):
+def fetch_data(github_token, data_dir, cache_dir, repository, additional_repositories):
     client = GitHubClient(access_token=github_token,)
 
     stars_count = client.get_repository_stars_rounded(repository)

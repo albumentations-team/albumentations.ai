@@ -11,10 +11,9 @@ services:
       - DATA_DIR=/data
       - BUILD_DIR=/_build
       - CACHE_DIR=/_cache
-      - IMG_INDUSTRY_CACHE_DIR=/builder/src/html/assets/img/industry
       - SEARCHPATH=html
       - REPOSITORY=albumentations-team/albumentations
-      - ADDITIONAL_REPOSITORIES=albumentations-team/albumentations_examples
+      - ADDITIONAL_REPOSITORIES=albumentations-team/albumentations_examples albumentations-team/albumentations.ai
       - GITHUB_TOKEN
       - MKDOCS_PORT
     volumes:
