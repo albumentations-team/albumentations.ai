@@ -18,10 +18,8 @@ idna==2.8                 # via requests
 jinja2==2.10.3            # via staticjinja
 markupsafe==1.1.1         # via jinja2
 pathtools==0.1.2          # via watchdog
-pillow==7.2.0             # via -r requirements.in
 pygithub==1.45            # via -r requirements.in
 pyjwt==1.7.1              # via pygithub
-pypandoc==1.4             # via -r requirements.in
 pyyaml==5.2               # via watchdog
 requests==2.22.0          # via -r requirements.in, pygithub
 six==1.13.0               # via html5lib, pygithub
@@ -30,9 +28,4 @@ staticjinja==0.3.5        # via -r requirements.in
 urllib3==1.25.7           # via requests
 watchdog==0.9.0           # via easywatch
 webencodings==0.5.1       # via html5lib
-wheel==0.34.2             # via pypandoc
 wrapt==1.11.2             # via deprecated
-
-# The following packages are considered to be unsafe in a requirements file:
-# pip
-# setuptools
