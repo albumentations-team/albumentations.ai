@@ -315,8 +315,7 @@
             "J Moosmann",
             "DCF Wieland"
         ],
-        "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is …",
-        "eprint": "/scholar?output=instlink&q=info:uQDFJoTbVIIJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=17231146475223878347&oi=lle"
+        "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is …"
     },
     {
         "title": "Adapting Convolutional Neural Networks for Geographical Domain Shift",
@@ -362,6 +361,23 @@
         ],
         "abstract": "Land cover classification of remote sensing images is a challenging task due to limited amounts of annotated data, highly imbalanced classes, frequent incorrect pixel-level annotations, and an inherent complexity in the semantic segmentation task. In this article, we …",
         "eprint": "https://arxiv.org/pdf/2003.04027"
+    },
+    {
+        "title": "Not My Deepfake: Towards Plausible Deniability for Machine-Generated Media",
+        "url": "https://arxiv.org/abs/2008.09194",
+        "author_links": {
+            "B Zhang": "https://scholar.google.com/citations?user=Kt3J6NcAAAAJ&hl=en&oi=sra",
+            "I Shumailov": "https://scholar.google.com/citations?user=e-YbZyEAAAAJ&hl=en&oi=sra",
+            "N Papernot": "https://scholar.google.com/citations?user=cGxq0cMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "B Zhang",
+            "JP Zhou",
+            "I Shumailov",
+            "N Papernot"
+        ],
+        "abstract": "Progress in generative modelling, especially generative adversarial networks, have made it possible to efficiently synthesize and alter media at scale. Malicious individuals now rely on these machine-generated media, or deepfakes, to manipulate social discourse. In order to …",
+        "eprint": "https://arxiv.org/pdf/2008.09194"
     },
     {
         "title": "StandardGAN: Multi-source Domain Adaptation for Semantic Segmentation of Very High Resolution Satellite Images by Data Standardization",
@@ -571,8 +587,7 @@
             "RA Solovyev",
             "AL Stempkovsky"
         ],
-        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …",
-        "eprint": "/scholar?output=instlink&q=info:HQHqGDottdgJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=4407933494574087788&oi=lle"
+        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …"
     },
     {
         "title": "Neural Mesh Refiner for 6-DoF Pose Estimation",
@@ -605,6 +620,20 @@
         ],
         "abstract": "Visual emotion expression plays an important role in audiovisual speech communication. In this work, we propose a novel approach to rendering visual emotion expression in speech-driven talking face generation. Specifically, we design an end-to-end talking face generation …",
         "eprint": "https://arxiv.org/pdf/2008.03592"
+    },
+    {
+        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
+        "author_links": {
+            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
+            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Marques",
+            "D Agarwal",
+            "I de la Torre Díez"
+        ],
+        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
     },
     {
         "title": "2nd Place Solution to ECCV 2020 VIPriors Object Detection Challenge",
@@ -693,7 +722,7 @@
     },
     {
         "title": "Deep Learning Methods for Screening Pulmonary Tuberculosis Using Chest X-rays",
-        "url": "https://www.tandfonline.com/doi/abs/10.1080/21681163.2020.1808532?casa_token=-0xmTDKLSVMAAAAA:Bdvh5VC9__a_uB1ynkMTyi-_QHgaXWJimESqqB-KdMdSp9uGYQ3nWfRl_O25_YwS61N2bRfEQRpd-w",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/21681163.2020.1808532",
         "author_links": {
             "C Dasanayaka": "https://scholar.google.com/citations?user=GJ7RQpYAAAAJ&hl=en&oi=sra",
             "MB Dissanayake": "https://scholar.google.com/citations?user=TJ5YHPkAAAAJ&hl=en&oi=sra"
@@ -703,7 +732,19 @@
             "MB Dissanayake"
         ],
         "abstract": "Tuberculosis (TB) is a contagious bacterial airborne disease, and is one of the top 10 causes of death worldwide. According to the World Health Organisation, around 1.8 billion people are infected with TB and 1.6 million deaths were reported in 2018. More importantly …",
-        "eprint": "https://www.tandfonline.com/doi/pdf/10.1080/21681163.2020.1808532?casa_token=g0Q4lzlJOBYAAAAA:fMKIzV1rBvTr0kT5lnMii5S97zr6AmTQbJVOP1VJxRZoSbtEFSyMnnu7U1owDdjXyidccPf5uuzF0Q"
+        "eprint": "https://www.researchgate.net/profile/Maheshi_Dissanayake/publication/343878948_Deep_Learning_Methods_for_Screening_Pulmonary_Tuberculosis_Using_Chest_X-rays/links/5f461cc7458515b72956fa6b/Deep-Learning-Methods-for-Screening-Pulmonary-Tuberculosis-Using-Chest-X-rays.pdf"
+    },
+    {
+        "title": "车载探地雷达地下目标实时探测法",
+        "url": "http://xb.sinomaps.com/article/2020/1001-1595/2020-7-874.htm",
+        "author_links": {
+            "杨必胜": "https://scholar.google.com/citations?user=TJkm8igAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "杨必胜， 宗泽亮， 陈驰， 孙文鹿， 米晓新， 吴唯同"
+        ],
+        "abstract": "中国的城镇化加快了地下空间大规模开发与利用的进程. 摸清地下空间目标的分布状况, 保障城市可持续发展和地下空间资源的永久利用, 是维护未来城市安全中的重要任务. 探地雷达(GPR) 凭借其数据采集速度快, 成像分辨率高, 无损检测等优点在地下空间资源调查中 …",
+        "eprint": "http://xb.sinomaps.com/article/2020/1001-1595/2020-7-874.htm"
     },
     {
         "title": "Development and evaluation of deep learning-based segmentation of histologic structures in the kidney cortex with multiple histologic stains.",
@@ -868,6 +909,21 @@
         "eprint": "https://arxiv.org/pdf/1908.00329"
     },
     {
+        "title": "DARWIN: A Highly Flexible Platform for Imaging Research in Radiology",
+        "url": "https://arxiv.org/abs/2009.00908",
+        "author_links": {},
+        "author": [
+            "L Chang",
+            "W Zhuang",
+            "R Wu",
+            "S Feng",
+            "H Liu",
+            "J Yu"
+        ],
+        "abstract": "To conduct a radiomics or deep learning research experiment, the radiologists or physicians need to grasp the needed programming skills, which, however, could be frustrating and costly when they have limited coding experience. In this paper, we present DARWIN, a …",
+        "eprint": "https://arxiv.org/pdf/2009.00908"
+    },
+    {
         "title": "CRNNs for Urban Sound Tagging with spatiotemporal context",
         "url": "https://arxiv.org/abs/2008.10413",
         "author_links": {},
@@ -889,8 +945,7 @@
             "R Modi",
             "BK Kaushik"
         ],
-        "abstract": "Currency classification is an important task in computer vision. Traditional models extract relevant features (brightness, shape, colour etc.) through complex mathematical calculations. A deep learning approach towards fiscal classification by automatically …",
-        "eprint": "/scholar?output=instlink&q=info:TwuAjR7snmUJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=13774683797401419339&oi=lle"
+        "abstract": "Currency classification is an important task in computer vision. Traditional models extract relevant features (brightness, shape, colour etc.) through complex mathematical calculations. A deep learning approach towards fiscal classification by automatically …"
     },
     {
         "title": "CASS Studies",
@@ -901,23 +956,6 @@
         ],
         "abstract": "Data Augmentation defined as supplementing a data set with a data set that is created from information data set. It is very vast technique to improve the quality of modern image classifiers. The main example of data augmentation is image augmentation, whereas image …",
         "eprint": "http://heb-nic.in/cass/admin/freePDF/dws6odv8fhlttmd09r27.pdf"
-    },
-    {
-        "title": "Not My Deepfake: Towards Plausible Deniability for Machine-Generated Media",
-        "url": "https://arxiv.org/abs/2008.09194",
-        "author_links": {
-            "B Zhang": "https://scholar.google.com/citations?user=Kt3J6NcAAAAJ&hl=en&oi=sra",
-            "I Shumailov": "https://scholar.google.com/citations?user=e-YbZyEAAAAJ&hl=en&oi=sra",
-            "N Papernot": "https://scholar.google.com/citations?user=cGxq0cMAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "B Zhang",
-            "JP Zhou",
-            "I Shumailov",
-            "N Papernot"
-        ],
-        "abstract": "Progress in generative modelling, especially generative adversarial networks, have made it possible to efficiently synthesize and alter media at scale. Malicious individuals now rely on these machine-generated media, or deepfakes, to manipulate social discourse. In order to …",
-        "eprint": "https://arxiv.org/pdf/2008.09194"
     },
     {
         "title": "Cloud Recognition and Masking of Earth Observation Imagery-An Optimized approach for Automatic Labeling of Sentinel-2 Imagery for Object Detection",
@@ -971,6 +1009,21 @@
         ],
         "abstract": "Renal phase-contrast magnetic resonance imaging (PC-MRI) is an MRI modality where the phase component of the MR signal is made sensitive to the velocity of water molecules in the kidneys. PC-MRI is able to assess the Renal Blood Flow (RBF), which is an important …",
         "eprint": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf"
+    },
+    {
+        "title": "SCG-Net: Self-Constructing Graph Neural Networks for Semantic Segmentation",
+        "url": "https://arxiv.org/abs/2009.01599",
+        "author_links": {
+            "M Kampffmeyer": "https://scholar.google.com/citations?user=9lDh2UgAAAAJ&hl=en&oi=sra",
+            "R Jenssen": "https://scholar.google.com/citations?user=HiviXjIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Q Liu",
+            "M Kampffmeyer",
+            "R Jenssen"
+        ],
+        "abstract": "Capturing global contextual representations by exploiting long-range pixel-pixel dependencies has shown to improve semantic segmentation performance. However, how to do this efficiently is an open question as current approaches of utilising attention schemes or …",
+        "eprint": "https://arxiv.org/pdf/2009.01599"
     },
     {
         "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches WPI Technical Report WPI-CS-TR-19-02",
@@ -1063,8 +1116,7 @@
             "A Tandon",
             "T Hussain"
         ],
-        "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …",
-        "eprint": "/scholar?output=instlink&q=info:ugTurh1lhkcJ:scholar.google.com/&hl=en&as_sdt=0,5&sciodt=0,5&scillfp=12883053543832155608&oi=lle"
+        "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …"
     },
     {
         "title": "Use of Images Augmentation and Implementation of Doubly Stochastic Models for Improving Accuracy of Recognition Algorithms Based on Convolutional Neural …",
@@ -1187,7 +1239,9 @@
     {
         "title": "An Efficient Solution for Semantic Segmentation of Three Ground‐based Cloud Datasets",
         "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019EA001040",
-        "author_links": {},
+        "author_links": {
+            "P Liu": "https://scholar.google.com/citations?user=87o-81QAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "Q Song",
             "Z Cui",
@@ -1339,6 +1393,21 @@
         "eprint": "https://arxiv.org/pdf/2008.00302"
     },
     {
+        "title": "Fully automatic CNN-based segmentation of retinal bifurcations in 2D adaptive optics ophthalmoscopy images",
+        "url": "https://hal.archives-ouvertes.fr/hal-02925043/",
+        "author_links": {
+            "F Rossant": "https://scholar.google.com/citations?user=5dtFMMwAAAAJ&hl=en&oi=sra",
+            "I Bloch": "https://scholar.google.com/citations?user=7BFEwr4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "I Trimeche",
+            "F Rossant",
+            "I Bloch"
+        ],
+        "abstract": "Automated image segmentation is a crucial step to characterize and quantify the morphometry of blood vessels. Adaptive Optics Ophthalmoscopy (AOO) images of eye fundus allow visualizing retinal vessels with a high resolution, especially arterial …",
+        "eprint": "https://hal.archives-ouvertes.fr/hal-02925043/document"
+    },
+    {
         "title": "Understanding the decisions of CNNs: an in-model approach",
         "url": "https://www.sciencedirect.com/science/article/pii/S0167865520301240",
         "author_links": {
@@ -1399,7 +1468,7 @@
     },
     {
         "title": "Flood detection with Sentinel-2 satellite images in crisis management systems",
-        "url": "http://idl.iscram.org/files/anastasiamoumtzidou/2020/2296_AnastasiaMoumtzidou_etal2020.pdf",
+        "url": "https://pdfs.semanticscholar.org/7808/fb3b90cca751abff25b92bbaee61ecc26dd7.pdf",
         "author_links": {
             "A Moumtzidou": "https://scholar.google.com/citations?user=4oUt-WsAAAAJ&hl=en&oi=sra"
         },
@@ -1409,6 +1478,6 @@
             "S Andreadis"
         ],
         "abstract": "The increasing amount of falling rain may cause several problems especially in urban areas, which drainage system can often not handle this large amount in a short time. Confirming a flooded scene in a timely manner can help the authorities to take further actions to counter …",
-        "eprint": "http://idl.iscram.org/files/anastasiamoumtzidou/2020/2296_AnastasiaMoumtzidou_etal2020.pdf"
+        "eprint": "https://pdfs.semanticscholar.org/7808/fb3b90cca751abff25b92bbaee61ecc26dd7.pdf"
     }
 ]
