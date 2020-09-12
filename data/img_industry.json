@@ -2,37 +2,31 @@
   {
     "url": "https://www.lyft.com/",
     "name": "Lyft",
-    "img_url": "https://habrastorage.org/webt/ce/bs/sa/cebssajf_5asst5yshmyykqjhcg.png",
     "img_filename": "lyft.png"
   },
   {
     "url": "https://www.x5.ru/en",
     "name": "X5 Retail Group",
-    "img_url": "https://habrastorage.org/webt/9y/dv/f1/9ydvf1fbxotkl6nyhydrn9v8cqw.png",
     "img_filename": "x5.png"
   },
   {
     "url": "https://imedhub.org/",
     "name": "MedHub",
-    "img_url": "https://habrastorage.org/webt/eq/8x/m-/eq8xm-fjfx_uqkka4_ekxsdwtiq.png",
     "img_filename": "medhub.png"
   },
   {
     "url": "https://recursionpharma.com",
     "name": "Recursion",
-    "img_url": "https://pbs.twimg.com/profile_images/925897897165639683/jI8YvBfC_400x400.jpg",
     "img_filename": "recursion.jpg"
   },
   {
     "url": "https://www.everypixel.com/",
     "name": "Everypixel",
-    "img_url": "https://www.everypixel.com/i/logo_sq.png",
     "img_filename": "everypixel.png"
   },
   {
     "url": "https://neuromation.io/",
     "name": "Neuromation",
-    "img_url": "https://habrastorage.org/webt/yd/_4/xa/yd_4xauvggn1tuz5xgrtkif6lya.png",
     "img_filename": "neuromation.png"
   }
 ]
