@@ -579,6 +579,20 @@
         "abstract": "Various kinds of retinopathy are the leading causes of blindness in human being, and with the rapid development of fundus images (FI) analysis in recent years, deep learning has became the focus while using Computer-Aided-Diagnosis (CAD) system to diagnose …"
     },
     {
+        "title": "Deep-learning based segmentation of challenging myelin sheaths",
+        "url": "https://hal.archives-ouvertes.fr/hal-02929744/",
+        "author_links": {
+            "A Joutel": "https://scholar.google.com/citations?user=9q_WEIUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "T Le Couedic",
+            "A Joutel",
+            "R Caillon"
+        ],
+        "abstract": "The segmentation of axons and myelin in electron microscopy images allows neurologists to highlight the density of axons and the thickness of the myelin surrounding them. These properties are of great interest for preventing and anticipating white matter diseases. This …",
+        "eprint": "https://hal.archives-ouvertes.fr/hal-02929744/document"
+    },
+    {
         "title": "Method for Whale Re-identification Based on Siamese Nets and Adversarial Training",
         "url": "https://link.springer.com/article/10.3103/S1060992X20020058",
         "author_links": {},
@@ -594,6 +608,7 @@
         "url": "https://arxiv.org/abs/2003.07561",
         "author_links": {
             "D Wu": "https://scholar.google.com/citations?user=jAKqDRAAAAAJ&hl=en&oi=sra",
+            "Y Chen": "https://scholar.google.com/citations?user=IA_3Jq8AAAAJ&hl=en&oi=sra",
             "X Qi": "https://scholar.google.com/citations?user=odjSydQAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -745,6 +760,16 @@
         ],
         "abstract": "中国的城镇化加快了地下空间大规模开发与利用的进程. 摸清地下空间目标的分布状况, 保障城市可持续发展和地下空间资源的永久利用, 是维护未来城市安全中的重要任务. 探地雷达(GPR) 凭借其数据采集速度快, 成像分辨率高, 无损检测等优点在地下空间资源调查中 …",
         "eprint": "http://xb.sinomaps.com/article/2020/1001-1595/2020-7-874.htm"
+    },
+    {
+        "title": "Deep local directional embeddings para detección de objetos",
+        "url": "http://repositorio.uchile.cl/handle/2250/176745",
+        "author_links": {},
+        "author": [
+            "FE Souto Herrera"
+        ],
+        "abstract": "En el contexto de aprendizaje de máquinas, el presente trabajo aborda cómo una nueva arquitectura de redes neuronales profundas, llamada DLDENet propuesta por el autor, permite obtener mejores resultados en detección de objetos en imágenes, específicamente …",
+        "eprint": "http://repositorio.uchile.cl/bitstream/handle/2250/176745/Deep-local-directional-embeddings-para-detecci%C3%B3n-de-objetos.pdf?sequence=1"
     },
     {
         "title": "Development and evaluation of deep learning-based segmentation of histologic structures in the kidney cortex with multiple histologic stains.",
