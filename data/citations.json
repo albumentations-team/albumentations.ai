@@ -579,6 +579,20 @@
         "abstract": "Various kinds of retinopathy are the leading causes of blindness in human being, and with the rapid development of fundus images (FI) analysis in recent years, deep learning has became the focus while using Computer-Aided-Diagnosis (CAD) system to diagnose …"
     },
     {
+        "title": "A weak supervision machine vision detection method based on artificial defect simulation",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0950705120305955",
+        "author_links": {
+            "X Zhang": "https://scholar.google.com/citations?user=x0cieSsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "C Li",
+            "Y Huang",
+            "H Li",
+            "X Zhang"
+        ],
+        "abstract": "During a practical detection process, insufficient defect data, unbalanced defect types and the high cost of defect labelling can present problems. Therefore, it often takes considerable time and labour to collect actual samples to improve the accuracy of defect classification and …"
+    },
+    {
         "title": "Deep-learning based segmentation of challenging myelin sheaths",
         "url": "https://hal.archives-ouvertes.fr/hal-02929744/",
         "author_links": {
@@ -951,7 +965,9 @@
     {
         "title": "CRNNs for Urban Sound Tagging with spatiotemporal context",
         "url": "https://arxiv.org/abs/2008.10413",
-        "author_links": {},
+        "author_links": {
+            "N Riche": "https://scholar.google.com/citations?user=rzXgqSwAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "A Arnault",
             "N Riche"
