@@ -689,6 +689,17 @@
         "eprint": "https://arxiv.org/pdf/2003.07561"
     },
     {
+        "title": "Classification and understanding of cloud structures via satellite images with EfficientUNet",
+        "url": "https://arxiv.org/abs/2009.12931",
+        "author_links": {},
+        "author": [
+            "T Ahmed",
+            "NHN Sabab"
+        ],
+        "abstract": "Climate change has been a common interest and the forefront of crucial political discussion and decision-making for many years. Shallow clouds play a significant role in understanding the Earth's climate, but they are challenging to interpret and represent in a climate model. By …",
+        "eprint": "https://arxiv.org/pdf/2009.12931"
+    },
+    {
         "title": "Speech Driven Talking Face Generation from a Single Image and an Emotion Condition",
         "url": "https://arxiv.org/abs/2008.03592",
         "author_links": {
@@ -747,6 +758,18 @@
         ],
         "abstract": "Since the invention of U-net architecture in 2015, convolutional networks based on its encoder-decoder approach significantly improved results in image analysis challenges. It has been proven that such architectures can also be successfully applied in different …",
         "eprint": "https://kola.opus.hbz-nrw.de/opus45-kola/files/2028/final_thesis.pdf"
+    },
+    {
+        "title": "An original framework for Wheat Head Detection using Deep, Semi-supervised and Ensemble Learning within Global Wheat Head Detection (GWHD) Dataset",
+        "url": "https://arxiv.org/abs/2009.11977",
+        "author_links": {},
+        "author": [
+            "F Fourati",
+            "W Souidene",
+            "R Attia"
+        ],
+        "abstract": "In this paper, we propose an original object detection methodology applied to Global Wheat Head Detection (GWHD) Dataset. We have been through two major architectures of object detection which are FasterRCNN and EfficientDet, in order to design a novel and robust …",
+        "eprint": "https://arxiv.org/pdf/2009.11977"
     },
     {
         "title": "Online Augmentation for Quality Improvement of Neural Networks for Classification of Single-Channel Electrocardiograms",
@@ -1009,6 +1032,17 @@
         ],
         "abstract": "A detecção precoce é fundamental para um paciente com melanoma, o tipo mais letal de câncer de pele. O diagnóstico automatizado de melanoma pode melhorar o atendimento ao paciente, ampliando e acelerando o tratamento, especialmente com o crescimento no …",
         "eprint": "http://repositorio.unicamp.br/bitstream/REPOSIP/335713/1/Perez_FabioViniciusMoreira_M.pdf"
+    },
+    {
+        "title": "Two-Stream Convolutional Neural Network Based on Gradient Image for Aluminum Profile Surface Defects Classification and Recognition",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9200487/",
+        "author_links": {},
+        "author": [
+            "C Duan",
+            "T Zhang"
+        ],
+        "abstract": "In this article, a novel two-stream convolutional neural network based on gradient image is performed to effectively classify and identify aluminum profiles defects for the first time. Recent feature fusion methods based on two-stream network prove promising performance …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09200487.pdf"
     },
     {
         "title": "Data Preprocessing via Multi-sequences MRI Mixture to Improve Brain Tumor Segmentation",
@@ -1311,6 +1345,22 @@
         "eprint": "http://ceur-ws.org/Vol-2595/endoCV2020_paper_id_26.pdf"
     },
     {
+        "title": "Training CNNs in Presence of JPEG Compression: Multimedia Forensics vs Computer Vision",
+        "url": "https://arxiv.org/abs/2009.12088",
+        "author_links": {
+            "S Mandelli": "https://scholar.google.com/citations?user=Uhql1ccAAAAJ&hl=en&oi=sra",
+            "N Bonettini": "https://scholar.google.com/citations?user=YTzuZ9IAAAAJ&hl=en&oi=sra",
+            "P Bestagini": "https://scholar.google.com/citations?user=bUeIWEMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Mandelli",
+            "N Bonettini",
+            "P Bestagini"
+        ],
+        "abstract": "Convolutional Neural Networks (CNNs) have proved very accurate in multiple computer vision image classification tasks that required visual inspection in the past (eg, object recognition, face detection, etc.). Motivated by these astonishing results, researchers have …",
+        "eprint": "https://arxiv.org/pdf/2009.12088"
+    },
+    {
         "title": "End-to-end learning for semiquantitative rating of COVID-19 severity on Chest X-rays",
         "url": "https://arxiv.org/abs/2006.04603",
         "author_links": {
@@ -1500,6 +1550,24 @@
         ],
         "abstract": "Automatic quality control is one of the key ingredients for the fourth industrial revolution that will lead to the development of the so called industry 4.0. In this context, a crucial element is a production-compatible-time detection of defects, anomalies or product failures. This thesis …",
         "eprint": "https://boa.unimib.it/bitstream/10281/241219/2/phd_unimib_713064.pdf"
+    },
+    {
+        "title": "Deep Learning-based Four-region Lung Segmentation in Chest Radiography for COVID-19 Diagnosis",
+        "url": "https://arxiv.org/abs/2009.12610",
+        "author_links": {
+            "K Kim": "https://scholar.google.com/citations?user=pdewAHgAAAAJ&hl=en&oi=sra",
+            "D Wu": "https://scholar.google.com/citations?user=4_56vVYAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "YG Kim",
+            "K Kim",
+            "D Wu",
+            "H Ren",
+            "WY Tak",
+            "SY Park"
+        ],
+        "abstract": "Purpose. Imaging plays an important role in assessing severity of COVID 19 pneumonia. However, semantic interpretation of chest radiography (CXR) findings does not include quantitative description of radiographic opacities. Most current AI assisted CXR image …",
+        "eprint": "https://arxiv.org/pdf/2009.12610"
     },
     {
         "title": "When Texture Matters: Texture-Focused Cnns Outperform General Data Augmentation and Pretraining in Oral Cancer Detection",
