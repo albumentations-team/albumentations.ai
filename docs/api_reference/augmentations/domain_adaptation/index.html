@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Albumentations: fast and flexible image augmentations" name="description"/>
-<link href="https://albumentations.ai/docs/api_reference/pytorch/transforms/" rel="canonical"/>
+<link href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/" rel="canonical"/>
 <link href="../../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.0" name="generator"/>
-<title>Transforms (pytorch.transforms) - Albumentations Documentation</title>
+<title>Domain adaptation transforms (augmentations.domain_adaptation) - Albumentations Documentation</title>
 <link href="../../../assets/stylesheets/main.b5d04df8.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.9ab2c1f8.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
@@ -21,13 +21,13 @@
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <meta content="website" property="og:type"/>
-<meta content="Albumentations Documentation - Transforms (pytorch.transforms)" property="og:title"/>
+<meta content="Albumentations Documentation - Domain adaptation transforms (augmentations.domain_adaptation)" property="og:title"/>
 <meta content="Albumentations: fast and flexible image augmentations" property="og:description"/>
-<meta content="https://albumentations.ai/docs/api_reference/pytorch/transforms/" property="og:url"/>
+<meta content="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/" property="og:url"/>
 <meta content="https://albumentations.ai/docs/images/albumentations_card.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Albumentations Documentation - Transforms (pytorch.transforms)" name="twitter:title"/>
+<meta content="Albumentations Documentation - Domain adaptation transforms (augmentations.domain_adaptation)" name="twitter:title"/>
 <meta content="Albumentations: fast and flexible image augmentations" name="twitter:description"/>
 <meta content="https://albumentations.ai/docs/images/albumentations_card.png" name="twitter:image"/>
 </head>
@@ -36,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#transforms-pytorchtransforms">
+<a class="md-skip" href="#domain-adaptation-transforms-augmentationsdomain_adaptation">
           Skip to content
         </a>
 </div>
@@ -522,8 +522,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" id="nav-8-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" id="nav-8-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-8-3">
       Augmentations
       <span class="md-nav__icon md-icon">
@@ -539,27 +539,64 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/transforms/" title="Transforms (augmentations.transforms)">
+<a class="md-nav__link" href="../transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/domain_adaptation/" title="Domain adaptation transforms (augmentations.domain_adaptation)">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Domain adaptation transforms (augmentations.domain_adaptation)
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Domain adaptation transforms (augmentations.domain_adaptation)">
       Domain adaptation transforms (augmentations.domain_adaptation)
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.domain_adaptation">
+    albumentations.augmentations.domain_adaptation
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/functional/" title="Functional transforms (augmentations.functional)">
+<a class="md-nav__link" href="#albumentations.augmentations.domain_adaptation.FDA">
+    FDA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.domain_adaptation.HistogramMatching">
+    HistogramMatching
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation">
+    fourier_domain_adaptation()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functional/" title="Functional transforms (augmentations.functional)">
       Functional transforms (augmentations.functional)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+<a class="md-nav__link" href="../bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
       Helper functions for working with bounding boxes (augmentations.bbox_utils)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+<a class="md-nav__link" href="../keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
       Helper functions for working with keypoints (augmentations.keypoints_utils)
     </a>
 </li>
@@ -590,8 +627,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-8-5" id="nav-8-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-5" id="nav-8-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-8-5">
       PyTorch Helpers
       <span class="md-nav__icon md-icon">
@@ -606,42 +643,10 @@
         PyTorch Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Transforms (pytorch.transforms)
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Transforms (pytorch.transforms)">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.pytorch.transforms">
-    albumentations.pytorch.transforms
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.pytorch.transforms.ToTensor">
-    ToTensor
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.pytorch.transforms.ToTensorV2">
-    ToTensorV2
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -666,27 +671,28 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/pytorch/transforms.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/domain_adaptation.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="transforms-pytorchtransforms">Transforms (pytorch.transforms)<a class="headerlink" href="#transforms-pytorchtransforms" title="Permanent link">¶</a></h1>
+<h1 id="domain-adaptation-transforms-augmentationsdomain_adaptation">Domain adaptation transforms (augmentations.domain_adaptation)<a class="headerlink" href="#domain-adaptation-transforms-augmentationsdomain_adaptation" title="Permanent link">¶</a></h1>
 <div class="doc doc-object doc-module">
-<h2 class="hidden-toc" href="#albumentations.pytorch.transforms" id="albumentations.pytorch.transforms" style="visibility: hidden; width: 0; height: 0;">
-<a class="headerlink" href="#albumentations.pytorch.transforms" title="Permanent link">¶</a></h2>
+<h2 class="hidden-toc" href="#albumentations.augmentations.domain_adaptation" id="albumentations.augmentations.domain_adaptation" style="visibility: hidden; width: 0; height: 0;">
+<a class="headerlink" href="#albumentations.augmentations.domain_adaptation" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents first">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.pytorch.transforms.ToTensor">
-<code>class <strong>albumentations.pytorch.transforms.ToTensor</strong></code>
+<h2 class="doc doc-heading" id="albumentations.augmentations.domain_adaptation.FDA">
+<code>class <strong>albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
-<span class="p">(</span><span class="n">num_classes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sigmoid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L61" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.pytorch.transforms.ToTensor" title="Permanent link">¶</a></h2>
+<span class="p">(</span><span class="n">beta_limit</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L138" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.domain_adaptation.FDA" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Convert image and mask to <code>torch.Tensor</code> and divide by 255 if image or mask are <code>uint8</code> type.
-WARNING! Please use this with care and look into sources before usage.</p>
+<p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a>
+Simple "style transfer".
+Important: you need to pass target image as a parameter <code>target_image</code> in <strong>call</strong>, see example</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -698,45 +704,177 @@ WARNING! Please use this with care and look into sources before usage.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>num_classes</code></td>
-<td><code>int</code></td>
+<td><code>beta_limit</code></td>
+<td><code>float or tuple of float</code></td>
 <td>
-<p>only for segmentation</p>
-</td>
-</tr>
-<tr>
-<td><code>sigmoid</code></td>
-<td><code>bool</code></td>
-<td>
-<p>only for segmentation, transform mask to LongTensor or not.</p>
-</td>
-</tr>
-<tr>
-<td><code>normalize</code></td>
-<td><code>dict</code></td>
-<td>
-<p>dict with keys [mean, std] to pass it into torchvision.normalize</p>
+<p>coefficient beta from paper. Recommended less 0.3.</p>
 </td>
 </tr>
 </tbody>
+</table>
+<p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<p>Reference:
+    <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a>
+<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_FDA_Fourier_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2020_paper.pdf" target="_blank">https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_FDA_Fourier_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2020_paper.pdf</a></p>
+<p><strong>Examples:</strong></p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>1
+2
+3
+4
+5
+6</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">target_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">A</span><span class="o">.</span><span class="n">FDA</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">target_image</span><span class="o">=</span><span class="n">target_image</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
 </table>
 <div class="doc doc-children">
 </div>
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.pytorch.transforms.ToTensorV2">
-<code>class <strong>albumentations.pytorch.transforms.ToTensorV2</strong></code>
+<h2 class="doc doc-heading" id="albumentations.augmentations.domain_adaptation.HistogramMatching">
+<code>class <strong>albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
-<span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L86" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a></h2>
+<span class="p">(</span><span class="n">reference_images</span><span class="p">,</span> <span class="n">blend_ratio</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">read_fn</span><span class="o">=&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="n">imread</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L83" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.domain_adaptation.HistogramMatching" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Convert image and mask to <code>torch.Tensor</code>.</p>
+<p>Apply histogram matching. It manipulates the pixels of an input image so that its histogram matches
+the histogram of the reference image. If the images have multiple channels, the matching is done independently
+for each channel, as long as the number of channels is equal in the input image and the reference.</p>
+<p>Histogram matching can be used as a lightweight normalisation for image processing,
+such as feature matching, especially in circumstances where the images have been taken from different
+sources or in different conditions (i.e. lighting).</p>
+<p>See:
+    <a href="https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_histogram_matching.html" target="_blank">https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_histogram_matching.html</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reference_images</code></td>
+<td><code>List[str]</code></td>
+<td>
+<p>List of file paths for reference images.</p>
+</td>
+</tr>
+<tr>
+<td><code>blend_ratio</code></td>
+<td><code>[float, float]</code></td>
+<td>
+<p>Tuple of min and max blend ratio. Matched image will be blended with original
+with random blend factor for increased diversity of generated images.</p>
+</td>
+</tr>
+<tr>
+<td><code>read_fn</code></td>
+<td><code>Callable</code></td>
+<td>
+<p>Used-defined function to read image. Function should get image path and return numpy
+array of image pixels.</p>
+</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 1.0.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image</p>
+<p>Image types:
+    uint8, uint16, float32</p>
 <div class="doc doc-children">
 </div>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.domain_adaptation.fourier_domain_adaptation">
+<code class="highlight language-python">def
+albumentations.augmentations.domain_adaptation.fourier_domain_adaptation<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">target_img</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L13" target="_blank">[view source on GitHub]</a></span>
+<a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td>
+<p>source image</p>
+</td>
+</tr>
+<tr>
+<td><code>target_img</code></td>
+<td><code>ndarray</code></td>
+<td>
+<p>target image for domain adaptation</p>
+</td>
+</tr>
+<tr>
+<td><code>beta</code></td>
+<td><code>float</code></td>
+<td>
+<p>coefficient from source paper</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>transformed image</p>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -773,7 +911,7 @@ WARNING! Please use this with care and look into sources before usage.</p>
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../" rel="prev" title="Index">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../transforms/" rel="prev" title="Transforms (augmentations.transforms)">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -782,18 +920,18 @@ WARNING! Please use this with care and look into sources before usage.</p>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Index
+                Transforms (augmentations.transforms)
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../../../release_notes/" rel="next" title="Release notes">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../functional/" rel="next" title="Functional transforms (augmentations.functional)">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Release notes
+                Functional transforms (augmentations.functional)
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
