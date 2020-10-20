@@ -899,6 +899,24 @@
         "eprint": "https://www.neuroimaging.theclinics.com/article/S1052-5149(20)30059-9/fulltext"
     },
     {
+        "title": "Efficient Palm-Line Segmentation with U-Net Context Fusion Module",
+        "url": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf",
+        "author_links": {
+            "TP Van": "https://scholar.google.com/citations?user=eOgnP7UAAAAJ&hl=en&oi=sra",
+            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra",
+            "TM Thanh": "https://scholar.google.com/citations?user=_dREcUEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "TP Van",
+            "ST Nguyen",
+            "LB Doan",
+            "NN Tran",
+            "TM Thanh"
+        ],
+        "abstract": "Many cultures around the world believe that palm reading can be used to predict the future life of a person. Palmistry uses features of the hand such as palm lines, hand shape, or fingertip position. However, the research on palm-line detection is still scarce, many of them …",
+        "eprint": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf"
+    },
+    {
         "title": "Deep Learning Methods for Screening Pulmonary Tuberculosis Using Chest X-rays",
         "url": "https://www.tandfonline.com/doi/abs/10.1080/21681163.2020.1808532",
         "author_links": {
@@ -1438,6 +1456,23 @@
         ],
         "abstract": "Convolutional Neural Networks (CNNs) have proved very accurate in multiple computer vision image classification tasks that required visual inspection in the past (eg, object recognition, face detection, etc.). Motivated by these astonishing results, researchers have …",
         "eprint": "https://arxiv.org/pdf/2009.12088"
+    },
+    {
+        "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9160940/",
+        "author_links": {
+            "A Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra",
+            "E Agu": "https://scholar.google.com/citations?user=Ke6ex0wAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Wagh",
+            "S Jain",
+            "A Mukherjee",
+            "E Agu",
+            "P Pedersen"
+        ],
+        "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09160940.pdf"
     },
     {
         "title": "End-to-end learning for semiquantitative rating of COVID-19 severity on Chest X-rays",
