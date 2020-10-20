@@ -1366,14 +1366,15 @@ in mask. If None - mask is not affected.</p>
 <code>class <strong>albumentations.augmentations.transforms.ColorJitter</strong></code>
 <code>
 <span class="p">(</span><span class="n">brightness</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">contrast</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">saturation</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3482" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3483" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ColorJitter" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Randomly change the brightness, contrast and saturation of an image. This transform gives a little bit different
-results because Pillow and OpenCV transforms image to HSV format by different formulas.
-Another difference - Pillow uses uint8 overflow, but we are use value saturation.</p>
+<p>Randomly changes the brightness, contrast, and saturation of an image. Compared to ColorJitter from torchvision,
+this transform gives a little bit different results because Pillow (used in torchvision) and OpenCV (used in
+Albumentations) transform an image to HSV format by different formulas. Another difference - Pillow uses uint8
+overflow, but we use value saturation.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1390,7 +1391,7 @@ Another difference - Pillow uses uint8 overflow, but we are use value saturation
 <td>
 <p>How much to jitter brightness.
 brightness_factor is chosen uniformly from [max(0, 1 - brightness), 1 + brightness]
-or the given [min, max]. Should be non negative numbers. Default:</p>
+or the given [min, max]. Should be non negative numbers.</p>
 </td>
 </tr>
 <tr>
@@ -1417,7 +1418,7 @@ or the given [min, max]. Should be non negative numbers.</p>
 <td>
 <p>How much to jitter hue.
 hue_factor is chosen uniformly from [-hue, hue] or the given [min, max].
-Should have 0&lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p>
+Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p>
 </td>
 </tr>
 </tbody>
