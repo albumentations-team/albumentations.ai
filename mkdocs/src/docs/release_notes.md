@@ -1,10 +1,25 @@
 # Release notes
 
-## Latest
+## 0.5.0
+### Breaking changes
+- Albumentations now explicitly checks that all inputs to augmentations are named arguments and raise an exception otherwise. So if an augmentation receives input like aug(image) instead of aug(image=image), Albumentations will raise an exception. ([#560](https://github.com/albumentations-team/albumentations/pull/560))
+- Dropped support of Python 3.5 ([#709](https://github.com/albumentations-team/albumentations/pull/709))
+- Keypoints and bboxes are checked for visibility after each transform ([#566](https://github.com/albumentations-team/albumentations/pull/566))
 
-### Improvements
-- Albumentations now explicitly checks that all inputs to augmentations are named arguments and raise an exception otherwise. So if an augmentation receives input like `aug(image)` instead of `aug(image=image)`, Albumentations will raise an exception. PR [#560](https://github.com/albumentations-team/albumentations/pull/560).
-- `GaussianBlur` now supports the `sigma` parameter that sets standard deviation for Gaussian kernel. PR [#674](https://github.com/albumentations-team/albumentations/pull/674) and Issue [#673](https://github.com/albumentations-team/albumentations/issues/673).
+### New transformations
+- [`A.FDA`](https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.FDA) transform for Fourier-based domain adaptation. ([#685](https://github.com/albumentations-team/albumentations/pull/685))
+- [`A.HistogramMatching`](https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.HistogramMatching) transform that applies histogram matching. ([#708](https://github.com/albumentations-team/albumentations/pull/708))
+- [`A.ColorJitter`](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ColorJitter) transform that behaves similarly to `ColorJitter` from torchvision (though there are some minor differences due to different internal logic for working with HSV colorspace in Pillow, which is used in torchvision and OpenCV, which is used in Albumentations). ([#705](https://github.com/albumentations-team/albumentations/pull/705))
+
+### Minor changes
+- [`A.PadIfNeeded`](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.PadIfNeeded) now accepts additional `pad_width_divisor`, `pad_height_divisor` (`None` by default) to ensure image has width & height that is dividable by given values. ([#700](https://github.com/albumentations-team/albumentations/pull/700))
+- Added support to apply [`A.CoarseDropout`](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CoarseDropout) to masks via `mask_fill_value`. ([#699](https://github.com/albumentations-team/albumentations/pull/699))
+- [`A.GaussianBlur`](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur) now supports the sigma parameter that sets standard deviation for Gaussian kernel. ([#674](https://github.com/albumentations-team/albumentations/pull/674), [#673](https://github.com/albumentations-team/albumentations/issues/673)) .
+
+### Bugfixes
+- Fixed bugs in [`A.HueSaturationValue`](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue) for float dtype. ([#696](https://github.com/albumentations-team/albumentations/pull/696), [#710](https://github.com/albumentations-team/albumentations/pull/710))
+- Fixed incorrect rounding error on bboxes in `YOLO` format. ([#688](https://github.com/albumentations-team/albumentations/pull/688))
+
 
 ## 0.4.6
 
