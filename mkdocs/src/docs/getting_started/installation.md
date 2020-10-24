@@ -1,6 +1,6 @@
 # Installation
 
-Albumentations requires Python 3.5 or higher.
+Albumentations requires Python 3.6 or higher.
 
 ## Install the latest stable version from PyPI
 
