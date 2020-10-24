@@ -209,19 +209,6 @@
         "eprint": "https://arxiv.org/pdf/1904.08084"
     },
     {
-        "title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks",
-        "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1",
-        "author_links": {
-            "C Domínguez": "https://scholar.google.com/citations?user=IlwGQfMAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Á Casado-García",
-            "C Domínguez"
-        ],
-        "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
-        "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
-    },
-    {
         "title": "COVID-19 prediction and detection using deep learning",
         "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
         "author_links": {
@@ -238,19 +225,17 @@
         "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
     },
     {
-        "title": "Data augmentation from RGB to chlorophyll fluorescence imaging Application to leaf segmentation of Arabidopsis thaliana from top view images",
-        "url": "http://openaccess.thecvf.com/content_CVPRW_2019/html/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.html",
+        "title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks",
+        "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1",
         "author_links": {
-            "S Samiei": "https://scholar.google.com/citations?user=64L4ImgAAAAJ&hl=en&oi=sra",
-            "P Rasti": "https://scholar.google.com/citations?user=hl8Jyr4AAAAJ&hl=en&oi=sra"
+            "C Domínguez": "https://scholar.google.com/citations?user=IlwGQfMAAAAJ&hl=en&oi=sra"
         },
         "author": [
-            "N Sapoukhina",
-            "S Samiei",
-            "P Rasti"
+            "Á Casado-García",
+            "C Domínguez"
         ],
-        "abstract": "In this report we investigate various strategies to boost the performance for leaf segmentation of Arabidopsis thaliana in chlorophyll fluorescent imaging without any manual annotation. Direct conversion of RGB images to gray levels picked from CVPPP challenge or …",
-        "eprint": "http://openaccess.thecvf.com/content_CVPRW_2019/papers/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.pdf"
+        "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
+        "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
     },
     {
         "title": "Camera-to-robot pose estimation from a single image",
@@ -267,6 +252,21 @@
         ],
         "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
         "eprint": "https://arxiv.org/pdf/1911.09231"
+    },
+    {
+        "title": "Data augmentation from RGB to chlorophyll fluorescence imaging Application to leaf segmentation of Arabidopsis thaliana from top view images",
+        "url": "http://openaccess.thecvf.com/content_CVPRW_2019/html/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.html",
+        "author_links": {
+            "S Samiei": "https://scholar.google.com/citations?user=64L4ImgAAAAJ&hl=en&oi=sra",
+            "P Rasti": "https://scholar.google.com/citations?user=hl8Jyr4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Sapoukhina",
+            "S Samiei",
+            "P Rasti"
+        ],
+        "abstract": "In this report we investigate various strategies to boost the performance for leaf segmentation of Arabidopsis thaliana in chlorophyll fluorescent imaging without any manual annotation. Direct conversion of RGB images to gray levels picked from CVPPP challenge or …",
+        "eprint": "http://openaccess.thecvf.com/content_CVPRW_2019/papers/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.pdf"
     },
     {
         "title": "A framework for knowing who is doing what in aerial surveillance videos",
@@ -857,6 +857,7 @@
         "url": "https://dl.acm.org/doi/abs/10.1145/3422844.3423058",
         "author_links": {
             "I Ivanova": "https://scholar.google.com/citations?user=Mtqj1xoAAAAJ&hl=en&oi=sra",
+            "S Moaveninejad": "https://scholar.google.com/citations?user=F3oM4awAAAAJ&hl=en&oi=sra",
             "A Janes": "https://scholar.google.com/citations?user=8lYoEEQAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1099,6 +1100,21 @@
         "eprint": "https://www.mdpi.com/2078-2489/11/4/200/pdf"
     },
     {
+        "title": "A Flatter Loss for Bias Mitigation in Cross-dataset Facial Age Estimation",
+        "url": "https://arxiv.org/abs/2010.10368",
+        "author_links": {
+            "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Akbari",
+            "M Awais",
+            "ZH Feng",
+            "A Farooq"
+        ],
+        "abstract": "Existing studies in facial age estimation have mostly focused on intra-dataset protocols that assume training and test images captured under similar conditions. However, this is rarely valid in practical applications, where training and test sets usually have different …",
+        "eprint": "https://arxiv.org/pdf/2010.10368"
+    },
+    {
         "title": "Deep learning for skin lesion classification: augment, train, and ensemble= Aprendizado profundo para classificação de lesões de pele: aumento, treino e conjunto",
         "url": "http://repositorio.unicamp.br/handle/REPOSIP/335713",
         "author_links": {
@@ -1294,7 +1310,9 @@
     {
         "title": "Identifying Melanoma Images using EfficientNet Ensemble: Winning Solution to the SIIM-ISIC Melanoma Classification Challenge",
         "url": "https://arxiv.org/abs/2010.05351",
-        "author_links": {},
+        "author_links": {
+            "B Liu": "https://scholar.google.com/citations?user=__kYox8AAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "Q Ha",
             "B Liu",
@@ -1515,6 +1533,19 @@
             "JM Saavedra"
         ],
         "abstract": "We propose modifications to the RetinaNet architecture and Focal Loss [1] to improve the effectiveness of them in the context of object detection. We show that through normalizing the embeddings generated by each receptive field in the feature map, classifying them using …"
+    },
+    {
+        "title": "A Deep Learning Approach to Hazard Detection for Autonomous Lunar Landing",
+        "url": "https://link.springer.com/article/10.1007/s40295-020-00239-8",
+        "author_links": {
+            "R Moghe": "https://scholar.google.com/citations?user=LRxUA1YAAAAJ&hl=en&oi=sra",
+            "R Zanetti": "https://scholar.google.com/citations?user=ugUlsMQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Moghe",
+            "R Zanetti"
+        ],
+        "abstract": "A deep learning approach is presented to detect safe landing locations using LIDAR scans of the Lunar surface. Semantic Segmentation is used to classify hazardous and safe locations from a LIDAR scan during the landing phase. Digital Elevation Maps from the …"
     },
     {
         "title": "On the Accuracy of CRNNs for Line-Based OCR: A Multi-Parameter Evaluation",
