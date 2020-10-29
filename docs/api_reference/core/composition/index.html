@@ -558,6 +558,11 @@
     PerChannel
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition.Sequential">
+    Sequential
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1000,6 +1005,66 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 </td>
 </tr>
 </tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.Sequential">
+<code>class <strong>albumentations.core.composition.Sequential</strong></code>
+<code>
+<span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L507" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Sequentially applies all transforms to targets.</p>
+<p>Note:
+    This transform is not intended to be a replacement for <code>Compose</code>. Instead, it should be used inside <code>Compose</code>
+    the same way <code>OneOf</code> or <code>OneOrOther</code> are used. For instance, you can combine <code>OneOf</code> with <code>Sequential</code> to
+    create an augmentation pipeline that contains multiple sequences of augmentations and applies one randomly
+    chose sequence to input data (see the <code>Example</code> section for an example definition of such pipeline).</p>
+<p><strong>Examples:</strong></p>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+<span class="o">&gt;&gt;&gt;</span>    <span class="n">A</span><span class="o">.</span><span class="n">OneOf</span><span class="p">([</span>
+<span class="o">&gt;&gt;&gt;</span>        <span class="n">A</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+<span class="o">&gt;&gt;&gt;</span>            <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+<span class="o">&gt;&gt;&gt;</span>            <span class="n">A</span><span class="o">.</span><span class="n">ShiftScaleRotate</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+<span class="o">&gt;&gt;&gt;</span>        <span class="p">]),</span>
+<span class="o">&gt;&gt;&gt;</span>        <span class="n">A</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+<span class="o">&gt;&gt;&gt;</span>            <span class="n">A</span><span class="o">.</span><span class="n">VerticalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+<span class="o">&gt;&gt;&gt;</span>            <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+<span class="o">&gt;&gt;&gt;</span>        <span class="p">]),</span>
+<span class="o">&gt;&gt;&gt;</span>    <span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">])</span>
+</code></pre>
+</div>
+</td>
+</tr>
 </table>
 <div class="doc doc-children">
 </div>

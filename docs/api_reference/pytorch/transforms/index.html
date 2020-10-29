@@ -728,13 +728,39 @@ WARNING! Please use this with care and look into sources before usage.</p>
 <h2 class="doc doc-heading" id="albumentations.pytorch.transforms.ToTensorV2">
 <code>class <strong>albumentations.pytorch.transforms.ToTensorV2</strong></code>
 <code>
-<span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L86" target="_blank">[view source on GitHub]</a>
+<span class="p">(</span><span class="n">transpose_mask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L92" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Convert image and mask to <code>torch.Tensor</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transpose_mask</code></td>
+<td><code>bool</code></td>
+<td>
+<p>if True and an input mask has three dimensions, this transform will transpose dimensions</p>
+</td>
+</tr>
+<tr>
+<td><code>standard</code></td>
+<td><code>format for PyTorch Tensors. Default</code></td>
+<td>
+<p>False.</p>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
 </div>
 </div>

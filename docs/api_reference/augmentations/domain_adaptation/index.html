@@ -684,15 +684,14 @@
 <h2 class="doc doc-heading" id="albumentations.augmentations.domain_adaptation.FDA">
 <code>class <strong>albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
-<span class="p">(</span><span class="n">beta_limit</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L138" target="_blank">[view source on GitHub]</a>
+<span class="p">(</span><span class="n">reference_images</span><span class="p">,</span> <span class="n">beta_limit</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">read_fn</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">read_rgb_image</span> <span class="n">at</span> <span class="mh">0x7f3ad5ceaee0</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L168" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.domain_adaptation.FDA" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a>
-Simple "style transfer".
-Important: you need to pass target image as a parameter <code>target_image</code> in <strong>call</strong>, see example</p>
+Simple "style transfer".</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -704,10 +703,26 @@ Important: you need to pass target image as a parameter <code>target_image</code
 </thead>
 <tbody>
 <tr>
+<td><code>reference_images</code></td>
+<td><code>List[str] or List(np.ndarray</code></td>
+<td>
+<p>List of file paths for reference images
+or list of reference images.</p>
+</td>
+</tr>
+<tr>
 <td><code>beta_limit</code></td>
 <td><code>float or tuple of float</code></td>
 <td>
 <p>coefficient beta from paper. Recommended less 0.3.</p>
+</td>
+</tr>
+<tr>
+<td><code>read_fn</code></td>
+<td><code>Callable</code></td>
+<td>
+<p>Used-defined function to read image. Function should get image path and return numpy
+array of image pixels.</p>
 </td>
 </tr>
 </tbody>
@@ -738,8 +753,8 @@ Important: you need to pass target image as a parameter <code>target_image</code
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">target_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">A</span><span class="o">.</span><span class="n">FDA</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">target_image</span><span class="o">=</span><span class="n">target_image</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">A</span><span class="o">.</span><span class="n">FDA</span><span class="p">([</span><span class="n">target_image</span><span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">read_fn</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">)])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
 </code></pre>
 </div>
 </td>
@@ -753,8 +768,8 @@ Important: you need to pass target image as a parameter <code>target_image</code
 <h2 class="doc doc-heading" id="albumentations.augmentations.domain_adaptation.HistogramMatching">
 <code>class <strong>albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
-<span class="p">(</span><span class="n">reference_images</span><span class="p">,</span> <span class="n">blend_ratio</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">read_fn</span><span class="o">=&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="n">imread</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L83" target="_blank">[view source on GitHub]</a>
+<span class="p">(</span><span class="n">reference_images</span><span class="p">,</span> <span class="n">blend_ratio</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">read_fn</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">read_rgb_image</span> <span class="n">at</span> <span class="mh">0x7f3ad5ceaee0</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L107" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.domain_adaptation.HistogramMatching" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -779,9 +794,10 @@ sources or in different conditions (i.e. lighting).</p>
 <tbody>
 <tr>
 <td><code>reference_images</code></td>
-<td><code>List[str]</code></td>
+<td><code>List[str] or List(np.ndarray</code></td>
 <td>
-<p>List of file paths for reference images.</p>
+<p>List of file paths for reference images
+or list of reference images.</p>
 </td>
 </tr>
 <tr>
@@ -821,7 +837,7 @@ array of image pixels.</p>
 <h2 class="doc doc-heading" id="albumentations.augmentations.domain_adaptation.fourier_domain_adaptation">
 <code class="highlight language-python">def
 albumentations.augmentations.domain_adaptation.fourier_domain_adaptation<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">target_img</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L13" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L17" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a></p>
