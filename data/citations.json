@@ -303,6 +303,7 @@
         "title": "Moiré pattern removal via attentive fractal network",
         "url": "http://openaccess.thecvf.com/content_CVPRW_2020/html/w31/Xu_Moire_Pattern_Removal_via_Attentive_Fractal_Network_CVPRW_2020_paper.html",
         "author_links": {
+            "D Xu": "https://scholar.google.com/citations?user=ET0e93cAAAAJ&hl=en&oi=sra",
             "Q Sun": "https://scholar.google.com/citations?user=nuFmEOcAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -393,6 +394,19 @@
         ],
         "abstract": "Land cover classification of remote sensing images is a challenging task due to limited amounts of annotated data, highly imbalanced classes, frequent incorrect pixel-level annotations, and an inherent complexity in the semantic segmentation task. In this article, we …",
         "eprint": "https://arxiv.org/pdf/2003.04027"
+    },
+    {
+        "title": "CRNNs for Urban Sound Tagging with spatiotemporal context",
+        "url": "https://arxiv.org/abs/2008.10413",
+        "author_links": {
+            "N Riche": "https://scholar.google.com/citations?user=rzXgqSwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Arnault",
+            "N Riche"
+        ],
+        "abstract": "This paper describes CRNNs we used to participate in Task 5 of the DCASE 2020 \nchallenge. This task focuses on hierarchical multi- label urban sound tagging with spatiotemporal \ncontext. The code is available to our GitHub repository at https://github.com/multitel …",
+        "eprint": "https://arxiv.org/pdf/2008.10413"
     },
     {
         "title": "Not My Deepfake: Towards Plausible Deniability for Machine-Generated Media",
@@ -672,7 +686,7 @@
             "H Li",
             "X Zhang"
         ],
-        "abstract": "During a practical detection process, insufficient defect data, unbalanced defect types and the high cost of defect labelling can present problems. Therefore, it often takes considerable time and labour to collect actual samples to improve the accuracy of defect classification and …"
+        "abstract": "During a practical detection process, insufficient defect data, unbalanced defect types and the high cost of defect labeling can present problems. Therefore, it often takes considerable time and labor to collect actual samples to improve the accuracy of defect classification and …"
     },
     {
         "title": "Deep-learning based segmentation of challenging myelin sheaths",
@@ -746,6 +760,7 @@
         "title": "Speech Driven Talking Face Generation from a Single Image and an Emotion Condition",
         "url": "https://arxiv.org/abs/2008.03592",
         "author_links": {
+            "Y Zhang": "https://scholar.google.com/citations?user=nYtHcRAAAAAJ&hl=en&oi=sra",
             "Z Duan": "https://scholar.google.com/citations?user=pJmAoJ4AAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -839,6 +854,20 @@
         ],
         "abstract": "In recent years, artificial intelligence has attracted a huge interest in image and speech recognition, promising the advent of intelligent technologies in everyday life. Machine learning and computer vision have received a growing interest for solving complex image …",
         "eprint": "https://dial.uclouvain.be/downloader/downloader.php?pid=thesis%3A26663&datastream=PDF_01&cover=cover-mem"
+    },
+    {
+        "title": "Segmentation model of the opacity regions in the chest X-rays of the Covid-19 patients in the us rural areas and the application to the disease severity",
+        "url": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full.pdf",
+        "author_links": {
+            "N Sun": "https://scholar.google.com/citations?user=bGXN7Q4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Tang",
+            "N Sun",
+            "Y Li"
+        ],
+        "abstract": "The pandemic of Covid-19 has caused tremendous losses to lives and economy in the entire world. Up until October 2020, it has caused more than 38 million infections and 1.1 million deaths. This has created a severe burden for the health care system worldwide. The …",
+        "eprint": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full.pdf"
     },
     {
         "title": "Data Preprocessing Via Compositions Multi-Channel MRI Images to Improve Brain Tumor Segmentation",
@@ -1068,6 +1097,16 @@
         "eprint": "https://arxiv.org/pdf/2002.04392"
     },
     {
+        "title": "Αναγνώριση προσώπων με τεχνικές βαθιάς μηχανικής μάθησης",
+        "url": "http://nemertes.library.upatras.gr/jspui/handle/10889/14049",
+        "author_links": {},
+        "author": [
+            "Θ Κασσιώτης"
+        ],
+        "abstract": "Η παρούσα διπλωματική εργασία ασχολείται με τη μελέτη του προβλήματος αναγνώρισης προσώπου με τεχνικές βαθιάς μηχανικής μάθησης. Αναφέρονται παλιότερες τεχνικές (PCA, LDA, κλπ.) οι οποίες χρησιμοποιούνταν για την αντιμετώπιση της αναγνώρισης προσώπου …",
+        "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/1/Deep_Learning_for_Face_Recognition-%CE%98%CF%89%CE%BC%CE%AC%CF%82_%CE%9A%CE%B1%CF%83%CF%83%CE%B9%CF%8E%CF%84%CE%B7%CF%82_5315.pdf"
+    },
+    {
         "title": "Image Stylization for Robust Features",
         "url": "https://arxiv.org/abs/2008.06959",
         "author_links": {
@@ -1182,19 +1221,6 @@
         ],
         "abstract": "To conduct a radiomics or deep learning research experiment, the radiologists or physicians need to grasp the needed programming skills, which, however, could be frustrating and costly when they have limited coding experience. In this paper, we present DARWIN, a …",
         "eprint": "https://arxiv.org/pdf/2009.00908"
-    },
-    {
-        "title": "CRNNs for Urban Sound Tagging with spatiotemporal context",
-        "url": "https://arxiv.org/abs/2008.10413",
-        "author_links": {
-            "N Riche": "https://scholar.google.com/citations?user=rzXgqSwAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "A Arnault",
-            "N Riche"
-        ],
-        "abstract": "This paper describes CRNNs we used to participate in Task 5 of the DCASE 2020 \nchallenge. This task focuses on hierarchical multi- label urban sound tagging with spatiotemporal \ncontext. The code is available to our GitHub repository at https://github.com/multitel …",
-        "eprint": "https://arxiv.org/pdf/2008.10413"
     },
     {
         "title": "Fiscal classification using convolutional neural network",
@@ -1742,6 +1768,21 @@
             "J Lindblad"
         ],
         "abstract": "Early detection is essential to reduce cancer mortality. Oral cancer could be subject to screening programs (similar as for cervical cancer) by collecting Pap smear samples at any dentist visit. However, manual analysis of the resulting massive amount of data is …"
+    },
+    {
+        "title": "Urban Sound Classification: striving towards a fair comparison",
+        "url": "https://arxiv.org/abs/2010.11805",
+        "author_links": {
+            "B Hanssens": "https://scholar.google.com/citations?user=MGNQgvgAAAAJ&hl=en&oi=sra",
+            "N Riche": "https://scholar.google.com/citations?user=rzXgqSwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Arnault",
+            "B Hanssens",
+            "N Riche"
+        ],
+        "abstract": "Urban sound classification has been achieving remarkable progress and is still an active research area in audio pattern recognition. In particular, it allows to monitor the noise pollution, which becomes a growing concern for large cities. The contribution of this paper is …",
+        "eprint": "https://arxiv.org/pdf/2010.11805"
     },
     {
         "title": "Accurate and Efficient Intracranial Hemorrhage Detection and Subtype Classification in 3D CT Scans with Convolutional and Long Short-Term Memory Neural …",
