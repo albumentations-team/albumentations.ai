@@ -269,6 +269,20 @@
         "eprint": "http://openaccess.thecvf.com/content_CVPRW_2019/papers/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.pdf"
     },
     {
+        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
+        "author_links": {
+            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
+            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Marques",
+            "D Agarwal",
+            "I de la Torre Díez"
+        ],
+        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
+    },
+    {
         "title": "A framework for knowing who is doing what in aerial surveillance videos",
         "url": "https://ieeexplore.ieee.org/abstract/document/8753491/",
         "author_links": {
@@ -315,6 +329,24 @@
         "eprint": "http://openaccess.thecvf.com/content_CVPRW_2020/papers/w31/Xu_Moire_Pattern_Removal_via_Attentive_Fractal_Network_CVPRW_2020_paper.pdf"
     },
     {
+        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
+        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
+        "author_links": {
+            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
+            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Feng",
+            "S Liu",
+            "Z Cheng",
+            "J Quiroz",
+            "P Chen",
+            "Q Lin"
+        ],
+        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
+        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/04/2020.08.03.20167007.full.pdf"
+    },
+    {
         "title": "Real-time tracking of guidewire robot tips using deep convolutional neural networks on successive localized frames",
         "url": "https://ieeexplore.ieee.org/abstract/document/8886572/",
         "author_links": {
@@ -351,20 +383,6 @@
             "DCF Wieland"
         ],
         "abstract": "A load frame for in situ mechanical testing is developed for the microtomography end stations at the imaging beamline P05 and the high-energy material science beamline P07 of PETRA III at DESY, both operated by the Helmholtz-Zentrum Geesthacht. The load frame is …"
-    },
-    {
-        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
-        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
-        "author_links": {
-            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
-            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "G Marques",
-            "D Agarwal",
-            "I de la Torre Díez"
-        ],
-        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
     },
     {
         "title": "Adapting Convolutional Neural Networks for Geographical Domain Shift",
@@ -440,24 +458,6 @@
         ],
         "abstract": "Domain adaptation for semantic segmentation has recently been actively studied to increase the generalization capabilities of deep learning models. The vast majority of the domain adaptation methods tackle single-source case, where the model trained on a single …",
         "eprint": "http://openaccess.thecvf.com/content_CVPRW_2020/papers/w11/Tasar_StandardGAN_Multi-Source_Domain_Adaptation_for_Semantic_Segmentation_of_Very_High_CVPRW_2020_paper.pdf"
-    },
-    {
-        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
-        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
-        "author_links": {
-            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
-            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Y Feng",
-            "S Liu",
-            "Z Cheng",
-            "J Quiroz",
-            "P Chen",
-            "Q Lin"
-        ],
-        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
-        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/04/2020.08.03.20167007.full.pdf"
     },
     {
         "title": "The Impact of Padding on Image Classification by Using Pre-trained Convolutional Neural Networks",
@@ -545,6 +545,22 @@
             "X Shen"
         ],
         "abstract": "Imbalanced data is a perennial problem that impedes the learning abilities of current machine learning-based classification models. One approach to address it is to leverage data augmentation to expand the training set. For image data, there are a number of suitable …"
+    },
+    {
+        "title": "Accurate and Efficient Intracranial Hemorrhage Detection and Subtype Classification in 3D CT Scans with Convolutional and Long Short-Term Memory Neural …",
+        "url": "https://www.mdpi.com/1424-8220/20/19/5611",
+        "author_links": {
+            "M Burduja": "https://scholar.google.com/citations?user=8RgiVxcAAAAJ&hl=en&oi=sra",
+            "RT Ionescu": "https://scholar.google.com/citations?user=qVbwC6QAAAAJ&hl=en&oi=sra",
+            "N Verga": "https://scholar.google.com/citations?user=9XUBPiEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Burduja",
+            "RT Ionescu",
+            "N Verga"
+        ],
+        "abstract": "In this paper, we present our system for the RSNA Intracranial Hemorrhage Detection challenge, which is based on the RSNA 2019 Brain CT Hemorrhage dataset. The proposed system is based on a lightweight deep neural network architecture composed of a …",
+        "eprint": "https://www.mdpi.com/1424-8220/20/19/5611/pdf"
     },
     {
         "title": "Fully automatic CNN-based segmentation of retinal bifurcations in 2D adaptive optics ophthalmoscopy images",
@@ -857,7 +873,7 @@
     },
     {
         "title": "Segmentation model of the opacity regions in the chest X-rays of the Covid-19 patients in the us rural areas and the application to the disease severity",
-        "url": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full.pdf",
+        "url": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full-text",
         "author_links": {
             "N Sun": "https://scholar.google.com/citations?user=bGXN7Q4AAAAJ&hl=en&oi=sra"
         },
@@ -867,7 +883,7 @@
             "Y Li"
         ],
         "abstract": "The pandemic of Covid-19 has caused tremendous losses to lives and economy in the entire world. Up until October 2020, it has caused more than 38 million infections and 1.1 million deaths. This has created a severe burden for the health care system worldwide. The …",
-        "eprint": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full.pdf"
+        "eprint": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full-text"
     },
     {
         "title": "Data Preprocessing Via Compositions Multi-Channel MRI Images to Improve Brain Tumor Segmentation",
@@ -1785,22 +1801,6 @@
         "eprint": "https://arxiv.org/pdf/2010.11805"
     },
     {
-        "title": "Accurate and Efficient Intracranial Hemorrhage Detection and Subtype Classification in 3D CT Scans with Convolutional and Long Short-Term Memory Neural …",
-        "url": "https://www.mdpi.com/1424-8220/20/19/5611",
-        "author_links": {
-            "M Burduja": "https://scholar.google.com/citations?user=8RgiVxcAAAAJ&hl=en&oi=sra",
-            "RT Ionescu": "https://scholar.google.com/citations?user=qVbwC6QAAAAJ&hl=en&oi=sra",
-            "N Verga": "https://scholar.google.com/citations?user=9XUBPiEAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "M Burduja",
-            "RT Ionescu",
-            "N Verga"
-        ],
-        "abstract": "In this paper, we present our system for the RSNA Intracranial Hemorrhage Detection challenge, which is based on the RSNA 2019 Brain CT Hemorrhage dataset. The proposed system is based on a lightweight deep neural network architecture composed of a …",
-        "eprint": "https://www.mdpi.com/1424-8220/20/19/5611/pdf"
-    },
-    {
         "title": "Understanding the decisions of CNNs: an in-model approach",
         "url": "https://www.sciencedirect.com/science/article/pii/S0167865520301240",
         "author_links": {
@@ -1871,5 +1871,21 @@
         ],
         "abstract": "The increasing amount of falling rain may cause several problems especially in urban areas, which drainage system can often not handle this large amount in a short time. Confirming a flooded scene in a timely manner can help the authorities to take further actions to counter …",
         "eprint": "https://pdfs.semanticscholar.org/7808/fb3b90cca751abff25b92bbaee61ecc26dd7.pdf"
+    },
+    {
+        "title": "Synthetic Data Augmentation for Zero-Shot Cross-Lingual Question Answering",
+        "url": "https://arxiv.org/abs/2010.12643",
+        "author_links": {
+            "T Scialom": "https://scholar.google.com/citations?user=qou4P-kAAAAJ&hl=en&oi=sra",
+            "B Sagot": "https://scholar.google.com/citations?user=HXUT9ZkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Riabi",
+            "T Scialom",
+            "R Keraron",
+            "B Sagot"
+        ],
+        "abstract": "Coupled with the availability of large scale datasets, deep learning architectures have enabled rapid progress on the Question Answering task. However, most of those datasets are in English, and the performances of state-of-the-art multilingual models are significantly …",
+        "eprint": "https://arxiv.org/pdf/2010.12643"
     }
 ]
