@@ -27,7 +27,7 @@ plugins:
         on_nav: "hooks:on_nav"
   - macros
   - search:
-      prebuild_index: python
+      prebuild_index: false
 
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
@@ -54,10 +54,13 @@ theme:
   favicon: images/logo.png
 
 extra_css:
+  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
   - css/extra.css
 
 extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  - js/extra.js
 
 repo_name: albumentations
 repo_url: https://github.com/albumentations-team/albumentations
