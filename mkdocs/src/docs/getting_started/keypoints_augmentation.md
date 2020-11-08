@@ -121,6 +121,7 @@ keypoints = [
     (86, 88),
     (254, 160),
     (193, 103),
+    (65, 341),
 ]
 ```
 Then you pass those keypoints to the `transform` function along with the image and receive the augmented versions of image and keypoints.
