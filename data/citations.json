@@ -209,7 +209,7 @@
         "eprint": "https://arxiv.org/pdf/1904.08084"
     },
     {
-        "title": "COVID-19 prediction and detection using deep learning",
+        "title": "Covid-19 prediction and detection using deep learning",
         "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
         "author_links": {
             "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
@@ -236,6 +236,20 @@
         ],
         "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
         "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
+    },
+    {
+        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
+        "author_links": {
+            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
+            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Marques",
+            "D Agarwal",
+            "I de la Torre Díez"
+        ],
+        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
     },
     {
         "title": "Camera-to-robot pose estimation from a single image",
@@ -267,20 +281,6 @@
         ],
         "abstract": "In this report we investigate various strategies to boost the performance for leaf segmentation of Arabidopsis thaliana in chlorophyll fluorescent imaging without any manual annotation. Direct conversion of RGB images to gray levels picked from CVPPP challenge or …",
         "eprint": "http://openaccess.thecvf.com/content_CVPRW_2019/papers/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.pdf"
-    },
-    {
-        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
-        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
-        "author_links": {
-            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
-            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "G Marques",
-            "D Agarwal",
-            "I de la Torre Díez"
-        ],
-        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
     },
     {
         "title": "A framework for knowing who is doing what in aerial surveillance videos",
@@ -361,6 +361,17 @@
         ],
         "abstract": "Studies are proceeded to stabilize cardiac surgery using thin micro-guidewires and catheter robots. To control the robot to a desired position and pose, it is necessary to accurately track the robot tip in real time but tracking and accurately delineating the thin and small tip is …",
         "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08886572.pdf"
+    },
+    {
+        "title": "Method for Whale Re-identification Based on Siamese Nets and Adversarial Training",
+        "url": "https://link.springer.com/article/10.3103/S1060992X20020058",
+        "author_links": {},
+        "author": [
+            "W Wang",
+            "RA Solovyev",
+            "AL Stempkovsky"
+        ],
+        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …"
     },
     {
         "title": "Road Segmentation using U-Net architecture",
@@ -490,6 +501,23 @@
         "eprint": "http://cattedraledigitale.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
     },
     {
+        "title": "Semantic segmentation of smartphone wound images: Comparative analysis of AHRF and CNN-based approaches",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9160940/",
+        "author_links": {
+            "A Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra",
+            "E Agu": "https://scholar.google.com/citations?user=Ke6ex0wAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Wagh",
+            "S Jain",
+            "A Mukherjee",
+            "E Agu",
+            "P Pedersen"
+        ],
+        "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09160940.pdf"
+    },
+    {
         "title": "Bayesian feature pyramid networks for automatic multi-label segmentation of chest X-rays and assessment of cardio-thoratic ratio",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-40605-9_11",
         "author_links": {
@@ -544,7 +572,8 @@
             "Y Wang",
             "X Shen"
         ],
-        "abstract": "Imbalanced data is a perennial problem that impedes the learning abilities of current machine learning-based classification models. One approach to address it is to leverage data augmentation to expand the training set. For image data, there are a number of suitable …"
+        "abstract": "Imbalanced data is a perennial problem that impedes the learning abilities of current machine learning-based classification models. One approach to address it is to leverage data augmentation to expand the training set. For image data, there are a number of suitable …",
+        "eprint": "http://gerard.demelo.org/papers/easyaug-data-augmentation.pdf"
     },
     {
         "title": "Accurate and Efficient Intracranial Hemorrhage Detection and Subtype Classification in 3D CT Scans with Convolutional and Long Short-Term Memory Neural …",
@@ -719,18 +748,7 @@
         "eprint": "https://hal.archives-ouvertes.fr/hal-02929744/document"
     },
     {
-        "title": "Method for Whale Re-identification Based on Siamese Nets and Adversarial Training",
-        "url": "https://link.springer.com/article/10.3103/S1060992X20020058",
-        "author_links": {},
-        "author": [
-            "W Wang",
-            "RA Solovyev",
-            "AL Stempkovsky"
-        ],
-        "abstract": "Training Convolutional Neural Networks that do well in one-shot learning settings can have wide range of impacts on real-world datasets. In this paper, we explore an adversarial training method that learns a Siamese neural network in an end-to-end fashion …"
-    },
-    {
-        "title": "Multi-class Brain Tumor Segmentation via Multi-sequences MRI Mixture Data Preprocessing",
+        "title": "Multi-class brain tumor segmentation via multi-sequences MRI mixture data preprocessing",
         "url": "https://ieeexplore.ieee.org/abstract/document/9214645/",
         "author_links": {},
         "author": [
@@ -886,6 +904,17 @@
         "eprint": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full-text"
     },
     {
+        "title": "Deep Learning for Regular Change Detection in Ukrainian Forest Ecosystem With Sentinel-2",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9241044/",
+        "author_links": {},
+        "author": [
+            "K Isaienkov",
+            "M Yushchuk",
+            "V Khramtsov"
+        ],
+        "abstract": "The logging is the leading cause for the reduction in the forest area in the world. At the same time the number of forest clearcuts continues to grow. However despite the massive scale such incidents are difficult to track in time. As a result huge areas of forests are gradually …"
+    },
+    {
         "title": "Data Preprocessing Via Compositions Multi-Channel MRI Images to Improve Brain Tumor Segmentation",
         "url": "https://ieeexplore.ieee.org/abstract/document/9153416/",
         "author_links": {
@@ -1010,7 +1039,7 @@
         "abstract": "Due to a high interest in microscopic cell migration analysis for biological research, numerous cell segmentation and tracking algorithms has emerged. The main tasks of cell tracking methods are to segment each cell and establish individual cell lineages over time …"
     },
     {
-        "title": "Development and evaluation of deep learning-based segmentation of histologic structures in the kidney cortex with multiple histologic stains.",
+        "title": "Development and evaluation of deep learning–based segmentation of histologic structures in the kidney cortex with multiple histologic stains",
         "url": "https://www.sciencedirect.com/science/article/pii/S0085253820309625",
         "author_links": {
             "AR Janowczyk": "https://scholar.google.com/citations?user=30jKRGcAAAAJ&hl=en&oi=sra"
@@ -1113,6 +1142,19 @@
         "eprint": "https://arxiv.org/pdf/2002.04392"
     },
     {
+        "title": "Application of shared backbone DNNs in ADAS perception systems",
+        "url": "https://www.researchgate.net/profile/Dmitry_Sholomov/publication/345144777_Application_of_shared_backbone_DNNs_in_ADAS_perception_systems/links/5fa25455458515b7cfba589d/Application-of-shared-backbone-DNNs-in-ADAS-perception-systems.pdf",
+        "author_links": {
+            "DL Sholomov": "https://scholar.google.com/citations?user=4bQAn_IAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "MG Lobanov",
+            "DL Sholomov"
+        ],
+        "abstract": "Advanced Driver Assistance System (ADAS) is a very important part of an up to date vehicle. For achieving highlevel objectives in such ADAS functionality like LKA (lane keeping assistance), LDW (lane departure warning system), FCW (forward collision …",
+        "eprint": "https://www.researchgate.net/profile/Dmitry_Sholomov/publication/345144777_Application_of_shared_backbone_DNNs_in_ADAS_perception_systems/links/5fa25455458515b7cfba589d/Application-of-shared-backbone-DNNs-in-ADAS-perception-systems.pdf"
+    },
+    {
         "title": "Αναγνώριση προσώπων με τεχνικές βαθιάς μηχανικής μάθησης",
         "url": "http://nemertes.library.upatras.gr/jspui/handle/10889/14049",
         "author_links": {},
@@ -1121,6 +1163,22 @@
         ],
         "abstract": "Η παρούσα διπλωματική εργασία ασχολείται με τη μελέτη του προβλήματος αναγνώρισης προσώπου με τεχνικές βαθιάς μηχανικής μάθησης. Αναφέρονται παλιότερες τεχνικές (PCA, LDA, κλπ.) οι οποίες χρησιμοποιούνταν για την αντιμετώπιση της αναγνώρισης προσώπου …",
         "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/1/Deep_Learning_for_Face_Recognition-%CE%98%CF%89%CE%BC%CE%AC%CF%82_%CE%9A%CE%B1%CF%83%CF%83%CE%B9%CF%8E%CF%84%CE%B7%CF%82_5315.pdf"
+    },
+    {
+        "title": "Road Damage Detection and Classification with Detectron2 and Faster R-CNN",
+        "url": "https://arxiv.org/abs/2010.15021",
+        "author_links": {
+            "V Pham": "https://scholar.google.com/citations?user=_Wj4gjUAAAAJ&hl=en&oi=sra",
+            "C Pham": "https://scholar.google.com/citations?user=too4ejgAAAAJ&hl=en&oi=sra",
+            "T Dang": "https://scholar.google.com/citations?user=jobGGfEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "V Pham",
+            "C Pham",
+            "T Dang"
+        ],
+        "abstract": "The road is vital for many aspects of life, and road maintenance is crucial for human safety. One of the critical tasks to allow timely repair of road damages is to quickly and efficiently detect and classify them. This work details the strategies and experiments evaluated for …",
+        "eprint": "https://arxiv.org/pdf/2010.15021"
     },
     {
         "title": "Image Stylization for Robust Features",
@@ -1158,7 +1216,9 @@
         "title": "A Flatter Loss for Bias Mitigation in Cross-dataset Facial Age Estimation",
         "url": "https://arxiv.org/abs/2010.10368",
         "author_links": {
-            "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra"
+            "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra",
+            "ZH Feng": "https://scholar.google.com/citations?user=Y6KtijIAAAAJ&hl=en&oi=sra",
+            "A Farooq": "https://scholar.google.com/citations?user=VrjcaiYAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "A Akbari",
@@ -1313,6 +1373,20 @@
             "ДА Андриянов"
         ],
         "abstract": "В статье приведены результаты исследования эффективности работы различных нейронных сетей в ограниченных условиях исходных данных и при ряде простейших аугментаций. При этом зависимости получены для последовательной нейронной сети …"
+    },
+    {
+        "title": "Image-based high-throughput detection and phenotype evaluation method for multiple lettuce varieties",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7573370/",
+        "author_links": {},
+        "author": [
+            "J Du",
+            "X Lu",
+            "J Fan",
+            "Y Qin",
+            "X Yang"
+        ],
+        "abstract": "The yield and quality of fresh lettuce can be determined from the growth rate and color of individual plants. Manual assessment and phenotyping for hundreds of varieties of lettuce is very time consuming and labor intensive. In this study, we utilized a “Sensor-to-Plant” …",
+        "eprint": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7573370/"
     },
     {
         "title": "Automation of Kidney Perfusion Analysis from Dynamic Phase-Contrast MRI using Deep Learning",
@@ -1516,23 +1590,6 @@
         ],
         "abstract": "Convolutional Neural Networks (CNNs) have proved very accurate in multiple computer vision image classification tasks that required visual inspection in the past (eg, object recognition, face detection, etc.). Motivated by these astonishing results, researchers have …",
         "eprint": "https://arxiv.org/pdf/2009.12088"
-    },
-    {
-        "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9160940/",
-        "author_links": {
-            "A Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra",
-            "E Agu": "https://scholar.google.com/citations?user=Ke6ex0wAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "A Wagh",
-            "S Jain",
-            "A Mukherjee",
-            "E Agu",
-            "P Pedersen"
-        ],
-        "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
-        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09160940.pdf"
     },
     {
         "title": "End-to-end learning for semiquantitative rating of COVID-19 severity on Chest X-rays",
