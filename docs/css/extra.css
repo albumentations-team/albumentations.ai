@@ -193,3 +193,57 @@ p img {
   padding: .2rem .8rem;
   vertical-align: middle;
 }
+
+
+.algolia-autocomplete .ds-dropdown-menu {
+    width: 100%;
+    max-width: 100%;
+    min-width: 300px;
+}
+
+@media (min-width: 576px) {
+  .algolia-autocomplete .ds-dropdown-menu {
+    width: 500px;
+    max-width: 500px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .algolia-autocomplete .ds-dropdown-menu {
+    width: 500px;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .algolia-autocomplete .ds-dropdown-menu {
+    width: 650px;
+    max-width: 650px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .algolia-autocomplete .ds-dropdown-menu {
+    width: 850px;
+    max-width: 850px;
+  }
+}
+
+
+
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  font-size: 1.75em
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+  font-size: 1.3em
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  font-size: 1.5em
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+  font-size: 1.4em
+}
