@@ -625,10 +625,10 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#050">
-    0.5.0
+<a class="md-nav__link" href="#051-2-november-2020">
+    0.5.1 (2 November 2020)
   </a>
-<nav aria-label="0.5.0" class="md-nav">
+<nav aria-label="0.5.1 (2 November 2020)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#breaking-changes">
@@ -654,10 +654,39 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#046">
-    0.4.6
+<a class="md-nav__link" href="#050-19-october-2020">
+    0.5.0 (19 October 2020)
   </a>
-<nav aria-label="0.4.6" class="md-nav">
+<nav aria-label="0.5.0 (19 October 2020)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#breaking-changes_1">
+    Breaking changes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#new-transformations_1">
+    New transformations
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minor-changes_1">
+    Minor changes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bugfixes_1">
+    Bugfixes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#046-19-july-2020">
+    0.4.6 (19 July 2020)
+  </a>
+<nav aria-label="0.4.6 (19 July 2020)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#improvements">
@@ -691,31 +720,52 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1 id="release-notes">Release notes<a class="headerlink" href="#release-notes" title="Permanent link">¶</a></h1>
-<h2 id="050">0.5.0<a class="headerlink" href="#050" title="Permanent link">¶</a></h2>
+<h2 id="051-2-november-2020">0.5.1 (2 November 2020)<a class="headerlink" href="#051-2-november-2020" title="Permanent link">¶</a></h2>
 <h3 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">¶</a></h3>
+<ul>
+<li>API for <a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.FDA"><code>A.FDA</code></a> is changed to resemble API of <a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.HistogramMatching"><code>A.HistogramMatching</code></a>. Now, both transformations expect to receive a list of reference images, a function to read those image, and additional augmentation parameters. <a href="https://github.com/albumentations-team/albumentations/pull/734" target="_blank">(#734)</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.HistogramMatching"><code>A.HistogramMatching</code></a> now uses<code>read_rgb_image</code> as a default <code>read_fn</code>. This function reads an image from the disk as an RGB NumPy array. Previously, the default <code>read_fn</code> was <code>cv2.imread</code> which read an image as a BGR NumPy array. <a href="https://github.com/albumentations-team/albumentations/pull/734" target="_blank">(#734)</a></li>
+</ul>
+<h3 id="new-transformations">New transformations<a class="headerlink" href="#new-transformations" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://albumentations.ai/docs/api_reference/core/composition/#albumentations.core.composition.Sequential"><code>A.Sequential</code></a> transform that can apply augmentations in a sequence. This transform is not intended to be a replacement for <code>A.Compose</code>. Instead, it should be used inside <code>A.Compose</code> the same way <code>A.OneOf</code> or <code>A.OneOrOther</code>. For instance, you can combine <code>A.OneOf</code> with <code>A.Sequential</code> to create an augmentation pipeline containing multiple sequences of augmentations and apply one randomly chosen sequence to input data. <a href="https://github.com/albumentations-team/albumentations/pull/735" target="_blank">(#735)</a></li>
+</ul>
+<h3 id="minor-changes">Minor changes<a class="headerlink" href="#minor-changes" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate"><code>A.ShiftScaleRotate</code></a> now has two additional optional parameters: <code>shift_limit_x</code> and <code>shift_limit_y</code>. If either of those parameters (or both of them) is set <code>A.ShiftScaleRotate</code> will use the set values to shift images on the respective axis. <a href="https://github.com/albumentations-team/albumentations/pull/735" target="_blank">(#735)</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/pytorch/transforms/#albumentations.pytorch.transforms.ToTensorV2"><code>A.ToTensorV2</code></a> now supports an additional argument <code>transpose_mask</code> (<code>False</code> by default). If the argument is set to <code>True</code> and an input mask has 3 dimensions, <code>A.ToTensorV2</code> will transpose dimensions of a mask tensor in addition to transposing dimensions of an image tensor. <a href="https://github.com/albumentations-team/albumentations/pull/735" target="_blank">(#735)</a></li>
+</ul>
+<h3 id="bugfixes">Bugfixes<a class="headerlink" href="#bugfixes" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.FDA"><code>A.FDA</code></a> now correctly uses coordinates of the center of an image. <a href="https://github.com/albumentations-team/albumentations/pull/730" target="_blank">(#730)</a></li>
+<li>Fixed problems with grayscale images for <a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.HistogramMatching"><code>A.HistogramMatching</code></a>. <a href="https://github.com/albumentations-team/albumentations/pull/734" target="_blank">(#734)</a></li>
+<li>Fixed a bug that led to an exception when <code>A.load()</code> was called to deserialize a pipeline that contained <code>A.ToTensor</code> or <code>A.ToTensorV2</code>, but those transforms were not imported in the code before the call. <a href="https://github.com/albumentations-team/albumentations/pull/735" target="_blank">(#735)</a></li>
+</ul>
+<h2 id="050-19-october-2020">0.5.0 (19 October 2020)<a class="headerlink" href="#050-19-october-2020" title="Permanent link">¶</a></h2>
+<h3 id="breaking-changes_1">Breaking changes<a class="headerlink" href="#breaking-changes_1" title="Permanent link">¶</a></h3>
 <ul>
 <li>Albumentations now explicitly checks that all inputs to augmentations are named arguments and raise an exception otherwise. So if an augmentation receives input like aug(image) instead of aug(image=image), Albumentations will raise an exception. (<a href="https://github.com/albumentations-team/albumentations/pull/560" target="_blank">#560</a>)</li>
 <li>Dropped support of Python 3.5 (<a href="https://github.com/albumentations-team/albumentations/pull/709" target="_blank">#709</a>)</li>
 <li>Keypoints and bboxes are checked for visibility after each transform (<a href="https://github.com/albumentations-team/albumentations/pull/566" target="_blank">#566</a>)</li>
 </ul>
-<h3 id="new-transformations">New transformations<a class="headerlink" href="#new-transformations" title="Permanent link">¶</a></h3>
+<h3 id="new-transformations_1">New transformations<a class="headerlink" href="#new-transformations_1" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.FDA"><code>A.FDA</code></a> transform for Fourier-based domain adaptation. (<a href="https://github.com/albumentations-team/albumentations/pull/685" target="_blank">#685</a>)</li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.HistogramMatching"><code>A.HistogramMatching</code></a> transform that applies histogram matching. (<a href="https://github.com/albumentations-team/albumentations/pull/708" target="_blank">#708</a>)</li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ColorJitter"><code>A.ColorJitter</code></a> transform that behaves similarly to <code>ColorJitter</code> from torchvision (though there are some minor differences due to different internal logic for working with HSV colorspace in Pillow, which is used in torchvision and OpenCV, which is used in Albumentations). (<a href="https://github.com/albumentations-team/albumentations/pull/705" target="_blank">#705</a>)</li>
 </ul>
-<h3 id="minor-changes">Minor changes<a class="headerlink" href="#minor-changes" title="Permanent link">¶</a></h3>
+<h3 id="minor-changes_1">Minor changes<a class="headerlink" href="#minor-changes_1" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.PadIfNeeded"><code>A.PadIfNeeded</code></a> now accepts additional <code>pad_width_divisor</code>, <code>pad_height_divisor</code> (<code>None</code> by default) to ensure image has width &amp; height that is dividable by given values. (<a href="https://github.com/albumentations-team/albumentations/pull/700" target="_blank">#700</a>)</li>
 <li>Added support to apply <a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CoarseDropout"><code>A.CoarseDropout</code></a> to masks via <code>mask_fill_value</code>. (<a href="https://github.com/albumentations-team/albumentations/pull/699" target="_blank">#699</a>)</li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur"><code>A.GaussianBlur</code></a> now supports the sigma parameter that sets standard deviation for Gaussian kernel. (<a href="https://github.com/albumentations-team/albumentations/pull/674" target="_blank">#674</a>, <a href="https://github.com/albumentations-team/albumentations/issues/673" target="_blank">#673</a>) .</li>
 </ul>
-<h3 id="bugfixes">Bugfixes<a class="headerlink" href="#bugfixes" title="Permanent link">¶</a></h3>
+<h3 id="bugfixes_1">Bugfixes<a class="headerlink" href="#bugfixes_1" title="Permanent link">¶</a></h3>
 <ul>
 <li>Fixed bugs in <a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue"><code>A.HueSaturationValue</code></a> for float dtype. (<a href="https://github.com/albumentations-team/albumentations/pull/696" target="_blank">#696</a>, <a href="https://github.com/albumentations-team/albumentations/pull/710" target="_blank">#710</a>)</li>
 <li>Fixed incorrect rounding error on bboxes in <code>YOLO</code> format. (<a href="https://github.com/albumentations-team/albumentations/pull/688" target="_blank">#688</a>)</li>
 </ul>
-<h2 id="046">0.4.6<a class="headerlink" href="#046" title="Permanent link">¶</a></h2>
+<h2 id="046-19-july-2020">0.4.6 (19 July 2020)<a class="headerlink" href="#046-19-july-2020" title="Permanent link">¶</a></h2>
 <h3 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">¶</a></h3>
 <ul>
 <li>Change the ImgAug dependency version from “imgaug&gt;=0.2.5,&lt;0.2.7” to “imgaug&gt;=0.4.0". Now Albumentations won’t downgrade your existing ImgAug installation to the old version. PR <a href="https://github.com/albumentations-team/albumentations/pull/658" target="_blank">#658</a>.</li>
