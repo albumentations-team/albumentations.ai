@@ -209,6 +209,20 @@
         "eprint": "https://arxiv.org/pdf/1904.08084"
     },
     {
+        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
+        "author_links": {
+            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
+            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Marques",
+            "D Agarwal",
+            "I de la Torre Díez"
+        ],
+        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
+    },
+    {
         "title": "Covid-19 prediction and detection using deep learning",
         "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
         "author_links": {
@@ -236,20 +250,6 @@
         ],
         "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
         "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
-    },
-    {
-        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
-        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
-        "author_links": {
-            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
-            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "G Marques",
-            "D Agarwal",
-            "I de la Torre Díez"
-        ],
-        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
     },
     {
         "title": "Camera-to-robot pose estimation from a single image",
@@ -454,6 +454,20 @@
         ],
         "abstract": "Progress in generative modelling, especially generative adversarial networks, have made it possible to efficiently synthesize and alter media at scale. Malicious individuals now rely on these machine-generated media, or deepfakes, to manipulate social discourse. In order to …",
         "eprint": "https://arxiv.org/pdf/2008.09194"
+    },
+    {
+        "title": "Identifying Melanoma Images using EfficientNet Ensemble: Winning Solution to the SIIM-ISIC Melanoma Classification Challenge",
+        "url": "https://arxiv.org/abs/2010.05351",
+        "author_links": {
+            "B Liu": "https://scholar.google.com/citations?user=__kYox8AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Q Ha",
+            "B Liu",
+            "F Liu"
+        ],
+        "abstract": "We present our winning solution to the SIIM-ISIC Melanoma Classification Challenge. It is an ensemble of convolutions neural network (CNN) models with different backbones and input sizes, most of which are image-only models while a few of them used image-level and …",
+        "eprint": "https://arxiv.org/pdf/2010.05351"
     },
     {
         "title": "StandardGAN: Multi-source Domain Adaptation for Semantic Segmentation of Very High Resolution Satellite Images by Data Standardization",
@@ -737,7 +751,8 @@
         "title": "Deep-learning based segmentation of challenging myelin sheaths",
         "url": "https://hal.archives-ouvertes.fr/hal-02929744/",
         "author_links": {
-            "A Joutel": "https://scholar.google.com/citations?user=9q_WEIUAAAAJ&hl=en&oi=sra"
+            "A Joutel": "https://scholar.google.com/citations?user=9q_WEIUAAAAJ&hl=en&oi=sra",
+            "R Caillon": "https://scholar.google.com/citations?user=owO6MpYAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "T Le Couedic",
@@ -904,6 +919,20 @@
         "eprint": "https://www.medrxiv.org/content/10.1101/2020.10.19.20215483v1.full-text"
     },
     {
+        "title": "End-to-end Deep Learning Methods for Automated Damage Detection in Extreme Events at Various Scales",
+        "url": "https://arxiv.org/abs/2011.03098",
+        "author_links": {
+            "A Yilmaz": "https://scholar.google.com/citations?user=MeQC1XYAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Bai",
+            "H Sezen",
+            "A Yilmaz"
+        ],
+        "abstract": "Robust Mask R-CNN (Mask Regional Convolu-tional Neural Network) methods are proposed and tested for automatic detection of cracks on structures or their components that may be damaged during extreme events, such as earth-quakes. We curated a new dataset …",
+        "eprint": "https://arxiv.org/pdf/2011.03098"
+    },
+    {
         "title": "Deep Learning for Regular Change Detection in Ukrainian Forest Ecosystem With Sentinel-2",
         "url": "https://ieeexplore.ieee.org/abstract/document/9241044/",
         "author_links": {},
@@ -925,6 +954,16 @@
             "E Pavlovskiy"
         ],
         "abstract": "Magnetic resonance imaging (MRI) stays one of the most essential noninvasive methods for brain diagnostics. It allows obtaining the detailed 3D image of the brain, including various types of soft tissues. In this paper, we compare the influence of the multichannel data …"
+    },
+    {
+        "title": "Few-Shot Learning with Deep Neural Networks for Visual Quality Control: Evaluations on a Production Line",
+        "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1473064",
+        "author_links": {},
+        "author": [
+            "N Yavari"
+        ],
+        "abstract": "Having a well representative and adequate amount of data samples plays an important role in the success of deep learning algorithms used for image recognition. On the other hand, collecting and manually labeling a large-scale dataset requires a great deal of human …",
+        "eprint": "https://www.diva-portal.org/smash/get/diva2:1473064/FULLTEXT01.pdf"
     },
     {
         "title": "Video and Sensor-Based Rope Pulling Detection in Sport Climbing",
@@ -1424,20 +1463,6 @@
         "eprint": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf"
     },
     {
-        "title": "Identifying Melanoma Images using EfficientNet Ensemble: Winning Solution to the SIIM-ISIC Melanoma Classification Challenge",
-        "url": "https://arxiv.org/abs/2010.05351",
-        "author_links": {
-            "B Liu": "https://scholar.google.com/citations?user=__kYox8AAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Q Ha",
-            "B Liu",
-            "F Liu"
-        ],
-        "abstract": "We present our winning solution to the SIIM-ISIC Melanoma Classification Challenge. It is an ensemble of convolutions neural network (CNN) models with different backbones and input sizes, most of which are image-only models while a few of them used image-level and …",
-        "eprint": "https://arxiv.org/pdf/2010.05351"
-    },
-    {
         "title": "Weighted Ensemble Object Detection with Optimized Coefficients for Remote Sensing Images",
         "url": "https://www.mdpi.com/2220-9964/9/6/370",
         "author_links": {
@@ -1914,6 +1939,20 @@
             "S Yu"
         ],
         "abstract": "Human labor still play an important role in cane sugar crystallization process. Automation control is essential to reduce human labor. An accurate image classification system is the basis for automation control of the cane sugar crystallization process. This paper builds a …"
+    },
+    {
+        "title": "Self Supervised Learning for Object Localisation in 3D Tomographic Images",
+        "url": "https://arxiv.org/abs/2011.03353",
+        "author_links": {
+            "A Ershov": "https://scholar.google.com/citations?user=oML30-wAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Zharov",
+            "A Ershov",
+            "T Baumbach"
+        ],
+        "abstract": "While a lot of work is dedicated to self-supervised learning, most of it is dealing with 2D images of natural scenes and objects. In this paper, we focus on\\textit {volumetric} images obtained by means of the X-Ray Computed Tomography (CT). We describe two pretext …",
+        "eprint": "https://arxiv.org/pdf/2011.03353"
     },
     {
         "title": "Flood detection with Sentinel-2 satellite images in crisis management systems",
