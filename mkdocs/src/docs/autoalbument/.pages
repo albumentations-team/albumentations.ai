@@ -1,0 +1,9 @@
+title: AutoAlbument - AutoML for Image Augmentation
+arrange:
+  - overview.md
+  - installation.md
+  - how_to_use.md
+  - tuning_parameters.md
+  - examples
+  - search_algorithms.md
+  - faq.md

@@ -53,6 +53,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 
 ## Other topics
 - [Frequently Asked Questions](faq.md)
+- [AutoAlbument - AutoML for image augmentation](autoalbument/overview.md)
 - [Albumentations Experimental - experimental features for Albumentations](experimental/overview.md)
 - [Release notes](release_notes.md)
 - [Contributing](contributing.md)
