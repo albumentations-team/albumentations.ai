@@ -1,0 +1,5 @@
+title: Examples
+arrange:
+  - list.md
+  - cifar10.md
+  - pascal_voc.md
