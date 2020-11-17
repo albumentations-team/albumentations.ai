@@ -161,6 +161,36 @@
         "eprint": "https://arxiv.org/pdf/1812.01429"
     },
     {
+        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
+        "author_links": {
+            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
+            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Marques",
+            "D Agarwal",
+            "I de la Torre Díez"
+        ],
+        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
+    },
+    {
+        "title": "Covid-19 prediction and detection using deep learning",
+        "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
+        "author_links": {
+            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
+            "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
+            "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Alazab",
+            "A Awajan",
+            "A Mesleh"
+        ],
+        "abstract": "(COVID-19) is one of the main challenges in the world, given the rapid spread of the disease. Recent statistics indicate that the number of people diagnosed with COVID-19 is increasing exponentially, with more than 1.6 million confirmed cases; the disease is …",
+        "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
+    },
+    {
         "title": "Semi-supervised segmentation of salt bodies in seismic images using an ensemble of convolutional neural networks",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-33676-9_15",
         "author_links": {
@@ -209,49 +239,6 @@
         "eprint": "https://arxiv.org/pdf/1904.08084"
     },
     {
-        "title": "Automated medical diagnosis of COVID-19 through EfficientNet convolutional neural network",
-        "url": "https://www.sciencedirect.com/science/article/pii/S1568494620306293",
-        "author_links": {
-            "D Agarwal": "https://scholar.google.com/citations?user=ZBXCI0sAAAAJ&hl=en&oi=sra",
-            "I de la Torre Díez": "https://scholar.google.com/citations?user=82k6rgsAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "G Marques",
-            "D Agarwal",
-            "I de la Torre Díez"
-        ],
-        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
-    },
-    {
-        "title": "Covid-19 prediction and detection using deep learning",
-        "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
-        "author_links": {
-            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
-            "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
-            "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "M Alazab",
-            "A Awajan",
-            "A Mesleh"
-        ],
-        "abstract": "(COVID-19) is one of the main challenges in the world, given the rapid spread of the disease. Recent statistics indicate that the number of people diagnosed with COVID-19 is increasing exponentially, with more than 1.6 million confirmed cases; the disease is …",
-        "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
-    },
-    {
-        "title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks",
-        "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1",
-        "author_links": {
-            "C Domínguez": "https://scholar.google.com/citations?user=IlwGQfMAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Á Casado-García",
-            "C Domínguez"
-        ],
-        "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
-        "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
-    },
-    {
         "title": "Camera-to-robot pose estimation from a single image",
         "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
         "author_links": {
@@ -266,6 +253,19 @@
         ],
         "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
         "eprint": "https://arxiv.org/pdf/1911.09231"
+    },
+    {
+        "title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks",
+        "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1",
+        "author_links": {
+            "C Domínguez": "https://scholar.google.com/citations?user=IlwGQfMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Á Casado-García",
+            "C Domínguez"
+        ],
+        "abstract": "Background Deep learning techniques have been successfully applied to bioimaging problems; however, these methods are highly data demanding. An approach to deal with the lack of data and avoid overfitting is the application of data augmentation, a technique that …",
+        "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
     },
     {
         "title": "Data augmentation from RGB to chlorophyll fluorescence imaging Application to leaf segmentation of Arabidopsis thaliana from top view images",
@@ -345,6 +345,22 @@
         ],
         "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
         "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/04/2020.08.03.20167007.full.pdf"
+    },
+    {
+        "title": "Semantic segmentation of smartphone wound images: Comparative analysis of AHRF and CNN-based approaches",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9160940/",
+        "author_links": {
+            "A Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra",
+            "E Agu": "https://scholar.google.com/citations?user=Ke6ex0wAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Wagh",
+            "S Jain",
+            "A Mukherjee",
+            "E Agu"
+        ],
+        "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09160940.pdf"
     },
     {
         "title": "Real-time tracking of guidewire robot tips using deep convolutional neural networks on successive localized frames",
@@ -513,23 +529,6 @@
         ],
         "abstract": "Since the early days of the low-cost camera development, the collection of visual data has become a common practice in the underwater monitoring field. Nevertheless, video and image sequences are a trustworthy source of knowledge that remains partially untapped …",
         "eprint": "http://cattedraledigitale.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
-    },
-    {
-        "title": "Semantic segmentation of smartphone wound images: Comparative analysis of AHRF and CNN-based approaches",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9160940/",
-        "author_links": {
-            "A Wagh": "https://scholar.google.com/citations?user=tOsSkM4AAAAJ&hl=en&oi=sra",
-            "E Agu": "https://scholar.google.com/citations?user=Ke6ex0wAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "A Wagh",
-            "S Jain",
-            "A Mukherjee",
-            "E Agu",
-            "P Pedersen"
-        ],
-        "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
-        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09160940.pdf"
     },
     {
         "title": "Bayesian feature pyramid networks for automatic multi-label segmentation of chest X-rays and assessment of cardio-thoratic ratio",
@@ -1112,6 +1111,7 @@
         "title": "Landslide Segmentation with U-Net: Evaluating Different Sampling Methods and Patch Sizes",
         "url": "https://arxiv.org/abs/2007.06672",
         "author_links": {
+            "HC Dias": "https://scholar.google.com/citations?user=WVTNAPEAAAAJ&hl=en&oi=sra",
             "CH Grohmann": "https://scholar.google.com/citations?user=V3s8mq4AAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1336,6 +1336,22 @@
         ],
         "abstract": "To conduct a radiomics or deep learning research experiment, the radiologists or physicians need to grasp the needed programming skills, which, however, could be frustrating and costly when they have limited coding experience. In this paper, we present DARWIN, a …",
         "eprint": "https://arxiv.org/pdf/2009.00908"
+    },
+    {
+        "title": "Deep Learning for Retail Product Recognition: Challenges and Techniques",
+        "url": "https://www.hindawi.com/journals/cin/2020/8875910/",
+        "author_links": {
+            "S Xu": "https://scholar.google.com/citations?user=t7JahsUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Wei",
+            "S Tran",
+            "S Xu",
+            "B Kang",
+            "M Springer"
+        ],
+        "abstract": "Taking time to identify expected products and waiting for the checkout in a retail store are common scenes we all encounter in our daily lives. tempspacetempspaceThe realization of automatic product recognition has great significance for both economic and social progress …",
+        "eprint": "https://www.hindawi.com/journals/cin/2020/8875910/"
     },
     {
         "title": "Fiscal classification using convolutional neural network",
@@ -1722,6 +1738,18 @@
         "eprint": "http://revistas.uco.edu.co/index.php/uco/article/download/285/371"
     },
     {
+        "title": "Ring artifacts segmentation on microtomographic images by convolutional neural networks",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9253308/",
+        "author_links": {
+            "I Safonov": "https://scholar.google.com/citations?user=6GywrD8AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Kornilov",
+            "I Safonov"
+        ],
+        "abstract": "Ring artifacts in X-ray microtomographic images can lead to errors in the construction of digital twins of rock samples for flow simulation. Previously, we considered an algorithm for detecting ring artifacts by means of matching filtering of image slices in a polar coordinate …"
+    },
+    {
         "title": "DAugNet: Unsupervised, Multi-source, Multi-target, and Life-long Domain Adaptation for Semantic Segmentation of Satellite Images",
         "url": "https://arxiv.org/abs/2005.06216",
         "author_links": {
@@ -1750,6 +1778,17 @@
         ],
         "abstract": "Passive and convenient depth estimation from single-shot image is still an open problem. Existing depth from defocus methods require multiple input images or special hardware customization. Recent deep monocular depth estimation is also limited to an image with …",
         "eprint": "http://openaccess.thecvf.com/content_ICCV_2019/papers/Kashiwagi_Deep_Depth_From_Aberration_Map_ICCV_2019_paper.pdf"
+    },
+    {
+        "title": "SpheroidJ: An Open-Source Set of Tools for Spheroid Segmentation",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0169260720316709",
+        "author_links": {},
+        "author": [
+            "D Lacalle",
+            "HA Castro-Abril",
+            "T Randelovic"
+        ],
+        "abstract": "Background and objectives. Spheroids are the most widely used 3D models for studying the effects of different micro-environmental characteristics on tumour behaviour, and for testing different preclinical and clinical treatments. In order to speed up the study of spheroids …"
     },
     {
         "title": "Contextual Pyramid Attention Network for Building Segmentation in Aerial Imagery",
