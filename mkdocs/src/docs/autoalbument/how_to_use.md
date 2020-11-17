@@ -21,7 +21,7 @@ The `dataset.py` file created at step 1 by `autoalbument-create` contains stubs 
 A dataset for a classification task should return an image and a class label. A dataset for a segmentation task should return an image and an associated mask.
 
 ### c. \[Optional\] Adjust search parameters in `search.yaml`.
-You may want to change parameters that AutoAlbument will use to search for augmentation policies. To do this, you need to edit the `search.yaml` file created by `autoalbument-create` at step 1. Each configuration parameter contains a comment that describes the meaning of the setting. Please refer to the  "Tuning the search parameters" section that includes a description of the most critical parameters.
+You may want to change the parameters that AutoAlbument will use to search for augmentation policies. To do this, you need to edit the `search.yaml` file created by `autoalbument-create` at step 1. Each configuration parameter contains a comment that describes the meaning of the setting. Please refer to the  "Tuning the search parameters" section that includes a description of the most critical parameters.
 
 `search.yaml` is a [Hydra](https://hydra.cc/) config file. You can use all Hydra features inside it.
 
@@ -64,7 +64,7 @@ transformed_mask = transformed["mask"]
 
 - You can read more about the most important configuration parameters for AutoAlbument in [Tuning the search parameters](tuning_parameters.md).
 
-- To see examples of configuration files and custom PyTorch Datasets please refer to [Examples](examples/list.md)
+- To see examples of configuration files and custom PyTorch Datasets, please refer to [Examples](examples/list.md)
 
 - You can read more about using Albumentations for augmentation in those articles [Image augmentation for classification](../getting_started/image_augmentation.md),
 [Mask augmentation for segmentation](../getting_started/mask_augmentation.md).
