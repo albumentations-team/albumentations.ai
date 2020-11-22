@@ -121,7 +121,7 @@
         "url": "https://arxiv.org/abs/1902.08994",
         "author_links": {
             "SM Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra",
-            "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"
+            "CA Linte": "https://scholar.google.com/citations?user=Ziz6388AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "SM Hasan",
@@ -173,6 +173,22 @@
             "I de la Torre Díez"
         ],
         "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
+    },
+    {
+        "title": "Camera-to-robot pose estimation from a single image",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
+        "author_links": {
+            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
+            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "TE Lee",
+            "J Tremblay",
+            "T To",
+            "J Cheng"
+        ],
+        "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
+        "eprint": "https://arxiv.org/pdf/1911.09231"
     },
     {
         "title": "Covid-19 prediction and detection using deep learning",
@@ -239,22 +255,6 @@
         "eprint": "https://arxiv.org/pdf/1904.08084"
     },
     {
-        "title": "Camera-to-robot pose estimation from a single image",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
-        "author_links": {
-            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
-            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "TE Lee",
-            "J Tremblay",
-            "T To",
-            "J Cheng"
-        ],
-        "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
-        "eprint": "https://arxiv.org/pdf/1911.09231"
-    },
-    {
         "title": "CLoDSA: a tool for augmentation in classification, localization, detection, semantic segmentation and instance segmentation tasks",
         "url": "https://link.springer.com/article/10.1186/s12859-019-2931-1",
         "author_links": {
@@ -304,7 +304,7 @@
         "url": "https://ieeexplore.ieee.org/abstract/document/8856791/",
         "author_links": {
             "SMK Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra",
-            "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"
+            "CA Linte": "https://scholar.google.com/citations?user=Ziz6388AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "SMK Hasan",
@@ -441,6 +441,22 @@
         "eprint": "https://arxiv.org/pdf/2003.04027"
     },
     {
+        "title": "Road Damage Detection and Classification with Detectron2 and Faster R-CNN",
+        "url": "https://arxiv.org/abs/2010.15021",
+        "author_links": {
+            "V Pham": "https://scholar.google.com/citations?user=_Wj4gjUAAAAJ&hl=en&oi=sra",
+            "C Pham": "https://scholar.google.com/citations?user=too4ejgAAAAJ&hl=en&oi=sra",
+            "T Dang": "https://scholar.google.com/citations?user=jobGGfEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "V Pham",
+            "C Pham",
+            "T Dang"
+        ],
+        "abstract": "The road is vital for many aspects of life, and road maintenance is crucial for human safety. One of the critical tasks to allow timely repair of road damages is to quickly and efficiently detect and classify them. This work details the strategies and experiments evaluated for …",
+        "eprint": "https://arxiv.org/pdf/2010.15021"
+    },
+    {
         "title": "CRNNs for Urban Sound Tagging with spatiotemporal context",
         "url": "https://arxiv.org/abs/2008.10413",
         "author_links": {
@@ -518,6 +534,7 @@
         "title": "Challenges in the deep learning-based semantic segmentation of benthic communities from Ortho-images",
         "url": "https://link.springer.com/article/10.1007/s12518-020-00331-6",
         "author_links": {
+            "G Pavoni": "https://scholar.google.com/citations?user=v37SiqcAAAAJ&hl=en&oi=sra",
             "M Corsini": "https://scholar.google.com/citations?user=jU8HCCkAAAAJ&hl=en&oi=sra",
             "N Pedersen": "https://scholar.google.com/citations?user=k4Y2LsoAAAAJ&hl=en&oi=sra"
         },
@@ -529,6 +546,22 @@
         ],
         "abstract": "Since the early days of the low-cost camera development, the collection of visual data has become a common practice in the underwater monitoring field. Nevertheless, video and image sequences are a trustworthy source of knowledge that remains partially untapped …",
         "eprint": "http://cattedraledigitale.isti.cnr.it/Publications/2020/PCPPC20/ChallengesSemanticSegmentationBenthic-preprint.pdf"
+    },
+    {
+        "title": "Training CNNs in Presence of JPEG Compression: Multimedia Forensics vs Computer Vision",
+        "url": "https://arxiv.org/abs/2009.12088",
+        "author_links": {
+            "S Mandelli": "https://scholar.google.com/citations?user=Uhql1ccAAAAJ&hl=en&oi=sra",
+            "N Bonettini": "https://scholar.google.com/citations?user=YTzuZ9IAAAAJ&hl=en&oi=sra",
+            "P Bestagini": "https://scholar.google.com/citations?user=bUeIWEMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Mandelli",
+            "N Bonettini",
+            "P Bestagini"
+        ],
+        "abstract": "Convolutional Neural Networks (CNNs) have proved very accurate in multiple computer vision image classification tasks that required visual inspection in the past (eg, object recognition, face detection, etc.). Motivated by these astonishing results, researchers have …",
+        "eprint": "https://arxiv.org/pdf/2009.12088"
     },
     {
         "title": "Bayesian feature pyramid networks for automatic multi-label segmentation of chest X-rays and assessment of cardio-thoratic ratio",
@@ -876,7 +909,7 @@
         "title": "Artificial Intelligence in Quantitative Ultrasound Imaging: A Review",
         "url": "https://arxiv.org/abs/2003.11658",
         "author_links": {
-            "B Zhou": "https://scholar.google.com/citations?user=opP-BmMAAAAJ&hl=en&oi=sra",
+            "B Zhou": "https://scholar.google.com/citations?user=NlNtoUoAAAAJ&hl=en&oi=sra",
             "X Yang": "https://scholar.google.com/citations?user=Bl9R8ZQAAAAJ&hl=en&oi=sra",
             "T Liu": "https://scholar.google.com/citations?user=UC3sPL4AAAAJ&hl=en&oi=sra"
         },
@@ -995,6 +1028,19 @@
         ],
         "abstract": "We introduce a deep learning approach to perform fine-grained population estimation for displacement camps using high-resolution overhead imagery. We train and evaluate our approach on drone imagery cross-referenced with population data for refugee camps in …",
         "eprint": "https://arxiv.org/pdf/2006.14547"
+    },
+    {
+        "title": "Refinement Network for unsupervised on the scene Foreground Segmentation",
+        "url": "https://upcommons.upc.edu/handle/2117/332324",
+        "author_links": {
+            "M Pardàs Feliu": "https://scholar.google.com/citations?user=bLc4qKsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Pardàs Feliu",
+            "G Canet Tarrés"
+        ],
+        "abstract": "Unsupervised learning represents one of the most interesting challenges in computer vision today. The task has an immense practical value with many applications in artificial intelligence and emerging technologies, as large quantities of unlabeled images and videos …",
+        "eprint": "https://upcommons.upc.edu/bitstream/handle/2117/332324/0000705(3).pdf"
     },
     {
         "title": "Machine Learning Algorithm Validation: From Essentials to Advanced Applications and Implications for Regulatory Certification and Deployment",
@@ -1204,22 +1250,6 @@
         "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/1/Deep_Learning_for_Face_Recognition-%CE%98%CF%89%CE%BC%CE%AC%CF%82_%CE%9A%CE%B1%CF%83%CF%83%CE%B9%CF%8E%CF%84%CE%B7%CF%82_5315.pdf"
     },
     {
-        "title": "Road Damage Detection and Classification with Detectron2 and Faster R-CNN",
-        "url": "https://arxiv.org/abs/2010.15021",
-        "author_links": {
-            "V Pham": "https://scholar.google.com/citations?user=_Wj4gjUAAAAJ&hl=en&oi=sra",
-            "C Pham": "https://scholar.google.com/citations?user=too4ejgAAAAJ&hl=en&oi=sra",
-            "T Dang": "https://scholar.google.com/citations?user=jobGGfEAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "V Pham",
-            "C Pham",
-            "T Dang"
-        ],
-        "abstract": "The road is vital for many aspects of life, and road maintenance is crucial for human safety. One of the critical tasks to allow timely repair of road damages is to quickly and efficiently detect and classify them. This work details the strategies and experiments evaluated for …",
-        "eprint": "https://arxiv.org/pdf/2010.15021"
-    },
-    {
         "title": "Image Stylization for Robust Features",
         "url": "https://arxiv.org/abs/2008.06959",
         "author_links": {
@@ -1255,6 +1285,7 @@
         "title": "A Flatter Loss for Bias Mitigation in Cross-dataset Facial Age Estimation",
         "url": "https://arxiv.org/abs/2010.10368",
         "author_links": {
+            "A Akbari": "https://scholar.google.com/citations?user=QdiYKBIAAAAJ&hl=en&oi=sra",
             "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra",
             "ZH Feng": "https://scholar.google.com/citations?user=Y6KtijIAAAAJ&hl=en&oi=sra",
             "A Farooq": "https://scholar.google.com/citations?user=VrjcaiYAAAAJ&hl=en&oi=sra"
@@ -1341,6 +1372,7 @@
         "title": "Deep Learning for Retail Product Recognition: Challenges and Techniques",
         "url": "https://www.hindawi.com/journals/cin/2020/8875910/",
         "author_links": {
+            "S Tran": "https://scholar.google.com/citations?user=h82eCK8AAAAJ&hl=en&oi=sra",
             "S Xu": "https://scholar.google.com/citations?user=t7JahsUAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1617,22 +1649,6 @@
         "eprint": "http://ceur-ws.org/Vol-2595/endoCV2020_paper_id_26.pdf"
     },
     {
-        "title": "Training CNNs in Presence of JPEG Compression: Multimedia Forensics vs Computer Vision",
-        "url": "https://arxiv.org/abs/2009.12088",
-        "author_links": {
-            "S Mandelli": "https://scholar.google.com/citations?user=Uhql1ccAAAAJ&hl=en&oi=sra",
-            "N Bonettini": "https://scholar.google.com/citations?user=YTzuZ9IAAAAJ&hl=en&oi=sra",
-            "P Bestagini": "https://scholar.google.com/citations?user=bUeIWEMAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "S Mandelli",
-            "N Bonettini",
-            "P Bestagini"
-        ],
-        "abstract": "Convolutional Neural Networks (CNNs) have proved very accurate in multiple computer vision image classification tasks that required visual inspection in the past (eg, object recognition, face detection, etc.). Motivated by these astonishing results, researchers have …",
-        "eprint": "https://arxiv.org/pdf/2009.12088"
-    },
-    {
         "title": "End-to-end learning for semiquantitative rating of COVID-19 severity on Chest X-rays",
         "url": "https://arxiv.org/abs/2006.04603",
         "author_links": {
@@ -1838,19 +1854,6 @@
         "eprint": "https://www.researchgate.net/profile/Rauf_Yagfarov/publication/336728688_Augmentation-Based_Object_Detection_for_Winter_Time_Applications/links/5e257ba692851cafc3936168/Augmentation-Based-Object-Detection-for-Winter-Time-Applications.pdf"
     },
     {
-        "title": "Refinement Network for unsupervised on the scene Foreground Segmentation",
-        "url": "https://www.eurasip.org/Proceedings/Eusipco/Eusipco2020/pdfs/0000705.pdf",
-        "author_links": {
-            "M Pardas": "https://scholar.google.com/citations?user=bLc4qKsAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "M Pardas",
-            "G Canet"
-        ],
-        "abstract": "In this paper we present a network for foreground segmentation based on background subtraction which does not require specific scene training. The network is built as a refinement step on top of classic state of the art background subtraction systems. In this way …",
-        "eprint": "https://www.eurasip.org/Proceedings/Eusipco/Eusipco2020/pdfs/0000705.pdf"
-    },
-    {
         "title": "Automatic lesion boundary detection in dermoscopy",
         "url": "https://arxiv.org/abs/1812.00877",
         "author_links": {},
@@ -1859,6 +1862,22 @@
         ],
         "abstract": "This manuscript addresses the problem of the automatic lesion boundary detection in dermoscopy, using deep neural networks. An approach is based on the adaptation of the U-net convolutional neural network with skip connections for lesion boundary segmentation …",
         "eprint": "https://arxiv.org/pdf/1812.00877"
+    },
+    {
+        "title": "Training Strategies and Data Augmentations in CNN-based DeepFake Video Detection",
+        "url": "https://arxiv.org/abs/2011.07792",
+        "author_links": {
+            "L Bondi": "https://scholar.google.com/citations?user=fWhDIgQAAAAJ&hl=en&oi=sra",
+            "P Bestagini": "https://scholar.google.com/citations?user=bUeIWEMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "L Bondi",
+            "ED Cannas",
+            "P Bestagini",
+            "S Tubaro"
+        ],
+        "abstract": "The fast and continuous growth in number and quality of deepfake videos calls for the development of reliable detection systems capable of automatically warning users on social media and on the Internet about the potential untruthfulness of such contents. While …",
+        "eprint": "https://arxiv.org/pdf/2011.07792"
     },
     {
         "title": "Visual Anomaly Detection For Automatic Quality Control",
