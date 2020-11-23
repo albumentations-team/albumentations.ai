@@ -1,259 +1,259 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://albumentations.ai/docs/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/introduction/image_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/introduction/why_albumentations/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/installation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/image_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/mask_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/keypoints_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/simultaneous_augmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/transforms_and_targets/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/getting_started/setting_probabilities/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_16_bit_tiff/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_bboxes/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_bboxes2/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_kaggle_salt/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_keypoints/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_multi_target/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/example_weather_transforms/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/migrating_from_torchvision_to_albumentations/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/pytorch_classification/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/pytorch_semantic_segmentation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/replay/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/serialization/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/showcase/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/examples/tensorflow-example/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/faq/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/installation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/how_to_use/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/tuning_parameters/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/examples/list/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/examples/cifar10/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/examples/pascal_voc/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/search_algorithms/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/faq/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/experimental/overview/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/experimental/installation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/experimental/api_reference/augmentations/transforms/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/external_resources/blog_posts_podcasts_talks/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/external_resources/books/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/core/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/core/composition/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/core/transforms_interface/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/core/serialization/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/transforms/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/functional/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/bbox_utils/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/keypoints_utils/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/imgaug/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/imgaug/transforms/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/pytorch/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/pytorch/transforms/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/release_notes/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/contributing/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2020-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
 <url>
     <loc>https://albumentations.ai</loc>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-23</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/whos_using</loc>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-23</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/team</loc>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-23</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/contact_us</loc>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-23</lastmod>
     <changefreq>daily</changefreq>
 </url></urlset>
