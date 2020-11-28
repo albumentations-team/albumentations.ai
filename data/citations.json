@@ -16,6 +16,22 @@
         "eprint": "https://arxiv.org/pdf/1803.01207"
     },
     {
+        "title": "AutoML: A Survey of the State-of-the-Art",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0950705120307516",
+        "author_links": {
+            "X He": "https://scholar.google.com/citations?user=uK-aRUsAAAAJ&hl=en&oi=sra",
+            "K Zhao": "https://scholar.google.com/citations?user=j9u-fwpgKxQC&hl=en&oi=sra",
+            "X Chu": "https://scholar.google.com/citations?user=v4rX24EAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "X He",
+            "K Zhao",
+            "X Chu"
+        ],
+        "abstract": "Deep learning (DL) techniques have obtained remarkable achievements on various tasks, such as image recognition, object detection, and language modeling. However, building a high-quality DL system for a specific task highly relies on human expertise, hindering its …",
+        "eprint": "https://arxiv.org/pdf/1908.00709"
+    },
+    {
         "title": "Angiodysplasia detection and localization using deep convolutional neural networks",
         "url": "https://ieeexplore.ieee.org/abstract/document/8614123/",
         "author_links": {
@@ -46,22 +62,6 @@
         ],
         "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
         "eprint": "http://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
-    },
-    {
-        "title": "AutoML: A Survey of the State-of-the-Art",
-        "url": "https://arxiv.org/abs/1908.00709",
-        "author_links": {
-            "X He": "https://scholar.google.com/citations?user=uK-aRUsAAAAJ&hl=en&oi=sra",
-            "K Zhao": "https://scholar.google.com/citations?user=j9u-fwpgKxQC&hl=en&oi=sra",
-            "X Chu": "https://scholar.google.com/citations?user=v4rX24EAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "X He",
-            "K Zhao",
-            "X Chu"
-        ],
-        "abstract": "Deep learning has penetrated all aspects of our lives and brought us great convenience. However, the process of building a high-quality deep learning system for a specific task is not only time-consuming but also requires lots of resources and relies on human expertise …",
-        "eprint": "https://arxiv.org/pdf/1908.00709.pdf,"
     },
     {
         "title": "Self-supervised learning for dense depth estimation in monocular endoscopy",
@@ -121,7 +121,7 @@
         "url": "https://arxiv.org/abs/1902.08994",
         "author_links": {
             "SM Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra",
-            "CA Linte": "https://scholar.google.com/citations?user=Ziz6388AAAAJ&hl=en&oi=sra"
+            "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "SM Hasan",
@@ -129,6 +129,22 @@
         ],
         "abstract": "Conventional therapy approaches limit surgeons' dexterity control due to limited field-of-view. With the advent of robot-assisted surgery, there has been a paradigm shift in medical technology for minimally invasive surgery. However, it is very challenging to track the …",
         "eprint": "https://arxiv.org/pdf/1902.08994"
+    },
+    {
+        "title": "Camera-to-robot pose estimation from a single image",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
+        "author_links": {
+            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
+            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "TE Lee",
+            "J Tremblay",
+            "T To",
+            "J Cheng"
+        ],
+        "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
+        "eprint": "https://arxiv.org/pdf/1911.09231"
     },
     {
         "title": "Deep convolutions for in-depth automated rock typing",
@@ -175,26 +191,9 @@
         "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
     },
     {
-        "title": "Camera-to-robot pose estimation from a single image",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
-        "author_links": {
-            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
-            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "TE Lee",
-            "J Tremblay",
-            "T To",
-            "J Cheng"
-        ],
-        "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
-        "eprint": "https://arxiv.org/pdf/1911.09231"
-    },
-    {
         "title": "Covid-19 prediction and detection using deep learning",
         "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
         "author_links": {
-            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
             "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
             "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra"
         },
@@ -304,7 +303,7 @@
         "url": "https://ieeexplore.ieee.org/abstract/document/8856791/",
         "author_links": {
             "SMK Hasan": "https://scholar.google.com/citations?user=1-n7bwMAAAAJ&hl=en&oi=sra",
-            "CA Linte": "https://scholar.google.com/citations?user=Ziz6388AAAAJ&hl=en&oi=sra"
+            "CA Linte": "https://scholar.google.com/citations?user=Gv4gGVsAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "SMK Hasan",
@@ -564,6 +563,15 @@
         "eprint": "https://arxiv.org/pdf/2009.12088"
     },
     {
+        "title": "A modular region and text line layout analysis system",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9257770/",
+        "author_links": {},
+        "author": [
+            "B Kiessling"
+        ],
+        "abstract": "High quality document layout analysis is fundamental to the accurate processing of handwritten textual material, on both the level of individual lines and higher order zones demarking textual and non-textual content. We present an artificial neural network based …"
+    },
+    {
         "title": "Bayesian feature pyramid networks for automatic multi-label segmentation of chest X-rays and assessment of cardio-thoratic ratio",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-40605-9_11",
         "author_links": {
@@ -636,6 +644,17 @@
         ],
         "abstract": "In this paper, we present our system for the RSNA Intracranial Hemorrhage Detection challenge, which is based on the RSNA 2019 Brain CT Hemorrhage dataset. The proposed system is based on a lightweight deep neural network architecture composed of a …",
         "eprint": "https://www.mdpi.com/1424-8220/20/19/5611/pdf"
+    },
+    {
+        "title": "ImageNet Pretrained CNNs for JPEG Steganalysis",
+        "url": "http://www.ws.binghamton.edu/Fridrich/Research/Alaska-2-Revised.pdf",
+        "author_links": {},
+        "author": [
+            "Y Yousfi",
+            "JBE Khvedchenya"
+        ],
+        "abstract": "In this paper, we investigate pre-trained computervision deep architectures, such as the EfficientNet, MixNet, and ResNet for steganalysis. These models pre-trained on ImageNet can be rather quickly refined for JPEG steganalysis while offering significantly better …",
+        "eprint": "http://www.ws.binghamton.edu/Fridrich/Research/Alaska-2-Revised.pdf"
     },
     {
         "title": "Fully automatic CNN-based segmentation of retinal bifurcations in 2D adaptive optics ophthalmoscopy images",
@@ -803,7 +822,19 @@
             "S Golushko",
             "M Amelin"
         ],
-        "abstract": "In this paper, we extend the previous work on the robust pre-processing technique which allows to consider all available information from MRI scans by composition of T1, T1C and FLAIR sequences in the unique input. Such approach enriches the input data for the …"
+        "abstract": "In this paper, we extend the previous work on the robust pre-processing technique which allows to consider all available information from MRI scans by composition of T1, T1C and FLAIR sequences in the unique input. Such approach enriches the input data for the …",
+        "eprint": "https://research.nsu.ru/en/publications/multi-class-brain-tumor-segmentation-via-multi-sequences-mri-mixt-2"
+    },
+    {
+        "title": "Point Proposal based Instance Segmentation with Rectangular Masks for Robot Picking Task",
+        "url": "https://openaccess.thecvf.com/content/ACCV2020/html/Ito_Point_Proposal_based_Instance_Segmentation_with_Rectangular_Masks_for_Robot_ACCV_2020_paper.html",
+        "author_links": {},
+        "author": [
+            "S Ito",
+            "S Kubota"
+        ],
+        "abstract": "In this paper, we focus on instance segmentation of a top-view image for robot picking task. One difficulty in this setting is that objects are located in various orientations and highly overlapped, where a traditional box proposal approach such as Mask R-CNN does not work …",
+        "eprint": "https://openaccess.thecvf.com/content/ACCV2020/papers/Ito_Point_Proposal_based_Instance_Segmentation_with_Rectangular_Masks_for_Robot_ACCV_2020_paper.pdf"
     },
     {
         "title": "Neural Mesh Refiner for 6-DoF Pose Estimation",
@@ -988,6 +1019,17 @@
         "abstract": "Magnetic resonance imaging (MRI) stays one of the most essential noninvasive methods for brain diagnostics. It allows obtaining the detailed 3D image of the brain, including various types of soft tissues. In this paper, we compare the influence of the multichannel data …"
     },
     {
+        "title": "DCNN-based Screw Classification in Automated Disassembly Processes",
+        "url": "https://www.researchgate.net/profile/Erenus_Yildiz/publication/345997358_DCNN-based_Screw_Classification_in_Automated_Disassembly_Processes/links/5fb500f2a6fdcc9ae05f1e54/DCNN-based-Screw-Classification-in-Automated-Disassembly-Processes.pdf",
+        "author_links": {},
+        "author": [
+            "E Yildiz",
+            "F Wörgötter"
+        ],
+        "abstract": "E-waste recycling is thriving yet there are many challenges waiting to be addressed until high-degree, deviceindependent automation is possible. One of these challenges is to have automated procedures for screw classification. Here we specifically address the problem of …",
+        "eprint": "https://www.researchgate.net/profile/Erenus_Yildiz/publication/345997358_DCNN-based_Screw_Classification_in_Automated_Disassembly_Processes/links/5fb500f2a6fdcc9ae05f1e54/DCNN-based-Screw-Classification-in-Automated-Disassembly-Processes.pdf"
+    },
+    {
         "title": "Few-Shot Learning with Deep Neural Networks for Visual Quality Control: Evaluations on a Production Line",
         "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1473064",
         "author_links": {},
@@ -1012,6 +1054,22 @@
             "A Janes"
         ],
         "abstract": "Sport climbing is becoming an increasingly popular competitive sport as well as a recreational activity. For this reason, indoor sport climbing operators are constantly trying to improve their services and optimally use their infrastructure. One way to support such a task …"
+    },
+    {
+        "title": "Differentiable Data Augmentation with Kornia",
+        "url": "https://arxiv.org/abs/2011.09832",
+        "author_links": {
+            "E Riba": "https://scholar.google.com/citations?user=s4EKCo4AAAAJ&hl=en&oi=sra",
+            "D Mishkin": "https://scholar.google.com/citations?user=H72QiF0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Shi",
+            "E Riba",
+            "D Mishkin",
+            "F Moreno"
+        ],
+        "abstract": "In this paper we present a review of the Kornia differentiable data augmentation (DDA) module for both for spatial (2D) and volumetric (3D) tensors. This module leverages differentiable computer vision solutions from Kornia, with an aim of integrating data …",
+        "eprint": "https://arxiv.org/pdf/2011.09832"
     },
     {
         "title": "Estimating Displaced Populations from Overhead",
@@ -1247,7 +1305,7 @@
             "Θ Κασσιώτης"
         ],
         "abstract": "Η παρούσα διπλωματική εργασία ασχολείται με τη μελέτη του προβλήματος αναγνώρισης προσώπου με τεχνικές βαθιάς μηχανικής μάθησης. Αναφέρονται παλιότερες τεχνικές (PCA, LDA, κλπ.) οι οποίες χρησιμοποιούνταν για την αντιμετώπιση της αναγνώρισης προσώπου …",
-        "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/1/Deep_Learning_for_Face_Recognition-%CE%98%CF%89%CE%BC%CE%AC%CF%82_%CE%9A%CE%B1%CF%83%CF%83%CE%B9%CF%8E%CF%84%CE%B7%CF%82_5315.pdf"
+        "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/3/Nemertes_Kassiotis%28com%29.pdf"
     },
     {
         "title": "Image Stylization for Robust Features",
@@ -1939,6 +1997,21 @@
         ],
         "abstract": "Urban sound classification has been achieving remarkable progress and is still an active research area in audio pattern recognition. In particular, it allows to monitor the noise pollution, which becomes a growing concern for large cities. The contribution of this paper is …",
         "eprint": "https://arxiv.org/pdf/2010.11805"
+    },
+    {
+        "title": "An Experimental Study of Semantic Continuity for Deep Learning Models",
+        "url": "https://arxiv.org/abs/2011.09789",
+        "author_links": {
+            "S Wu": "https://scholar.google.com/citations?user=VCC8vrkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Wu",
+            "J Sang",
+            "X Zhao",
+            "L Chen"
+        ],
+        "abstract": "Deep learning models suffer from the problem of semantic discontinuity: small perturbations in the input space tend to cause semantic-level interference to the model output. We argue that the semantic discontinuity results from these inappropriate training targets and …",
+        "eprint": "https://arxiv.org/pdf/2011.09789"
     },
     {
         "title": "Understanding the decisions of CNNs: an in-model approach",
