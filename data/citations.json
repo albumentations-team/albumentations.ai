@@ -83,6 +83,22 @@
         "eprint": "https://arxiv.org/pdf/1806.09521"
     },
     {
+        "title": "Camera-to-robot pose estimation from a single image",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
+        "author_links": {
+            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
+            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "TE Lee",
+            "J Tremblay",
+            "T To",
+            "J Cheng"
+        ],
+        "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
+        "eprint": "https://arxiv.org/pdf/1911.09231"
+    },
+    {
         "title": "Camera model identification using convolutional neural networks",
         "url": "https://ieeexplore.ieee.org/abstract/document/8622031/",
         "author_links": {
@@ -131,20 +147,20 @@
         "eprint": "https://arxiv.org/pdf/1902.08994"
     },
     {
-        "title": "Camera-to-robot pose estimation from a single image",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
+        "title": "COVID-19 prediction and detection using deep learning",
+        "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
         "author_links": {
-            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
-            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
+            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
+            "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
+            "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra"
         },
         "author": [
-            "TE Lee",
-            "J Tremblay",
-            "T To",
-            "J Cheng"
+            "M Alazab",
+            "A Awajan",
+            "A Mesleh"
         ],
-        "abstract": "We present an approach for estimating the pose of an external camera with respect to a robot using a single RGB image of the robot. The image is processed by a deep neural network to detect 2D projections of keypoints (such as joints) associated with the robot. The …",
-        "eprint": "https://arxiv.org/pdf/1911.09231"
+        "abstract": "(COVID-19) is one of the main challenges in the world, given the rapid spread of the disease. Recent statistics indicate that the number of people diagnosed with COVID-19 is increasing exponentially, with more than 1.6 million confirmed cases; the disease is …",
+        "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
     },
     {
         "title": "Deep convolutions for in-depth automated rock typing",
@@ -189,21 +205,6 @@
             "I de la Torre Díez"
         ],
         "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
-    },
-    {
-        "title": "Covid-19 prediction and detection using deep learning",
-        "url": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf",
-        "author_links": {
-            "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
-            "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "M Alazab",
-            "A Awajan",
-            "A Mesleh"
-        ],
-        "abstract": "(COVID-19) is one of the main challenges in the world, given the rapid spread of the disease. Recent statistics indicate that the number of people diagnosed with COVID-19 is increasing exponentially, with more than 1.6 million confirmed cases; the disease is …",
-        "eprint": "https://www.researchgate.net/profile/Abdelwadood_Mesleh/publication/341980921_COVID-19_Prediction_and_Detection_Using_Deep_Learning/links/5edc1eb592851c9c5e8aee88/COVID-19-Prediction-and-Detection-Using-Deep-Learning.pdf"
     },
     {
         "title": "Semi-supervised segmentation of salt bodies in seismic images using an ensemble of convolutional neural networks",
@@ -267,6 +268,24 @@
         "eprint": "https://link.springer.com/article/10.1186/s12859-019-2931-1"
     },
     {
+        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
+        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
+        "author_links": {
+            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
+            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Feng",
+            "S Liu",
+            "Z Cheng",
+            "J Quiroz",
+            "P Chen",
+            "Q Lin"
+        ],
+        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
+        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/06/2020.08.03.20167007.full.pdf"
+    },
+    {
         "title": "Data augmentation from RGB to chlorophyll fluorescence imaging Application to leaf segmentation of Arabidopsis thaliana from top view images",
         "url": "http://openaccess.thecvf.com/content_CVPRW_2019/html/CVPPP/Sapoukhina_Data_Augmentation_From_RGB_to_Chlorophyll_Fluorescence_Imaging_Application_to_CVPRW_2019_paper.html",
         "author_links": {
@@ -328,22 +347,18 @@
         "eprint": "http://openaccess.thecvf.com/content_CVPRW_2020/papers/w31/Xu_Moire_Pattern_Removal_via_Attentive_Fractal_Network_CVPRW_2020_paper.pdf"
     },
     {
-        "title": "Severity Assessment and Progression Prediction of COVID-19 Patients based on the LesionEncoder Framework and Chest CT",
-        "url": "https://www.medrxiv.org/content/10.1101/2020.08.03.20167007v2.abstract",
+        "title": "Identifying melanoma images using efficientnet ensemble: Winning solution to the siim-isic melanoma classification challenge",
+        "url": "https://arxiv.org/abs/2010.05351",
         "author_links": {
-            "S Liu": "https://scholar.google.com/citations?user=wVwn-dIAAAAJ&hl=en&oi=sra",
-            "J Quiroz": "https://scholar.google.com/citations?user=X2hoQqwAAAAJ&hl=en&oi=sra"
+            "B Liu": "https://scholar.google.com/citations?user=__kYox8AAAAJ&hl=en&oi=sra"
         },
         "author": [
-            "Y Feng",
-            "S Liu",
-            "Z Cheng",
-            "J Quiroz",
-            "P Chen",
-            "Q Lin"
+            "Q Ha",
+            "B Liu",
+            "F Liu"
         ],
-        "abstract": "Automatic severity assessment and progression prediction can facilitate admission, triage, and referral of COVID-19 patients. This study aims to explore the potential use of lung lesion features in the management of COVID-19, based on the assumption that lesion features may …",
-        "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/04/2020.08.03.20167007.full.pdf"
+        "abstract": "We present our winning solution to the SIIM-ISIC Melanoma Classification Challenge. It is an ensemble of convolutions neural network (CNN) models with different backbones and input sizes, most of which are image-only models while a few of them used image-level and …",
+        "eprint": "https://arxiv.org/pdf/2010.05351"
     },
     {
         "title": "Semantic segmentation of smartphone wound images: Comparative analysis of AHRF and CNN-based approaches",
@@ -485,20 +500,6 @@
         ],
         "abstract": "Progress in generative modelling, especially generative adversarial networks, have made it possible to efficiently synthesize and alter media at scale. Malicious individuals now rely on these machine-generated media, or deepfakes, to manipulate social discourse. In order to …",
         "eprint": "https://arxiv.org/pdf/2008.09194"
-    },
-    {
-        "title": "Identifying Melanoma Images using EfficientNet Ensemble: Winning Solution to the SIIM-ISIC Melanoma Classification Challenge",
-        "url": "https://arxiv.org/abs/2010.05351",
-        "author_links": {
-            "B Liu": "https://scholar.google.com/citations?user=__kYox8AAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Q Ha",
-            "B Liu",
-            "F Liu"
-        ],
-        "abstract": "We present our winning solution to the SIIM-ISIC Melanoma Classification Challenge. It is an ensemble of convolutions neural network (CNN) models with different backbones and input sizes, most of which are image-only models while a few of them used image-level and …",
-        "eprint": "https://arxiv.org/pdf/2010.05351"
     },
     {
         "title": "StandardGAN: Multi-source Domain Adaptation for Semantic Segmentation of Very High Resolution Satellite Images by Data Standardization",
@@ -647,14 +648,16 @@
     },
     {
         "title": "ImageNet Pretrained CNNs for JPEG Steganalysis",
-        "url": "http://www.ws.binghamton.edu/Fridrich/Research/Alaska-2-Revised.pdf",
-        "author_links": {},
+        "url": "http://www.ws.binghamton.edu/fridrich/Research/Alaska-2-Revised.pdf",
+        "author_links": {
+            "Y Yousfi": "https://scholar.google.com/citations?user=6M5diMgAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "Y Yousfi",
             "JBE Khvedchenya"
         ],
         "abstract": "In this paper, we investigate pre-trained computervision deep architectures, such as the EfficientNet, MixNet, and ResNet for steganalysis. These models pre-trained on ImageNet can be rather quickly refined for JPEG steganalysis while offering significantly better …",
-        "eprint": "http://www.ws.binghamton.edu/Fridrich/Research/Alaska-2-Revised.pdf"
+        "eprint": "http://www.ws.binghamton.edu/fridrich/Research/Alaska-2-Revised.pdf"
     },
     {
         "title": "Fully automatic CNN-based segmentation of retinal bifurcations in 2D adaptive optics ophthalmoscopy images",
@@ -670,6 +673,19 @@
         ],
         "abstract": "Automated image segmentation is a crucial step to characterize and quantify the morphometry of blood vessels. Adaptive Optics Ophthalmoscopy (AOO) images of eye fundus allow visualizing retinal vessels with a high resolution, especially arterial …",
         "eprint": "https://hal.archives-ouvertes.fr/hal-02925043/document"
+    },
+    {
+        "title": "A U-Net Based Approach for Automating Tribological Experiments",
+        "url": "https://www.mdpi.com/1424-8220/20/22/6703",
+        "author_links": {},
+        "author": [
+            "B Staar",
+            "S Bayrak",
+            "D Paulkowski",
+            "M Freitag"
+        ],
+        "abstract": "Tribological experiments (ie, characterizing the friction and wear behavior of materials) are crucial for determining their potential areas of application. Automating such tests could hence help speed up the development of novel materials and coatings. Here, we utilize …",
+        "eprint": "https://www.mdpi.com/1424-8220/20/22/6703/htm"
     },
     {
         "title": "The Effects of Augmented Training Dataset on Performance of Convolutional Neural Networks in Face Recognition System",
@@ -940,7 +956,7 @@
         "title": "Artificial Intelligence in Quantitative Ultrasound Imaging: A Review",
         "url": "https://arxiv.org/abs/2003.11658",
         "author_links": {
-            "B Zhou": "https://scholar.google.com/citations?user=NlNtoUoAAAAJ&hl=en&oi=sra",
+            "B Zhou": "https://scholar.google.com/citations?user=opP-BmMAAAAJ&hl=en&oi=sra",
             "X Yang": "https://scholar.google.com/citations?user=Bl9R8ZQAAAAJ&hl=en&oi=sra",
             "T Liu": "https://scholar.google.com/citations?user=UC3sPL4AAAAJ&hl=en&oi=sra"
         },
@@ -1160,6 +1176,19 @@
         "eprint": "http://xb.sinomaps.com/article/2020/1001-1595/2020-7-874.htm"
     },
     {
+        "title": "Multi-Label Contrastive Learning for Abstract Visual Reasoning",
+        "url": "https://arxiv.org/abs/2012.01944",
+        "author_links": {
+            "J Mańdziuk": "https://scholar.google.com/citations?user=KHxnO24AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Małkiński",
+            "J Mańdziuk"
+        ],
+        "abstract": "For a long time the ability to solve abstract reasoning tasks was considered one of the hallmarks of human intelligence. Recent advances in application of deep learning (DL) methods led, as in many other domains, to surpassing human abstract reasoning …",
+        "eprint": "https://arxiv.org/pdf/2012.01944"
+    },
+    {
         "title": "Deep local directional embeddings para detección de objetos",
         "url": "http://repositorio.uchile.cl/handle/2250/176745",
         "author_links": {},
@@ -1308,6 +1337,20 @@
         "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/3/Nemertes_Kassiotis%28com%29.pdf"
     },
     {
+        "title": "Dermoscopic attributes classification using deep learning and multi-task learning",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1877050920324121",
+        "author_links": {
+            "A Filchenkov": "https://scholar.google.com/citations?user=ry63T9QAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "I Saitov",
+            "T Polevaya",
+            "A Filchenkov"
+        ],
+        "abstract": "Melanoma is a serious condition affecting people around the world. Therefore, automatic diagnostics of pigmented skin lesions is an area of high interest. Possible approach to diagnostics is based on detection of dermoscopic attributes. In this study we consider …",
+        "eprint": "https://www.sciencedirect.com/science/article/pii/S1877050920324121/pdf?md5=1a6847884060f6b021c78ff24c3d2b5a&pid=1-s2.0-S1877050920324121-main.pdf"
+    },
+    {
         "title": "Image Stylization for Robust Features",
         "url": "https://arxiv.org/abs/2008.06959",
         "author_links": {
@@ -1431,7 +1474,8 @@
         "url": "https://www.hindawi.com/journals/cin/2020/8875910/",
         "author_links": {
             "S Tran": "https://scholar.google.com/citations?user=h82eCK8AAAAJ&hl=en&oi=sra",
-            "S Xu": "https://scholar.google.com/citations?user=t7JahsUAAAAJ&hl=en&oi=sra"
+            "S Xu": "https://scholar.google.com/citations?user=t7JahsUAAAAJ&hl=en&oi=sra",
+            "M Springer": "https://scholar.google.com/citations?user=-Bq8ngYAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "Y Wei",
@@ -1650,6 +1694,19 @@
         "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …"
     },
     {
+        "title": "Deep Learning-based Object Understanding for Robotic Manipulation",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9268261/",
+        "author_links": {
+            "JB Song": "https://scholar.google.com/citations?user=v42e4jkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "JS Moon",
+            "HJ Jo",
+            "JB Song"
+        ],
+        "abstract": "Manipulation of objects by a robot arm requires an understanding of the various properties of the object. The robot needs a lot of information for object manipulation, there are few algorithms to estimate such information simultaneously. In this study, we propose an object …"
+    },
+    {
         "title": "Use of Images Augmentation and Implementation of Doubly Stochastic Models for Improving Accuracy of Recognition Algorithms Based on Convolutional Neural …",
         "url": "https://ieeexplore.ieee.org/abstract/document/9166000/",
         "author_links": {
@@ -1695,6 +1752,16 @@
         "eprint": "https://arxiv.org/pdf/2006.07825"
     },
     {
+        "title": "NoGAN: Deblurring Images without Adversarial Training",
+        "url": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Vey-Roman_188561_assignsubmission_file_Bachelor_Thesis_Roman_Vei.pdf",
+        "author_links": {},
+        "author": [
+            "R Vei"
+        ],
+        "abstract": "In this paper, we systematically study generative adversarial networks (GANs) for single image motion deblurring. Firstly, we compare adversarial loss functions, discriminators, and other training configurations to find optimal setup. Secondly, we train the blurred image …",
+        "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Vey-Roman_188561_assignsubmission_file_Bachelor_Thesis_Roman_Vei.pdf"
+    },
+    {
         "title": "Endoscopy Artefact Detection and Segmentation using Deep Convolutional Neural Network.",
         "url": "http://ceur-ws.org/Vol-2595/endoCV2020_paper_id_26.pdf",
         "author_links": {},
@@ -1737,6 +1804,16 @@
         "eprint": "http://ajiips.com.au/papers/V15.2/v15n2_33-39.pdf"
     },
     {
+        "title": "Simulation to reality: Study and demonstration of domain adaptation techniques applied to Reinforcement and Supervised learning algorithms",
+        "url": "https://upcommons.upc.edu/handle/2117/333264",
+        "author_links": {},
+        "author": [
+            "P Miralles Roure"
+        ],
+        "abstract": "This report describes my 5.5 months end of studies internship as an AI Research Intern, the focus of which was the implementation and demonstration of techniques from the Domain Adaptation literature on the problem of autonomous driving. Machine Learning algorithms …",
+        "eprint": "https://upcommons.upc.edu/bitstream/handle/2117/333264/rapport-sfe.pdf"
+    },
+    {
         "title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection",
         "url": "https://ieeexplore.ieee.org/abstract/document/8966436/",
         "author_links": {
@@ -1760,6 +1837,16 @@
             "R Zanetti"
         ],
         "abstract": "A deep learning approach is presented to detect safe landing locations using LIDAR scans of the Lunar surface. Semantic Segmentation is used to classify hazardous and safe locations from a LIDAR scan during the landing phase. Digital Elevation Maps from the …"
+    },
+    {
+        "title": "Rubik's Cube layout construction and validation algorithm",
+        "url": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Borkivskyy-Bohdan_188599_assignsubmission_file_Bachelor_Thesis_Bohdan_Borkivskyi.pdf",
+        "author_links": {},
+        "author": [
+            "B Borkivskyi"
+        ],
+        "abstract": "Many sports have some monitoring systems, that help judges to make wise decision in controversial situation, such as VAR in football. VAR allows judge to check situation from different views, so nothing is missed. In this work we propose a prototype of such system for …",
+        "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Borkivskyy-Bohdan_188599_assignsubmission_file_Bachelor_Thesis_Bohdan_Borkivskyi.pdf"
     },
     {
         "title": "On the Accuracy of CRNNs for Line-Based OCR: A Multi-Parameter Evaluation",
@@ -1954,7 +2041,8 @@
         "url": "https://arxiv.org/abs/2009.12610",
         "author_links": {
             "K Kim": "https://scholar.google.com/citations?user=pdewAHgAAAAJ&hl=en&oi=sra",
-            "D Wu": "https://scholar.google.com/citations?user=4_56vVYAAAAJ&hl=en&oi=sra"
+            "D Wu": "https://scholar.google.com/citations?user=4_56vVYAAAAJ&hl=en&oi=sra",
+            "H Ren": "https://scholar.google.com/citations?user=-8N8iIYAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "YG Kim",
@@ -2089,7 +2177,8 @@
         "title": "Flood detection with Sentinel-2 satellite images in crisis management systems",
         "url": "https://pdfs.semanticscholar.org/7808/fb3b90cca751abff25b92bbaee61ecc26dd7.pdf",
         "author_links": {
-            "A Moumtzidou": "https://scholar.google.com/citations?user=4oUt-WsAAAAJ&hl=en&oi=sra"
+            "A Moumtzidou": "https://scholar.google.com/citations?user=4oUt-WsAAAAJ&hl=en&oi=sra",
+            "M Bakratsas": "https://scholar.google.com/citations?user=b1Y832MAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "A Moumtzidou",
