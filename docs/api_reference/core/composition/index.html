@@ -776,7 +776,7 @@
 <code>class <strong>albumentations.core.composition.BboxParams</strong></code>
 <code>
 <span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_area</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_visibility</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">check_each_transform</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L414" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L430" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.BboxParams" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -912,7 +912,7 @@ Default: <code>True</code></p>
 <code>class <strong>albumentations.core.composition.KeypointParams</strong></code>
 <code>
 <span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_each_transform</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L454" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L470" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.KeypointParams" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -980,7 +980,7 @@ Default: <code>True</code></p>
 <code>class <strong>albumentations.core.composition.OneOf</strong></code>
 <code>
 <span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L243" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L259" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.OneOf" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1022,7 +1022,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 <code>class <strong>albumentations.core.composition.OneOrOther</strong></code>
 <code>
 <span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L264" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L280" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.OneOrOther" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1037,7 +1037,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 <code>class <strong>albumentations.core.composition.PerChannel</strong></code>
 <code>
 <span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L290" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L306" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1086,7 +1086,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 <code>class <strong>albumentations.core.composition.Sequential</strong></code>
 <code>
 <span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L507" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L523" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
