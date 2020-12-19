@@ -661,7 +661,7 @@
     },
     {
         "title": "Fully automatic CNN-based segmentation of retinal bifurcations in 2D adaptive optics ophthalmoscopy images",
-        "url": "https://hal.archives-ouvertes.fr/hal-02925043/",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9286662/",
         "author_links": {
             "F Rossant": "https://scholar.google.com/citations?user=5dtFMMwAAAAJ&hl=en&oi=sra",
             "I Bloch": "https://scholar.google.com/citations?user=7BFEwr4AAAAJ&hl=en&oi=sra"
@@ -816,15 +816,15 @@
     },
     {
         "title": "Deep-learning based segmentation of challenging myelin sheaths",
-        "url": "https://hal.archives-ouvertes.fr/hal-02929744/",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9286715/",
         "author_links": {
-            "A Joutel": "https://scholar.google.com/citations?user=9q_WEIUAAAAJ&hl=en&oi=sra",
-            "R Caillon": "https://scholar.google.com/citations?user=owO6MpYAAAAJ&hl=en&oi=sra"
+            "R Caillon": "https://scholar.google.com/citations?user=owO6MpYAAAAJ&hl=en&oi=sra",
+            "F Rossant": "https://scholar.google.com/citations?user=5dtFMMwAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "T Le Couedic",
-            "A Joutel",
-            "R Caillon"
+            "R Caillon",
+            "F Rossant"
         ],
         "abstract": "The segmentation of axons and myelin in electron microscopy images allows neurologists to highlight the density of axons and the thickness of the myelin surrounding them. These properties are of great interest for preventing and anticipating white matter diseases. This …",
         "eprint": "https://hal.archives-ouvertes.fr/hal-02929744/document"
@@ -1470,7 +1470,7 @@
         "eprint": "https://arxiv.org/pdf/2009.00908"
     },
     {
-        "title": "Deep Learning for Retail Product Recognition: Challenges and Techniques",
+        "title": "Deep learning for retail product recognition: challenges and techniques",
         "url": "https://www.hindawi.com/journals/cin/2020/8875910/",
         "author_links": {
             "S Tran": "https://scholar.google.com/citations?user=h82eCK8AAAAJ&hl=en&oi=sra",
@@ -1527,6 +1527,16 @@
         "author": [
             "FVM Perez"
         ]
+    },
+    {
+        "title": "Fiche de confidentialité et de diffusion du mémoire",
+        "url": "https://www.hdigitag.fr/wp-content/uploads/Rapport-StageDigitAg-M2-2020-Mario-Serouart-1.pdf",
+        "author_links": {},
+        "author": [
+            "O Non"
+        ],
+        "abstract": "La densité de végétation est une question vitale et importante dans un contexte de population croissante, en particulier lorsque le probleme de l'accesa la ressource est en jeu. Cet indicateur est le reflet direct de l'état de santé d'une culture et de ce fait est donc …",
+        "eprint": "https://www.hdigitag.fr/wp-content/uploads/Rapport-StageDigitAg-M2-2020-Mario-Serouart-1.pdf"
     },
     {
         "title": "AGUnet: Annotation-guided U-net for fast one-shot video object segmentation",
@@ -1603,6 +1613,26 @@
         "eprint": "https://arxiv.org/pdf/2009.01599"
     },
     {
+        "title": "DeepSweep: An Evaluation Framework for Mitigating DNN Backdoor Attacks using Data Augmentation",
+        "url": "https://arxiv.org/abs/2012.07006",
+        "author_links": {
+            "Y Zeng": "https://scholar.google.com/citations?user=K-U_ZqkAAAAJ&hl=en&oi=sra",
+            "H Qiu": "https://scholar.google.com/citations?user=6JWNv6gAAAAJ&hl=en&oi=sra",
+            "S Guo": "https://scholar.google.com/citations?user=wQrVkBYAAAAJ&hl=en&oi=sra",
+            "T Zhang": "https://scholar.google.com/citations?user=9vpiYDIAAAAJ&hl=en&oi=sra",
+            "M Qiu": "https://scholar.google.com/citations?user=smMVdtwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Zeng",
+            "H Qiu",
+            "S Guo",
+            "T Zhang",
+            "M Qiu"
+        ],
+        "abstract": "Public resources and services (eg, datasets, training platforms, pre-trained models) have been widely adopted to ease the development of Deep Learning-based applications. However, if the third-party providers are untrusted, they can inject poisoned samples into the …",
+        "eprint": "https://arxiv.org/pdf/2012.07006"
+    },
+    {
         "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches WPI Technical Report WPI-CS-TR-19-02",
         "url": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf",
         "author_links": {},
@@ -1629,6 +1659,20 @@
         ],
         "abstract": "The detection of objects in very high-resolution (VHR) remote sensing images has become increasingly popular with the enhancement of remote sensing technologies. High-resolution images from aircrafts or satellites contain highly detailed and mixed backgrounds that …",
         "eprint": "https://www.mdpi.com/2220-9964/9/6/370/pdf"
+    },
+    {
+        "title": "Generative augmentation to improve lung nodules detection in resource-limited settings",
+        "url": "http://www.i-us.ru/index.php/ius/article/view/14012",
+        "author_links": {
+            "AS Vatian": "https://scholar.google.com/citations?user=_aIJ9RwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "NF Gusarova",
+            "AA Lobantsev",
+            "AS Vatian"
+        ],
+        "abstract": "Introduction: Lung cancer is one of the most formidable cancers. The use of neural network technologies in its diagnostics is promising, but the datasets collected from real clinical practice cannot cover various lung cancer manifestations. Purpose: Assessment of the …",
+        "eprint": "http://www.i-us.ru/index.php/ius/article/download/14012/14715"
     },
     {
         "title": "A Deep 3D Object Pose Estimation Framework for Robots with RGB-D Sensors",
@@ -1814,6 +1858,18 @@
         "eprint": "https://upcommons.upc.edu/bitstream/handle/2117/333264/rapport-sfe.pdf"
     },
     {
+        "title": "Comparison of neural network architectures for segmentation of the left ventricle on EchoCG images",
+        "url": "https://aip.scitation.org/doi/abs/10.1063/5.0032165",
+        "author_links": {},
+        "author": [
+            "VS Samun",
+            "AS Sheka",
+            "TV Chumarnaya"
+        ],
+        "abstract": "This paper compares the quality of segmentation of echocardiographic images of the left ventricle of the heart using 5 architectures and 38 pre-trained encoders. As part of the study, we trained 1140 neural networks. On the test dataset, the accuracy was 93.18% according to …",
+        "eprint": "https://aip.scitation.org/doi/pdf/10.1063/5.0032165"
+    },
+    {
         "title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection",
         "url": "https://ieeexplore.ieee.org/abstract/document/8966436/",
         "author_links": {
@@ -1836,7 +1892,8 @@
             "R Moghe",
             "R Zanetti"
         ],
-        "abstract": "A deep learning approach is presented to detect safe landing locations using LIDAR scans of the Lunar surface. Semantic Segmentation is used to classify hazardous and safe locations from a LIDAR scan during the landing phase. Digital Elevation Maps from the …"
+        "abstract": "A deep learning approach is presented to detect safe landing locations using LIDAR scans of the Lunar surface. Semantic Segmentation is used to classify hazardous and safe locations from a LIDAR scan during the landing phase. Digital Elevation Maps from the …",
+        "eprint": "http://sites.utexas.edu/renato/files/2020/11/CNN_landing_accepted.pdf"
     },
     {
         "title": "Rubik's Cube layout construction and validation algorithm",
@@ -1949,7 +2006,24 @@
             "HA Castro-Abril",
             "T Randelovic"
         ],
-        "abstract": "Background and objectives. Spheroids are the most widely used 3D models for studying the effects of different micro-environmental characteristics on tumour behaviour, and for testing different preclinical and clinical treatments. In order to speed up the study of spheroids …"
+        "abstract": "Background and objectives Spheroids are the most widely used 3D models for studying the effects of different micro-environmental characteristics on tumour behaviour, and for testing different preclinical and clinical treatments. In order to speed up the study of spheroids …"
+    },
+    {
+        "title": "Variational Beam Search for Online Learning with Distribution Shifts",
+        "url": "https://arxiv.org/abs/2012.08101",
+        "author_links": {
+            "A Boyd": "https://scholar.google.com/citations?user=n7P_6uQAAAAJ&hl=en&oi=sra",
+            "P Smyth": "https://scholar.google.com/citations?user=OsoQ-dcAAAAJ&hl=en&oi=sra",
+            "S Mandt": "https://scholar.google.com/citations?user=HOrGe7wAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Li",
+            "A Boyd",
+            "P Smyth",
+            "S Mandt"
+        ],
+        "abstract": "We consider the problem of online learning in the presence of sudden distribution shifts as frequently encountered in applications such as autonomous navigation. Distribution shifts require constant performance monitoring and re-training. They may also be hard to detect …",
+        "eprint": "https://arxiv.org/pdf/2012.08101"
     },
     {
         "title": "Contextual Pyramid Attention Network for Building Segmentation in Aerial Imagery",
