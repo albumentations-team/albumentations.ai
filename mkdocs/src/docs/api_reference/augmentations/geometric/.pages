@@ -1,0 +1,7 @@
+title: Geometric transforms
+arrange:
+  - index.md
+  - functional.md
+  - resize.md
+  - rotate.md
+  - transforms.md

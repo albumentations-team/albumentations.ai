@@ -2,6 +2,7 @@ title: Augmentations
 arrange:
   - index.md
   - transforms.md
+  - geometric
   - domain_adaptation.md
   - functional.md
   - bbox_utils.md
