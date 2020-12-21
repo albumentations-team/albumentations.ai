@@ -1,0 +1,4 @@
+- [Geometric functional transforms (albumentations.augmentations.geometric.functional)](functional.md)
+- [Resizing transforms (augmentations.geometric.resize)](resize.md)
+- [Rotation transforms (augmentations.geometric.functional)](rotate.md)
+- [Geometric transforms (augmentations.geometric.transforms)](trasnforms.md)
