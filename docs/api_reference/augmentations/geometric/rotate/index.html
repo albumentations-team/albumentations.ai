@@ -6,29 +6,29 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Albumentations: fast and flexible image augmentations" name="description"/>
-<link href="https://albumentations.ai/docs/api_reference/core/" rel="canonical"/>
-<link href="../../images/logo.png" rel="shortcut icon"/>
+<link href="https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/" rel="canonical"/>
+<link href="../../../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.0" name="generator"/>
-<title>Index - Albumentations Documentation</title>
-<link href="../../assets/stylesheets/main.b5d04df8.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.9ab2c1f8.min.css" rel="stylesheet"/>
+<title>Rotation transforms (augmentations.geometric.functional) - Albumentations Documentation</title>
+<link href="../../../../assets/stylesheets/main.b5d04df8.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.9ab2c1f8.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
-<link href="../../css/extra.css" rel="stylesheet"/>
-<link href="../../css/ansi-colours.css" rel="stylesheet"/>
+<link href="../../../../css/extra.css" rel="stylesheet"/>
+<link href="../../../../css/ansi-colours.css" rel="stylesheet"/>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <meta content="website" property="og:type"/>
-<meta content="Albumentations Documentation - Index" property="og:title"/>
+<meta content="Albumentations Documentation - Rotation transforms (augmentations.geometric.functional)" property="og:title"/>
 <meta content="Albumentations: fast and flexible image augmentations" property="og:description"/>
-<meta content="https://albumentations.ai/docs/api_reference/core/" property="og:url"/>
+<meta content="https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/" property="og:url"/>
 <meta content="https://albumentations.ai/docs/images/albumentations_card.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Albumentations Documentation - Index" name="twitter:title"/>
+<meta content="Albumentations Documentation - Rotation transforms (augmentations.geometric.functional)" name="twitter:title"/>
 <meta content="Albumentations: fast and flexible image augmentations" name="twitter:description"/>
 <meta content="https://albumentations.ai/docs/images/albumentations_card.png" name="twitter:image"/>
 </head>
@@ -37,13 +37,16 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#rotation-transforms-augmentationsgeometricfunctional">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
 <a aria-label="Albumentations Documentation" class="md-header-nav__button md-logo" href="https://albumentations.ai" title="Albumentations Documentation">
-<img alt="logo" src="../../images/logo.png"/>
+<img alt="logo" src="../../../../images/logo.png"/>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
@@ -120,7 +123,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Albumentations Documentation" class="md-nav__button md-logo" href="https://albumentations.ai/docs/" title="Albumentations Documentation">
-<img alt="logo" src="../../images/logo.png"/>
+<img alt="logo" src="../../../../images/logo.png"/>
 </a>
     Albumentations Documentation
   </label>
@@ -155,7 +158,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../.." title="Welcome to Albumentations documentation">
+<a class="md-nav__link" href="../../../.." title="Welcome to Albumentations documentation">
       Welcome to Albumentations documentation
     </a>
 </li>
@@ -176,17 +179,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
+<a class="md-nav__link" href="../../../../introduction/image_augmentation/" title="What is image augmentation and how it can improve the performance of deep neural networks">
       What is image augmentation and how it can improve the performance of deep neural networks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
+<a class="md-nav__link" href="../../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" title="Why you need a dedicated library for image augmentation">
       Why you need a dedicated library for image augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/why_albumentations/" title="Why Albumentations">
+<a class="md-nav__link" href="../../../../introduction/why_albumentations/" title="Why Albumentations">
       Why Albumentations
     </a>
 </li>
@@ -210,42 +213,42 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/installation/" title="Installation">
+<a class="md-nav__link" href="../../../../getting_started/installation/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/image_augmentation/" title="Image augmentation for classification">
+<a class="md-nav__link" href="../../../../getting_started/image_augmentation/" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
+<a class="md-nav__link" href="../../../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
       Mask augmentation for segmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+<a class="md-nav__link" href="../../../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
       Bounding boxes augmentation for object detection
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/keypoints_augmentation/" title="Keypoints augmentation">
+<a class="md-nav__link" href="../../../../getting_started/keypoints_augmentation/" title="Keypoints augmentation">
       Keypoints augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+<a class="md-nav__link" href="../../../../getting_started/simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets">
+<a class="md-nav__link" href="../../../../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets">
       A list of transforms and their supported targets
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
+<a class="md-nav__link" href="../../../../getting_started/setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
       Setting probabilities for transforms in an augmentation pipeline
     </a>
 </li>
@@ -269,82 +272,82 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/" title="List of examples">
+<a class="md-nav__link" href="../../../../examples/" title="List of examples">
       List of examples
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example/" title="Defining a simple augmentation pipeline for image augmentation">
+<a class="md-nav__link" href="../../../../examples/example/" title="Defining a simple augmentation pipeline for image augmentation">
       Defining a simple augmentation pipeline for image augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_16_bit_tiff/" title="Working with non-8-bit images">
+<a class="md-nav__link" href="../../../../examples/example_16_bit_tiff/" title="Working with non-8-bit images">
       Working with non-8-bit images
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_bboxes/" title="Using Albumentations to augment bounding boxes for object detection tasks">
+<a class="md-nav__link" href="../../../../examples/example_bboxes/" title="Using Albumentations to augment bounding boxes for object detection tasks">
       Using Albumentations to augment bounding boxes for object detection tasks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_bboxes2/" title="How to use Albumentations for detection tasks if you need to keep all bounding boxes">
+<a class="md-nav__link" href="../../../../examples/example_bboxes2/" title="How to use Albumentations for detection tasks if you need to keep all bounding boxes">
       How to use Albumentations for detection tasks if you need to keep all bounding boxes
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_kaggle_salt/" title="Using Albumentations for a semantic segmentation task">
+<a class="md-nav__link" href="../../../../examples/example_kaggle_salt/" title="Using Albumentations for a semantic segmentation task">
       Using Albumentations for a semantic segmentation task
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_keypoints/" title="Using Albumentations to augment keypoints">
+<a class="md-nav__link" href="../../../../examples/example_keypoints/" title="Using Albumentations to augment keypoints">
       Using Albumentations to augment keypoints
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_multi_target/" title="Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints">
+<a class="md-nav__link" href="../../../../examples/example_multi_target/" title="Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints">
       Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/example_weather_transforms/" title="Weather augmentations in Albumentations">
+<a class="md-nav__link" href="../../../../examples/example_weather_transforms/" title="Weather augmentations in Albumentations">
       Weather augmentations in Albumentations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/migrating_from_torchvision_to_albumentations/" title="Migrating from torchvision to Albumentations">
+<a class="md-nav__link" href="../../../../examples/migrating_from_torchvision_to_albumentations/" title="Migrating from torchvision to Albumentations">
       Migrating from torchvision to Albumentations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/pytorch_classification/" title="PyTorch and Albumentations for image classification">
+<a class="md-nav__link" href="../../../../examples/pytorch_classification/" title="PyTorch and Albumentations for image classification">
       PyTorch and Albumentations for image classification
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/pytorch_semantic_segmentation/" title="PyTorch and Albumentations for semantic segmentation">
+<a class="md-nav__link" href="../../../../examples/pytorch_semantic_segmentation/" title="PyTorch and Albumentations for semantic segmentation">
       PyTorch and Albumentations for semantic segmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/replay/" title="Debugging an augmentation pipeline with ReplayCompose">
+<a class="md-nav__link" href="../../../../examples/replay/" title="Debugging an augmentation pipeline with ReplayCompose">
       Debugging an augmentation pipeline with ReplayCompose
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/serialization/" title="How to save and load parameters of an augmentation pipeline">
+<a class="md-nav__link" href="../../../../examples/serialization/" title="How to save and load parameters of an augmentation pipeline">
       How to save and load parameters of an augmentation pipeline
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/showcase/" title="Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.">
+<a class="md-nav__link" href="../../../../examples/showcase/" title="Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.">
       Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../examples/tensorflow-example/" title="Using Albumentations with Tensorflow">
+<a class="md-nav__link" href="../../../../examples/tensorflow-example/" title="Using Albumentations with Tensorflow">
       Using Albumentations with Tensorflow
     </a>
 </li>
@@ -352,7 +355,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../faq/" title="Frequently Asked Questions">
+<a class="md-nav__link" href="../../../../faq/" title="Frequently Asked Questions">
       Frequently Asked Questions
     </a>
 </li>
@@ -373,22 +376,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/" title="AutoAlbument Overview">
+<a class="md-nav__link" href="../../../../autoalbument/" title="AutoAlbument Overview">
       AutoAlbument Overview
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/installation/" title="Installation">
+<a class="md-nav__link" href="../../../../autoalbument/installation/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/how_to_use/" title="How to use AutoAlbument">
+<a class="md-nav__link" href="../../../../autoalbument/how_to_use/" title="How to use AutoAlbument">
       How to use AutoAlbument
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/tuning_parameters/" title="Tuning the search parameters">
+<a class="md-nav__link" href="../../../../autoalbument/tuning_parameters/" title="Tuning the search parameters">
       Tuning the search parameters
     </a>
 </li>
@@ -409,17 +412,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/list/" title="List of examples">
+<a class="md-nav__link" href="../../../../autoalbument/examples/list/" title="List of examples">
       List of examples
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/cifar10/" title="Image classification on the CIFAR10 dataset">
+<a class="md-nav__link" href="../../../../autoalbument/examples/cifar10/" title="Image classification on the CIFAR10 dataset">
       Image classification on the CIFAR10 dataset
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/pascal_voc/" title="Semantic segmentation on the Pascal VOC dataset">
+<a class="md-nav__link" href="../../../../autoalbument/examples/pascal_voc/" title="Semantic segmentation on the Pascal VOC dataset">
       Semantic segmentation on the Pascal VOC dataset
     </a>
 </li>
@@ -427,12 +430,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/search_algorithms/" title="Search algorithms">
+<a class="md-nav__link" href="../../../../autoalbument/search_algorithms/" title="Search algorithms">
       Search algorithms
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/faq/" title="FAQ">
+<a class="md-nav__link" href="../../../../autoalbument/faq/" title="FAQ">
       FAQ
     </a>
 </li>
@@ -456,12 +459,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../experimental/overview/" title="Albumentations Experimental Overview">
+<a class="md-nav__link" href="../../../../experimental/overview/" title="Albumentations Experimental Overview">
       Albumentations Experimental Overview
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../experimental/installation/" title="Installation">
+<a class="md-nav__link" href="../../../../experimental/installation/" title="Installation">
       Installation
     </a>
 </li>
@@ -498,7 +501,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../experimental/api_reference/augmentations/transforms/" title="Albumentations Experimental Transforms (augmentations.transforms)">
+<a class="md-nav__link" href="../../../../experimental/api_reference/augmentations/transforms/" title="Albumentations Experimental Transforms (augmentations.transforms)">
       Albumentations Experimental Transforms (augmentations.transforms)
     </a>
 </li>
@@ -528,12 +531,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../external_resources/blog_posts_podcasts_talks/" title="Blog posts, podcasts and talks about Albumentations">
+<a class="md-nav__link" href="../../../../external_resources/blog_posts_podcasts_talks/" title="Blog posts, podcasts and talks about Albumentations">
       Blog posts, podcasts and talks about Albumentations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../external_resources/books/" title="Books that mention Albumentations">
+<a class="md-nav__link" href="../../../../external_resources/books/" title="Books that mention Albumentations">
       Books that mention Albumentations
     </a>
 </li>
@@ -556,8 +559,8 @@
         API Reference
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2" id="nav-9-2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2" id="nav-9-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-9-2">
       Core API
       <span class="md-nav__icon md-icon">
@@ -572,32 +575,26 @@
         Core API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./" title="Index">
-      Index
-    </a>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="composition/" title="Composition API (core.composition)">
+<a class="md-nav__link" href="../../../core/composition/" title="Composition API (core.composition)">
       Composition API (core.composition)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="transforms_interface/" title="Transforms Interface (core.transforms_interface)">
+<a class="md-nav__link" href="../../../core/transforms_interface/" title="Transforms Interface (core.transforms_interface)">
       Transforms Interface (core.transforms_interface)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="serialization/" title="Serialization API (core.serialization)">
+<a class="md-nav__link" href="../../../core/serialization/" title="Serialization API (core.serialization)">
       Serialization API (core.serialization)
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3" id="nav-9-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3" id="nav-9-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-9-3">
       Augmentations
       <span class="md-nav__icon md-icon">
@@ -613,12 +610,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/transforms/" title="Transforms (augmentations.transforms)">
+<a class="md-nav__link" href="../../transforms/" title="Transforms (augmentations.transforms)">
       Transforms (augmentations.transforms)
     </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3" id="nav-9-3-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3" id="nav-9-3-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-9-3-3">
       Geometric transforms
       <span class="md-nav__icon md-icon">
@@ -634,22 +631,63 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/geometric/functional/" title="Geometric functional transforms (augmentations.geometric.functional)">
+<a class="md-nav__link" href="../functional/" title="Geometric functional transforms (augmentations.geometric.functional)">
       Geometric functional transforms (augmentations.geometric.functional)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/geometric/resize/" title="Resizing transforms (augmentations.geometric.resize)">
+<a class="md-nav__link" href="../resize/" title="Resizing transforms (augmentations.geometric.resize)">
       Resizing transforms (augmentations.geometric.resize)
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/geometric/rotate/" title="Rotation transforms (augmentations.geometric.functional)">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Rotation transforms (augmentations.geometric.functional)
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Rotation transforms (augmentations.geometric.functional)">
       Rotation transforms (augmentations.geometric.functional)
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.rotate">
+    albumentations.augmentations.geometric.rotate
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/geometric/transforms/" title="Geometric transforms (augmentations.geometric.transforms)">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.rotate.RandomRotate90">
+    RandomRotate90
+  </a>
+<nav aria-label="RandomRotate90" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.rotate.RandomRotate90.apply">
+    apply()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.rotate.Rotate">
+    Rotate
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transforms/" title="Geometric transforms (augmentations.geometric.transforms)">
       Geometric transforms (augmentations.geometric.transforms)
     </a>
 </li>
@@ -657,27 +695,27 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/domain_adaptation/" title="Domain adaptation transforms (augmentations.domain_adaptation)">
+<a class="md-nav__link" href="../../domain_adaptation/" title="Domain adaptation transforms (augmentations.domain_adaptation)">
       Domain adaptation transforms (augmentations.domain_adaptation)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/functional/" title="Functional transforms (augmentations.functional)">
+<a class="md-nav__link" href="../../functional/" title="Functional transforms (augmentations.functional)">
       Functional transforms (augmentations.functional)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+<a class="md-nav__link" href="../../bbox_utils/" title="Helper functions for working with bounding boxes (augmentations.bbox_utils)">
       Helper functions for working with bounding boxes (augmentations.bbox_utils)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
+<a class="md-nav__link" href="../../keypoints_utils/" title="Helper functions for working with keypoints (augmentations.keypoints_utils)">
       Helper functions for working with keypoints (augmentations.keypoints_utils)
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../augmentations/geometric/" title="Geometric augmentations (augmentations.geometric)">
+<a class="md-nav__link" href="../" title="Geometric augmentations (augmentations.geometric)">
       Geometric augmentations (augmentations.geometric)
     </a>
 </li>
@@ -701,7 +739,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../imgaug/transforms/" title="Transforms (imgaug.transforms)">
+<a class="md-nav__link" href="../../../imgaug/transforms/" title="Transforms (imgaug.transforms)">
       Transforms (imgaug.transforms)
     </a>
 </li>
@@ -725,7 +763,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pytorch/transforms/" title="Transforms (pytorch.transforms)">
+<a class="md-nav__link" href="../../../pytorch/transforms/" title="Transforms (pytorch.transforms)">
       Transforms (pytorch.transforms)
     </a>
 </li>
@@ -736,12 +774,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../release_notes/" title="Release notes">
+<a class="md-nav__link" href="../../../../release_notes/" title="Release notes">
       Release notes
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../contributing/" title="Contributing">
+<a class="md-nav__link" href="../../../../contributing/" title="Contributing">
       Contributing
     </a>
 </li>
@@ -752,15 +790,163 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/core/index.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/geometric/rotate.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1>Index</h1>
-<ul>
-<li><a href="composition/">Composition API (albumentations.core.composition)</a></li>
-<li><a href="serialization/">Serialization API (albumentations.core.serialization)</a></li>
-<li><a href="transforms_interface/">Transforms Interface (albumentations.core.transforms_interface)</a></li>
-</ul>
+<h1 id="rotation-transforms-augmentationsgeometricfunctional">Rotation transforms (augmentations.geometric.functional)<a class="headerlink" href="#rotation-transforms-augmentationsgeometricfunctional" title="Permanent link">¶</a></h1>
+<div class="doc doc-object doc-module">
+<h2 class="hidden-toc" href="#albumentations.augmentations.geometric.rotate" id="albumentations.augmentations.geometric.rotate" style="visibility: hidden; width: 0; height: 0;">
+<a class="headerlink" href="#albumentations.augmentations.geometric.rotate" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.rotate.RandomRotate90">
+<code>class <strong>albumentations.augmentations.geometric.rotate.RandomRotate90</strong></code>
+<code>
+</code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L24" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.geometric.rotate.RandomRotate90" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Randomly rotate the input by 90 degrees zero or more times.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image, mask, bboxes, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.geometric.rotate.RandomRotate90.apply">
+<code class="highlight language-python">
+albumentations.augmentations.geometric.rotate.RandomRotate90.apply<span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
+<a class="headerlink" href="#albumentations.augmentations.geometric.rotate.RandomRotate90.apply" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>factor</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of times the input will be rotated by 90 degrees.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.rotate.Rotate">
+<code>class <strong>albumentations.augmentations.geometric.rotate.Rotate</strong></code>
+<code>
+<span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L70" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.geometric.rotate.Rotate" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Rotate the input by an angle selected randomly from the uniform distribution.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range from which a random angle is picked. If limit is a single int
+an angle is picked from (-limit, limit). Default: (-90, 90)</p>
+</td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image, mask, bboxes, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>
@@ -792,7 +978,7 @@
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../" rel="prev" title="Index">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../resize/" rel="prev" title="Resizing transforms (augmentations.geometric.resize)">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -801,18 +987,18 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Index
+                Resizing transforms (augmentations.geometric.resize)
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="composition/" rel="next" title="Composition API (core.composition)">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../transforms/" rel="next" title="Geometric transforms (augmentations.geometric.transforms)">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Composition API (core.composition)
+                Geometric transforms (augmentations.geometric.transforms)
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
@@ -832,19 +1018,19 @@
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.92ffa368.min.js"></script>
-<script src="../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script src="../../../../assets/javascripts/vendor.92ffa368.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
 <script>
         app = initialize({
-          base: "../..",
+          base: "../../../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script src="../../js/extra.js"></script>
+<script src="../../../../js/extra.js"></script>
 </body>
 </html>

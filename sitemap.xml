@@ -200,6 +200,26 @@
      <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</loc>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/functional/</loc>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/resize/</loc>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/</loc>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/</loc>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/</loc>
      <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
@@ -213,6 +233,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/keypoints_utils/</loc>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</loc>
      <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
