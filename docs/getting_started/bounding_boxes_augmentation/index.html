@@ -892,7 +892,7 @@ Coordinates of a bounding box are encoded with four values in pixels: <code>[x_m
 <p>Here is an example image that contains two bounding boxes. Bounding boxes coordinates are declared using the <code>coco</code> format.</p>
 <p><img alt="An example image with two bounding boxes" src="../../images/getting_started/augmenting_bboxes/bbox_without_min_area_min_visibility_original.jpg" title="An example image with two bounding boxes"/>
 <strong>An example image with two bounding boxes</strong></p>
-<p>First, we apply the <code>CenterCrop</code> augmentation without declaring parameters <code>min_area</code> and <code>min_visiiblity</code>. The augmented image contains two bounding boxes.</p>
+<p>First, we apply the <code>CenterCrop</code> augmentation without declaring parameters <code>min_area</code> and <code>min_visibility</code>. The augmented image contains two bounding boxes.</p>
 <p><img alt="An example image with two bounding boxes after applying augmentation" src="../../images/getting_started/augmenting_bboxes/bbox_without_min_area_min_visibility_cropped.jpg" title="An example image with two bounding boxes after applying augmentation"/>
 <strong>An example image with two bounding boxes after applying augmentation</strong></p>
 <p>Next, we apply the same <code>CenterCrop</code> augmentation, but now we also use the <code>min_area</code> parameter. Now, the augmented image contains only one bounding box, because the other bounding box's area after augmentation became smaller than <code>min_area</code>, so Albumentations dropped that bounding box.</p>
