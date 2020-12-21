@@ -107,7 +107,7 @@ Here is an example image that contains two bounding boxes. Bounding boxes coordi
 ![An example image with two bounding boxes](../images/getting_started/augmenting_bboxes/bbox_without_min_area_min_visibility_original.jpg "An example image with two bounding boxes")
 **An example image with two bounding boxes**
 
-First, we apply the `CenterCrop` augmentation without declaring parameters `min_area` and `min_visiiblity`. The augmented image contains two bounding boxes.
+First, we apply the `CenterCrop` augmentation without declaring parameters `min_area` and `min_visibility`. The augmented image contains two bounding boxes.
 
 ![An example image with two bounding boxes after applying augmentation](../images/getting_started/augmenting_bboxes/bbox_without_min_area_min_visibility_cropped.jpg "An example image with two bounding boxes after applying augmentation")
 **An example image with two bounding boxes after applying augmentation**
