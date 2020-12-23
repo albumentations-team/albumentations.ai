@@ -647,7 +647,7 @@
         "eprint": "https://www.mdpi.com/1424-8220/20/19/5611/pdf"
     },
     {
-        "title": "ImageNet Pretrained CNNs for JPEG Steganalysis",
+        "title": "ImageNet Pre-trained CNNs for JPEG Steganalysis",
         "url": "http://www.ws.binghamton.edu/fridrich/Research/Alaska-2-Revised.pdf",
         "author_links": {
             "Y Yousfi": "https://scholar.google.com/citations?user=6M5diMgAAAAJ&hl=en&oi=sra"
@@ -1104,7 +1104,7 @@
         "eprint": "https://arxiv.org/pdf/2006.14547"
     },
     {
-        "title": "Refinement Network for unsupervised on the scene Foreground Segmentation",
+        "title": "Refinement network for unsupervised on the scene foreground segmentation",
         "url": "https://upcommons.upc.edu/handle/2117/332324",
         "author_links": {
             "M Pardàs Feliu": "https://scholar.google.com/citations?user=bLc4qKsAAAAJ&hl=en&oi=sra"
@@ -1470,6 +1470,22 @@
         "eprint": "https://arxiv.org/pdf/2009.00908"
     },
     {
+        "title": "Return on Investment in Machine Learning: Crossing the Chasm between Academia and Business",
+        "url": "https://content.sciendo.com/view/journals/fcds/45/4/article-p281.xml",
+        "author_links": {
+            "J Mizgajski": "https://scholar.google.com/citations?user=kV8W150AAAAJ&hl=en&oi=sra",
+            "A Szymczak": "https://scholar.google.com/citations?user=fNqZL_4AAAAJ&hl=en&oi=sra",
+            "M Morzy": "https://scholar.google.com/citations?user=UwvCguQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Mizgajski",
+            "A Szymczak",
+            "M Morzy"
+        ],
+        "abstract": "Academia remains the central place of machine learning education. While academic culture is the predominant factor influencing the way we teach machine learning to students, many practitioners question this culture, claiming the lack of alignment between academic and …",
+        "eprint": "https://content.sciendo.com/downloadpdf/journals/fcds/45/4/article-p281.xml"
+    },
+    {
         "title": "Deep learning for retail product recognition: challenges and techniques",
         "url": "https://www.hindawi.com/journals/cin/2020/8875910/",
         "author_links": {
@@ -1699,6 +1715,16 @@
             "H Ko"
         ],
         "abstract": "The side-scan sonar (SSS) is a critical sensor device used to explore underwater environments in the deep sea. Gathering SSS data, however, is an expensive and time-consuming task because it requires sensor towing and involves complicated field …"
+    },
+    {
+        "title": "Targeting the zebrafish eye using deep learning-based image segmentation",
+        "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1509494",
+        "author_links": {},
+        "author": [
+            "J Holmberg"
+        ],
+        "abstract": "1.1 Background Computer vision is one of the fastest growing fields in machine learning. The recent integration of machine learning and medicine reveals promising benefits in developing novel computer vision algorithms, which will help improve technologies in …",
+        "eprint": "https://www.diva-portal.org/smash/get/diva2:1509494/FULLTEXT01.pdf"
     },
     {
         "title": "Urban Sound Tagging using Convolutional Neural Networks",
@@ -2071,6 +2097,19 @@
         ],
         "abstract": "Despite the significant advancements in object detection, there is still a number of detection tasks that are challenging and difficult. To eliminate them and to push forward the research in this area a technological\" IceVision\" Challenge was organized in Russia in 2019. The …",
         "eprint": "https://www.researchgate.net/profile/Rauf_Yagfarov/publication/336728688_Augmentation-Based_Object_Detection_for_Winter_Time_Applications/links/5e257ba692851cafc3936168/Augmentation-Based-Object-Detection-for-Winter-Time-Applications.pdf"
+    },
+    {
+        "title": "Refinement Network for unsupervised on the scene Foreground Segmentation",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9287375/",
+        "author_links": {
+            "M Pardàs": "https://scholar.google.com/citations?user=bLc4qKsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Pardàs",
+            "G Canet"
+        ],
+        "abstract": "In this paper we present a network for foreground segmentation based on background subtraction which does not require specific scene training. The network is built as a refinement step on top of classic state of the art background subtraction systems. In this way …",
+        "eprint": "https://www.eurasip.org/Proceedings/Eusipco/Eusipco2020/pdfs/0000705.pdf"
     },
     {
         "title": "Automatic lesion boundary detection in dermoscopy",
