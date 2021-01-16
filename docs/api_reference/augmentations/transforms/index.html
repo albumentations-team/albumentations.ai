@@ -639,11 +639,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.CenterCrop">
-    CenterCrop
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.transforms.ChannelDropout">
     ChannelDropout
   </a>
@@ -666,16 +661,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.transforms.ColorJitter">
     ColorJitter
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.Crop">
-    Crop
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists">
-    CropNonEmptyMaskIfExists
   </a>
 </li>
 <li class="md-nav__item">
@@ -856,16 +841,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomCrop">
-    RandomCrop
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomCropNearBBox">
-    RandomCropNearBBox
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomFog">
     RandomFog
   </a>
@@ -886,23 +861,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomResizedCrop">
-    RandomResizedCrop
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomShadow">
     RandomShadow
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop">
-    RandomSizedBBoxSafeCrop
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#albumentations.augmentations.transforms.RandomSizedCrop">
-    RandomSizedCrop
   </a>
 </li>
 <li class="md-nav__item">
@@ -1107,7 +1067,7 @@
 <code>class <strong>albumentations.augmentations.transforms.Blur</strong></code>
 <code>
 <span class="p">(</span><span class="n">blur_limit</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2067" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1558" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Blur" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1149,67 +1109,11 @@ Should be in range [3, inf). Default: (3, 7).</p>
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.CenterCrop">
-<code>class <strong>albumentations.augmentations.transforms.CenterCrop</strong></code>
-<code>
-<span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L384" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.CenterCrop" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop the central part of the input.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td>
-<p>height of the crop.</p>
-</td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td>
-<p>width of the crop.</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<p>Note:
-    It is recommended to use uint8 images as input.
-    Otherwise the operation will require internal conversion
-    float32 -&gt; uint8 -&gt; float32 that causes worse performance.</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.augmentations.transforms.ChannelDropout">
 <code>class <strong>albumentations.augmentations.transforms.ChannelDropout</strong></code>
 <code>
 <span class="p">(</span><span class="n">channel_drop_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2332" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1823" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ChannelDropout" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1261,7 +1165,7 @@ Should be in range [3, inf). Default: (3, 7).</p>
 <code>class <strong>albumentations.augmentations.transforms.ChannelShuffle</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2390" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1881" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ChannelShuffle" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1299,7 +1203,7 @@ Should be in range [3, inf). Default: (3, 7).</p>
 <code>class <strong>albumentations.augmentations.transforms.CLAHE</strong></code>
 <code>
 <span class="p">(</span><span class="n">clip_limit</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">tile_grid_size</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2302" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1793" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.CLAHE" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1352,7 +1256,7 @@ If clip_limit is a single float value, the range will be (1, clip_limit). Defaul
 <code>class <strong>albumentations.augmentations.transforms.CoarseDropout</strong></code>
 <code>
 <span class="p">(</span><span class="n">max_holes</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">min_holes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask_fill_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1147" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L638" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.CoarseDropout" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1447,7 +1351,7 @@ in mask. If <code>None</code> - mask is not affected. Default: <code>None</code>
 <code>class <strong>albumentations.augmentations.transforms.ColorJitter</strong></code>
 <code>
 <span class="p">(</span><span class="n">brightness</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">contrast</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">saturation</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3065" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2556" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ColorJitter" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1509,138 +1413,11 @@ Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p>
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Crop">
-<code>class <strong>albumentations.augmentations.transforms.Crop</strong></code>
-<code>
-<span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L219" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.Crop" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop region from image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>x_min</code></td>
-<td><code>int</code></td>
-<td>
-<p>Minimum upper left x coordinate.</p>
-</td>
-</tr>
-<tr>
-<td><code>y_min</code></td>
-<td><code>int</code></td>
-<td>
-<p>Minimum upper left y coordinate.</p>
-</td>
-</tr>
-<tr>
-<td><code>x_max</code></td>
-<td><code>int</code></td>
-<td>
-<p>Maximum lower right x coordinate.</p>
-</td>
-</tr>
-<tr>
-<td><code>y_max</code></td>
-<td><code>int</code></td>
-<td>
-<p>Maximum lower right y coordinate.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.CropNonEmptyMaskIfExists">
-<code>class <strong>albumentations.augmentations.transforms.CropNonEmptyMaskIfExists</strong></code>
-<code>
-<span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">ignore_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L736" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop area with mask if mask is non-empty, else make random crop.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td>
-<p>vertical size of crop in pixels</p>
-</td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td>
-<p>horizontal size of crop in pixels</p>
-</td>
-</tr>
-<tr>
-<td><code>ignore_values</code></td>
-<td><code>list of int</code></td>
-<td>
-<p>values to ignore in mask, <code>0</code> values are always ignored
-(e.g. if background value is 5 set <code>ignore_values=[5]</code> to ignore)</p>
-</td>
-</tr>
-<tr>
-<td><code>ignore_channels</code></td>
-<td><code>list of int</code></td>
-<td>
-<p>channels to ignore in mask
-(e.g. if background is a first channel set <code>ignore_channels=[0]</code> to ignore)</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.0.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Cutout">
 <code>class <strong>albumentations.augmentations.transforms.Cutout</strong></code>
 <code>
 <span class="p">(</span><span class="n">num_holes</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">max_h_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">max_w_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1082" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L573" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Cutout" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1703,7 +1480,7 @@ Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p>
 <code>class <strong>albumentations.augmentations.transforms.Downscale</strong></code>
 <code>
 <span class="p">(</span><span class="n">scale_min</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">scale_max</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2580" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2071" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Downscale" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1755,7 +1532,7 @@ Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p>
 <code>class <strong>albumentations.augmentations.transforms.Emboss</strong></code>
 <code>
 <span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">strength</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3172" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2663" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Emboss" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1806,7 +1583,7 @@ visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p>
 <code>class <strong>albumentations.augmentations.transforms.Equalize</strong></code>
 <code>
 <span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">'cv'</span><span class="p">,</span> <span class="n">by_channels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_params</span><span class="o">=</span><span class="p">(),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1899" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1390" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Equalize" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1868,7 +1645,7 @@ Function signature must include <code>image</code> argument.</p>
 <code>class <strong>albumentations.augmentations.transforms.FancyPCA</strong></code>
 <code>
 <span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2744" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2235" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.FancyPCA" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1912,7 +1689,7 @@ scale is samples from gaussian distribution (mu=0, sigma=alpha)</p>
 <code>class <strong>albumentations.augmentations.transforms.Flip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L316" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L265" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Flip" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1961,7 +1738,7 @@ albumentations.augmentations.transforms.Flip.apply<span class="p">(</span><span 
 <code>class <strong>albumentations.augmentations.transforms.FromFloat</strong></code>
 <code>
 <span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s1">'uint16'</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2553" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2044" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.FromFloat" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2019,7 +1796,7 @@ Default: 'uint16'.</p>
 <code>class <strong>albumentations.augmentations.transforms.GaussianBlur</strong></code>
 <code>
 <span class="p">(</span><span class="n">blur_limit</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">sigma_limit</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2162" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1653" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.GaussianBlur" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2077,7 +1854,7 @@ If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.
 <code>class <strong>albumentations.augmentations.transforms.GaussNoise</strong></code>
 <code>
 <span class="p">(</span><span class="n">var_limit</span><span class="o">=</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">),</span> <span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2209" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1700" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.GaussNoise" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2130,7 +1907,7 @@ will be (0, var_limit). Default: (10.0, 50.0).</p>
 <code>class <strong>albumentations.augmentations.transforms.GlassBlur</strong></code>
 <code>
 <span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">max_delta</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'fast'</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2864" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2355" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.GlassBlur" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2200,7 +1977,7 @@ Should be in range [1, inf). Default: (2).</p>
 <code>class <strong>albumentations.augmentations.transforms.GridDistortion</strong></code>
 <code>
 <span class="p">(</span><span class="n">num_steps</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">distort_limit</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L907" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L398" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.GridDistortion" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2279,7 +2056,7 @@ Default: cv2.BORDER_REFLECT_101</p>
 <code>class <strong>albumentations.augmentations.transforms.GridDropout</strong></code>
 <code>
 <span class="p">(</span><span class="n">ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">unit_size_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit_size_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">holes_number_x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">holes_number_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shift_x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shift_y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">random_offset</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask_fill_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2934" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2425" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.GridDropout" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2391,7 +2168,7 @@ If <code>None</code>, transformation is not applied to the mask. Default: <code>
 <code>class <strong>albumentations.augmentations.transforms.HorizontalFlip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L285" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L234" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.HorizontalFlip" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2429,7 +2206,7 @@ If <code>None</code>, transformation is not applied to the mask. Default: <code>
 <code>class <strong>albumentations.augmentations.transforms.HueSaturationValue</strong></code>
 <code>
 <span class="p">(</span><span class="n">hue_shift_limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">sat_shift_limit</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">val_shift_limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1786" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1277" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.HueSaturationValue" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2491,7 +2268,7 @@ will be (-val_shift_limit, val_shift_limit). Default: (-20, 20).</p>
 <code>class <strong>albumentations.augmentations.transforms.ImageCompression</strong></code>
 <code>
 <span class="p">(</span><span class="n">quality_lower</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">quality_upper</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">compression_type</span><span class="o">=&lt;</span><span class="n">ImageCompressionType</span><span class="o">.</span><span class="n">JPEG</span><span class="p">:</span> <span class="mi">0</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1242" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L733" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ImageCompression" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2559,7 +2336,7 @@ Default: ImageCompressionType.JPEG</p>
 <code>class <strong>albumentations.augmentations.transforms.InvertImg</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2416" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1907" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.InvertImg" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2597,7 +2374,7 @@ Default: ImageCompressionType.JPEG</p>
 <code>class <strong>albumentations.augmentations.transforms.ISONoise</strong></code>
 <code>
 <span class="p">(</span><span class="n">color_shift</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">intensity</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2267" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1758" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ISONoise" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2651,7 +2428,7 @@ of color and luminace noise.</p>
 <code>class <strong>albumentations.augmentations.transforms.JpegCompression</strong></code>
 <code>
 <span class="p">(</span><span class="n">quality_lower</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">quality_upper</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1299" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L790" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.JpegCompression" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2696,7 +2473,7 @@ of color and luminace noise.</p>
 <code>class <strong>albumentations.augmentations.transforms.Lambda</strong></code>
 <code>
 <span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keypoint</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2619" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2110" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Lambda" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2770,7 +2547,7 @@ Function signature must include **kwargs to accept optinal arguments like interp
 <code>class <strong>albumentations.augmentations.transforms.MaskDropout</strong></code>
 <code>
 <span class="p">(</span><span class="n">max_objects</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask_fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2770" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2261" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.MaskDropout" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2838,7 +2615,7 @@ Can be 'inpaint' to apply inpaining (works only  for 3-chahnel images)</p>
 <code>class <strong>albumentations.augmentations.transforms.MedianBlur</strong></code>
 <code>
 <span class="p">(</span><span class="n">blur_limit</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2131" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1622" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.MedianBlur" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2884,7 +2661,7 @@ Must be odd and in range [3, inf). Default: (3, 7).</p>
 <code>class <strong>albumentations.augmentations.transforms.MotionBlur</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2096" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1587" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.MotionBlur" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2930,7 +2707,7 @@ Should be in range [3, inf). Default: (3, 7).</p>
 <code>class <strong>albumentations.augmentations.transforms.MultiplicativeNoise</strong></code>
 <code>
 <span class="p">(</span><span class="n">multiplier</span><span class="o">=</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">),</span> <span class="n">per_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">elementwise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2683" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2174" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.MultiplicativeNoise" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -2985,7 +2762,7 @@ If <code>True</code> Multiply image pixels with values that are pixelwise random
 <code>class <strong>albumentations.augmentations.transforms.Normalize</strong></code>
 <code>
 <span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">),</span> <span class="n">std</span><span class="o">=</span><span class="p">(</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">),</span> <span class="n">max_pixel_value</span><span class="o">=</span><span class="mf">255.0</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1046" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L537" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Normalize" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3037,7 +2814,7 @@ If <code>True</code> Multiply image pixels with values that are pixelwise random
 <code>class <strong>albumentations.augmentations.transforms.OpticalDistortion</strong></code>
 <code>
 <span class="p">(</span><span class="n">distort_limit</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">shift_limit</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L847" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L338" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.OpticalDistortion" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3117,7 +2894,7 @@ Default: cv2.BORDER_REFLECT_101</p>
 <code>class <strong>albumentations.augmentations.transforms.PadIfNeeded</strong></code>
 <code>
 <span class="p">(</span><span class="n">min_height</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">min_width</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">pad_height_divisor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pad_width_divisor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L106" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L98" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.PadIfNeeded" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3206,7 +2983,7 @@ Default: cv2.BORDER_REFLECT_101</p>
 <code>class <strong>albumentations.augmentations.transforms.Posterize</strong></code>
 <code>
 <span class="p">(</span><span class="n">num_bits</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1857" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1348" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Posterize" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3255,7 +3032,7 @@ image</p>
 <code>class <strong>albumentations.augmentations.transforms.RandomBrightness</strong></code>
 <code>
 <span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2019" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1510" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightness" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3301,7 +3078,7 @@ If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0
 <code>class <strong>albumentations.augmentations.transforms.RandomBrightnessContrast</strong></code>
 <code>
 <span class="p">(</span><span class="n">brightness_limit</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">contrast_limit</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">brightness_by_max</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1985" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1476" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightnessContrast" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3363,7 +3140,7 @@ else adjust contrast by image mean.</p>
 <code>class <strong>albumentations.augmentations.transforms.RandomContrast</strong></code>
 <code>
 <span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2044" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1535" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomContrast" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3405,108 +3182,11 @@ If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomCrop">
-<code>class <strong>albumentations.augmentations.transforms.RandomCrop</strong></code>
-<code>
-<span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L417" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomCrop" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop a random part of the input.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td>
-<p>height of the crop.</p>
-</td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td>
-<p>width of the crop.</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomCropNearBBox">
-<code>class <strong>albumentations.augmentations.transforms.RandomCropNearBBox</strong></code>
-<code>
-<span class="p">(</span><span class="n">max_part_shift</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L452" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomCropNearBBox" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop bbox from image with random shift by x,y coordinates</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>max_part_shift</code></td>
-<td><code>float</code></td>
-<td>
-<p>float value in (0.0, 1.0) range. Default 0.3</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomFog">
 <code>class <strong>albumentations.augmentations.transforms.RandomFog</strong></code>
 <code>
 <span class="p">(</span><span class="n">fog_coef_lower</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">fog_coef_upper</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha_coef</span><span class="o">=</span><span class="mf">0.08</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1498" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L989" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomFog" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3559,7 +3239,7 @@ If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0
 <code>class <strong>albumentations.augmentations.transforms.RandomGamma</strong></code>
 <code>
 <span class="p">(</span><span class="n">gamma_limit</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span> <span class="n">eps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2437" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1928" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomGamma" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3604,7 +3284,7 @@ the range will be (-gamma_limit, gamma_limit). Default: (80, 120).</p>
 <code>class <strong>albumentations.augmentations.transforms.RandomGridShuffle</strong></code>
 <code>
 <span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L957" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L448" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomGridShuffle" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3642,7 +3322,7 @@ the range will be (-gamma_limit, gamma_limit). Default: (80, 120).</p>
 <code>class <strong>albumentations.augmentations.transforms.RandomRain</strong></code>
 <code>
 <span class="p">(</span><span class="n">slant_lower</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="n">slant_upper</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">drop_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">drop_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">drop_color</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">blur_value</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">brightness_coefficient</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">rain_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1378" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L869" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomRain" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3726,86 +3406,11 @@ the range will be (-gamma_limit, gamma_limit). Default: (80, 120).</p>
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomResizedCrop">
-<code>class <strong>albumentations.augmentations.transforms.RandomResizedCrop</strong></code>
-<code>
-<span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">ratio</span><span class="o">=</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.3333333333333333</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L581" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomResizedCrop" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Torchvision's variant of crop a random part of the input and rescale it to some size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td>
-<p>height after crop and resize.</p>
-</td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td>
-<p>width after crop and resize.</p>
-</td>
-</tr>
-<tr>
-<td><code>scale</code></td>
-<td><code>[float, float]</code></td>
-<td>
-<p>range of size of the origin size cropped</p>
-</td>
-</tr>
-<tr>
-<td><code>ratio</code></td>
-<td><code>[float, float]</code></td>
-<td>
-<p>range of aspect ratio of the origin aspect ratio cropped</p>
-</td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td>
-<p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomShadow">
 <code>class <strong>albumentations.augmentations.transforms.RandomShadow</strong></code>
 <code>
 <span class="p">(</span><span class="n">shadow_roi</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">num_shadows_lower</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_shadows_upper</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">shadow_dimension</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1702" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1193" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomShadow" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -3864,154 +3469,11 @@ Should be in range [<code>num_shadows_lower</code>, inf].</p>
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop">
-<code>class <strong>albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop</strong></code>
-<code>
-<span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">erosion_rate</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L670" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop a random part of the input and rescale it to some size without loss of bboxes.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td>
-<p>height after crop and resize.</p>
-</td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td>
-<p>width after crop and resize.</p>
-</td>
-</tr>
-<tr>
-<td><code>erosion_rate</code></td>
-<td><code>float</code></td>
-<td>
-<p>erosion rate applied on input image height before crop.</p>
-</td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td>
-<p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSizedCrop">
-<code>class <strong>albumentations.augmentations.transforms.RandomSizedCrop</strong></code>
-<code>
-<span class="p">(</span><span class="n">min_max_height</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">w2h_ratio</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L539" target="_blank">[view source on GitHub]</a>
-</span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomSizedCrop" title="Permanent link">¶</a></h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Crop a random part of the input and rescale it to some size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th style="width: 20%;">Name</th>
-<th style="width: 20%;">Type</th>
-<th style="width: 60%;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>min_max_height</code></td>
-<td><code>[int, int]</code></td>
-<td>
-<p>crop size limits.</p>
-</td>
-</tr>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td>
-<p>height after crop and resize.</p>
-</td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td>
-<p>width after crop and resize.</p>
-</td>
-</tr>
-<tr>
-<td><code>w2h_ratio</code></td>
-<td><code>float</code></td>
-<td>
-<p>aspect ratio of crop.</p>
-</td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td>
-<p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p>
-</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td>
-<p>probability of applying the transform. Default: 1.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.augmentations.transforms.RandomSnow">
 <code>class <strong>albumentations.augmentations.transforms.RandomSnow</strong></code>
 <code>
 <span class="p">(</span><span class="n">snow_point_lower</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">snow_point_upper</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">brightness_coeff</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1330" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L821" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomSnow" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4064,7 +3526,7 @@ Default: cv2.INTER_LINEAR.</p>
 <code>class <strong>albumentations.augmentations.transforms.RandomSunFlare</strong></code>
 <code>
 <span class="p">(</span><span class="n">flare_roi</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">angle_lower</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">angle_upper</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_flare_circles_lower</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">num_flare_circles_upper</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">src_radius</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">src_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1574" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1065" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RandomSunFlare" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4146,7 +3608,7 @@ Should be in range [<code>num_flare_circles_lower</code>, inf].</p>
 <code>class <strong>albumentations.augmentations.transforms.RGBShift</strong></code>
 <code>
 <span class="p">(</span><span class="n">r_shift_limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">g_shift_limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">b_shift_limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1946" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1437" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.RGBShift" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4208,7 +3670,7 @@ int, the range will be (-b_shift_limit, b_shift_limit). Default: (-20, 20).</p>
 <code>class <strong>albumentations.augmentations.transforms.Sharpen</strong></code>
 <code>
 <span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">lightness</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3127" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2618" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Sharpen" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4259,7 +3721,7 @@ visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p>
 <code>class <strong>albumentations.augmentations.transforms.Solarize</strong></code>
 <code>
 <span class="p">(</span><span class="n">threshold</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1821" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1312" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Solarize" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4311,7 +3773,7 @@ visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p>
 <code>class <strong>albumentations.augmentations.transforms.ToFloat</strong></code>
 <code>
 <span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2519" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2010" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ToFloat" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4360,7 +3822,7 @@ image.</p>
 <code>class <strong>albumentations.augmentations.transforms.ToGray</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2466" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1957" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ToGray" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4399,7 +3861,7 @@ than 127, invert the resulting grayscale image.</p>
 <code>class <strong>albumentations.augmentations.transforms.ToSepia</strong></code>
 <code>
 <span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2486" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1977" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.ToSepia" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4437,7 +3899,7 @@ than 127, invert the resulting grayscale image.</p>
 <code>class <strong>albumentations.augmentations.transforms.Transpose</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L351" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L300" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.Transpose" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -4475,7 +3937,7 @@ than 127, invert the resulting grayscale image.</p>
 <code>class <strong>albumentations.augmentations.transforms.VerticalFlip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L259" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L208" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.transforms.VerticalFlip" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
