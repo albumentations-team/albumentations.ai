@@ -39,3 +39,11 @@ def define_env(env):
         return make_transforms_targets_table(
             dual_transforms, header=["Transform"] + [target.value for target in Targets]
         )
+
+    @env.macro
+    def include_file_content(filepath):
+        try:
+            with open(filepath) as f:
+                return f.read()
+        except Exception:
+            return ""
