@@ -13,6 +13,8 @@ RUN pip install -e /albumentations
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_experimental.git /albumentations_experimental
 RUN pip install -e /albumentations_experimental
 
+RUN git clone --depth=1 https://github.com/albumentations-team/autoalbument.git /autoalbument
+
 COPY ./mkdocs/entrypoint.sh /mkdocs/entrypoint.sh
 COPY ./mkdocs/replacements.txt /mkdocs/replacements.txt
 COPY ./mkdocs/src /mkdocs/src
