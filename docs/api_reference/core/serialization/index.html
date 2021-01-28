@@ -888,7 +888,7 @@
 <code>class <strong>albumentations.core.serialization.SerializableMeta</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L29" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L44" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.serialization.SerializableMeta" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -916,7 +916,7 @@ albumentations.core.serialization.SerializableMeta.__new__<span class="p">(</spa
 <h2 class="doc doc-heading" id="albumentations.core.serialization.from_dict">
 <code class="highlight language-python">def
 albumentations.core.serialization.from_dict<span class="p">(</span><span class="n">transform_dict</span><span class="p">,</span> <span class="n">lambda_transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L82" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L97" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -954,7 +954,7 @@ a serialized pipeline.</p>
 <h2 class="doc doc-heading" id="albumentations.core.serialization.load">
 <code class="highlight language-python">def
 albumentations.core.serialization.load<span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s1">'json'</span><span class="p">,</span> <span class="n">lambda_transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L131" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L146" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Load a serialized pipeline from a json or yaml file and construct a transform pipeline.</p>
@@ -1007,7 +1007,7 @@ a serialized pipeline.</p>
 <h2 class="doc doc-heading" id="albumentations.core.serialization.register_additional_transforms">
 <code class="highlight language-python">def
 albumentations.core.serialization.register_additional_transforms<span class="p">()</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L151" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L166" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Register transforms that are not imported directly into the <code>albumentations</code> module.</p>
@@ -1017,7 +1017,7 @@ albumentations.core.serialization.register_additional_transforms<span class="p">
 <h2 class="doc doc-heading" id="albumentations.core.serialization.save">
 <code class="highlight language-python">def
 albumentations.core.serialization.save<span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="s1">'json'</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L111" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L126" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline, serialize it and save a serialized version to a file
@@ -1070,7 +1070,7 @@ ignored and no transform arguments will be saved.</p>
 <h2 class="doc doc-heading" id="albumentations.core.serialization.to_dict">
 <code class="highlight language-python">def
 albumentations.core.serialization.to_dict<span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L35" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L50" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline and convert it to a serializable representation that uses only standard
