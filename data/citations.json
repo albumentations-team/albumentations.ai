@@ -244,7 +244,10 @@
     {
         "title": "Camera-to-robot pose estimation from a single image",
         "url": "https://ieeexplore.ieee.org/abstract/document/9196596/",
-        "author_links": {},
+        "author_links": {
+            "TE Lee": "https://scholar.google.com/citations?user=ZD6QUvYAAAAJ&hl=en&oi=sra",
+            "J Tremblay": "https://scholar.google.com/citations?user=zeS5UJEAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "TE Lee",
             "J Tremblay",
@@ -870,7 +873,11 @@
     {
         "title": "Benchmark for Generic Product Detection: A Low Data Baseline for Dense Object Detection",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-50347-5_3",
-        "author_links": {},
+        "author_links": {
+            "S Varadarajan": "https://scholar.google.com/citations?user=n1Rvx6kAAAAJ&hl=en&oi=sra",
+            "S Kant": "https://scholar.google.com/citations?user=eGviwJoAAAAJ&hl=en&oi=sra",
+            "MM Srivastava": "https://scholar.google.com/citations?user=Xw0GUGIAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "S Varadarajan",
             "S Kant",
@@ -1051,7 +1058,9 @@
     {
         "title": "A U-Net Based Approach for Automating Tribological Experiments",
         "url": "https://www.mdpi.com/1424-8220/20/22/6703",
-        "author_links": {},
+        "author_links": {
+            "M Freitag": "https://scholar.google.com/citations?user=Q5F5XBwAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "B Staar",
             "S Bayrak",
@@ -1076,7 +1085,10 @@
     {
         "title": "Artificial Intelligence based identification of Total Knee Arthroplasty Implants",
         "url": "https://ieeexplore.ieee.org/abstract/document/9315956/",
-        "author_links": {},
+        "author_links": {
+            "S Ghose": "https://scholar.google.com/citations?user=Dv5UOCkAAAAJ&hl=en&oi=sra",
+            "C Malathy": "https://scholar.google.com/citations?user=euIrg58AAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "S Ghose",
             "S Datta",
@@ -1097,6 +1109,18 @@
             "R Zanetti"
         ],
         "abstract": "NASA's Autonomous Landing and Hazard Avoidance Technology project has three core functionalities, namely, Terrain Relative navigation, Hazard Detection and Avoidance and Hazard Relative Navigation. In this paper, we present a real time machine learning based …"
+    },
+    {
+        "title": "A CNN-Based Length-Aware Cascade Road Damage Detection Approach",
+        "url": "https://www.mdpi.com/967452",
+        "author_links": {},
+        "author": [
+            "H Xu",
+            "B Chen",
+            "J Qin"
+        ],
+        "abstract": "Accurate and robust detection of road damage is essential for public transportation safety. Currently, deep convolutional neural networks (CNNs)-based road damage detection algorithms to localize and classify damage with a bounding box have achieved remarkable …",
+        "eprint": "https://www.mdpi.com/1424-8220/21/3/689/pdf"
     },
     {
         "title": "Deep Learning object detection architectures in ADAS",
@@ -1217,6 +1241,21 @@
         ],
         "abstract": "In this report, we descibe our approach to the ECCV 2020 VIPriors Object Detection Challenge which took place from March to July in 2020. We show that by using state-of-the-art data augmentation strategies, model designs, and post-processing ensemble methods, it …",
         "eprint": "https://arxiv.org/pdf/2007.08849"
+    },
+    {
+        "title": "Unsupervised Domain Adaptation from Axial toShort-Axis Multi-Slice Cardiac MR Images byIncorporating Pretrained Task Networks",
+        "url": "https://arxiv.org/abs/2101.07653",
+        "author_links": {
+            "T Hussain": "https://scholar.google.com/citations?user=zhwu1p0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Koehler",
+            "T Hussain",
+            "Z Blair",
+            "T Huffaker"
+        ],
+        "abstract": "Anisotropic multi-slice Cardiac Magnetic Resonance (CMR) Images are conventionally acquired in patient-specific short-axis (SAX) orientation. In specific cardiovascular diseases that affect right ventricular (RV) morphology, acquisitions in standard axial (AX) orientation …",
+        "eprint": "https://arxiv.org/pdf/2101.07653"
     },
     {
         "title": "A Battery-Powered Friend: Towards Embedded Emotion Recognition",
@@ -1377,7 +1416,8 @@
         "url": "https://arxiv.org/abs/2011.09832",
         "author_links": {
             "E Riba": "https://scholar.google.com/citations?user=s4EKCo4AAAAJ&hl=en&oi=sra",
-            "D Mishkin": "https://scholar.google.com/citations?user=H72QiF0AAAAJ&hl=en&oi=sra"
+            "D Mishkin": "https://scholar.google.com/citations?user=H72QiF0AAAAJ&hl=en&oi=sra",
+            "F Moreno": "https://scholar.google.com/citations?user=iAEBIB4AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "J Shi",
@@ -1562,7 +1602,11 @@
     {
         "title": "Variational Beam Search for Novelty Detection",
         "url": "https://openreview.net/pdf/1cc4c0639e682af13dcccdab933c2119fd4476ca.pdf",
-        "author_links": {},
+        "author_links": {
+            "A Boyd": "https://scholar.google.com/citations?user=n7P_6uQAAAAJ&hl=en&oi=sra",
+            "P Smyth": "https://scholar.google.com/citations?user=OsoQ-dcAAAAJ&hl=en&oi=sra",
+            "S Mandt": "https://scholar.google.com/citations?user=HOrGe7wAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "A Li",
             "A Boyd",
@@ -1616,13 +1660,11 @@
         "title": "Generating Physically Sound Training Data for Image Recognition of Additively Manufactured Parts",
         "url": "https://openaccess.thecvf.com/content/WACV2021/html/Nickchen_Generating_Physically_Sound_Training_Data_for_Image_Recognition_of_Additively_WACV_2021_paper.html",
         "author_links": {
-            "S Heindorf": "https://scholar.google.com/citations?user=op3JqUsAAAAJ&hl=en&oi=sra",
-            "G Engels": "https://scholar.google.com/citations?user=3AV1TsAAAAAJ&hl=en&oi=sra"
+            "S Heindorf": "https://scholar.google.com/citations?user=op3JqUsAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "T Nickchen",
-            "S Heindorf",
-            "G Engels"
+            "S Heindorf"
         ],
         "abstract": "In recent years, Additive Manufacturing (AM) has evolved from a niche technology for prototyping to a well-known industrial production process. In this work, we focus on Selective Laser Sintering (SLS)---one of the leading AM techniques. While SLS has many …",
         "eprint": "https://openaccess.thecvf.com/content/WACV2021/papers/Nickchen_Generating_Physically_Sound_Training_Data_for_Image_Recognition_of_Additively_WACV_2021_paper.pdf"
@@ -1736,6 +1778,7 @@
         "title": "Fiscal classification using convolutional neural network",
         "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11469/114691N/Fiscal-classification-using-convolutional-neural-network/10.1117/12.2568314.short",
         "author_links": {
+            "N Bindal": "https://scholar.google.com/citations?user=knGyW3oAAAAJ&hl=en&oi=sra",
             "BK Kaushik": "https://scholar.google.com/citations?user=k8ZqlzYAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -2035,7 +2078,9 @@
     {
         "title": "SEGMENTATION OF CLOUD PATTERNS FROM SATELLITE IMAGES TO IMPROVE CLIMATE MODELS",
         "url": "https://www.ds3-datascience-polytechnique.fr/wp-content/uploads/2021/01/10.pdf",
-        "author_links": {},
+        "author_links": {
+            "M Organokov": "https://scholar.google.com/citations?user=jYZaDVoAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "K Vishnyakov",
             "M Organokov"
@@ -2389,6 +2434,7 @@
         "title": "Synthetic Data Augmentation for Zero-Shot Cross-Lingual Question Answering",
         "url": "https://arxiv.org/abs/2010.12643",
         "author_links": {
+            "A Riabi": "https://scholar.google.com/citations?user=5kz9S2IAAAAJ&hl=en&oi=sra",
             "T Scialom": "https://scholar.google.com/citations?user=qou4P-kAAAAJ&hl=en&oi=sra",
             "B Sagot": "https://scholar.google.com/citations?user=HXUT9ZkAAAAJ&hl=en&oi=sra"
         },
