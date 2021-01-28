@@ -1,5 +1,12 @@
 # Release notes
 
+
+## 0.5.2 (29 November 2020)
+
+### Minor changes
+- [ToTensorV2](https://albumentations.ai/docs/api_reference/pytorch/transforms/#albumentations.pytorch.transforms.ToTensorV2) now automatically expands grayscale images with the shape `[H, W]` to the shape `[H, W, 1]`. PR [#604](https://github.com/albumentations-team/albumentations/pull/604) by [@Ingwar](https://github.com/Ingwar).
+- [CropNonEmptyMaskIfExists ](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists) now also works with multiple masks that are provided by the `masks` argument to the transform function. Previously this augmentation worked only with a single mask provided by the `mask` argument. PR [#761](https://github.com/albumentations-team/albumentations/pull/761).
+
 ## 0.5.1 (2 November 2020)
 
 ### Breaking changes
