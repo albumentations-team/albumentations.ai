@@ -48,7 +48,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
     - [Using Albumentations with Tensorflow](examples/tensorflow-example/)
 
 ## External resources
-- [Blog posts, podcasts and talks about Albumentations](external_resources/blog_posts_podcasts_talks.md)
+- [Blog posts, podcasts, talks, and videos about Albumentations](external_resources/blog_posts_podcasts_talks.md)
 - [Books that mention Albumentations](external_resources/books.md)
 
 ## Other topics
