@@ -940,6 +940,12 @@ In this notebook we will show how to apply Albumentations to the keypoint augmen
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+<strong>Note</strong>: by default, augmentations that work with keypoints don't change keypoints' labels after transformation. If keypoints' labels are side-specific, that may pose a problem. For example, if you have a keypoint named <code>left arm</code> and apply a HorizontalFlip augmentation, you will get a keypoint with the same <code>left arm</code> label, but it will now look like a <code>right arm</code> keypoint. See a picture at the end of <a href="https://albumentations.ai/docs/getting_started/keypoints_augmentation/">this article</a> for a visual example.</div></div></p>
+<p>If you work with such type of keypoints, consider using SymmetricKeypoints augmentations from <a href="https://github.com/albumentations-team/albumentations_experimental#spatial-level-transforms" target="_blank">albumentations-experimental</a> that are created precisely to handle that case.
+</p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></div></div></p>
 <h3 id="import-the-required-libraries">Import the required libraries<a class="headerlink" href="#import-the-required-libraries" title="Permanent link">¶</a></h3>
 <p></p></div>
