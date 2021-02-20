@@ -16,22 +16,6 @@
         "eprint": "https://arxiv.org/pdf/1803.01207"
     },
     {
-        "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
-        "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html",
-        "author_links": {
-            "O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra",
-            "T Martyniuk": "https://scholar.google.com/citations?user=Ur0vgfMAAAAJ&hl=en&oi=sra",
-            "J Wu": "https://scholar.google.com/citations?user=5wXwjysAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "O Kupyn",
-            "T Martyniuk",
-            "J Wu"
-        ],
-        "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
-        "eprint": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
-    },
-    {
         "title": "AutoML: A Survey of the State-of-the-Art",
         "url": "https://www.sciencedirect.com/science/article/pii/S0950705120307516",
         "author_links": {
@@ -46,6 +30,22 @@
         ],
         "abstract": "Deep learning (DL) techniques have obtained remarkable achievements on various tasks, such as image recognition, object detection, and language modeling. However, building a high-quality DL system for a specific task highly relies on human expertise, hindering its …",
         "eprint": "https://arxiv.org/pdf/1908.00709"
+    },
+    {
+        "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
+        "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html",
+        "author_links": {
+            "O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra",
+            "T Martyniuk": "https://scholar.google.com/citations?user=Ur0vgfMAAAAJ&hl=en&oi=sra",
+            "J Wu": "https://scholar.google.com/citations?user=5wXwjysAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "O Kupyn",
+            "T Martyniuk",
+            "J Wu"
+        ],
+        "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
+        "eprint": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
     },
     {
         "title": "Angiodysplasia detection and localization using deep convolutional neural networks",
@@ -175,7 +175,8 @@
             "D Agarwal",
             "I de la Torre Díez"
         ],
-        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …"
+        "abstract": "COVID-19 infection was reported in December 2019 at Wuhan, China. This virus critically affects several countries such as the USA, Brazil, India and Italy. Numerous research units are working at their higher level of effort to develop novel methods to prevent and control this …",
+        "eprint": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7836808/"
     },
     {
         "title": "Automatic salt deposits segmentation: A deep learning approach",
@@ -536,6 +537,22 @@
             "V Guryanova"
         ],
         "abstract": "Currently, on the market, there are mobile devices that are capable of reading a person's single-lead electrocardiogram (ECG). These ECGs can be used to solve problems of determining various diseases. Neural networks are onearameters of augmentations of the …"
+    },
+    {
+        "title": "Deep learning and conformal prediction for hierarchical analysis of large-scale whole-slide tissue images",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9103229/",
+        "author_links": {
+            "H Wieslander": "https://scholar.google.com/citations?user=PLJ8O9MAAAAJ&hl=en&oi=sra",
+            "PJ Harrison": "https://scholar.google.com/citations?user=vt1vYnEAAAAJ&hl=en&oi=sra",
+            "G Skogberg": "https://scholar.google.com/citations?user=aW-wT6AAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Wieslander",
+            "PJ Harrison",
+            "G Skogberg"
+        ],
+        "abstract": "With the increasing amount of image data collected from biomedical experiments there is an urgent need for smarter and more effective analysis methods. Many scientific questions require analysis of image subregions related to some specific biology. Finding such regions …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6221020/9348958/09103229.pdf"
     },
     {
         "title": "Identifying melanoma images using efficientnet ensemble: Winning solution to the siim-isic melanoma classification challenge",
@@ -941,6 +958,20 @@
         "abstract": "High quality document layout analysis is fundamental to the accurate processing of handwritten textual material, on both the level of individual lines and higher order zones demarking textual and non-textual content. We present an artificial neural network based …"
     },
     {
+        "title": "Deep Learning Predicts HPV Association in Oropharyngeal Squamous Cell Carcinomas and Identifies Patients with a Favorable Prognosis Using Regular H&E Stains",
+        "url": "https://clincancerres.aacrjournals.org/content/27/4/1131.abstract",
+        "author_links": {},
+        "author": [
+            "S Klein",
+            "A Quaas",
+            "J Quantius",
+            "H Löser",
+            "J Meinel"
+        ],
+        "abstract": "Purpose: Human papillomavirus (HPV) in oropharyngeal squamous cell carcinoma (OPSCC) is tumorigenic and has been associated with a favorable prognosis compared with OPSCC caused by tobacco, alcohol, and other carcinogens. Meanwhile, machine learning …",
+        "eprint": "https://clincancerres.aacrjournals.org/content/clincanres/27/4/1131.full.pdf"
+    },
+    {
         "title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection",
         "url": "https://ieeexplore.ieee.org/abstract/document/8966436/",
         "author_links": {
@@ -1111,7 +1142,7 @@
         "abstract": "NASA's Autonomous Landing and Hazard Avoidance Technology project has three core functionalities, namely, Terrain Relative navigation, Hazard Detection and Avoidance and Hazard Relative Navigation. In this paper, we present a real time machine learning based …"
     },
     {
-        "title": "A CNN-Based Length-Aware Cascade Road Damage Detection Approach",
+        "title": "A CNN-based length-aware cascade road damage detection approach",
         "url": "https://www.mdpi.com/967452",
         "author_links": {},
         "author": [
@@ -1268,6 +1299,23 @@
         "eprint": "http://files.coldattic.info/stanford/cs231n/CS231n_project.pdf"
     },
     {
+        "title": "Single-Shot Cuboids: Geodesics-based End-to-end Manhattan Aligned Layout Estimation from Spherical Panoramas",
+        "url": "https://arxiv.org/abs/2102.03939",
+        "author_links": {
+            "N Zioulis": "https://scholar.google.com/citations?user=f7hypjsAAAAJ&hl=en&oi=sra",
+            "D Zarpalas": "https://scholar.google.com/citations?user=E_OpMDAAAAAJ&hl=en&oi=sra",
+            "P Daras": "https://scholar.google.com/citations?user=Wgd-Bx4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Zioulis",
+            "F Alvarez",
+            "D Zarpalas",
+            "P Daras"
+        ],
+        "abstract": "It has been shown that global scene understanding tasks like layout estimation can benefit from wider field of views, and specifically spherical panoramas. While much progress has been made recently, all previous approaches rely on intermediate representations and …",
+        "eprint": "https://arxiv.org/pdf/2102.03939"
+    },
+    {
         "title": "Analysis of medical images using deep learning",
         "url": "https://kola.opus.hbz-nrw.de/opus45-kola/files/2028/final_thesis.pdf",
         "author_links": {},
@@ -1363,6 +1411,22 @@
         "eprint": "https://ieeexplore.ieee.org/iel7/4609443/9314330/09241044.pdf"
     },
     {
+        "title": "Arrow R-CNN for handwritten diagram recognition",
+        "url": "https://link.springer.com/article/10.1007/s10032-020-00361-1",
+        "author_links": {
+            "B Schäfer": "https://scholar.google.com/citations?user=wHCVYi0AAAAJ&hl=en&oi=sra",
+            "M Keuper": "https://scholar.google.com/citations?user=KMqMQAcAAAAJ&hl=en&oi=sra",
+            "H Stuckenschmidt": "https://scholar.google.com/citations?user=oqpT1YUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "B Schäfer",
+            "M Keuper",
+            "H Stuckenschmidt"
+        ],
+        "abstract": "We address the problem of offline handwritten diagram recognition. Recently, it has been shown that diagram symbols can be directly recognized with deep learning object detectors. However, object detectors are not able to recognize the diagram structure. We propose …",
+        "eprint": "https://link.springer.com/article/10.1007/s10032-020-00361-1"
+    },
+    {
         "title": "Data Preprocessing Via Compositions Multi-Channel MRI Images to Improve Brain Tumor Segmentation",
         "url": "https://ieeexplore.ieee.org/abstract/document/9153416/",
         "author_links": {
@@ -1399,7 +1463,6 @@
         "title": "Video and Sensor-Based Rope Pulling Detection in Sport Climbing",
         "url": "https://dl.acm.org/doi/abs/10.1145/3422844.3423058",
         "author_links": {
-            "I Ivanova": "https://scholar.google.com/citations?user=Mtqj1xoAAAAJ&hl=en&oi=sra",
             "S Moaveninejad": "https://scholar.google.com/citations?user=F3oM4awAAAAJ&hl=en&oi=sra",
             "A Janes": "https://scholar.google.com/citations?user=8lYoEEQAAAAJ&hl=en&oi=sra"
         },
@@ -1461,8 +1524,7 @@
         "title": "Machine Learning Algorithm Validation: From Essentials to Advanced Applications and Implications for Regulatory Certification and Deployment",
         "url": "https://www.neuroimaging.theclinics.com/article/S1052-5149(20)30059-9/abstract",
         "author_links": {
-            "F Maleki": "https://scholar.google.com/citations?user=LUO_d9QAAAAJ&hl=en&oi=sra",
-            "K Ovens": "https://scholar.google.com/citations?user=uRdIW20AAAAJ&hl=en&oi=sra"
+            "F Maleki": "https://scholar.google.com/citations?user=LUO_d9QAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "F Maleki",
@@ -1673,8 +1735,7 @@
         "title": "A Flatter Loss for Bias Mitigation in Cross-dataset Facial Age Estimation",
         "url": "https://arxiv.org/abs/2010.10368",
         "author_links": {
-            "A Akbari": "https://scholar.google.com/citations?user=QdiYKBIAAAAJ&hl=en&oi=sra",
-            "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra",
+            "M Awais": "https://scholar.google.com/citations?user=QQtVaygAAAAJ&hl=en&oi=sra",
             "ZH Feng": "https://scholar.google.com/citations?user=Y6KtijIAAAAJ&hl=en&oi=sra",
             "A Farooq": "https://scholar.google.com/citations?user=VrjcaiYAAAAJ&hl=en&oi=sra"
         },
@@ -1830,7 +1891,9 @@
     {
         "title": "Deepfake detection using capsule networks with long short-term memory networks",
         "url": "http://essay.utwente.nl/83028/",
-        "author_links": {},
+        "author_links": {
+            "A Mehra": "https://scholar.google.com/citations?user=QYFTyvoAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "A Mehra"
         ],
@@ -1909,6 +1972,16 @@
         "eprint": "https://arxiv.org/pdf/2012.07006"
     },
     {
+        "title": "Underwater Object Detection With Mixed Attention Mechanism And Multi-Enhancement Strategy",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9326737/",
+        "author_links": {},
+        "author": [
+            "W Chen",
+            "B Fan"
+        ],
+        "abstract": "Different from the real-world object detection tasks, underwater object detection has a more complex environment. The underwater environment is often faced with the challenges of the blur, scale variation, color shift, and texture distortion. Most generic object detection …"
+    },
+    {
         "title": "Semantic Segmentation of Smartphone Wound Images: Comparative Analysis of AHRF and CNN-Based Approaches WPI Technical Report WPI-CS-TR-19-02",
         "url": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf",
         "author_links": {},
@@ -1943,6 +2016,24 @@
         ],
         "abstract": "The task of object detection and pose estimation has widely been done using template matching techniques. However, these algorithms are sensitive to outliers and occlusions, and have high latency due to their iterative nature. Recent research in computer vision and …",
         "eprint": "https://core.ac.uk/download/pdf/213004988.pdf"
+    },
+    {
+        "title": "Synthesize and Segment: Towards Improved Catheter Segmentation via Adversarial Augmentation",
+        "url": "https://www.mdpi.com/995586",
+        "author_links": {
+            "I Ullah": "https://scholar.google.com/citations?user=uvXoXc8AAAAJ&hl=en&oi=sra",
+            "P Chikontwe": "https://scholar.google.com/citations?user=8jHbkMcAAAAJ&hl=en&oi=sra",
+            "SH Park": "https://scholar.google.com/citations?user=PHLTD4sAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "I Ullah",
+            "P Chikontwe",
+            "H Choi",
+            "CH Yoon",
+            "SH Park"
+        ],
+        "abstract": "Automatic catheter and guidewire segmentation plays an important role in robot-assisted interventions that are guided by fluoroscopy. Existing learning based methods addressing the task of segmentation or tracking are often limited by the scarcity of annotated samples …",
+        "eprint": "https://www.mdpi.com/2076-3417/11/4/1638/pdf"
     },
     {
         "title": "Side-Scan Sonar Image Synthesis Based on Generative Adversarial Network for Images in Multiple Frequencies",
@@ -2063,19 +2154,6 @@
         "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Vey-Roman_188561_assignsubmission_file_Bachelor_Thesis_Roman_Vei.pdf"
     },
     {
-        "title": "Deep Learning Predicts HPV Association in Oropharyngeal Squamous Cell Carcinomas and Identifies Patients with a Favorable Prognosis Using Regular H&E Stains",
-        "url": "https://clincancerres.aacrjournals.org/content/early/2021/01/06/1078-0432.CCR-20-3596.abstract",
-        "author_links": {},
-        "author": [
-            "S Klein",
-            "A Quaas",
-            "J Quantius",
-            "H Löser",
-            "J Meinel"
-        ],
-        "abstract": "Purpose: Human papillomavirus (HPV) in oropharyngeal squamous cell carcinoma (OPSCC) is tumorigenic and has been associated with a favorable prognosis compared with OPSCC caused by tobacco, alcohol, and other carcinogens. Meanwhile, machine learning …"
-    },
-    {
         "title": "SEGMENTATION OF CLOUD PATTERNS FROM SATELLITE IMAGES TO IMPROVE CLIMATE MODELS",
         "url": "https://www.ds3-datascience-polytechnique.fr/wp-content/uploads/2021/01/10.pdf",
         "author_links": {
@@ -2102,6 +2180,23 @@
         "eprint": "http://ajiips.com.au/papers/V15.2/v15n2_33-39.pdf"
     },
     {
+        "title": "Robust Skin Disease Classification by Distilling Deep Neural Network Ensemble for the Mobile Diagnosis of Herpes Zoster",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9335582/",
+        "author_links": {
+            "S Back": "https://scholar.google.com/citations?user=N9dLZH4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Back",
+            "S Lee",
+            "S Shin",
+            "Y Yu",
+            "T Yuk",
+            "S Jong"
+        ],
+        "abstract": "Herpes zoster (HZ) is a common cutaneous disease affecting one out of five people; hence, early diagnosis of HZ is crucial as it can progress to chronic pain syndrome if antiviral treatment is not provided within 72 hr. Mobile diagnosis of HZ with the assistance of artificial …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/9312710/09335582.pdf"
+    },
+    {
         "title": "Simulation to reality: Study and demonstration of domain adaptation techniques applied to Reinforcement and Supervised learning algorithms",
         "url": "https://upcommons.upc.edu/handle/2117/333264",
         "author_links": {},
@@ -2125,6 +2220,21 @@
             "L Zhang"
         ],
         "abstract": "The problem of semi-supervised video object segmentation has been popularly tackled by fine-tuning a general-purpose segmentation deep network on the annotated frame using hundreds of iterations of gradient descent. The time-consuming fine-tuning process …"
+    },
+    {
+        "title": "Detecting subsurface drainage pipes using a fully convolutional network with optical images",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0378377421000561",
+        "author_links": {
+            "H Song": "https://scholar.google.com/citations?user=ulb4bbgAAAAJ&hl=en&oi=sra",
+            "DK Woo": "https://scholar.google.com/citations?user=C-aJu2MAAAAJ&hl=en&oi=sra",
+            "Q Yan": "https://scholar.google.com/citations?user=X_Fp2-MAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Song",
+            "DK Woo",
+            "Q Yan"
+        ],
+        "abstract": "More than half of croplands in the Midwestern United States are equipped with subsurface drainage pipes to reduce excess water in productive but wet areas. The use of drainage systems not only reduces subsurface water table to prevent waterlogging and flooding but …"
     },
     {
         "title": "Comparison of neural network architectures for segmentation of the left ventricle on EchoCG images",
@@ -2160,6 +2270,16 @@
         ],
         "abstract": "Many sports have some monitoring systems, that help judges to make wise decision in controversial situation, such as VAR in football. VAR allows judge to check situation from different views, so nothing is missed. In this work we propose a prototype of such system for …",
         "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Borkivskyy-Bohdan_188599_assignsubmission_file_Bachelor_Thesis_Bohdan_Borkivskyi.pdf"
+    },
+    {
+        "title": "Annotation quality vs. quantity for deep-learned medical image segmentation",
+        "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11601/116010C/Annotation-quality-vs-quantity-for-deep-learned-medical-image-segmentation/10.1117/12.2582226.short",
+        "author_links": {},
+        "author": [
+            "T Wesemeyer",
+            "ML Jauer"
+        ],
+        "abstract": "For medical image segmentation, deep learning approaches using convolutional neural networks (CNNs) are currently superseding classical methods. For good accuracy, large annotated training data sets are required. As expert annotations are costly to acquire …"
     },
     {
         "title": "On the Accuracy of CRNNs for Line-Based OCR: A Multi-Parameter Evaluation",
@@ -2315,7 +2435,8 @@
         "author_links": {
             "K Kim": "https://scholar.google.com/citations?user=pdewAHgAAAAJ&hl=en&oi=sra",
             "D Wu": "https://scholar.google.com/citations?user=4_56vVYAAAAJ&hl=en&oi=sra",
-            "H Ren": "https://scholar.google.com/citations?user=-8N8iIYAAAAJ&hl=en&oi=sra"
+            "H Ren": "https://scholar.google.com/citations?user=-8N8iIYAAAAJ&hl=en&oi=sra",
+            "SY Park": "https://scholar.google.com/citations?user=P2PI6N4AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "YG Kim",
@@ -2342,6 +2463,16 @@
         ],
         "abstract": "Urban sound classification has been achieving remarkable progress and is still an active research area in audio pattern recognition. In particular, it allows to monitor the noise pollution, which becomes a growing concern for large cities. The contribution of this paper is …",
         "eprint": "https://arxiv.org/pdf/2010.11805"
+    },
+    {
+        "title": "ИСПОЛЬЗОВАНИЕ АУГМЕНТАЦИИ ИЗОБРАЖЕНИЙ СОВМЕСТНО С РЕАЛИЗАЦИЕЙ ДВАЖДЫ СТОХАСТИЧЕСКОЙ МОДЕЛИ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА …",
+        "url": "https://elibrary.ru/item.asp?id=44410565",
+        "author_links": {},
+        "author": [
+            "НА Андриянов",
+            "ВЕ Дементьев"
+        ],
+        "abstract": "В статье предлагаются методы повышения эффективности распознавания образов на изображениях с помощью сверточных нейронных сетей в условиях недостаточности эталонных изображений. Предложено использовать различного рода преобразования …"
     },
     {
         "title": "An Experimental Study of Semantic Continuity for Deep Learning Models",
