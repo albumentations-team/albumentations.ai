@@ -14,9 +14,13 @@
   - A value for the `--task` option should contain the name of a deep learning task. Supported values are `classification` and `semantic_segmentation`.
  - A value for the `--num-classes` option should contain the number of distinct classes in the classification or segmentation dataset.
 
+!!! note ""
+    By default, AutoAlbument creates a `search.yaml` file that contains only most important configuration parameters. To explore all avaiable parameters you can create a config file that contans them all by providing the `--generate-full-config` argument, e.g. `autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10 --generate-full-config`
+
+
 ### b. Add implementation for `__len__` and `__getitem__` methods in `dataset.py`.
 
-The `dataset.py` file created at step 1 by `autoalbument-create` contains stubs for implementing a PyTorch dataset (you can read more about creating custom PyTorch datasets [here](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)). You need to add implementation for for `__len__` and `__getitem__` methods (and optionally add the initialization logic if required).
+The `dataset.py` file created at step 1 by `autoalbument-create` contains stubs for implementing a PyTorch dataset (you can read more about creating custom PyTorch datasets [here](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)). You need to add implementation for `__len__` and `__getitem__` methods (and optionally add the initialization logic if required).
 
 A dataset for a classification task should return an image and a class label. A dataset for a segmentation task should return an image and an associated mask.
 

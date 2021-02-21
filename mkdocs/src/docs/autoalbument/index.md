@@ -9,6 +9,7 @@ The source code and issue tracker are available at [https://github.com/albumenta
 
 Table of contents:
 
+- [AutoAlbument introduction and core concepts](introduction.md)
 - [Installation](installation.md)
 - [Benchmarks and a comparison with baseline augmentation strategies](benchmarks.md)
 - [How to use AutoAlbument](how_to_use.md)
