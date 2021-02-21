@@ -38,7 +38,7 @@ defaults:
  - search
 ```
 
-Basically, it includes a bunch of config files with default values. Those config files are split into sets of closely related parameters such as model parameters or optimizer parameters. All default config files are located in their respective directories inside [autoalbument/cli/conf](https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf/config.yaml)
+Basically, it includes a bunch of config files with default values. Those config files are split into sets of closely related parameters such as model parameters or optimizer parameters. All default config files are located in their respective directories inside [autoalbument/cli/conf](https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf)
 
 The main config file also includes the `search.yaml` file, which you will use for overriding default parameters for your specific dataset and task (you can read more about creating the `search.yaml` file with `autoalbument-create` in [How to use AutoAlbument](how_to_use.md))
 
