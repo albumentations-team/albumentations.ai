@@ -240,6 +240,15 @@
 <a class="md-nav__link" href="#install-the-latest-version-from-the-master-branch-on-github">
     Install the latest version from the master branch on GitHub
   </a>
+<nav aria-label="Install the latest version from the master branch on GitHub" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-on-opencv-dependencies">
+    Note on OpenCV dependencies
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#install-the-latest-stable-version-from-conda-forge">
@@ -861,6 +870,17 @@
 <h2 id="install-the-latest-version-from-the-master-branch-on-github">Install the latest version from the master branch on GitHub<a class="headerlink" href="#install-the-latest-version-from-the-master-branch-on-github" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code>pip install -U git+https://github.com/albumentations-team/albumentations
 </code></pre></div>
+<h3 id="note-on-opencv-dependencies">Note on OpenCV dependencies<a class="headerlink" href="#note-on-opencv-dependencies" title="Permanent link">¶</a></h3>
+<p>By default, pip downloads a wheel distribution of Albumentations. This distribution has <code>opencv-python-headless</code> as its dependency. However, Albumentations also depends on imgaug, which has <code>opencv-python</code> (non-headless-version) as its dependency. Because of this dependency clash, you will get both <code>opencv-python-headless</code> and <code>opencv-python</code>  installed in your Python environment.</p>
+<p>In future versions, we plan to get rid of imgaug as a dependency, and Albumentations will require only <code>opencv-python-headless</code> as its dependency.</p>
+<p>However, if you need a workaround for the current version, or you already have some OpenCV distribution (such as <code>opencv-python-headless</code>, <code>opencv-python</code>, <code>opencv-contrib-python</code> or <code>opencv-contrib-python-headless</code>) installed in your Python environment, you can force Albumentations to use it by providing the <code>--no-binary imgaug,albumentations</code> argument to pip, e.g.</p>
+<div class="highlight"><pre><span></span><code>pip install -U albumentations --no-binary imgaug,albumentations
+</code></pre></div>
+<p>pip will use the following logic to determine the required OpenCV distribution:</p>
+<ol>
+<li>If your Python environment already contains <code>opencv-python</code>, <code>opencv-contrib-python</code>, <code>opencv-contrib-python-headless</code> or <code>opencv-python-headless</code> pip will use it.</li>
+<li>If your Python environment doesn't contain any OpenCV distribution from step 1, pip will download <code>opencv-python-headless</code>.</li>
+</ol>
 <h2 id="install-the-latest-stable-version-from-conda-forge">Install the latest stable version from conda-forge<a class="headerlink" href="#install-the-latest-stable-version-from-conda-forge" title="Permanent link">¶</a></h2>
 <p>If you are using Anaconda or Miniconda you can install Albumentations from conda-forge:</p>
 <div class="highlight"><pre><span></span><code>conda install -c conda-forge imgaug
