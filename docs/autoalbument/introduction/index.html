@@ -889,7 +889,7 @@
  - seed
  - search
 </code></pre></div>
-<p>Basically, it includes a bunch of config files with default values. Those config files are split into sets of closely related parameters such as model parameters or optimizer parameters. All default config files are located in their respective directories inside <a href="https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf/config.yaml" target="_blank">autoalbument/cli/conf</a></p>
+<p>Basically, it includes a bunch of config files with default values. Those config files are split into sets of closely related parameters such as model parameters or optimizer parameters. All default config files are located in their respective directories inside <a href="https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf" target="_blank">autoalbument/cli/conf</a></p>
 <p>The main config file also includes the <code>search.yaml</code> file, which you will use for overriding default parameters for your specific dataset and task (you can read more about creating the <code>search.yaml</code> file with <code>autoalbument-create</code> in <a href="../how_to_use/">How to use AutoAlbument</a>)</p>
 <p>To allow great flexibility, AutoAlbument relies heavily on the <a href="https://hydra.cc/docs/patterns/instantiate_objects/overview" target="_blank"><code>instantiate</code> function</a> from Hydra. This function allows to define a path to a Python class in a YAML config (using the <code>_target_</code> parameter) along with arguments to that class, and Hydra will create an instance of this class with the provided arguments.</p>
 <p>As a practice example, if a config contains a definition like this:</p>
