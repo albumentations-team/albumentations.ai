@@ -530,6 +530,11 @@
       FAQ
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/" title="AutoAlbument introduction and core concepts">
+      AutoAlbument introduction and core concepts
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -885,8 +890,11 @@
  - A value for the <code>--config-dir</code> option should contain a path to the directory. AutoAlbument will create this directory and put two files into it: <code>dataset.py</code> and <code>search.yaml</code> (more on them later).
   - A value for the <code>--task</code> option should contain the name of a deep learning task. Supported values are <code>classification</code> and <code>semantic_segmentation</code>.
  - A value for the <code>--num-classes</code> option should contain the number of distinct classes in the classification or segmentation dataset.</p>
+<div class="admonition note">
+<p>By default, AutoAlbument creates a <code>search.yaml</code> file that contains only most important configuration parameters. To explore all avaiable parameters you can create a config file that contans them all by providing the <code>--generate-full-config</code> argument, e.g. <code>autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10 --generate-full-config</code></p>
+</div>
 <h3 id="b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy">b. Add implementation for <code>__len__</code> and <code>__getitem__</code> methods in <code>dataset.py</code>.<a class="headerlink" href="#b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy" title="Permanent link">¶</a></h3>
-<p>The <code>dataset.py</code> file created at step 1 by <code>autoalbument-create</code> contains stubs for implementing a PyTorch dataset (you can read more about creating custom PyTorch datasets <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html" target="_blank">here</a>). You need to add implementation for for <code>__len__</code> and <code>__getitem__</code> methods (and optionally add the initialization logic if required).</p>
+<p>The <code>dataset.py</code> file created at step 1 by <code>autoalbument-create</code> contains stubs for implementing a PyTorch dataset (you can read more about creating custom PyTorch datasets <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html" target="_blank">here</a>). You need to add implementation for <code>__len__</code> and <code>__getitem__</code> methods (and optionally add the initialization logic if required).</p>
 <p>A dataset for a classification task should return an image and a class label. A dataset for a segmentation task should return an image and an associated mask.</p>
 <h3 id="c-optional-adjust-search-parameters-in-searchyaml">c. [Optional] Adjust search parameters in <code>search.yaml</code>.<a class="headerlink" href="#c-optional-adjust-search-parameters-in-searchyaml" title="Permanent link">¶</a></h3>
 <p>You may want to change the parameters that AutoAlbument will use to search for augmentation policies. To do this, you need to edit the <code>search.yaml</code> file created by <code>autoalbument-create</code> at step 1. Each configuration parameter contains a comment that describes the meaning of the setting. Please refer to the  "Tuning the search parameters" section that includes a description of the most critical parameters.</p>

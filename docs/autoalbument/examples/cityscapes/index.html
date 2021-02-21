@@ -501,6 +501,11 @@
       FAQ
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/" title="AutoAlbument introduction and core concepts">
+      AutoAlbument introduction and core concepts
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -846,10 +851,9 @@
 <h1 id="semantic-segmentation-on-the-pascal-voc-dataset">Semantic segmentation on the Pascal VOC dataset<a class="headerlink" href="#semantic-segmentation-on-the-pascal-voc-dataset" title="Permanent link">¶</a></h1>
 <p>The following files are also available on GitHub - <a href="https://github.com/albumentations-team/autoalbument/tree/master/examples/cityscapes" target="_blank">https://github.com/albumentations-team/autoalbument/tree/master/examples/cityscapes</a></p>
 <h2 id="datasetpy">dataset.py<a class="headerlink" href="#datasetpy" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torchvision</span>
-
-<span class="kn">import</span> <span class="nn">cv2</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
 
 <span class="n">cv2</span><span class="o">.</span><span class="n">setNumThreads</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">ocl</span><span class="o">.</span><span class="n">setUseOpenCL</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
@@ -893,77 +897,86 @@
 <h2 id="searchyaml">search.yaml<a class="headerlink" href="#searchyaml" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># @package _global_</span>
 
-<span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semantic_segmentation</span>
+<span class="nt">_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>  <span class="c1"># An internal value that indicates a version of the config schema. This value is used by</span>
+<span class="c1"># `autoalbument-search` and `autoalbument-migrate` to upgrade the config to the latest version if necessary.</span>
+<span class="c1"># Please do not change it manually.</span>
 
-<span class="c1"># Settings for Policy Model that searches augmentation policies.</span>
+<span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semantic_segmentation</span> <span class="c1"># Deep learning task. Should either be `classification` or `semantic_segmentation`.</span>
+
 <span class="nt">policy_model</span><span class="p">:</span>
+  <span class="c1"># Settings for Policy Model that searches augmentation policies.</span>
 
+  <span class="nt">task_factor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1</span>
   <span class="c1"># Multiplier for segmentation loss of a model. Faster AutoAugment uses segmentation loss to prevent augmentations</span>
   <span class="c1"># from transforming images of a particular class to another class.</span>
-  <span class="nt">task_factor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1</span>
 
+  <span class="nt">gp_factor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
   <span class="c1"># Multiplier for the gradient penalty for WGAN-GP training. 10 is the default value that was proposed in</span>
   <span class="c1"># `Improved Training of Wasserstein GANs`.</span>
-  <span class="nt">gp_factor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
 
+  <span class="nt">temperature</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.05</span>
   <span class="c1"># Temperature for Relaxed Bernoulli distribution. The probability of applying a certain augmentation is sampled from</span>
   <span class="c1"># Relaxed Bernoulli distribution (because Bernoulli distribution is not differentiable). With lower values of</span>
   <span class="c1"># `temperature` Relaxed Bernoulli distribution behaves like Bernoulli distribution. In the paper, the authors</span>
   <span class="c1"># of Faster AutoAugment used 0.05 as a default value for `temperature`.</span>
-  <span class="nt">temperature</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.05</span>
 
+  <span class="nt">num_sub_policies</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
   <span class="c1"># Number of augmentation sub-policies. When an image passes through an augmentation pipeline, Faster AutoAugment</span>
   <span class="c1"># randomly chooses one sub-policy and uses augmentations from that sub-policy to transform an input image. A larger</span>
   <span class="c1"># number of sub-policies leads to a more diverse set of augmentations and better performance of a model trained on</span>
   <span class="c1"># augmented images. However, an increase in the number of sub-policies leads to the exponential growth of a search</span>
   <span class="c1"># space of augmentations, so you need more training data for Policy Model to find good augmentation policies.</span>
-  <span class="nt">num_sub_policies</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
 
+  <span class="nt">num_chunks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
   <span class="c1"># Number of chunks in a batch. Faster AutoAugment splits each batch of images into `num_chunks` chunks. Then it</span>
   <span class="c1"># applies the same sub-policy with the same parameters to each image in a chunk. This parameter controls the tradeoff</span>
   <span class="c1"># between the speed of augmentation search and diversity of augmentations. Larger `num_chunks` values will lead to</span>
   <span class="c1"># faster searching but less diverse set of augmentations. Note that this parameter is used only in the searching</span>
   <span class="c1"># phase. When you train a model with found sub-policies, Albumentations will apply a distinct set of transformations</span>
   <span class="c1"># to each image separately.</span>
-  <span class="nt">num_chunks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
 
+  <span class="nt">operation_count</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
   <span class="c1"># Number of consecutive augmentations in each sub-policy. Faster AutoAugment will sequentially apply `operation_count`</span>
   <span class="c1"># augmentations from a sub-policy to an image. Larger values of `operation_count` lead to better performance of</span>
   <span class="c1"># a model trained on augmented images. Simultaneously, larger values of `operation_count` affect the speed of search</span>
   <span class="c1"># and increase the searching time.</span>
-  <span class="nt">operation_count</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
 
-<span class="c1"># Settings for Semantic Segmentation Model that is used for two purposes:</span>
-<span class="c1"># 1. As a model that performs semantic segmentation of input images.</span>
-<span class="c1"># 2. As a Discriminator for Policy Model.</span>
 <span class="nt">semantic_segmentation_model</span><span class="p">:</span>
+  <span class="c1"># Settings for Semantic Segmentation Model that is used for two purposes:</span>
+  <span class="c1"># 1. As a model that performs semantic segmentation of input images.</span>
+  <span class="c1"># 2. As a Discriminator for Policy Model.</span>
+
+  <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">autoalbument.faster_autoaugment.models.SemanticSegmentationModel</span>
   <span class="c1"># By default, AutoAlbument uses an instance of `autoalbument.faster_autoaugment.models.SemanticSegmentationModel` as</span>
   <span class="c1"># a semantic segmentation model.</span>
   <span class="c1"># This model takes four parameters: `num_classes`, `architecture`, `encoder_architecture` and `pretrained`.</span>
-  <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">autoalbument.faster_autoaugment.models.SemanticSegmentationModel</span>
 
+  <span class="nt">num_classes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">19</span>
   <span class="c1"># The number of classes in the dataset. The dataset implementation should return a mask as a NumPy array with</span>
   <span class="c1"># the shape [height, width, num_classes]. In a case of binary segmentation you can set `num_classes` to 1.</span>
-  <span class="nt">num_classes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">19</span>
 
+  <span class="nt">architecture</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DeepLabV3Plus</span>
   <span class="c1"># The architecture of Semantic Segmentation Model. AutoAlbument uses models from</span>
   <span class="c1"># https://github.com/qubvel/segmentation_models.pytorch. Please refer to its documentation to get a list of available</span>
   <span class="c1"># models - https://github.com/qubvel/segmentation_models.pytorch#models-.</span>
-  <span class="nt">architecture</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DeepLabV3Plus</span>
 
+  <span class="nt">encoder_architecture</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">resnet50</span>
   <span class="c1"># The architecture of encoder in Semantic Segmentation Model. Please refer to Segmentation Models' documentation to</span>
   <span class="c1"># get a list of available encoders - https://github.com/qubvel/segmentation_models.pytorch#encoders-</span>
-  <span class="nt">encoder_architecture</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">resnet50</span>
 
+  <span class="nt">pretrained</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
   <span class="c1"># Either boolean flag or string with that indicates whether the selected encoder architecture should load pretrained</span>
   <span class="c1"># weights or use randomly initialized weights.</span>
   <span class="c1"># - In the case of boolean flag `true` means using pretrained weights from ImageNet and `false` means using randomly</span>
   <span class="c1">#   initialized weights.</span>
   <span class="c1"># - In the case of string the value should specify the name of the weights. For the list of available weights please</span>
   <span class="c1">#   refer to https://github.com/qubvel/segmentation_models.pytorch#encoders-</span>
-  <span class="nt">pretrained</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
 
 <span class="nt">data</span><span class="p">:</span>
+  <span class="nt">dataset</span><span class="p">:</span>
+    <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataset.CityscapesSearchDataset</span>
+    <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">~/data/cityscapes/data</span>
+    <span class="nt">split</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">train</span>
   <span class="c1"># Class for the PyTorch Dataset and arguments to it. AutoAlbument will create an object of this class using</span>
   <span class="c1"># the `instantiate` method from Hydra - https://hydra.cc/docs/next/patterns/instantiate_objects/overview/.</span>
   <span class="c1">#</span>
@@ -984,18 +997,22 @@
   <span class="c1"># - Example of an absolute path:</span>
   <span class="c1"># dataset_file: /projects/pytorch/dataset.py</span>
   <span class="c1">#</span>
-  <span class="nt">dataset</span><span class="p">:</span>
-    <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataset.CityscapesSearchDataset</span>
-    <span class="nt">root</span><span class="p">:</span> <span class="s">"~/data/cityscapes/data"</span>
-    <span class="nt">split</span><span class="p">:</span> <span class="s">"train"</span>
 
+  <span class="nt">input_dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">uint8</span>
   <span class="c1"># The data type of input images. Two values are supported:</span>
   <span class="c1"># - uint8. In that case, all input images should be NumPy arrays with the np.uint8 data type and values in the range</span>
   <span class="c1">#   [0, 255].</span>
   <span class="c1"># - float32. In that case, all input images should be NumPy arrays with the np.float32 data type and values in the</span>
   <span class="c1">#   range [0.0, 1.0].</span>
-  <span class="nt">input_dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">uint8</span>
 
+  <span class="nt">preprocessing</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">LongestMaxSize</span><span class="p">:</span>
+      <span class="nt">max_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256</span>
+  <span class="p p-Indicator">-</span> <span class="nt">PadIfNeeded</span><span class="p">:</span>
+      <span class="nt">min_height</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256</span>
+      <span class="nt">min_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256</span>
+      <span class="nt">border_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">value</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">]</span>
   <span class="c1"># A list of preprocessing augmentations that will be applied to each image before applying augmentations from</span>
   <span class="c1"># a policy. A preprocessing augmentation should be defined as `key`: `value`, where `key` is the name of augmentation</span>
   <span class="c1"># from Albumentations, and `value` is a dictionary with augmentation parameters. The found policy will also apply</span>
@@ -1015,77 +1032,62 @@
   <span class="c1">#        height: 224</span>
   <span class="c1">#        width: 224</span>
   <span class="c1">#</span>
-  <span class="nt">preprocessing</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">LongestMaxSize</span><span class="p">:</span>
-        <span class="nt">max_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256</span>
-    <span class="p p-Indicator">-</span> <span class="nt">PadIfNeeded</span><span class="p">:</span>
-        <span class="nt">min_height</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256</span>
-        <span class="nt">min_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256</span>
-        <span class="nt">border_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">]</span>
 
+  <span class="nt">normalization</span><span class="p">:</span>
+    <span class="nt">mean</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0.485</span><span class="p p-Indicator">,</span> <span class="nv">0.456</span><span class="p p-Indicator">,</span> <span class="nv">0.406</span><span class="p p-Indicator">]</span>
+    <span class="nt">std</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0.229</span><span class="p p-Indicator">,</span> <span class="nv">0.224</span><span class="p p-Indicator">,</span> <span class="nv">0.225</span><span class="p p-Indicator">]</span>
   <span class="c1"># Normalization values for images. For each image, the search pipeline will subtract `mean` and divide by `std`.</span>
   <span class="c1"># Normalization is applied after transforms defined in `preprocessing`. Note that regardless of `input_dtype`,</span>
   <span class="c1"># the normalization function will always receive a `float32` input with values in the range [0.0, 1.0], so you should</span>
   <span class="c1"># define `mean` and `std` values accordingly. ImageNet normalization is used by default.</span>
-  <span class="nt">normalization</span><span class="p">:</span>
-    <span class="nt">mean</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0.485</span><span class="p p-Indicator">,</span> <span class="nv">0.456</span><span class="p p-Indicator">,</span> <span class="nv">0.406</span><span class="p p-Indicator">]</span>
-    <span class="nt">std</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0.229</span><span class="p p-Indicator">,</span> <span class="nv">0.224</span><span class="p p-Indicator">,</span> <span class="nv">0.225</span><span class="p p-Indicator">]</span>
 
-  <span class="c1"># Parameters for the PyTorch DataLoader. Please refer to the PyTorch documentation for the description of parameters -</span>
-  <span class="c1"># https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader.</span>
   <span class="nt">dataloader</span><span class="p">:</span>
     <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">torch.utils.data.DataLoader</span>
     <span class="nt">batch_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">32</span>
-    <span class="nt">shuffle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+    <span class="nt">shuffle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">num_workers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
-    <span class="nt">pin_memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-    <span class="nt">drop_last</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+    <span class="nt">pin_memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">drop_last</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="c1"># Parameters for the PyTorch DataLoader. Please refer to the PyTorch documentation for the description of parameters -</span>
+  <span class="c1"># https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader.</span>
 
 <span class="nt">optim</span><span class="p">:</span>
-  <span class="c1"># Number of epochs to search parameters of augmentations.</span>
-  <span class="nt">epochs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
-
-  <span class="c1"># Optimizer configuration for Semantic Segmentation Model</span>
   <span class="nt">main</span><span class="p">:</span>
     <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">torch.optim.Adam</span>
     <span class="nt">lr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1e-3</span>
     <span class="nt">betas</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0.999</span><span class="p p-Indicator">]</span>
+  <span class="c1"># Optimizer configuration for the main (either Classification or Semantic Segmentation) Model</span>
 
-  <span class="c1"># Optimizer configuration for Policy Model</span>
   <span class="nt">policy</span><span class="p">:</span>
     <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">torch.optim.Adam</span>
     <span class="nt">lr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1e-3</span>
     <span class="nt">betas</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0.999</span><span class="p p-Indicator">]</span>
+  <span class="c1"># Optimizer configuration for Policy Model</span>
 
-<span class="c1"># Device that will keep PyTorch Tensors and which will be used for training. Please refer to the PyTorch documentation</span>
-<span class="c1"># for more information -  https://pytorch.org/docs/stable/tensor_attributes.html#torch.torch.device.</span>
-<span class="nt">device</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cuda</span>
-
-<span class="c1"># Value for torch.backends.cudnn.benchmark</span>
-<span class="c1"># https://pytorch.org/docs/stable/notes/randomness.html#cuda-convolution-benchmarking</span>
-<span class="nt">cudnn_benchmark</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-
-<span class="c1"># If set to `True` AutoAlbument will save a checkpoint that contains states of models and optimizers at the end of each</span>
-<span class="c1"># epoch. Checkpoints will be saved to the directory `&lt;working directory&gt;/checkpoints`.</span>
-<span class="nt">save_checkpoints</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-
-<span class="c1"># Path to a PyTorch checkpoint that contains saved states of models and optimizers. The value should be an absolute path</span>
-<span class="c1"># to a file. If set, AutoAlbument will resume the searching process with data from the checkpoint.</span>
-<span class="nt">checkpoint_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
-
-<span class="c1"># Path to a directory in which AutoAlbument will save TensorBoard logs. Set the value to `null` if you want to disable</span>
-<span class="c1"># this feature.</span>
-<span class="nt">tensorboard_logs_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${config_dir:}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/tensorboard_logs</span>
-
-<span class="nt">seed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">42</span>
+<span class="nt">seed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">42</span> <span class="c1"># Random seed. If the value is not null, it will be passed to `seed_everything` -</span>
+<span class="c1"># https://pytorch-lightning.readthedocs.io/en/stable/api/pytorch_lightning.utilities.seed.html?highlight=seed_everything</span>
 
 <span class="nt">hydra</span><span class="p">:</span>
   <span class="nt">run</span><span class="p">:</span>
+    <span class="nt">dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${config_dir:}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}</span>
     <span class="c1"># Path to the directory that will contain all outputs produced by the search algorithm. `${config_dir:}` contains</span>
     <span class="c1"># path to the directory with the `search.yaml` config file. Please refer to the Hydra documentation for more</span>
     <span class="c1"># information - https://hydra.cc/docs/configure_hydra/workdir.</span>
-    <span class="nt">dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${config_dir:}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}</span>
+
+<span class="nt">trainer</span><span class="p">:</span>
+  <span class="c1"># Configuration for PyTorch Lightning Trainer. You can read more about Trainer and its arguments at</span>
+  <span class="c1"># https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html.</span>
+  <span class="nt">max_epochs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+  <span class="c1"># Number of epochs to search for augmentation parameters.</span>
+  <span class="c1"># More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#max-epochs</span>
+
+  <span class="nt">benchmark</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="c1"># If true enables cudnn.benchmark.</span>
+  <span class="c1"># More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#benchmark</span>
+
+  <span class="nt">gpus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="c1"># Number of GPUs to train on. Set to `0` or None` to use CPU for training.</span>
+  <span class="c1"># More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#gpus</span>
 </code></pre></div>
 </article>
 </div>

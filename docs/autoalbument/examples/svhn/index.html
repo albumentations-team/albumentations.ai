@@ -506,6 +506,11 @@
       FAQ
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/" title="AutoAlbument introduction and core concepts">
+      AutoAlbument introduction and core concepts
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -851,11 +856,10 @@
 <h1 id="image-classification-on-the-svhn-dataset">Image classification on the SVHN dataset<a class="headerlink" href="#image-classification-on-the-svhn-dataset" title="Permanent link">¶</a></h1>
 <p>The following files are also available on GitHub - <a href="https://github.com/albumentations-team/autoalbument/tree/master/examples/svhn" target="_blank">https://github.com/albumentations-team/autoalbument/tree/master/examples/svhn</a></p>
 <h2 id="datasetpy">dataset.py<a class="headerlink" href="#datasetpy" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torchvision</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">cv2</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
 
 <span class="n">cv2</span><span class="o">.</span><span class="n">setNumThreads</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">ocl</span><span class="o">.</span><span class="n">setUseOpenCL</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
@@ -884,7 +888,11 @@
 <h2 id="searchyaml">search.yaml<a class="headerlink" href="#searchyaml" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># @package _global_</span>
 
-<span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">classification</span>
+<span class="nt">_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>  <span class="c1"># An internal value that indicates a version of the config schema. This value is used by</span>
+<span class="c1"># `autoalbument-search` and `autoalbument-migrate` to upgrade the config to the latest version if necessary.</span>
+<span class="c1"># Please do not change it manually.</span>
+
+<span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">classification</span> <span class="c1"># Deep learning task. Should either be `classification` or `semantic_segmentation`.</span>
 
 <span class="c1"># Settings for Policy Model that searches augmentation policies.</span>
 <span class="nt">policy_model</span><span class="p">:</span>
@@ -972,7 +980,7 @@
   <span class="c1">#</span>
   <span class="nt">dataset</span><span class="p">:</span>
     <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataset.ConcatSVHNSearchDataset</span>
-    <span class="nt">root</span><span class="p">:</span> <span class="s">"~/data/svhn"</span>
+    <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">~/data/svhn</span>
     <span class="nt">download</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 
   <span class="c1"># The data type of input images. Two values are supported:</span>
@@ -1016,16 +1024,13 @@
   <span class="nt">dataloader</span><span class="p">:</span>
     <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">torch.utils.data.DataLoader</span>
     <span class="nt">batch_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">128</span>
-    <span class="nt">shuffle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+    <span class="nt">shuffle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">num_workers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
-    <span class="nt">pin_memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-    <span class="nt">drop_last</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+    <span class="nt">pin_memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">drop_last</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 
 <span class="nt">optim</span><span class="p">:</span>
   <span class="c1"># Number of epochs to search parameters of augmentations.</span>
-  <span class="nt">epochs</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">4</span>
-
-  <span class="c1"># Optimizer configuration for Classification Model</span>
   <span class="nt">main</span><span class="p">:</span>
     <span class="nt">_target_</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">torch.optim.Adam</span>
     <span class="nt">lr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1e-3</span>
@@ -1037,27 +1042,9 @@
     <span class="nt">lr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1e-3</span>
     <span class="nt">betas</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0.999</span><span class="p p-Indicator">]</span>
 
-<span class="c1"># Device that will keep PyTorch Tensors and which will be used for training. Please refer to the PyTorch documentation</span>
-<span class="c1"># for more information -  https://pytorch.org/docs/stable/tensor_attributes.html#torch.torch.device.</span>
-<span class="nt">device</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cuda</span>
+<span class="nt">seed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">42</span> <span class="c1"># Random seed. If the value is not null, it will be passed to `seed_everything` -</span>
+<span class="c1"># https://pytorch-lightning.readthedocs.io/en/stable/api/pytorch_lightning.utilities.seed.html?highlight=seed_everything</span>
 
-<span class="c1"># Value for torch.backends.cudnn.benchmark</span>
-<span class="c1"># https://pytorch.org/docs/stable/notes/randomness.html#cuda-convolution-benchmarking</span>
-<span class="nt">cudnn_benchmark</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-
-<span class="c1"># If set to `True` AutoAlbument will save a checkpoint that contains states of models and optimizers at the end of each</span>
-<span class="c1"># epoch. Checkpoints will be saved to the directory `&lt;working directory&gt;/checkpoints`.</span>
-<span class="nt">save_checkpoints</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-
-<span class="c1"># Path to a PyTorch checkpoint that contains saved states of models and optimizers. The value should be an absolute path</span>
-<span class="c1"># to a file. If set, AutoAlbument will resume the searching process with data from the checkpoint.</span>
-<span class="nt">checkpoint_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
-
-<span class="c1"># Path to a directory in which AutoAlbument will save TensorBoard logs. Set the value to `null` if you want to disable</span>
-<span class="c1"># this feature.</span>
-<span class="nt">tensorboard_logs_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${config_dir:}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/tensorboard_logs</span>
-
-<span class="nt">seed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">42</span>
 
 <span class="nt">hydra</span><span class="p">:</span>
   <span class="nt">run</span><span class="p">:</span>
@@ -1065,6 +1052,21 @@
     <span class="c1"># path to the directory with the `search.yaml` config file. Please refer to the Hydra documentation for more</span>
     <span class="c1"># information - https://hydra.cc/docs/configure_hydra/workdir.</span>
     <span class="nt">dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${config_dir:}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}</span>
+
+<span class="nt">trainer</span><span class="p">:</span>
+  <span class="c1"># Configuration for PyTorch Lightning Trainer. You can read more about Trainer and its arguments at</span>
+  <span class="c1"># https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html.</span>
+  <span class="nt">max_epochs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+  <span class="c1"># Number of epochs to search for augmentation parameters.</span>
+  <span class="c1"># More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#max-epochs</span>
+
+  <span class="nt">benchmark</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="c1"># If true enables cudnn.benchmark.</span>
+  <span class="c1"># More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#benchmark</span>
+
+  <span class="nt">gpus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="c1"># Number of GPUs to train on. Set to `0` or None` to use CPU for training.</span>
+  <span class="c1"># More detailed description - https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#gpus</span>
 </code></pre></div>
 <h2 id="modelpy">model.py<a class="headerlink" href="#modelpy" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="sd">"""WideResNet code from https://github.com/xternalz/WideResNet-pytorch"""</span>

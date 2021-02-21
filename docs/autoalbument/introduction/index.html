@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Albumentations: fast and flexible image augmentations" name="description"/>
-<link href="https://albumentations.ai/docs/getting_started/installation/" rel="canonical"/>
+<link href="https://albumentations.ai/docs/autoalbument/introduction/" rel="canonical"/>
 <link href="../../images/logo.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-5.5.0" name="generator"/>
-<title>Installation - Albumentations Documentation</title>
+<title>AutoAlbument introduction and core concepts - Albumentations Documentation</title>
 <link href="../../assets/stylesheets/main.b5d04df8.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.9ab2c1f8.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
@@ -22,13 +22,13 @@
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <meta content="website" property="og:type"/>
-<meta content="Albumentations Documentation - Installation" property="og:title"/>
+<meta content="Albumentations Documentation - AutoAlbument introduction and core concepts" property="og:title"/>
 <meta content="Albumentations: fast and flexible image augmentations" property="og:description"/>
-<meta content="https://albumentations.ai/docs/getting_started/installation/" property="og:url"/>
+<meta content="https://albumentations.ai/docs/autoalbument/introduction/" property="og:url"/>
 <meta content="https://albumentations.ai/docs/images/albumentations_card.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Albumentations Documentation - Installation" name="twitter:title"/>
+<meta content="Albumentations Documentation - AutoAlbument introduction and core concepts" name="twitter:title"/>
 <meta content="Albumentations: fast and flexible image augmentations" name="twitter:description"/>
 <meta content="https://albumentations.ai/docs/images/albumentations_card.png" name="twitter:image"/>
 </head>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#installation">
+<a class="md-skip" href="#autoalbument-introduction-and-core-concepts">
           Skip to content
         </a>
 </div>
@@ -196,8 +196,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-3">
       Getting started with Albumentations
       <span class="md-nav__icon md-icon">
@@ -212,75 +212,43 @@
         Getting started with Albumentations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Installation
-        <span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
-</span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Installation">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting_started/installation/" title="Installation">
       Installation
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#install-the-latest-stable-version-from-pypi">
-    Install the latest stable version from PyPI
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-the-latest-version-from-the-master-branch-on-github">
-    Install the latest version from the master branch on GitHub
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#install-the-latest-stable-version-from-conda-forge">
-    Install the latest stable version from conda-forge
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../image_augmentation/" title="Image augmentation for classification">
+<a class="md-nav__link" href="../../getting_started/image_augmentation/" title="Image augmentation for classification">
       Image augmentation for classification
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mask_augmentation/" title="Mask augmentation for segmentation">
+<a class="md-nav__link" href="../../getting_started/mask_augmentation/" title="Mask augmentation for segmentation">
       Mask augmentation for segmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
+<a class="md-nav__link" href="../../getting_started/bounding_boxes_augmentation/" title="Bounding boxes augmentation for object detection">
       Bounding boxes augmentation for object detection
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../keypoints_augmentation/" title="Keypoints augmentation">
+<a class="md-nav__link" href="../../getting_started/keypoints_augmentation/" title="Keypoints augmentation">
       Keypoints augmentation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
+<a class="md-nav__link" href="../../getting_started/simultaneous_augmentation/" title="Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints">
       Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../transforms_and_targets/" title="A list of transforms and their supported targets">
+<a class="md-nav__link" href="../../getting_started/transforms_and_targets/" title="A list of transforms and their supported targets">
       A list of transforms and their supported targets
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
+<a class="md-nav__link" href="../../getting_started/setting_probabilities/" title="Setting probabilities for transforms in an augmentation pipeline">
       Setting probabilities for transforms in an augmentation pipeline
     </a>
 </li>
@@ -391,8 +359,8 @@
       Frequently Asked Questions
     </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
 <label class="md-nav__link" for="nav-6">
       AutoAlbument - AutoML for Image Augmentation
       <span class="md-nav__icon md-icon">
@@ -408,42 +376,42 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/" title="AutoAlbument Overview">
+<a class="md-nav__link" href="../" title="AutoAlbument Overview">
       AutoAlbument Overview
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/benchmarks/" title="Benchmarks and a comparison with baseline augmentation strategies">
+<a class="md-nav__link" href="../benchmarks/" title="Benchmarks and a comparison with baseline augmentation strategies">
       Benchmarks and a comparison with baseline augmentation strategies
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/installation/" title="Installation">
+<a class="md-nav__link" href="../installation/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/how_to_use/" title="How to use AutoAlbument">
+<a class="md-nav__link" href="../how_to_use/" title="How to use AutoAlbument">
       How to use AutoAlbument
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/docker/" title="How to use an AutoAlbument Docker image">
+<a class="md-nav__link" href="../docker/" title="How to use an AutoAlbument Docker image">
       How to use an AutoAlbument Docker image
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/custom_model/" title="How to use a custom classification or semantic segmentation model">
+<a class="md-nav__link" href="../custom_model/" title="How to use a custom classification or semantic segmentation model">
       How to use a custom classification or semantic segmentation model
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/metrics/" title="Metrics and their meaning">
+<a class="md-nav__link" href="../metrics/" title="Metrics and their meaning">
       Metrics and their meaning
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/tuning_parameters/" title="Tuning the search parameters">
+<a class="md-nav__link" href="../tuning_parameters/" title="Tuning the search parameters">
       Tuning the search parameters
     </a>
 </li>
@@ -464,32 +432,32 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/list/" title="List of examples">
+<a class="md-nav__link" href="../examples/list/" title="List of examples">
       List of examples
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/cifar10/" title="Image classification on the CIFAR10 dataset">
+<a class="md-nav__link" href="../examples/cifar10/" title="Image classification on the CIFAR10 dataset">
       Image classification on the CIFAR10 dataset
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/svhn/" title="Image classification on the SVHN dataset">
+<a class="md-nav__link" href="../examples/svhn/" title="Image classification on the SVHN dataset">
       Image classification on the SVHN dataset
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/imagenet/" title="Image classification on the ImageNet dataset">
+<a class="md-nav__link" href="../examples/imagenet/" title="Image classification on the ImageNet dataset">
       Image classification on the ImageNet dataset
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/pascal_voc/" title="Semantic segmentation on the Pascal VOC dataset">
+<a class="md-nav__link" href="../examples/pascal_voc/" title="Semantic segmentation on the Pascal VOC dataset">
       Semantic segmentation on the Pascal VOC dataset
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/examples/cityscapes/" title="Semantic segmentation on the Pascal VOC dataset">
+<a class="md-nav__link" href="../examples/cityscapes/" title="Semantic segmentation on the Pascal VOC dataset">
       Semantic segmentation on the Pascal VOC dataset
     </a>
 </li>
@@ -497,19 +465,60 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/search_algorithms/" title="Search algorithms">
+<a class="md-nav__link" href="../search_algorithms/" title="Search algorithms">
       Search algorithms
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/faq/" title="FAQ">
+<a class="md-nav__link" href="../faq/" title="FAQ">
       FAQ
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../autoalbument/introduction/" title="AutoAlbument introduction and core concepts">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        AutoAlbument introduction and core concepts
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="AutoAlbument introduction and core concepts">
       AutoAlbument introduction and core concepts
     </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-autoalbument">
+    What is AutoAlbument
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-use-autoalbument">
+    How to use AutoAlbument
+  </a>
+<nav aria-label="How to use AutoAlbument" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hydra">
+    Hydra
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pytorch-lightning">
+    PyTorch Lightning
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -850,22 +859,53 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/getting_started/installation.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/autoalbument/introduction.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h1>
-<p>Albumentations requires Python 3.6 or higher.</p>
-<h2 id="install-the-latest-stable-version-from-pypi">Install the latest stable version from PyPI<a class="headerlink" href="#install-the-latest-stable-version-from-pypi" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>pip install -U albumentations
+<h1 id="autoalbument-introduction-and-core-concepts">AutoAlbument introduction and core concepts<a class="headerlink" href="#autoalbument-introduction-and-core-concepts" title="Permanent link">¶</a></h1>
+<h2 id="what-is-autoalbument">What is AutoAlbument<a class="headerlink" href="#what-is-autoalbument" title="Permanent link">¶</a></h2>
+<p>AutoAlbument is a tool that automatically searches for the best augmentation policies for your data.</p>
+<p>Under the hood, it uses the <a href="https://arxiv.org/abs/1911.06987" target="_blank">Faster AutoAugment algorithm</a>. Briefly speaking, the idea is to use a GAN-like architecture in which Generator applies augmentation to some input images, and Discriminator must determine whether an image was or wasn't augmented. This process helps to find augmentation policies that will produce images similar to the original images.</p>
+<h2 id="how-to-use-autoalbument">How to use AutoAlbument<a class="headerlink" href="#how-to-use-autoalbument" title="Permanent link">¶</a></h2>
+<p>To use AutoAlbument, you need to define two things: a PyTorch Dataset for your data and configuration parameters for AutoAlbument. You can read the detailed instruction in the <a href="https://albumentations.ai/docs/autoalbument/how_to_use/">How to use AutoAlbument</a> article.</p>
+<p>Internally AutoAlbument uses <a href="https://www.pytorchlightning.ai/" target="_blank">PyTorch Lightning</a> for training a GAN and <a href="https://hydra.cc/" target="_blank">Hydra</a> for handling configuration parameters.</p>
+<p>Here are a few things about AutoAlbument and Hydra.</p>
+<h3 id="hydra">Hydra<a class="headerlink" href="#hydra" title="Permanent link">¶</a></h3>
+<p>The main internal configuration file is located at <a href="https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf/config.yaml" target="_blank">autoalbument/cli/conf/config.yaml</a></p>
+<p>Here is its content:</p>
+<div class="highlight"><pre><span></span><code>defaults:
+ - _version
+ - task
+ - policy_model: default
+ - classification_model: default
+ - semantic_segmentation_model: default
+ - data: default
+ - searcher: default
+ - trainer: default
+ - optim: default
+ - callbacks: default
+ - logger: default
+ - hydra: default
+ - seed
+ - search
 </code></pre></div>
-<h2 id="install-the-latest-version-from-the-master-branch-on-github">Install the latest version from the master branch on GitHub<a class="headerlink" href="#install-the-latest-version-from-the-master-branch-on-github" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>pip install -U git+https://github.com/albumentations-team/albumentations
+<p>Basically, it includes a bunch of config files with default values. Those config files are split into sets of closely related parameters such as model parameters or optimizer parameters. All default config files are located in their respective directories inside <a href="https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf/config.yaml" target="_blank">autoalbument/cli/conf</a></p>
+<p>The main config file also includes the <code>search.yaml</code> file, which you will use for overriding default parameters for your specific dataset and task (you can read more about creating the <code>search.yaml</code> file with <code>autoalbument-create</code> in <a href="../how_to_use/">How to use AutoAlbument</a>)</p>
+<p>To allow great flexibility, AutoAlbument relies heavily on the <a href="https://hydra.cc/docs/patterns/instantiate_objects/overview" target="_blank"><code>instantiate</code> function</a> from Hydra. This function allows to define a path to a Python class in a YAML config (using the <code>_target_</code> parameter) along with arguments to that class, and Hydra will create an instance of this class with the provided arguments.</p>
+<p>As a practice example, if a config contains a definition like this:</p>
+<div class="highlight"><pre><span></span><code>_target_: autoalbument.faster_autoaugment.models.ClassificationModel
+num_classes: 10
+architecture: resnet18
+pretrained: False
 </code></pre></div>
-<h2 id="install-the-latest-stable-version-from-conda-forge">Install the latest stable version from conda-forge<a class="headerlink" href="#install-the-latest-stable-version-from-conda-forge" title="Permanent link">¶</a></h2>
-<p>If you are using Anaconda or Miniconda you can install Albumentations from conda-forge:</p>
-<div class="highlight"><pre><span></span><code>conda install -c conda-forge imgaug
-conda install -c conda-forge albumentations
+<p>AutoAlbument will translate it approximately to the following call:</p>
+<div class="highlight"><pre><span></span><code>from autoalbument.faster_autoaugment.models import ClassificationModel
+
+model = ClassificationModel(num_classes=10, architecture='resnet18', pretrained=False)
 </code></pre></div>
+<p>By relying on this feature, AutoAlbument allows customizing its behavior without changing the library's internal code.</p>
+<h3 id="pytorch-lightning">PyTorch Lightning<a class="headerlink" href="#pytorch-lightning" title="Permanent link">¶</a></h3>
+<p>AutoAlbument relies on PyTorch Lightning to train a GAN. In AutoAlbument configs, you can configure PyTorch Lightning by passing the appropriate arguments to <a href="https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html" target="_blank">Trainer</a> through the <a href="https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf/trainer/default.yaml" target="_blank"><code>trainer</code> config</a> or defining a list of <a href="https://pytorch-lightning.readthedocs.io/en/stable/extensions/callbacks.html" target="_blank">Callbacks</a> through the <a href="https://github.com/albumentations-team/autoalbument/blob/master/autoalbument/cli/conf/callbacks/default.yaml" target="_blank"><code>callbacks</code> config</a>.</p>
 </article>
 </div>
 </div>
@@ -897,7 +937,7 @@ conda install -c conda-forge albumentations
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
 <!-- Link to previous page -->
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../introduction/why_albumentations/" rel="prev" title="Why Albumentations">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../faq/" rel="prev" title="FAQ">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -906,18 +946,18 @@ conda install -c conda-forge albumentations
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Why Albumentations
+                FAQ
               </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../image_augmentation/" rel="next" title="Image augmentation for classification">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../experimental/overview/" rel="next" title="Albumentations Experimental Overview">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Image augmentation for classification
+                Albumentations Experimental Overview
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
