@@ -15,7 +15,7 @@ pip install -U git+https://github.com/albumentations-team/albumentations
 
 ### Note on OpenCV dependencies
 
-By default, pip downloads a wheel distribution of Albumentations. This distribution has `opencv-python-headless` as its dependency. However, Albumentations also depends on imgaug, which has `opencv-python` (non-headless-version) as its dependency. Because of this dependency clash, you will get both `opencv-python-headless` and `opencv-python`  installed in your Python environment.
+By default, pip downloads a wheel distribution of Albumentations. This distribution has `opencv-python-headless` as its dependency. However, Albumentations also depends on [imgaug](https://github.com/aleju/imgaug), which has `opencv-python` (non-headless-version) as its dependency. Because of this dependency clash, you will get both `opencv-python-headless` and `opencv-python`  installed in your Python environment.
 
 In future versions, we plan to get rid of imgaug as a dependency, and Albumentations will require only `opencv-python-headless` as its dependency.
 
