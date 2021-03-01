@@ -231,6 +231,7 @@
         "author_links": {
             "A Signoroni": "https://scholar.google.com/citations?user=VQOouzYAAAAJ&hl=en&oi=sra",
             "M Savardi": "https://scholar.google.com/citations?user=fEPYwtAAAAAJ&hl=en&oi=sra",
+            "S Benini": "https://scholar.google.com/citations?user=c6i8ohYAAAAJ&hl=en&oi=sra",
             "N Adami": "https://scholar.google.com/citations?user=PcnfXmkAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -539,7 +540,7 @@
         "abstract": "Currently, on the market, there are mobile devices that are capable of reading a person's single-lead electrocardiogram (ECG). These ECGs can be used to solve problems of determining various diseases. Neural networks are onearameters of augmentations of the …"
     },
     {
-        "title": "Deep learning and conformal prediction for hierarchical analysis of large-scale whole-slide tissue images",
+        "title": "Deep learning with conformal prediction for hierarchical analysis of large-scale whole-slide tissue images",
         "url": "https://ieeexplore.ieee.org/abstract/document/9103229/",
         "author_links": {
             "H Wieslander": "https://scholar.google.com/citations?user=PLJ8O9MAAAAJ&hl=en&oi=sra",
@@ -551,7 +552,7 @@
             "PJ Harrison",
             "G Skogberg"
         ],
-        "abstract": "With the increasing amount of image data collected from biomedical experiments there is an urgent need for smarter and more effective analysis methods. Many scientific questions require analysis of image subregions related to some specific biology. Finding such regions …",
+        "abstract": "With the increasing amount of image data collected from biomedical experiments there is an urgent need for smarter and more effective analysis methods. Many scientific questions require analysis of image sub-regions related to some specific biology. Finding such regions …",
         "eprint": "https://ieeexplore.ieee.org/iel7/6221020/9348958/09103229.pdf"
     },
     {
@@ -1439,6 +1440,21 @@
         "abstract": "Magnetic resonance imaging (MRI) stays one of the most essential noninvasive methods for brain diagnostics. It allows obtaining the detailed 3D image of the brain, including various types of soft tissues. In this paper, we compare the influence of the multichannel data …"
     },
     {
+        "title": "Feature-based image registration in structured light endoscopy",
+        "url": "https://openreview.net/forum?id=MzC8X6cMF2r",
+        "author_links": {
+            "M Döllinger": "https://scholar.google.com/citations?user=eNmasPAAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "AM Kist",
+            "J Zilker",
+            "M Döllinger",
+            "M Semmler"
+        ],
+        "abstract": "Images offer a two-dimensional (2D) representation of a three-dimensional (3D) environment. However, in many biomedical tasks, a 3D view is crucial for diagnosis. Projecting structured light, such as a regular laser grid, onto the surface of interest allows to …",
+        "eprint": "https://openreview.net/pdf?id=MzC8X6cMF2r"
+    },
+    {
         "title": "DCNN-based Screw Classification in Automated Disassembly Processes",
         "url": "https://www.researchgate.net/profile/Erenus_Yildiz/publication/345997358_DCNN-based_Screw_Classification_in_Automated_Disassembly_Processes/links/5fb500f2a6fdcc9ae05f1e54/DCNN-based-Screw-Classification-in-Automated-Disassembly-Processes.pdf",
         "author_links": {},
@@ -1536,18 +1552,16 @@
     },
     {
         "title": "Efficient Palm-Line Segmentation with U-Net Context Fusion Module",
-        "url": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9353055/",
         "author_links": {
             "TP Van": "https://scholar.google.com/citations?user=eOgnP7UAAAAJ&hl=en&oi=sra",
-            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra",
-            "TM Thanh": "https://scholar.google.com/citations?user=_dREcUEAAAAJ&hl=en&oi=sra"
+            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "TP Van",
             "ST Nguyen",
             "LB Doan",
-            "NN Tran",
-            "TM Thanh"
+            "NN Tran"
         ],
         "abstract": "Many cultures around the world believe that palm reading can be used to predict the future life of a person. Palmistry uses features of the hand such as palm lines, hand shape, or fingertip position. However, the research on palm-line detection is still scarce, many of them …",
         "eprint": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf"
@@ -1632,6 +1646,24 @@
         ],
         "abstract": "Power transmission network physically connects the power generators to the electric consumers extending over hundreds of kilometers. There are many components in the transmission infrastructure that requires a proper inspection to guarantee flawless …",
         "eprint": "https://arxiv.org/pdf/2009.10163"
+    },
+    {
+        "title": "FlashNeuron: SSD-Enabled Large-Batch Training of Very Deep Neural Networks",
+        "url": "https://www.usenix.org/conference/fast21/presentation/bae",
+        "author_links": {
+            "J Bae": "https://scholar.google.com/citations?user=Zn90onwAAAAJ&hl=en&oi=sra",
+            "H Jang": "https://scholar.google.com/citations?user=Wh4rwJEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Bae",
+            "J Lee",
+            "Y Jin",
+            "S Son",
+            "S Kim",
+            "H Jang"
+        ],
+        "abstract": "Deep neural networks (DNNs) are widely used in various AI application domains such as computer vision, natural language processing, autonomous driving, and bioinformatics. As DNNs continue to get wider and deeper to improve accuracy, the limited DRAM capacity of a …",
+        "eprint": "https://www.usenix.org/system/files/fast21-bae.pdf"
     },
     {
         "title": "Landslide Segmentation with U-Net: Evaluating Different Sampling Methods and Patch Sizes",
@@ -1735,7 +1767,7 @@
         "title": "A Flatter Loss for Bias Mitigation in Cross-dataset Facial Age Estimation",
         "url": "https://arxiv.org/abs/2010.10368",
         "author_links": {
-            "M Awais": "https://scholar.google.com/citations?user=QQtVaygAAAAJ&hl=en&oi=sra",
+            "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra",
             "ZH Feng": "https://scholar.google.com/citations?user=Y6KtijIAAAAJ&hl=en&oi=sra",
             "A Farooq": "https://scholar.google.com/citations?user=VrjcaiYAAAAJ&hl=en&oi=sra"
         },
@@ -2154,6 +2186,21 @@
         "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Vey-Roman_188561_assignsubmission_file_Bachelor_Thesis_Roman_Vei.pdf"
     },
     {
+        "title": "MaskHunter: real-time object detection of face masks during the COVID-19 pandemic",
+        "url": "https://digital-library.theiet.org/content/journals/10.1049/iet-ipr.2020.1119",
+        "author_links": {
+            "H Qu": "https://scholar.google.com/citations?user=Y25xAVMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Z Cao",
+            "M Shao",
+            "L Xu",
+            "S Mu",
+            "H Qu"
+        ],
+        "abstract": "Due to the COVID-19 pandemic at present, it is necessary to detect whether pedestrians in public places wear face masks or not for preventing the spread of novel coronavirus. The pedestrian flow in public places is large, and it puts forward higher requirements for the …"
+    },
+    {
         "title": "SEGMENTATION OF CLOUD PATTERNS FROM SATELLITE IMAGES TO IMPROVE CLIMATE MODELS",
         "url": "https://www.ds3-datascience-polytechnique.fr/wp-content/uploads/2021/01/10.pdf",
         "author_links": {
@@ -2183,7 +2230,8 @@
         "title": "Robust Skin Disease Classification by Distilling Deep Neural Network Ensemble for the Mobile Diagnosis of Herpes Zoster",
         "url": "https://ieeexplore.ieee.org/abstract/document/9335582/",
         "author_links": {
-            "S Back": "https://scholar.google.com/citations?user=N9dLZH4AAAAJ&hl=en&oi=sra"
+            "S Back": "https://scholar.google.com/citations?user=N9dLZH4AAAAJ&hl=en&oi=sra",
+            "S Shin": "https://scholar.google.com/citations?user=-O_DjyEAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "S Back",
@@ -2220,6 +2268,18 @@
             "L Zhang"
         ],
         "abstract": "The problem of semi-supervised video object segmentation has been popularly tackled by fine-tuning a general-purpose segmentation deep network on the annotated frame using hundreds of iterations of gradient descent. The time-consuming fine-tuning process …"
+    },
+    {
+        "title": "CrackWeb: A modified U-Net based segmentation architecture for crack detection",
+        "url": "https://iopscience.iop.org/article/10.1088/1757-899X/1080/1/012002/meta",
+        "author_links": {},
+        "author": [
+            "S Ghosh",
+            "S Singh",
+            "A Maity"
+        ],
+        "abstract": "Classical image processing methods demands heavy feature engineering, as well as they are not that precise, when it comes to manual extraction of relevant features in real life scenarios amid to various lighting conditions and other factors. Thus, detection of cracks …",
+        "eprint": "https://iopscience.iop.org/article/10.1088/1757-899X/1080/1/012002/pdf"
     },
     {
         "title": "Detecting subsurface drainage pipes using a fully convolutional network with optical images",
@@ -2279,7 +2339,8 @@
             "T Wesemeyer",
             "ML Jauer"
         ],
-        "abstract": "For medical image segmentation, deep learning approaches using convolutional neural networks (CNNs) are currently superseding classical methods. For good accuracy, large annotated training data sets are required. As expert annotations are costly to acquire …"
+        "abstract": "For medical image segmentation, deep learning approaches using convolutional neural networks (CNNs) are currently superseding classical methods. For good accuracy, large annotated training data sets are required. As expert annotations are costly to acquire …",
+        "eprint": "https://plri.de/content/6-team/thomas-deserno/bibliografieliste/2021_02_Proc_SPIE_Annotation_quality_v/116010C.pdf"
     },
     {
         "title": "On the Accuracy of CRNNs for Line-Based OCR: A Multi-Parameter Evaluation",
@@ -2389,6 +2450,21 @@
         ],
         "abstract": "Building extraction from aerial images has several applications in problems such as urban planning, change detection, and disaster management. With the increasing availability of data, Convolutional Neural Networks (CNNs) for semantic segmentation of remote sensing …",
         "eprint": "https://arxiv.org/pdf/2004.07018"
+    },
+    {
+        "title": "HISTOPATHOLOGY LEARNING DATASET AUGMENTATION: A HYBRID APPROACH",
+        "url": "https://openreview.net/forum?id=YeiG38i32G2",
+        "author_links": {
+            "T Delzescaux": "https://scholar.google.com/citations?user=gQUvfhwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R HAMDI",
+            "C Bouvier",
+            "T Delzescaux",
+            "C Clouchoux"
+        ],
+        "abstract": "In histopathology, staining quantification is a mandatory step to unveil and characterize disease progression and assess drug efficiency in preclinical and clinical settings. Supervised Machine Learning (SML) algorithms allow the automation of such tasks but rely …",
+        "eprint": "https://openreview.net/pdf?id=YeiG38i32G2"
     },
     {
         "title": "Refinement Network for unsupervised on the scene Foreground Segmentation",
@@ -2577,6 +2653,21 @@
         ],
         "abstract": "Coupled with the availability of large scale datasets, deep learning architectures have enabled rapid progress on the Question Answering task. However, most of those datasets are in English, and the performances of state-of-the-art multilingual models are significantly …",
         "eprint": "https://arxiv.org/pdf/2010.12643"
+    },
+    {
+        "title": "3DeepM: An Ad Hoc Architecture Based on Deep Learning Methods for Multispectral Image Classification",
+        "url": "https://www.mdpi.com/1001116",
+        "author_links": {
+            "PJ Navarro": "https://scholar.google.com/citations?user=tDxlWOkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "PJ Navarro",
+            "L Miller",
+            "A Gila-Navarro",
+            "MV Díaz-Galián"
+        ],
+        "abstract": "Current predefined architectures for deep learning are computationally very heavy and use tens of millions of parameters. Thus, computational costs may be prohibitive for many experimental or technological setups. We developed an ad hoc architecture for the …",
+        "eprint": "https://www.mdpi.com/2072-4292/13/4/729/pdf"
     },
     {
         "title": "Faster R-CNN model learning on synthetic images",
