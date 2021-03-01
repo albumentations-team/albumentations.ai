@@ -960,6 +960,13 @@ transform = A.Compose(
 </p></div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+<strong>Note</strong>: there is also an alternative way to apply the same augmentation to multiple inputs such as images, masks, etc.</div></div></p>
+<p><code>ReplayCompose</code> is a tool that could record augmentation parameters applied to one set of inputs (e.g., an image and an associated mask) and then use the recorded values to augment another set of inputs in the same way.</p>
+<p>You can read more about <code>ReplayCompose</code> <a href="https://albumentations.ai/docs/examples/replay/">here</a>.
+</p></div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></div></div></p>
 <h3 id="import-the-required-libraries">Import the required libraries<a class="headerlink" href="#import-the-required-libraries" title="Permanent link">¶</a></h3>
 <p></p></div>
