@@ -936,6 +936,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.transforms.Superpixels">
+    Superpixels
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.transforms.ToFloat">
     ToFloat
   </a>
@@ -3886,6 +3891,99 @@ visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p>
     image</p>
 <p>Image types:
     any</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.transforms.Superpixels">
+<code>class <strong>albumentations.augmentations.transforms.Superpixels</strong></code>
+<code>
+<span class="p">(</span><span class="n">p_replace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">n_segments</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">max_size</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3001" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.transforms.Superpixels" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Transform images parially/completely to their superpixel representation.
+This implementation uses skimage's version of the SLIC algorithm.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_replace</code></td>
+<td><code>float or tuple of float</code></td>
+<td>
+<p>Defines for any segment the probability that the pixels within that
+segment are replaced by their average color (otherwise, the pixels are not changed).
+Examples:
+    * A probability of <code>0.0</code> would mean, that the pixels in no
+      segment are replaced by their average color (image is not
+      changed at all).
+    * A probability of <code>0.5</code> would mean, that around half of all
+      segments are replaced by their average color.
+    * A probability of <code>1.0</code> would mean, that all segments are
+      replaced by their average color (resulting in a voronoi
+      image).
+Behaviour based on chosen data types for this parameter:
+    * If a <code>float</code>, then that <code>flat</code> will always be used.
+    * If <code>tuple</code> <code>(a, b)</code>, then a random probability will be
+      sampled from the interval <code>[a, b]</code> per image.</p>
+</td>
+</tr>
+<tr>
+<td><code>n_segments</code></td>
+<td><code>int, or tuple of int</code></td>
+<td>
+<p>Rough target number of how many superpixels to generate (the algorithm
+may deviate from this number). Lower value will lead to coarser superpixels.
+Higher values are computationally more intensive and will hence lead to a slowdown
+* If a single <code>int</code>, then that value will always be used as the
+  number of segments.
+* If a <code>tuple</code> <code>(a, b)</code>, then a value from the discrete
+  interval <code>[a..b]</code> will be sampled per image.</p>
+</td>
+</tr>
+<tr>
+<td><code>max_size</code></td>
+<td><code>int or None</code></td>
+<td>
+<p>Maximum image size at which the augmentation is performed.
+If the width or height of an image exceeds this value, it will be
+downscaled before the augmentation so that the longest side matches <code>max_size</code>.
+This is done to speed up the process. The final output image has the same size as the input image.
+Note that in case <code>p_replace</code> is below <code>1.0</code>,
+the down-/upscaling will affect the not-replaced pixels too.
+Use <code>None</code> to apply no down-/upscaling.</p>
+</td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image</p>
 <div class="doc doc-children">
 </div>
 </div>
