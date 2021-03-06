@@ -24,7 +24,7 @@ Some classical computer vision algorithms, such as SIFT, may use four values to 
 ![A keypoint may also has associated scale and angle values.](../images/getting_started/augmenting_keypoints/keypoint_with_scale_and_angle.png "A keypoint may also has associated scale and angle values.")
 **A keypoint may also has associated scale and angle values**
 
-Keypoint angles are counter-clockwise. For example, in the following image, the angle value is 65°. You can read more about angles of rotation in the [Wikipedia article](https://en.wikipedia.org/wiki/Angle_of_rotation).
+Keypoint angles are counter-clockwise. For example, in the following image, the angle value is 65°. You can read more about angle of rotation in the [Wikipedia article](https://en.wikipedia.org/wiki/Angle_of_rotation).
 ![Keypoints angles are counter-clockwise.](../images/getting_started/augmenting_keypoints/keypoint_angle.png "Keypoints angles are counter-clockwise")
 
 
