@@ -16,22 +16,6 @@
         "eprint": "https://arxiv.org/pdf/1803.01207"
     },
     {
-        "title": "AutoML: A Survey of the State-of-the-Art",
-        "url": "https://www.sciencedirect.com/science/article/pii/S0950705120307516",
-        "author_links": {
-            "X He": "https://scholar.google.com/citations?user=uK-aRUsAAAAJ&hl=en&oi=sra",
-            "K Zhao": "https://scholar.google.com/citations?user=j9u-fwpgKxQC&hl=en&oi=sra",
-            "X Chu": "https://scholar.google.com/citations?user=v4rX24EAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "X He",
-            "K Zhao",
-            "X Chu"
-        ],
-        "abstract": "Deep learning (DL) techniques have obtained remarkable achievements on various tasks, such as image recognition, object detection, and language modeling. However, building a high-quality DL system for a specific task highly relies on human expertise, hindering its …",
-        "eprint": "https://arxiv.org/pdf/1908.00709"
-    },
-    {
         "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
         "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html",
         "author_links": {
@@ -46,6 +30,22 @@
         ],
         "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
         "eprint": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
+    },
+    {
+        "title": "AutoML: A Survey of the State-of-the-Art",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0950705120307516",
+        "author_links": {
+            "X He": "https://scholar.google.com/citations?user=uK-aRUsAAAAJ&hl=en&oi=sra",
+            "K Zhao": "https://scholar.google.com/citations?user=j9u-fwpgKxQC&hl=en&oi=sra",
+            "X Chu": "https://scholar.google.com/citations?user=v4rX24EAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "X He",
+            "K Zhao",
+            "X Chu"
+        ],
+        "abstract": "Deep learning (DL) techniques have obtained remarkable achievements on various tasks, such as image recognition, object detection, and language modeling. However, building a high-quality DL system for a specific task highly relies on human expertise, hindering its …",
+        "eprint": "https://arxiv.org/pdf/1908.00709"
     },
     {
         "title": "Angiodysplasia detection and localization using deep convolutional neural networks",
@@ -538,22 +538,6 @@
             "V Guryanova"
         ],
         "abstract": "Currently, on the market, there are mobile devices that are capable of reading a person's single-lead electrocardiogram (ECG). These ECGs can be used to solve problems of determining various diseases. Neural networks are onearameters of augmentations of the …"
-    },
-    {
-        "title": "Deep learning with conformal prediction for hierarchical analysis of large-scale whole-slide tissue images",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9103229/",
-        "author_links": {
-            "H Wieslander": "https://scholar.google.com/citations?user=PLJ8O9MAAAAJ&hl=en&oi=sra",
-            "PJ Harrison": "https://scholar.google.com/citations?user=vt1vYnEAAAAJ&hl=en&oi=sra",
-            "G Skogberg": "https://scholar.google.com/citations?user=aW-wT6AAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "H Wieslander",
-            "PJ Harrison",
-            "G Skogberg"
-        ],
-        "abstract": "With the increasing amount of image data collected from biomedical experiments there is an urgent need for smarter and more effective analysis methods. Many scientific questions require analysis of image sub-regions related to some specific biology. Finding such regions …",
-        "eprint": "https://ieeexplore.ieee.org/iel7/6221020/9348958/09103229.pdf"
     },
     {
         "title": "Identifying melanoma images using efficientnet ensemble: Winning solution to the siim-isic melanoma classification challenge",
@@ -1526,9 +1510,7 @@
     {
         "title": "Refinement network for unsupervised on the scene foreground segmentation",
         "url": "https://upcommons.upc.edu/handle/2117/332324",
-        "author_links": {
-            "M Pardàs Feliu": "https://scholar.google.com/citations?user=bLc4qKsAAAAJ&hl=en&oi=sra"
-        },
+        "author_links": {},
         "author": [
             "M Pardàs Feliu",
             "G Canet Tarrés"
@@ -1552,16 +1534,18 @@
     },
     {
         "title": "Efficient Palm-Line Segmentation with U-Net Context Fusion Module",
-        "url": "https://ieeexplore.ieee.org/abstract/document/9353055/",
+        "url": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf",
         "author_links": {
             "TP Van": "https://scholar.google.com/citations?user=eOgnP7UAAAAJ&hl=en&oi=sra",
-            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra"
+            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra",
+            "TM Thanh": "https://scholar.google.com/citations?user=_dREcUEAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "TP Van",
             "ST Nguyen",
             "LB Doan",
-            "NN Tran"
+            "NN Tran",
+            "TM Thanh"
         ],
         "abstract": "Many cultures around the world believe that palm reading can be used to predict the future life of a person. Palmistry uses features of the hand such as palm lines, hand shape, or fingertip position. However, the research on palm-line detection is still scarce, many of them …",
         "eprint": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf"
@@ -1882,6 +1866,16 @@
         "abstract": "Currency classification is an important task in computer vision. Traditional models extract relevant features (brightness, shape, colour etc.) through complex mathematical calculations. A deep learning approach towards fiscal classification by automatically …"
     },
     {
+        "title": "机器视觉应用中的图像数据增广综述",
+        "url": "http://fcst.ceaj.org/CN/article/downloadArticleFile.do?attachType=PDF&id=2587",
+        "author_links": {},
+        "author": [
+            "林成创， 单纯， 赵淦森"
+        ],
+        "abstract": "深度学习是目前机器视觉的前沿解决方案, 而海量高质量的训练数据集是深度学习解决机器视觉问题的基本保障. 收集和准确标注图像数据集是一个极其费时且代价昂贵的过程. 随着机器视觉的广泛应用, 这个问题将会越来越突出. 图像增广技术是一种有效解决深度学习在 …",
+        "eprint": "http://fcst.ceaj.org/CN/article/downloadArticleFile.do?attachType=PDF&id=2587"
+    },
+    {
         "title": "CASS Studies",
         "url": "http://heb-nic.in/cass/admin/freePDF/dws6odv8fhlttmd09r27.pdf",
         "author_links": {},
@@ -2166,6 +2160,20 @@
         "abstract": "Rust diseases of cereals are caused by pathogenic fungi and can significantly reduce plant productivity. Many cultures are subject to them. The disease is difficult to control on a large scale, so one of the most relevant approaches is crop monitoring, which helps to identify the …"
     },
     {
+        "title": "3DeepM: An Ad Hoc Architecture Based on Deep Learning Methods for Multispectral Image Classification. Remote Sens. 2021, 13, 729",
+        "url": "https://search.proquest.com/openview/922ed2ba51c4d3f00c343d5d3d2d5959/1?pq-origsite=gscholar&cbl=2032338",
+        "author_links": {
+            "PJ Navarro": "https://scholar.google.com/citations?user=tDxlWOkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "PJ Navarro",
+            "L Miller",
+            "A Gila-Navarro",
+            "MV Díaz-Galián"
+        ],
+        "abstract": "Current predefined architectures for deep learning are computationally very heavy and use tens of millions of parameters. Thus, computational costs may be prohibitive for many experimental or technological setups. We developed an ad hoc architecture for the …"
+    },
+    {
         "title": "Working with scale: 2nd place solution to Product Detection in Densely Packed Scenes [Technical Report]",
         "url": "https://arxiv.org/abs/2006.07825",
         "author_links": {},
@@ -2408,6 +2416,22 @@
         "eprint": "https://arxiv.org/pdf/2005.06216"
     },
     {
+        "title": "IIE-NLP-Eyas at SemEval-2021 Task 4: Enhancing PLM for ReCAM with Special Tokens, Re-Ranking, Siamese Encoders and Back Translation",
+        "url": "https://arxiv.org/abs/2102.12777",
+        "author_links": {
+            "Y Xie": "https://scholar.google.com/citations?user=BXIXSy0AAAAJ&hl=en&oi=sra",
+            "L Xing": "https://scholar.google.com/citations?user=Xy-4XUYAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Xie",
+            "L Xing",
+            "W Peng",
+            "Y Hu"
+        ],
+        "abstract": "This paper introduces our systems for all three subtasks of SemEval-2021 Task 4: Reading Comprehension of Abstract Meaning. To help our model better represent and understand abstract concepts in natural language, we well-design many simple and effective …",
+        "eprint": "https://arxiv.org/pdf/2102.12777"
+    },
+    {
         "title": "SpheroidJ: An Open-Source Set of Tools for Spheroid Segmentation",
         "url": "https://www.sciencedirect.com/science/article/pii/S0169260720316709",
         "author_links": {},
@@ -2488,6 +2512,24 @@
         ],
         "abstract": "This manuscript addresses the problem of the automatic lesion boundary detection in dermoscopy, using deep neural networks. An approach is based on the adaptation of the U-net convolutional neural network with skip connections for lesion boundary segmentation …",
         "eprint": "https://arxiv.org/pdf/1812.00877"
+    },
+    {
+        "title": "Exploring Complementary Strengths of Invariant and Equivariant Representations for Few-Shot Learning",
+        "url": "https://arxiv.org/abs/2103.01315",
+        "author_links": {
+            "MN Rizve": "https://scholar.google.com/citations?user=kA8ZM5oAAAAJ&hl=en&oi=sra",
+            "S Khan": "https://scholar.google.com/citations?user=rkEra5AAAAAJ&hl=en&oi=sra",
+            "FS Khan": "https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en&oi=sra",
+            "M Shah": "https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "MN Rizve",
+            "S Khan",
+            "FS Khan",
+            "M Shah"
+        ],
+        "abstract": "In many real-world problems, collecting a large number of labeled samples is infeasible. Few-shot learning (FSL) is the dominant approach to address this issue, where the objective is to quickly adapt to novel categories in presence of a limited number of samples. FSL tasks …",
+        "eprint": "https://arxiv.org/pdf/2103.01315"
     },
     {
         "title": "Training Strategies and Data Augmentations in CNN-based DeepFake Video Detection",
