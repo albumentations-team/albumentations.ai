@@ -16,22 +16,6 @@
         "eprint": "https://arxiv.org/pdf/1803.01207"
     },
     {
-        "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
-        "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html",
-        "author_links": {
-            "O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra",
-            "T Martyniuk": "https://scholar.google.com/citations?user=Ur0vgfMAAAAJ&hl=en&oi=sra",
-            "J Wu": "https://scholar.google.com/citations?user=5wXwjysAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "O Kupyn",
-            "T Martyniuk",
-            "J Wu"
-        ],
-        "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
-        "eprint": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
-    },
-    {
         "title": "AutoML: A Survey of the State-of-the-Art",
         "url": "https://www.sciencedirect.com/science/article/pii/S0950705120307516",
         "author_links": {
@@ -46,6 +30,22 @@
         ],
         "abstract": "Deep learning (DL) techniques have obtained remarkable achievements on various tasks, such as image recognition, object detection, and language modeling. However, building a high-quality DL system for a specific task highly relies on human expertise, hindering its …",
         "eprint": "https://arxiv.org/pdf/1908.00709"
+    },
+    {
+        "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
+        "url": "http://openaccess.thecvf.com/content_ICCV_2019/html/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.html",
+        "author_links": {
+            "O Kupyn": "https://scholar.google.com/citations?user=Yl1Lu2YAAAAJ&hl=en&oi=sra",
+            "T Martyniuk": "https://scholar.google.com/citations?user=Ur0vgfMAAAAJ&hl=en&oi=sra",
+            "J Wu": "https://scholar.google.com/citations?user=5wXwjysAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "O Kupyn",
+            "T Martyniuk",
+            "J Wu"
+        ],
+        "abstract": "We present a new end-to-end generative adversarial network (GAN) for single image motion deblurring, named DeblurGAN-V2, which considerably boosts state-of-the-art deblurring performance while being much more flexible and efficient. DeblurGAN-V2 is based on a …",
+        "eprint": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Kupyn_DeblurGAN-v2_Deblurring_Orders-of-Magnitude_Faster_and_Better_ICCV_2019_paper.pdf"
     },
     {
         "title": "Angiodysplasia detection and localization using deep convolutional neural networks",
@@ -196,7 +196,6 @@
         "title": "COVID-19 prediction and detection using deep learning",
         "url": "https://www.engpaper.com/download/covid-detection-1.pdf",
         "author_links": {
-            "M Alazab": "https://scholar.google.com/citations?user=5Cj5xnQAAAAJ&hl=en&oi=sra",
             "A Awajan": "https://scholar.google.com/citations?user=OiavRJ8AAAAJ&hl=en&oi=sra",
             "A Mesleh": "https://scholar.google.com/citations?user=RVfcCAwAAAAJ&hl=en&oi=sra",
             "A Abraham": "https://scholar.google.com/citations?user=i95DGLQAAAAJ&hl=en&oi=sra"
@@ -538,6 +537,22 @@
             "V Guryanova"
         ],
         "abstract": "Currently, on the market, there are mobile devices that are capable of reading a person's single-lead electrocardiogram (ECG). These ECGs can be used to solve problems of determining various diseases. Neural networks are onearameters of augmentations of the …"
+    },
+    {
+        "title": "Deep learning with conformal prediction for hierarchical analysis of large-scale whole-slide tissue images",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9103229/",
+        "author_links": {
+            "H Wieslander": "https://scholar.google.com/citations?user=PLJ8O9MAAAAJ&hl=en&oi=sra",
+            "PJ Harrison": "https://scholar.google.com/citations?user=vt1vYnEAAAAJ&hl=en&oi=sra",
+            "G Skogberg": "https://scholar.google.com/citations?user=aW-wT6AAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Wieslander",
+            "PJ Harrison",
+            "G Skogberg"
+        ],
+        "abstract": "With the increasing amount of image data collected from biomedical experiments there is an urgent need for smarter and more effective analysis methods. Many scientific questions require analysis of image sub-regions related to some specific biology. Finding such regions …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6221020/9348958/09103229.pdf"
     },
     {
         "title": "Identifying melanoma images using efficientnet ensemble: Winning solution to the siim-isic melanoma classification challenge",
@@ -953,8 +968,7 @@
             "H Löser",
             "J Meinel"
         ],
-        "abstract": "Purpose: Human papillomavirus (HPV) in oropharyngeal squamous cell carcinoma (OPSCC) is tumorigenic and has been associated with a favorable prognosis compared with OPSCC caused by tobacco, alcohol, and other carcinogens. Meanwhile, machine learning …",
-        "eprint": "https://clincancerres.aacrjournals.org/content/clincanres/27/4/1131.full.pdf"
+        "abstract": "Purpose: Human papillomavirus (HPV) in oropharyngeal squamous cell carcinoma (OPSCC) is tumorigenic and has been associated with a favorable prognosis compared with OPSCC caused by tobacco, alcohol, and other carcinogens. Meanwhile, machine learning …"
     },
     {
         "title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection",
@@ -1150,6 +1164,19 @@
         "eprint": "http://oa.upm.es/58762/1/TFM_URTZI_OTAMENDI_ETXABE.pdf"
     },
     {
+        "title": "Digital Peter: Dataset, Competition and Handwriting Recognition Methods",
+        "url": "https://arxiv.org/abs/2103.09354",
+        "author_links": {},
+        "author": [
+            "M Potanin",
+            "D Dimitrov",
+            "A Shonenkov",
+            "V Bataev"
+        ],
+        "abstract": "This paper presents a new dataset of Peter the Great's manuscripts and describes a segmentation procedure that converts initial images of documents into the lines. The new dataset may be useful for researchers to train handwriting text recognition models as a …",
+        "eprint": "https://arxiv.org/pdf/2103.09354"
+    },
+    {
         "title": "A weak supervision machine vision detection method based on artificial defect simulation",
         "url": "https://www.sciencedirect.com/science/article/pii/S0950705120305955",
         "author_links": {
@@ -1237,6 +1264,16 @@
         "eprint": "https://arxiv.org/pdf/2008.03592"
     },
     {
+        "title": "The Study of Improving the Accuracy of Convolutional Neural Networks in Face Recognition Tasks",
+        "author_links": {
+            "N Andriyanov": "https://scholar.google.com/citations?user=qvfBX5AAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Andriyanov",
+            "V Dementev"
+        ]
+    },
+    {
         "title": "ИСПОЛЬЗОВАНИЕ АУГМЕНТАЦИИ ИЗОБРАЖЕНИЙ И РЕАЛИЗАЦИЯ ДВАЖДЫ СТОХАСТИЧЕСКИХ МОДЕЛЕЙ ДЛЯ ПОВЫШЕНИЯ ЭФФЕКТИВНОСТИ …",
         "url": "https://elibrary.ru/item.asp?id=44288434",
         "author_links": {},
@@ -1284,8 +1321,18 @@
         "eprint": "http://files.coldattic.info/stanford/cs231n/CS231n_project.pdf"
     },
     {
-        "title": "Single-Shot Cuboids: Geodesics-based End-to-end Manhattan Aligned Layout Estimation from Spherical Panoramas",
-        "url": "https://arxiv.org/abs/2102.03939",
+        "title": "Οπτική αναγνώριση αντικειμένων σε μεγάλες βάσεις δεδομένων",
+        "url": "http://nemertes.library.upatras.gr/jspui/handle/10889/14569",
+        "author_links": {},
+        "author": [
+            "Α Κωστόπουλος"
+        ],
+        "abstract": "Η παρούσα διπλωματική εργασία εκπονήθηκε με σκοπό τη μελέτη του προβλήματος οπτικής αναγνώρισης αντικειμένων με τεχνικές βαθιάς μάθησης. Αρχικά, γίνεται μια εισαγωγή στις έννοιες της τεχνητής νοημοσύνης και της μηχανικής μάθησης, με αναφορά στους τύπους …",
+        "eprint": "https://nemertes.library.upatras.gr/jspui/bitstream/10889/14569/1/Kostopoulos_thesis_final.pdf"
+    },
+    {
+        "title": "Single-shot cuboids: Geodesics-based end-to-end Manhattan aligned layout estimation from spherical panoramas",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0262885621000652",
         "author_links": {
             "N Zioulis": "https://scholar.google.com/citations?user=f7hypjsAAAAJ&hl=en&oi=sra",
             "D Zarpalas": "https://scholar.google.com/citations?user=E_OpMDAAAAAJ&hl=en&oi=sra",
@@ -1298,7 +1345,7 @@
             "P Daras"
         ],
         "abstract": "It has been shown that global scene understanding tasks like layout estimation can benefit from wider field of views, and specifically spherical panoramas. While much progress has been made recently, all previous approaches rely on intermediate representations and …",
-        "eprint": "https://arxiv.org/pdf/2102.03939"
+        "eprint": "https://www.sciencedirect.com/science/article/pii/S0262885621000652"
     },
     {
         "title": "Analysis of medical images using deep learning",
@@ -1460,6 +1507,20 @@
         "eprint": "https://www.diva-portal.org/smash/get/diva2:1473064/FULLTEXT01.pdf"
     },
     {
+        "title": "Principled Ultrasound Data Augmentation for Classification of Standard Planes",
+        "url": "https://arxiv.org/abs/2103.07895",
+        "author_links": {
+            "JA Noble": "https://scholar.google.com/citations?user=b0tmmYMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "LH Lee",
+            "Y Gao",
+            "JA Noble"
+        ],
+        "abstract": "Deep learning models with large learning capacities often overfit to medical imaging datasets. This is because training sets are often relatively small due to the significant time and financial costs incurred in medical data acquisition and labelling. Data augmentation is …",
+        "eprint": "https://arxiv.org/pdf/2103.07895"
+    },
+    {
         "title": "Video and Sensor-Based Rope Pulling Detection in Sport Climbing",
         "url": "https://dl.acm.org/doi/abs/10.1145/3422844.3423058",
         "author_links": {
@@ -1534,21 +1595,19 @@
     },
     {
         "title": "Efficient Palm-Line Segmentation with U-Net Context Fusion Module",
-        "url": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9353055/",
         "author_links": {
             "TP Van": "https://scholar.google.com/citations?user=eOgnP7UAAAAJ&hl=en&oi=sra",
-            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra",
-            "TM Thanh": "https://scholar.google.com/citations?user=_dREcUEAAAAJ&hl=en&oi=sra"
+            "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "TP Van",
             "ST Nguyen",
             "LB Doan",
-            "NN Tran",
-            "TM Thanh"
+            "NN Tran"
         ],
         "abstract": "Many cultures around the world believe that palm reading can be used to predict the future life of a person. Palmistry uses features of the hand such as palm lines, hand shape, or fingertip position. However, the research on palm-line detection is still scarce, many of them …",
-        "eprint": "https://www.researchgate.net/profile/Ngoc_Tran101/publication/344225276_Efficient_Palm-Line_Segmentation_with_U-Net_Context_Fusion_Module/links/5f801d21458515b7cf71e234/Efficient-Palm-Line-Segmentation-with-U-Net-Context-Fusion-Module.pdf"
+        "eprint": "https://arxiv.org/pdf/2102.12127"
     },
     {
         "title": "Learning Accurate Dense Correspondences and When to Trust Them",
@@ -1748,9 +1807,29 @@
         "eprint": "https://openaccess.thecvf.com/content/WACV2021/papers/Nickchen_Generating_Physically_Sound_Training_Data_for_Image_Recognition_of_Additively_WACV_2021_paper.pdf"
     },
     {
+        "title": "CNN and Deep Sets for End-to-End Whole Slide Image Representation Learning",
+        "url": "https://openreview.net/pdf/425eaf2251e8f659e17d84a3be5509915db9dd5f.pdf",
+        "author_links": {
+            "S Hemati": "https://scholar.google.com/citations?user=5qtzx8cAAAAJ&hl=en&oi=sra",
+            "S Kalra": "https://scholar.google.com/citations?user=iEwZn18AAAAJ&hl=en&oi=sra",
+            "M Babaie": "https://scholar.google.com/citations?user=o0o5QU0AAAAJ&hl=en&oi=sra",
+            "A Ghodsi": "https://scholar.google.com/citations?user=WXbhp_4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Hemati",
+            "S Kalra",
+            "C Meaney",
+            "M Babaie",
+            "A Ghodsi"
+        ],
+        "abstract": "Digital pathology has enabled us to capture, store and analyze scanned biopsy samples as digital images. Recent advances in deep learning are contributing to computational pathology to improve diagnosis and treatment. However, considering challenges inherent to …",
+        "eprint": "https://openreview.net/pdf/425eaf2251e8f659e17d84a3be5509915db9dd5f.pdf"
+    },
+    {
         "title": "A Flatter Loss for Bias Mitigation in Cross-dataset Facial Age Estimation",
         "url": "https://arxiv.org/abs/2010.10368",
         "author_links": {
+            "A Akbari": "https://scholar.google.com/citations?user=QdiYKBIAAAAJ&hl=en&oi=sra",
             "M Awais": "https://scholar.google.com/citations?user=Ff1jkk4AAAAJ&hl=en&oi=sra",
             "ZH Feng": "https://scholar.google.com/citations?user=Y6KtijIAAAAJ&hl=en&oi=sra",
             "A Farooq": "https://scholar.google.com/citations?user=VrjcaiYAAAAJ&hl=en&oi=sra"
@@ -1896,6 +1975,21 @@
         "eprint": "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2619036/no.ntnu%3Ainspera%3A2469660.pdf?sequence=1"
     },
     {
+        "title": "Convolutional Neural Network for Drowsiness Detection Using EEG Signals",
+        "url": "https://www.mdpi.com/1018880",
+        "author_links": {
+            "B Bouaziz": "https://scholar.google.com/citations?user=KVdMlqMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Chaabene",
+            "B Bouaziz",
+            "A Boudaya",
+            "A Hökelmann"
+        ],
+        "abstract": "Drowsiness detection (DD) has become a relevant area of active research in biomedical signal processing. Recently, various deep learning (DL) researches based on the EEG signals have been proposed to detect fatigue conditions. The research presented in this …",
+        "eprint": "https://www.mdpi.com/1424-8220/21/5/1734/pdf"
+    },
+    {
         "title": "Deep Learning for Skin Lesion Classification: Augment, Train, and Ensemble",
         "author_links": {
             "FVM Perez": "https://scholar.google.com/citations?user=14vRKS8AAAAJ&hl=en&oi=sra"
@@ -1961,6 +2055,23 @@
         ],
         "abstract": "Renal phase-contrast magnetic resonance imaging (PC-MRI) is an MRI modality where the phase component of the MR signal is made sensitive to the velocity of water molecules in the kidneys. PC-MRI is able to assess the Renal Blood Flow (RBF), which is an important …",
         "eprint": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf"
+    },
+    {
+        "title": "Danish Fungi 2020--Not Just Another Image Recognition Dataset",
+        "url": "https://arxiv.org/abs/2103.10107",
+        "author_links": {
+            "M Šulc": "https://scholar.google.com/citations?user=lTFaQsgAAAAJ&hl=en&oi=sra",
+            "J Matas": "https://scholar.google.com/citations?user=EJCNY6QAAAAJ&hl=en&oi=sra",
+            "J Heilmann-Clausen": "https://scholar.google.com/citations?user=xxn04rcAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "L Picek",
+            "M Šulc",
+            "J Matas",
+            "J Heilmann-Clausen"
+        ],
+        "abstract": "We introduce a novel fine-grained dataset and benchmark, the Danish Fungi 2020 (DF20). The dataset, constructed from observations submitted to the Danish Fungal Atlas, is unique in its taxonomy-accurate class labels, small number of errors, highly unbalanced long-tailed …",
+        "eprint": "https://arxiv.org/pdf/2103.10107"
     },
     {
         "title": "SCG-Net: Self-Constructing Graph Neural Networks for Semantic Segmentation",
@@ -2049,6 +2160,8 @@
         "author_links": {
             "I Ullah": "https://scholar.google.com/citations?user=uvXoXc8AAAAJ&hl=en&oi=sra",
             "P Chikontwe": "https://scholar.google.com/citations?user=8jHbkMcAAAAJ&hl=en&oi=sra",
+            "H Choi": "https://scholar.google.com/citations?user=_RWbknkAAAAJ&hl=en&oi=sra",
+            "CH Yoon": "https://scholar.google.com/citations?user=HGG36_8AAAAJ&hl=en&oi=sra",
             "SH Park": "https://scholar.google.com/citations?user=PHLTD4sAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -2074,6 +2187,21 @@
             "H Ko"
         ],
         "abstract": "The side-scan sonar (SSS) is a critical sensor device used to explore underwater environments in the deep sea. Gathering SSS data, however, is an expensive and time-consuming task because it requires sensor towing and involves complicated field …"
+    },
+    {
+        "title": "MANet: A Two-stage Deep Learning Method for Classification of COVID-19 from Chest X-ray Images",
+        "url": "https://kclpure.kcl.ac.uk/portal/files/149388001/MANET_NEUROCOMPUTING_REVISION.pdf",
+        "author_links": {
+            "HK Lam": "https://scholar.google.com/citations?user=iO8fu_IAAAAJ&hl=en&oi=sra",
+            "G Jia": "https://scholar.google.com/citations?user=s-41xe8AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Xu",
+            "HK Lam",
+            "G Jia"
+        ],
+        "abstract": "The early detection of infection is significant for the fight against the ongoing COVID-19 pandemic. Chest X-ray (CXR) imaging is an efficient screening technique via which lung infections can be detected. This paper aims to distinguish COVID-19 positive cases from the …",
+        "eprint": "https://kclpure.kcl.ac.uk/portal/files/149388001/MANET_NEUROCOMPUTING_REVISION.pdf"
     },
     {
         "title": "Targeting the zebrafish eye using deep learning-based image segmentation",
@@ -2110,6 +2238,21 @@
         ],
         "abstract": "Planning the optimal time of intervention for pulmonary valve replacement surgery in patients with the congenital heart disease Tetralogy of Fallot (TOF) is mainly based on ventricular volume and function according to current guidelines. Both of these two …",
         "eprint": "https://arxiv.org/pdf/2002.04392"
+    },
+    {
+        "title": "Classification of Chest X-ray Images Using Machine Learning Techniques",
+        "url": "https://www.preprints.org/manuscript/202103.0408",
+        "author_links": {
+            "A Ahmed": "https://scholar.google.com/citations?user=iZba65EAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Ahmed",
+            "G Tharwat",
+            "B Bouallegue",
+            "M Khattab"
+        ],
+        "abstract": "Machine Learning has completely transformed health care system, which transmits medical data through IOT sensors. So it is very important to encrypt them to protect patient data. encrypting medical images from a performance perspective consumes time; hence the …",
+        "eprint": "https://www.preprints.org/manuscript/202103.0408/download/final_file"
     },
     {
         "title": "Deep Learning-based Object Understanding for Robotic Manipulation",
@@ -2161,7 +2304,7 @@
     },
     {
         "title": "3DeepM: An Ad Hoc Architecture Based on Deep Learning Methods for Multispectral Image Classification. Remote Sens. 2021, 13, 729",
-        "url": "https://search.proquest.com/openview/922ed2ba51c4d3f00c343d5d3d2d5959/1?pq-origsite=gscholar&cbl=2032338",
+        "url": "https://www.researchgate.net/profile/Pedro-Navarro-Lorente/publication/349367623_3DeepM_An_Ad_Hoc_Architecture_Based_on_Deep_Learning_Methods_for_Multispectral_Image_Classification/links/603392f092851c4ed58abf03/3DeepM-An-Ad-Hoc-Architecture-Based-on-Deep-Learning-Methods-for-Multispectral-Image-Classification.pdf",
         "author_links": {
             "PJ Navarro": "https://scholar.google.com/citations?user=tDxlWOkAAAAJ&hl=en&oi=sra"
         },
@@ -2171,7 +2314,8 @@
             "A Gila-Navarro",
             "MV Díaz-Galián"
         ],
-        "abstract": "Current predefined architectures for deep learning are computationally very heavy and use tens of millions of parameters. Thus, computational costs may be prohibitive for many experimental or technological setups. We developed an ad hoc architecture for the …"
+        "abstract": "Current predefined architectures for deep learning are computationally very heavy and use tens of millions of parameters. Thus, computational costs may be prohibitive for many experimental or technological setups. We developed an ad hoc architecture for the …",
+        "eprint": "https://www.researchgate.net/profile/Pedro-Navarro-Lorente/publication/349367623_3DeepM_An_Ad_Hoc_Architecture_Based_on_Deep_Learning_Methods_for_Multispectral_Image_Classification/links/603392f092851c4ed58abf03/3DeepM-An-Ad-Hoc-Architecture-Based-on-Deep-Learning-Methods-for-Multispectral-Image-Classification.pdf"
     },
     {
         "title": "Working with scale: 2nd place solution to Product Detection in Densely Packed Scenes [Technical Report]",
@@ -2314,6 +2458,20 @@
             "TV Chumarnaya"
         ],
         "abstract": "This paper compares the quality of segmentation of echocardiographic images of the left ventricle of the heart using 5 architectures and 38 pre-trained encoders. As part of the study, we trained 1140 neural networks. On the test dataset, the accuracy was 93.18% according to …"
+    },
+    {
+        "title": "MSMatch: Semi-Supervised Multispectral Scene Classification with Few Labels",
+        "url": "https://arxiv.org/abs/2103.10368",
+        "author_links": {
+            "P Gómez": "https://scholar.google.com/citations?user=MJZYn2IAAAAJ&hl=en&oi=sra",
+            "G Meoni": "https://scholar.google.com/citations?user=cb1aDLYAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "P Gómez",
+            "G Meoni"
+        ],
+        "abstract": "Supervised learning techniques are at the center of many tasks in remote sensing. Unfortunately, these methods, especially recent deep learning methods, often require large amounts of labeled data for training. Even though satellites acquire large amounts of data …",
+        "eprint": "https://arxiv.org/pdf/2103.10368"
     },
     {
         "title": "A Deep learning approach to Hazard detection for Autonomous Lunar landing",
@@ -2649,6 +2807,19 @@
         ],
         "abstract": "В статье рассматривается последовательность шагов по сбору данных для последующего обучения свёрточной нейронной сети, используемой для решения задачи детектирования грызуна (крысы или мыши) в лабиринте для лабораторных …",
         "eprint": "https://cyberleninka.ru/article/n/problemy-detektirovaniya-obekta-na-izobrazhenii-v-zadachah-glubokogo-obucheniya-v-oblasti-kompyuternogo-zreniya-na-osnove-svyortochnyh"
+    },
+    {
+        "title": "Semi-supervised Learning with a Teacher-Student Paradigm for Histopathology Classification: A Resource to Face Data Heterogeneity and Lack of Local …",
+        "author_links": {
+            "N Marini": "https://scholar.google.com/citations?user=kKK8SBYAAAAJ&hl=en&oi=sra",
+            "S Otálora": "https://scholar.google.com/citations?user=Iqt6d2YAAAAJ&hl=en&oi=sra",
+            "H Müller": "https://scholar.google.com/citations?user=UEZ9RlUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "N Marini",
+            "S Otálora",
+            "H Müller"
+        ]
     },
     {
         "title": "Self Supervised Learning for Object Localisation in 3D Tomographic Images",
