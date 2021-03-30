@@ -96,7 +96,7 @@ packaging==20.4
     # via bleach
 pandocfilters==1.4.2
     # via nbconvert
-pygments==2.6.1
+pygments==2.7.4
     # via
     #   -r requirements.in
     #   mkdocs-material
