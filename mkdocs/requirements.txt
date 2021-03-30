@@ -117,7 +117,7 @@ pytkdocs==0.7.0
     # via
     #   -r requirements.in
     #   mkdocstrings
-pyyaml==5.3.1
+pyyaml==5.4
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
