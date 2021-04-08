@@ -1,6 +1,6 @@
 # What is image augmentation and how it can improve the performance of deep neural networks
 
-Deep neural networks require a lot of training data to obtain good results and prevent overfitting. However, it often very difficult to get enough training samples. Multiple reasons could make it very hard or even impossible to gather enough data:
+Deep neural networks require a lot of training data to obtain good results and prevent overfitting. However, it is often very difficult to get enough training samples. Multiple reasons could make it very hard or even impossible to gather enough data:
 
 - To make a training dataset, you need to obtain images and then label them. For example, you need to assign correct class labels if you have an image classification task. For an object detection task, you need to draw bounding boxes around objects.  For a semantic segmentation task, you need to assign a correct class to each input image pixel. This process requires manual labor, and sometimes it could be very costly to label the training data. For example, to correctly label medical images, you need expensive domain experts.
 
@@ -26,7 +26,7 @@ Successive state-of-the-art models such as [Inception](https://arxiv.org/abs/140
 
 In 2018 Google published a [paper about AutoAugment](https://arxiv.org/abs/1805.09501) - an algorithm that automatically discovers the best set of augmentations for the dataset. They showed that a custom set of augmentations improves the performance of the model.
 
-Here is a comparison between a model that used only the base set of augmentations and a model that used a specific set of augmentations discovered by AutoAugment. The table shows Top-1 accuracy (%)  on the ImageNet validation set; higher is better.
+Here is a comparison between a model that used only the base set of augmentations and a model that used a specific set of augmentations discovered by AutoAugment. The table shows Top-1 accuracy (%) on the ImageNet validation set; higher is better.
 
 | Model               | Base augmentations | AutoAugment augmentations |
 |---------------------|:------------------:|:-------------------------:|
