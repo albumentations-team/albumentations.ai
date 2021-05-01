@@ -1,21 +1,5 @@
 [
     {
-        "title": "Automatic instrument segmentation in robot-assisted surgery using deep learning",
-        "url": "https://ieeexplore.ieee.org/abstract/document/8614125/",
-        "author_links": {
-            "AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra",
-            "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra",
-            "AA Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "AA Shvets",
-            "A Rakhlin",
-            "AA Kalinin"
-        ],
-        "abstract": "Semantic segmentation of robotic instruments is an important problem for the robot-assisted surgery. One of the main challenges is to correctly detect an instrument's position for the tracking and pose estimation in the vicinity of surgical scenes. Accurate pixel-wise …",
-        "eprint": "https://arxiv.org/pdf/1803.01207"
-    },
-    {
         "title": "AutoML: A Survey of the State-of-the-Art",
         "url": "https://www.sciencedirect.com/science/article/pii/S0950705120307516",
         "author_links": {
@@ -30,6 +14,22 @@
         ],
         "abstract": "Deep learning (DL) techniques have obtained remarkable achievements on various tasks, such as image recognition, object detection, and language modeling. However, building a high-quality DL system for a specific task highly relies on human expertise, hindering its …",
         "eprint": "https://arxiv.org/pdf/1908.00709"
+    },
+    {
+        "title": "Automatic instrument segmentation in robot-assisted surgery using deep learning",
+        "url": "https://ieeexplore.ieee.org/abstract/document/8614125/",
+        "author_links": {
+            "AA Shvets": "https://scholar.google.com/citations?user=_eJ5xysAAAAJ&hl=en&oi=sra",
+            "A Rakhlin": "https://scholar.google.com/citations?user=TIAJg3IAAAAJ&hl=en&oi=sra",
+            "AA Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "AA Shvets",
+            "A Rakhlin",
+            "AA Kalinin"
+        ],
+        "abstract": "Semantic segmentation of robotic instruments is an important problem for the robot-assisted surgery. One of the main challenges is to correctly detect an instrument's position for the tracking and pose estimation in the vicinity of surgical scenes. Accurate pixel-wise …",
+        "eprint": "https://arxiv.org/pdf/1803.01207"
     },
     {
         "title": "Deblurgan-v2: Deblurring (orders-of-magnitude) faster and better",
@@ -100,6 +100,24 @@
         ],
         "abstract": "A common shortfall of supervised deep learning for medical imaging is the lack of labeled data, which is often expensive and time consuming to collect. This article presents a new semisupervised method for medical image segmentation, where the network is optimized by …",
         "eprint": "https://arxiv.org/pdf/1903.00348"
+    },
+    {
+        "title": "End-to-end learning for semiquantitative rating of covid-19 severity on chest x-rays",
+        "url": "https://www.researchgate.net/profile/Mattia_Savardi/publication/342026838_End-to-end_learning_for_semiquantitative_rating_of_COVID-19_severity_on_Chest_X-rays/links/5f86b00e299bf1b53e2633c8/End-to-end-learning-for-semiquantitative-rating-of-COVID-19-severity-on-Chest-X-rays.pdf",
+        "author_links": {
+            "A Signoroni": "https://scholar.google.com/citations?user=VQOouzYAAAAJ&hl=en&oi=sra",
+            "M Savardi": "https://scholar.google.com/citations?user=fEPYwtAAAAAJ&hl=en&oi=sra",
+            "S Benini": "https://scholar.google.com/citations?user=c6i8ohYAAAAJ&hl=en&oi=sra",
+            "N Adami": "https://scholar.google.com/citations?user=PcnfXmkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Signoroni",
+            "M Savardi",
+            "S Benini",
+            "N Adami"
+        ],
+        "abstract": "In this work we design an end-to-end deep learning architecture for predicting, on Chest X-rays images (CXR), a multi-regional score conveying the degree of lung compromise in COVID-19 patients. Such semi-quantitative scoring system, namely Brixia score, is applied …",
+        "eprint": "https://www.researchgate.net/profile/Mattia_Savardi/publication/342026838_End-to-end_learning_for_semiquantitative_rating_of_COVID-19_severity_on_Chest_X-rays/links/5f86b00e299bf1b53e2633c8/End-to-end-learning-for-semiquantitative-rating-of-COVID-19-severity-on-Chest-X-rays.pdf"
     },
     {
         "title": "Deep convolutions for in-depth automated rock typing",
@@ -223,24 +241,6 @@
         ],
         "abstract": "Source camera identification is the process of determining which camera or model has been used to capture an image. In recent years, there has been a rapid growth of research interest in the domain of forensics. In the current work, we describe our Deep Learning approach to …",
         "eprint": "https://arxiv.org/pdf/1810.02981"
-    },
-    {
-        "title": "End-to-end learning for semiquantitative rating of covid-19 severity on chest x-rays",
-        "url": "https://arxiv.org/abs/2006.04603",
-        "author_links": {
-            "A Signoroni": "https://scholar.google.com/citations?user=VQOouzYAAAAJ&hl=en&oi=sra",
-            "M Savardi": "https://scholar.google.com/citations?user=fEPYwtAAAAAJ&hl=en&oi=sra",
-            "S Benini": "https://scholar.google.com/citations?user=c6i8ohYAAAAJ&hl=en&oi=sra",
-            "N Adami": "https://scholar.google.com/citations?user=PcnfXmkAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "A Signoroni",
-            "M Savardi",
-            "S Benini",
-            "N Adami"
-        ],
-        "abstract": "In this work we designed an end-to-end deep learning architecture for predicting, on Chest X-rays images (CRX), a multi-regional score conveying the degree of lung compromise in COVID-19 patients. Such semiquantitative scoring system, namely Brixia-score, was applied …",
-        "eprint": "https://arxiv.org/pdf/2006.04603"
     },
     {
         "title": "Camera-to-robot pose estimation from a single image",
@@ -617,6 +617,19 @@
         "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09160940.pdf"
     },
     {
+        "title": "Deep Learning Predicts HPV Association in Oropharyngeal Squamous Cell Carcinomas and Identifies Patients with a Favorable Prognosis Using Regular H&E Stains",
+        "url": "https://clincancerres.aacrjournals.org/content/27/4/1131.abstract",
+        "author_links": {},
+        "author": [
+            "S Klein",
+            "A Quaas",
+            "J Quantius",
+            "H Löser",
+            "J Meinel"
+        ],
+        "abstract": "Purpose: Human papillomavirus (HPV) in oropharyngeal squamous cell carcinoma (OPSCC) is tumorigenic and has been associated with a favorable prognosis compared with OPSCC caused by tobacco, alcohol, and other carcinogens. Meanwhile, machine learning …"
+    },
+    {
         "title": "Real-time tracking of guidewire robot tips using deep convolutional neural networks on successive localized frames",
         "url": "https://ieeexplore.ieee.org/abstract/document/8886572/",
         "author_links": {
@@ -707,7 +720,7 @@
             "D Bertolini",
             "LS Oliveira"
         ],
-        "abstract": "The COVID-19 pandemic is undoubtedly one of the biggest public health crises our society has ever faced. This paper's main objectives are to demonstrate the impact of lung segmentation in COVID-19 automatic identification using CXR images and evaluate which …",
+        "abstract": "The COVID-19 pandemic is undoubtedly one of the biggest public health crises our society has ever faced in recent history. One of the main complications caused by COVID-19 is pneumonia, which is diagnosed using imaging exams, such as chest X-ray (CXR) and …",
         "eprint": "https://arxiv.org/pdf/2009.09780"
     },
     {
@@ -812,8 +825,7 @@
         "title": "Road Damage Detection and Classification with Detectron2 and Faster R-CNN",
         "url": "https://arxiv.org/abs/2010.15021",
         "author_links": {
-            "V Pham": "https://scholar.google.com/citations?user=_Wj4gjUAAAAJ&hl=en&oi=sra",
-            "C Pham": "https://scholar.google.com/citations?user=too4ejgAAAAJ&hl=en&oi=sra",
+            "V Pham": "https://scholar.google.com/citations?user=too4ejgAAAAJ&hl=en&oi=sra",
             "T Dang": "https://scholar.google.com/citations?user=jobGGfEAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -888,6 +900,26 @@
         "eprint": "https://arxiv.org/pdf/2008.09194"
     },
     {
+        "title": "Deepsweep: An evaluation framework for mitigating dnn backdoor attacks using data augmentation",
+        "url": "https://arxiv.org/abs/2012.07006",
+        "author_links": {
+            "H Qiu": "https://scholar.google.com/citations?user=6JWNv6gAAAAJ&hl=en&oi=sra",
+            "Y Zeng": "https://scholar.google.com/citations?user=K-U_ZqkAAAAJ&hl=en&oi=sra",
+            "S Guo": "https://scholar.google.com/citations?user=wQrVkBYAAAAJ&hl=en&oi=sra",
+            "T Zhang": "https://scholar.google.com/citations?user=9vpiYDIAAAAJ&hl=en&oi=sra",
+            "M Qiu": "https://scholar.google.com/citations?user=smMVdtwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Qiu",
+            "Y Zeng",
+            "S Guo",
+            "T Zhang",
+            "M Qiu"
+        ],
+        "abstract": "Public resources and services (eg, datasets, training platforms, pre-trained models) have been widely adopted to ease the development of Deep Learning-based applications. However, if the third-party providers are untrusted, they can inject poisoned samples into the …",
+        "eprint": "https://arxiv.org/pdf/2012.07006"
+    },
+    {
         "title": "Benchmark for Generic Product Detection: A Low Data Baseline for Dense Object Detection",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-50347-5_3",
         "author_links": {
@@ -958,19 +990,6 @@
         "abstract": "High quality document layout analysis is fundamental to the accurate processing of handwritten textual material, on both the level of individual lines and higher order zones demarking textual and non-textual content. We present an artificial neural network based …"
     },
     {
-        "title": "Deep Learning Predicts HPV Association in Oropharyngeal Squamous Cell Carcinomas and Identifies Patients with a Favorable Prognosis Using Regular H&E Stains",
-        "url": "https://clincancerres.aacrjournals.org/content/27/4/1131.abstract",
-        "author_links": {},
-        "author": [
-            "S Klein",
-            "A Quaas",
-            "J Quantius",
-            "H Löser",
-            "J Meinel"
-        ],
-        "abstract": "Purpose: Human papillomavirus (HPV) in oropharyngeal squamous cell carcinoma (OPSCC) is tumorigenic and has been associated with a favorable prognosis compared with OPSCC caused by tobacco, alcohol, and other carcinogens. Meanwhile, machine learning …"
-    },
-    {
         "title": "DLDENet: Deep Local Directional Embeddings with Increased Foreground Focal Loss for object detection",
         "url": "https://ieeexplore.ieee.org/abstract/document/8966436/",
         "author_links": {
@@ -1037,6 +1056,24 @@
         ],
         "abstract": "Despite the significant advancements in object detection, there is still a number of detection tasks that are challenging and difficult. To eliminate them and to push forward the research in this area a technological\" IceVision\" Challenge was organized in Russia in 2019. The …",
         "eprint": "https://www.researchgate.net/profile/Rauf_Yagfarov/publication/336728688_Augmentation-Based_Object_Detection_for_Winter_Time_Applications/links/5e257ba692851cafc3936168/Augmentation-Based-Object-Detection-for-Winter-Time-Applications.pdf"
+    },
+    {
+        "title": "Exploring Complementary Strengths of Invariant and Equivariant Representations for Few-Shot Learning",
+        "url": "https://arxiv.org/abs/2103.01315",
+        "author_links": {
+            "MN Rizve": "https://scholar.google.com/citations?user=kA8ZM5oAAAAJ&hl=en&oi=sra",
+            "S Khan": "https://scholar.google.com/citations?user=M59O9lkAAAAJ&hl=en&oi=sra",
+            "FS Khan": "https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en&oi=sra",
+            "M Shah": "https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "MN Rizve",
+            "S Khan",
+            "FS Khan",
+            "M Shah"
+        ],
+        "abstract": "In many real-world problems, collecting a large number of labeled samples is infeasible. Few-shot learning (FSL) is the dominant approach to address this issue, where the objective is to quickly adapt to novel categories in presence of a limited number of samples. FSL tasks …",
+        "eprint": "https://arxiv.org/pdf/2103.01315"
     },
     {
         "title": "When texture matters: texture-focused CNNs outperform general data augmentation and pretraining in oral cancer detection",
@@ -1155,7 +1192,9 @@
     {
         "title": "Deep Learning object detection architectures in ADAS",
         "url": "http://oa.upm.es/58762/1/TFM_URTZI_OTAMENDI_ETXABE.pdf",
-        "author_links": {},
+        "author_links": {
+            "UO Etxabe": "https://scholar.google.com/citations?user=h8xzMykAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "UO Etxabe",
             "AG Basauri"
@@ -1175,6 +1214,31 @@
         ],
         "abstract": "This paper presents a new dataset of Peter the Great's manuscripts and describes a segmentation procedure that converts initial images of documents into the lines. The new dataset may be useful for researchers to train handwriting text recognition models as a …",
         "eprint": "https://arxiv.org/pdf/2103.09354"
+    },
+    {
+        "title": "残差密集相对平均 CGAN 的脑部图像配准",
+        "url": "http://www.cjig.cn/html/jig/2020/4/20200410.htm",
+        "author_links": {},
+        "author": [
+            "王丽芳， 张程程， 秦品乐， 蔺素珍， 高媛， 窦杰亮"
+        ],
+        "abstract": "目的针对图像合成配准算法中鲁棒性差及合成图像特征信息不足导致配准精度不高的问题, 提出了基于残差密集相对平均条件生成对抗网络(residual dense-relativistic average conditional generative adversarial network, RD-RaCGAN) 的多模态脑部图像配准方法 …",
+        "eprint": "http://www.cjig.cn/html/jig/2020/4/20200410.htm"
+    },
+    {
+        "title": "DBA_SSD: A Novel End-to-End Object Detection Using Deep Attention Module for Helping Smart Device with Vegetable and Fruit Leaf Plant Disease Detection",
+        "url": "https://www.researchsquare.com/article/rs-166579/latest.pdf",
+        "author_links": {},
+        "author": [
+            "J Wang",
+            "J Yang",
+            "L Yu",
+            "H Dong",
+            "K Yun",
+            "Y Wang"
+        ],
+        "abstract": "In response to the difficulty of detecting and classifying pests and vegetable and fruit 8 leaves with pests and diseases, this study proposes a novel vegetable and fruit leaf pest detection 9 method called deep block attention SSD (DBA_SSD) for the identification of …",
+        "eprint": "https://www.researchsquare.com/article/rs-166579/latest.pdf"
     },
     {
         "title": "A weak supervision machine vision detection method based on artificial defect simulation",
@@ -1204,6 +1268,20 @@
         ],
         "abstract": "The segmentation of axons and myelin in electron microscopy images allows neurologists to highlight the density of axons and the thickness of the myelin surrounding them. These properties are of great interest for preventing and anticipating white matter diseases. This …",
         "eprint": "https://hal.archives-ouvertes.fr/hal-02929744/document"
+    },
+    {
+        "title": "Automatic Extraction of Liver Region from Medical Images by Using an MFUnet",
+        "url": "https://www.koreascience.or.kr/article/JAKO202028662596633.page",
+        "author_links": {},
+        "author": [
+            "VTT Vi",
+            "AR Oh",
+            "GS Lee",
+            "HJ Yang",
+            "SH Kim"
+        ],
+        "abstract": "This paper presents a fully automatic tool to recognize the liver region from CT images based on a deep learning model, namely Multiple Filter U-net, MFUnet. The advantages of both U-net and Multiple Filters were utilized to construct an autoencoder model, called …",
+        "eprint": "https://www.koreascience.or.kr/article/JAKO202028662596633.pdf"
     },
     {
         "title": "Point Proposal based Instance Segmentation with Rectangular Masks for Robot Picking Task",
@@ -1274,6 +1352,21 @@
         ]
     },
     {
+        "title": "Deepfake Detection Scheme Based on Vision Transformer and Distillation",
+        "url": "https://arxiv.org/abs/2104.01353",
+        "author_links": {
+            "YJ Choi": "https://scholar.google.com/citations?user=jSO4nkYAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "YJ Heo",
+            "YJ Choi",
+            "YW Lee",
+            "BG Kim"
+        ],
+        "abstract": "Deepfake is the manipulated video made with a generative deep learning technique such as Generative Adversarial Networks (GANs) or Auto Encoder that anyone can utilize. Recently, with the increase of Deepfake videos, some classifiers consisting of the convolutional neural …",
+        "eprint": "https://arxiv.org/pdf/2104.01353"
+    },
+    {
         "title": "ИСПОЛЬЗОВАНИЕ АУГМЕНТАЦИИ ИЗОБРАЖЕНИЙ И РЕАЛИЗАЦИЯ ДВАЖДЫ СТОХАСТИЧЕСКИХ МОДЕЛЕЙ ДЛЯ ПОВЫШЕНИЯ ЭФФЕКТИВНОСТИ …",
         "url": "https://elibrary.ru/item.asp?id=44288434",
         "author_links": {},
@@ -1282,6 +1375,21 @@
             "НА Андриянов"
         ],
         "abstract": "Предлагаются методы повышения эффективности распознавания образов на изображениях с помощью сверточных нейронных сетей в условиях недостаточного количества опорных изображений. Предлагается использовать различные виды …"
+    },
+    {
+        "title": "Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9328840/",
+        "author_links": {
+            "T Hussain": "https://scholar.google.com/citations?user=zhwu1p0AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Koehler",
+            "T Hussain",
+            "Z Blair",
+            "T Huffaker"
+        ],
+        "abstract": "Anisotropic multi-slice Cardiac Magnetic Resonance (CMR) Images are conventionally acquired in patient-specific short-axis (SAX) orientation. In specific cardiovascular diseases that affect right ventricular (RV) morphology, acquisitions in standard axial (AX) orientation …",
+        "eprint": "https://www.researchgate.net/profile/Sven-Koehler-9/publication/348643280_Unsupervised_Domain_Adaptation_from_Axial_to_Short-Axis_Multi-Slice_Cardiac_MR_Images_by_Incorporating_Pretrained_Task_Networks/links/60700813a6fdcc5f7790a79b/Unsupervised-Domain-Adaptation-from-Axial-to-Short-Axis-Multi-Slice-Cardiac-MR-Images-by-Incorporating-Pretrained-Task-Networks.pdf"
     },
     {
         "title": "2nd Place Solution to ECCV 2020 VIPriors Object Detection Challenge",
@@ -1335,6 +1443,7 @@
         "url": "https://www.sciencedirect.com/science/article/pii/S0262885621000652",
         "author_links": {
             "N Zioulis": "https://scholar.google.com/citations?user=f7hypjsAAAAJ&hl=en&oi=sra",
+            "F Alvarez": "https://scholar.google.com/citations?user=Zvgjb28AAAAJ&hl=en&oi=sra",
             "D Zarpalas": "https://scholar.google.com/citations?user=E_OpMDAAAAAJ&hl=en&oi=sra",
             "P Daras": "https://scholar.google.com/citations?user=Wgd-Bx4AAAAJ&hl=en&oi=sra"
         },
@@ -1373,7 +1482,7 @@
         "title": "Artificial Intelligence in Quantitative Ultrasound Imaging: A Review",
         "url": "https://arxiv.org/abs/2003.11658",
         "author_links": {
-            "B Zhou": "https://scholar.google.com/citations?user=opP-BmMAAAAJ&hl=en&oi=sra",
+            "B Zhou": "https://scholar.google.com/citations?user=NlNtoUoAAAAJ&hl=en&oi=sra",
             "X Yang": "https://scholar.google.com/citations?user=Bl9R8ZQAAAAJ&hl=en&oi=sra",
             "T Liu": "https://scholar.google.com/citations?user=UC3sPL4AAAAJ&hl=en&oi=sra"
         },
@@ -1474,6 +1583,7 @@
         "title": "Feature-based image registration in structured light endoscopy",
         "url": "https://openreview.net/forum?id=MzC8X6cMF2r",
         "author_links": {
+            "AM Kist": "https://scholar.google.com/citations?user=H8h7A44AAAAJ&hl=en&oi=sra",
             "M Döllinger": "https://scholar.google.com/citations?user=eNmasPAAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1507,9 +1617,27 @@
         "eprint": "https://www.diva-portal.org/smash/get/diva2:1473064/FULLTEXT01.pdf"
     },
     {
+        "title": "BS-Net: learning COVID-19 pneumonia severity on a large Chest X-Ray dataset",
+        "url": "https://www.sciencedirect.com/science/article/pii/S136184152100092X",
+        "author_links": {
+            "A Signoroni": "https://scholar.google.com/citations?user=VQOouzYAAAAJ&hl=en&oi=sra",
+            "M Savardi": "https://scholar.google.com/citations?user=fEPYwtAAAAAJ&hl=en&oi=sra",
+            "N Adami": "https://scholar.google.com/citations?user=PcnfXmkAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Signoroni",
+            "M Savardi",
+            "S Benini",
+            "N Adami"
+        ],
+        "abstract": "In this work we design an end-to-end deep learning architecture for predicting, on Chest X-rays images (CXR), a multi-regional score conveying the degree of lung compromise in COVID-19 patients. Such semi-quantitative scoring system, namely Brixia score, is applied …",
+        "eprint": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8010334/"
+    },
+    {
         "title": "Principled Ultrasound Data Augmentation for Classification of Standard Planes",
         "url": "https://arxiv.org/abs/2103.07895",
         "author_links": {
+            "Y Gao": "https://scholar.google.com/citations?user=1Tvfo7wAAAAJ&hl=en&oi=sra",
             "JA Noble": "https://scholar.google.com/citations?user=b0tmmYMAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1583,7 +1711,8 @@
         "title": "Machine Learning Algorithm Validation: From Essentials to Advanced Applications and Implications for Regulatory Certification and Deployment",
         "url": "https://www.neuroimaging.theclinics.com/article/S1052-5149(20)30059-9/abstract",
         "author_links": {
-            "F Maleki": "https://scholar.google.com/citations?user=LUO_d9QAAAAJ&hl=en&oi=sra"
+            "F Maleki": "https://scholar.google.com/citations?user=LUO_d9QAAAAJ&hl=en&oi=sra",
+            "K Ovens": "https://scholar.google.com/citations?user=uRdIW20AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "F Maleki",
@@ -1691,10 +1820,32 @@
         "eprint": "https://arxiv.org/pdf/2009.10163"
     },
     {
+        "title": "A Deep Learning Approach for Complex Microstructure Inference",
+        "url": "https://www.researchsquare.com/article/rs-371580/latest.pdf",
+        "author_links": {
+            "M Müller": "https://scholar.google.com/citations?user=2zu2hLcAAAAJ&hl=en&oi=sra",
+            "B Lei": "https://scholar.google.com/citations?user=DmKQecEAAAAJ&hl=en&oi=sra",
+            "A Thomas": "https://scholar.google.com/citations?user=3--H_qQAAAAJ&hl=en&oi=sra",
+            "D Britz": "https://scholar.google.com/citations?user=2JiN4L0AAAAJ&hl=en&oi=sra",
+            "E Holm": "https://scholar.google.com/citations?user=pPvNOjMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Durmaz",
+            "M Müller",
+            "B Lei",
+            "A Thomas",
+            "D Britz",
+            "E Holm"
+        ],
+        "abstract": "Automated, reliable, and objective microstructure inference from micrographs is an essential milestone towards a comprehensive understanding of process-microstructure-property relations and tailored materials development. However, such inference, with the increasing …",
+        "eprint": "https://www.researchsquare.com/article/rs-371580/latest.pdf"
+    },
+    {
         "title": "FlashNeuron: SSD-Enabled Large-Batch Training of Very Deep Neural Networks",
         "url": "https://www.usenix.org/conference/fast21/presentation/bae",
         "author_links": {
             "J Bae": "https://scholar.google.com/citations?user=Zn90onwAAAAJ&hl=en&oi=sra",
+            "S Son": "https://scholar.google.com/citations?user=mt6sgMoAAAAJ&hl=en&oi=sra",
             "H Jang": "https://scholar.google.com/citations?user=Wh4rwJEAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1764,6 +1915,40 @@
         "eprint": "http://nemertes.library.upatras.gr/jspui/bitstream/10889/14049/3/Nemertes_Kassiotis%28com%29.pdf"
     },
     {
+        "title": "Few-Shot Learning with a Novel Voronoi Tessellation-Based Image Augmentation Method for Facial Palsy Detection",
+        "url": "https://www.mdpi.com/2079-9292/10/8/978",
+        "author_links": {
+            "OO Abayomi-Alli": "https://scholar.google.com/citations?user=L6en5dcAAAAJ&hl=en&oi=sra",
+            "R Maskeliūnas": "https://scholar.google.com/citations?user=mW0KGGQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "OO Abayomi-Alli",
+            "R Damaševičius",
+            "R Maskeliūnas"
+        ],
+        "abstract": "Face palsy has adverse effects on the appearance of a person and has negative social and functional consequences on the patient. Deep learning methods can improve face palsy detection rate, but their efficiency is limited by insufficient data, class imbalance, and high …",
+        "eprint": "https://www.mdpi.com/2079-9292/10/8/978/pdf"
+    },
+    {
+        "title": "Actin polymerization and crosslinking drive left-right asymmetry in single cell and cell collectives",
+        "url": "https://www.biorxiv.org/content/10.1101/2021.04.22.440942v1.abstract",
+        "author_links": {
+            "YH Tee": "https://scholar.google.com/citations?user=xTQx6h8AAAAJ&hl=en&oi=sra",
+            "HT Ong": "https://scholar.google.com/citations?user=wxUWbnMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "YH Tee",
+            "WJ Goh",
+            "X Yong",
+            "HT Ong",
+            "J Hu",
+            "IYY Tay",
+            "S Shi"
+        ],
+        "abstract": "Deviations from mirror symmetry in the development of bilateral organisms are highly stereotypic and genetically predetermined, but their mechanisms are not sufficiently understood. At the cellular level, self-organization of the actin cytoskeleton results in chiral …",
+        "eprint": "https://www.biorxiv.org/content/biorxiv/early/2021/04/22/2021.04.22.440942.full.pdf"
+    },
+    {
         "title": "Dermoscopic attributes classification using deep learning and multi-task learning",
         "url": "https://www.sciencedirect.com/science/article/pii/S1877050920324121",
         "author_links": {
@@ -1794,6 +1979,21 @@
         "eprint": "https://arxiv.org/pdf/2008.06959"
     },
     {
+        "title": "Training robust deep learning models for medical imaging tasks with spectral decoupling",
+        "url": "https://arxiv.org/abs/2103.17171",
+        "author_links": {
+            "A Rannikko": "https://scholar.google.com/citations?user=2IIy7okAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Pohjonen",
+            "C Stürenberg",
+            "A Rannikko",
+            "T Mirtti"
+        ],
+        "abstract": "Deep neural networks show impressive performance in medical imaging tasks. However, many current networks generalise poorly to data unseen during training, for example data generated by different centres. Such behaviour can be caused by networks overfitting easy …",
+        "eprint": "https://arxiv.org/pdf/2103.17171"
+    },
+    {
         "title": "Generating Physically Sound Training Data for Image Recognition of Additively Manufactured Parts",
         "url": "https://openaccess.thecvf.com/content/WACV2021/html/Nickchen_Generating_Physically_Sound_Training_Data_for_Image_Recognition_of_Additively_WACV_2021_paper.html",
         "author_links": {
@@ -1805,6 +2005,19 @@
         ],
         "abstract": "In recent years, Additive Manufacturing (AM) has evolved from a niche technology for prototyping to a well-known industrial production process. In this work, we focus on Selective Laser Sintering (SLS)---one of the leading AM techniques. While SLS has many …",
         "eprint": "https://openaccess.thecvf.com/content/WACV2021/papers/Nickchen_Generating_Physically_Sound_Training_Data_for_Image_Recognition_of_Additively_WACV_2021_paper.pdf"
+    },
+    {
+        "title": "A Robust System to Detect and Explain Public Mask Wearing Behavior",
+        "url": "https://www.researchgate.net/profile/Biplav-Srivastava/publication/350446811_A_Robust_System_to_Detect_and_Explain_Public_Mask_Wearing_Behavior/links/6065d2f9a6fdccad3f662235/A-Robust-System-to-Detect-and-Explain-Public-Mask-Wearing-Behavior.pdf",
+        "author_links": {
+            "B Srivastava": "https://scholar.google.com/citations?user=mPC6wp4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Gupta",
+            "B Srivastava"
+        ],
+        "abstract": "COVID-19 is a global health crisis during which mask-wearing has emerged as an effective tool to combat the spread of disease. During this time, non-technical users like health officials and school administrators need tools to know how widely people are wearing masks …",
+        "eprint": "https://www.researchgate.net/profile/Biplav-Srivastava/publication/350446811_A_Robust_System_to_Detect_and_Explain_Public_Mask_Wearing_Behavior/links/6065d2f9a6fdccad3f662235/A-Robust-System-to-Detect-and-Explain-Public-Mask-Wearing-Behavior.pdf"
     },
     {
         "title": "CNN and Deep Sets for End-to-End Whole Slide Image Representation Learning",
@@ -1867,6 +2080,21 @@
         "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8948470/09200487.pdf"
     },
     {
+        "title": "Data Augmentations for Document Images",
+        "url": "http://ceur-ws.org/Vol-2831/paper20.pdf",
+        "author_links": {
+            "Y Lee": "https://scholar.google.com/citations?user=dYjue4wAAAAJ&hl=en&oi=sra",
+            "S Kim": "https://scholar.google.com/citations?user=cIK1hS8AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Lee",
+            "T Hong",
+            "S Kim"
+        ],
+        "abstract": "Data augmentation has the potential to significantly improve the generalization capability of deep neural networks. Especially in image recognition, recent augmentation techniques such as Mixup, CutOut, CutMix, and RandAugment have shown great performance …",
+        "eprint": "http://ceur-ws.org/Vol-2831/paper20.pdf"
+    },
+    {
         "title": "Physical Cue based Depth-Sensing by Color Coding with Deaberration Network",
         "url": "https://arxiv.org/abs/1908.00329",
         "author_links": {
@@ -1897,8 +2125,27 @@
         "eprint": "https://arxiv.org/pdf/2009.00908"
     },
     {
+        "title": "Deep convolutional neural network for automatic fault recognition from 3D seismic datasets",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0098300421000807",
+        "author_links": {
+            "Y An": "https://scholar.google.com/citations?user=g-raNBkAAAAJ&hl=en&oi=sra",
+            "C Childs": "https://scholar.google.com/citations?user=pr-iC-4AAAAJ&hl=en&oi=sra",
+            "J Walsh": "https://scholar.google.com/citations?user=xttxLfAAAAAJ&hl=en&oi=sra",
+            "R Dong": "https://scholar.google.com/citations?user=icGRQ68AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y An",
+            "J Guo",
+            "Q Ye",
+            "C Childs",
+            "J Walsh",
+            "R Dong"
+        ],
+        "abstract": "With the explosive growth in seismic data acquisition and the successful application of deep convolutional neural networks (DCNN) to various image processing tasks within multidisciplinary fields, many researchers have begun to research DCNN based automatic …"
+    },
+    {
         "title": "Return on Investment in Machine Learning: Crossing the Chasm between Academia and Business",
-        "url": "https://content.sciendo.com/view/journals/fcds/45/4/article-p281.xml",
+        "url": "https://www.infona.pl/resource/bwmeta1.element.baztech-0296a03b-726e-4542-9c1c-392a23ac42aa",
         "author_links": {
             "J Mizgajski": "https://scholar.google.com/citations?user=kV8W150AAAAJ&hl=en&oi=sra",
             "A Szymczak": "https://scholar.google.com/citations?user=fNqZL_4AAAAJ&hl=en&oi=sra",
@@ -1909,8 +2156,7 @@
             "A Szymczak",
             "M Morzy"
         ],
-        "abstract": "Academia remains the central place of machine learning education. While academic culture is the predominant factor influencing the way we teach machine learning to students, many practitioners question this culture, claiming the lack of alignment between academic and …",
-        "eprint": "https://content.sciendo.com/downloadpdf/journals/fcds/45/4/article-p281.xml"
+        "abstract": "Academia remains the central place of machine learning education. While academic culture is the predominant factor influencing the way we teach machine learning to students, many practitioners question this culture, claiming the lack of alignment between academic and …"
     },
     {
         "title": "Deep learning for retail product recognition: challenges and techniques",
@@ -1990,6 +2236,20 @@
         "eprint": "https://www.mdpi.com/1424-8220/21/5/1734/pdf"
     },
     {
+        "title": "3D Convolutional Neural Networks for Stalled Brain Capillary Detection",
+        "url": "https://arxiv.org/abs/2104.01687",
+        "author_links": {
+            "AA Kalinin": "https://scholar.google.com/citations?user=oEHDAgMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "R Solovyev",
+            "AA Kalinin",
+            "T Gabruseva"
+        ],
+        "abstract": "Adequate blood supply is critical for normal brain function. Brain vasculature dysfunctions such as stalled blood flow in cerebral capillaries are associated with cognitive decline and pathogenesis in Alzheimer's disease. Recent advances in imaging technology enabled …",
+        "eprint": "https://arxiv.org/pdf/2104.01687"
+    },
+    {
         "title": "Deep Learning for Skin Lesion Classification: Augment, Train, and Ensemble",
         "author_links": {
             "FVM Perez": "https://scholar.google.com/citations?user=14vRKS8AAAAJ&hl=en&oi=sra"
@@ -2021,14 +2281,33 @@
         "eprint": "http://essay.utwente.nl/83028/1/Mehra_MA_EEMCS.pdf"
     },
     {
+        "title": "Warp Consistency for Unsupervised Learning of Dense Correspondences",
+        "url": "https://arxiv.org/abs/2104.03308",
+        "author_links": {
+            "P Truong": "https://scholar.google.com/citations?user=v8VCED0AAAAJ&hl=en&oi=sra",
+            "M Danelljan": "https://scholar.google.com/citations?user=NCSSpMkAAAAJ&hl=en&oi=sra",
+            "F Yu": "https://scholar.google.com/citations?user=-XCiamcAAAAJ&hl=en&oi=sra",
+            "L Van Gool": "https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "P Truong",
+            "M Danelljan",
+            "F Yu",
+            "L Van Gool"
+        ],
+        "abstract": "The key challenge in learning dense correspondences lies in the lack of ground-truth matches for real image pairs. While photometric consistency losses provide unsupervised alternatives, they struggle with large appearance changes, which are ubiquitous in …",
+        "eprint": "https://arxiv.org/pdf/2104.03308"
+    },
+    {
         "title": "О важности аугментации данных при машинном обучении в задачах обработки изображений в условиях дефицита данных",
-        "url": "https://elibrary.ru/item.asp?id=43785376",
+        "url": "http://repo.ssau.ru/bitstream/Informacionnye-tehnologii-i-nanotehnologii/O-vazhnosti-augmentacii-dannyh-pri-mashinnom-obuchenii-v-zadachah-obrabotki-izobrazhenii-v-usloviyah-deficita-dannyh-85287/1/%D0%98%D0%A2%D0%9D%D0%A2-2020_%D1%82%D0%BE%D0%BC%202-383-388.pdf",
         "author_links": {},
         "author": [
             "НА Андриянов",
             "ДА Андриянов"
         ],
-        "abstract": "В статье приведены результаты исследования эффективности работы различных нейронных сетей в ограниченных условиях исходных данных и при ряде простейших аугментаций. При этом зависимости получены для последовательной нейронной сети …"
+        "abstract": "В статье приведены результаты исследования эффективности работы различных нейронных сетей в ограниченных условиях исходных данных и при ряде простейших аугментаций. При этом зависимости получены для последовательной нейронной сети …",
+        "eprint": "http://repo.ssau.ru/bitstream/Informacionnye-tehnologii-i-nanotehnologii/O-vazhnosti-augmentacii-dannyh-pri-mashinnom-obuchenii-v-zadachah-obrabotki-izobrazhenii-v-usloviyah-deficita-dannyh-85287/1/%D0%98%D0%A2%D0%9D%D0%A2-2020_%D1%82%D0%BE%D0%BC%202-383-388.pdf"
     },
     {
         "title": "Image-based high-throughput detection and phenotype evaluation method for multiple lettuce varieties",
@@ -2048,10 +2327,10 @@
     },
     {
         "title": "Automation of Kidney Perfusion Analysis from Dynamic Phase-Contrast MRI using Deep Learning",
-        "url": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf",
+        "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1448646",
         "author_links": {},
         "author": [
-            "AM MORA"
+            "A Martínez Mora"
         ],
         "abstract": "Renal phase-contrast magnetic resonance imaging (PC-MRI) is an MRI modality where the phase component of the MR signal is made sensitive to the velocity of water molecules in the kidneys. PC-MRI is able to assess the Renal Blood Flow (RBF), which is an important …",
         "eprint": "https://www.diva-portal.org/smash/get/diva2:1448646/FULLTEXT01.pdf"
@@ -2060,6 +2339,7 @@
         "title": "Danish Fungi 2020--Not Just Another Image Recognition Dataset",
         "url": "https://arxiv.org/abs/2103.10107",
         "author_links": {
+            "L Picek": "https://scholar.google.com/citations?user=SBifPtYAAAAJ&hl=en&oi=sra",
             "M Šulc": "https://scholar.google.com/citations?user=lTFaQsgAAAAJ&hl=en&oi=sra",
             "J Matas": "https://scholar.google.com/citations?user=EJCNY6QAAAAJ&hl=en&oi=sra",
             "J Heilmann-Clausen": "https://scholar.google.com/citations?user=xxn04rcAAAAJ&hl=en&oi=sra"
@@ -2089,26 +2369,6 @@
         "eprint": "https://arxiv.org/pdf/2009.01599"
     },
     {
-        "title": "DeepSweep: An Evaluation Framework for Mitigating DNN Backdoor Attacks using Data Augmentation",
-        "url": "https://arxiv.org/abs/2012.07006",
-        "author_links": {
-            "Y Zeng": "https://scholar.google.com/citations?user=K-U_ZqkAAAAJ&hl=en&oi=sra",
-            "H Qiu": "https://scholar.google.com/citations?user=6JWNv6gAAAAJ&hl=en&oi=sra",
-            "S Guo": "https://scholar.google.com/citations?user=wQrVkBYAAAAJ&hl=en&oi=sra",
-            "T Zhang": "https://scholar.google.com/citations?user=9vpiYDIAAAAJ&hl=en&oi=sra",
-            "M Qiu": "https://scholar.google.com/citations?user=smMVdtwAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "Y Zeng",
-            "H Qiu",
-            "S Guo",
-            "T Zhang",
-            "M Qiu"
-        ],
-        "abstract": "Public resources and services (eg, datasets, training platforms, pre-trained models) have been widely adopted to ease the development of Deep Learning-based applications. However, if the third-party providers are untrusted, they can inject poisoned samples into the …",
-        "eprint": "https://arxiv.org/pdf/2012.07006"
-    },
-    {
         "title": "Underwater Object Detection With Mixed Attention Mechanism And Multi-Enhancement Strategy",
         "url": "https://ieeexplore.ieee.org/abstract/document/9326737/",
         "author_links": {},
@@ -2127,6 +2387,23 @@
         ],
         "abstract": "Smartphone wound image analysis has recently emerged as a viable way to assess healing progress and provide actionable feedback to patients and caregivers between hospital appointments. Segmentation is a key image analysis step, after which attributes of the …",
         "eprint": "ftp://ftp.cs.wpi.edu/pub/techreports/pdf/19-02.pdf"
+    },
+    {
+        "title": "Segmentation of cell-level anomalies in electroluminescence images of photovoltaic modules",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0038092X21002462",
+        "author_links": {
+            "U Otamendi": "https://scholar.google.com/citations?user=h8xzMykAAAAJ&hl=en&oi=sra",
+            "I Martinez": "https://scholar.google.com/citations?user=_VGGVEgAAAAJ&hl=en&oi=sra",
+            "E Viles": "https://scholar.google.com/citations?user=-pRUC-8AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "U Otamendi",
+            "I Martinez",
+            "M Quartulli",
+            "IG Olaizola",
+            "E Viles"
+        ],
+        "abstract": "In the operation & maintenance (O&M) of photovoltaic (PV) plants, the early identification of failures has become crucial to maintain productivity and prolong components' life. Of all defects, cell-level anomalies can lead to serious failures and may affect surrounding PV …"
     },
     {
         "title": "Generative augmentation to improve lung nodules detection in resource-limited settings",
@@ -2158,7 +2435,7 @@
         "title": "Synthesize and Segment: Towards Improved Catheter Segmentation via Adversarial Augmentation",
         "url": "https://www.mdpi.com/995586",
         "author_links": {
-            "I Ullah": "https://scholar.google.com/citations?user=uvXoXc8AAAAJ&hl=en&oi=sra",
+            "I Ullah": "https://scholar.google.com/citations?user=eod9uX0AAAAJ&hl=en&oi=sra",
             "P Chikontwe": "https://scholar.google.com/citations?user=8jHbkMcAAAAJ&hl=en&oi=sra",
             "H Choi": "https://scholar.google.com/citations?user=_RWbknkAAAAJ&hl=en&oi=sra",
             "CH Yoon": "https://scholar.google.com/citations?user=HGG36_8AAAAJ&hl=en&oi=sra",
@@ -2189,9 +2466,10 @@
         "abstract": "The side-scan sonar (SSS) is a critical sensor device used to explore underwater environments in the deep sea. Gathering SSS data, however, is an expensive and time-consuming task because it requires sensor towing and involves complicated field …"
     },
     {
-        "title": "MANet: A Two-stage Deep Learning Method for Classification of COVID-19 from Chest X-ray Images",
-        "url": "https://kclpure.kcl.ac.uk/portal/files/149388001/MANET_NEUROCOMPUTING_REVISION.pdf",
+        "title": "MANet: A two-stage deep learning method for classification of COVID-19 from Chest X-ray images",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0925231221004021",
         "author_links": {
+            "Y Xu": "https://scholar.google.com/citations?user=ThlCdUcAAAAJ&hl=en&oi=sra",
             "HK Lam": "https://scholar.google.com/citations?user=iO8fu_IAAAAJ&hl=en&oi=sra",
             "G Jia": "https://scholar.google.com/citations?user=s-41xe8AAAAJ&hl=en&oi=sra"
         },
@@ -2280,6 +2558,21 @@
         "abstract": "The article proposes methods for increasing the efficiency of pattern recognition in images using convolutional neural networks in conditions of insufficient reference images. It is proposed to use various kinds of image transformations to generate new images and …"
     },
     {
+        "title": "Autonomous Mobile Robot for Apple Plant Disease Detection based on CNN and Multi-Spectral Vision System",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9382649/",
+        "author_links": {
+            "P Karpyshev": "https://scholar.google.com/citations?user=nRM2J-4AAAAJ&hl=en&oi=sra",
+            "V Ilin": "https://scholar.google.com/citations?user=nS7FO8UAAAAJ&hl=en&oi=sra",
+            "I Kalinov": "https://scholar.google.com/citations?user=zWgTq5AAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "P Karpyshev",
+            "V Ilin",
+            "I Kalinov"
+        ],
+        "abstract": "This paper presents an autonomous system for apple orchard inspection and early stage disease detection. Various sensors including hyperspectral, multispectral and visible range scanners are used for disease detection. For localization and obstacle detection 2D LiDARs …"
+    },
+    {
         "title": "Encoder-Recurrent Decoder Network for Single Image Dehazing",
         "url": "https://ieeexplore.ieee.org/abstract/document/9052993/",
         "author_links": {
@@ -2341,6 +2634,7 @@
         "title": "MaskHunter: real-time object detection of face masks during the COVID-19 pandemic",
         "url": "https://digital-library.theiet.org/content/journals/10.1049/iet-ipr.2020.1119",
         "author_links": {
+            "Z Cao": "https://scholar.google.com/citations?user=oxNQZLMAAAAJ&hl=en&oi=sra",
             "H Qu": "https://scholar.google.com/citations?user=Y25xAVMAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -2350,7 +2644,20 @@
             "S Mu",
             "H Qu"
         ],
-        "abstract": "Due to the COVID-19 pandemic at present, it is necessary to detect whether pedestrians in public places wear face masks or not for preventing the spread of novel coronavirus. The pedestrian flow in public places is large, and it puts forward higher requirements for the …"
+        "abstract": "Due to the COVID-19 pandemic at present, it is necessary to detect whether pedestrians in public places wear face masks or not for preventing the spread of novel coronavirus. The pedestrian flow in public places is large, and it puts forward higher requirements for the …",
+        "eprint": "https://ietresearch.onlinelibrary.wiley.com/doi/pdfdirect/10.1049/iet-ipr.2020.1119"
+    },
+    {
+        "title": "Semi-automatic Manga Colorization Using Conditional Adversarial Networks",
+        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-IYX0KCNe3&sig=W1UJWNV_Uq6sZgzIKEpdAlo58Ho",
+        "author_links": {
+            "I Makarov": "https://scholar.google.com/citations?user=cFpDMzIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Golyadkin",
+            "I Makarov"
+        ],
+        "abstract": "Manga colorization is time-consuming and hard to automate. In this paper, we propose a conditional adversarial deep learning approach for semi-automatic manga images colorization. The system directly maps a tuple of grayscale manga page image and sparse …"
     },
     {
         "title": "SEGMENTATION OF CLOUD PATTERNS FROM SATELLITE IMAGES TO IMPROVE CLIMATE MODELS",
@@ -2364,6 +2671,16 @@
         ],
         "abstract": "Climate change has been at the top of our minds and at the forefront of important political decision-making for many years [1]. Classification of different types of clouds is substantial for understanding climate change. Human ability to identify patterns is limited and murky …",
         "eprint": "https://www.ds3-datascience-polytechnique.fr/wp-content/uploads/2021/01/10.pdf"
+    },
+    {
+        "title": "Exploitation of data augmentation strategies for improved UAV detection",
+        "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11729/117290G/Exploitation-of-data-augmentation-strategies-for-improved-UAV-detection/10.1117/12.2587982.short",
+        "author_links": {},
+        "author": [
+            "L Freudenmann",
+            "L Sommer"
+        ],
+        "abstract": "The increased availability of UAVs poses possibilities for novel applications but also safety issues regarding mass events or safety-sensitive infrastructure. Thus, the demand for automated UAV detection systems to allow for an early alert generation is increasing. Such …"
     },
     {
         "title": "GAN-SMOTE: A Generative Adversarial Network approach to Synthetic Minority Oversampling for One-Hot Encoded Data",
@@ -2405,6 +2722,20 @@
         ],
         "abstract": "This report describes my 5.5 months end of studies internship as an AI Research Intern, the focus of which was the implementation and demonstration of techniques from the Domain Adaptation literature on the problem of autonomous driving. Machine Learning algorithms …",
         "eprint": "https://upcommons.upc.edu/bitstream/handle/2117/333264/rapport-sfe.pdf"
+    },
+    {
+        "title": "Exploring 2D Data Augmentation for 3D Monocular Object Detection",
+        "url": "https://arxiv.org/abs/2104.10786",
+        "author_links": {
+            "BR Kiran": "https://scholar.google.com/citations?user=qvXusvwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "K Santhakumar",
+            "BR Kiran",
+            "T Gauthier"
+        ],
+        "abstract": "Data augmentation is a key component of CNN based image recognition tasks like object detection. However, it is relatively less explored for 3D object detection. Many standard 2D object detection data augmentation techniques do not extend to 3D box. Extension of these …",
+        "eprint": "https://arxiv.org/pdf/2104.10786"
     },
     {
         "title": "AGUnet: Annotation-guided U-net for fast one-shot video object segmentation",
@@ -2486,6 +2817,16 @@
         ],
         "abstract": "A deep learning approach is presented to detect safe landing locations using LIDAR scans of the Lunar surface. Semantic Segmentation is used to classify hazardous and safe locations from a LIDAR scan during the landing phase. Digital Elevation Maps from the …",
         "eprint": "https://sites.utexas.edu/renato/files/2020/11/CNN_landing_accepted.pdf"
+    },
+    {
+        "title": "Using deep learning for food recognition",
+        "url": "http://diposit.ub.edu/dspace/handle/2445/176053",
+        "author_links": {},
+        "author": [
+            "L Zhu"
+        ],
+        "abstract": "[en] Image recognition is a very challenging and important problem in the computer vision field. And food image classification is one of the most challenging branches of this field. In real-world scenarios, it is more common for a food image to have more than one food item …",
+        "eprint": "http://diposit.ub.edu/dspace/bitstream/2445/176053/3/176053.pdf"
     },
     {
         "title": "Rubik's Cube layout construction and validation algorithm",
@@ -2672,24 +3013,6 @@
         "eprint": "https://arxiv.org/pdf/1812.00877"
     },
     {
-        "title": "Exploring Complementary Strengths of Invariant and Equivariant Representations for Few-Shot Learning",
-        "url": "https://arxiv.org/abs/2103.01315",
-        "author_links": {
-            "MN Rizve": "https://scholar.google.com/citations?user=kA8ZM5oAAAAJ&hl=en&oi=sra",
-            "S Khan": "https://scholar.google.com/citations?user=rkEra5AAAAAJ&hl=en&oi=sra",
-            "FS Khan": "https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en&oi=sra",
-            "M Shah": "https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "MN Rizve",
-            "S Khan",
-            "FS Khan",
-            "M Shah"
-        ],
-        "abstract": "In many real-world problems, collecting a large number of labeled samples is infeasible. Few-shot learning (FSL) is the dominant approach to address this issue, where the objective is to quickly adapt to novel categories in presence of a limited number of samples. FSL tasks …",
-        "eprint": "https://arxiv.org/pdf/2103.01315"
-    },
-    {
         "title": "Training Strategies and Data Augmentations in CNN-based DeepFake Video Detection",
         "url": "https://arxiv.org/abs/2011.07792",
         "author_links": {
@@ -2809,7 +3132,8 @@
         "eprint": "https://cyberleninka.ru/article/n/problemy-detektirovaniya-obekta-na-izobrazhenii-v-zadachah-glubokogo-obucheniya-v-oblasti-kompyuternogo-zreniya-na-osnove-svyortochnyh"
     },
     {
-        "title": "Semi-supervised Learning with a Teacher-Student Paradigm for Histopathology Classification: A Resource to Face Data Heterogeneity and Lack of Local …",
+        "title": "Semi-supervised learning with a teacher-student paradigm for histopathology classification: a resource to face data heterogeneity and lack of local annotations …",
+        "url": "https://www.researchgate.net/profile/Juan-Otalora-Montenegro/publication/349471370_Semi-supervised_Learning_with_a_Teacher-Student_Paradigm_for_Histopathology_Classification_A_Resource_to_Face_Data_Heterogeneity_and_Lack_of_Local_Annotations/links/6034eaeba6fdcc37a846a208/Semi-supervised-Learning-with-a-Teacher-Student-Paradigm-for-Histopathology-Classification-A-Resource-to-Face-Data-Heterogeneity-and-Lack-of-Local-Annotations.pdf",
         "author_links": {
             "N Marini": "https://scholar.google.com/citations?user=kKK8SBYAAAAJ&hl=en&oi=sra",
             "S Otálora": "https://scholar.google.com/citations?user=Iqt6d2YAAAAJ&hl=en&oi=sra",
@@ -2819,7 +3143,9 @@
             "N Marini",
             "S Otálora",
             "H Müller"
-        ]
+        ],
+        "abstract": "Training classification models in the medical domain is often difficult due to data heterogeneity (related to acquisition procedures) and due to the difficulty of getting sufficient amounts of annotations from specialized experts. It is particularly true in digital pathology …",
+        "eprint": "https://www.researchgate.net/profile/Juan-Otalora-Montenegro/publication/349471370_Semi-supervised_Learning_with_a_Teacher-Student_Paradigm_for_Histopathology_Classification_A_Resource_to_Face_Data_Heterogeneity_and_Lack_of_Local_Annotations/links/6034eaeba6fdcc37a846a208/Semi-supervised-Learning-with-a-Teacher-Student-Paradigm-for-Histopathology-Classification-A-Resource-to-Face-Data-Heterogeneity-and-Lack-of-Local-Annotations.pdf"
     },
     {
         "title": "Self Supervised Learning for Object Localisation in 3D Tomographic Images",
@@ -2871,7 +3197,8 @@
         "title": "3DeepM: An Ad Hoc Architecture Based on Deep Learning Methods for Multispectral Image Classification",
         "url": "https://www.mdpi.com/1001116",
         "author_links": {
-            "PJ Navarro": "https://scholar.google.com/citations?user=tDxlWOkAAAAJ&hl=en&oi=sra"
+            "PJ Navarro": "https://scholar.google.com/citations?user=tDxlWOkAAAAJ&hl=en&oi=sra",
+            "MV Díaz-Galián": "https://scholar.google.com/citations?user=MD0dlN8AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "PJ Navarro",
