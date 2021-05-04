@@ -739,6 +739,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.transforms.Affine">
+    Affine
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.geometric.transforms.ElasticTransform">
     ElasticTransform
   </a>
@@ -865,11 +870,190 @@
 <div class="doc doc-contents first">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.transforms.Affine">
+<code>class <strong>albumentations.augmentations.geometric.transforms.Affine</strong></code>
+<code>
+<span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">translate_percent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">translate_px</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rotate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shear</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cval_mask</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fit_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L469" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Augmentation to apply affine transformations to images.
+This is mostly a wrapper around the corresponding classes and functions in OpenCV.</p>
+<p>Affine transformations involve:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="err">- Translation ("move" image on the x-/y-axis)</span>
+<span class="err">- Rotation</span>
+<span class="err">- Scaling ("zoom" in/out)</span>
+<span class="err">- Shear (move one side of the image, turning a square into a trapezoid)</span>
+</code></pre>
+</div>
+<p>All such transformations can create "new" pixels in the image without a defined content, e.g.
+if the image is translated to the left, pixels are created on the right.
+A method has to be defined to deal with these pixel values.
+The parameters <code>cval</code> and <code>mode</code> of this class deal with this.</p>
+<p>Some transformations involve interpolations between several pixels
+of the input image to generate output pixel values. The parameter <code>order</code>
+deals with the method of interpolation used for this.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td><code>number, tuple of number or dict</code></td>
+<td>
+<p>Scaling factor to use, where <code>1.0</code> denotes "no change" and
+<code>0.5</code> is zoomed out to <code>50</code> percent of the original size.
+    * If a single number, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>.
+      That value will be used identically for both x- and y-axis.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p>
+</td>
+</tr>
+<tr>
+<td><code>translate_percent</code></td>
+<td><code>None, number, tuple of number or dict</code></td>
+<td>
+<p>Translation as a fraction of the image height/width
+(x-translation, y-translation), where <code>0</code> denotes "no change"
+and <code>0.5</code> denotes "half of the axis size".
+    * If <code>None</code> then equivalent to <code>0.0</code> unless <code>translate_px</code> has a value other than <code>None</code>.
+    * If a single number, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>.
+      That sampled fraction value will be used identically for both x- and y-axis.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p>
+</td>
+</tr>
+<tr>
+<td><code>translate_px</code></td>
+<td><code>None, int, tuple of int or dict</code></td>
+<td>
+<p>Translation in pixels.
+    * If <code>None</code> then equivalent to <code>0</code> unless <code>translate_percent</code> has a value other than <code>None</code>.
+    * If a single int, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from
+      the discrete interval <code>[a..b]</code>. That number will be used identically for both x- and y-axis.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p>
+</td>
+</tr>
+<tr>
+<td><code>rotate</code></td>
+<td><code>number or tuple of number</code></td>
+<td>
+<p>Rotation in degrees (<strong>NOT</strong> radians), i.e. expected value range is
+around <code>[-360, 360]</code>. Rotation happens around the <em>center</em> of the image,
+not the top left corner as in some other frameworks.
+    * If a number, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>
+      and used as the rotation value.</p>
+</td>
+</tr>
+<tr>
+<td><code>shear</code></td>
+<td><code>number, tuple of number or dict</code></td>
+<td>
+<p>Shear in degrees (<strong>NOT</strong> radians), i.e. expected value range is
+around <code>[-360, 360]</code>, with reasonable values being in the range of <code>[-45, 45]</code>.
+    * If a number, then that value will be used for all images as
+      the shear on the x-axis (no shear on the y-axis will be done).
+    * If a tuple <code>(a, b)</code>, then two value will be uniformly sampled per image
+      from the interval <code>[a, b]</code> and be used as the x- and y-shear value.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p>
+</td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>int</code></td>
+<td>
+<p>OpenCV interpolation flag.</p>
+</td>
+</tr>
+<tr>
+<td><code>mask_interpolation</code></td>
+<td><code>int</code></td>
+<td>
+<p>OpenCV interpolation flag.</p>
+</td>
+</tr>
+<tr>
+<td><code>cval</code></td>
+<td><code>number or sequence of number</code></td>
+<td>
+<p>The constant value to use when filling in newly created pixels.
+(E.g. translating by 1px to the right will create a new 1px-wide column of pixels
+on the left of the image).
+The value is only used when <code>mode=constant</code>. The expected value range is <code>[0, 255]</code> for <code>uint8</code> images.</p>
+</td>
+</tr>
+<tr>
+<td><code>cval_mask</code></td>
+<td><code>number or tuple of number</code></td>
+<td>
+<p>Same as cval but only for masks.</p>
+</td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>int</code></td>
+<td>
+<p>OpenCV border flag.</p>
+</td>
+</tr>
+<tr>
+<td><code>fit_output</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Whether to modify the affine transformation so that the whole output image is always
+contained in the image plane (<code>True</code>) or accept parts of the image being outside
+the image plane (<code>False</code>). This can be thought of as first applying the affine transformation
+and then applying a second transformation to "zoom in" on the new image so that it fits the image plane,
+This is useful to avoid corners of the image being outside of the image plane after applying rotations.
+It will however negate translation and scaling.</p>
+</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image, mask, keypoints, bboxes</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.transforms.ElasticTransform">
 <code>class <strong>albumentations.augmentations.geometric.transforms.ElasticTransform</strong></code>
 <code>
 <span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha_affine</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">approximate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L139" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L142" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ElasticTransform" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -966,7 +1150,7 @@ Default: cv2.BORDER_REFLECT_101</p>
 <code>class <strong>albumentations.augmentations.geometric.transforms.Perspective</strong></code>
 <code>
 <span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">keep_size</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pad_mode</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pad_val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask_pad_val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fit_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L224" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L227" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Perspective" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1056,7 +1240,7 @@ Default: False</p>
 <code>class <strong>albumentations.augmentations.geometric.transforms.ShiftScaleRotate</strong></code>
 <code>
 <span class="p">(</span><span class="n">shift_limit</span><span class="o">=</span><span class="mf">0.0625</span><span class="p">,</span> <span class="n">scale_limit</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">rotate_limit</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shift_limit_x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shift_limit_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L49" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L52" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ShiftScaleRotate" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>

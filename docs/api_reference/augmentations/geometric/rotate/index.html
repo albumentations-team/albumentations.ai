@@ -752,6 +752,11 @@
     Rotate
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.rotate.SafeRotate">
+    SafeRotate
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -944,6 +949,89 @@ albumentations.augmentations.geometric.rotate.RandomRotate90.apply<span class="p
 </div>
 <div class="doc doc-contents">
 <p>Rotate the input by an angle selected randomly from the uniform distribution.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td>
+<p>range from which a random angle is picked. If limit is a single int
+an angle is picked from (-limit, limit). Default: (-90, 90)</p>
+</td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p>
+</td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td>
+<p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p>
+</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT.</p>
+</td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td>
+<p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p>
+</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying the transform. Default: 0.5.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image, mask, bboxes, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.rotate.SafeRotate">
+<code>class <strong>albumentations.augmentations.geometric.rotate.SafeRotate</strong></code>
+<code>
+<span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L135" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.geometric.rotate.SafeRotate" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Rotate the input inside the input's frame by an angle selected randomly from the uniform distribution.</p>
+<p>The resulting image may have artifacts in it. After rotation, the image may have a different aspect ratio, and
+after resizing, it returns to its original shape with the original aspect ratio of the image. For these reason we
+may see some artifacts.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
