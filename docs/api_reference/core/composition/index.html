@@ -674,6 +674,11 @@
     Sequential
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.core.composition.SomeOf">
+    SomeOf
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -889,7 +894,7 @@
 <code>class <strong>albumentations.core.composition.BboxParams</strong></code>
 <code>
 <span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_area</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">min_visibility</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">check_each_transform</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L430" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L470" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.BboxParams" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1025,7 +1030,7 @@ Default: <code>True</code></p>
 <code>class <strong>albumentations.core.composition.KeypointParams</strong></code>
 <code>
 <span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">angle_in_degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_each_transform</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L470" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L510" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.KeypointParams" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1135,7 +1140,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 <code>class <strong>albumentations.core.composition.OneOrOther</strong></code>
 <code>
 <span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">transforms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L280" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L320" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.OneOrOther" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1150,7 +1155,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 <code>class <strong>albumentations.core.composition.PerChannel</strong></code>
 <code>
 <span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L306" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L346" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1199,7 +1204,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 <code>class <strong>albumentations.core.composition.Sequential</strong></code>
 <code>
 <span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L523" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L563" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
@@ -1249,6 +1254,62 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 </div>
 </td>
 </tr>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.core.composition.SomeOf">
+<code>class <strong>albumentations.core.composition.SomeOf</strong></code>
+<code>
+<span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L291" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.core.composition.SomeOf" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Select N transforms to apply. Selected transforms will be called with <code>force_apply=True</code>.
+Transforms probabilities will be normalized to one 1, so in this case transforms probabilities works as weights.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transforms</code></td>
+<td><code>list</code></td>
+<td>
+<p>list of transformations to compose.</p>
+</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td><code>int</code></td>
+<td>
+<p>number of transforms to apply.</p>
+</td>
+</tr>
+<tr>
+<td><code>replace</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Whether the sampled transforms are with or without replacement. Default: True.</p>
+</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td>
+<p>probability of applying selected transform. Default: 1.</p>
+</td>
+</tr>
+</tbody>
 </table>
 <div class="doc doc-children">
 </div>
