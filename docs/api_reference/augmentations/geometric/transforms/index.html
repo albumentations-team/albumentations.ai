@@ -754,6 +754,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine">
+    PiecewiseAffine
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.geometric.transforms.ShiftScaleRotate">
     ShiftScaleRotate
   </a>
@@ -1223,6 +1228,141 @@ Default: False</p>
 <td><code>float</code></td>
 <td>
 <p>probability of applying the transform. Default: 0.5.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Targets:
+    image, mask, keypoints, bboxes</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.transforms.PiecewiseAffine">
+<code>class <strong>albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code>
+<code>
+<span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">nb_rows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nb_cols</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mask_interpolation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cval_mask</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'constant'</span><span class="p">,</span> <span class="n">absolute_scale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">keypoints_threshold</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L753" target="_blank">[view source on GitHub]</a>
+</span> <a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a></h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply affine transformations that differ between local neighbourhoods.
+This augmentation places a regular grid of points on an image and randomly moves the neighbourhood of these point
+around via affine transformations. This leads to local distortions.</p>
+<p>This is mostly a wrapper around scikit-image's <code>PiecewiseAffine</code>.
+See also <code>Affine</code> for a similar technique.</p>
+<p>Note:
+    This augmenter is very slow. Try to use <code>ElasticTransformation</code> instead, which is at least 10x faster.</p>
+<p>Note:
+    For coordinate-based inputs (keypoints, bounding boxes, polygons, ...),
+    this augmenter still has to perform an image-based augmentation,
+    which will make it significantly slower and not fully correct for such inputs than other transforms.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td><code>float, tuple of float</code></td>
+<td>
+<p>Each point on the regular grid is moved around via a normal distribution.
+This scale factor is equivalent to the normal distribution's sigma.
+Note that the jitter (how far each point is moved in which direction) is multiplied by the height/width of
+the image if <code>absolute_scale=False</code> (default), so this scale can be the same for different sized images.
+Recommended values are in the range <code>0.01</code> to <code>0.05</code> (weak to strong augmentations).
+    * If a single <code>float</code>, then that value will always be used as the scale.
+    * If a tuple <code>(a, b)</code> of <code>float</code> s, then a random value will
+      be uniformly sampled per image from the interval <code>[a, b]</code>.</p>
+</td>
+</tr>
+<tr>
+<td><code>nb_rows</code></td>
+<td><code>int, tuple of int</code></td>
+<td>
+<p>Number of rows of points that the regular grid should have.
+Must be at least <code>2</code>. For large images, you might want to pick a higher value than <code>4</code>.
+You might have to then adjust scale to lower values.
+    * If a single <code>int</code>, then that value will always be used as the number of rows.
+    * If a tuple <code>(a, b)</code>, then a value from the discrete interval
+      <code>[a..b]</code> will be uniformly sampled per image.</p>
+</td>
+</tr>
+<tr>
+<td><code>nb_cols</code></td>
+<td><code>int, tuple of int</code></td>
+<td>
+<p>Number of columns. Analogous to <code>nb_rows</code>.</p>
+</td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>int</code></td>
+<td>
+<p>The order of interpolation. The order has to be in the range 0-5:
+ - 0: Nearest-neighbor
+ - 1: Bi-linear (default)
+ - 2: Bi-quadratic
+ - 3: Bi-cubic
+ - 4: Bi-quartic
+ - 5: Bi-quintic</p>
+</td>
+</tr>
+<tr>
+<td><code>mask_interpolation</code></td>
+<td><code>int</code></td>
+<td>
+<p>same as interpolation but for mask.</p>
+</td>
+</tr>
+<tr>
+<td><code>cval</code></td>
+<td><code>number</code></td>
+<td>
+<p>The constant value to use when filling in newly created pixels.</p>
+</td>
+</tr>
+<tr>
+<td><code>cval_mask</code></td>
+<td><code>number</code></td>
+<td>
+<p>Same as cval but only for masks.</p>
+</td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td>
+<p>{'constant', 'edge', 'symmetric', 'reflect', 'wrap'}, optional
+Points outside the boundaries of the input are filled according
+to the given mode.  Modes match the behaviour of <code>numpy.pad</code>.</p>
+</td>
+</tr>
+<tr>
+<td><code>absolute_scale</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Take <code>scale</code> as an absolute value rather than a relative value.</p>
+</td>
+</tr>
+<tr>
+<td><code>keypoints_threshold</code></td>
+<td><code>float</code></td>
+<td>
+<p>Used as threshold in conversion from distance maps to keypoints.
+The search for keypoints works by searching for the
+argmin (non-inverted) or argmax (inverted) in each channel. This
+parameters contains the maximum (non-inverted) or minimum (inverted) value to accept in order to view a hit
+as a keypoint. Use <code>None</code> to use no min/max. Default: 0.01</p>
 </td>
 </tr>
 </tbody>

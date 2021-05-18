@@ -739,6 +739,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.functional.from_distance_maps">
+    from_distance_maps()
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.geometric.functional.keypoint_rot90">
     keypoint_rot90()
   </a>
@@ -756,6 +761,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#albumentations.augmentations.geometric.functional.py3round">
     py3round()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#albumentations.augmentations.geometric.functional.to_distance_maps">
+    to_distance_maps()
   </a>
 </li>
 </ul>
@@ -888,7 +898,7 @@
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.bbox_rot90">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_rot90<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L19" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L14" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rot90" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Rotates a bounding box by 90 degrees CCW (see np.rot90)</p>
@@ -955,7 +965,7 @@ albumentations.augmentations.geometric.functional.bbox_rot90<span class="p">(</s
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.bbox_rotate">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_rotate<span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L87" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L82" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rotate" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Rotates a bounding box by angle degrees.</p>
@@ -1022,7 +1032,7 @@ albumentations.augmentations.geometric.functional.bbox_rotate<span class="p">(</
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.elastic_transform">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.elastic_transform<span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">alpha_affine</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">border_mode</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">approximate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L196" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L191" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Elastic deformation of images as described in [Simard2003]_ (with modifications).
@@ -1034,10 +1044,79 @@ Based on <a href="https://gist.github.com/erniejunior/601cdf56d2b424757de5" targ
 </div>
 </div>
 <div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.from_distance_maps">
+<code class="highlight language-python">def
+albumentations.augmentations.geometric.functional.from_distance_maps<span class="p">(</span><span class="n">distance_maps</span><span class="p">,</span> <span class="n">inverted</span><span class="p">,</span> <span class="n">if_not_found_coords</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L654" target="_blank">[view source on GitHub]</a></span>
+<a class="headerlink" href="#albumentations.augmentations.geometric.functional.from_distance_maps" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Convert outputs of <code>to_distance_maps()</code> to <code>KeypointsOnImage</code>.
+This is the inverse of <code>to_distance_maps</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>distance_maps</code></td>
+<td><code>ndarray</code></td>
+<td>
+<p>The distance maps. <code>N</code> is the number of keypoints.</p>
+</td>
+</tr>
+<tr>
+<td><code>inverted</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Whether the given distance maps were generated in inverted mode
+(i.e. :func:<code>KeypointsOnImage.to_distance_maps</code> was called with <code>inverted=True</code>) or in non-inverted mode.</p>
+</td>
+</tr>
+<tr>
+<td><code>if_not_found_coords</code></td>
+<td><code>Optional[Union[Sequence[int], dict]]</code></td>
+<td>
+<p>Coordinates to use for keypoints that cannot be found in <code>distance_maps</code>.</p>
+<ul>
+<li>If this is a <code>list</code>/<code>tuple</code>, it must contain two <code>int</code> values.</li>
+<li>If it is a <code>dict</code>, it must contain the keys <code>x</code> and <code>y</code> with each containing one <code>int</code> value.</li>
+<li>If this is <code>None</code>, then the keypoint will not be added.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td><code>Optional[float]</code></td>
+<td>
+<p>The search for keypoints works by searching for the
+argmin (non-inverted) or argmax (inverted) in each channel. This
+parameters contains the maximum (non-inverted) or minimum (inverted) value to accept in order to view a hit
+as a keypoint. Use <code>None</code> to use no min/max.</p>
+</td>
+</tr>
+<tr>
+<td><code>nb_channels</code></td>
+<td><code>None, int</code></td>
+<td>
+<p>Number of channels of the image on which the keypoints are placed.
+Some keypoint augmenters require that information. If set to <code>None</code>, the keypoint's shape will be set
+to <code>(height, width)</code>, otherwise <code>(height, width, nb_channels)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.keypoint_rot90">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_rot90<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L44" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L39" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rot90" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Rotates a keypoint by 90 degrees CCW (see np.rot90)</p>
@@ -1121,7 +1200,7 @@ albumentations.augmentations.geometric.functional.keypoint_rot90<span class="p">
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.keypoint_rotate">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_rotate<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L116" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L111" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rotate" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Rotate a keypoint by angle.</p>
@@ -1188,7 +1267,7 @@ albumentations.augmentations.geometric.functional.keypoint_rotate<span class="p"
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.keypoint_scale">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_scale<span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">scale_x</span><span class="p">,</span> <span class="n">scale_y</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L284" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L279" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_scale" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Scales a keypoint by scale_x and scale_y.</p>
@@ -1248,10 +1327,90 @@ albumentations.augmentations.geometric.functional.keypoint_scale<span class="p">
 <h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.py3round">
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.py3round<span class="p">(</span><span class="n">number</span><span class="p">)</span> </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L300" target="_blank">[view source on GitHub]</a></span>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L295" target="_blank">[view source on GitHub]</a></span>
 <a class="headerlink" href="#albumentations.augmentations.geometric.functional.py3round" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <p>Unified rounding in all python versions.</p>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="albumentations.augmentations.geometric.functional.to_distance_maps">
+<code class="highlight language-python">def
+albumentations.augmentations.geometric.functional.to_distance_maps<span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">inverted</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> </code>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L610" target="_blank">[view source on GitHub]</a></span>
+<a class="headerlink" href="#albumentations.augmentations.geometric.functional.to_distance_maps" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Generate a <code>(H,W,N)</code> array of distance maps for <code>N</code> keypoints.</p>
+<p>The <code>n</code>-th distance map contains at every location <code>(y, x)</code> the
+euclidean distance to the <code>n</code>-th keypoint.</p>
+<p>This function can be used as a helper when augmenting keypoints with a
+method that only supports the augmentation of images.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="width: 20%;">Name</th>
+<th style="width: 20%;">Type</th>
+<th style="width: 60%;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keypoint</code></td>
+<td><code>sequence of float</code></td>
+<td>
+<p>keypoint coordinates</p>
+</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td>
+<p>image height</p>
+</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td>
+<p>image width</p>
+</td>
+</tr>
+<tr>
+<td><code>inverted</code></td>
+<td><code>bool</code></td>
+<td>
+<p>If <code>True</code>, inverted distance maps are returned where each
+distance value d is replaced by <code>d/(d+1)</code>, i.e. the distance
+maps have values in the range <code>(0.0, 1.0]</code> with <code>1.0</code> denoting
+exactly the position of the respective keypoint.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td>
+<p>(H,W,N) ndarray
+    A <code>float32</code> array containing <code>N</code> distance maps for <code>N</code>
+    keypoints. Each location <code>(y, x, n)</code> in the array denotes the
+    euclidean distance at <code>(y, x)</code> to the <code>n</code>-th keypoint.
+    If <code>inverted</code> is <code>True</code>, the distance <code>d</code> is replaced
+    by <code>d/(d+1)</code>. The height and width of the array match the
+    height and width in <code>KeypointsOnImage.shape</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
