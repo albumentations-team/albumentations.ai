@@ -106,6 +106,7 @@
         "url": "https://ieeexplore.ieee.org/abstract/document/9412711/",
         "author_links": {
             "N Bonettini": "https://scholar.google.com/citations?user=YTzuZ9IAAAAJ&hl=en&oi=sra",
+            "ED Cannas": "https://scholar.google.com/citations?user=Rmh4cD4AAAAJ&hl=en&oi=sra",
             "S Mandelli": "https://scholar.google.com/citations?user=Uhql1ccAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1381,6 +1382,22 @@
         "eprint": "https://arxiv.org/pdf/2003.07561"
     },
     {
+        "title": "Scaling Ensemble Distribution Distillation to Many Classes with Proxy Targets",
+        "url": "https://arxiv.org/abs/2105.06987",
+        "author_links": {
+            "M Ryabinin": "https://scholar.google.com/citations?user=930PERsAAAAJ&hl=en&oi=sra",
+            "A Malinin": "https://scholar.google.com/citations?user=PnSFqO0AAAAJ&hl=en&oi=sra",
+            "M Gales": "https://scholar.google.com/citations?user=RSFlmjIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Ryabinin",
+            "A Malinin",
+            "M Gales"
+        ],
+        "abstract": "Ensembles of machine learning models yield improved system performance as well as robust and interpretable uncertainty estimates; however, their inference costs may often be prohibitively high.\\emph {Ensemble Distribution Distillation} is an approach that allows a …",
+        "eprint": "https://arxiv.org/pdf/2105.06987"
+    },
+    {
         "title": "Classification and understanding of cloud structures via satellite images with EfficientUNet",
         "url": "https://arxiv.org/abs/2009.12931",
         "author_links": {
@@ -1553,7 +1570,9 @@
     {
         "title": "An original framework for Wheat Head Detection using Deep, Semi-supervised and Ensemble Learning within Global Wheat Head Detection (GWHD) Dataset",
         "url": "https://arxiv.org/abs/2009.11977",
-        "author_links": {},
+        "author_links": {
+            "F Fourati": "https://scholar.google.com/citations?user=FAmOUOIAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "F Fourati",
             "W Souidene",
@@ -1696,6 +1715,23 @@
         ],
         "abstract": "Images offer a two-dimensional (2D) representation of a three-dimensional (3D) environment. However, in many biomedical tasks, a 3D view is crucial for diagnosis. Projecting structured light, such as a regular laser grid, onto the surface of interest allows to …",
         "eprint": "https://openreview.net/pdf?id=MzC8X6cMF2r"
+    },
+    {
+        "title": "Comparing Human and Machine Deepfake Detection with Affective and Holistic Processing",
+        "url": "https://arxiv.org/abs/2105.06496",
+        "author_links": {
+            "M Groh": "https://scholar.google.com/citations?user=Zri-8PwAAAAJ&hl=en&oi=sra",
+            "Z Epstein": "https://scholar.google.com/citations?user=yG7l19UAAAAJ&hl=en&oi=sra",
+            "R Picard": "https://scholar.google.com/citations?user=1-hcASEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "M Groh",
+            "Z Epstein",
+            "C Firestone",
+            "R Picard"
+        ],
+        "abstract": "The recent emergence of deepfake videos leads to an important societal question: how can we know if a video that we watch is real or fake? In three online studies with 15,016 participants, we present authentic videos and deepfakes and ask participants to identify …",
+        "eprint": "https://arxiv.org/pdf/2105.06496"
     },
     {
         "title": "DCNN-based Screw Classification in Automated Disassembly Processes",
@@ -2058,7 +2094,8 @@
             "S Kumar",
             "MS Al-Rakhami"
         ],
-        "abstract": "Deep Learning-based Smart Healthcare is getting so much attention due to real-time applicability in everyone life's, and It has obtained more attention with the convergence of IoT. Diabetic eye disease is the primary cause of blindness between working aged peoples …"
+        "abstract": "Deep Learning-based Smart Healthcare is getting so much attention due to real-time applicability in everyone life's, and It has obtained more attention with the convergence of IoT. Diabetic eye disease is the primary cause of blindness between working aged peoples …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/9312710/09425499.pdf"
     },
     {
         "title": "Application of shared backbone DNNs in ADAS perception systems",
@@ -2118,7 +2155,9 @@
     {
         "title": "Wheat Head Detection using Deep, Semi-Supervised and Ensemble Learning",
         "url": "https://www.tandfonline.com/doi/abs/10.1080/07038992.2021.1906213",
-        "author_links": {},
+        "author_links": {
+            "F Fourati": "https://scholar.google.com/citations?user=FAmOUOIAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "F Fourati",
             "WS Mseddi",
@@ -2128,7 +2167,7 @@
     },
     {
         "title": "Super-Resolution: 2. Machine Learning-Based Approach",
-        "url": "https://books.google.com/books?hl=en&lr=&id=uOEsEAAAQBAJ&oi=fnd&pg=PA35&ots=rMtZ0Tb0ch&sig=jsHSShxusiNwxVBusFS-7kylFhc",
+        "url": "https://books.google.com/books?hl=en&lr=&id=uOEsEAAAQBAJ&oi=fnd&pg=PA35&ots=rMtZ2Ra2cf&sig=gxwCEaWYMRSXa31ES2TGzkLWCQ4",
         "author_links": {
             "AS Chernyavskiy": "https://scholar.google.com/citations?user=W2vhep8AAAAJ&hl=en&oi=sra"
         },
@@ -2200,21 +2239,6 @@
         "eprint": "https://arxiv.org/pdf/2008.06959"
     },
     {
-        "title": "Training robust deep learning models for medical imaging tasks with spectral decoupling",
-        "url": "https://arxiv.org/abs/2103.17171",
-        "author_links": {
-            "A Rannikko": "https://scholar.google.com/citations?user=2IIy7okAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "J Pohjonen",
-            "C Stürenberg",
-            "A Rannikko",
-            "T Mirtti"
-        ],
-        "abstract": "Deep neural networks show impressive performance in medical imaging tasks. However, many current networks generalise poorly to data unseen during training, for example data generated by different centres. Such behaviour can be caused by networks overfitting easy …",
-        "eprint": "https://arxiv.org/pdf/2103.17171"
-    },
-    {
         "title": "Generating Physically Sound Training Data for Image Recognition of Additively Manufactured Parts",
         "url": "https://openaccess.thecvf.com/content/WACV2021/html/Nickchen_Generating_Physically_Sound_Training_Data_for_Image_Recognition_of_Additively_WACV_2021_paper.html",
         "author_links": {
@@ -2239,6 +2263,18 @@
         ],
         "abstract": "COVID-19 is a global health crisis during which mask-wearing has emerged as an effective tool to combat the spread of disease. During this time, non-technical users like health officials and school administrators need tools to know how widely people are wearing masks …",
         "eprint": "https://www.researchgate.net/profile/Biplav-Srivastava/publication/350446811_A_Robust_System_to_Detect_and_Explain_Public_Mask_Wearing_Behavior/links/6065d2f9a6fdccad3f662235/A-Robust-System-to-Detect-and-Explain-Public-Mask-Wearing-Behavior.pdf"
+    },
+    {
+        "title": "Waste detection in Pomerania: non-profit project for detecting waste in environment",
+        "url": "https://arxiv.org/abs/2105.06808",
+        "author_links": {},
+        "author": [
+            "S Majchrowska",
+            "A Mikołajczyk",
+            "M Ferlin"
+        ],
+        "abstract": "Waste pollution is one of the most significant environmental issues in the modern world. The importance of recycling is well known, either for economic or ecological reasons, and the industry demands high efficiency. Our team conducted comprehensive research on Artificial …",
+        "eprint": "https://arxiv.org/pdf/2105.06808"
     },
     {
         "title": "CNN and Deep Sets for End-to-End Whole Slide Image Representation Learning",
@@ -2899,8 +2935,8 @@
         "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Vey-Roman_188561_assignsubmission_file_Bachelor_Thesis_Roman_Vei.pdf"
     },
     {
-        "title": "MaskHunter: real-time object detection of face masks during the COVID-19 pandemic",
-        "url": "https://digital-library.theiet.org/content/journals/10.1049/iet-ipr.2020.1119",
+        "title": "MaskHunter: real‐time object detection of face masks during the COVID‐19 pandemic",
+        "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/iet-ipr.2020.1119",
         "author_links": {
             "Z Cao": "https://scholar.google.com/citations?user=oxNQZLMAAAAJ&hl=en&oi=sra",
             "H Qu": "https://scholar.google.com/citations?user=Y25xAVMAAAAJ&hl=en&oi=sra"
@@ -2912,7 +2948,7 @@
             "S Mu",
             "H Qu"
         ],
-        "abstract": "Due to the COVID-19 pandemic at present, it is necessary to detect whether pedestrians in public places wear face masks or not for preventing the spread of novel coronavirus. The pedestrian flow in public places is large, and it puts forward higher requirements for the …",
+        "abstract": "Due to the COVID‐19 pandemic at present, it is necessary to detect whether pedestrians in public places wear face masks or not for preventing the spread of novel coronavirus. The pedestrian flow in public places is large, and it puts forward higher requirements for the …",
         "eprint": "https://ietresearch.onlinelibrary.wiley.com/doi/pdfdirect/10.1049/iet-ipr.2020.1119"
     },
     {
@@ -2944,7 +2980,7 @@
     },
     {
         "title": "Semi-automatic Manga Colorization Using Conditional Adversarial Networks",
-        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-IZPYMIMg5&sig=ObGJIis0pEQy7GS1lmko8DBgoPw",
+        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-IZP_KHOg-&sig=lJkJRfsgpuX7PTuGnZPhlZFHPJ4",
         "author_links": {
             "I Makarov": "https://scholar.google.com/citations?user=cFpDMzIAAAAJ&hl=en&oi=sra"
         },
@@ -3075,7 +3111,7 @@
         "title": "MSMatch: Semi-Supervised Multispectral Scene Classification with Few Labels",
         "url": "https://arxiv.org/abs/2103.10368",
         "author_links": {
-            "P Gómez": "https://scholar.google.com/citations?user=MJZYn2IAAAAJ&hl=en&oi=sra",
+            "P Gómez": "https://scholar.google.com/citations?user=62F6osQAAAAJ&hl=en&oi=sra",
             "G Meoni": "https://scholar.google.com/citations?user=cb1aDLYAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -3159,6 +3195,19 @@
         "eprint": "https://arxiv.org/pdf/2008.02777"
     },
     {
+        "title": "PixMatch: Unsupervised Domain Adaptation via Pixelwise Consistency Training",
+        "url": "https://arxiv.org/abs/2105.08128",
+        "author_links": {
+            "L Melas-Kyriazi": "https://scholar.google.com/citations?user=btHxkDIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "L Melas-Kyriazi",
+            "AK Manrai"
+        ],
+        "abstract": "Unsupervised domain adaptation is a promising technique for semantic segmentation and other computer vision tasks for which large-scale data annotation is costly and time-consuming. In semantic segmentation, it is attractive to train models on annotated images …",
+        "eprint": "https://arxiv.org/pdf/2105.08128"
+    },
+    {
         "title": "Cell Nuclear Morphology Analysis Using 3D Shape Modeling, Machine Learning and Visual Analytics",
         "url": "https://deepblue.lib.umich.edu/handle/2027.42/147598",
         "author_links": {
@@ -3180,6 +3229,21 @@
         ],
         "abstract": "En la actualidad, uno de los principales problemas que afronta un profesional que trabaja con modelos de deep learning (dl) es la limitada información que existe para la implementación de estos modelos, por esta razón, se hace necesario la implementación de …",
         "eprint": "http://revistas.uco.edu.co/index.php/uco/article/download/285/371"
+    },
+    {
+        "title": "Spectral decoupling allows training transferable neural networks in medical imaging",
+        "url": "https://arxiv.org/abs/2103.17171",
+        "author_links": {
+            "A Rannikko": "https://scholar.google.com/citations?user=2IIy7okAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J Pohjonen",
+            "C Stürenberg",
+            "A Rannikko",
+            "T Mirtti"
+        ],
+        "abstract": "Deep neural networks show impressive performance in medical imaging tasks. However, many current networks generalise poorly to data unseen during training, for example data generated by different medical centres. Such behaviour can be caused by networks …",
+        "eprint": "https://arxiv.org/pdf/2103.17171"
     },
     {
         "title": "Object-Based Augmentation Improves Quality of Remote SensingSemantic Segmentation",
@@ -3331,6 +3395,7 @@
         "url": "https://arxiv.org/abs/2011.07792",
         "author_links": {
             "L Bondi": "https://scholar.google.com/citations?user=fWhDIgQAAAAJ&hl=en&oi=sra",
+            "ED Cannas": "https://scholar.google.com/citations?user=Rmh4cD4AAAAJ&hl=en&oi=sra",
             "P Bestagini": "https://scholar.google.com/citations?user=bUeIWEMAAAAJ&hl=en&oi=sra"
         },
         "author": [
