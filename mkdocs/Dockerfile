@@ -8,7 +8,7 @@ COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 RUN pip install --no-cache-dir -r /mkdocs/requirements.txt
 
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations.git /albumentations
-RUN pip install -e /albumentations
+RUN pip install -e /albumentations[imgaug]
 
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_experimental.git /albumentations_experimental
 RUN pip install -e /albumentations_experimental

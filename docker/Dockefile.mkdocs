@@ -1,4 +1,4 @@
-FROM python:3.8.3
+FROM python:3.9.5
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -6,10 +6,11 @@ RUN apt-get update \
     locales \
     locales-all \
     pandoc \
+    libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN ~/.cargo/bin/cargo install fd-find sd && ~/.cargo/bin/cargo install --git https://github.com/lotabout/rargs.git
 
 RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir torch==1.5.1+cpu torchvision==0.6.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install --no-cache-dir torch==1.8.1+cpu torchvision==0.9.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
