@@ -864,13 +864,13 @@
 <code>class <strong>albumentations.pytorch.transforms.ToTensor</strong></code>
 <code>
 <span class="p">(</span><span class="n">num_classes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sigmoid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L61" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L52" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.pytorch.transforms.ToTensor" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Convert image and mask to <code>torch.Tensor</code> and divide by 255 if image or mask are <code>uint8</code> type.
-WARNING! Please use this with care and look into sources before usage.</p>
+This transform is now removed from Albumentations. If you need it downgrade the library to version 0.5.2.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -913,12 +913,16 @@ WARNING! Please use this with care and look into sources before usage.</p>
 <code>class <strong>albumentations.pytorch.transforms.ToTensorV2</strong></code>
 <code>
 <span class="p">(</span><span class="n">transpose_mask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L92" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L74" target="_blank">[view source on GitHub]</a>
 </span> <a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a></h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Convert image and mask to <code>torch.Tensor</code>.</p>
+<p>Convert image and mask to <code>torch.Tensor</code>. The numpy <code>HWC</code> image is converted to pytorch <code>CHW</code> tensor.
+If the image is in <code>HW</code> format (grayscale image), it will be converted to pytorch <code>HW</code> tensor.
+This is a simplified and improved version of the old <code>ToTensor</code>
+transform (<code>ToTensor</code> was deprecated, and now it is not present in Albumentations. You should use <code>ToTensorV2</code>
+instead).</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
