@@ -247,3 +247,18 @@ p img {
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
   font-size: 1.4em
 }
+
+.md-header-nav__title {
+  flex-grow: 1;
+  padding: 0 1rem;
+  font-size: .9rem;
+  line-height: 2.4rem;
+}
+
+.md-header__title {
+  flex-grow: 0;
+}
+
+.md-source__repository {
+  font-weight: bold;
+}

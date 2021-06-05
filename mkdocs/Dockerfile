@@ -2,10 +2,10 @@ FROM albumentations/albumentations-ai-mkdocs-base:latest
 
 RUN mkdir /mkdocs
 
-RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
-
 COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 RUN pip install --no-cache-dir -r /mkdocs/requirements.txt
+
+RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
 
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations.git /albumentations
 RUN pip install -e /albumentations[imgaug]
