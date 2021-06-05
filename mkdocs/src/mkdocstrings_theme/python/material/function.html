@@ -11,15 +11,13 @@
 
   <h{{ heading_level }} id="{{ function.path }}" class="doc doc-heading" data-toc-label="{{ function.name }}()">
 
-    <code class="highlight language-python">def
+ <code class="highlight language-python">def
           {% if show_full_path %}{{ function.path }}{% else %}{{ function.name }}{% endif %}
-          {% filter highlight(language="python", inline=True) %}
             {% with signature = function.signature %}{% include "signature.html" with context %}{% endwith %}
-          {% endfilter %}
-        </code>
+   </code>
     <span class="doc-github-link"><a
         href="https://github.com/albumentations-team/{% if function.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/master/{{ function.relative_file_path }}#L{{ function.source.line_start }}"
-        target="_blank">[view source on GitHub]</a></span>
+        target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#{{ function.path }}" title="Permanent link">¶</a>
     {% with properties = function.properties %}
     {% include "properties.html" with context %}
     {% endwith %}
@@ -43,7 +41,7 @@
     {% if config.show_source and function.source %}
     <details class="quote">
       <summary>Source code in <code>{{ function.relative_file_path }}</code></summary>
-      {{ function.source.code|highlight(language="python", line_start=function.source.line_start) }}
+      {{ function.source.code|highlight(language="python") }}
     </details>
     {% endif %}
   </div>

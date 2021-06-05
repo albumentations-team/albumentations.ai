@@ -26,8 +26,6 @@ plugins:
         on_page_content: "hooks:on_page_content"
         on_nav: "hooks:on_nav"
   - macros
-  - search:
-      prebuild_index: false
 
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
@@ -52,6 +50,11 @@ theme:
   custom_dir: custom_theme/
   logo: images/logo.png
   favicon: images/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.top
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
