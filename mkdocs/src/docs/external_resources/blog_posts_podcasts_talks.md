@@ -7,6 +7,7 @@
 - [Explore image augmentations using a convenient tool](https://towardsdatascience.com/explore-image-augmentations-using-a-convenient-tool-a199b4ac8214)
 - [Image Augmentation using PyTorch and Albumentations](https://debuggercafe.com/image-augmentation-using-pytorch-and-albumentations/)
 - [Employing the albumentation library in PyTorch workflows. Bonus: Helper for selecting appropriate values!](http://www.andrewjanowczyk.com/employing-the-albumentation-library-in-pytorch-workflows-bonus-helper-for-selecting-appropriate-values/)
+- [Overview of Albumentations: Open-source library for advanced image augmentations](https://notrocketscience.blog/overview-of-albumentations-open-source-library-for-advanced-image-augmentations/)
 
 ## Podcasts, talks, and videos
 - [PyConBY 2020: Eugene Khvedchenya - Albumentations: Fast and Flexible image augmentations](https://www.youtube.com/watch?v=c3h7kNHpXw4)
