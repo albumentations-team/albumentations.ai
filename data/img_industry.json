@@ -28,5 +28,10 @@
     "url": "https://neuromation.io/",
     "name": "Neuromation",
     "img_filename": "neuromation.png"
+  },
+  {
+  "url": "https://ultralytics.com/",
+  "name": "Ultralytics",
+  "img_filename": "ultralytics.png"
   }
 ]

@@ -23705,3 +23705,13 @@ a.btn.member-social-network {
   width: 2.5rem;
   height: 2.5rem
 }
+
+
+.col-14-pct {
+    flex: 0 0 14%;
+    max-width: 14%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
