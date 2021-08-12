@@ -2027,11 +2027,11 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=<function 0x7f766c0c1af0="" at="" read_rgb_image="">, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=<function 0x7fe5c559a280="" at="" read_rgb_image="">, always_apply=False, p=0.5)
 
 
                 </function></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L168" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L188" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.FDA" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2093,11 +2093,11 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=<function 0x7f766c0c1af0="" at="" read_rgb_image="">, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=<function 0x7fe5c559a280="" at="" read_rgb_image="">, always_apply=False, p=0.5)
 
 
                 </function></code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L107" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L127" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.HistogramMatching" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2153,12 +2153,81 @@ array of image pixels.</p></td>
 </div>
 </div>
 </div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="PixelDistributionAdaptation" id="albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation">
+<code>class <strong>
+albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</strong></code>
+<code>
+
+
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=<function 0x7fe5c559a280="" at="" read_rgb_image="">, transform_type='pca', always_apply=False, p=0.5)
+
+
+                </function></code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L251" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Another naive and quick pixel-level domain adaptation. It fits a simple transform (such as PCA, StandardScaler
+or MinMaxScaler) on both original and reference image, transforms original image with transform trained on this
+image and then performs inverse transformation using transform fitted on reference image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reference_images</code></td>
+<td><code>List[str] or List(np.ndarray</code></td>
+<td><p>List of file paths for reference images
+or list of reference images.</p></td>
+</tr>
+<tr>
+<td><code>blend_ratio</code></td>
+<td><code>[float, float]</code></td>
+<td><p>Tuple of min and max blend ratio. Matched image will be blended with original
+with random blend factor for increased diversity of generated images.</p></td>
+</tr>
+<tr>
+<td><code>read_fn</code></td>
+<td><code>Callable</code></td>
+<td><p>Used-defined function to read image. Function should get image path and return numpy
+array of image pixels. Usually it's default <code>read_rgb_image</code> when images paths are used as reference,
+otherwise it could be identity function <code>lambda x: x</code> if reference images have been read in advance.</p></td>
+</tr>
+<tr>
+<td><code>transform_type</code></td>
+<td><code>str</code></td>
+<td><p>type of transform; "pca", "standard", "minmax" are allowed.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<p>See also: <a href="https://github.com/arsenyinfo/qudida" target="_blank">https://github.com/arsenyinfo/qudida</a></p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="fourier_domain_adaptation()" id="albumentations.augmentations.domain_adaptation.fourier_domain_adaptation">
 <code class="highlight language-python">def
 albumentations.augmentations.domain_adaptation.fourier_domain_adaptation    (img, target_img, beta)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L17" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L25" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a></p>
