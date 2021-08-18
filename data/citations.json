@@ -225,7 +225,6 @@
         "title": "Dense dilated convolutions' merging network for land cover classification",
         "url": "https://ieeexplore.ieee.org/abstract/document/9027099/",
         "author_links": {
-            "Q Liu": "https://scholar.google.com/citations?user=RRXDrzsAAAAJ&hl=en&oi=sra",
             "M Kampffmeyer": "https://scholar.google.com/citations?user=9lDh2UgAAAAJ&hl=en&oi=sra",
             "R Jenssen": "https://scholar.google.com/citations?user=HiviXjIAAAAJ&hl=en&oi=sra"
         },
@@ -448,6 +447,23 @@
         "eprint": "https://www.medrxiv.org/content/medrxiv/early/2020/08/06/2020.08.03.20167007.full.pdf"
     },
     {
+        "title": "Deep learning for the Earth Sciences: A comprehensive approach to remote sensing, climate science and geosciences",
+        "url": "https://books.google.com/books?hl=en&lr=&id=e2c4EAAAQBAJ&oi=fnd&pg=PR15&ots=gGiF165RAl&sig=jw6qRGQe8X8yjIeYfHVfzlemhYw",
+        "author_links": {
+            "G Camps-Valls": "https://scholar.google.com/citations?user=6mgnauMAAAAJ&hl=en&oi=sra",
+            "D Tuia": "https://scholar.google.com/citations?user=p3iJiLIAAAAJ&hl=en&oi=sra",
+            "XX Zhu": "https://scholar.google.com/citations?user=CNakdIgAAAAJ&hl=en&oi=sra",
+            "M Reichstein": "https://scholar.google.com/citations?user=XCkp5uEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "G Camps-Valls",
+            "D Tuia",
+            "XX Zhu",
+            "M Reichstein"
+        ],
+        "abstract": "Explore this insightful treatment of deep learning in the field of earth sciences, from four leading voices in the field Deep learning is a fundamental technique in modern artificial intelligence and is being applied to disciplines across the scientific spectrum. Earth science …"
+    },
+    {
         "title": "Easyaug: An automatic textual data augmentation platform for classification tasks",
         "url": "https://dl.acm.org/doi/abs/10.1145/3366424.3383552",
         "author_links": {
@@ -491,23 +507,6 @@
         ],
         "abstract": "Ultra-high-resolution aerial videos are used to relieve the shortage of surveillance system in sparsely populated regions. For realistic application purpose, it is important to automatically analyze “who is doing what?” in such videos. Although atomic visual action (AVA) detection …",
         "eprint": "https://ieeexplore.ieee.org/iel7/6287639/8600701/08753491.pdf"
-    },
-    {
-        "title": "Deep learning for the Earth Sciences: A comprehensive approach to remote sensing, climate science and geosciences",
-        "url": "https://books.google.com/books?hl=en&lr=&id=e2c4EAAAQBAJ&oi=fnd&pg=PR15&ots=gGiC75-Rzf&sig=D7jqkfesVkNuktofhx_IKsa7B-E",
-        "author_links": {
-            "G Camps-Valls": "https://scholar.google.com/citations?user=6mgnauMAAAAJ&hl=en&oi=sra",
-            "D Tuia": "https://scholar.google.com/citations?user=p3iJiLIAAAAJ&hl=en&oi=sra",
-            "XX Zhu": "https://scholar.google.com/citations?user=CNakdIgAAAAJ&hl=en&oi=sra",
-            "M Reichstein": "https://scholar.google.com/citations?user=XCkp5uEAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "G Camps-Valls",
-            "D Tuia",
-            "XX Zhu",
-            "M Reichstein"
-        ],
-        "abstract": "Explore this insightful treatment of deep learning in the field of earth sciences, from four leading voices in the field Deep learning is a fundamental technique in modern artificial intelligence and is being applied to disciplines across the scientific spectrum. Earth science …"
     },
     {
         "title": "The inclusive images competition",
@@ -604,7 +603,7 @@
         "title": "Impact of lung segmentation on the diagnosis and explanation of COVID-19 in chest X-ray images",
         "url": "https://arxiv.org/abs/2009.09780",
         "author_links": {
-            "LO Teixeira": "https://scholar.google.com/citations?user=oPVdsnoAAAAJ&hl=en&oi=sra",
+            "LO Teixeira": "https://scholar.google.com/citations?user=ePPQeAwAAAAJ&hl=en&oi=sra",
             "RM Pereira": "https://scholar.google.com/citations?user=IUS5mwgAAAAJ&hl=en&oi=sra",
             "D Bertolini": "https://scholar.google.com/citations?user=sSNHNAYAAAAJ&hl=en&oi=sra",
             "LS Oliveira": "https://scholar.google.com/citations?user=oMgb9jgAAAAJ&hl=en&oi=sra"
@@ -630,7 +629,7 @@
     },
     {
         "title": "Ensemble size classification in Colombian Andean string music recordings",
-        "url": "https://books.google.com/books?hl=en&lr=&id=t4kiEAAAQBAJ&oi=fnd&pg=PA60&ots=h4iNd0a070&sig=MOipp6QKz3kt0cwLgxqV70xjEws",
+        "url": "https://books.google.com/books?hl=en&lr=&id=t4kiEAAAQBAJ&oi=fnd&pg=PA60&ots=h4iQ71g092&sig=AtLDZLJyikTiSazriUR8DU8Px2c",
         "author_links": {
             "S Grollmisch": "https://scholar.google.com/citations?user=PC79N0EAAAAJ&hl=en&oi=sra",
             "E Cano": "https://scholar.google.com/citations?user=l7cDVbIAAAAJ&hl=en&oi=sra"
@@ -911,6 +910,22 @@
             "X Zhang"
         ],
         "abstract": "During a practical detection process, insufficient defect data, unbalanced defect types and the high cost of defect labeling can present problems. Therefore, it often takes considerable time and labor to collect actual samples to improve the accuracy of defect classification and …"
+    },
+    {
+        "title": "Speech driven talking face generation from a single image and an emotion condition",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9496264/",
+        "author_links": {
+            "SE Eskimez": "https://scholar.google.com/citations?user=iLepRMwAAAAJ&hl=en&oi=sra",
+            "Y Zhang": "https://scholar.google.com/citations?user=nYtHcRAAAAAJ&hl=en&oi=sra",
+            "Z Duan": "https://scholar.google.com/citations?user=pJmAoJ4AAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "SE Eskimez",
+            "Y Zhang",
+            "Z Duan"
+        ],
+        "abstract": "Visual emotion expression plays an important role in audiovisual speech communication. In this work, we propose a novel approach to rendering visual emotion expression in speech-driven talking face generation. Specifically, we design an end-to-end talking face generation …",
+        "eprint": "https://arxiv.org/pdf/2008.03592"
     },
     {
         "title": "Single-shot cuboids: Geodesics-based end-to-end Manhattan aligned layout estimation from spherical panoramas",
@@ -1200,22 +1215,6 @@
         "eprint": "https://research.nsu.ru/en/publications/multi-class-brain-tumor-segmentation-via-multi-sequences-mri-mixt-2"
     },
     {
-        "title": "Speech driven talking face generation from a single image and an emotion condition",
-        "url": "https://arxiv.org/abs/2008.03592",
-        "author_links": {
-            "SE Eskimez": "https://scholar.google.com/citations?user=iLepRMwAAAAJ&hl=en&oi=sra",
-            "Y Zhang": "https://scholar.google.com/citations?user=nYtHcRAAAAAJ&hl=en&oi=sra",
-            "Z Duan": "https://scholar.google.com/citations?user=pJmAoJ4AAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "SE Eskimez",
-            "Y Zhang",
-            "Z Duan"
-        ],
-        "abstract": "Visual emotion expression plays an important role in audiovisual speech communication. In this work, we propose a novel approach to rendering visual emotion expression in speech-driven talking face generation. Specifically, we design an end-to-end talking face generation …",
-        "eprint": "https://arxiv.org/pdf/2008.03592"
-    },
-    {
         "title": "DCNN-based Screw Classification in Automated Disassembly Processes.",
         "url": "https://www.scitepress.org/Papers/2020/99799/99799.pdf",
         "author_links": {},
@@ -1228,7 +1227,7 @@
     },
     {
         "title": "Semi-automatic Manga Colorization Using Conditional Adversarial Networks.",
-        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-IZU0MFQf_&sig=pkGdgkZ_jOpib1IlY6Kj4RbiA0s",
+        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-IZXWNLQh2&sig=nK2v75BZ6y5_Zw7TAPp7kmMKato",
         "author_links": {
             "I Makarov": "https://scholar.google.com/citations?user=cFpDMzIAAAAJ&hl=en&oi=sra"
         },
@@ -1305,7 +1304,8 @@
         "url": "https://ieeexplore.ieee.org/abstract/document/9324617/",
         "author_links": {
             "A Hadzic": "https://scholar.google.com/citations?user=DlDme3IAAAAJ&hl=en&oi=sra",
-            "G Christie": "https://scholar.google.com/citations?user=LfVECroAAAAJ&hl=en&oi=sra"
+            "G Christie": "https://scholar.google.com/citations?user=LfVECroAAAAJ&hl=en&oi=sra",
+            "J Freeman": "https://scholar.google.com/citations?user=Gbd9WfgAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "A Hadzic",
@@ -1381,6 +1381,7 @@
         "url": "https://research.nsu.ru/en/publications/data-preprocessing-via-multi-sequences-mri-mixture-to-improve-bra",
         "author_links": {
             "V Groza": "https://scholar.google.com/citations?user=okJ4_XcAAAAJ&hl=en&oi=sra",
+            "B Tuchinov": "https://scholar.google.com/citations?user=uccGBkYAAAAJ&hl=en&oi=sra",
             "E Pavlovskiy": "https://scholar.google.com/citations?user=rPbZTCQAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -1628,6 +1629,21 @@
         "eprint": "https://arxiv.org/pdf/2102.12777"
     },
     {
+        "title": "Generation and Annotation of Simulation-Real Ship Images for Convolutional Neural Networks Training and Testing",
+        "url": "https://www.mdpi.com/2076-3417/11/13/5931",
+        "author_links": {
+            "Z Hu": "https://scholar.google.com/citations?user=o4F42sQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "J You",
+            "Z Hu",
+            "C Peng",
+            "Z Wang"
+        ],
+        "abstract": "Large amounts of high-quality image data are the basis and premise of the high accuracy detection of objects in the field of convolutional neural networks (CNN). It is challenging to collect various high-quality ship image data based on the marine environment. A novel …",
+        "eprint": "https://www.mdpi.com/2076-3417/11/13/5931/htm"
+    },
+    {
         "title": "Contextual pyramid attention network for building segmentation in aerial imagery",
         "url": "https://arxiv.org/abs/2004.07018",
         "author_links": {
@@ -1850,7 +1866,6 @@
         "title": "Self-constructing graph neural networks to model long-range pixel dependencies for semantic segmentation of remote sensing images",
         "url": "https://www.tandfonline.com/doi/abs/10.1080/01431161.2021.1936267",
         "author_links": {
-            "Q Liu": "https://scholar.google.com/citations?user=RRXDrzsAAAAJ&hl=en&oi=sra",
             "M Kampffmeyer": "https://scholar.google.com/citations?user=9lDh2UgAAAAJ&hl=en&oi=sra",
             "R Jenssen": "https://scholar.google.com/citations?user=HiviXjIAAAAJ&hl=en&oi=sra"
         },
@@ -1903,7 +1918,9 @@
     {
         "title": "Digital Peter: Dataset, Competition and Handwriting Recognition Methods",
         "url": "https://arxiv.org/abs/2103.09354",
-        "author_links": {},
+        "author_links": {
+            "D Dimitrov": "https://scholar.google.com/citations?user=3JSIJpYAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "M Potanin",
             "D Dimitrov",
@@ -1939,10 +1956,27 @@
         "eprint": "https://www.researchsquare.com/article/rs-166579/latest.pdf"
     },
     {
+        "title": "Built-in Elastic Transformations for Improved Robustness",
+        "url": "https://arxiv.org/abs/2107.09391",
+        "author_links": {
+            "S Gulshad": "https://scholar.google.com/citations?user=2GCPK34AAAAJ&hl=en&oi=sra",
+            "I Sosnovik": "https://scholar.google.com/citations?user=brUsNccAAAAJ&hl=en&oi=sra",
+            "A Smeulders": "https://scholar.google.com/citations?user=aa5Ou7gAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Gulshad",
+            "I Sosnovik",
+            "A Smeulders"
+        ],
+        "abstract": "We focus on building robustness in the convolutions of neural visual classifiers, especially against natural perturbations like elastic deformations, occlusions and Gaussian noise. Existing CNNs show outstanding performance on clean images, but fail to tackle naturally …",
+        "eprint": "https://arxiv.org/pdf/2107.09391"
+    },
+    {
         "title": "Efficient Palm-Line Segmentation with U-Net Context Fusion Module",
         "url": "https://ieeexplore.ieee.org/abstract/document/9353055/",
         "author_links": {
             "TP Van": "https://scholar.google.com/citations?user=eOgnP7UAAAAJ&hl=en&oi=sra",
+            "ST Nguyen": "https://scholar.google.com/citations?user=V_Z1NqkAAAAJ&hl=en&oi=sra",
             "NN Tran": "https://scholar.google.com/citations?user=hba44u0AAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -2009,6 +2043,17 @@
         "eprint": "https://arxiv.org/pdf/2003.07561"
     },
     {
+        "title": "Sub-Object Data Augmentation And Custom Loss Functions for Automated Anatomical Landmarks Localisation in 3D Brain MR Images",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9499992/",
+        "author_links": {},
+        "author": [
+            "SR Kundeti",
+            "MA Ansari",
+            "A Sanin"
+        ],
+        "abstract": "In medical image analysis, the landmarks detection helps to localize each anatomy for tasks like image registration. Deep learning models help to automate the landmark detection pipeline reducing medical technician efforts. The major challenge faced to apply deep …"
+    },
+    {
         "title": "Scaling Ensemble Distribution Distillation to Many Classes with Proxy Targets",
         "url": "https://arxiv.org/abs/2105.06987",
         "author_links": {
@@ -2050,6 +2095,20 @@
         "abstract": "The method that stochastic gradient descent (SGD) algorithm uses to update the undetermined parameter in the iterative process can be viewed as a rudimentary forward Euler method in the perspective of numerical differentiation. In order to overcome the …"
     },
     {
+        "title": "An Affordable Image-Analysis Platform to Accelerate Stomatal Phenotyping During Microscopic Observation",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8358771/",
+        "author_links": {
+            "Y Toda": "https://scholar.google.com/citations?user=ho5Z2SMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "Y Toda",
+            "T Tameshige",
+            "M Tomiyama"
+        ],
+        "abstract": "Recent technical advances in the computer-vision domain have facilitated the development of various methods for achieving image-based quantification of stomata-related traits. However, the installation cost of such a system and the difficulties of operating it on-site have …",
+        "eprint": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8358771/"
+    },
+    {
         "title": "Automatinė aerofotografinių nuotraukų analizė taikant giliojo mokymosi metodus",
         "url": "https://vb.vgtu.lt/object/elaba:96383970/",
         "author_links": {},
@@ -2068,6 +2127,24 @@
         ],
         "abstract": "Des dels inicis de la Visió per Computador, la reconstrucció d'escenes ha estat un dels temes més estudiats que ha portat a una àmplia varietat de nous descobriments i aplicacions. La manipulació d'objectes, la localització i mapeig, o fins i tot la generació …",
         "eprint": "https://ddd.uab.cat/pub/tesis/2021/hdl_10803_671624/erp1de1.pdf"
+    },
+    {
+        "title": "Self-supervised Audiovisual Representation Learning for Remote Sensing Data",
+        "url": "https://arxiv.org/abs/2108.00688",
+        "author_links": {
+            "K Heidler": "https://scholar.google.com/citations?user=RF9yl6sAAAAJ&hl=en&oi=sra",
+            "L Mou": "https://scholar.google.com/citations?user=7k8GAaEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "K Heidler",
+            "L Mou",
+            "D Hu",
+            "P Jin",
+            "G Li",
+            "C Gan"
+        ],
+        "abstract": "Many current deep learning approaches make extensive use of backbone networks pre-trained on large datasets like ImageNet, which are then fine-tuned to perform a certain task. In remote sensing, the lack of comparable large annotated datasets and the wide diversity of …",
+        "eprint": "https://arxiv.org/pdf/2108.00688"
     },
     {
         "title": "Improving deep learning sorghum head detection through test time augmentation",
@@ -2170,6 +2247,17 @@
         "eprint": "https://nemertes.library.upatras.gr/jspui/bitstream/10889/14569/1/Kostopoulos_thesis_final.pdf"
     },
     {
+        "title": "Identificación de etiquetas en líneas de manufactura",
+        "url": "http://bibliotecadigital.udea.edu.co/handle/10495/20961",
+        "author_links": {},
+        "author": [
+            "D Diaz Valencia",
+            "S Jaramillo Gonzales"
+        ],
+        "abstract": "Dentro de la visión artificial, el reconocimiento de objetos en imágenes y su identificación es una del área más atractiva y que mayor desarrollo han tenido en los últimos años. Gracias a diferentes tecnologías desarrolladas en la última década, el reconocimiento de objetos en …",
+        "eprint": "https://bibliotecadigital.udea.edu.co/bitstream/10495/20961/10/DiazDanilo_JaramilloSantiago_EusseJulian_2021_Identificaci%C3%B3ndetiquetasenlineasdemanufactura"
+    },
+    {
         "title": "Automatic fault mapping in remote optical images and topographic data with deep learning",
         "url": "https://hal.inria.fr/hal-03191101/file/2020JB021269.pdf",
         "author_links": {
@@ -2208,7 +2296,8 @@
             "H van der Aa",
             "H Leopold"
         ],
-        "abstract": "Despite the widespread availability of process modeling tools, the first version of a process model is often drawn by hand on a piece of paper or whiteboard, especially when several people are involved in its elicitation. Though this has been found to be beneficial for the …"
+        "abstract": "Despite the widespread availability of process modeling tools, the first version of a process model is often drawn by hand on a piece of paper or whiteboard, especially when several people are involved in its elicitation. Though this has been found to be beneficial for the …",
+        "eprint": "https://www.researchgate.net/profile/Bernhard-Schaefer-2/publication/352686544_Sketch2BPMN_Automatic_Recognition_of_Hand-Drawn_BPMN_Models/links/60e2a04f299bf1ea9ee11b42/Sketch2BPMN-Automatic-Recognition-of-Hand-Drawn-BPMN-Models.pdf"
     },
     {
         "title": "Image2SMILES: Transformer-based Molecular Optical Recognition Engine",
@@ -2225,6 +2314,19 @@
         ],
         "abstract": "The rise of deep learning in various scientific and technology areas promotes the development of AI-based tools for information retrieval. Optical recognition of organic structures is a key part of the automated extraction of chemical information. However, this is …",
         "eprint": "https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/60c758c6469df4169bf45744/original/image2smiles-transformer-based-molecular-optical-recognition-engine.pdf"
+    },
+    {
+        "title": "Early Detection of Malpositioned Catheters and Lines on Chest X-Rays using Deep Learning",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9497809/",
+        "author_links": {
+            "ABM Khan": "https://scholar.google.com/citations?user=94RyFREAAAAJ&hl=en&oi=sra",
+            "SMA Ali": "https://scholar.google.com/citations?user=8cp2KiMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "ABM Khan",
+            "SMA Ali"
+        ],
+        "abstract": "Hospital patients can have catheters and lines inserted during the course of their admission and serious complications can arise if they are positioned incorrectly. Early recognition of malpositioned tubes is the key to preventing risky complications (even death), even more so …"
     },
     {
         "title": "Artificial Intelligence in Quantitative Ultrasound Imaging: A Review",
@@ -2256,6 +2358,23 @@
         ],
         "abstract": "In recent years, artificial intelligence has attracted a huge interest in image and speech recognition, promising the advent of intelligent technologies in everyday life. Machine learning and computer vision have received a growing interest for solving complex image …",
         "eprint": "https://dial.uclouvain.be/downloader/downloader.php?pid=thesis%3A26663&datastream=PDF_01&cover=cover-mem"
+    },
+    {
+        "title": "ClipAssistNet: bringing real-time safety feedback to operating rooms",
+        "url": "https://link.springer.com/article/10.1007/s11548-021-02441-x",
+        "author_links": {
+            "F Aspart": "https://scholar.google.com/citations?user=raw72hIAAAAJ&hl=en&oi=sra",
+            "JL Lavanchy": "https://scholar.google.com/citations?user=DuYFrSUAAAAJ&hl=en&oi=sra",
+            "G Beldi": "https://scholar.google.com/citations?user=w2cBHmsAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "F Aspart",
+            "JL Bolmgren",
+            "JL Lavanchy",
+            "G Beldi"
+        ],
+        "abstract": "Purpose Cholecystectomy is one of the most common laparoscopic procedures. A critical phase of laparoscopic cholecystectomy consists in clipping the cystic duct and artery before cutting them. Surgeons can improve the clipping safety by ensuring full visibility of the …",
+        "eprint": "https://link.springer.com/article/10.1007/s11548-021-02441-x"
     },
     {
         "title": "Obstacle Detection for BVLOS Drones",
@@ -2435,6 +2554,7 @@
         "title": "Principled Ultrasound Data Augmentation for Classification of Standard Planes",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-78191-0_56",
         "author_links": {
+            "LH Lee": "https://scholar.google.com/citations?user=D7-YcnAAAAAJ&hl=en&oi=sra",
             "Y Gao": "https://scholar.google.com/citations?user=1Tvfo7wAAAAJ&hl=en&oi=sra",
             "JA Noble": "https://scholar.google.com/citations?user=b0tmmYMAAAAJ&hl=en&oi=sra"
         },
@@ -2526,7 +2646,8 @@
         "title": "Broad Dataset and Methods for Counting and Localization of On-Ear Corn Kernels",
         "url": "https://www.frontiersin.org/articles/10.3389/frobt.2021.627009/full?utm_source=S-TWT&utm_medium=SNET&utm_campaign=ECO_FROBT_XXXXXXXX_auto-dlvrit",
         "author_links": {
-            "J Hobbs": "https://scholar.google.com/citations?user=zeWhseAAAAAJ&hl=en&oi=sra"
+            "J Hobbs": "https://scholar.google.com/citations?user=zeWhseAAAAAJ&hl=en&oi=sra",
+            "V Khachatryan": "https://scholar.google.com/citations?user=5MvAYRQAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "J Hobbs",
@@ -2535,6 +2656,38 @@
         ],
         "abstract": "Crop monitoring and yield prediction are central to management decisions for farmers. One key task is counting the number of kernels on an ear of corn to estimate yield in a field. As ears of corn can easily have 400-900 kernels, manual counting is unrealistic; traditionally …",
         "eprint": "https://www.frontiersin.org/articles/10.3389/frobt.2021.627009/full?utm_source=S-TWT&utm_medium=SNET&utm_campaign=ECO_FROBT_XXXXXXXX_auto-dlvrit"
+    },
+    {
+        "title": "Corn Residue Covered Area Mapping with a Deep Learning Method Using Chinese GF-1 B/D High Resolution Remote Sensing Images",
+        "url": "https://www.mdpi.com/1200888",
+        "author_links": {
+            "J Huang": "https://scholar.google.com/citations?user=ux6rwsEAAAAJ&hl=en&oi=sra",
+            "X Li": "https://scholar.google.com/citations?user=r2p47SEAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "W Tao",
+            "Z Xie",
+            "Y Zhang",
+            "J Li",
+            "F Xuan",
+            "J Huang",
+            "X Li"
+        ],
+        "abstract": "Black soil is one of the most productive soils with high organic matter content. Crop residue covering is important for protecting black soil from alleviating soil erosion and increasing soil organic carbon. Mapping crop residue covered areas accurately using remote sensing …",
+        "eprint": "https://www.mdpi.com/2072-4292/13/15/2903/pdf"
+    },
+    {
+        "title": "Flood Segmentation on Sentinel-1 SAR Imagery with Semi-Supervised Learning",
+        "url": "https://arxiv.org/abs/2107.08369",
+        "author_links": {
+            "S Ganju": "https://scholar.google.com/citations?user=FFQ_5VcAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Paul",
+            "S Ganju"
+        ],
+        "abstract": "Floods wreak havoc throughout the world, causing billions of dollars in damages, and uprooting communities, ecosystems and economies. Accurate and robust flood detection including delineating open water flood areas and identifying flood levels can aid in disaster …",
+        "eprint": "https://arxiv.org/pdf/2107.08369"
     },
     {
         "title": "Multi-view automated chest radiography interpretation",
@@ -2574,6 +2727,20 @@
         ],
         "abstract": "In this paper we present a network for foreground segmentation based on background subtraction which does not require specific scene training. The network is built as a refinement step on top of classic state of the art background subtraction systems. In this way …",
         "eprint": "https://upcommons.upc.edu/bitstream/handle/2117/332324/0000705(3).pdf"
+    },
+    {
+        "title": "Improving Semi-Supervised Learning for Audio Classification with FixMatch",
+        "url": "https://www.mdpi.com/2079-9292/10/15/1807",
+        "author_links": {
+            "S Grollmisch": "https://scholar.google.com/citations?user=PC79N0EAAAAJ&hl=en&oi=sra",
+            "E Cano": "https://scholar.google.com/citations?user=l7cDVbIAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "S Grollmisch",
+            "E Cano"
+        ],
+        "abstract": "Including unlabeled data in the training process of neural networks using Semi-Supervised Learning (SSL) has shown impressive results in the image domain, where state-of-the-art results were obtained with only a fraction of the labeled data. The commonality between …",
+        "eprint": "https://www.mdpi.com/2079-9292/10/15/1807/pdf"
     },
     {
         "title": "Social Distancing Detection and Analysis through Computer Vision",
@@ -2706,8 +2873,21 @@
         "eprint": "https://programmersought.com/article/65726786545/"
     },
     {
+        "title": "Normalization of HE-stained histological images using cycle consistent generative adversarial networks",
+        "url": "https://link.springer.com/article/10.1186/s13000-021-01126-y",
+        "author_links": {},
+        "author": [
+            "M Runz",
+            "D Rusche",
+            "S Schmidt",
+            "MR Weihrauch"
+        ],
+        "abstract": "Histological images show strong variance (eg illumination, color, staining quality) due to differences in image acquisition, tissue processing, staining, etc. This can impede downstream image analysis such as staining intensity evaluation or classification. Methods …",
+        "eprint": "https://link.springer.com/article/10.1186/s13000-021-01126-y"
+    },
+    {
         "title": "Mutually improved endoscopic image synthesis and landmark detection in unpaired image-to-image translation",
-        "url": "https://arxiv.org/abs/2107.06941",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9496194/",
         "author_links": {
             "S Koehler": "https://scholar.google.com/citations?user=A9BaTFgAAAAJ&hl=en&oi=sra"
         },
@@ -2766,6 +2946,7 @@
         "title": "Multi-level dilated residual network for biomedical image segmentation",
         "url": "https://www.nature.com/articles/s41598-021-93169-w",
         "author_links": {
+            "NR Gudhe": "https://scholar.google.com/citations?user=ijCl-MMAAAAJ&hl=en&oi=sra",
             "H Behravan": "https://scholar.google.com/citations?user=JARPOGcAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -2791,6 +2972,19 @@
             "C Fang"
         ],
         "abstract": "Deep learning has made great progress in medical diagnosis. However, due to data standardization and privacy restriction, the acquisition and sharing of medical image data have been hindered, leading to the unacceptable accuracy of some intelligent medical …"
+    },
+    {
+        "title": "Addressing materials' microstructure diversity using transfer learning",
+        "url": "https://arxiv.org/abs/2107.13841",
+        "author_links": {},
+        "author": [
+            "A Goetz",
+            "AR Durmaz",
+            "M Müller",
+            "A Thomas"
+        ],
+        "abstract": "Materials' microstructures are signatures of their alloying composition and processing history. Therefore, microstructures exist in a wide variety. As materials become increasingly complex to comply with engineering demands, advanced computer vision (CV) approaches …",
+        "eprint": "https://arxiv.org/pdf/2107.13841"
     },
     {
         "title": "Αναγνώριση προσώπων με τεχνικές βαθιάς μηχανικής μάθησης",
@@ -2821,7 +3015,8 @@
         "title": "Automatic Polyp Segmentation Using Channel-Spatial Attention with Deep Supervision",
         "url": "http://ceur-ws.org/Vol-2882/paper24.pdf",
         "author_links": {
-            "S Poudel": "https://scholar.google.com/citations?user=uUVgA7sAAAAJ&hl=en&oi=sra"
+            "S Poudel": "https://scholar.google.com/citations?user=uUVgA7sAAAAJ&hl=en&oi=sra",
+            "SW Lee": "https://scholar.google.com/citations?user=tQ8Q0qUAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "S Poudel",
@@ -2829,6 +3024,21 @@
         ],
         "abstract": "This paper introduces our approach for the automatic segmentation of polyp images in the Gastro-Intestinal (GI) tract. We employ an EfficientNet as an encoder backbone with UNet decoder and leverage the concept of UNet++ of redesigning the skip connections to use …",
         "eprint": "http://ceur-ws.org/Vol-2882/paper24.pdf"
+    },
+    {
+        "title": "Resources for image-based high-throughput phenotyping in crops and data sharing challenges",
+        "url": "https://academic.oup.com/plphys/advance-article-abstract/doi/10.1093/plphys/kiab301/6310753",
+        "author_links": {
+            "MF Danilevicz": "https://scholar.google.com/citations?user=SIPvegsAAAAJ&hl=en&oi=sra",
+            "PE Bayer": "https://scholar.google.com/citations?user=GOL15xQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "MF Danilevicz",
+            "PE Bayer",
+            "BJ Nestor"
+        ],
+        "abstract": "High throughput phenotyping (HTP) platforms are capable of monitoring the phenotypic variation of plants through multiple types of sensors such as RGB cameras, hyperspectral sensors and computed tomography, which can be associated with environmental and …",
+        "eprint": "https://academic.oup.com/plphys/advance-article-pdf/doi/10.1093/plphys/kiab301/39305643/kiab301.pdf"
     },
     {
         "title": "Wheat Head Detection using Deep, Semi-Supervised and Ensemble Learning",
@@ -2845,7 +3055,7 @@
     },
     {
         "title": "Super-Resolution: 2. Machine Learning-Based Approach",
-        "url": "https://books.google.com/books?hl=en&lr=&id=uOEsEAAAQBAJ&oi=fnd&pg=PA35&ots=rMt24T85ee&sig=gUZ-TRzss04WwNcSczxxq5yEXiQ",
+        "url": "https://books.google.com/books?hl=en&lr=&id=uOEsEAAAQBAJ&oi=fnd&pg=PA35&ots=rMt5_Ue5gm&sig=AWvT1hrUaYXgYvj-QilrUAWbS_8",
         "author_links": {
             "AS Chernyavskiy": "https://scholar.google.com/citations?user=W2vhep8AAAAJ&hl=en&oi=sra"
         },
@@ -2875,9 +3085,27 @@
         "eprint": "https://www.biorxiv.org/content/biorxiv/early/2021/04/22/2021.04.22.440942.full.pdf"
     },
     {
+        "title": "Vehicle-Rear: A new dataset to explore feature fusion for vehicle identification using convolutional neural networks",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9490218/",
+        "author_links": {
+            "R Laroca": "https://scholar.google.com/citations?user=DSZaSPcAAAAJ&hl=en&oi=sra",
+            "D Menotti": "https://scholar.google.com/citations?user=Ipu5_-gAAAAJ&hl=en&oi=sra",
+            "R Minetto": "https://scholar.google.com/citations?user=9jt-hIMAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "IO de Oliveira",
+            "R Laroca",
+            "D Menotti",
+            "R Minetto"
+        ],
+        "abstract": "This work addresses the problem of vehicle identification through non-overlapping cameras. As our main contribution, we introduce a novel dataset for vehicle identification, called Vehicle-Rear, that contains more than three hours of high-resolution videos, with accurate …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/9312710/09490218.pdf"
+    },
+    {
         "title": "Semantic Correspondence with Transformers",
         "url": "https://arxiv.org/abs/2106.02520",
         "author_links": {
+            "S Cho": "https://scholar.google.com/citations?user=mvPfpnMAAAAJ&hl=en&oi=sra",
             "S Jeon": "https://scholar.google.com/citations?user=qgVt7LoAAAAJ&hl=en&oi=sra",
             "Y Lee": "https://scholar.google.com/citations?user=dYjue4wAAAAJ&hl=en&oi=sra",
             "K Sohn": "https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en&oi=sra"
@@ -2965,6 +3193,7 @@
         "author_links": {
             "S Hemati": "https://scholar.google.com/citations?user=5qtzx8cAAAAJ&hl=en&oi=sra",
             "S Kalra": "https://scholar.google.com/citations?user=iEwZn18AAAAJ&hl=en&oi=sra",
+            "C Meaney": "https://scholar.google.com/citations?user=9fiMlZkAAAAJ&hl=en&oi=sra",
             "M Babaie": "https://scholar.google.com/citations?user=o0o5QU0AAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -3042,6 +3271,19 @@
         "eprint": "https://miua2021.com/abstracts/118.pdf"
     },
     {
+        "title": "Developing efficient transfer learning strategies for robust scene recognition in mobile robotics using pre-trained convolutional neural networks",
+        "url": "https://arxiv.org/abs/2107.11187",
+        "author_links": {
+            "H Baumgartl": "https://scholar.google.com/citations?user=dyOQFkwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "H Baumgartl",
+            "R Buettner"
+        ],
+        "abstract": "We present four different robust transfer learning and data augmentation strategies for robust mobile scene recognition. By training three mobile-ready (EfficientNetB0, MobileNetV2, MobileNetV3) and two large-scale baseline (VGG16, ResNet50) convolutional …",
+        "eprint": "https://arxiv.org/pdf/2107.11187"
+    },
+    {
         "title": "Semi-Supervised Learning for Cervical Precancer Detection",
         "url": "https://ieeexplore.ieee.org/abstract/document/9474656/",
         "author_links": {
@@ -3084,7 +3326,8 @@
             "A Szymczak",
             "M Morzy"
         ],
-        "abstract": "Academia remains the central place of machine learning education. While academic culture is the predominant factor influencing the way we teach machine learning to students, many practitioners question this culture, claiming the lack of alignment between academic and …"
+        "abstract": "Academia remains the central place of machine learning education. While academic culture is the predominant factor influencing the way we teach machine learning to students, many practitioners question this culture, claiming the lack of alignment between academic and …",
+        "eprint": "https://sciendo.com/pdf/10.2478/fcds-2020-0015"
     },
     {
         "title": "End-to-end privacy preserving deep learning on multi-institutional medical imaging",
@@ -3192,10 +3435,9 @@
     },
     {
         "title": "Impact of Healthcare 4.0 Technologies for Future Capacity Building to Control Epidemic Diseases",
-        "url": "https://books.google.com/books?hl=en&lr=&id=17AzEAAAQBAJ&oi=fnd&pg=PA115&ots=5qreQ1CUov&sig=PoCBb-jL_fzCSZth-2OY9tducIU",
+        "url": "https://books.google.com/books?hl=en&lr=&id=17AzEAAAQBAJ&oi=fnd&pg=PA115&ots=5qrhK2IUqt&sig=sxWJWP0o5EqY2AMEc9G3mIn2KnY",
         "author_links": {
-            "HN Saha": "https://scholar.google.com/citations?user=4uIKreAAAAAJ&hl=en&oi=sra",
-            "S Paul": "https://scholar.google.com/citations?user=9PuiJcsAAAAJ&hl=en&oi=sra"
+            "HN Saha": "https://scholar.google.com/citations?user=4uIKreAAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "HN Saha",
@@ -3393,7 +3635,6 @@
         "title": "SCG-Net: Self-Constructing Graph Neural Networks for Semantic Segmentation",
         "url": "https://arxiv.org/abs/2009.01599",
         "author_links": {
-            "Q Liu": "https://scholar.google.com/citations?user=RRXDrzsAAAAJ&hl=en&oi=sra",
             "M Kampffmeyer": "https://scholar.google.com/citations?user=9lDh2UgAAAAJ&hl=en&oi=sra",
             "R Jenssen": "https://scholar.google.com/citations?user=HiviXjIAAAAJ&hl=en&oi=sra"
         },
@@ -3404,6 +3645,20 @@
         ],
         "abstract": "Capturing global contextual representations by exploiting long-range pixel-pixel dependencies has shown to improve semantic segmentation performance. However, how to do this efficiently is an open question as current approaches of utilising attention schemes or …",
         "eprint": "https://arxiv.org/pdf/2009.01599"
+    },
+    {
+        "title": "Relatable Clothing: Soft-attention Mechanism for Detecting worn/unworn Objects",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9503396/",
+        "author_links": {
+            "T Truong": "https://scholar.google.com/citations?user=KzVhe6wAAAAJ&hl=en&oi=sra",
+            "S Yanushkevich": "https://scholar.google.com/citations?user=97hBTsgAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "T Truong",
+            "S Yanushkevich"
+        ],
+        "abstract": "We have identified a need in visual relationship detection and biometrics related research for a dataset and model which focuses on person-clothing pairs. Previous to our Relatable Clothing dataset, there were no publicly available datasets usable for “worn” and “unworn” …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/9312710/09503396.pdf"
     },
     {
         "title": "Underwater Object Detection With Mixed Attention Mechanism And Multi-Enhancement Strategy",
@@ -3459,6 +3714,7 @@
         "title": "Generative augmentation to improve lung nodules detection in resource-limited settings",
         "url": "http://www.i-us.ru/index.php/ius/article/view/14012",
         "author_links": {
+            "AA Lobantsev": "https://scholar.google.com/citations?user=uOqCYKkAAAAJ&hl=en&oi=sra",
             "AS Vatian": "https://scholar.google.com/citations?user=_aIJ9RwAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -3482,7 +3738,7 @@
         "eprint": "https://core.ac.uk/download/pdf/213004988.pdf"
     },
     {
-        "title": "Semi-supervised training of deep convolutional neural networks with heterogeneous data and few local annotations: an experiment on prostate …",
+        "title": "Semi-supervised training of deep convolutional neural networks with heterogeneous data and few local annotations: An experiment on prostate …",
         "url": "https://www.sciencedirect.com/science/article/pii/S1361841521002115",
         "author_links": {
             "N Marini": "https://scholar.google.com/citations?user=kKK8SBYAAAAJ&hl=en&oi=sra",
@@ -3690,6 +3946,17 @@
             "S Ekaterina"
         ],
         "abstract": "Rust diseases of cereals are caused by pathogenic fungi and can significantly reduce plant productivity. Many cultures are subject to them. The disease is difficult to control on a large scale, so one of the most relevant approaches is crop monitoring, which helps to identify the …"
+    },
+    {
+        "title": "Recognition Recipes with Deep Machine Learning",
+        "url": "https://elibrary.ru/item.asp?id=44034561",
+        "author_links": {},
+        "author": [
+            "СВ Ульянов",
+            "АВ Филипьев",
+            "КВ Кошелев"
+        ],
+        "abstract": "This article aims to reveal that deep machine learning algorithms can be applied in a variety of commercial companies in order to improve developing intelligent systems. The major task which would be discussed in the application of convolutional neural networks for …"
     },
     {
         "title": "3DeepM: An Ad Hoc Architecture Based on Deep Learning Methods for Multispectral Image Classification. Remote Sens. 2021, 13, 729",
@@ -4030,6 +4297,21 @@
         "eprint": "https://arxiv.org/pdf/2103.17171"
     },
     {
+        "title": "Using Synthetic Corruptions to Measure Robustness to Natural Distribution Shifts",
+        "url": "https://arxiv.org/abs/2107.12052",
+        "author_links": {
+            "A Caplier": "https://scholar.google.com/citations?user=vq2KiEYAAAAJ&hl=en&oi=sra",
+            "M Ospici": "https://scholar.google.com/citations?user=kMG26mgAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Laugros",
+            "A Caplier",
+            "M Ospici"
+        ],
+        "abstract": "Synthetic corruptions gathered into a benchmark are frequently used to measure neural network robustness to distribution shifts. However, robustness to synthetic corruption benchmarks is not always predictive of robustness to distribution shifts encountered in real …",
+        "eprint": "https://arxiv.org/pdf/2107.12052"
+    },
+    {
         "title": "Ring artifacts segmentation on microtomographic images by convolutional neural networks",
         "url": "https://ieeexplore.ieee.org/abstract/document/9253308/",
         "author_links": {
@@ -4042,19 +4324,31 @@
         "abstract": "Ring artifacts in X-ray microtomographic images can lead to errors in the construction of digital twins of rock samples for flow simulation. Previously, we considered an algorithm for detecting ring artifacts by means of matching filtering of image slices in a polar coordinate …"
     },
     {
-        "title": "Generation and Annotation of Simulation-Real Ship Images for Convolutional Neural Networks Training and Testing",
-        "url": "https://www.mdpi.com/2076-3417/11/13/5931",
+        "title": "Real-Time Image Registration via A Deep Leaning Approach for Correlative X-ray and Electron Microscopy",
+        "url": "https://www.cambridge.org/core/journals/microscopy-and-microanalysis/article/realtime-image-registration-via-a-deep-leaning-approach-for-correlative-xray-and-electron-microscopy/5A698FC9CA7B423EC3A519F05428F57C",
         "author_links": {
-            "Z Hu": "https://scholar.google.com/citations?user=o4F42sQAAAAJ&hl=en&oi=sra"
+            "M Cherukara": "https://scholar.google.com/citations?user=JbRD8rcAAAAJ&hl=en&oi=sra"
         },
         "author": [
-            "J You",
-            "Z Hu",
-            "C Peng",
-            "Z Wang"
+            "Y Luo",
+            "N Zaluzec",
+            "M Cherukara",
+            "X Wu"
         ],
-        "abstract": "Large amounts of high-quality image data are the basis and premise of the high accuracy detection of objects in the field of convolutional neural networks (CNN). It is challenging to collect various high-quality ship image data based on the marine environment. A novel …",
-        "eprint": "https://www.mdpi.com/2076-3417/11/13/5931/htm"
+        "abstract": "Page 1. 302 Microsc. Microanal. 27 (Suppl 1), 2021 doi:10.1017/S1431927621001653 ©\nMicroscopy Society of America 2021 Real-Time Image Registration via A Deep Leaning Approach\nfor Correlative X-ray and Electron Microscopy Yanqi Luo 1 , Nestor Zaluzec 2 , Mathew Cherukara …"
+    },
+    {
+        "title": "Image-Based Wheat Fungi Diseases Identification by Deep Learning. Plants 2021, 10, 1500",
+        "url": "https://www.researchgate.net/profile/Dmitry-Afonnikov/publication/353408516_Image-Based_Wheat_Fungi_Diseases_Identification_by_Deep_Learning/links/60fae557169a1a0103b1ccb1/Image-Based-Wheat-Fungi-Diseases-Identification-by-Deep-Learning.pdf",
+        "author_links": {},
+        "author": [
+            "MA Genaev",
+            "ES Skolotneva",
+            "EI Gultyaeva",
+            "EA Orlova"
+        ],
+        "abstract": "Diseases of cereals caused by pathogenic fungi can significantly reduce crop yields. Many cultures are exposed to them. The disease is difficult to control on a large scale; thus, one of the relevant approaches is the crop field monitoring, which helps to identify the disease at an …",
+        "eprint": "https://www.researchgate.net/profile/Dmitry-Afonnikov/publication/353408516_Image-Based_Wheat_Fungi_Diseases_Identification_by_Deep_Learning/links/60fae557169a1a0103b1ccb1/Image-Based-Wheat-Fungi-Diseases-Identification-by-Deep-Learning.pdf"
     },
     {
         "title": "A voting-based ensemble deep learning method focusing on image augmentation and preprocessing variations for tuberculosis detection",
@@ -4067,6 +4361,31 @@
         ],
         "abstract": "Tuberculosis (TB) is known as a potentially dangerous and infectious disease that affects mostly lungs worldwide. The detection and treatment of TB at an early stage are critical for preventing the disease and decreasing the risk of mortality and transmission of it to others …",
         "eprint": "https://www.ncbi.nlm.nih.gov/pmc/articles/pmc8182991/"
+    },
+    {
+        "title": "Pothole Detection Using Deep Learning and Area Assessment Using Image Manipulation",
+        "url": "https://search.proquest.com/openview/7ad0421394d339e1279d14aa631c4ea2/1?pq-origsite=gscholar&cbl=18750&diss=y",
+        "author_links": {},
+        "author": [
+            "S Kharel"
+        ],
+        "abstract": "Every year, drivers are spending over 3 billions to repair damage on vehicle caused by potholes. Along with the financial disaster, potholes cause frustration in drivers. Also, with the emerging development of automated vehicles, road safety with automation in mind is …"
+    },
+    {
+        "title": "Localization of Cementoenamel Junction in Intraoral Ultrasonographs with Machine Learning",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0300571221001731",
+        "author_links": {
+            "BM Le": "https://scholar.google.com/citations?user=Zg9HjdcAAAAJ&hl=en&oi=sra",
+            "PW Major": "https://scholar.google.com/citations?user=CXdqTzwAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "KCT Nguyen",
+            "BM Le",
+            "M Li",
+            "FT Almeida",
+            "PW Major"
+        ],
+        "abstract": "Objective Our goal was to automatically identify the cementoenamel junction (CEJ) location in ultrasound images using deep convolution neural networks (CNNs). Methods Three CNNs were evaluated using 1400 images and data augmentation. The training and …"
     },
     {
         "title": "HISTOPATHOLOGY LEARNING DATASET AUGMENTATION: A HYBRID APPROACH",
@@ -4082,6 +4401,18 @@
         ],
         "abstract": "In histopathology, staining quantification is a mandatory step to unveil and characterize disease progression and assess drug efficiency in preclinical and clinical settings. Supervised Machine Learning (SML) algorithms allow the automation of such tasks but rely …",
         "eprint": "https://openreview.net/pdf?id=YeiG38i32G2"
+    },
+    {
+        "title": "Self-Supervised Learning for Fine-Grained Image Classification",
+        "url": "https://arxiv.org/abs/2107.13973",
+        "author_links": {},
+        "author": [
+            "FA Breiki",
+            "M Ridzuan",
+            "R Grandhe"
+        ],
+        "abstract": "Fine-grained image classification involves identifying different subcategories of a class which possess very subtle discriminatory features. Fine-grained datasets usually provide bounding box annotations along with class labels to aid the process of classification …",
+        "eprint": "https://arxiv.org/pdf/2107.13973"
     },
     {
         "title": "Automatic lesion boundary detection in dermoscopy",
@@ -4160,6 +4491,7 @@
         "title": "Combining EfficientNet and Vision Transformers for Video Deepfake Detection",
         "url": "https://arxiv.org/abs/2107.02612",
         "author_links": {
+            "D Coccomini": "https://scholar.google.com/citations?user=b9JAvMgAAAAJ&hl=en&oi=sra",
             "N Messina": "https://scholar.google.com/citations?user=g-UGCd8AAAAJ&hl=en&oi=sra",
             "C Gennaro": "https://scholar.google.com/citations?user=sbFBI4IAAAAJ&hl=en&oi=sra"
         },
@@ -4232,7 +4564,8 @@
         "title": "PathML: A unified framework for whole-slide image analysis with deep learning",
         "url": "https://www.medrxiv.org/content/10.1101/2021.07.07.21260138.abstract",
         "author_links": {
-            "AG Berman": "https://scholar.google.com/citations?user=UIWwrj4AAAAJ&hl=en&oi=sra"
+            "AG Berman": "https://scholar.google.com/citations?user=UIWwrj4AAAAJ&hl=en&oi=sra",
+            "WR Orchard": "https://scholar.google.com/citations?user=JalAkMoAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "AG Berman",
