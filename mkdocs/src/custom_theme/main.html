@@ -34,6 +34,15 @@
 
 
 {% block content %}
+<style>
+    .highlight-ipynb {
+        font-size: 0.7rem;
+    }
+    .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
+        font-size: 0.8rem;
+    }
+</style>
+
 {% if page.edit_url %}
   <a href="{% if page.is_jupyter_notebook %}{{ page.notebook_github_url }}{% else %}{{ page.edit_url }}{% endif %}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
     {% include ".icons/material/pencil.svg" %}

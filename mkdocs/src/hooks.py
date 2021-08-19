@@ -3,7 +3,7 @@ import json
 import os
 
 from bs4 import BeautifulSoup
-from mknotebooks.plugin import NotebookFile
+from mkdocs_jupyter.plugin import NotebookFile
 
 
 def on_pre_page(page, config, files):

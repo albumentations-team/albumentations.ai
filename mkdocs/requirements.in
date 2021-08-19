@@ -1,6 +1,6 @@
 mkdocs
 mkdocs-material
-mknotebooks
+mkdocs-jupyter
 Pygments
 mkdocs-awesome-pages-plugin
 mkdocs-simple-hooks
