@@ -2040,7 +2040,7 @@ albumentations.augmentations.geometric.resize.LongestMaxSize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L65" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L69" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.LongestMaxSize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2059,8 +2059,9 @@ albumentations.augmentations.geometric.resize.LongestMaxSize</strong></code>
 <tbody>
 <tr>
 <td><code>max_size</code></td>
-<td><code>int</code></td>
-<td><p>maximum size of the image after the transformation.</p></td>
+<td><code>int, list of int</code></td>
+<td><p>maximum size of the image after the transformation. When using a list, max size
+will be randomly selected from the values in the list.</p></td>
 </tr>
 <tr>
 <td><code>interpolation</code></td>
@@ -2092,7 +2093,7 @@ albumentations.augmentations.geometric.resize.RandomScale</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L28" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L31" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.RandomScale" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2147,7 +2148,7 @@ albumentations.augmentations.geometric.resize.Resize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L143" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L170" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.Resize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2206,7 +2207,7 @@ albumentations.augmentations.geometric.resize.SmallestMaxSize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L103" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L119" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.SmallestMaxSize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2225,8 +2226,9 @@ albumentations.augmentations.geometric.resize.SmallestMaxSize</strong></code>
 <tbody>
 <tr>
 <td><code>max_size</code></td>
-<td><code>int</code></td>
-<td><p>maximum size of smallest side of the image after the transformation.</p></td>
+<td><code>int, list of int</code></td>
+<td><p>maximum size of smallest side of the image after the transformation. When using a
+list, max size will be randomly selected from the values in the list.</p></td>
 </tr>
 <tr>
 <td><code>interpolation</code></td>
