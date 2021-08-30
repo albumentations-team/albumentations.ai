@@ -156,6 +156,7 @@ p img {
   border-top: .2rem solid #448aff;
   scroll-margin-top: 2em !important;
   font-size: 1.5625em !important;
+  text-transform: none !important;
 }
 
 .md-typeset__table {
