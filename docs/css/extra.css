@@ -155,6 +155,7 @@ p img {
   background: rgba(68,138,255,.1);
   border-top: .2rem solid #448aff;
   scroll-margin-top: 2em !important;
+  font-size: 1.5625em !important;
 }
 
 .md-typeset__table {
