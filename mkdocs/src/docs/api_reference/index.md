@@ -1,3 +1,4 @@
+- [Full API Reference on a single page](full_reference.md)
 - Core API (albumentations.core)
     - [Composition API (albumentations.core.composition)](core/composition.md)
     - [Serialization API (albumentations.core.serialization)](core/serialization.md)

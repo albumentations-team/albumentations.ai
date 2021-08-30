@@ -1,5 +1,6 @@
 title: API Reference
 arrange:
+  - full_reference.md
   - index.md
   - core
   - augmentations
