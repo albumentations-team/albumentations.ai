@@ -59,6 +59,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Contributing](contributing.md)
 
 ## API Reference
+- [Full API Reference on a single page](api_reference/full_reference.md)
 - [Index](api_reference/index.md)
     - [Core API (albumentations.core)](api_reference/core/index.md)
     - [Augmentations (albumentations.augmentations)](api_reference/augmentations/index.md)
