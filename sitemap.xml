@@ -52,66 +52,6 @@
      <lastmod>2021-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://albumentations.ai/docs/examples/example/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_16_bit_tiff/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_bboxes/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_bboxes2/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_kaggle_salt/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_keypoints/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_multi_target/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/example_weather_transforms/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/migrating_from_torchvision_to_albumentations/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/pytorch_classification/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/pytorch_semantic_segmentation/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/replay/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/serialization/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/showcase/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/examples/tensorflow-example/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://albumentations.ai/docs/faq/</loc>
      <lastmod>2021-09-04</lastmod>
      <changefreq>daily</changefreq>
@@ -177,10 +117,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/autoalbument/faq/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/autoalbument/introduction/</loc>
      <lastmod>2021-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -285,10 +221,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/keypoints_utils/</loc>
-     <lastmod>2021-09-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</loc>
      <lastmod>2021-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
