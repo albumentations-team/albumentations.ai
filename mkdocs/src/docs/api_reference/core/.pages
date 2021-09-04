@@ -1,5 +1,5 @@
 title: Core API
-arrange:
+nav:
   - index.md
   - composition.md
   - transforms_interface.md

@@ -1,5 +1,5 @@
 title: Albumentations Experimental
-arrange:
+nav:
   - overview.md
   - installation.md
   - api_reference

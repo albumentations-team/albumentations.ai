@@ -1,5 +1,5 @@
-title: Getting started with Albumentations
-arrange:
+title: Getting started
+nav:
   - installation.md
   - image_augmentation.md
   - mask_augmentation.md
@@ -7,3 +7,4 @@ arrange:
   - keypoints_augmentation.md
   - simultaneous_augmentation.md
   - transforms_and_targets.md
+  - Setting probabilities for transforms: setting_probabilities.md
