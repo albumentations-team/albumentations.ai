@@ -1,5 +1,5 @@
 title: Augmentations
-arrange:
+nav:
   - index.md
   - transforms.md
   - crops

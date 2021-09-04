@@ -1,5 +1,5 @@
-title: AutoAlbument - AutoML for Image Augmentation
-arrange:
+title: AutoAlbument
+nav:
   - index.md
   - benchmarks.md
   - installation.md
@@ -10,4 +10,4 @@ arrange:
   - tuning_parameters.md
   - examples
   - search_algorithms.md
-  - faq.md
+  - FAQ: faq.md

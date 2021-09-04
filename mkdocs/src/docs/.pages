@@ -1,9 +1,9 @@
-arrange:
-  - index.md
+nav:
+  - Documentation: index.md
   - introduction
   - getting_started
   - examples
-  - faq.md
+  - FAQ: faq.md
   - autoalbument
   - experimental
   - external_resources

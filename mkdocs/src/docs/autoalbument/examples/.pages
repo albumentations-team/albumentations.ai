@@ -1,5 +1,5 @@
 title: Examples
-arrange:
+nav:
   - list.md
   - cifar10.md
   - svhn.md
