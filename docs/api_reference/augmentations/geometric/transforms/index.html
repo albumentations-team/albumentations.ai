@@ -1782,7 +1782,7 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L467" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L483" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1937,11 +1937,11 @@ albumentations.augmentations.geometric.transforms.ElasticTransform</strong></cod
 <code>
 
 
-    (alpha=1, sigma=50, alpha_affine=50, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, approximate=False, p=0.5)
+    (alpha=1, sigma=50, alpha_affine=50, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, approximate=False, same_dxdy=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L142" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L144" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ElasticTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2010,6 +2010,12 @@ Default: cv2.BORDER_REFLECT_101</p></td>
 <td><p>Whether to smooth displacement map with fixed kernel size.
                    Enabling this option gives ~2X speedup on large images.</p></td>
 </tr>
+<tr>
+<td><code>same_dxdy</code></td>
+<td><code>boolean</code></td>
+<td><p>Whether to use same random generated shift for x and y.
+                 Enabling this option gives ~2X speedup.</p></td>
+</tr>
 </tbody>
 </table> <p>Targets:
     image, mask</p>
@@ -2030,7 +2036,7 @@ albumentations.augmentations.geometric.transforms.Perspective</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L227" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L243" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Perspective" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2112,7 +2118,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L756" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L772" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
