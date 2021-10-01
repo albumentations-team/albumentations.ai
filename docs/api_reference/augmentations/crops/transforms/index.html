@@ -1895,7 +1895,7 @@ albumentations.augmentations.crops.transforms.CropAndPad</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L595" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L626" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CropAndPad" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2145,11 +2145,11 @@ albumentations.augmentations.crops.transforms.RandomCropNearBBox</strong></code>
 <code>
 
 
-    (max_part_shift=0.3, always_apply=False, p=1.0)
+    (max_part_shift=(0.3, 0.3), cropping_box_key='cropping_bbox', always_apply=False, p=1.0)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L406" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L416" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCropNearBBox" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2168,8 +2168,16 @@ albumentations.augmentations.crops.transforms.RandomCropNearBBox</strong></code>
 <tbody>
 <tr>
 <td><code>max_part_shift</code></td>
-<td><code>float</code></td>
-<td><p>float value in (0.0, 1.0) range. Default 0.3</p></td>
+<td><code>float, [float, float]</code></td>
+<td><p>Max shift in <code>height</code> and <code>width</code> dimensions relative
+to <code>cropping_bbox</code> dimension.
+If max_part_shift is a single float, the range will be (max_part_shift, max_part_shift).
+Default (0.3, 0.3).</p></td>
+</tr>
+<tr>
+<td><code>cropping_box_key</code></td>
+<td><code>str</code></td>
+<td><p>Additional target key for cropping box. Default <code>cropping_bbox</code></p></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -2181,6 +2189,11 @@ albumentations.augmentations.crops.transforms.RandomCropNearBBox</strong></code>
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
+<p><strong>Examples:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">Compose</span><span class="p">(</span><span class="n">RandomCropNearBBox</span><span class="p">(</span><span class="n">max_part_shift</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">cropping_box_key</span><span class="o">=</span><span class="s1">'test_box'</span><span class="p">),</span>
+<span class="o">&gt;&gt;&gt;</span>               <span class="n">bbox_params</span><span class="o">=</span><span class="n">BboxParams</span><span class="p">(</span><span class="s2">"pascal_voc"</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bboxes</span><span class="o">=</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">test_box</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2265,7 +2278,7 @@ albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop</strong></
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L461" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L492" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
