@@ -9,6 +9,7 @@
     <meta property="og:image" content="https://albumentations.ai/assets/img/custom/albumentations_card.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="./assets/img/custom/albumentations_logo.png">
+    <link rel="stylesheet" href="./assets/vendor/slick/slick.css">
     <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/theme.css?1">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
@@ -511,6 +512,15 @@
                 <a href="https://github.com/Alex-Gregory-1" target="_blank"><img
                         src="https://avatars.githubusercontent.com/u/49785867?v=4"
                         alt="Alex-Gregory-1" title="Alex-Gregory-1"
+                        style="width: 70px;"/></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/golunovas" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/19951039?v=4"
+                        alt="golunovas" title="golunovas"
                         style="width: 70px;"/></a>
             </div>
         </div>
@@ -1102,8 +1112,11 @@
 <script src="./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
 <script src="./assets/vendor/popper.js/dist/umd/popper.min.js"></script>
 <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="./assets/vendor/slick/slick.min.js"></script>
 <script src="./assets/js/hs.core.js"></script>
 <script src="./assets/js/components/hs.unfold.js"></script>
+<script src="./assets/js/hs.slick-carousel.js"></script>
+
 <script>
     $(document).on('ready', function () {
         $('.collapse-button').click(function () {
@@ -1118,6 +1131,11 @@
                 that.html('Show ' + length + ' more <i class="fa fa-angle-down"></i>')
             }
         });
+        $('.js-slick-carousel').each(function() {
+            $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+        });
+
     });
     $(window).on('load', function () {
         // initialization of HSScrollNav component

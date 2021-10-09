@@ -23706,7 +23706,6 @@ a.btn.member-social-network {
   height: 2.5rem
 }
 
-
 .col-14-pct {
     flex: 0 0 14%;
     max-width: 14%;
@@ -23714,4 +23713,12 @@ a.btn.member-social-network {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.left-arrow-pos{
+  left: -75px;
+}
+
+.right-arrow-pos {
+  right: -75px;
 }
