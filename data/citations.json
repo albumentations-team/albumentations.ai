@@ -462,7 +462,7 @@
     },
     {
         "title": "Deep learning for the Earth Sciences: A comprehensive approach to remote sensing, climate science and geosciences",
-        "url": "https://books.google.com/books?hl=en&lr=&id=e2c4EAAAQBAJ&oi=fnd&pg=PR16&ots=gGjz3_YTCm&sig=hS1iwLZxsKcyRb69f3Wrmb_M92o",
+        "url": "https://books.google.com/books?hl=en&lr=&id=e2c4EAAAQBAJ&oi=fnd&pg=PR16&ots=gGjz67_QEh&sig=s6FfXgda4grSFAP_ATtSi3Ebh7o",
         "author_links": {
             "G Camps-Valls": "https://scholar.google.com/citations?user=6mgnauMAAAAJ&hl=en&oi=sra",
             "D Tuia": "https://scholar.google.com/citations?user=p3iJiLIAAAAJ&hl=en&oi=sra",
@@ -1273,7 +1273,7 @@
     },
     {
         "title": "Semi-automatic Manga Colorization Using Conditional Adversarial Networks.",
-        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-I_RYFCSi1&sig=dmMiq4H2B8gzNFBB0ofc_Hb6jts",
+        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-I_R-OEQaY&sig=8NvJiSt1n6pf-vzPpc07fpP7InY",
         "author_links": {
             "I Makarov": "https://scholar.google.com/citations?user=cFpDMzIAAAAJ&hl=en&oi=sra"
         },
@@ -1468,6 +1468,21 @@
         ],
         "abstract": "The CycleGAN framework allows for unsupervised image-to-image translation of unpaired data. In a scenario of surgical training on a physical surgical simulator, this method can be used to transform endoscopic images of phantoms into images which more closely resemble …",
         "eprint": "https://arxiv.org/pdf/2107.06941"
+    },
+    {
+        "title": "Resources for image-based high-throughput phenotyping in crops and data sharing challenges",
+        "url": "https://academic.oup.com/plphys/article-abstract/187/2/699/6310753",
+        "author_links": {
+            "MF Danilevicz": "https://scholar.google.com/citations?user=SIPvegsAAAAJ&hl=en&oi=sra",
+            "PE Bayer": "https://scholar.google.com/citations?user=GOL15xQAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "MF Danilevicz",
+            "PE Bayer",
+            "BJ Nestor"
+        ],
+        "abstract": "High-throughput phenotyping (HTP) platforms are capable of monitoring the phenotypic variation of plants through multiple types of sensors, such as red green and blue (RGB) cameras, hyperspectral sensors, and computed tomography, which can be associated with …",
+        "eprint": "https://academic.oup.com/plphys/article-pdf/187/2/699/40507999/kiab301.pdf"
     },
     {
         "title": "Vehicle-Rear: A New Dataset to Explore Feature Fusion for Vehicle Identification Using Convolutional Neural Networks",
@@ -2085,7 +2100,8 @@
         "url": "https://arxiv.org/abs/2103.09354",
         "author_links": {
             "M Potanin": "https://scholar.google.com/citations?user=F9T_I50AAAAJ&hl=en&oi=sra",
-            "D Dimitrov": "https://scholar.google.com/citations?user=3JSIJpYAAAAJ&hl=en&oi=sra"
+            "D Dimitrov": "https://scholar.google.com/citations?user=3JSIJpYAAAAJ&hl=en&oi=sra",
+            "A Shonenkov": "https://scholar.google.com/citations?user=_gLgwBgAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "M Potanin",
@@ -2108,25 +2124,23 @@
     },
     {
         "title": "SynFace: Face Recognition with Synthetic Data",
-        "url": "https://arxiv.org/abs/2108.07960",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Qiu_SynFace_Face_Recognition_With_Synthetic_Data_ICCV_2021_paper.html",
         "author_links": {
             "H Qiu": "https://scholar.google.com/citations?user=O5gH5vkAAAAJ&hl=en&oi=sra",
             "B Yu": "https://scholar.google.com/citations?user=fjzIdMQAAAAJ&hl=en&oi=sra",
             "D Gong": "https://scholar.google.com/citations?user=FP4FEvwAAAAJ&hl=en&oi=sra",
             "Z Li": "https://scholar.google.com/citations?user=VTrRNN4AAAAJ&hl=en&oi=sra",
-            "W Liu": "https://scholar.google.com/citations?user=AjxoEpIAAAAJ&hl=en&oi=sra",
-            "D Tao": "https://scholar.google.com/citations?user=RwlJNLcAAAAJ&hl=en&oi=sra"
+            "W Liu": "https://scholar.google.com/citations?user=AjxoEpIAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "H Qiu",
             "B Yu",
             "D Gong",
             "Z Li",
-            "W Liu",
-            "D Tao"
+            "W Liu"
         ],
         "abstract": "With the recent success of deep neural networks, remarkable progress has been achieved on face recognition. However, collecting large-scale real-world training data for face recognition has turned out to be challenging, especially due to the label noise and privacy …",
-        "eprint": "https://arxiv.org/pdf/2108.07960"
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021/papers/Qiu_SynFace_Face_Recognition_With_Synthetic_Data_ICCV_2021_paper.pdf"
     },
     {
         "title": "DBA_SSD: A Novel End-to-End Object Detection Using Deep Attention Module for Helping Smart Device with Vegetable and Fruit Leaf Plant Disease Detection",
@@ -2158,6 +2172,20 @@
         ],
         "abstract": "We focus on building robustness in the convolutions of neural visual classifiers, especially against natural perturbations like elastic deformations, occlusions and Gaussian noise. Existing CNNs show outstanding performance on clean images, but fail to tackle naturally …",
         "eprint": "https://arxiv.org/pdf/2107.09391"
+    },
+    {
+        "title": "Exploiting Sample Correlation for Crowd Counting With Multi-Expert Network",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Exploiting_Sample_Correlation_for_Crowd_Counting_With_Multi-Expert_Network_ICCV_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "X Liu",
+            "G Li",
+            "Z Han",
+            "W Zhang",
+            "Y Yang"
+        ],
+        "abstract": "Crowd counting is a difficult task because of the diversity of scenes. Most of the existing crowd counting methods adopt complex structures with massive backbones to enhance the generalization ability. Unfortunately, the performance of existing methods on large-scale …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Exploiting_Sample_Correlation_for_Crowd_Counting_With_Multi-Expert_Network_ICCV_2021_paper.pdf"
     },
     {
         "title": "Machine learning methods for automated classification of tumors with papillary thyroid carcinoma-like nuclei: A quantitative analysis",
@@ -2440,6 +2468,18 @@
         "eprint": "https://arxiv.org/pdf/2101.07653"
     },
     {
+        "title": "A Semi-Self-Supervised Learning Approach for Wheat Head Detection Using Extremely Small Number of Labeled Samples",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/CVPPA/html/Najafian_A_Semi-Self-Supervised_Learning_Approach_for_Wheat_Head_Detection_Using_Extremely_ICCVW_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "K Najafian",
+            "A Ghanbari",
+            "I Stavness"
+        ],
+        "abstract": "Most of the success of deep learning is owed to supervised learning, where a large-scale annotated dataset is used for model training. However, developing such datasets is challenging. In this paper, we develop a semi-self-supervised learning approach for wheat …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/CVPPA/papers/Najafian_A_Semi-Self-Supervised_Learning_Approach_for_Wheat_Head_Detection_Using_Extremely_ICCVW_2021_paper.pdf"
+    },
+    {
         "title": "2nd Place Solution to ECCV 2020 VIPriors Object Detection Challenge",
         "url": "https://arxiv.org/abs/2007.08849",
         "author_links": {},
@@ -2677,6 +2717,7 @@
         "title": "Data Preprocessing Via Compositions Multi-Channel MRI Images to Improve Brain Tumor Segmentation",
         "url": "https://ieeexplore.ieee.org/abstract/document/9153416/",
         "author_links": {
+            "N Tolstokulakov": "https://scholar.google.com/citations?user=oMvZE4gAAAAJ&hl=en&oi=sra",
             "E Pavlovskiy": "https://scholar.google.com/citations?user=rPbZTCQAAAAJ&hl=en&oi=sra"
         },
         "author": [
@@ -2782,6 +2823,19 @@
         ],
         "abstract": "La détection d'objets en environnement industriel est un défi, d'une part à cause de l'absence d'images réelles pour l'apprentissage, et d'autre part à cause de la contrainte de temps réel requise pour l'algorithme, en général embarqué dans un dispositif mobile. Grâce …",
         "eprint": "https://hal.archives-ouvertes.fr/hal-03339794/file/ORASIS_JuliaCohen.pdf"
+    },
+    {
+        "title": "Q-Net: A Quantitative Susceptibility Mapping-based Deep Neural Network for Differential Diagnosis of Brain Iron Deposition in Hemochromatosis",
+        "url": "https://arxiv.org/abs/2110.00203",
+        "author_links": {},
+        "author": [
+            "S Zabihi",
+            "E Rahimian",
+            "S Sharma",
+            "SK Sethi"
+        ],
+        "abstract": "Brain iron deposition, in particular deep gray matter nuclei, increases with advancing age. Hereditary Hemochromatosis (HH) is the most common inherited disorder of systemic iron excess in Europeans and recent studies claimed high brain iron accumulation in patient with …",
+        "eprint": "https://arxiv.org/pdf/2110.00203"
     },
     {
         "title": "Simple methods for the lesion detection and severity grading of diabetic retinopathy by image processing and transfer learning",
@@ -2901,7 +2955,7 @@
         "eprint": "https://www.mdpi.com/2072-4292/13/9/1734/pdf"
     },
     {
-        "title": "SCSS-Net: Solar Corona Structures Segmentation by Deep Learning",
+        "title": "SCSS-Net: Solar corona structures segmentation by deep learning",
         "url": "https://arxiv.org/abs/2109.10834",
         "author_links": {
             "Š Mackovjak": "https://scholar.google.com/citations?user=MtI0-FEAAAAJ&hl=en&oi=sra",
@@ -3036,6 +3090,16 @@
         "eprint": "http://xb.sinomaps.com/article/2020/1001-1595/2020-7-874.htm"
     },
     {
+        "title": "The Effect of Within-Bag Sampling on End-to-End Multiple Instance Learning",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9552170/",
+        "author_links": {},
+        "author": [
+            "N Koriakina",
+            "N Sladoje"
+        ],
+        "abstract": "End-to-end multiple instance learning (MIL) is an important concept with a wide range of applications. It is gaining increased popularity in the (bio) medical imaging community since it may provide a possibility to, while relying only on weak labels assigned to large regions …"
+    },
+    {
         "title": "Multi-Label Contrastive Learning for Abstract Visual Reasoning",
         "url": "https://arxiv.org/abs/2012.01944",
         "author_links": {
@@ -3062,6 +3126,18 @@
         ],
         "abstract": "Fine-scale sea ice conditions are key to our efforts to understand and model climate change. We propose the first deep learning pipeline to extract fine-scale sea ice layers from high-resolution satellite imagery (Worldview-3). Extracting sea ice from imagery is often …",
         "eprint": "https://www.mdpi.com/2072-4292/13/18/3562/htm"
+    },
+    {
+        "title": "H&E-adversarial network: a convolutional neural network to learn stain-invariant features through Hematoxylin & Eosin regression",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/CDPath/html/Marini_HE-Adversarial_Network_A_Convolutional_Neural_Network_To_Learn_Stain-Invariant_Features_ICCVW_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "N Marini",
+            "M Atzori",
+            "S Otálora"
+        ],
+        "abstract": "Computational pathology is a domain that aims to develop algorithms to automatically analyze large digitized histopathology images, called whole slide images (WSI). WSIs are produced scanning thin tissue samples that are stained to make specific structures visible …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/CDPath/papers/Marini_HE-Adversarial_Network_A_Convolutional_Neural_Network_To_Learn_Stain-Invariant_Features_ICCVW_2021_paper.pdf"
     },
     {
         "title": "Estudio de algoritmos de redes neuronales convolucionales en dataset de imágenes médicas",
@@ -3373,21 +3449,6 @@
         "eprint": "http://ceur-ws.org/Vol-2882/paper24.pdf"
     },
     {
-        "title": "Resources for image-based high-throughput phenotyping in crops and data sharing challenges",
-        "url": "https://academic.oup.com/plphys/advance-article-abstract/doi/10.1093/plphys/kiab301/6310753",
-        "author_links": {
-            "MF Danilevicz": "https://scholar.google.com/citations?user=SIPvegsAAAAJ&hl=en&oi=sra",
-            "PE Bayer": "https://scholar.google.com/citations?user=GOL15xQAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "MF Danilevicz",
-            "PE Bayer",
-            "BJ Nestor"
-        ],
-        "abstract": "High-throughput phenotyping (HTP) platforms are capable of monitoring the phenotypic variation of plants through multiple types of sensors, such as red green and blue (RGB) cameras, hyperspectral sensors, and computed tomography, which can be associated with …",
-        "eprint": "https://academic.oup.com/plphys/advance-article-pdf/doi/10.1093/plphys/kiab301/39305643/kiab301.pdf"
-    },
-    {
         "title": "Wheat Head Detection using Deep, Semi-Supervised and Ensemble Learning",
         "url": "https://www.tandfonline.com/doi/abs/10.1080/07038992.2021.1906213",
         "author_links": {
@@ -3445,6 +3506,18 @@
         "abstract": "The article is devoted to the study of the effectiveness of the convolutional neural networks (CNNs) application for solving the problem of tennis players face recognition. For ease of analysis, two players were selected: Roger Federer (Switzerland) and Rafael Nadal (Spain) …"
     },
     {
+        "title": "Season-invariant GNSS-denied visual localization for UAVs",
+        "url": "https://arxiv.org/abs/2110.01967",
+        "author_links": {},
+        "author": [
+            "J Kinnari",
+            "F Verdoja",
+            "V Kyrki"
+        ],
+        "abstract": "Knowing the position and orientation of an UAV without GNSS is a critical functionality in autonomous operations of UAVs. Vision-based localization on a known map can be an effective solution, but it is burdened by two main problems: places have different …",
+        "eprint": "https://arxiv.org/pdf/2110.01967"
+    },
+    {
         "title": "Semantic Correspondence with Transformers",
         "url": "https://arxiv.org/abs/2106.02520",
         "author_links": {
@@ -3488,6 +3561,19 @@
             "CA Sanchez"
         ],
         "abstract": "Cell detection is an essential task for characterizing and studying tumor microenvironments (TME). Automatic cell detection in histopathology is challenging due to the diversity of cell shape, size, morphology, as well as stain variations between laboratories. Though deep …"
+    },
+    {
+        "title": "Anomaly Detection for In Situ Marine Plankton Images",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/OceanVision/html/Pu_Anomaly_Detection_for_In_Situ_Marine_Plankton_Images_ICCVW_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "Y Pu",
+            "Z Feng",
+            "Z Wang",
+            "Z Yang"
+        ],
+        "abstract": "Machine learning and deep learning algorithms have achieved great success in plankton image recognition, but most of them are proposed to deal with closed-set tasks, where the distribution of the test data is the same as the training one. In reality, however, we …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/OceanVision/papers/Pu_Anomaly_Detection_for_In_Situ_Marine_Plankton_Images_ICCVW_2021_paper.pdf"
     },
     {
         "title": "Progressive Transfer Learning Approach for Identifying the Leaf Type by Optimizing Network Parameters",
@@ -3595,7 +3681,8 @@
             "D Jeong",
             "Y Kim"
         ],
-        "abstract": "Local Climate Zones (LCZ) offer a climate-aware and standardized classification scheme composed of 17 urban and natural landscape classes. Recent deep learning-based LCZ classification studies have adopted a scene classification approach with computer …"
+        "abstract": "Local Climate Zones (LCZ) offer a climate-aware and standardized classification scheme composed of 17 urban and natural landscape classes. Recent deep learning-based LCZ classification studies have adopted a scene classification approach with computer …",
+        "eprint": "https://www.researchgate.net/profile/Minho-Kim-23/publication/354947288_Local_climate_zone_classification_using_a_multi-scale_multi-level_attention_network/links/615b1c81a6fae644fbdb536f/Local-climate-zone-classification-using-a-multi-scale-multi-level-attention-network.pdf"
     },
     {
         "title": "Data Augmentations for Document Images.",
@@ -3648,24 +3735,6 @@
         ],
         "abstract": "In digital histopathology, automatic biomarkers quantification at the whole slide level enables the precise characterization of a pathology progression or drug efficiency. Supervised Machine Learning (SML) algorithms allow the automation of such tasks but rely …",
         "eprint": "https://miua2021.com/abstracts/118.pdf"
-    },
-    {
-        "title": "H&E-adversarial network: a convolutional neural network to learn stain-invariant features through Hematoxylin & Eosin regression",
-        "url": "https://www.researchgate.net/profile/Henning-Mueller-3/publication/354760937_HE-adversarial_network_a_convolutional_neural_network_to_learn_stain-invariant_features_through_Hematoxylin_Eosin_regression/links/614b3450519a1a381f77a785/H-E-adversarial-network-a-convolutional-neural-network-to-learn-stain-invariant-features-through-Hematoxylin-Eosin-regression.pdf",
-        "author_links": {
-            "N Marini": "https://scholar.google.com/citations?user=kKK8SBYAAAAJ&hl=en&oi=sra",
-            "M Atzori": "https://scholar.google.com/citations?user=Ens32PIAAAAJ&hl=en&oi=sra",
-            "S Otálora": "https://scholar.google.com/citations?user=Iqt6d2YAAAAJ&hl=en&oi=sra",
-            "S Marchand-Maillet": "https://scholar.google.com/citations?user=dkPjyqIAAAAJ&hl=en&oi=sra"
-        },
-        "author": [
-            "N Marini",
-            "M Atzori",
-            "S Otálora",
-            "S Marchand-Maillet"
-        ],
-        "abstract": "Computational pathology is a domain that aims to develop algorithms to automatically analyze large digitized histopathology images, called whole slide images (WSI). WSIs are produced scanning thin tissue samples that are stained to make specific structures visible …",
-        "eprint": "https://www.researchgate.net/profile/Henning-Mueller-3/publication/354760937_HE-adversarial_network_a_convolutional_neural_network_to_learn_stain-invariant_features_through_Hematoxylin_Eosin_regression/links/614b3450519a1a381f77a785/H-E-adversarial-network-a-convolutional-neural-network-to-learn-stain-invariant-features-through-Hematoxylin-Eosin-regression.pdf"
     },
     {
         "title": "Developing efficient transfer learning strategies for robust scene recognition in mobile robotics using pre-trained convolutional neural networks",
@@ -3726,6 +3795,19 @@
         ],
         "abstract": "Academia remains the central place of machine learning education. While academic culture is the predominant factor influencing the way we teach machine learning to students, many practitioners question this culture, claiming the lack of alignment between academic and …",
         "eprint": "https://sciendo.com/pdf/10.2478/fcds-2020-0015"
+    },
+    {
+        "title": "A Dual-Stream Framework for 3D Mask Face Presentation Attack Detection",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/ChaLearn_FAS/html/Chen_A_Dual-Stream_Framework_for_3D_Mask_Face_Presentation_Attack_Detection_ICCVW_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "S Chen",
+            "T Yao",
+            "K Zhang",
+            "Y Chen"
+        ],
+        "abstract": "Face presentation attack detection (PAD) plays a vital role in face recognition systems. Many previous face anti-spoofing methods mainly focus on the 2D face representation attacks, which however, suffer from great performance degradation when facing high-fidelity 3D …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/ChaLearn_FAS/papers/Chen_A_Dual-Stream_Framework_for_3D_Mask_Face_Presentation_Attack_Detection_ICCVW_2021_paper.pdf"
     },
     {
         "title": "End-to-end privacy preserving deep learning on multi-institutional medical imaging",
@@ -3849,7 +3931,7 @@
     },
     {
         "title": "Impact of Healthcare 4.0 Technologies for Future Capacity Building to Control Epidemic Diseases",
-        "url": "https://books.google.com/books?hl=en&lr=&id=17AzEAAAQBAJ&oi=fnd&pg=PA115&ots=5qsbMWANlt&sig=rCxQkZyHWXxgMbeMqrvNw0JoG9M",
+        "url": "https://books.google.com/books?hl=en&lr=&id=17AzEAAAQBAJ&oi=fnd&pg=PA115&ots=5qsbP3BUmu&sig=TMLKRIjk0l1r4tlZKcDGs1Bh3Vs",
         "author_links": {
             "HN Saha": "https://scholar.google.com/citations?user=4uIKreAAAAAJ&hl=en&oi=sra"
         },
@@ -4029,6 +4111,20 @@
         "eprint": "https://www.diva-portal.org/smash/get/diva2:1567608/FULLTEXT01.pdf"
     },
     {
+        "title": "Supplementary Materials for “End-to-End Learning of Fused Image and Non-Image Features for Improved Breast Cancer Classification from MRI”",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/CVAMD/supplemental/Holste_End-to-End_Learning_of_ICCVW_2021_supplemental.pdf",
+        "author_links": {},
+        "author": [
+            "G Holste",
+            "SC Partridge",
+            "H Rahbar",
+            "D Biswas",
+            "CI Lee"
+        ],
+        "abstract": "While we experimented with different fusion operations to join information from different modalities, we also conducted experiments to explore how best to optimize such a multimodal network. To this end, we constructed a variant of the Learned Feature Fusion …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/CVAMD/supplemental/Holste_End-to-End_Learning_of_ICCVW_2021_supplemental.pdf"
+    },
+    {
         "title": "Danish Fungi 2020--Not Just Another Image Recognition Dataset",
         "url": "https://arxiv.org/abs/2103.10107",
         "author_links": {
@@ -4124,7 +4220,34 @@
             "M Habijan",
             "D Babin"
         ],
-        "abstract": "A key step in medical image-based diagnosis is image segmentation. A common use case for medical image segmentation is the identification of single structures of an elliptical shape. Most organs like the heart and kidneys fall into this category, as well as skin lesions …"
+        "abstract": "A key step in medical image-based diagnosis is image segmentation. A common use case for medical image segmentation is the identification of single structures of an elliptical shape. Most organs like the heart and kidneys fall into this category, as well as skin lesions …",
+        "eprint": "https://ieeexplore.ieee.org/iel7/6287639/9312710/09551998.pdf"
+    },
+    {
+        "title": "Object-Based Augmentation for Building Semantic Segmentation: Ventura and Santa Rosa Case Study",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/ILDAV/html/Illarionova_Object-Based_Augmentation_for_Building_Semantic_Segmentation_Ventura_and_Santa_Rosa_ICCVW_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "S Illarionova",
+            "S Nesteruk",
+            "D Shadrin"
+        ],
+        "abstract": "Today deep convolutional neural networks (CNNs) push the limits for most computer vision problems, define trends, and set state-of-the-art results. In remote sensing tasks such as object detection and semantic segmentation, CNNs reach the SotA performance. However …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/ILDAV/papers/Illarionova_Object-Based_Augmentation_for_Building_Semantic_Segmentation_Ventura_and_Santa_Rosa_ICCVW_2021_paper.pdf"
+    },
+    {
+        "title": "Balanced Masked and Standard Face Recognition",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021W/MFR/html/Qi_Balanced_Masked_and_Standard_Face_Recognition_ICCVW_2021_paper.html",
+        "author_links": {},
+        "author": [
+            "D Qi",
+            "K Hu",
+            "W Tan",
+            "Q Yao",
+            "J Liu"
+        ],
+        "abstract": "We present the improved network architecture, data augmentation, and training strategies for the Webface track and Insightface/Glint360K track of the masked face recognition challenge of ICCV2021. One of the key goals is how to have a balanced performance of …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021W/MFR/papers/Qi_Balanced_Masked_and_Standard_Face_Recognition_ICCVW_2021_paper.pdf"
     },
     {
         "title": "A multi-modal approach to forensic audio-visual device identification",
@@ -4383,6 +4506,20 @@
             "S Ekaterina"
         ],
         "abstract": "Rust diseases of cereals are caused by pathogenic fungi and can significantly reduce plant productivity. Many cultures are subject to them. The disease is difficult to control on a large scale, so one of the most relevant approaches is crop monitoring, which helps to identify the …"
+    },
+    {
+        "title": "Towards Rotation Invariance in Object Detection",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Kalra_Towards_Rotation_Invariance_in_Object_Detection_ICCV_2021_paper.html",
+        "author_links": {
+            "A Kalra": "https://scholar.google.com/citations?user=tcbzdzAAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "A Kalra",
+            "G Stoppi",
+            "B Brown"
+        ],
+        "abstract": "Rotation augmentations generally improve a model's invariance/equivariance to rotation-except in object detection. In object detection the shape is not known, therefore rotation creates a label ambiguity. We show that the de-facto method for bounding box label rotation …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021/papers/Kalra_Towards_Rotation_Invariance_in_Object_Detection_ICCV_2021_paper.pdf"
     },
     {
         "title": "Recognition recipes with deep machine learning",
@@ -5037,6 +5174,16 @@
         "eprint": "https://arxiv.org/pdf/2011.07792"
     },
     {
+        "title": "Segmentación objeto-fondo mediante redes convolucionales",
+        "url": "https://repositorio.uam.es/handle/10486/697962",
+        "author_links": {},
+        "author": [
+            "R Arcos Serrano"
+        ],
+        "abstract": "Actualmente, las técnicas basadas en aprendizaje profundo o Deep Learning han logrado rendimientos realmente buenos en gran cantidad de tareas distintas en las que han sido aplicadas. Respecto a los datos a utilizar, existe una gran disponibilidad de conjuntos …",
+        "eprint": "https://repositorio.uam.es/bitstream/handle/10486/697962/arcos_serrano_raul_tfg.pdf?sequence=1"
+    },
+    {
         "title": "Deep Learning-based Four-region Lung Segmentation in Chest Radiography for COVID-19 Diagnosis",
         "url": "https://arxiv.org/abs/2009.12610",
         "author_links": {
@@ -5160,6 +5307,21 @@
         ],
         "abstract": "The near-infrared (NIR) spectral range (from 780 to 2500 nm) of the multispectral remote sensing imagery provides vital information for the landcover classification, especially concerning the vegetation assessment. Despite the usefulness of NIR, common RGB is not …",
         "eprint": "https://arxiv.org/pdf/2106.07020"
+    },
+    {
+        "title": "SynFace: Face Recognition with Synthetic Data (Supplementary Materials)",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021/supplemental/Qiu_SynFace_Face_Recognition_ICCV_2021_supplemental.pdf",
+        "author_links": {},
+        "author": [
+            "H Qiu",
+            "B Yu",
+            "D Gong",
+            "Z Li",
+            "W Liu",
+            "D Tao"
+        ],
+        "abstract": "In this appendix, we illustrate plenty of face images (from both Syn 10K 50 and CASIA-WebFace) to further demonstrate our observations: 1) the synthetic dataset usually lacks of intra-class variations which significantly degrades the performance (Appendix. A), and 2) the …",
+        "eprint": "https://openaccess.thecvf.com/content/ICCV2021/supplemental/Qiu_SynFace_Face_Recognition_ICCV_2021_supplemental.pdf"
     },
     {
         "title": "ИСПОЛЬЗОВАНИЕ АУГМЕНТАЦИИ ИЗОБРАЖЕНИЙ СОВМЕСТНО С РЕАЛИЗАЦИЕЙ ДВАЖДЫ СТОХАСТИЧЕСКОЙ МОДЕЛИ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА …",
