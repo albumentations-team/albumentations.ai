@@ -33,5 +33,40 @@
   "url": "https://ultralytics.com/",
   "name": "Ultralytics",
   "img_filename": "ultralytics.png"
+  },
+  {
+  "url": "https://borzodelivery.com/",
+  "name": "borzo",
+  "img_filename": "borzo.png"
+  },
+  {
+  "url": "https://vitechlab.com/",
+  "name": "VITECH Lab",
+  "img_filename": "vitech.png"
+  },
+  {
+  "url": "https://www.pinatafarm.com/",
+  "name": "Piñata Farms",
+  "img_filename": "pinata_farm.png"
+  },
+  {
+  "url": "https://www.cft.ru/",
+  "name": "ЦФТ",
+  "img_filename": "cft.jpeg"
+  },
+  {
+  "url": "https://sharpershape.com/",
+  "name": "Sharper Shape",
+  "img_filename": "sharper_shape.png"
+  },
+  {
+  "url": "https://incode.com/",
+  "name": "incode",
+  "img_filename": "incode.png"
+  },
+  {
+  "url": "https://anadea.info/",
+  "name": "Anadea",
+  "img_filename": "anadea.png"
   }
 ]
