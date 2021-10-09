@@ -8,12 +8,12 @@
             <h1 class="font-weight-medium text-center">Industry</h1>
         </div>
     </div>
-    <div class="row justify-content-lg-between mb-7">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <div class="row">
+    <div class="row  justify-content-start mb-7">
+        <div class="row justify-content-start">
+            <div class="col-12">
+                <div class="row justify-content-start">
                     {% for company in img_industry %}
-                    <div class="col-4 col-14-pct ml-auto">
+                    <div class="col-md-2 col-sm-4 p-5 align-self-center">
                         <a href="{{ company.url }}" target="_blank"><img
                                 src="./assets/img/industry/{{ company.img_filename }}"
                                 alt="{{ company.name }}" title="{{ company.name }}" class="img-fluid"></a>

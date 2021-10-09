@@ -61,7 +61,7 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
         use_reloader=use_reloader,
         env_globals={"base_url": base_url, "mkdocs_port": mkdocs_port},
         contexts=[
-            ("index.html", {"stars_count": stars_count}),
+            ("index.html", {"stars_count": stars_count, "img_industry": img_industry}),
             (
                 "whos_using.html",
                 {

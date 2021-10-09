@@ -63,7 +63,60 @@
         </div>
     </div>
 </div>
-<div id="main-features-block">
+
+    <div>
+        <div class="container space-top-1 space-top-sm-2">
+        <div class="w-md-100 w-lg-75 text-center mx-md-auto mb-4">
+            <h2 class="font-weight-medium">Industry leaders use Albumentations</h2>
+        </div>
+
+    </div>
+
+
+    <div class="container space-1 space-lg-1">
+
+        <div class="row justify-content-center">
+            <div class="col-12 main-section-div">
+
+<div class="js-slick-carousel u-slick u-slick--gutters-3"
+     data-autoplay="true"
+     data-infinite="true"
+     data-slides-show="5"
+     data-pause-hover="true"
+     data-arrows-classes="u-slick__arrow u-slick__arrow--flat u-slick__arrow-centered--y rounded-circle"
+     data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left ml-lg-2 ml-xl-4 left-arrow-pos"
+     data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right mr-lg-2 mr-xl-4 right-arrow-pos"
+
+>
+    {% for company in img_industry %}
+
+      <div class="js-slide">
+      <div class="row align-items-center" style="height: 200px">
+          <div class="col-12 align-self-center pl-4 pr-4">
+              <a href="{{ company.url }}" target="_blank"> <img class="img-fluid" src="./assets/img/industry/{{ company.img_filename }}"></a>
+
+
+          </div>
+
+      </div>
+  <div class="row align-items-center text-center">
+                  <div class="col-12 align-self-center mt-4 pl-4 pr-4 d-none d-md-block">
+                                <a href="{{ company.url }}" target="_blank">{{ company.name }}</a>
+
+                  </div>
+        </div>
+  </div>
+    {% endfor %}
+
+
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main-features-block"  class="bg-light">
     <div class="container space-top-1 space-top-sm-2">
         <div class="row align-items-lg-center">
             <div class="col-12 col-sm-6 mb-4 mb-sm-0">
@@ -74,7 +127,7 @@
                         estimation.</p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6"><img class="img-fluid" src="./assets/img/custom/tasks.jpg"></div>
+            <div class="col-12 col-sm-6"><img class="img-fluid" src="./assets/img/custom/tasks.png"></div>
         </div>
     </div>
     <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">
@@ -96,7 +149,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 order-lg-1">
-                <img src="./assets/img/custom/domains.jpg" class="img-fluid" alt="">
+                <img src="./assets/img/custom/domains.png" class="img-fluid" alt="">
             </div>
         </div>
     </div>
@@ -143,7 +196,7 @@
     </div>
     <div class="container">
         <div class="row align-items-lg-center">
-            <div class="col-lg-9 order-lg-2 mb-7 mt-2 mb-lg-0">
+            <div class="col-lg-10 order-lg-2 mb-7 mt-2 mb-lg-0">
                 <div class="pl-lg-4">
                     <h2 class="h3 font-weight-semi-bold"> It is free and open source
                     </h2>
@@ -154,7 +207,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3 order-lg-1">
+            <div class="col-lg-2 order-lg-1">
                 <img src="./assets/img/custom/github_large.png" class="img-fluid" alt="">
             </div>
         </div>
@@ -183,7 +236,7 @@
         </div>
     </div>
 </div>
-<div class="bg-light">
+<div>
     <div class="container space-0 space-sm-1">
         <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-4 mt-4 mt-sm-2">
             <h2 class="font-weight-medium">Getting started</h2>
@@ -206,7 +259,7 @@
     </div>
 </div>
 
-<div>
+<div class="bg-light">
     <div class="container space-0 space-sm-1">
         <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-4 mt-4 mt-sm-2">
             <h2 class="font-weight-medium">Citing</h2>
