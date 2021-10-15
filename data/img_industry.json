@@ -68,5 +68,14 @@
   "url": "https://anadea.info/",
   "name": "Anadea",
   "img_filename": "anadea.png"
+  },
+  {
+  "url": "https://openface.me/en/",
+  "name": "Openface",
+  "img_filename": "openface.png"
+  },  {
+  "url": "https://www.idrnd.ai/",
+  "name": "ID R&D",
+  "img_filename": "idrnd.png"
   }
 ]
