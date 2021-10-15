@@ -462,7 +462,7 @@
     },
     {
         "title": "Deep learning for the Earth Sciences: A comprehensive approach to remote sensing, climate science and geosciences",
-        "url": "https://books.google.com/books?hl=en&lr=&id=e2c4EAAAQBAJ&oi=fnd&pg=PR16&ots=gGjz67_QEh&sig=s6FfXgda4grSFAP_ATtSi3Ebh7o",
+        "url": "https://books.google.com/books?hl=en&lr=&id=e2c4EAAAQBAJ&oi=fnd&pg=PR16&ots=gGjA15YQEi&sig=PKNRTXTnx2Obd9Xd3C7dYYnM9LI",
         "author_links": {
             "G Camps-Valls": "https://scholar.google.com/citations?user=6mgnauMAAAAJ&hl=en&oi=sra",
             "D Tuia": "https://scholar.google.com/citations?user=p3iJiLIAAAAJ&hl=en&oi=sra",
@@ -1273,7 +1273,7 @@
     },
     {
         "title": "Semi-automatic Manga Colorization Using Conditional Adversarial Networks.",
-        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-I_R-OEQaY&sig=8NvJiSt1n6pf-vzPpc07fpP7InY",
+        "url": "https://books.google.com/books?hl=en&lr=&id=wj8oEAAAQBAJ&oi=fnd&pg=PA230&ots=-I_SWMCQa5&sig=YVVrNEg39XghHASstkyaLvHxRGY",
         "author_links": {
             "I Makarov": "https://scholar.google.com/citations?user=cFpDMzIAAAAJ&hl=en&oi=sra"
         },
@@ -1482,7 +1482,7 @@
             "BJ Nestor"
         ],
         "abstract": "High-throughput phenotyping (HTP) platforms are capable of monitoring the phenotypic variation of plants through multiple types of sensors, such as red green and blue (RGB) cameras, hyperspectral sensors, and computed tomography, which can be associated with …",
-        "eprint": "https://academic.oup.com/plphys/article-pdf/187/2/699/40507999/kiab301.pdf"
+        "eprint": "https://academic.oup.com/plphys/article-pdf/187/2/699/40517729/kiab301.pdf"
     },
     {
         "title": "Vehicle-Rear: A New Dataset to Explore Feature Fusion for Vehicle Identification Using Convolutional Neural Networks",
@@ -2176,7 +2176,11 @@
     {
         "title": "Exploiting Sample Correlation for Crowd Counting With Multi-Expert Network",
         "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Exploiting_Sample_Correlation_for_Crowd_Counting_With_Multi-Expert_Network_ICCV_2021_paper.html",
-        "author_links": {},
+        "author_links": {
+            "X Liu": "https://scholar.google.com/citations?user=oX3fB18AAAAJ&hl=en&oi=sra",
+            "G Li": "https://scholar.google.com/citations?user=AiuGlVQAAAAJ&hl=en&oi=sra",
+            "W Zhang": "https://scholar.google.com/citations?user=4bm5wYUAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "X Liu",
             "G Li",
@@ -2186,6 +2190,20 @@
         ],
         "abstract": "Crowd counting is a difficult task because of the diversity of scenes. Most of the existing crowd counting methods adopt complex structures with massive backbones to enhance the generalization ability. Unfortunately, the performance of existing methods on large-scale …",
         "eprint": "https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Exploiting_Sample_Correlation_for_Crowd_Counting_With_Multi-Expert_Network_ICCV_2021_paper.pdf"
+    },
+    {
+        "title": "Smartphone Glass Inspection System.",
+        "url": "https://www.scitepress.org/Papers/2021/102233/102233.pdf",
+        "author_links": {},
+        "author": [
+            "S Turko",
+            "L Burmak",
+            "I Malyshev",
+            "S Shtykov",
+            "M Popov"
+        ],
+        "abstract": "In this paper we address the problem of detection and discrimination of defects on smartphone cover glass. Specifically, scratches and scratch-like defects. An automatic detection system which allows to detect scratches on the whole surface of a smartphone's …",
+        "eprint": "https://www.scitepress.org/Papers/2021/102233/102233.pdf"
     },
     {
         "title": "Machine learning methods for automated classification of tumors with papillary thyroid carcinoma-like nuclei: A quantitative analysis",
@@ -2382,13 +2400,13 @@
     },
     {
         "title": "Geometric Computer Vision Techniques for Scene Reconstruction",
-        "url": "https://ddd.uab.cat/record/243459",
+        "url": "https://www.tdx.cat/handle/10803/671624",
         "author_links": {},
         "author": [
             "E Riba Pi"
         ],
-        "abstract": "Des dels inicis de la Visió per Computador, la reconstrucció d'escenes ha estat un dels temes més estudiats que ha portat a una àmplia varietat de nous descobriments i aplicacions. La manipulació d'objectes, la localització i mapeig, o fins i tot la generació …",
-        "eprint": "https://ddd.uab.cat/pub/tesis/2021/hdl_10803_671624/erp1de1.pdf"
+        "abstract": "From the early stages of Computer Vision, scene reconstruction has been one of the most studied topics leading to a wide variety of new discoveries and applications. Object grasping and manipulation, localization and mapping, or even visual effect generation are different …",
+        "eprint": "https://www.tdx.cat/bitstream/handle/10803/671624/erp1de1.pdf?sequence=1"
     },
     {
         "title": "Self-supervised Audiovisual Representation Learning for Remote Sensing Data",
@@ -2470,7 +2488,9 @@
     {
         "title": "A Semi-Self-Supervised Learning Approach for Wheat Head Detection Using Extremely Small Number of Labeled Samples",
         "url": "https://openaccess.thecvf.com/content/ICCV2021W/CVPPA/html/Najafian_A_Semi-Self-Supervised_Learning_Approach_for_Wheat_Head_Detection_Using_Extremely_ICCVW_2021_paper.html",
-        "author_links": {},
+        "author_links": {
+            "I Stavness": "https://scholar.google.com/citations?user=4ONh3jcAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "K Najafian",
             "A Ghanbari",
@@ -2827,7 +2847,10 @@
     {
         "title": "Q-Net: A Quantitative Susceptibility Mapping-based Deep Neural Network for Differential Diagnosis of Brain Iron Deposition in Hemochromatosis",
         "url": "https://arxiv.org/abs/2110.00203",
-        "author_links": {},
+        "author_links": {
+            "E Rahimian": "https://scholar.google.com/citations?user=aKQvEioAAAAJ&hl=en&oi=sra",
+            "SK Sethi": "https://scholar.google.com/citations?user=_VnTHfoAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "S Zabihi",
             "E Rahimian",
@@ -2893,6 +2916,7 @@
         "title": "Video and Sensor-Based Rope Pulling Detection in Sport Climbing",
         "url": "https://dl.acm.org/doi/abs/10.1145/3422844.3423058",
         "author_links": {
+            "I Ivanova": "https://scholar.google.com/citations?user=Mtqj1xoAAAAJ&hl=en&oi=sra",
             "S Moaveninejad": "https://scholar.google.com/citations?user=F3oM4awAAAAJ&hl=en&oi=sra",
             "A Janes": "https://scholar.google.com/citations?user=8lYoEEQAAAAJ&hl=en&oi=sra"
         },
@@ -2956,15 +2980,13 @@
     },
     {
         "title": "SCSS-Net: Solar corona structures segmentation by deep learning",
-        "url": "https://arxiv.org/abs/2109.10834",
+        "url": "https://academic.oup.com/mnras/advance-article-abstract/doi/10.1093/mnras/stab2536/6382144",
         "author_links": {
-            "Š Mackovjak": "https://scholar.google.com/citations?user=MtI0-FEAAAAJ&hl=en&oi=sra",
-            "V Maslej-Krešňáková": "https://scholar.google.com/citations?user=mrqsWg4AAAAJ&hl=en&oi=sra"
+            "Š Mackovjak": "https://scholar.google.com/citations?user=MtI0-FEAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "Š Mackovjak",
-            "M Harman",
-            "V Maslej-Krešňáková"
+            "M Harman"
         ],
         "abstract": "Structures in the solar corona are the main drivers of space weather processes that might directly or indirectly affect the Earth. Thanks to the most recent space-based solar observatories, with capabilities to acquire high-resolution images continuously, the …",
         "eprint": "https://arxiv.org/pdf/2109.10834"
@@ -3092,7 +3114,9 @@
     {
         "title": "The Effect of Within-Bag Sampling on End-to-End Multiple Instance Learning",
         "url": "https://ieeexplore.ieee.org/abstract/document/9552170/",
-        "author_links": {},
+        "author_links": {
+            "N Sladoje": "https://scholar.google.com/citations?user=n4uDNF8AAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "N Koriakina",
             "N Sladoje"
@@ -3130,7 +3154,11 @@
     {
         "title": "H&E-adversarial network: a convolutional neural network to learn stain-invariant features through Hematoxylin & Eosin regression",
         "url": "https://openaccess.thecvf.com/content/ICCV2021W/CDPath/html/Marini_HE-Adversarial_Network_A_Convolutional_Neural_Network_To_Learn_Stain-Invariant_Features_ICCVW_2021_paper.html",
-        "author_links": {},
+        "author_links": {
+            "N Marini": "https://scholar.google.com/citations?user=kKK8SBYAAAAJ&hl=en&oi=sra",
+            "M Atzori": "https://scholar.google.com/citations?user=Ens32PIAAAAJ&hl=en&oi=sra",
+            "S Otálora": "https://scholar.google.com/citations?user=Iqt6d2YAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "N Marini",
             "M Atzori",
@@ -3452,7 +3480,8 @@
         "title": "Wheat Head Detection using Deep, Semi-Supervised and Ensemble Learning",
         "url": "https://www.tandfonline.com/doi/abs/10.1080/07038992.2021.1906213",
         "author_links": {
-            "F Fourati": "https://scholar.google.com/citations?user=FAmOUOIAAAAJ&hl=en&oi=sra"
+            "F Fourati": "https://scholar.google.com/citations?user=FAmOUOIAAAAJ&hl=en&oi=sra",
+            "WS Mseddi": "https://scholar.google.com/citations?user=oDKCrEsAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "F Fourati",
@@ -3506,9 +3535,26 @@
         "abstract": "The article is devoted to the study of the effectiveness of the convolutional neural networks (CNNs) application for solving the problem of tennis players face recognition. For ease of analysis, two players were selected: Roger Federer (Switzerland) and Rafael Nadal (Spain) …"
     },
     {
+        "title": "Towards Robotic Knee Arthroscopy: Multi-Scale Network for Tissue-Tool Segmentation",
+        "url": "https://arxiv.org/abs/2110.02657",
+        "author_links": {},
+        "author": [
+            "S Ali",
+            "P Crawford",
+            "D Maire",
+            "A Pandey",
+            "K Ajay"
+        ],
+        "abstract": "Tissue awareness has a great demand to improve surgical accuracy in minimally invasive procedures. In arthroscopy, it is one of the challenging tasks due to surgical sites exhibit limited features and textures. Moreover, arthroscopic surgical video shows high intra-class …",
+        "eprint": "https://arxiv.org/pdf/2110.02657"
+    },
+    {
         "title": "Season-invariant GNSS-denied visual localization for UAVs",
         "url": "https://arxiv.org/abs/2110.01967",
-        "author_links": {},
+        "author_links": {
+            "F Verdoja": "https://scholar.google.com/citations?user=3DDM3_kAAAAJ&hl=en&oi=sra",
+            "V Kyrki": "https://scholar.google.com/citations?user=8OBnyXQAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "J Kinnari",
             "F Verdoja",
@@ -3799,7 +3845,11 @@
     {
         "title": "A Dual-Stream Framework for 3D Mask Face Presentation Attack Detection",
         "url": "https://openaccess.thecvf.com/content/ICCV2021W/ChaLearn_FAS/html/Chen_A_Dual-Stream_Framework_for_3D_Mask_Face_Presentation_Attack_Detection_ICCVW_2021_paper.html",
-        "author_links": {},
+        "author_links": {
+            "S Chen": "https://scholar.google.com/citations?user=xMpvoLMAAAAJ&hl=en&oi=sra",
+            "T Yao": "https://scholar.google.com/citations?user=qkpaPuAAAAAJ&hl=en&oi=sra",
+            "K Zhang": "https://scholar.google.com/citations?user=i2ah3-wAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "S Chen",
             "T Yao",
@@ -3914,8 +3964,8 @@
         "eprint": "https://peerj.com/articles/cs-607/"
     },
     {
-        "title": "Measurement of Hybrid Rocket Solid Fuel Regression Rate for a Slab Burner using Deep Learning",
-        "url": "https://arxiv.org/abs/2108.11276",
+        "title": "Measurement of hybrid rocket solid fuel regression rate for a slab burner using deep learning",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0094576521005324",
         "author_links": {
             "G Georgalis": "https://scholar.google.com/citations?user=n7SzfKsAAAAJ&hl=en&oi=sra",
             "SS Aphale": "https://scholar.google.com/citations?user=uEbY2KAAAAAJ&hl=en&oi=sra"
@@ -3931,7 +3981,7 @@
     },
     {
         "title": "Impact of Healthcare 4.0 Technologies for Future Capacity Building to Control Epidemic Diseases",
-        "url": "https://books.google.com/books?hl=en&lr=&id=17AzEAAAQBAJ&oi=fnd&pg=PA115&ots=5qsbP3BUmu&sig=TMLKRIjk0l1r4tlZKcDGs1Bh3Vs",
+        "url": "https://books.google.com/books?hl=en&lr=&id=17AzEAAAQBAJ&oi=fnd&pg=PA115&ots=5qscK1zUou&sig=jB_HzAeNQQLjEmk0u36WitLzKPU",
         "author_links": {
             "HN Saha": "https://scholar.google.com/citations?user=4uIKreAAAAAJ&hl=en&oi=sra"
         },
@@ -4090,7 +4140,7 @@
         "author_links": {
             "FB Safir": "https://scholar.google.com/citations?user=319iM8gAAAAJ&hl=en&oi=sra",
             "AQ Ohi": "https://scholar.google.com/citations?user=PZxOxw8AAAAJ&hl=en&oi=sra",
-            "MF Mridha": "https://scholar.google.com/citations?user=KmgAshMAAAAJ&hl=en&oi=sra"
+            "MF Mridha": "https://scholar.google.com/citations?user=P7265-8AAAAJ&hl=en&oi=sra"
         },
         "author": [
             "FB Safir",
@@ -4113,7 +4163,10 @@
     {
         "title": "Supplementary Materials for “End-to-End Learning of Fused Image and Non-Image Features for Improved Breast Cancer Classification from MRI”",
         "url": "https://openaccess.thecvf.com/content/ICCV2021W/CVAMD/supplemental/Holste_End-to-End_Learning_of_ICCVW_2021_supplemental.pdf",
-        "author_links": {},
+        "author_links": {
+            "G Holste": "https://scholar.google.com/citations?user=EEtLw28AAAAJ&hl=en&oi=sra",
+            "H Rahbar": "https://scholar.google.com/citations?user=qrEtX_oAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "G Holste",
             "SC Partridge",
@@ -4226,7 +4279,11 @@
     {
         "title": "Object-Based Augmentation for Building Semantic Segmentation: Ventura and Santa Rosa Case Study",
         "url": "https://openaccess.thecvf.com/content/ICCV2021W/ILDAV/html/Illarionova_Object-Based_Augmentation_for_Building_Semantic_Segmentation_Ventura_and_Santa_Rosa_ICCVW_2021_paper.html",
-        "author_links": {},
+        "author_links": {
+            "S Illarionova": "https://scholar.google.com/citations?user=kvID_SIAAAAJ&hl=en&oi=sra",
+            "S Nesteruk": "https://scholar.google.com/citations?user=PU400M8AAAAJ&hl=en&oi=sra",
+            "D Shadrin": "https://scholar.google.com/citations?user=ozGmPFoAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "S Illarionova",
             "S Nesteruk",
@@ -4238,7 +4295,9 @@
     {
         "title": "Balanced Masked and Standard Face Recognition",
         "url": "https://openaccess.thecvf.com/content/ICCV2021W/MFR/html/Qi_Balanced_Masked_and_Standard_Face_Recognition_ICCVW_2021_paper.html",
-        "author_links": {},
+        "author_links": {
+            "W Tan": "https://scholar.google.com/citations?user=nUoQY1AAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "D Qi",
             "K Hu",
@@ -4421,7 +4480,7 @@
         "title": "Classification of Chest X-ray Images Using Machine Learning Techniques",
         "url": "https://www.preprints.org/manuscript/202103.0408",
         "author_links": {
-            "A Ahmed": "https://scholar.google.com/citations?user=iZba65EAAAAJ&hl=en&oi=sra"
+            "A Ahmed": "https://scholar.google.com/citations?user=2USkF7AAAAAJ&hl=en&oi=sra"
         },
         "author": [
             "A Ahmed",
@@ -4566,6 +4625,21 @@
         ],
         "abstract": "In this paper, we systematically study generative adversarial networks (GANs) for single image motion deblurring. Firstly, we compare adversarial loss functions, discriminators, and other training configurations to find optimal setup. Secondly, we train the blurred image …",
         "eprint": "https://s3.eu-central-1.amazonaws.com/ucu.edu.ua/wp-content/uploads/sites/8/2020/11/Vey-Roman_188561_assignsubmission_file_Bachelor_Thesis_Roman_Vei.pdf"
+    },
+    {
+        "title": "Smartphone-Based Artificial Intelligence–Assisted Prediction for Eyelid Measurements: Algorithm Development and Observational Validation Study",
+        "url": "https://mhealth.jmir.org/2021/10/e32444",
+        "author_links": {
+            "HC Chen": "https://scholar.google.com/citations?user=m0meAMUAAAAJ&hl=en&oi=sra"
+        },
+        "author": [
+            "HC Chen",
+            "SS Tzeng",
+            "YC Hsiao",
+            "RF Chen"
+        ],
+        "abstract": "Background Margin reflex distance 1 (MRD1), margin reflex distance 2 (MRD2), and levator muscle function (LF) are crucial metrics for ptosis evaluation and management. However, manual measurements of MRD1, MRD2, and LF are time-consuming, subjective, and prone …",
+        "eprint": "https://mhealth.jmir.org/2021/10/e32444"
     },
     {
         "title": "What's wrong with this video? Comparing Explainers for Deepfake Detection",
@@ -5311,7 +5385,13 @@
     {
         "title": "SynFace: Face Recognition with Synthetic Data (Supplementary Materials)",
         "url": "https://openaccess.thecvf.com/content/ICCV2021/supplemental/Qiu_SynFace_Face_Recognition_ICCV_2021_supplemental.pdf",
-        "author_links": {},
+        "author_links": {
+            "H Qiu": "https://scholar.google.com/citations?user=O5gH5vkAAAAJ&hl=en&oi=sra",
+            "B Yu": "https://scholar.google.com/citations?user=fjzIdMQAAAAJ&hl=en&oi=sra",
+            "D Gong": "https://scholar.google.com/citations?user=FP4FEvwAAAAJ&hl=en&oi=sra",
+            "W Liu": "https://scholar.google.com/citations?user=AjxoEpIAAAAJ&hl=en&oi=sra",
+            "D Tao": "https://scholar.google.com/citations?user=RwlJNLcAAAAJ&hl=en&oi=sra"
+        },
         "author": [
             "H Qiu",
             "B Yu",
