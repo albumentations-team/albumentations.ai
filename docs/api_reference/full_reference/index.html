@@ -1372,13 +1372,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#albumentations.core.six" class="md-nav__link">
-    six
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#albumentations.core.transforms_interface" class="md-nav__link">
     transforms_interface
   </a>
@@ -4108,7 +4101,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f8f51427d30&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fbdbc540c10&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4174,7 +4167,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f8f51427d30&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fbdbc540c10&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4241,7 +4234,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f8f51427d30&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fbdbc540c10&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -10274,7 +10267,7 @@ albumentations.core.composition.BboxParams</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L511" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L518" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.BboxParams" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10347,7 +10340,7 @@ albumentations.core.composition.Compose</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L196" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L185" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Compose" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10406,7 +10399,7 @@ albumentations.core.composition.KeypointParams</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L551" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L565" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.KeypointParams" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10471,7 +10464,7 @@ albumentations.core.composition.OneOf</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L300" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L289" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.OneOf" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10516,7 +10509,7 @@ albumentations.core.composition.OneOrOther</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L361" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L360" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.OneOrOther" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10538,7 +10531,7 @@ albumentations.core.composition.PerChannel</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L387" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L388" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10562,7 +10555,7 @@ albumentations.core.composition.PerChannel</strong></code>
 </tr>
 <tr>
 <td><code>channels</code></td>
-<td><code>list</code></td>
+<td><code>sequence</code></td>
 <td><p>channels to apply the transform to. Pass None to apply to all.
              Default: None (apply to all)</p></td>
 </tr>
@@ -10588,7 +10581,7 @@ albumentations.core.composition.Sequential</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L604" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L618" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10630,7 +10623,7 @@ albumentations.core.composition.SomeOf</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L332" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L321" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.SomeOf" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10689,7 +10682,7 @@ Transforms probabilities will be normalized to one 1, so in this case transforms
 albumentations.core.serialization.SerializableMeta</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L44" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L45" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.serialization.SerializableMeta" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10718,7 +10711,7 @@ so they can be found later while deserializing transformation pipeline using cla
 <code class="highlight language-python">def
 albumentations.core.serialization.from_dict    (transform_dict, nonserializable=None, lambda_transforms='deprecated')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L102" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L103" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -10758,7 +10751,7 @@ a serialized pipeline.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.load    (filepath, data_format='json', nonserializable=None, lambda_transforms='deprecated')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L154" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L155" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Load a serialized pipeline from a json or yaml file and construct a transform pipeline.</p>
@@ -10804,7 +10797,7 @@ a serialized pipeline.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.register_additional_transforms    ()
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L179" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L180" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Register transforms that are not imported directly into the <code>albumentations</code> module.</p>
@@ -10815,7 +10808,7 @@ albumentations.core.serialization.register_additional_transforms    ()
 <code class="highlight language-python">def
 albumentations.core.serialization.save    (transform, filepath, data_format='json', on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L134" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L135" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Take a transform pipeline, serialize it and save a serialized version to a file
@@ -10861,7 +10854,7 @@ ignored and no transform arguments will be saved.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.to_dict    (transform, on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L53" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L54" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Take a transform pipeline and convert it to a serializable representation that uses only standard
@@ -10892,26 +10885,6 @@ but no transform parameters will be serialized.</p></td>
 </div>
 </div>
 <div class="doc doc-object doc-module">
-<h3 class="doc doc-heading" id="albumentations.core.six">
-<code>albumentations.core.six</code>
-<a class="headerlink" href="#albumentations.core.six" title="Permanent link">¶</a></h3>
-<div class="doc doc-contents">
-<div class="doc doc-children">
-<div class="doc doc-object doc-function">
-<h4 class="doc doc-heading" data-toc-label="add_metaclass()" id="albumentations.core.six.add_metaclass">
-<code class="highlight language-python">def
-albumentations.core.six.add_metaclass    (metaclass)
-   </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/six.py#L34" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.six.add_metaclass" title="Permanent link">¶</a>
-</h4>
-<div class="doc doc-contents">
-<p>Class decorator for creating a class with a metaclass.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-module">
 <h3 class="doc doc-heading" id="albumentations.core.transforms_interface">
 <code>albumentations.core.transforms_interface</code>
 <a class="headerlink" href="#albumentations.core.transforms_interface" title="Permanent link">¶</a></h3>
@@ -10928,7 +10901,7 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L71" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L69" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10972,7 +10945,7 @@ by the way you must have at least one object with key 'image'</p>
 albumentations.core.transforms_interface.DualTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L228" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L226" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10989,7 +10962,7 @@ albumentations.core.transforms_interface.DualTransform</strong></code>
 albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L250" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L248" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11006,7 +10979,7 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 albumentations.core.transforms_interface.NoOp</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L264" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L262" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11022,7 +10995,7 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 <code class="highlight language-python">def
 albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L21" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L20" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Convert input argument to min-max tuple</p>
