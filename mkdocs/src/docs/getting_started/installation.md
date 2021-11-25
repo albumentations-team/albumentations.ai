@@ -15,14 +15,12 @@ pip install -U git+https://github.com/albumentations-team/albumentations
 
 ### Note on OpenCV dependencies
 
-By default, pip downloads a wheel distribution of Albumentations. This distribution has `opencv-python-headless` as its dependency. However, Albumentations also depends on [imgaug](https://github.com/aleju/imgaug), which has `opencv-python` (non-headless-version) as its dependency. Because of this dependency clash, you will get both `opencv-python-headless` and `opencv-python`  installed in your Python environment.
+By default, pip downloads a wheel distribution of Albumentations. This distribution has `opencv-python-headless` as its dependency.
 
-In future versions, we plan to get rid of imgaug as a dependency, and Albumentations will require only `opencv-python-headless` as its dependency.
-
-However, if you need a workaround for the current version, or you already have some OpenCV distribution (such as `opencv-python-headless`, `opencv-python`, `opencv-contrib-python` or `opencv-contrib-python-headless`) installed in your Python environment, you can force Albumentations to use it by providing the `--no-binary imgaug,albumentations` argument to pip, e.g.
+If you already have some OpenCV distribution (such as `opencv-python-headless`, `opencv-python`, `opencv-contrib-python` or `opencv-contrib-python-headless`) installed in your Python environment, you can force Albumentations to use it by providing the `--no-binary qudida,albumentations` argument to pip, e.g.
 
 ```Bash
-pip install -U albumentations --no-binary imgaug,albumentations
+pip install -U albumentations --no-binary qudida,albumentations
 ```
 
 pip will use the following logic to determine the required OpenCV distribution:
