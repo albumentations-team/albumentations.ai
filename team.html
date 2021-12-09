@@ -10,6 +10,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="./assets/img/custom/albumentations_logo.png">
     <link rel="stylesheet" href="./assets/vendor/slick/slick.css">
+    <link rel="stylesheet" href="./assets/vendor/custombox/custombox.min.css">
+    <link rel="stylesheet" href="./assets/vendor/animate.min.css">
     <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/theme.css?1">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
@@ -284,6 +286,15 @@
         
         <div class="d-flex flex-wrap">
             <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/zakajd" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/15848838?v=4"
+                        alt="zakajd" title="zakajd"
+                        style="width: 70px;"/></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
                 <a href="https://github.com/StrikerRUS" target="_blank"><img
                         src="https://avatars.githubusercontent.com/u/25141164?v=4"
                         alt="StrikerRUS" title="StrikerRUS"
@@ -359,15 +370,6 @@
                 <a href="https://github.com/erikgaas" target="_blank"><img
                         src="https://avatars.githubusercontent.com/u/2773725?v=4"
                         alt="erikgaas" title="erikgaas"
-                        style="width: 70px;"/></a>
-            </div>
-        </div>
-        
-        <div class="d-flex flex-wrap">
-            <div class="m-1" style="border: 1px solid #ccc">
-                <a href="https://github.com/zakajd" target="_blank"><img
-                        src="https://avatars.githubusercontent.com/u/15848838?v=4"
-                        alt="zakajd" title="zakajd"
                         style="width: 70px;"/></a>
             </div>
         </div>
@@ -1140,9 +1142,13 @@
 <script src="./assets/vendor/popper.js/dist/umd/popper.min.js"></script>
 <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
 <script src="./assets/vendor/slick/slick.min.js"></script>
+<script src="./assets/vendor/custombox/custombox.min.js"></script>
+<script src="./assets/vendor/custombox/custombox.legacy.min.js"></script>
+
 <script src="./assets/js/hs.core.js"></script>
 <script src="./assets/js/components/hs.unfold.js"></script>
 <script src="./assets/js/hs.slick-carousel.js"></script>
+<script src="./assets/js/hs.modal-window.js"></script>
 
 <script>
     $(document).on('ready', function () {
@@ -1162,6 +1168,9 @@
             $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
 
         });
+      $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-modal-window', {
+        autonomous: true
+      });
 
     });
     $(window).on('load', function () {
