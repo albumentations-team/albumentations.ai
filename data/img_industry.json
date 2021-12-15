@@ -78,9 +78,15 @@
   "url": "https://openface.me/en/",
   "name": "Openface",
   "img_filename": "openface.png"
-  },  {
+  },
+  {
   "url": "https://www.idrnd.ai/",
   "name": "ID R&D",
   "img_filename": "idrnd.png"
+  },
+  {
+  "url": "https://www.newyorker.de/ru/",
+  "name": "NewYorker",
+  "img_filename": "new_yorker.jpeg"
   }
 ]
