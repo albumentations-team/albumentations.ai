@@ -88,5 +88,10 @@
   "url": "https://www.newyorker.de/ru/",
   "name": "NewYorker",
   "img_filename": "new_yorker.jpeg"
+  },
+  {
+  "url": "https://arisaftech.co.jp/",
+  "name": "AriSaf Tech",
+  "img_filename": "arisaftech.png"
   }
 ]
