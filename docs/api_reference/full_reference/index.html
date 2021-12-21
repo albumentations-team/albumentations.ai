@@ -3868,8 +3868,8 @@ Default (0.3, 0.3).</p></td>
 <p>Image types:
     uint8, float32</p>
 <p><strong>Examples:</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">Compose</span><span class="p">(</span><span class="n">RandomCropNearBBox</span><span class="p">(</span><span class="n">max_part_shift</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">cropping_box_key</span><span class="o">=</span><span class="s1">'test_box'</span><span class="p">),</span>
-<span class="o">&gt;&gt;&gt;</span>               <span class="n">bbox_params</span><span class="o">=</span><span class="n">BboxParams</span><span class="p">(</span><span class="s2">"pascal_voc"</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">Compose</span><span class="p">([</span><span class="n">RandomCropNearBBox</span><span class="p">(</span><span class="n">max_part_shift</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">cropping_box_key</span><span class="o">=</span><span class="s1">'test_box'</span><span class="p">)],</span>
+<span class="o">&gt;&gt;&gt;</span>              <span class="n">bbox_params</span><span class="o">=</span><span class="n">BboxParams</span><span class="p">(</span><span class="s2">"pascal_voc"</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bboxes</span><span class="o">=</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">test_box</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
 </code></pre></div>
 <div class="doc doc-children">
@@ -4097,7 +4097,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f32aa7641f0&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fc257a4f1f0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4163,7 +4163,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f32aa7641f0&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fc257a4f1f0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4230,7 +4230,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f32aa7641f0&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fc257a4f1f0&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
