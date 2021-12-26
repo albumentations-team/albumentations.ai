@@ -188,6 +188,30 @@
      <lastmod>2021-12-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/</loc>
+     <lastmod>2021-12-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/channel_dropout/</loc>
+     <lastmod>2021-12-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/coarse_dropout/</loc>
+     <lastmod>2021-12-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/cutout/</loc>
+     <lastmod>2021-12-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/grid_dropout/</loc>
+     <lastmod>2021-12-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/</loc>
+     <lastmod>2021-12-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</loc>
      <lastmod>2021-12-26</lastmod>
      <changefreq>daily</changefreq>

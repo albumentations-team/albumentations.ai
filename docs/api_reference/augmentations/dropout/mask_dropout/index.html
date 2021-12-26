@@ -11,21 +11,21 @@
       
       
       
-        <link rel="canonical" href="https://albumentations.ai/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation/">
+        <link rel="canonical" href="https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/">
       
-      <link rel="icon" href="../../images/logo.png">
+      <link rel="icon" href="../../../../images/logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>Why you need a dedicated library - Albumentations Documentation</title>
+        <title>MaskDropout augmentation (augmentations.dropout.mask_dropout) - Albumentations Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.875de78c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -44,11 +44,11 @@
     
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../../css/extra.css">
     
     
       
@@ -64,13 +64,13 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Albumentations Documentation - Why you need a dedicated library">
+  <meta property="og:title" content="Albumentations Documentation - MaskDropout augmentation (augmentations.dropout.mask_dropout)">
   <meta property="og:description" content="Albumentations: fast and flexible image augmentations">
-  <meta property="og:url" content="https://albumentations.ai/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation/">
+  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/">
   <meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Albumentations Documentation - Why you need a dedicated library">
+  <meta name="twitter:title" content="Albumentations Documentation - MaskDropout augmentation (augmentations.dropout.mask_dropout)">
   <meta name="twitter:description" content="Albumentations: fast and flexible image augmentations">
   <meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
 
@@ -85,7 +85,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why-you-need-a-dedicated-library-for-image-augmentation" class="md-skip">
+        <a href="#maskdropout-augmentation-augmentationsdropoutmask_dropout" class="md-skip">
           Skip to content
         </a>
       
@@ -105,9 +105,9 @@
       <header class="md-header" data-md-component="header">
 
     <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Albumentations Documentation" class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
+    <a href="../../../.." title="Albumentations Documentation" class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
       
-  <img src="../../images/logo.png" alt="logo">
+  <img src="../../../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -184,9 +184,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Albumentations Documentation" class="md-nav__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
+    <a href="../../../.." title="Albumentations Documentation" class="md-nav__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
       
-  <img src="../../images/logo.png" alt="logo">
+  <img src="../../../../images/logo.png" alt="logo">
 
     </a>
     Albumentations Documentation
@@ -218,7 +218,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Documentation
       </a>
     </li>
@@ -233,16 +233,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Introduction
@@ -263,7 +261,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../image_augmentation/" class="md-nav__link">
+      <a href="../../../../introduction/image_augmentation/" class="md-nav__link">
         What is image augmentation
       </a>
     </li>
@@ -275,73 +273,17 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
+
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Why you need a dedicated library
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+
+    <li class="md-nav__item">
+      <a href="../../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" class="md-nav__link">
         Why you need a dedicated library
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks" class="md-nav__link">
-    The need to apply the same transform to an image and for labels for segmentation, object detection, and keypoint detection tasks.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-probabilities" class="md-nav__link">
-    Working with probabilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#declarative-definition-of-the-augmentation-pipeline-and-unified-interface" class="md-nav__link">
-    Declarative definition of the augmentation pipeline and unified interface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rigorous-testing" class="md-nav__link">
-    Rigorous testing
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
+              
+
   
 
           
@@ -353,7 +295,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../why_albumentations/" class="md-nav__link">
+      <a href="../../../../introduction/why_albumentations/" class="md-nav__link">
         Why Albumentations
       </a>
     </li>
@@ -402,7 +344,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/installation/" class="md-nav__link">
+      <a href="../../../../getting_started/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -419,7 +361,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/image_augmentation/" class="md-nav__link">
+      <a href="../../../../getting_started/image_augmentation/" class="md-nav__link">
         Image augmentation for classification
       </a>
     </li>
@@ -436,7 +378,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/mask_augmentation/" class="md-nav__link">
+      <a href="../../../../getting_started/mask_augmentation/" class="md-nav__link">
         Mask augmentation for segmentation
       </a>
     </li>
@@ -453,7 +395,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/bounding_boxes_augmentation/" class="md-nav__link">
+      <a href="../../../../getting_started/bounding_boxes_augmentation/" class="md-nav__link">
         Bounding boxes augmentation for object detection
       </a>
     </li>
@@ -470,7 +412,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/keypoints_augmentation/" class="md-nav__link">
+      <a href="../../../../getting_started/keypoints_augmentation/" class="md-nav__link">
         Keypoints augmentation
       </a>
     </li>
@@ -487,7 +429,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/simultaneous_augmentation/" class="md-nav__link">
+      <a href="../../../../getting_started/simultaneous_augmentation/" class="md-nav__link">
         Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
       </a>
     </li>
@@ -504,7 +446,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/transforms_and_targets/" class="md-nav__link">
+      <a href="../../../../getting_started/transforms_and_targets/" class="md-nav__link">
         A list of transforms and their supported targets
       </a>
     </li>
@@ -521,7 +463,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../getting_started/setting_probabilities/" class="md-nav__link">
+      <a href="../../../../getting_started/setting_probabilities/" class="md-nav__link">
         Setting probabilities for transforms
       </a>
     </li>
@@ -570,7 +512,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../examples/" class="md-nav__link">
+      <a href="../../../../examples/" class="md-nav__link">
         List of examples
       </a>
     </li>
@@ -596,7 +538,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../../../../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -639,7 +581,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/" class="md-nav__link">
+      <a href="../../../../autoalbument/" class="md-nav__link">
         AutoAlbument Overview
       </a>
     </li>
@@ -656,7 +598,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/benchmarks/" class="md-nav__link">
+      <a href="../../../../autoalbument/benchmarks/" class="md-nav__link">
         Benchmarks and a comparison with baseline augmentation strategies
       </a>
     </li>
@@ -673,7 +615,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/installation/" class="md-nav__link">
+      <a href="../../../../autoalbument/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -690,7 +632,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/how_to_use/" class="md-nav__link">
+      <a href="../../../../autoalbument/how_to_use/" class="md-nav__link">
         How to use AutoAlbument
       </a>
     </li>
@@ -707,7 +649,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/docker/" class="md-nav__link">
+      <a href="../../../../autoalbument/docker/" class="md-nav__link">
         How to use an AutoAlbument Docker image
       </a>
     </li>
@@ -724,7 +666,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/custom_model/" class="md-nav__link">
+      <a href="../../../../autoalbument/custom_model/" class="md-nav__link">
         How to use a custom classification or semantic segmentation model
       </a>
     </li>
@@ -741,7 +683,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/metrics/" class="md-nav__link">
+      <a href="../../../../autoalbument/metrics/" class="md-nav__link">
         Metrics and their meaning
       </a>
     </li>
@@ -758,7 +700,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/tuning_parameters/" class="md-nav__link">
+      <a href="../../../../autoalbument/tuning_parameters/" class="md-nav__link">
         Tuning the search parameters
       </a>
     </li>
@@ -796,7 +738,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/examples/list/" class="md-nav__link">
+      <a href="../../../../autoalbument/examples/list/" class="md-nav__link">
         List of examples
       </a>
     </li>
@@ -813,7 +755,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/examples/cifar10/" class="md-nav__link">
+      <a href="../../../../autoalbument/examples/cifar10/" class="md-nav__link">
         Image classification on the CIFAR10 dataset
       </a>
     </li>
@@ -830,7 +772,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/examples/svhn/" class="md-nav__link">
+      <a href="../../../../autoalbument/examples/svhn/" class="md-nav__link">
         Image classification on the SVHN dataset
       </a>
     </li>
@@ -847,7 +789,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/examples/imagenet/" class="md-nav__link">
+      <a href="../../../../autoalbument/examples/imagenet/" class="md-nav__link">
         Image classification on the ImageNet dataset
       </a>
     </li>
@@ -864,7 +806,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/examples/pascal_voc/" class="md-nav__link">
+      <a href="../../../../autoalbument/examples/pascal_voc/" class="md-nav__link">
         Semantic segmentation on the Pascal VOC dataset
       </a>
     </li>
@@ -881,7 +823,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/examples/cityscapes/" class="md-nav__link">
+      <a href="../../../../autoalbument/examples/cityscapes/" class="md-nav__link">
         Semantic segmentation on the Pascal VOC dataset
       </a>
     </li>
@@ -904,7 +846,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/search_algorithms/" class="md-nav__link">
+      <a href="../../../../autoalbument/search_algorithms/" class="md-nav__link">
         Search algorithms
       </a>
     </li>
@@ -921,7 +863,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../autoalbument/faq/" class="md-nav__link">
+      <a href="../../../../autoalbument/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -970,7 +912,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../experimental/overview/" class="md-nav__link">
+      <a href="../../../../experimental/overview/" class="md-nav__link">
         Albumentations Experimental Overview
       </a>
     </li>
@@ -987,7 +929,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../experimental/installation/" class="md-nav__link">
+      <a href="../../../../experimental/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -1046,7 +988,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../experimental/api_reference/augmentations/transforms/" class="md-nav__link">
+      <a href="../../../../experimental/api_reference/augmentations/transforms/" class="md-nav__link">
         Albumentations Experimental Transforms (augmentations.transforms)
       </a>
     </li>
@@ -1107,7 +1049,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../external_resources/blog_posts_podcasts_talks/" class="md-nav__link">
+      <a href="../../../../external_resources/blog_posts_podcasts_talks/" class="md-nav__link">
         Blog posts, podcasts, talks, and videos about Albumentations
       </a>
     </li>
@@ -1124,7 +1066,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../external_resources/books/" class="md-nav__link">
+      <a href="../../../../external_resources/books/" class="md-nav__link">
         Books that mention Albumentations
       </a>
     </li>
@@ -1150,7 +1092,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../frameworks_and_libraries/" class="md-nav__link">
+      <a href="../../../../frameworks_and_libraries/" class="md-nav__link">
         Frameworks and libraries that use Albumentations
       </a>
     </li>
@@ -1165,14 +1107,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
       
       <label class="md-nav__link" for="__nav_10">
         API Reference
@@ -1193,7 +1137,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/full_reference/" class="md-nav__link">
+      <a href="../../../full_reference/" class="md-nav__link">
         Full API Reference
       </a>
     </li>
@@ -1251,7 +1195,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/core/composition/" class="md-nav__link">
+      <a href="../../../core/composition/" class="md-nav__link">
         Composition API (core.composition)
       </a>
     </li>
@@ -1268,7 +1212,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/core/transforms_interface/" class="md-nav__link">
+      <a href="../../../core/transforms_interface/" class="md-nav__link">
         Transforms Interface (core.transforms_interface)
       </a>
     </li>
@@ -1285,7 +1229,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/core/serialization/" class="md-nav__link">
+      <a href="../../../core/serialization/" class="md-nav__link">
         Serialization API (core.serialization)
       </a>
     </li>
@@ -1303,12 +1247,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" checked>
       
       <label class="md-nav__link" for="__nav_10_4">
         Augmentations
@@ -1339,7 +1285,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/transforms/" class="md-nav__link">
+      <a href="../../transforms/" class="md-nav__link">
         Transforms (augmentations.transforms)
       </a>
     </li>
@@ -1387,7 +1333,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/crops/functional/" class="md-nav__link">
+      <a href="../../crops/functional/" class="md-nav__link">
         Crop functional transforms (augmentations.crops.functional)
       </a>
     </li>
@@ -1404,7 +1350,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/crops/transforms/" class="md-nav__link">
+      <a href="../../crops/transforms/" class="md-nav__link">
         Crop transforms (augmentations.crops.transforms)
       </a>
     </li>
@@ -1422,12 +1368,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_4" type="checkbox" id="__nav_10_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_4" type="checkbox" id="__nav_10_4_4" checked>
       
       <label class="md-nav__link" for="__nav_10_4_4">
         Dropout transforms
@@ -1458,7 +1406,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/dropout/channel_dropout/" class="md-nav__link">
+      <a href="../channel_dropout/" class="md-nav__link">
         ChannelDropout augmentation (augmentations.dropout.channel_dropout)
       </a>
     </li>
@@ -1475,7 +1423,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/dropout/coarse_dropout/" class="md-nav__link">
+      <a href="../coarse_dropout/" class="md-nav__link">
         CoarseDropout augmentation (augmentations.dropout.coarse_dropout)
       </a>
     </li>
@@ -1492,7 +1440,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/dropout/cutout/" class="md-nav__link">
+      <a href="../cutout/" class="md-nav__link">
         Cutout augmentation (augmentations.dropout.cutout)
       </a>
     </li>
@@ -1509,7 +1457,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/dropout/grid_dropout/" class="md-nav__link">
+      <a href="../grid_dropout/" class="md-nav__link">
         GridDropout augmentation (augmentations.dropout.grid_dropout)
       </a>
     </li>
@@ -1521,17 +1469,52 @@
             
   
   
+    
   
-
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
         
-
-    <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/dropout/mask_dropout/" class="md-nav__link">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MaskDropout augmentation (augmentations.dropout.mask_dropout)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         MaskDropout augmentation (augmentations.dropout.mask_dropout)
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#albumentations.augmentations.dropout.mask_dropout" class="md-nav__link">
+    albumentations.augmentations.dropout.mask_dropout
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
-              
-
   
 
           
@@ -1580,7 +1563,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/geometric/functional/" class="md-nav__link">
+      <a href="../../geometric/functional/" class="md-nav__link">
         Geometric functional transforms (augmentations.geometric.functional)
       </a>
     </li>
@@ -1597,7 +1580,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/geometric/resize/" class="md-nav__link">
+      <a href="../../geometric/resize/" class="md-nav__link">
         Resizing transforms (augmentations.geometric.resize)
       </a>
     </li>
@@ -1614,7 +1597,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/geometric/rotate/" class="md-nav__link">
+      <a href="../../geometric/rotate/" class="md-nav__link">
         Rotation transforms (augmentations.geometric.functional)
       </a>
     </li>
@@ -1631,7 +1614,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/geometric/transforms/" class="md-nav__link">
+      <a href="../../geometric/transforms/" class="md-nav__link">
         Geometric transforms (augmentations.geometric.transforms)
       </a>
     </li>
@@ -1654,7 +1637,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/domain_adaptation/" class="md-nav__link">
+      <a href="../../domain_adaptation/" class="md-nav__link">
         Domain adaptation transforms (augmentations.domain_adaptation)
       </a>
     </li>
@@ -1671,7 +1654,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/functional/" class="md-nav__link">
+      <a href="../../functional/" class="md-nav__link">
         Functional transforms (augmentations.functional)
       </a>
     </li>
@@ -1688,7 +1671,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/bbox_utils/" class="md-nav__link">
+      <a href="../../bbox_utils/" class="md-nav__link">
         Helper functions for working with bounding boxes (augmentations.bbox_utils)
       </a>
     </li>
@@ -1705,7 +1688,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/keypoints_utils/" class="md-nav__link">
+      <a href="../../keypoints_utils/" class="md-nav__link">
         Helper functions for working with keypoints (augmentations.keypoints_utils)
       </a>
     </li>
@@ -1759,7 +1742,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/imgaug/transforms/" class="md-nav__link">
+      <a href="../../../imgaug/transforms/" class="md-nav__link">
         Transforms (imgaug.transforms)
       </a>
     </li>
@@ -1813,7 +1796,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/pytorch/transforms/" class="md-nav__link">
+      <a href="../../../pytorch/transforms/" class="md-nav__link">
         Transforms (pytorch.transforms)
       </a>
     </li>
@@ -1845,7 +1828,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../release_notes/" class="md-nav__link">
+      <a href="../../../../release_notes/" class="md-nav__link">
         Release notes
       </a>
     </li>
@@ -1865,7 +1848,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../../../../contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -1894,7 +1877,7 @@
 </style>
 
 
-  <a href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/dropout/mask_dropout.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
   </a>
 
@@ -1905,60 +1888,71 @@
   
 
 
-<h1 id="why-you-need-a-dedicated-library-for-image-augmentation">Why you need a dedicated library for image augmentation<a class="headerlink" href="#why-you-need-a-dedicated-library-for-image-augmentation" title="Permanent link">¶</a></h1>
-<p>At first glance, image augmentations look very simple; you apply basic transformations to an image: mirroring, cropping, changing brightness and contrast, etc.</p>
-<p>There are a lot of libraries that could do such image transformations. Here is an example of how you could use <a href="https://pillow.readthedocs.io/" target="_blank">Pillow</a>, a popular image processing library for Python, to make simple augmentations.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageEnhance</span>
+<h1 id="maskdropout-augmentation-augmentationsdropoutmask_dropout">MaskDropout augmentation (augmentations.dropout.mask_dropout)<a class="headerlink" href="#maskdropout-augmentation-augmentationsdropoutmask_dropout" title="Permanent link">¶</a></h1>
+<div class="doc doc-object doc-module">
+<a id="albumentations.augmentations.dropout.mask_dropout"></a>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="MaskDropout" id="albumentations.augmentations.dropout.mask_dropout.MaskDropout">
+<code>class <strong>
+albumentations.augmentations.dropout.mask_dropout.MaskDropout</strong></code>
+<code>
 
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"parrot.jpg"</span><span class="p">)</span>
 
-<span class="n">mirrored_image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">FLIP_LEFT_RIGHT</span><span class="p">)</span>
+    (max_objects=1, image_fill_value=0, mask_fill_value=0, always_apply=False, p=0.5)
 
-<span class="n">rotated_image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
-<span class="n">brightness_enhancer</span> <span class="o">=</span> <span class="n">ImageEnhance</span><span class="o">.</span><span class="n">Brightness</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="n">brighter_image</span> <span class="o">=</span> <span class="n">brightness_enhancer</span><span class="o">.</span><span class="n">enhance</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-</code></pre></div>
-<p><img alt="Example of image transformations with Pillow" src="../../images/introduction/dedicated_library/pillow_transformations.jpg"/></p>
-<p>However, this approach has many limitations, and it doesn't handle all cases with image augmentation. An image augmentation library such as Albumentations gives you a lot of advantages.</p>
-<p>Here is a list of few pitfalls that augmentation libraries can handle very well.</p>
-<h2 id="the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks">The need to apply the same transform to an image and for labels for segmentation, object detection, and keypoint detection tasks.<a class="headerlink" href="#the-need-to-apply-the-same-transform-to-an-image-and-for-labels-for-segmentation-object-detection-and-keypoint-detection-tasks" title="Permanent link">¶</a></h2>
-<p>For image classification, you need to modify only an input image and keep output labels intact because output labels are invariant to image modifications.</p>
-<p><img alt="Examples of augmented images and their respective labels for the image classification task" src="../../images/introduction/dedicated_library/augmentation_classification.jpg"/></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There are some exceptions to this rule. For example, an image could contain a cat and have an assigned label <code>cat</code>. During image augmentation, if you crop a part of an image that doesn't have a cat on it, then the output label <code>cat</code> becomes wrong and misleading. Usually, you deal with those situations by deciding which augmentations you could apply to a dataset without risking to have problems with incorrect labels.</p>
-<p><img alt="Example of an incorrect crop of an image " src="../../images/introduction/dedicated_library/incorrect_crop.jpg"/></p>
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/mask_dropout.py#L37" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.dropout.mask_dropout.MaskDropout" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
 </div>
-<p>For segmentation, you need to apply some transformations both to an input image and an output mask. You also have to use the same parameters both for the image transformation and the mask transformation.</p>
-<p>Let's look at an example of a semantic segmentation task from Inria Aerial Image Labeling Dataset. The dataset contains aerial photos as well as masks for those photos. Each pixel of the mask is marked either as 1 if the pixel belongs to the class <code>building</code> and 0 otherwise.</p>
-<p>There are two types of image augmentations: pixel-level augmentations and spatial-level augmentations.</p>
-<p>Pixel-level augmentations change the values of pixels of the original image, but they don't change the output mask. Image transformations such as changing brightness or contrast of adjusting values of the RGB-palette of the image are pixel-level augmentations.</p>
-<p><img alt="Example of a pixel-level augmentation" src="../../images/introduction/dedicated_library/pixel_level_augmentation_for_inria_dataset.jpg"/>
-<strong>We modify the input image by adjusting its brightness, but we keep the output mask intact.</strong></p>
-<p>On the contrary, spatial-level augmentations change both the image and the mask. When you apply image transformations such as mirroring or rotation or cropping a part of the input image, you also need to apply the same transformation to the output label to preserve its correctness.</p>
-<p><img alt="Example of a spatial-level augmentation" src="../../images/introduction/dedicated_library/spatial_level_augmentation_for_inria_dataset.jpg"/>
-<strong>We rotate both the input image and the output mask. We use the same set of transformations with the same parameters, both for the image and the mask.</strong></p>
-<p>The same is true for object detection tasks. For pixel-level augmentations, you only need to change the input image. With spatial-level augmentations, you need to apply the same transformation not only to the image but for bounding boxes coordinates as well. After applying spatial-level augmentations, you need to update coordinates of bounding boxes to represent the correct locations of objects on the augmented image.</p>
-<p><img alt="Example of pixel- and spatial-level augmentations for object detection" src="../../images/introduction/dedicated_library/pixel_and_spatial_level_augmentations_for_object_detection.jpg"/>
-<strong>Pixel-level augmentations such as brightness adjustment change only the input image but not the coordinates of bounding boxes. Spatial-level augmentations such as mirroring and cropping a part of the image change both the input image and the bounding boxes' coordinates.</strong></p>
-<p>Albumentations knows how to correctly apply transformation both to the input data as well as the output labels.</p>
-<h2 id="working-with-probabilities">Working with probabilities<a class="headerlink" href="#working-with-probabilities" title="Permanent link">¶</a></h2>
-<p>During training, you usually want to apply augmentations with a probability of less than 100% since you also need to have the original images in your training pipeline. Also, it is beneficial to be able to control the magnitude of image augmentation, how much does the augmentation change the original image. If the original dataset is large, you could apply only the basic augmentations with probability around 10-30% and with a small magnitude of changes. If the dataset is small, you need to act more aggressively with augmentations to prevent overfitting of neural networks, so you usually need to increase the probability of applying each augmentation to 40-50% and increase the magnitude of changes the augmentation makes to the image.</p>
-<p>Image augmentation libraries allow you to set the required probabilities and the magnitude of values for each transformation.</p>
-<h2 id="declarative-definition-of-the-augmentation-pipeline-and-unified-interface">Declarative definition of the augmentation pipeline and unified interface<a class="headerlink" href="#declarative-definition-of-the-augmentation-pipeline-and-unified-interface" title="Permanent link">¶</a></h2>
-<p>Usually, you want to apply not a single augmentation, but a set of augmentations with specific parameters such as probability and magnitude of changes. Augmentation libraries allow you to declare such a pipeline in a single place and then use it for image transformation through a unified interface. Some libraries can store and load transformation parameters to formats such as JSON, YAML, etc.</p>
-<p>Here is an example definition of an augmentation pipeline. This pipeline will first crop a random 512px x 512px part of the input image. Then with probability 30%, it will randomly change brightness and contrast of that crop. Finally, with probability 50%, it will horizontally flip the resulting image.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
-
-<span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
-    <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span>
-    <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span>
-    <span class="n">A</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
-<span class="p">])</span>
-</code></pre></div>
-<h2 id="rigorous-testing">Rigorous testing<a class="headerlink" href="#rigorous-testing" title="Permanent link">¶</a></h2>
-<p>A bug in the augmentation pipeline could easily go unnoticed. A buggy pipeline could silently corrupt input data. There won't be any exceptions and code failures, but the performance of trained neural networks will degrade because they received a garbage input during training. Augmentation libraries usually have large test suites that capture regressions during development. Also large user base helps to find unnoticed bugs and report them to developers.</p>
+<div class="doc doc-contents">
+<p>Image &amp; mask augmentation that zero out mask and image regions corresponding
+to randomly chosen object instance from mask.</p>
+<p>Mask must be single-channel image, zero values treated as background.
+Image can be any number of channels.</p>
+<p>Inspired by <a href="https://www.kaggle.com/c/severstal-steel-defect-detection/discussion/114254" target="_blank">https://www.kaggle.com/c/severstal-steel-defect-detection/discussion/114254</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_objects</code></td>
+<td></td>
+<td><p>Maximum number of labels that can be zeroed out. Can be tuple, in this case it's [min, max]</p></td>
+</tr>
+<tr>
+<td><code>image_fill_value</code></td>
+<td></td>
+<td><p>Fill value to use when filling image.
+Can be 'inpaint' to apply inpaining (works only  for 3-chahnel images)</p></td>
+</tr>
+<tr>
+<td><code>mask_fill_value</code></td>
+<td></td>
+<td><p>Fill value to use when filling mask.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
               
@@ -1981,7 +1975,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../image_augmentation/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../grid_dropout/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1990,19 +1984,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              What is image augmentation
+              GridDropout augmentation (augmentations.dropout.grid_dropout)
             </div>
           </div>
         </a>
       
       
-        <a href="../why_albumentations/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../geometric/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Why Albumentations
+              Index
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2019,16 +2013,16 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-        <script src="../../js/extra.js"></script>
+        <script src="../../../../js/extra.js"></script>
       
     
   </body>
