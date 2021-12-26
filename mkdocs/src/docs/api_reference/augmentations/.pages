@@ -3,6 +3,7 @@ nav:
   - index.md
   - transforms.md
   - crops
+  - dropout
   - geometric
   - domain_adaptation.md
   - functional.md

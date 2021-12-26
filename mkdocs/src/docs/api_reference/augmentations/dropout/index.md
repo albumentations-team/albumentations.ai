@@ -1,0 +1,5 @@
+- [ChannelDropout augmentation (albumentations.augmentations.dropout.channel_dropout)](channel_dropout.md)
+- [CoarseDropout augmentation (albumentations.augmentations.dropout.coarse_dropout)](coarse_dropout.md)
+- [Cutout augmentation (albumentations.augmentations.dropout.cutout)](cutout.md)
+- [GridDropout augmentation (albumentations.augmentations.dropout.grid_dropout)](grid_dropout.md)
+- [MaskDropout augmentation (albumentations.augmentations.dropout.mask_dropout)](mask_dropout.md)
