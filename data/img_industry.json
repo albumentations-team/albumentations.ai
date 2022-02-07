@@ -93,5 +93,10 @@
   "url": "https://arisaftech.co.jp/",
   "name": "AriSaf Tech",
   "img_filename": "arisaftech.png"
+  },
+  {
+  "url": "https://celsus.ai/en",
+  "name": "Celsus",
+  "img_filename": "celsus.png"
   }
 ]
