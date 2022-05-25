@@ -34,7 +34,7 @@ pathtools==0.1.2
     # via watchdog
 pygithub==1.45
     # via -r requirements.in
-pyjwt==1.7.1
+pyjwt==2.4.0
     # via pygithub
 pyyaml==5.4
     # via watchdog
