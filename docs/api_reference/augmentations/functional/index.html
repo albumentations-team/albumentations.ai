@@ -2561,12 +2561,12 @@ albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
 <tbody>
 <tr>
 <td><code>img</code></td>
-<td></td>
-<td><p>numpy array with (h, w, rgb) shape, as ints between 0-255)</p></td>
+<td><code>numpy.ndarray</code></td>
+<td><p>numpy array with (h, w, rgb) shape, as ints between 0-255</p></td>
 </tr>
 <tr>
 <td><code>alpha</code></td>
-<td></td>
+<td><code>float</code></td>
 <td><p>how much to perturb/scale the eigen vecs and vals
     the paper used std=0.1</p></td>
 </tr>
@@ -2582,8 +2582,8 @@ albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
 </thead>
 <tbody>
 <tr>
-<td><code></code></td>
-<td><p>numpy image-like array as float range(0, 1)</p></td>
+<td><code>numpy.ndarray</code></td>
+<td><p>numpy image-like array as uint8 range(0, 255)</p></td>
 </tr>
 </tbody>
 </table>

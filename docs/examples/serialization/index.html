@@ -2460,6 +2460,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">A</span><span class="o">.</span><span class="n">Perspective</span><span class="p">(),</span>
     <span class="n">A</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="mi">768</span><span class="p">,</span> <span class="mi">768</span><span class="p">),</span>
     <span class="n">A</span><span class="o">.</span><span class="n">OneOf</span><span class="p">([</span>
         <span class="n">A</span><span class="o">.</span><span class="n">RGBShift</span><span class="p">(),</span> 
@@ -2517,6 +2518,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
 <span class="n">visualize</span><span class="p">(</span><span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">])</span>
 </pre></div>
