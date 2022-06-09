@@ -4,16 +4,6 @@
     "name": "Lyft",
     "img_filename": "lyft.png"
   },
-    {
-    "url": "https://sberdevices.ru/",
-    "name": "SberDevices",
-    "img_filename": "sberdevices.png"
-  },
-  {
-    "url": "https://www.x5.ru/en",
-    "name": "X5 Retail Group",
-    "img_filename": "x5.png"
-  },
   {
     "url": "https://imedhub.org/",
     "name": "MedHub",
