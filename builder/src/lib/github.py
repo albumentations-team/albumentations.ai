@@ -1,4 +1,4 @@
-from github import Github, GithubException
+from github import Github, UnknownObjectException
 
 
 class GitHubClient:
@@ -36,7 +36,7 @@ class GitHubClient:
         for repo_name in repo_names:
             try:
                 repo = self.g.get_repo(repo_name)
-            except GithubException.UnknownObjectException:
+            except UnknownObjectException:
                 continue
             stars_rounded = self._get_stars_count_rounded(repo.stargazers_count)
             repositories.append(
