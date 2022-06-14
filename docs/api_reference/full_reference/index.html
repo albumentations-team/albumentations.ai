@@ -3295,7 +3295,7 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.bbox_crop    (bbox, x_min, y_min, x_max, y_max, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L195" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.bbox_crop" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L198" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.bbox_crop" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Crop a bounding box.</p>
@@ -3368,7 +3368,7 @@ albumentations.augmentations.crops.functional.bbox_crop    (bbox, x_min, y_min, 
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.crop_bbox_by_coords    (bbox, crop_coords, crop_height, crop_width, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L57" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_bbox_by_coords" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L60" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_bbox_by_coords" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Crop a bounding box using the provided coordinates of bottom-left and top-right corners in pixels and the
@@ -3437,7 +3437,7 @@ required height and width of the crop.</p>
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.crop_keypoint_by_coords    (keypoint, crop_coords)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L89" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_keypoint_by_coords" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L92" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_keypoint_by_coords" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Crop a keypoint using the provided coordinates of bottom-left and top-right corners in pixels and the
@@ -3486,7 +3486,7 @@ required height and width of the crop.</p>
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.keypoint_center_crop    (keypoint, crop_height, crop_width, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L155" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.keypoint_center_crop" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L158" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.keypoint_center_crop" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Keypoint center crop.</p>
@@ -3549,7 +3549,7 @@ albumentations.augmentations.crops.functional.keypoint_center_crop    (keypoint,
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.keypoint_random_crop    (keypoint, crop_height, crop_width, h_start, w_start, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L106" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.keypoint_random_crop" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L109" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.keypoint_random_crop" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Keypoint random crop.</p>
@@ -4274,7 +4274,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fecf07659d0&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fb212fcf940&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4340,7 +4340,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fecf07659d0&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fb212fcf940&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4407,7 +4407,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fecf07659d0&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fb212fcf940&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -7175,11 +7175,11 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 <code>
 
 
-    (scale=None, translate_percent=None, translate_px=None, rotate=None, shear=None, interpolation=1, mask_interpolation=0, cval=0, cval_mask=0, mode=0, fit_output=False, always_apply=False, p=0.5)
+    (scale=None, translate_percent=None, translate_px=None, rotate=None, shear=None, interpolation=1, mask_interpolation=0, cval=0, cval_mask=0, mode=0, fit_output=False, keep_ratio=False, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L486" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L490" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -7217,11 +7217,13 @@ of the input image to generate output pixel values. The parameters <code>interpo
 <code>0.5</code> is zoomed out to <code>50</code> percent of the original size.
     * If a single number, then that value will be used for all images.
     * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>.
-      That value will be used identically for both x- and y-axis.
+      That the same range will be used for both x- and y-axis. To keep the aspect ratio, set
+      <code>keep_ratio=True</code>, then the same value will be used for both x- and y-axis.
     * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
       Each of these keys can have the same values as described above.
       Using a dictionary allows to set different values for the two axis and sampling will then happen
-      <em>independently</em> per axis, resulting in samples that differ between the axes.</p></td>
+      <em>independently</em> per axis, resulting in samples that differ between the axes. Note that when
+      the <code>keep_ratio=True</code>, the x- and y-axis ranges should be the same.</p></td>
 </tr>
 <tr>
 <td><code>translate_percent</code></td>
@@ -7312,6 +7314,12 @@ the image plane (<code>False</code>). This can be thought of as first applying t
 and then applying a second transformation to "zoom in" on the new image so that it fits the image plane,
 This is useful to avoid corners of the image being outside of the image plane after applying rotations.
 It will however negate translation and scaling.</p></td>
+</tr>
+<tr>
+<td><code>keep_ratio</code></td>
+<td><code>bool</code></td>
+<td><p>When True, the original aspect ratio will be kept when the random scale is applied.
+               Default: False.</p></td>
 </tr>
 <tr>
 <td><code>p</code></td>
@@ -7515,7 +7523,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L775" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L789" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -7784,7 +7792,7 @@ albumentations.augmentations.transforms.AdvancedBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2934" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2935" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.AdvancedBlur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9390,7 +9398,7 @@ albumentations.augmentations.transforms.PixelDropout</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3043" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L3044" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.PixelDropout" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10664,7 +10672,7 @@ albumentations.augmentations.transforms.UnsharpMask</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2858" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2859" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.UnsharpMask" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
