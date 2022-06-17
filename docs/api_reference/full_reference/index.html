@@ -4274,7 +4274,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f788cc39940&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f8a06341940&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4340,7 +4340,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f788cc39940&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f8a06341940&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4407,7 +4407,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f788cc39940&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f8a06341940&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -7179,7 +7179,7 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L490" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L489" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -7308,12 +7308,11 @@ The value is only used when <code>mode=constant</code>. The expected value range
 <tr>
 <td><code>fit_output</code></td>
 <td><code>bool</code></td>
-<td><p>Whether to modify the affine transformation so that the whole output image is always
-contained in the image plane (<code>True</code>) or accept parts of the image being outside
-the image plane (<code>False</code>). This can be thought of as first applying the affine transformation
-and then applying a second transformation to "zoom in" on the new image so that it fits the image plane,
-This is useful to avoid corners of the image being outside of the image plane after applying rotations.
-It will however negate translation and scaling.</p></td>
+<td><p>If True, the image plane size and position will be adjusted to tightly capture
+the whole image after affine transformation (<code>translate_percent</code> and <code>translate_px</code> are ignored).
+Otherwise (<code>False</code>),  parts of the transformed image may end up outside the image plane.
+Fitting the output shape can be useful to avoid corners of the image being outside the image plane
+after applying rotations. Default: False</p></td>
 </tr>
 <tr>
 <td><code>keep_ratio</code></td>
@@ -7523,7 +7522,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L789" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L788" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
