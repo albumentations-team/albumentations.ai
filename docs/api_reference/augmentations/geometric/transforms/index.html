@@ -1904,7 +1904,7 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L489" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L497" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2070,7 +2070,7 @@ albumentations.augmentations.geometric.transforms.ElasticTransform</strong></cod
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L147" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L155" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ElasticTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2165,7 +2165,7 @@ albumentations.augmentations.geometric.transforms.Perspective</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L246" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L254" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Perspective" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2247,7 +2247,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L788" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L796" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2364,11 +2364,11 @@ albumentations.augmentations.geometric.transforms.ShiftScaleRotate</strong></cod
 <code>
 
 
-    (shift_limit=0.0625, scale_limit=0.1, rotate_limit=45, interpolation=1, border_mode=4, value=None, mask_value=None, shift_limit_x=None, shift_limit_y=None, always_apply=False, p=0.5)
+    (shift_limit=0.0625, scale_limit=0.1, rotate_limit=45, interpolation=1, border_mode=4, value=None, mask_value=None, shift_limit_x=None, shift_limit_y=None, rotate_method='largest_box', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L55" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L57" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ShiftScaleRotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2447,6 +2447,12 @@ the range [0, 1]. Default: None.</p></td>
 instead of shift_limit will be used for shifting height.  If shift_limit_y is a single float value,
 the range will be (-shift_limit_y, shift_limit_y). Absolute values for lower and upper bounds should lie
 in the range [0, 1]. Default: None.</p></td>
+</tr>
+<tr>
+<td><code>rotate_method</code></td>
+<td><code>str</code></td>
+<td><p>rotation method used for the bounding boxes. Should be one of "largest_box" or "ellipse".
+Default: "largest_box"</p></td>
 </tr>
 <tr>
 <td><code>p</code></td>

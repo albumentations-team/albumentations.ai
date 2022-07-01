@@ -1974,11 +1974,11 @@ albumentations.augmentations.geometric.rotate.Rotate</strong></code>
 <code>
 
 
-    (limit=90, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, p=0.5)
+    (limit=90, interpolation=1, border_mode=4, value=None, mask_value=None, method='largest_box', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L73" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L75" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.rotate.Rotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2028,6 +2028,12 @@ Default: cv2.BORDER_REFLECT_101</p></td>
 <td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
 </tr>
 <tr>
+<td><code>method</code></td>
+<td><code>str</code></td>
+<td><p>rotation method used for the bounding boxes. Should be one of "largest_box" or "ellipse".
+Default: "largest_box"</p></td>
+</tr>
+<tr>
 <td><code>p</code></td>
 <td><code>float</code></td>
 <td><p>probability of applying the transform. Default: 0.5.</p></td>
@@ -2052,7 +2058,7 @@ albumentations.augmentations.geometric.rotate.SafeRotate</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L138" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L145" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.rotate.SafeRotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
