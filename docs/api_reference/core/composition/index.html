@@ -129,7 +129,7 @@
             <a href="https://albumentations.ai/whos_using">Who's using</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+            <a href="https://albumentations-team-albumentations-demo-srcapp-w930cw.streamlitapp.com/" target="_blank">Demo</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
             <a href="https://albumentations.ai/team">Team</a>
@@ -1275,6 +1275,40 @@
   
 
           
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../bbox_utils/" class="md-nav__link">
+        Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../keypoints_utils/" class="md-nav__link">
+        Helper functions for working with keypoints (augmentations.core.keypoints_utils)
+      </a>
+    </li>
+              
+
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1661,40 +1695,6 @@
   
 
           
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/bbox_utils/" class="md-nav__link">
-        Helper functions for working with bounding boxes (augmentations.bbox_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/keypoints_utils/" class="md-nav__link">
-        Helper functions for working with keypoints (augmentations.keypoints_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -1892,79 +1892,6 @@
 <div class="doc doc-contents first">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" data-toc-label="BboxParams" id="albumentations.core.composition.BboxParams">
-<code>class <strong>
-albumentations.core.composition.BboxParams</strong></code>
-<code>
-
-
-    (format, label_fields=None, min_area=0.0, min_visibility=0.0, check_each_transform=True)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L527" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.core.composition.BboxParams" title="Permanent link">¶</a>
-</h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Parameters of bounding boxes</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>format</code></td>
-<td><code>str</code></td>
-<td><p>format of bounding boxes. Should be 'coco', 'pascal_voc', 'albumentations' or 'yolo'.</p>
-<p>The <code>coco</code> format
-    <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
-The <code>pascal_voc</code> format
-    <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
-The <code>albumentations</code> format
-    is like <code>pascal_voc</code>, but normalized,
-    in other words: <code>[x_min, y_min, x_max, y_max]</code>, e.g. [0.2, 0.3, 0.4, 0.5].
-The <code>yolo</code> format
-    <code>[x, y, width, height]</code>, e.g. [0.1, 0.2, 0.3, 0.4];
-    <code>x</code>, <code>y</code> - normalized bbox center; <code>width</code>, <code>height</code> - normalized bbox width and height.</p></td>
-</tr>
-<tr>
-<td><code>label_fields</code></td>
-<td><code>list</code></td>
-<td><p>list of fields that are joined with boxes, e.g labels.
-Should be same type as boxes.</p></td>
-</tr>
-<tr>
-<td><code>min_area</code></td>
-<td><code>float</code></td>
-<td><p>minimum area of a bounding box. All bounding boxes whose
-visible area in pixels is less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_visibility</code></td>
-<td><code>float</code></td>
-<td><p>minimum fraction of area for a bounding box
-to remain this box in list. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>check_each_transform</code></td>
-<td><code>bool</code></td>
-<td><p>if <code>True</code>, then bboxes will be checked after each dual transform.
-Default: <code>True</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="Compose" id="albumentations.core.composition.Compose">
 <code>class <strong>
 albumentations.core.composition.Compose</strong></code>
@@ -2016,71 +1943,6 @@ albumentations.core.composition.Compose</strong></code>
 <td><code>p</code></td>
 <td><code>float</code></td>
 <td><p>probability of applying all list of transforms. Default: 1.0.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" data-toc-label="KeypointParams" id="albumentations.core.composition.KeypointParams">
-<code>class <strong>
-albumentations.core.composition.KeypointParams</strong></code>
-<code>
-
-
-    (format, label_fields=None, remove_invisible=True, angle_in_degrees=True, check_each_transform=True)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L574" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.core.composition.KeypointParams" title="Permanent link">¶</a>
-</h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Parameters of keypoints</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>format</code></td>
-<td><code>str</code></td>
-<td><p>format of keypoints. Should be 'xy', 'yx', 'xya', 'xys', 'xyas', 'xysa'.</p>
-<p>x - X coordinate,</p>
-<p>y - Y coordinate</p>
-<p>s - Keypoint scale</p>
-<p>a - Keypoint orientation in radians or degrees (depending on KeypointParams.angle_in_degrees)</p></td>
-</tr>
-<tr>
-<td><code>label_fields</code></td>
-<td><code>list</code></td>
-<td><p>list of fields that are joined with keypoints, e.g labels.
-Should be same type as keypoints.</p></td>
-</tr>
-<tr>
-<td><code>remove_invisible</code></td>
-<td><code>bool</code></td>
-<td><p>to remove invisible points after transform or not</p></td>
-</tr>
-<tr>
-<td><code>angle_in_degrees</code></td>
-<td><code>bool</code></td>
-<td><p>angle in degrees or radians in 'xya', 'xyas', 'xysa' keypoints</p></td>
-</tr>
-<tr>
-<td><code>check_each_transform</code></td>
-<td><code>bool</code></td>
-<td><p>if <code>True</code>, then keypoints will be checked after each dual transform.
-Default: <code>True</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2216,7 +2078,7 @@ albumentations.core.composition.Sequential</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L627" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L530" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">

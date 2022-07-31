@@ -129,7 +129,7 @@
             <a href="https://albumentations.ai/whos_using">Who's using</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+            <a href="https://albumentations-team-albumentations-demo-srcapp-w930cw.streamlitapp.com/" target="_blank">Demo</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
             <a href="https://albumentations.ai/team">Team</a>
@@ -1269,6 +1269,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#albumentations.core.serialization.Serializable.to_dict" class="md-nav__link">
+    to_dict()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#albumentations.core.serialization.SerializableMeta.__new__" class="md-nav__link">
     __new__()
   </a>
@@ -1285,6 +1292,40 @@
 </nav>
       
     </li>
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../bbox_utils/" class="md-nav__link">
+        Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../keypoints_utils/" class="md-nav__link">
+        Helper functions for working with keypoints (augmentations.core.keypoints_utils)
+      </a>
+    </li>
+              
+
   
 
           
@@ -1674,40 +1715,6 @@
   
 
           
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/bbox_utils/" class="md-nav__link">
-        Helper functions for working with bounding boxes (augmentations.bbox_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/keypoints_utils/" class="md-nav__link">
-        Helper functions for working with keypoints (augmentations.keypoints_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -1905,12 +1912,62 @@
 <div class="doc doc-contents first">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="Serializable" id="albumentations.core.serialization.Serializable">
+<code>class <strong>
+albumentations.core.serialization.Serializable</strong></code>
+<code>
+</code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L75" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.core.serialization.Serializable" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.serialization.Serializable.to_dict">
+<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">serialization</span><span class="o">.</span><span class="n">Serializable</span><span class="o">.</span><span class="n">to_dict</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on_not_implemented_error</span><span class="o">=</span><span class="s1">'raise'</span><span class="p">)</span></code>
+<a class="headerlink" href="#albumentations.core.serialization.Serializable.to_dict" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<p>Take a transform pipeline and convert it to a serializable representation that uses only standard
+python data types: dictionaries, lists, strings, integers, and floats.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>self</code></td>
+<td></td>
+<td><p>A transform that should be serialized. If the transform doesn't implement the <code>to_dict</code>
+method and <code>on_not_implemented_error</code> equals to 'raise' then <code>NotImplementedError</code> is raised.
+If <code>on_not_implemented_error</code> equals to 'warn' then <code>NotImplementedError</code> will be ignored
+but no transform parameters will be serialized.</p></td>
+</tr>
+<tr>
+<td><code>on_not_implemented_error</code></td>
+<td><code>str</code></td>
+<td><p><code>raise</code> or <code>warn</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="SerializableMeta" id="albumentations.core.serialization.SerializableMeta">
 <code>class <strong>
 albumentations.core.serialization.SerializableMeta</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L45" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L47" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.serialization.SerializableMeta" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1921,7 +1978,7 @@ so they can be found later while deserializing transformation pipeline using cla
 <div class="doc doc-children">
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="albumentations.core.serialization.SerializableMeta.__new__">
-<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">serialization</span><span class="o">.</span><span class="n">SerializableMeta</span><span class="o">.</span><span class="fm">__new__</span> <span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">class_dict</span><span class="p">)</span></code>
+<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">serialization</span><span class="o">.</span><span class="n">SerializableMeta</span><span class="o">.</span><span class="fm">__new__</span> <span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 <span class="doc doc-properties">
 <small class="doc doc-property doc-property-special"><code>special</code></small>
 <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
@@ -1939,7 +1996,7 @@ so they can be found later while deserializing transformation pipeline using cla
 <code class="highlight language-python">def
 albumentations.core.serialization.from_dict    (transform_dict, nonserializable=None, lambda_transforms='deprecated')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L103" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L151" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -1954,12 +2011,12 @@ albumentations.core.serialization.from_dict    (transform_dict, nonserializable=
 <tbody>
 <tr>
 <td><code>transform_dict</code></td>
-<td><code>dict</code></td>
+<td><code>Dict[str, Any]</code></td>
 <td><p>A dictionary with serialized transform pipeline.</p></td>
 </tr>
 <tr>
 <td><code>nonserializable</code></td>
-<td><code>dict</code></td>
+<td><code>Optional[Dict[str, Any]]</code></td>
 <td><p>A dictionary that contains non-serializable transforms.
 This dictionary is required when you are restoring a pipeline that contains non-serializable transforms.
 Keys in that dictionary should be named same as <code>name</code> arguments in respective transforms from
@@ -1967,7 +2024,7 @@ a serialized pipeline.</p></td>
 </tr>
 <tr>
 <td><code>lambda_transforms</code></td>
-<td><code>dict</code></td>
+<td><code>Union[Dict[str, Any], NoneType, str]</code></td>
 <td><p>Deprecated. Use 'nonserizalizable' instead.</p></td>
 </tr>
 </tbody>
@@ -1979,7 +2036,7 @@ a serialized pipeline.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.load    (filepath, data_format='json', nonserializable=None, lambda_transforms='deprecated')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L155" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L209" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Load a serialized pipeline from a json or yaml file and construct a transform pipeline.</p>
@@ -2005,7 +2062,7 @@ albumentations.core.serialization.load    (filepath, data_format='json', nonseri
 </tr>
 <tr>
 <td><code>nonserializable</code></td>
-<td><code>dict</code></td>
+<td><code>Optional[Dict[str, Any]]</code></td>
 <td><p>A dictionary that contains non-serializable transforms.
 This dictionary is required when you are restoring a pipeline that contains non-serializable transforms.
 Keys in that dictionary should be named same as <code>name</code> arguments in respective transforms from
@@ -2013,7 +2070,7 @@ a serialized pipeline.</p></td>
 </tr>
 <tr>
 <td><code>lambda_transforms</code></td>
-<td><code>dict</code></td>
+<td><code>Union[Dict[str, Any], NoneType, str]</code></td>
 <td><p>Deprecated. Use 'nonserizalizable' instead.</p></td>
 </tr>
 </tbody>
@@ -2025,7 +2082,7 @@ a serialized pipeline.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.register_additional_transforms    ()
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L180" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L239" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Register transforms that are not imported directly into the <code>albumentations</code> module.</p>
@@ -2036,7 +2093,7 @@ albumentations.core.serialization.register_additional_transforms    ()
 <code class="highlight language-python">def
 albumentations.core.serialization.save    (transform, filepath, data_format='json', on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L135" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L187" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline, serialize it and save a serialized version to a file
@@ -2053,7 +2110,7 @@ using either json or yaml format.</p>
 <tbody>
 <tr>
 <td><code>transform</code></td>
-<td><code>obj</code></td>
+<td><code>Serializable</code></td>
 <td><p>Transform to serialize.</p></td>
 </tr>
 <tr>
@@ -2082,7 +2139,7 @@ ignored and no transform arguments will be saved.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.to_dict    (transform, on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L54" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L117" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline and convert it to a serializable representation that uses only standard
@@ -2099,11 +2156,16 @@ python data types: dictionaries, lists, strings, integers, and floats.</p>
 <tbody>
 <tr>
 <td><code>transform</code></td>
-<td><code>object</code></td>
+<td><code>Serializable</code></td>
 <td><p>A transform that should be serialized. If the transform doesn't implement the <code>to_dict</code>
 method and <code>on_not_implemented_error</code> equals to 'raise' then <code>NotImplementedError</code> is raised.
 If <code>on_not_implemented_error</code> equals to 'warn' then <code>NotImplementedError</code> will be ignored
 but no transform parameters will be serialized.</p></td>
+</tr>
+<tr>
+<td><code>on_not_implemented_error</code></td>
+<td><code>str</code></td>
+<td><p><code>raise</code> or <code>warn</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2149,13 +2211,13 @@ but no transform parameters will be serialized.</p></td>
         </a>
       
       
-        <a href="../../augmentations/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../bbox_utils/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Index
+              Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
             </div>
           </div>
           <div class="md-footer__button md-icon">

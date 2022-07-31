@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://albumentations.ai/docs/api_reference/augmentations/bbox_utils/">
+        <link rel="canonical" href="https://albumentations.ai/docs/api_reference/core/bbox_utils/">
       
       <link rel="icon" href="../../../images/logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>Helper functions for working with bounding boxes (augmentations.bbox_utils) - Albumentations Documentation</title>
+        <title>Helper functions for working with bounding boxes (augmentations.core.bbox_utils) - Albumentations Documentation</title>
       
     
     
@@ -64,13 +64,13 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+  <meta property="og:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.core.bbox_utils)">
   <meta property="og:description" content="Albumentations: fast and flexible image augmentations">
-  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/augmentations/bbox_utils/">
+  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/core/bbox_utils/">
   <meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.bbox_utils)">
+  <meta name="twitter:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.core.bbox_utils)">
   <meta name="twitter:description" content="Albumentations: fast and flexible image augmentations">
   <meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
 
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#helper-functions-for-working-with-bounding-boxes-augmentationsbbox_utils" class="md-skip">
+        <a href="#helper-functions-for-working-with-bounding-boxes-augmentationscorebbox_utils" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
             <a href="https://albumentations.ai/whos_using">Who's using</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations-demo.herokuapp.com/" target="_blank">Demo</a>
+            <a href="https://albumentations-team-albumentations-demo-srcapp-w930cw.streamlitapp.com/" target="_blank">Demo</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
             <a href="https://albumentations.ai/team">Team</a>
@@ -1159,12 +1159,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" checked>
       
       <label class="md-nav__link" for="__nav_10_3">
         Core API
@@ -1195,7 +1197,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../core/composition/" class="md-nav__link">
+      <a href="../composition/" class="md-nav__link">
         Composition API (core.composition)
       </a>
     </li>
@@ -1212,7 +1214,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../../core/transforms_interface/" class="md-nav__link">
+      <a href="../transforms_interface/" class="md-nav__link">
         Transforms Interface (core.transforms_interface)
       </a>
     </li>
@@ -1229,8 +1231,77 @@
         
 
     <li class="md-nav__item">
-      <a href="../../core/serialization/" class="md-nav__link">
+      <a href="../serialization/" class="md-nav__link">
         Serialization API (core.serialization)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#albumentations.core.bbox_utils" class="md-nav__link">
+    albumentations.core.bbox_utils
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../keypoints_utils/" class="md-nav__link">
+        Helper functions for working with keypoints (augmentations.core.keypoints_utils)
       </a>
     </li>
               
@@ -1247,14 +1318,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" >
       
       <label class="md-nav__link" for="__nav_10_4">
         Augmentations
@@ -1285,7 +1354,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../transforms/" class="md-nav__link">
+      <a href="../../augmentations/transforms/" class="md-nav__link">
         Transforms (augmentations.transforms)
       </a>
     </li>
@@ -1333,7 +1402,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../crops/functional/" class="md-nav__link">
+      <a href="../../augmentations/crops/functional/" class="md-nav__link">
         Crop functional transforms (augmentations.crops.functional)
       </a>
     </li>
@@ -1350,7 +1419,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../crops/transforms/" class="md-nav__link">
+      <a href="../../augmentations/crops/transforms/" class="md-nav__link">
         Crop transforms (augmentations.crops.transforms)
       </a>
     </li>
@@ -1404,7 +1473,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../dropout/channel_dropout/" class="md-nav__link">
+      <a href="../../augmentations/dropout/channel_dropout/" class="md-nav__link">
         ChannelDropout augmentation (augmentations.dropout.channel_dropout)
       </a>
     </li>
@@ -1421,7 +1490,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../dropout/coarse_dropout/" class="md-nav__link">
+      <a href="../../augmentations/dropout/coarse_dropout/" class="md-nav__link">
         CoarseDropout augmentation (augmentations.dropout.coarse_dropout)
       </a>
     </li>
@@ -1438,7 +1507,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../dropout/cutout/" class="md-nav__link">
+      <a href="../../augmentations/dropout/cutout/" class="md-nav__link">
         Cutout augmentation (augmentations.dropout.cutout)
       </a>
     </li>
@@ -1455,7 +1524,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../dropout/grid_dropout/" class="md-nav__link">
+      <a href="../../augmentations/dropout/grid_dropout/" class="md-nav__link">
         GridDropout augmentation (augmentations.dropout.grid_dropout)
       </a>
     </li>
@@ -1472,7 +1541,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../dropout/mask_dropout/" class="md-nav__link">
+      <a href="../../augmentations/dropout/mask_dropout/" class="md-nav__link">
         MaskDropout augmentation (augmentations.dropout.mask_dropout)
       </a>
     </li>
@@ -1526,7 +1595,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../geometric/functional/" class="md-nav__link">
+      <a href="../../augmentations/geometric/functional/" class="md-nav__link">
         Geometric functional transforms (augmentations.geometric.functional)
       </a>
     </li>
@@ -1543,7 +1612,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../geometric/resize/" class="md-nav__link">
+      <a href="../../augmentations/geometric/resize/" class="md-nav__link">
         Resizing transforms (augmentations.geometric.resize)
       </a>
     </li>
@@ -1560,7 +1629,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../geometric/rotate/" class="md-nav__link">
+      <a href="../../augmentations/geometric/rotate/" class="md-nav__link">
         Rotation transforms (augmentations.geometric.functional)
       </a>
     </li>
@@ -1577,7 +1646,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../geometric/transforms/" class="md-nav__link">
+      <a href="../../augmentations/geometric/transforms/" class="md-nav__link">
         Geometric transforms (augmentations.geometric.transforms)
       </a>
     </li>
@@ -1600,7 +1669,7 @@
         
 
     <li class="md-nav__item">
-      <a href="../domain_adaptation/" class="md-nav__link">
+      <a href="../../augmentations/domain_adaptation/" class="md-nav__link">
         Domain adaptation transforms (augmentations.domain_adaptation)
       </a>
     </li>
@@ -1617,77 +1686,8 @@
         
 
     <li class="md-nav__item">
-      <a href="../functional/" class="md-nav__link">
+      <a href="../../augmentations/functional/" class="md-nav__link">
         Functional transforms (augmentations.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Helper functions for working with bounding boxes (augmentations.bbox_utils)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Helper functions for working with bounding boxes (augmentations.bbox_utils)
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#albumentations.augmentations.bbox_utils" class="md-nav__link">
-    albumentations.augmentations.bbox_utils
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../keypoints_utils/" class="md-nav__link">
-        Helper functions for working with keypoints (augmentations.keypoints_utils)
       </a>
     </li>
               
@@ -1875,7 +1875,7 @@
 </style>
 
 
-  <a href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/bbox_utils.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/core/bbox_utils.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
   </a>
 
@@ -1886,17 +1886,90 @@
   
 
 
-<h1 id="helper-functions-for-working-with-bounding-boxes-augmentationsbbox_utils">Helper functions for working with bounding boxes (augmentations.bbox_utils)<a class="headerlink" href="#helper-functions-for-working-with-bounding-boxes-augmentationsbbox_utils" title="Permanent link">¶</a></h1>
+<h1 id="helper-functions-for-working-with-bounding-boxes-augmentationscorebbox_utils">Helper functions for working with bounding boxes (augmentations.core.bbox_utils)<a class="headerlink" href="#helper-functions-for-working-with-bounding-boxes-augmentationscorebbox_utils" title="Permanent link">¶</a></h1>
 <div class="doc doc-object doc-module">
-<a id="albumentations.augmentations.bbox_utils"></a>
+<a id="albumentations.core.bbox_utils"></a>
 <div class="doc doc-contents first">
 <div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="BboxParams" id="albumentations.core.bbox_utils.BboxParams">
+<code>class <strong>
+albumentations.core.bbox_utils.BboxParams</strong></code>
+<code>
+
+
+    (format, label_fields=None, min_area=0.0, min_visibility=0.0, check_each_transform=True)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L59" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.core.bbox_utils.BboxParams" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Parameters of bounding boxes</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format</code></td>
+<td><code>str</code></td>
+<td><p>format of bounding boxes. Should be 'coco', 'pascal_voc', 'albumentations' or 'yolo'.</p>
+<p>The <code>coco</code> format
+    <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
+The <code>pascal_voc</code> format
+    <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
+The <code>albumentations</code> format
+    is like <code>pascal_voc</code>, but normalized,
+    in other words: <code>[x_min, y_min, x_max, y_max]</code>, e.g. [0.2, 0.3, 0.4, 0.5].
+The <code>yolo</code> format
+    <code>[x, y, width, height]</code>, e.g. [0.1, 0.2, 0.3, 0.4];
+    <code>x</code>, <code>y</code> - normalized bbox center; <code>width</code>, <code>height</code> - normalized bbox width and height.</p></td>
+</tr>
+<tr>
+<td><code>label_fields</code></td>
+<td><code>list</code></td>
+<td><p>list of fields that are joined with boxes, e.g labels.
+Should be same type as boxes.</p></td>
+</tr>
+<tr>
+<td><code>min_area</code></td>
+<td><code>float</code></td>
+<td><p>minimum area of a bounding box. All bounding boxes whose
+visible area in pixels is less than this value will be removed. Default: 0.0.</p></td>
+</tr>
+<tr>
+<td><code>min_visibility</code></td>
+<td><code>float</code></td>
+<td><p>minimum fraction of area for a bounding box
+to remain this box in list. Default: 0.0.</p></td>
+</tr>
+<tr>
+<td><code>check_each_transform</code></td>
+<td><code>bool</code></td>
+<td><p>if <code>True</code>, then bboxes will be checked after each dual transform.
+Default: <code>True</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="calculate_bbox_area()" id="albumentations.augmentations.bbox_utils.calculate_bbox_area">
+<h2 class="doc doc-heading" data-toc-label="calculate_bbox_area()" id="albumentations.core.bbox_utils.calculate_bbox_area">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
+albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L147" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L217" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Calculate the area of a bounding box in pixels.</p>
@@ -1912,7 +1985,7 @@ albumentations.augmentations.bbox_utils.calculate_bbox_area    (bbox, rows, cols
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -1937,41 +2010,41 @@ albumentations.augmentations.bbox_utils.calculate_bbox_area    (bbox, rows, cols
 </thead>
 <tbody>
 <tr>
-<td><code>int</code></td>
-<td><p>Area of a bounding box in pixels.</p></td>
+<td><code>float</code></td>
+<td><p>int: Area of a bounding box in pixels.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="check_bbox()" id="albumentations.augmentations.bbox_utils.check_bbox">
+<h2 class="doc doc-heading" data-toc-label="check_bbox()" id="albumentations.core.bbox_utils.check_bbox">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.check_bbox    (bbox)
+albumentations.core.bbox_utils.check_bbox    (bbox)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L332" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.check_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L417" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bbox boundaries are in range 0, 1 and minimums are lesser then maximums</p>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="check_bboxes()" id="albumentations.augmentations.bbox_utils.check_bboxes">
+<h2 class="doc doc-heading" data-toc-label="check_bboxes()" id="albumentations.core.bbox_utils.check_bboxes">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.check_bboxes    (bboxes)
+albumentations.core.bbox_utils.check_bboxes    (bboxes)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L347" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.check_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L432" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bboxes boundaries are in range 0, 1 and minimums are lesser then maximums</p>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="convert_bbox_from_albumentations()" id="albumentations.augmentations.bbox_utils.convert_bbox_from_albumentations">
+<h2 class="doc doc-heading" data-toc-label="convert_bbox_from_albumentations()" id="albumentations.core.bbox_utils.convert_bbox_from_albumentations">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.convert_bbox_from_albumentations    (bbox, target_format, rows, cols, check_validity=False)
+albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L263" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L341" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a bounding box from the format used by albumentations to a format, specified in <code>target_format</code>.</p>
@@ -1987,7 +2060,7 @@ albumentations.augmentations.bbox_utils.convert_bbox_from_albumentations    (bbo
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence</code></td>
 <td><p>An albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2022,8 +2095,8 @@ albumentations.augmentations.bbox_utils.convert_bbox_from_albumentations    (bbo
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
-<td><p>A bounding box.</p></td>
+<td><code>Tuple</code></td>
+<td><p>tuple: A bounding box.</p></td>
 </tr>
 </tbody>
 </table> <p>Note:
@@ -2048,11 +2121,11 @@ albumentations.augmentations.bbox_utils.convert_bbox_from_albumentations    (bbo
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="convert_bbox_to_albumentations()" id="albumentations.augmentations.bbox_utils.convert_bbox_to_albumentations">
+<h2 class="doc doc-heading" data-toc-label="convert_bbox_to_albumentations()" id="albumentations.core.bbox_utils.convert_bbox_to_albumentations">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.convert_bbox_to_albumentations    (bbox, source_format, rows, cols, check_validity=False)
+albumentations.core.bbox_utils.convert_bbox_to_albumentations    (bbox, source_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L200" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L275" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a bounding box from a format specified in <code>source_format</code> to the format used by albumentations:
@@ -2070,7 +2143,7 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence</code></td>
 <td><p>A bounding box tuple.</p></td>
 </tr>
 <tr>
@@ -2105,8 +2178,8 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
-<td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Tuple</code></td>
+<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table> <p>Note:
@@ -2136,11 +2209,11 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="convert_bboxes_from_albumentations()" id="albumentations.augmentations.bbox_utils.convert_bboxes_from_albumentations">
+<h2 class="doc doc-heading" data-toc-label="convert_bboxes_from_albumentations()" id="albumentations.core.bbox_utils.convert_bboxes_from_albumentations">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.convert_bboxes_from_albumentations    (bboxes, target_format, rows, cols, check_validity=False)
+albumentations.core.bbox_utils.convert_bboxes_from_albumentations    (bboxes, target_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L314" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L397" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list of bounding boxes from the format used by albumentations to a format, specified
@@ -2157,7 +2230,7 @@ in <code>target_format</code>.</p>
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>List of albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2192,30 +2265,30 @@ in <code>target_format</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>list[tuple]</code></td>
-<td><p>List of bounding box.</p></td>
+<td><code>List[Tuple]</code></td>
+<td><p>list[tuple]: List of bounding box.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="convert_bboxes_to_albumentations()" id="albumentations.augmentations.bbox_utils.convert_bboxes_to_albumentations">
+<h2 class="doc doc-heading" data-toc-label="convert_bboxes_to_albumentations()" id="albumentations.core.bbox_utils.convert_bboxes_to_albumentations">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.convert_bboxes_to_albumentations    (bboxes, source_format, rows, cols, check_validity=False)
+albumentations.core.bbox_utils.convert_bboxes_to_albumentations    (bboxes, source_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L309" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L390" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list bounding boxes from a format specified in <code>source_format</code> to the format used by albumentations</p>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="denormalize_bbox()" id="albumentations.augmentations.bbox_utils.denormalize_bbox">
+<h2 class="doc doc-heading" data-toc-label="denormalize_bbox()" id="albumentations.core.bbox_utils.denormalize_bbox">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.denormalize_bbox    (bbox, rows, cols)
+albumentations.core.bbox_utils.denormalize_bbox    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L88" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L158" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Denormalize coordinates of a bounding box. Multiply x-coordinates by image width and y-coordinates
@@ -2232,7 +2305,7 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence</code></td>
 <td><p>Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2257,8 +2330,8 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
-<td><p>Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Tuple</code></td>
+<td><p>tuple: Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2280,11 +2353,11 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="denormalize_bboxes()" id="albumentations.augmentations.bbox_utils.denormalize_bboxes">
+<h2 class="doc doc-heading" data-toc-label="denormalize_bboxes()" id="albumentations.core.bbox_utils.denormalize_bboxes">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
+albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L132" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L202" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Denormalize a list of bounding boxes.</p>
@@ -2300,7 +2373,7 @@ albumentations.augmentations.bbox_utils.denormalize_bboxes    (bboxes, rows, col
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2325,19 +2398,19 @@ albumentations.augmentations.bbox_utils.denormalize_bboxes    (bboxes, rows, col
 </thead>
 <tbody>
 <tr>
-<td><code>List[tuple]</code></td>
-<td><p>Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List[Tuple]</code></td>
+<td><p>List[tuple]: Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="filter_bboxes()" id="albumentations.augmentations.bbox_utils.filter_bboxes">
+<h2 class="doc doc-heading" data-toc-label="filter_bboxes()" id="albumentations.core.bbox_utils.filter_bboxes">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.filter_bboxes    (bboxes, rows, cols, min_area=0.0, min_visibility=0.0)
+albumentations.core.bbox_utils.filter_bboxes    (bboxes, rows, cols, min_area=0.0, min_visibility=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L353" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L438" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Remove bounding boxes that either lie outside of the visible area by more then min_visibility
@@ -2354,7 +2427,7 @@ or whose area in pixels is under the threshold set by <code>min_area</code>. Als
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>List of albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2390,19 +2463,19 @@ is less than this value will be removed. Default: 0.0.</p></td>
 </thead>
 <tbody>
 <tr>
-<td><code>List[tuple]</code></td>
-<td><p>List of bounding box.</p></td>
+<td><code>List[Tuple]</code></td>
+<td><p>List[tuple]: List of bounding box.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="filter_bboxes_by_visibility()" id="albumentations.augmentations.bbox_utils.filter_bboxes_by_visibility">
+<h2 class="doc doc-heading" data-toc-label="filter_bboxes_by_visibility()" id="albumentations.core.bbox_utils.filter_bboxes_by_visibility">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.filter_bboxes_by_visibility    (original_shape, bboxes, transformed_shape, transformed_bboxes, threshold=0.0, min_area=0.0)
+albumentations.core.bbox_utils.filter_bboxes_by_visibility    (original_shape, bboxes, transformed_shape, transformed_bboxes, threshold=0.0, min_area=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L165" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L235" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Filter bounding boxes and return only those boxes whose visibility after transformation is above
@@ -2419,22 +2492,22 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 <tbody>
 <tr>
 <td><code>original_shape</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence[int]</code></td>
 <td><p>Original image shape <code>(height, width)</code>.</p></td>
 </tr>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>Original bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
 <td><code>transformed_shape</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence[int]</code></td>
 <td><p>Transformed image shape <code>(height, width)</code>.</p></td>
 </tr>
 <tr>
 <td><code>transformed_bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>Transformed bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2459,19 +2532,19 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 </thead>
 <tbody>
 <tr>
-<td><code>List[tuple]</code></td>
-<td><p>Filtered bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List[Sequence]</code></td>
+<td><p>List[tuple]: Filtered bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="normalize_bbox()" id="albumentations.augmentations.bbox_utils.normalize_bbox">
+<h2 class="doc doc-heading" data-toc-label="normalize_bbox()" id="albumentations.core.bbox_utils.normalize_bbox">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.normalize_bbox    (bbox, rows, cols)
+albumentations.core.bbox_utils.normalize_bbox    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L59" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.normalize_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L129" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Normalize coordinates of a bounding box. Divide x-coordinates by image width and y-coordinates
@@ -2488,7 +2561,7 @@ by image height.</p>
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>tuple</code></td>
+<td><code>Sequence</code></td>
 <td><p>Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2513,8 +2586,8 @@ by image height.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
-<td><p>Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Tuple</code></td>
+<td><p>tuple: Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2536,11 +2609,11 @@ by image height.</p>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="normalize_bboxes()" id="albumentations.augmentations.bbox_utils.normalize_bboxes">
+<h2 class="doc doc-heading" data-toc-label="normalize_bboxes()" id="albumentations.core.bbox_utils.normalize_bboxes">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
+albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L117" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L187" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Normalize a list of bounding boxes.</p>
@@ -2556,7 +2629,7 @@ albumentations.augmentations.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2581,19 +2654,19 @@ albumentations.augmentations.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 </thead>
 <tbody>
 <tr>
-<td><code>List[tuple]</code></td>
-<td><p>Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List[Tuple]</code></td>
+<td><p>List[tuple]: Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="union_of_bboxes()" id="albumentations.augmentations.bbox_utils.union_of_bboxes">
+<h2 class="doc doc-heading" data-toc-label="union_of_bboxes()" id="albumentations.core.bbox_utils.union_of_bboxes">
 <code class="highlight language-python">def
-albumentations.augmentations.bbox_utils.union_of_bboxes    (height, width, bboxes, erosion_rate=0.0)
+albumentations.core.bbox_utils.union_of_bboxes    (height, width, bboxes, erosion_rate=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/bbox_utils.py#L384" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L470" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Calculate union of bounding boxes.</p>
@@ -2609,17 +2682,17 @@ albumentations.augmentations.bbox_utils.union_of_bboxes    (height, width, bboxe
 <tbody>
 <tr>
 <td><code>height</code></td>
-<td><code>float</code></td>
+<td><code>int</code></td>
 <td><p>Height of image or space.</p></td>
 </tr>
 <tr>
 <td><code>width</code></td>
-<td><code>float</code></td>
+<td><code>int</code></td>
 <td><p>Width of image or space.</p></td>
 </tr>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>List[tuple]</code></td>
+<td><code>Sequence[Sequence]</code></td>
 <td><p>List like bounding boxes. Format is <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2640,8 +2713,8 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
-<td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Tuple[float, float, float, float]</code></td>
+<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2672,7 +2745,7 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../functional/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../serialization/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2681,7 +2754,7 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
               <span class="md-footer__direction">
                 Previous
               </span>
-              Functional transforms (augmentations.functional)
+              Serialization API (core.serialization)
             </div>
           </div>
         </a>
@@ -2693,7 +2766,7 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
               <span class="md-footer__direction">
                 Next
               </span>
-              Helper functions for working with keypoints (augmentations.keypoints_utils)
+              Helper functions for working with keypoints (augmentations.core.keypoints_utils)
             </div>
           </div>
           <div class="md-footer__button md-icon">
