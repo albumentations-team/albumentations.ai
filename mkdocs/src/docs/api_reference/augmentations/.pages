@@ -7,5 +7,3 @@ nav:
   - geometric
   - domain_adaptation.md
   - functional.md
-  - bbox_utils.md
-  - keypoints_utils.md
