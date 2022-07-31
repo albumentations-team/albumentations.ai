@@ -1,3 +1,5 @@
 - [Composition API (albumentations.core.composition)](composition.md)
 - [Serialization API (albumentations.core.serialization)](serialization.md)
 - [Transforms Interface (albumentations.core.transforms_interface)](transforms_interface.md)
+- [Helper functions for working with bounding boxes (albumentations.core.bbox_utils)](bbox_utils.md)
+- [Helper functions for working with keypoints (albumentations.core.keypoints_utils)](keypoints_utils.md)

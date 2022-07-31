@@ -4,3 +4,5 @@ nav:
   - composition.md
   - transforms_interface.md
   - serialization.md
+  - bbox_utils.md
+  - keypoints_utils.md
