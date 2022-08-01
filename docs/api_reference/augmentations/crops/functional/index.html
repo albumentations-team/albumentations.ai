@@ -1914,7 +1914,7 @@ albumentations.augmentations.crops.functional.bbox_crop    (bbox, x_min, y_min, 
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -1988,7 +1988,7 @@ required height and width of the crop.</p>
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>A cropped box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2057,7 +2057,7 @@ required height and width of the crop.</p>
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2105,7 +2105,7 @@ albumentations.augmentations.crops.functional.keypoint_center_crop    (keypoint,
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2168,7 +2168,7 @@ albumentations.augmentations.crops.functional.keypoint_random_crop    (keypoint,
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>(tuple): A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>

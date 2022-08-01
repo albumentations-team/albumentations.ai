@@ -1647,6 +1647,19 @@
     albumentations.augmentations.geometric.transforms
   </a>
   
+    <nav class="md-nav" aria-label="albumentations.augmentations.geometric.transforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.augmentations.geometric.transforms.Flip.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1904,7 +1917,7 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L497" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L521" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2070,7 +2083,7 @@ albumentations.augmentations.geometric.transforms.ElasticTransform</strong></cod
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L155" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L179" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ElasticTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2155,6 +2168,338 @@ Default: cv2.BORDER_REFLECT_101</p></td>
 </div>
 </div>
 <div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="Flip" id="albumentations.augmentations.geometric.transforms.Flip">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.Flip</strong></code>
+<code>
+</code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1227" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Flip" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Flip the input either horizontally, vertically or both horizontally and vertically.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.geometric.transforms.Flip.apply">
+<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">augmentations</span><span class="o">.</span><span class="n">geometric</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Flip</span><span class="o">.</span><span class="n">apply</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+<a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Flip.apply" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<p>d (int): code that specifies how to flip the input. 0 for vertical flipping, 1 for horizontal flipping,
+        -1 for both vertical and horizontal flipping (which is also could be seen as rotating the input by
+        180 degrees).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="GridDistortion" id="albumentations.augmentations.geometric.transforms.GridDistortion">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.GridDistortion</strong></code>
+<code>
+
+
+    (num_steps=5, distort_limit=0.3, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1381" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.GridDistortion" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>num_steps</code></td>
+<td><code>int</code></td>
+<td><p>count of grid cells on each side.</p></td>
+</tr>
+<tr>
+<td><code>distort_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>If distort_limit is a single float, the range
+will be (-distort_limit, distort_limit). Default: (-0.03, 0.03).</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="HorizontalFlip" id="albumentations.augmentations.geometric.transforms.HorizontalFlip">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.HorizontalFlip</strong></code>
+<code>
+</code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1196" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.HorizontalFlip" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Flip the input horizontally around the y-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="OpticalDistortion" id="albumentations.augmentations.geometric.transforms.OpticalDistortion">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.OpticalDistortion</strong></code>
+<code>
+
+
+    (distort_limit=0.05, shift_limit=0.05, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1300" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.OpticalDistortion" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>distort_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>If distort_limit is a single float, the range
+will be (-distort_limit, distort_limit). Default: (-0.05, 0.05).</p></td>
+</tr>
+<tr>
+<td><code>shift_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>If shift_limit is a single float, the range
+will be (-shift_limit, shift_limit). Default: (-0.05, 0.05).</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bbox</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="PadIfNeeded" id="albumentations.augmentations.geometric.transforms.PadIfNeeded">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.PadIfNeeded</strong></code>
+<code>
+
+
+    (min_height=1024, min_width=1024, pad_height_divisor=None, pad_width_divisor=None, position=&lt;PositionType.CENTER: 'center'&gt;, border_mode=4, value=None, mask_value=None, always_apply=False, p=1.0)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L979" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PadIfNeeded" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Pad side of the image / max if side is less than desired number.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min_height</code></td>
+<td><code>int</code></td>
+<td><p>minimal result image height.</p></td>
+</tr>
+<tr>
+<td><code>min_width</code></td>
+<td><code>int</code></td>
+<td><p>minimal result image width.</p></td>
+</tr>
+<tr>
+<td><code>pad_height_divisor</code></td>
+<td><code>int</code></td>
+<td><p>if not None, ensures image height is dividable by value of this argument.</p></td>
+</tr>
+<tr>
+<td><code>pad_width_divisor</code></td>
+<td><code>int</code></td>
+<td><p>if not None, ensures image width is dividable by value of this argument.</p></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td><code>Union[str, PositionType]</code></td>
+<td><p>Position of the image. should be PositionType.CENTER or
+PositionType.TOP_LEFT or PositionType.TOP_RIGHT or PositionType.BOTTOM_LEFT or PositionType.BOTTOM_RIGHT.
+or PositionType.RANDOM. Default: PositionType.CENTER.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>OpenCV border mode.</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of int, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of int,
+        list of float</code></td>
+<td><p>padding value for mask if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bbox, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h3 class="doc doc-heading" data-toc-label="PositionType" id="albumentations.augmentations.geometric.transforms.PadIfNeeded.PositionType">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.PadIfNeeded.PositionType</strong></code>
+<code>
+</code> <a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PadIfNeeded.PositionType" title="Permanent link">¶</a>
+</h3>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>An enumeration.</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="Perspective" id="albumentations.augmentations.geometric.transforms.Perspective">
 <code>class <strong>
 albumentations.augmentations.geometric.transforms.Perspective</strong></code>
@@ -2165,7 +2510,7 @@ albumentations.augmentations.geometric.transforms.Perspective</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L254" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L278" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Perspective" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2247,7 +2592,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L799" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L823" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2368,7 +2713,7 @@ albumentations.augmentations.geometric.transforms.ShiftScaleRotate</strong></cod
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L57" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L81" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ShiftScaleRotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2462,6 +2807,80 @@ Default: "largest_box"</p></td>
 </tbody>
 </table> <p>Targets:
     image, mask, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="Transpose" id="albumentations.augmentations.geometric.transforms.Transpose">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.Transpose</strong></code>
+<code>
+</code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1262" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Transpose" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Transpose the input by swapping rows and columns.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes, keypoints</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="VerticalFlip" id="albumentations.augmentations.geometric.transforms.VerticalFlip">
+<code>class <strong>
+albumentations.augmentations.geometric.transforms.VerticalFlip</strong></code>
+<code>
+</code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1170" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.VerticalFlip" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Flip the input vertically around the x-axis.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
 <div class="doc doc-children">

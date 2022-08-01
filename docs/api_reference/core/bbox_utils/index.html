@@ -1969,7 +1969,7 @@ Default: <code>True</code></p></td>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L217" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L218" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Calculate the area of a bounding box in pixels.</p>
@@ -1985,7 +1985,7 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Sequence</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2010,8 +2010,8 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 </thead>
 <tbody>
 <tr>
-<td><code>float</code></td>
-<td><p>int: Area of a bounding box in pixels.</p></td>
+<td><code>int</code></td>
+<td><p>Area of a bounding box in pixels.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2022,7 +2022,7 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.check_bbox    (bbox)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L417" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L414" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bbox boundaries are in range 0, 1 and minimums are lesser then maximums</p>
@@ -2033,7 +2033,7 @@ albumentations.core.bbox_utils.check_bbox    (bbox)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.check_bboxes    (bboxes)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L432" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L426" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bboxes boundaries are in range 0, 1 and minimums are lesser then maximums</p>
@@ -2044,7 +2044,7 @@ albumentations.core.bbox_utils.check_bboxes    (bboxes)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L341" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L339" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a bounding box from the format used by albumentations to a format, specified in <code>target_format</code>.</p>
@@ -2060,8 +2060,8 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Sequence</code></td>
-<td><p>An albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><p>An albumentations bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
 <td><code>target_format</code></td>
@@ -2095,7 +2095,7 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>tuple: A bounding box.</p></td>
 </tr>
 </tbody>
@@ -2125,7 +2125,7 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bbox_to_albumentations    (bbox, source_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L275" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L276" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a bounding box from a format specified in <code>source_format</code> to the format used by albumentations:
@@ -2143,7 +2143,7 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Sequence</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>A bounding box tuple.</p></td>
 </tr>
 <tr>
@@ -2178,7 +2178,7 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2213,7 +2213,7 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bboxes_from_albumentations    (bboxes, target_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L397" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L394" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list of bounding boxes from the format used by albumentations to a format, specified
@@ -2230,7 +2230,7 @@ in <code>target_format</code>.</p>
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>List of albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2265,8 +2265,8 @@ in <code>target_format</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>List[Tuple]</code></td>
-<td><p>list[tuple]: List of bounding box.</p></td>
+<td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
+<td><p>List of bounding boxes.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2277,7 +2277,7 @@ in <code>target_format</code>.</p>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bboxes_to_albumentations    (bboxes, source_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L390" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L387" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list bounding boxes from a format specified in <code>source_format</code> to the format used by albumentations</p>
@@ -2288,7 +2288,7 @@ albumentations.core.bbox_utils.convert_bboxes_to_albumentations    (bboxes, sour
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.denormalize_bbox    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L158" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L159" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Denormalize coordinates of a bounding box. Multiply x-coordinates by image width and y-coordinates
@@ -2305,7 +2305,7 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Sequence</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2330,8 +2330,8 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple</code></td>
-<td><p>tuple: Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><p>Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2357,7 +2357,7 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L202" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L203" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Denormalize a list of bounding boxes.</p>
@@ -2373,7 +2373,7 @@ albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2398,8 +2398,8 @@ albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
 </thead>
 <tbody>
 <tr>
-<td><code>List[Tuple]</code></td>
-<td><p>List[tuple]: Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
+<td><p>List: Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2410,7 +2410,7 @@ albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.filter_bboxes    (bboxes, rows, cols, min_area=0.0, min_visibility=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L438" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L432" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Remove bounding boxes that either lie outside of the visible area by more then min_visibility
@@ -2427,7 +2427,7 @@ or whose area in pixels is under the threshold set by <code>min_area</code>. Als
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>List of albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2463,8 +2463,8 @@ is less than this value will be removed. Default: 0.0.</p></td>
 </thead>
 <tbody>
 <tr>
-<td><code>List[Tuple]</code></td>
-<td><p>List[tuple]: List of bounding box.</p></td>
+<td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
+<td><p>List of bounding boxes.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2475,7 +2475,7 @@ is less than this value will be removed. Default: 0.0.</p></td>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.filter_bboxes_by_visibility    (original_shape, bboxes, transformed_shape, transformed_bboxes, threshold=0.0, min_area=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L235" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L236" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Filter bounding boxes and return only those boxes whose visibility after transformation is above
@@ -2493,11 +2493,11 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 <tr>
 <td><code>original_shape</code></td>
 <td><code>Sequence[int]</code></td>
-<td><p>Original image shape <code>(height, width)</code>.</p></td>
+<td><p>Original image shape <code>(height, width, ...)</code>.</p></td>
 </tr>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>Original bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2507,7 +2507,7 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 </tr>
 <tr>
 <td><code>transformed_bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>Transformed bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2532,8 +2532,8 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 </thead>
 <tbody>
 <tr>
-<td><code>List[Sequence]</code></td>
-<td><p>List[tuple]: Filtered bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
+<td><p>Filtered bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2561,7 +2561,7 @@ by image height.</p>
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Sequence</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2586,8 +2586,8 @@ by image height.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple</code></td>
-<td><p>tuple: Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><p>Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2613,7 +2613,7 @@ by image height.</p>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L187" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L188" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Normalize a list of bounding boxes.</p>
@@ -2629,7 +2629,7 @@ albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 <tbody>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2654,8 +2654,8 @@ albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 </thead>
 <tbody>
 <tr>
-<td><code>List[Tuple]</code></td>
-<td><p>List[tuple]: Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
+<td><p>Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2666,7 +2666,7 @@ albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.union_of_bboxes    (height, width, bboxes, erosion_rate=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L470" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L464" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Calculate union of bounding boxes.</p>
@@ -2692,7 +2692,7 @@ albumentations.core.bbox_utils.union_of_bboxes    (height, width, bboxes, erosio
 </tr>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Sequence]</code></td>
+<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
 <td><p>List like bounding boxes. Format is <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2713,7 +2713,7 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
 <td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
