@@ -4,8 +4,6 @@
 #
 #    pip-compile
 #
-astunparse==1.6.3
-    # via pytkdocs
 async-generator==1.10
     # via nbclient
 attrs==21.2.0
@@ -18,8 +16,6 @@ bleach==3.3.0
     # via nbconvert
 bracex==2.1.1
     # via wcmatch
-cached-property==1.5.2
-    # via pytkdocs
 click==8.0.1
     # via
     #   mkdocs
@@ -30,11 +26,6 @@ entrypoints==0.3
     # via nbconvert
 future==0.18.2
     # via lunr
-importlib-metadata==4.5.0
-    # via
-    #   click
-    #   jsonschema
-    #   markdown
 ipython-genutils==0.2.0
     # via
     #   nbformat
@@ -117,7 +108,7 @@ mkdocstrings==0.15.1
     # via -r requirements.in
 nbclient==0.5.3
     # via nbconvert
-nbconvert==6.0.7
+nbconvert==6.3.0
     # via mkdocs-jupyter
 nbformat==5.1.3
     # via
@@ -165,7 +156,6 @@ regex==2021.4.4
     # via nltk
 six==1.16.0
     # via
-    #   astunparse
     #   bleach
     #   jsonschema
     #   livereload
@@ -193,19 +183,10 @@ traitlets==5.0.5
     #   nbclient
     #   nbconvert
     #   nbformat
-typing-extensions==3.10.0.0
-    # via
-    #   importlib-metadata
-    #   markdown-it-py
-    #   pytkdocs
 wcmatch==8.2
     # via mkdocs-awesome-pages-plugin
 webencodings==0.5.1
     # via bleach
-wheel==0.36.2
-    # via astunparse
-zipp==3.4.1
-    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
