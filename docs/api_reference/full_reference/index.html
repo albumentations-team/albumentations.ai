@@ -2265,6 +2265,13 @@
 <td align="center">✓</td>
 </tr>
 <tr>
+<td><a href="#albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop">BBoxSafeRandomCrop</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+</tr>
+<tr>
 <td><a href="#albumentations.augmentations.crops.transforms.CenterCrop">CenterCrop</a></td>
 <td align="center">✓</td>
 <td align="center">✓</td>
@@ -2876,6 +2883,53 @@ albumentations.augmentations.crops.functional.keypoint_random_crop    (keypoint,
 <div class="doc doc-contents">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="BBoxSafeRandomCrop" id="albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop">
+<code>class <strong>
+albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop</strong></code>
+<code>
+
+
+    (erosion_rate=0.0, always_apply=False, p=1.0)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L486" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Crop a random part of the input without loss of bboxes.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>erosion_rate</code></td>
+<td><code>float</code></td>
+<td><p>erosion rate applied on input image height before crop.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes
+Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
 <h5 class="doc doc-heading" data-toc-label="CenterCrop" id="albumentations.augmentations.crops.transforms.CenterCrop">
 <code>class <strong>
 albumentations.augmentations.crops.transforms.CenterCrop</strong></code>
@@ -2886,7 +2940,7 @@ albumentations.augmentations.crops.transforms.CenterCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L84" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L85" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CenterCrop" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -2942,7 +2996,7 @@ albumentations.augmentations.crops.transforms.Crop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L118" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L119" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.Crop" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -2999,7 +3053,7 @@ albumentations.augmentations.crops.transforms.CropAndPad</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L627" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L646" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CropAndPad" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3137,7 +3191,7 @@ albumentations.augmentations.crops.transforms.CropNonEmptyMaskIfExists</strong><
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L157" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L158" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CropNonEmptyMaskIfExists" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3201,7 +3255,7 @@ albumentations.augmentations.crops.transforms.RandomCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L43" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L44" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCrop" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3253,7 +3307,7 @@ albumentations.augmentations.crops.transforms.RandomCropFromBorders</strong></co
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L879" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L898" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCropFromBorders" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3315,7 +3369,7 @@ albumentations.augmentations.crops.transforms.RandomCropNearBBox</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L417" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L418" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCropNearBBox" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3375,7 +3429,7 @@ albumentations.augmentations.crops.transforms.RandomResizedCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L323" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L324" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomResizedCrop" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3444,7 +3498,7 @@ albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop</strong></
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L493" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L545" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3490,8 +3544,8 @@ Default: cv2.INTER_LINEAR.</p></td>
 </tr>
 </tbody>
 </table> <p>Targets:
-    image, mask, bboxes</p>
-<p>Image types:
+    image, mask, bboxes
+Image types:
     uint8, float32</p>
 <div class="doc doc-children">
 </div>
@@ -3508,7 +3562,7 @@ albumentations.augmentations.crops.transforms.RandomSizedCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L281" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L282" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomSizedCrop" title="Permanent link">¶</a>
 </h5>
 <div class="class-signature">
@@ -3585,7 +3639,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f9636928790&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f334621c940&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3651,7 +3705,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f9636928790&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f334621c940&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3718,7 +3772,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f9636928790&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f334621c940&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
