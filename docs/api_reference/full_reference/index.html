@@ -2205,6 +2205,7 @@
 <li><a href="#albumentations.augmentations.dropout.channel_dropout.ChannelDropout">ChannelDropout</a></li>
 <li><a href="#albumentations.augmentations.transforms.ChannelShuffle">ChannelShuffle</a></li>
 <li><a href="#albumentations.augmentations.transforms.ColorJitter">ColorJitter</a></li>
+<li><a href="#albumentations.augmentations.transforms.Defocus">Defocus</a></li>
 <li><a href="#albumentations.augmentations.transforms.Downscale">Downscale</a></li>
 <li><a href="#albumentations.augmentations.transforms.Emboss">Emboss</a></li>
 <li><a href="#albumentations.augmentations.transforms.Equalize">Equalize</a></li>
@@ -2244,6 +2245,7 @@
 <li><a href="#albumentations.augmentations.transforms.ToGray">ToGray</a></li>
 <li><a href="#albumentations.augmentations.transforms.ToSepia">ToSepia</a></li>
 <li><a href="#albumentations.augmentations.transforms.UnsharpMask">UnsharpMask</a></li>
+<li><a href="#albumentations.augmentations.transforms.ZoomBlur">ZoomBlur</a></li>
 </ul>
 <h2 id="spatial-level-transforms">Spatial-level transforms<a class="headerlink" href="#spatial-level-transforms" title="Permanent link">¶</a></h2>
 <p>Here is a table with spatial-level transforms and targets they support. If you try to apply a spatial-level transform to an unsupported target, Albumentations will raise an error.</p>
@@ -3640,7 +3642,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fe725abdaf0&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fec782add30&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3706,7 +3708,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fe725abdaf0&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fec782add30&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3773,7 +3775,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fe725abdaf0&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fec782add30&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4314,7 +4316,7 @@ Can be 'inpaint' to apply inpaining (works only  for 3-chahnel images)</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, haze_list)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L818" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_fog" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L821" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_fog" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Add fog to the image.</p>
@@ -4373,7 +4375,7 @@ albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, h
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_rain    (img, slant, drop_length, drop_width, drop_color, blur_value, brightness_coefficient, rain_drops)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L752" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_rain" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L755" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_rain" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
@@ -4451,7 +4453,7 @@ albumentations.augmentations.functional.add_rain    (img, slant, drop_length, dr
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_shadow    (img, vertices_list)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L925" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_shadow" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L928" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_shadow" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Add shadows to the image.</p>
@@ -4500,7 +4502,7 @@ albumentations.augmentations.functional.add_shadow    (img, vertices_list)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_snow    (img, snow_point, brightness_coeff)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L706" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_snow" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L709" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_snow" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Bleaches out pixels, imitation snow.</p>
@@ -4554,7 +4556,7 @@ albumentations.augmentations.functional.add_snow    (img, snow_point, brightness
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_sun_flare    (img, flare_center_x, flare_center_y, src_radius, src_color, circles)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L869" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_sun_flare" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L872" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_sun_flare" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Add sun flare.</p>
@@ -4623,7 +4625,7 @@ albumentations.augmentations.functional.add_sun_flare    (img, flare_center_x, f
 <code class="highlight language-python">def
 albumentations.augmentations.functional.bbox_from_mask    (mask)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1209" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.bbox_from_mask" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1212" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.bbox_from_mask" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Create bounding box from binary mask (fast version)</p>
@@ -4666,7 +4668,7 @@ albumentations.augmentations.functional.bbox_from_mask    (mask)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.ensure_contiguous    (func)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L161" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.ensure_contiguous" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L164" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.ensure_contiguous" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Ensure that input img is contiguous.</p>
@@ -4677,7 +4679,7 @@ albumentations.augmentations.functional.ensure_contiguous    (func)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.equalize    (img, mask=None, mode='cv', by_channels=True)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L478" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.equalize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L481" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.equalize" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Equalize the image histogram.</p>
@@ -4737,7 +4739,7 @@ else convert image to YCbCr representation and use equalization by <code>Y</code
 <code class="highlight language-python">def
 albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1246" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.fancy_pca" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1249" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.fancy_pca" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Perform 'Fancy PCA' augmentation from:
@@ -4787,7 +4789,7 @@ albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.get_opencv_dtype_from_numpy    (value)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L103" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.get_opencv_dtype_from_numpy" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L106" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.get_opencv_dtype_from_numpy" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Return a corresponding OpenCV dtype for a numpy's dtype
@@ -4801,7 +4803,7 @@ albumentations.augmentations.functional.get_opencv_dtype_from_numpy    (value)
 albumentations.augmentations.functional.iso_noise    (image, color_shift=0.05, intensity=0.5, random_state=None, **
 kwargs)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1039" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.iso_noise" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1042" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.iso_noise" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Apply poisson noise to image to simulate camera sensor noise.</p>
@@ -4865,7 +4867,7 @@ kwargs)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1228" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.mask_from_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1231" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.mask_from_bbox" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Create binary mask from bounding box</p>
@@ -4913,7 +4915,7 @@ albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.move_tone_curve    (img, low_y, high_y)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L539" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.move_tone_curve" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L542" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.move_tone_curve" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Rescales the relationship between bright and dark areas of the image by manipulating its tone curve.</p>
@@ -4953,7 +4955,7 @@ to adjust image tone curve, must be in range [0, 1]</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.functional.multiply    (img, multiplier)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1190" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.multiply" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1193" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.multiply" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -5000,7 +5002,7 @@ albumentations.augmentations.functional.multiply    (img, multiplier)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.posterize    (img, bits)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L380" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.posterize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L383" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.posterize" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Reduce the number of bits for each color channel.</p>
@@ -5048,7 +5050,7 @@ albumentations.augmentations.functional.posterize    (img, bits)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.preserve_channel_dim    (func)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L144" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.preserve_channel_dim" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L147" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.preserve_channel_dim" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Preserve dummy channel dim.</p>
@@ -5059,7 +5061,7 @@ albumentations.augmentations.functional.preserve_channel_dim    (func)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.preserve_shape    (func)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L128" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.preserve_shape" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L131" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.preserve_shape" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Preserve shape of the image</p>
@@ -5070,7 +5072,7 @@ albumentations.augmentations.functional.preserve_shape    (func)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.solarize    (img, threshold=128)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L350" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.solarize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L353" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.solarize" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Invert all pixel values above a threshold.</p>
@@ -5118,7 +5120,7 @@ albumentations.augmentations.functional.solarize    (img, threshold=128)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.swap_tiles_on_image    (image, tiles)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1130" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.swap_tiles_on_image" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1133" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.swap_tiles_on_image" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Swap tiles on image.</p>
@@ -5187,7 +5189,7 @@ height_tile, width_tile)</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L906" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_flip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L892" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_flip" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Flip a bounding box either vertically, horizontally or both depending on the value of <code>d</code>.</p>
@@ -5260,7 +5262,7 @@ albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, c
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L890" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_hflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L876" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_hflip" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Flip a bounding box horizontally around the y-axis.</p>
@@ -5313,7 +5315,7 @@ albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, col
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L72" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rot90" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L74" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rot90" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Rotates a bounding box by 90 degrees CCW (see np.rot90)</p>
@@ -5371,7 +5373,7 @@ albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, r
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, method, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L148" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rotate" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L150" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rotate" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Rotates a bounding box by angle degrees.</p>
@@ -5436,7 +5438,7 @@ albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, m
 albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate    (bbox, angle, scale, dx, dy, rotate_method, rows, cols, **
 kwargs)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L250" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L252" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Rotates, shifts and scales a bounding box. Rotation is made by angle degrees,
@@ -5516,7 +5518,7 @@ Default: "largest_box".</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L934" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_transpose" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L920" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_transpose" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Transposes a bounding box along given axis.</p>
@@ -5589,7 +5591,7 @@ albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis,
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L874" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_vflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L860" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_vflip" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Flip a bounding box vertically around the x-axis.</p>
@@ -5642,7 +5644,7 @@ albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, col
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.elastic_transform    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None, approximate=False, same_dxdy=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L296" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L298" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Elastic deformation of images as described in [Simard2003]_ (with modifications).
@@ -5658,7 +5660,7 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.elastic_transform_approx    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1202" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform_approx" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1188" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform_approx" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Elastic deformation of images as described in [Simard2003]_ (with modifications for speed).
@@ -5674,7 +5676,7 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.from_distance_maps    (distance_maps, inverted, if_not_found_coords, threshold=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L731" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.from_distance_maps" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L717" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.from_distance_maps" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Convert outputs of <code>to_distance_maps()</code> to <code>KeypointsOnImage</code>.
@@ -5734,7 +5736,7 @@ to <code>(height, width)</code>, otherwise <code>(height, width, nb_channels)</c
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.grid_distortion    (img, num_steps=10, xsteps=(), ysteps=(), interpolation=1, border_mode=4, value=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1138" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.grid_distortion" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1124" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.grid_distortion" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Perform a grid distortion of an input image.</p>
@@ -5747,7 +5749,7 @@ albumentations.augmentations.geometric.functional.grid_distortion    (img, num_s
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L996" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_flip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L982" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_flip" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Flip a keypoint either vertically, horizontally or both depending on the value of <code>d</code>.</p>
@@ -5823,7 +5825,7 @@ albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d,
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L978" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_hflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L964" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_hflip" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Flip a keypoint horizontally around the y-axis.</p>
@@ -5877,7 +5879,7 @@ albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, r
 albumentations.augmentations.geometric.functional.keypoint_rot90    (keypoint, factor, rows, cols, **
 params)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L97" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rot90" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L99" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rot90" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Rotates a keypoint by 90 degrees CCW (see np.rot90)</p>
@@ -5951,7 +5953,7 @@ params)
 albumentations.augmentations.geometric.functional.keypoint_rotate    (keypoint, angle, rows, cols, **
 params)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L190" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rotate" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L192" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rotate" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Rotate a keypoint by angle.</p>
@@ -6009,7 +6011,7 @@ params)
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, scale_x, scale_y)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L396" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_scale" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L382" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_scale" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Scales a keypoint by scale_x and scale_y.</p>
@@ -6062,7 +6064,7 @@ albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, s
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoint)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1027" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_transpose" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1013" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_transpose" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Rotate a keypoint by angle.</p>
@@ -6105,7 +6107,7 @@ albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoin
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L960" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_vflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L946" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_vflip" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Flip a keypoint vertically around the x-axis.</p>
@@ -6158,7 +6160,7 @@ albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, r
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.optical_distortion    (img, k=0, dx=0, dy=0, interpolation=1, border_mode=4, value=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1105" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.optical_distortion" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1091" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.optical_distortion" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Barrel / pincushion distortion. Unconventional augment.</p>
@@ -6174,7 +6176,7 @@ albumentations.augmentations.geometric.functional.optical_distortion    (img, k=
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.py3round    (number)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L412" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.py3round" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L398" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.py3round" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Unified rounding in all python versions.</p>
@@ -6185,7 +6187,7 @@ albumentations.augmentations.geometric.functional.py3round    (number)
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles    (matrix, y_up=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L494" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L480" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -6217,7 +6219,7 @@ albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles 
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.to_distance_maps    (keypoints, height, width, inverted=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L687" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.to_distance_maps" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L673" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.to_distance_maps" title="Permanent link">¶</a>
 </h5>
 <div class="doc doc-contents">
 <p>Generate a <code>(H,W,N)</code> array of distance maps for <code>N</code> keypoints.</p>
@@ -7765,7 +7767,7 @@ albumentations.augmentations.transforms.AdvancedBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2554" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2557" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.AdvancedBlur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -7850,7 +7852,7 @@ albumentations.augmentations.transforms.Blur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1199" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1202" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Blur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -7893,7 +7895,7 @@ Should be in range [3, inf). Default: (3, 7).</p></td>
 albumentations.augmentations.transforms.ChannelShuffle</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1518" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1521" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ChannelShuffle" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -7935,7 +7937,7 @@ albumentations.augmentations.transforms.CLAHE</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1483" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1486" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.CLAHE" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -7988,7 +7990,7 @@ albumentations.augmentations.transforms.ColorJitter</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2050" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2053" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ColorJitter" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8043,6 +8045,60 @@ Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p></td
 </div>
 </div>
 <div class="doc doc-object doc-class">
+<h4 class="doc doc-heading" data-toc-label="Defocus" id="albumentations.augmentations.transforms.Defocus">
+<code>class <strong>
+albumentations.augmentations.transforms.Defocus</strong></code>
+<code>
+
+
+    (radius=(3, 10), alias_blur=(0.1, 0.5), always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2881" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.transforms.Defocus" title="Permanent link">¶</a>
+</h4>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply defocus transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>radius</code></td>
+<td><code>[int, int] or int</code></td>
+<td><p>range for radius of defocusing.
+If limit is a single int, the range will be [1, limit]. Default: (3, 10).</p></td>
+</tr>
+<tr>
+<td><code>alias_blur</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>range for alias_blur of defocusing (sigma of gaussian blur).
+If limit is a single float, the range will be (0, limit). Default: (0.1, 0.5).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    Any</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
 <h4 class="doc doc-heading" data-toc-label="Downscale" id="albumentations.augmentations.transforms.Downscale">
 <code>class <strong>
 albumentations.augmentations.transforms.Downscale</strong></code>
@@ -8053,7 +8109,7 @@ albumentations.augmentations.transforms.Downscale</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1725" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1728" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Downscale" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8109,7 +8165,7 @@ albumentations.augmentations.transforms.Emboss</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2179" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2182" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Emboss" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8160,7 +8216,7 @@ albumentations.augmentations.transforms.Equalize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1003" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1006" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Equalize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8220,7 +8276,7 @@ albumentations.augmentations.transforms.FancyPCA</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1949" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1952" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.FancyPCA" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8268,7 +8324,7 @@ albumentations.augmentations.transforms.FromFloat</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1689" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1692" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.FromFloat" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8326,7 +8382,7 @@ albumentations.augmentations.transforms.GaussianBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1335" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1338" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.GaussianBlur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8384,7 +8440,7 @@ albumentations.augmentations.transforms.GaussNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1384" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1387" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.GaussNoise" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8443,7 +8499,7 @@ albumentations.augmentations.transforms.GlassBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1986" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1989" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.GlassBlur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8509,7 +8565,7 @@ albumentations.augmentations.transforms.HueSaturationValue</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L881" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L884" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.HueSaturationValue" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8569,7 +8625,7 @@ albumentations.augmentations.transforms.ImageCompression</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L246" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L249" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ImageCompression" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8634,7 +8690,7 @@ albumentations.augmentations.transforms.ImageCompression.ImageCompressionType</s
 albumentations.augmentations.transforms.InvertImg</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1544" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1547" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.InvertImg" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8676,7 +8732,7 @@ albumentations.augmentations.transforms.ISONoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1448" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1451" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ISONoise" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8730,7 +8786,7 @@ albumentations.augmentations.transforms.JpegCompression</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L308" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L311" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.JpegCompression" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8777,7 +8833,7 @@ albumentations.augmentations.transforms.Lambda</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1799" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1802" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Lambda" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8845,7 +8901,7 @@ albumentations.augmentations.transforms.MedianBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1304" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1307" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.MedianBlur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8893,7 +8949,7 @@ albumentations.augmentations.transforms.MotionBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1230" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1233" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.MotionBlur" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8947,7 +9003,7 @@ albumentations.augmentations.transforms.MultiplicativeNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1881" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1884" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.MultiplicativeNoise" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9002,7 +9058,7 @@ albumentations.augmentations.transforms.Normalize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L204" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L207" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Normalize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9054,7 +9110,7 @@ albumentations.augmentations.transforms.PixelDropout</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2663" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2666" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.PixelDropout" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9124,7 +9180,7 @@ albumentations.augmentations.transforms.Posterize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L961" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L964" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Posterize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9175,7 +9231,7 @@ albumentations.augmentations.transforms.RandomBrightness</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1147" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1150" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightness" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9223,7 +9279,7 @@ albumentations.augmentations.transforms.RandomBrightnessContrast</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1106" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1109" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightnessContrast" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9283,7 +9339,7 @@ albumentations.augmentations.transforms.RandomContrast</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1173" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1176" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomContrast" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9331,7 +9387,7 @@ albumentations.augmentations.transforms.RandomFog</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L520" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L523" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomFog" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9384,7 +9440,7 @@ albumentations.augmentations.transforms.RandomGamma</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1565" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1568" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGamma" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9431,7 +9487,7 @@ albumentations.augmentations.transforms.RandomGridShuffle</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L93" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L96" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGridShuffle" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9473,7 +9529,7 @@ albumentations.augmentations.transforms.RandomRain</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L400" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L403" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomRain" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9551,7 +9607,7 @@ albumentations.augmentations.transforms.RandomShadow</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L754" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L757" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomShadow" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9612,7 +9668,7 @@ albumentations.augmentations.transforms.RandomSnow</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L345" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L348" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomSnow" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9665,7 +9721,7 @@ albumentations.augmentations.transforms.RandomSunFlare</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L603" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L606" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomSunFlare" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9741,7 +9797,7 @@ albumentations.augmentations.transforms.RandomToneCurve</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L840" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L843" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomToneCurve" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9785,7 +9841,7 @@ albumentations.augmentations.transforms.RGBShift</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1058" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1061" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RGBShift" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9845,7 +9901,7 @@ albumentations.augmentations.transforms.RingingOvershoot</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2404" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2407" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RingingOvershoot" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9901,7 +9957,7 @@ albumentations.augmentations.transforms.Sharpen</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2131" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2134" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Sharpen" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9952,7 +10008,7 @@ albumentations.augmentations.transforms.Solarize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L925" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L928" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Solarize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10000,7 +10056,7 @@ albumentations.augmentations.transforms.Spatter</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2770" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2773" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Spatter" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10087,7 +10143,7 @@ albumentations.augmentations.transforms.Superpixels</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2260" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2263" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Superpixels" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10176,7 +10232,7 @@ albumentations.augmentations.transforms.TemplateTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2310" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2313" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.TemplateTransform" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10247,7 +10303,7 @@ albumentations.augmentations.transforms.ToFloat</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1655" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1658" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToFloat" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10293,7 +10349,7 @@ image.</p>
 albumentations.augmentations.transforms.ToGray</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1594" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1597" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToGray" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10336,7 +10392,7 @@ albumentations.augmentations.transforms.ToSepia</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1620" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1623" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToSepia" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10378,7 +10434,7 @@ albumentations.augmentations.transforms.UnsharpMask</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2478" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2481" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.UnsharpMask" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10435,6 +10491,62 @@ Must be in range [0, 255]. Default: 10.</p></td>
     arxiv.org/pdf/2107.10833.pdf</p>
 <p>Targets:
     image</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h4 class="doc doc-heading" data-toc-label="ZoomBlur" id="albumentations.augmentations.transforms.ZoomBlur">
+<code>class <strong>
+albumentations.augmentations.transforms.ZoomBlur</strong></code>
+<code>
+
+
+    (max_factor=1.31, step_factor=(0.01, 0.03), always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2931" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.transforms.ZoomBlur" title="Permanent link">¶</a>
+</h4>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply zoom blur transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_factor</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>range for max factor for blurring.
+If max_factor is a single float, the range will be (1, limit). Default: (1, 1.31).
+All max_factor values should be larger than 1.</p></td>
+</tr>
+<tr>
+<td><code>step_factor</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>If single float will be used as step parameter for np.arange.
+If tuple of float step_factor will be in range <code>[step_factor[0], step_factor[1])</code>. Default: (0.01, 0.03).
+All step_factor values should be positive.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    Any</p>
 <div class="doc doc-children">
 </div>
 </div>
