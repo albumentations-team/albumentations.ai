@@ -1898,7 +1898,7 @@
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L892" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_flip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L912" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_flip" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Flip a bounding box either vertically, horizontally or both depending on the value of <code>d</code>.</p>
@@ -1914,7 +1914,7 @@ albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, c
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -1944,7 +1944,7 @@ albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, c
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -1971,7 +1971,7 @@ albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, c
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L876" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_hflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L896" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_hflip" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Flip a bounding box horizontally around the y-axis.</p>
@@ -1987,7 +1987,7 @@ albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, col
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2012,7 +2012,7 @@ albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, col
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2024,7 +2024,7 @@ albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, col
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L74" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rot90" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L78" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rot90" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rotates a bounding box by 90 degrees CCW (see np.rot90)</p>
@@ -2040,7 +2040,7 @@ albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, r
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box tuple (x_min, y_min, x_max, y_max).</p></td>
 </tr>
 <tr>
@@ -2070,7 +2070,7 @@ albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, r
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>tuple: A bounding box tuple (x_min, y_min, x_max, y_max).</p></td>
 </tr>
 </tbody>
@@ -2082,7 +2082,7 @@ albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, r
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, method, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L150" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rotate" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L154" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rotate" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rotates a bounding box by angle degrees.</p>
@@ -2098,7 +2098,7 @@ albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, m
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2133,7 +2133,7 @@ albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, m
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2147,7 +2147,7 @@ albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, m
 albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate    (bbox, angle, scale, dx, dy, rotate_method, rows, cols, **
 kwargs)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L252" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L256" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rotates, shifts and scales a bounding box. Rotation is made by angle degrees,
@@ -2227,7 +2227,7 @@ Default: "largest_box".</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L920" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_transpose" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L940" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_transpose" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Transposes a bounding box along given axis.</p>
@@ -2243,7 +2243,7 @@ albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis,
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2273,7 +2273,7 @@ albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis,
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box tuple <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2300,7 +2300,7 @@ albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis,
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L860" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_vflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L880" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_vflip" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Flip a bounding box vertically around the x-axis.</p>
@@ -2316,7 +2316,7 @@ albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, col
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
@@ -2341,7 +2341,7 @@ albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, col
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2353,7 +2353,7 @@ albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, col
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.elastic_transform    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None, approximate=False, same_dxdy=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L298" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L302" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Elastic deformation of images as described in [Simard2003]_ (with modifications).
@@ -2369,7 +2369,7 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.elastic_transform_approx    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1188" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform_approx" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1210" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform_approx" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Elastic deformation of images as described in [Simard2003]_ (with modifications for speed).
@@ -2385,7 +2385,7 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.from_distance_maps    (distance_maps, inverted, if_not_found_coords, threshold=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L717" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.from_distance_maps" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L737" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.from_distance_maps" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert outputs of <code>to_distance_maps()</code> to <code>KeypointsOnImage</code>.
@@ -2445,7 +2445,7 @@ to <code>(height, width)</code>, otherwise <code>(height, width, nb_channels)</c
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.grid_distortion    (img, num_steps=10, xsteps=(), ysteps=(), interpolation=1, border_mode=4, value=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1124" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.grid_distortion" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1146" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.grid_distortion" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Perform a grid distortion of an input image.</p>
@@ -2458,7 +2458,7 @@ albumentations.augmentations.geometric.functional.grid_distortion    (img, num_s
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L982" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_flip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1004" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_flip" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Flip a keypoint either vertically, horizontally or both depending on the value of <code>d</code>.</p>
@@ -2474,7 +2474,7 @@ albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d,
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2507,7 +2507,7 @@ albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d,
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2534,7 +2534,7 @@ albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d,
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L964" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_hflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L986" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_hflip" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Flip a keypoint horizontally around the y-axis.</p>
@@ -2550,7 +2550,7 @@ albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, r
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2575,7 +2575,7 @@ albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, r
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2588,7 +2588,7 @@ albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, r
 albumentations.augmentations.geometric.functional.keypoint_rot90    (keypoint, factor, rows, cols, **
 params)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L99" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rot90" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L103" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rot90" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rotates a keypoint by 90 degrees CCW (see np.rot90)</p>
@@ -2604,7 +2604,7 @@ params)
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2634,7 +2634,7 @@ params)
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>tuple: A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2662,7 +2662,7 @@ params)
 albumentations.augmentations.geometric.functional.keypoint_rotate    (keypoint, angle, rows, cols, **
 params)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L192" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rotate" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L196" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rotate" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rotate a keypoint by angle.</p>
@@ -2720,7 +2720,7 @@ params)
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, scale_x, scale_y)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L382" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_scale" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L402" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_scale" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Scales a keypoint by scale_x and scale_y.</p>
@@ -2736,7 +2736,7 @@ albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, s
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2761,7 +2761,7 @@ albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, s
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2773,7 +2773,7 @@ albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, s
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoint)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1013" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_transpose" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1035" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_transpose" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rotate a keypoint by angle.</p>
@@ -2789,7 +2789,7 @@ albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoin
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2804,7 +2804,7 @@ albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoin
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2816,7 +2816,7 @@ albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoin
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L946" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_vflip" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L968" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_vflip" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Flip a keypoint vertically around the x-axis.</p>
@@ -2832,7 +2832,7 @@ albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, r
 <tbody>
 <tr>
 <td><code>keypoint</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 <tr>
@@ -2857,7 +2857,7 @@ albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, r
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>tuple: A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2869,7 +2869,7 @@ albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, r
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.optical_distortion    (img, k=0, dx=0, dy=0, interpolation=1, border_mode=4, value=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1091" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.optical_distortion" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1113" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.optical_distortion" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Barrel / pincushion distortion. Unconventional augment.</p>
@@ -2885,7 +2885,7 @@ albumentations.augmentations.geometric.functional.optical_distortion    (img, k=
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.py3round    (number)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L398" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.py3round" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L418" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.py3round" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Unified rounding in all python versions.</p>
@@ -2896,7 +2896,7 @@ albumentations.augmentations.geometric.functional.py3round    (number)
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles    (matrix, y_up=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L480" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L500" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -2928,7 +2928,7 @@ albumentations.augmentations.geometric.functional.rotation2DMatrixToEulerAngles 
 <code class="highlight language-python">def
 albumentations.augmentations.geometric.functional.to_distance_maps    (keypoints, height, width, inverted=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L673" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.to_distance_maps" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L693" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.to_distance_maps" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Generate a <code>(H,W,N)</code> array of distance maps for <code>N</code> keypoints.</p>
