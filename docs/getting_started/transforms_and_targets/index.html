@@ -1896,13 +1896,13 @@
 <h2 id="pixel-level-transforms">Pixel-level transforms<a class="headerlink" href="#pixel-level-transforms" title="Permanent link">¶</a></h2>
 <p>Here is a list of all available pixel-level transforms. You can apply a pixel-level transform to any target, and under the hood, the transform will change only the input image and return any other input targets such as masks, bounding boxes, or keypoints unchanged.</p>
 <ul>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.AdvancedBlur">AdvancedBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Blur">Blur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.AdvancedBlur">AdvancedBlur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.Blur">Blur</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CLAHE">CLAHE</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/dropout/channel_dropout/#albumentations.augmentations.dropout.channel_dropout.ChannelDropout">ChannelDropout</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">ChannelShuffle</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ColorJitter">ColorJitter</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Defocus">Defocus</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.Defocus">Defocus</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Downscale">Downscale</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Emboss">Emboss</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Equalize">Equalize</a></li>
@@ -1910,15 +1910,15 @@
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FancyPCA">FancyPCA</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FromFloat">FromFloat</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise">GaussNoise</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur">GaussianBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GlassBlur">GlassBlur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.GaussianBlur">GaussianBlur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.GlassBlur">GlassBlur</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.HistogramMatching">HistogramMatching</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue">HueSaturationValue</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ISONoise">ISONoise</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">ImageCompression</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">InvertImg</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MedianBlur">MedianBlur</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MotionBlur">MotionBlur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.MedianBlur">MedianBlur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.MotionBlur">MotionBlur</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MultiplicativeNoise">MultiplicativeNoise</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Normalize">Normalize</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/#albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation">PixelDistributionAdaptation</a></li>
@@ -1942,7 +1942,7 @@
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToGray">ToGray</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToSepia">ToSepia</a></li>
 <li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.UnsharpMask">UnsharpMask</a></li>
-<li><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ZoomBlur">ZoomBlur</a></li>
+<li><a href="https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/#albumentations.augmentations.blur.transforms.ZoomBlur">ZoomBlur</a></li>
 </ul>
 <h2 id="spatial-level-transforms">Spatial-level transforms<a class="headerlink" href="#spatial-level-transforms" title="Permanent link">¶</a></h2>
 <p>Here is a table with spatial-level transforms and targets they support. If you try to apply a spatial-level transform to an unsupported target, Albumentations will raise an error.</p>

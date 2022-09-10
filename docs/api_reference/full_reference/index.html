@@ -1196,6 +1196,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#albumentations.augmentations.blur" class="md-nav__link">
+    blur
+  </a>
+  
+    <nav class="md-nav" aria-label="blur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.augmentations.blur.transforms" class="md-nav__link">
+    transforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#albumentations.augmentations.crops" class="md-nav__link">
     crops
   </a>
@@ -2206,13 +2226,13 @@
 <h2 id="pixel-level-transforms">Pixel-level transforms<a class="headerlink" href="#pixel-level-transforms" title="Permanent link">¶</a></h2>
 <p>Here is a list of all available pixel-level transforms. You can apply a pixel-level transform to any target, and under the hood, the transform will change only the input image and return any other input targets such as masks, bounding boxes, or keypoints unchanged.</p>
 <ul>
-<li><a href="#albumentations.augmentations.transforms.AdvancedBlur">AdvancedBlur</a></li>
-<li><a href="#albumentations.augmentations.transforms.Blur">Blur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.AdvancedBlur">AdvancedBlur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.Blur">Blur</a></li>
 <li><a href="#albumentations.augmentations.transforms.CLAHE">CLAHE</a></li>
 <li><a href="#albumentations.augmentations.dropout.channel_dropout.ChannelDropout">ChannelDropout</a></li>
 <li><a href="#albumentations.augmentations.transforms.ChannelShuffle">ChannelShuffle</a></li>
 <li><a href="#albumentations.augmentations.transforms.ColorJitter">ColorJitter</a></li>
-<li><a href="#albumentations.augmentations.transforms.Defocus">Defocus</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.Defocus">Defocus</a></li>
 <li><a href="#albumentations.augmentations.transforms.Downscale">Downscale</a></li>
 <li><a href="#albumentations.augmentations.transforms.Emboss">Emboss</a></li>
 <li><a href="#albumentations.augmentations.transforms.Equalize">Equalize</a></li>
@@ -2220,15 +2240,15 @@
 <li><a href="#albumentations.augmentations.transforms.FancyPCA">FancyPCA</a></li>
 <li><a href="#albumentations.augmentations.transforms.FromFloat">FromFloat</a></li>
 <li><a href="#albumentations.augmentations.transforms.GaussNoise">GaussNoise</a></li>
-<li><a href="#albumentations.augmentations.transforms.GaussianBlur">GaussianBlur</a></li>
-<li><a href="#albumentations.augmentations.transforms.GlassBlur">GlassBlur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.GaussianBlur">GaussianBlur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.GlassBlur">GlassBlur</a></li>
 <li><a href="#albumentations.augmentations.domain_adaptation.HistogramMatching">HistogramMatching</a></li>
 <li><a href="#albumentations.augmentations.transforms.HueSaturationValue">HueSaturationValue</a></li>
 <li><a href="#albumentations.augmentations.transforms.ISONoise">ISONoise</a></li>
 <li><a href="#albumentations.augmentations.transforms.ImageCompression">ImageCompression</a></li>
 <li><a href="#albumentations.augmentations.transforms.InvertImg">InvertImg</a></li>
-<li><a href="#albumentations.augmentations.transforms.MedianBlur">MedianBlur</a></li>
-<li><a href="#albumentations.augmentations.transforms.MotionBlur">MotionBlur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.MedianBlur">MedianBlur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.MotionBlur">MotionBlur</a></li>
 <li><a href="#albumentations.augmentations.transforms.MultiplicativeNoise">MultiplicativeNoise</a></li>
 <li><a href="#albumentations.augmentations.transforms.Normalize">Normalize</a></li>
 <li><a href="#albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation">PixelDistributionAdaptation</a></li>
@@ -2252,7 +2272,7 @@
 <li><a href="#albumentations.augmentations.transforms.ToGray">ToGray</a></li>
 <li><a href="#albumentations.augmentations.transforms.ToSepia">ToSepia</a></li>
 <li><a href="#albumentations.augmentations.transforms.UnsharpMask">UnsharpMask</a></li>
-<li><a href="#albumentations.augmentations.transforms.ZoomBlur">ZoomBlur</a></li>
+<li><a href="#albumentations.augmentations.blur.transforms.ZoomBlur">ZoomBlur</a></li>
 </ul>
 <h2 id="spatial-level-transforms">Spatial-level transforms<a class="headerlink" href="#spatial-level-transforms" title="Permanent link">¶</a></h2>
 <p>Here is a table with spatial-level transforms and targets they support. If you try to apply a spatial-level transform to an unsupported target, Albumentations will raise an error.</p>
@@ -2541,6 +2561,496 @@
 <a class="headerlink" href="#albumentations.augmentations" title="Permanent link">¶</a></h2>
 <div class="doc doc-contents">
 <div class="doc doc-children">
+<div class="doc doc-object doc-module">
+<h3 class="doc doc-heading" id="albumentations.augmentations.blur">
+<code>albumentations.augmentations.blur</code>
+<span class="doc doc-properties">
+<small class="doc doc-property doc-property-special"><code>special</code></small>
+</span>
+<a class="headerlink" href="#albumentations.augmentations.blur" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<div class="doc doc-children">
+<div class="doc doc-object doc-module">
+<h4 class="doc doc-heading" id="albumentations.augmentations.blur.transforms">
+<code>albumentations.augmentations.blur.transforms</code>
+<a class="headerlink" href="#albumentations.augmentations.blur.transforms" title="Permanent link">¶</a></h4>
+<div class="doc doc-contents">
+<div class="doc doc-children">
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="AdvancedBlur" id="albumentations.augmentations.blur.transforms.AdvancedBlur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.AdvancedBlur</strong></code>
+<code>
+
+
+    (blur_limit=(3, 7), sigmaX_limit=(0.2, 1.0), sigmaY_limit=(0.2, 1.0), rotate_limit=90, beta_limit=(0.5, 8.0), noise_limit=(0.9, 1.1), always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L306" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.AdvancedBlur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Blur the input image using a Generalized Normal filter with a randomly selected parameters.
+    This transform also adds multiplicative noise to generated kernel before convolution.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td></td>
+<td><p>maximum Gaussian kernel size for blurring the input image.
+Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma
+as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
+If set single value <code>blur_limit</code> will be in range (0, blur_limit).
+Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>sigmaX_limit</code></td>
+<td></td>
+<td><p>Gaussian kernel standard deviation. Must be in range [0, inf).
+If set single value <code>sigmaX_limit</code> will be in range (0, sigma_limit).
+If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. Default: 0.</p></td>
+</tr>
+<tr>
+<td><code>sigmaY_limit</code></td>
+<td></td>
+<td><p>Same as <code>sigmaY_limit</code> for another dimension.</p></td>
+</tr>
+<tr>
+<td><code>rotate_limit</code></td>
+<td></td>
+<td><p>Range from which a random angle used to rotate Gaussian kernel is picked.
+If limit is a single int an angle is picked from (-rotate_limit, rotate_limit). Default: (-90, 90).</p></td>
+</tr>
+<tr>
+<td><code>beta_limit</code></td>
+<td></td>
+<td><p>Distribution shape parameter, 1 is the normal distribution. Values below 1.0 make distribution
+tails heavier than normal, values above 1.0 make it lighter than normal. Default: (0.5, 8.0).</p></td>
+</tr>
+<tr>
+<td><code>noise_limit</code></td>
+<td></td>
+<td><p>Multiplicative factor that control strength of kernel noise. Must be positive and preferably
+centered around 1.0. If set single value <code>noise_limit</code> will be in range (0, noise_limit).
+Default: (0.75, 1.25).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Reference:
+    <a href="https://arxiv.org/abs/2107.10833" target="_blank">https://arxiv.org/abs/2107.10833</a></p>
+<p>Targets:
+    image
+Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="Blur" id="albumentations.augmentations.blur.transforms.Blur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.Blur</strong></code>
+<code>
+
+
+    (blur_limit=7, always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L36" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.Blur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Blur the input image using a random-sized kernel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int, [int, int]</code></td>
+<td><p>maximum kernel size for blurring the input image.
+Should be in range [3, inf). Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="Defocus" id="albumentations.augmentations.blur.transforms.Defocus">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.Defocus</strong></code>
+<code>
+
+
+    (radius=(3, 10), alias_blur=(0.1, 0.5), always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L410" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.Defocus" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply defocus transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>radius</code></td>
+<td><code>[int, int] or int</code></td>
+<td><p>range for radius of defocusing.
+If limit is a single int, the range will be [1, limit]. Default: (3, 10).</p></td>
+</tr>
+<tr>
+<td><code>alias_blur</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>range for alias_blur of defocusing (sigma of gaussian blur).
+If limit is a single float, the range will be (0, limit). Default: (0.1, 0.5).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    Any</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="GaussianBlur" id="albumentations.augmentations.blur.transforms.GaussianBlur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.GaussianBlur</strong></code>
+<code>
+
+
+    (blur_limit=(3, 7), sigma_limit=0, always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L171" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.GaussianBlur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Blur the input image using a Gaussian filter with a random kernel size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int, [int, int]</code></td>
+<td><p>maximum Gaussian kernel size for blurring the input image.
+Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma
+as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
+If set single value <code>blur_limit</code> will be in range (0, blur_limit).
+Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>sigma_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>Gaussian kernel standard deviation. Must be in range [0, inf).
+If set single value <code>sigma_limit</code> will be in range (0, sigma_limit).
+If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. Default: 0.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="GlassBlur" id="albumentations.augmentations.blur.transforms.GlassBlur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.GlassBlur</strong></code>
+<code>
+
+
+    (sigma=0.7, max_delta=4, iterations=2, always_apply=False, mode='fast', p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L230" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.GlassBlur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply glass noise to the input image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sigma</code></td>
+<td><code>float</code></td>
+<td><p>standard deviation for Gaussian kernel.</p></td>
+</tr>
+<tr>
+<td><code>max_delta</code></td>
+<td><code>int</code></td>
+<td><p>max distance between pixels which are swapped.</p></td>
+</tr>
+<tr>
+<td><code>iterations</code></td>
+<td><code>int</code></td>
+<td><p>number of repeats.
+Should be in range [1, inf). Default: (2).</p></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td><p>mode of computation: fast or exact. Default: "fast".</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<p>Reference:
+|  <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>
+|  <a href="https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py" target="_blank">https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py</a></p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="MedianBlur" id="albumentations.augmentations.blur.transforms.MedianBlur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.MedianBlur</strong></code>
+<code>
+
+
+    (blur_limit=7, always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L140" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.MedianBlur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Blur the input image using a median filter with a random aperture linear size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td><p>maximum aperture linear size for blurring the input image.
+Must be odd and in range [3, inf). Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="MotionBlur" id="albumentations.augmentations.blur.transforms.MotionBlur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.MotionBlur</strong></code>
+<code>
+
+
+    (blur_limit=7, allow_shifted=True, always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L67" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.MotionBlur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply motion blur to the input image using a random-sized kernel.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td><p>maximum kernel size for blurring the input image.
+Should be in range [3, inf). Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>allow_shifted</code></td>
+<td><code>bool</code></td>
+<td><p>if set to true creates non shifted kernels only,
+otherwise creates randomly shifted kernels. Default: True.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    uint8, float32</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+<div class="doc doc-object doc-class">
+<h5 class="doc doc-heading" data-toc-label="ZoomBlur" id="albumentations.augmentations.blur.transforms.ZoomBlur">
+<code>class <strong>
+albumentations.augmentations.blur.transforms.ZoomBlur</strong></code>
+<code>
+
+
+    (max_factor=1.31, step_factor=(0.01, 0.03), always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L460" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.ZoomBlur" title="Permanent link">¶</a>
+</h5>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<p>Apply zoom blur transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_factor</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>range for max factor for blurring.
+If max_factor is a single float, the range will be (1, limit). Default: (1, 1.31).
+All max_factor values should be larger than 1.</p></td>
+</tr>
+<tr>
+<td><code>step_factor</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>If single float will be used as step parameter for np.arange.
+If tuple of float step_factor will be in range <code>[step_factor[0], step_factor[1])</code>. Default: (0.01, 0.03).
+All step_factor values should be positive.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image</p>
+<p>Image types:
+    Any</p>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="doc doc-object doc-module">
 <h3 class="doc doc-heading" id="albumentations.augmentations.crops">
 <code>albumentations.augmentations.crops</code>
@@ -3649,7 +4159,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f120d44bd30&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fdec94ad0d0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3715,7 +4225,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f120d44bd30&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fdec94ad0d0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3782,7 +4292,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f120d44bd30&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fdec94ad0d0&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4323,7 +4833,7 @@ Can be 'inpaint' to apply inpaining (works only  for 3-chahnel images)</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, haze_list)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L647" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_fog" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L616" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_fog" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Add fog to the image.</p>
@@ -4382,7 +4892,7 @@ albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, h
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_rain    (img, slant, drop_length, drop_width, drop_color, blur_value, brightness_coefficient, rain_drops)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L581" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_rain" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L550" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_rain" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
@@ -4460,7 +4970,7 @@ albumentations.augmentations.functional.add_rain    (img, slant, drop_length, dr
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_shadow    (img, vertices_list)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L754" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_shadow" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L723" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_shadow" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Add shadows to the image.</p>
@@ -4509,7 +5019,7 @@ albumentations.augmentations.functional.add_shadow    (img, vertices_list)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_snow    (img, snow_point, brightness_coeff)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L535" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_snow" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L504" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_snow" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Bleaches out pixels, imitation snow.</p>
@@ -4563,7 +5073,7 @@ albumentations.augmentations.functional.add_snow    (img, snow_point, brightness
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_sun_flare    (img, flare_center_x, flare_center_y, src_radius, src_color, circles)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L698" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_sun_flare" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L667" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_sun_flare" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Add sun flare.</p>
@@ -4632,7 +5142,7 @@ albumentations.augmentations.functional.add_sun_flare    (img, flare_center_x, f
 <code class="highlight language-python">def
 albumentations.augmentations.functional.bbox_from_mask    (mask)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1038" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.bbox_from_mask" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1009" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.bbox_from_mask" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Create bounding box from binary mask (fast version)</p>
@@ -4675,7 +5185,7 @@ albumentations.augmentations.functional.bbox_from_mask    (mask)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.equalize    (img, mask=None, mode='cv', by_channels=True)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L307" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.equalize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L300" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.equalize" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Equalize the image histogram.</p>
@@ -4735,7 +5245,7 @@ else convert image to YCbCr representation and use equalization by <code>Y</code
 <code class="highlight language-python">def
 albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1075" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.fancy_pca" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1046" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.fancy_pca" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Perform 'Fancy PCA' augmentation from:
@@ -4786,7 +5296,7 @@ albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
 albumentations.augmentations.functional.iso_noise    (image, color_shift=0.05, intensity=0.5, random_state=None, **
 kwargs)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L868" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.iso_noise" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L839" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.iso_noise" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Apply poisson noise to image to simulate camera sensor noise.</p>
@@ -4850,7 +5360,7 @@ kwargs)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1057" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.mask_from_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1028" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.mask_from_bbox" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Create binary mask from bounding box</p>
@@ -4898,7 +5408,7 @@ albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.move_tone_curve    (img, low_y, high_y)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L368" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.move_tone_curve" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L361" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.move_tone_curve" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Rescales the relationship between bright and dark areas of the image by manipulating its tone curve.</p>
@@ -4938,7 +5448,7 @@ to adjust image tone curve, must be in range [0, 1]</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.functional.multiply    (img, multiplier)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1019" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.multiply" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L990" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.multiply" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p><strong>Parameters:</strong></p>
@@ -4985,7 +5495,7 @@ albumentations.augmentations.functional.multiply    (img, multiplier)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.posterize    (img, bits)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L209" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.posterize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L202" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.posterize" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Reduce the number of bits for each color channel.</p>
@@ -5033,7 +5543,7 @@ albumentations.augmentations.functional.posterize    (img, bits)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.solarize    (img, threshold=128)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L179" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.solarize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L172" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.solarize" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Invert all pixel values above a threshold.</p>
@@ -5081,7 +5591,7 @@ albumentations.augmentations.functional.solarize    (img, threshold=128)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.swap_tiles_on_image    (image, tiles)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L959" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.swap_tiles_on_image" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L930" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.swap_tiles_on_image" title="Permanent link">¶</a>
 </h4>
 <div class="doc doc-contents">
 <p>Swap tiles on image.</p>
@@ -7718,145 +8228,12 @@ albumentations.augmentations.geometric.transforms.VerticalFlip</strong></code>
 <div class="doc doc-contents">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="AdvancedBlur" id="albumentations.augmentations.transforms.AdvancedBlur">
-<code>class <strong>
-albumentations.augmentations.transforms.AdvancedBlur</strong></code>
-<code>
-
-
-    (blur_limit=(3, 7), sigmaX_limit=(0.2, 1.0), sigmaY_limit=(0.2, 1.0), rotate_limit=90, beta_limit=(0.5, 8.0), noise_limit=(0.9, 1.1), always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2562" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.AdvancedBlur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Blur the input image using a Generalized Normal filter with a randomly selected parameters.
-    This transform also adds multiplicative noise to generated kernel before convolution.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blur_limit</code></td>
-<td></td>
-<td><p>maximum Gaussian kernel size for blurring the input image.
-Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma
-as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
-If set single value <code>blur_limit</code> will be in range (0, blur_limit).
-Default: (3, 7).</p></td>
-</tr>
-<tr>
-<td><code>sigmaX_limit</code></td>
-<td></td>
-<td><p>Gaussian kernel standard deviation. Must be in range [0, inf).
-If set single value <code>sigmaX_limit</code> will be in range (0, sigma_limit).
-If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. Default: 0.</p></td>
-</tr>
-<tr>
-<td><code>sigmaY_limit</code></td>
-<td></td>
-<td><p>Same as <code>sigmaY_limit</code> for another dimension.</p></td>
-</tr>
-<tr>
-<td><code>rotate_limit</code></td>
-<td></td>
-<td><p>Range from which a random angle used to rotate Gaussian kernel is picked.
-If limit is a single int an angle is picked from (-rotate_limit, rotate_limit). Default: (-90, 90).</p></td>
-</tr>
-<tr>
-<td><code>beta_limit</code></td>
-<td></td>
-<td><p>Distribution shape parameter, 1 is the normal distribution. Values below 1.0 make distribution
-tails heavier than normal, values above 1.0 make it lighter than normal. Default: (0.5, 8.0).</p></td>
-</tr>
-<tr>
-<td><code>noise_limit</code></td>
-<td></td>
-<td><p>Multiplicative factor that control strength of kernel noise. Must be positive and preferably
-centered around 1.0. If set single value <code>noise_limit</code> will be in range (0, noise_limit).
-Default: (0.75, 1.25).</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Reference:
-    <a href="https://arxiv.org/abs/2107.10833" target="_blank">https://arxiv.org/abs/2107.10833</a></p>
-<p>Targets:
-    image
-Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="Blur" id="albumentations.augmentations.transforms.Blur">
-<code>class <strong>
-albumentations.augmentations.transforms.Blur</strong></code>
-<code>
-
-
-    (blur_limit=7, always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1207" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.Blur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Blur the input image using a random-sized kernel.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blur_limit</code></td>
-<td><code>int, [int, int]</code></td>
-<td><p>maximum kernel size for blurring the input image.
-Should be in range [3, inf). Default: (3, 7).</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h4 class="doc doc-heading" data-toc-label="ChannelShuffle" id="albumentations.augmentations.transforms.ChannelShuffle">
 <code>class <strong>
 albumentations.augmentations.transforms.ChannelShuffle</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1526" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1336" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ChannelShuffle" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -7898,7 +8275,7 @@ albumentations.augmentations.transforms.CLAHE</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1491" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1301" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.CLAHE" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -7951,7 +8328,7 @@ albumentations.augmentations.transforms.ColorJitter</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2058" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1803" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ColorJitter" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8006,60 +8383,6 @@ Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p></td
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="Defocus" id="albumentations.augmentations.transforms.Defocus">
-<code>class <strong>
-albumentations.augmentations.transforms.Defocus</strong></code>
-<code>
-
-
-    (radius=(3, 10), alias_blur=(0.1, 0.5), always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2887" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.Defocus" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Apply defocus transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>radius</code></td>
-<td><code>[int, int] or int</code></td>
-<td><p>range for radius of defocusing.
-If limit is a single int, the range will be [1, limit]. Default: (3, 10).</p></td>
-</tr>
-<tr>
-<td><code>alias_blur</code></td>
-<td><code>[float, float] or float</code></td>
-<td><p>range for alias_blur of defocusing (sigma of gaussian blur).
-If limit is a single float, the range will be (0, limit). Default: (0.1, 0.5).</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    Any</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h4 class="doc doc-heading" data-toc-label="Downscale" id="albumentations.augmentations.transforms.Downscale">
 <code>class <strong>
 albumentations.augmentations.transforms.Downscale</strong></code>
@@ -8070,7 +8393,7 @@ albumentations.augmentations.transforms.Downscale</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1733" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1543" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Downscale" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8126,7 +8449,7 @@ albumentations.augmentations.transforms.Emboss</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2187" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1932" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Emboss" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8177,7 +8500,7 @@ albumentations.augmentations.transforms.Equalize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1011" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1003" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Equalize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8237,7 +8560,7 @@ albumentations.augmentations.transforms.FancyPCA</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1957" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1767" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.FancyPCA" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8285,7 +8608,7 @@ albumentations.augmentations.transforms.FromFloat</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1697" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1507" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.FromFloat" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8333,64 +8656,6 @@ Default: 'uint16'.</p></td>
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="GaussianBlur" id="albumentations.augmentations.transforms.GaussianBlur">
-<code>class <strong>
-albumentations.augmentations.transforms.GaussianBlur</strong></code>
-<code>
-
-
-    (blur_limit=(3, 7), sigma_limit=0, always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1343" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.GaussianBlur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Blur the input image using a Gaussian filter with a random kernel size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blur_limit</code></td>
-<td><code>int, [int, int]</code></td>
-<td><p>maximum Gaussian kernel size for blurring the input image.
-Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma
-as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
-If set single value <code>blur_limit</code> will be in range (0, blur_limit).
-Default: (3, 7).</p></td>
-</tr>
-<tr>
-<td><code>sigma_limit</code></td>
-<td><code>float, [float, float]</code></td>
-<td><p>Gaussian kernel standard deviation. Must be in range [0, inf).
-If set single value <code>sigma_limit</code> will be in range (0, sigma_limit).
-If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. Default: 0.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h4 class="doc doc-heading" data-toc-label="GaussNoise" id="albumentations.augmentations.transforms.GaussNoise">
 <code>class <strong>
 albumentations.augmentations.transforms.GaussNoise</strong></code>
@@ -8401,7 +8666,7 @@ albumentations.augmentations.transforms.GaussNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1392" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1202" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.GaussNoise" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8450,72 +8715,6 @@ Otherwise, the noise will be sampled once for all channels. Default: True</p></t
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="GlassBlur" id="albumentations.augmentations.transforms.GlassBlur">
-<code>class <strong>
-albumentations.augmentations.transforms.GlassBlur</strong></code>
-<code>
-
-
-    (sigma=0.7, max_delta=4, iterations=2, always_apply=False, mode='fast', p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1994" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.GlassBlur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Apply glass noise to the input image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sigma</code></td>
-<td><code>float</code></td>
-<td><p>standard deviation for Gaussian kernel.</p></td>
-</tr>
-<tr>
-<td><code>max_delta</code></td>
-<td><code>int</code></td>
-<td><p>max distance between pixels which are swapped.</p></td>
-</tr>
-<tr>
-<td><code>iterations</code></td>
-<td><code>int</code></td>
-<td><p>number of repeats.
-Should be in range [1, inf). Default: (2).</p></td>
-</tr>
-<tr>
-<td><code>mode</code></td>
-<td><code>str</code></td>
-<td><p>mode of computation: fast or exact. Default: "fast".</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    uint8, float32</p>
-<p>Reference:
-|  <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>
-|  <a href="https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py" target="_blank">https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py</a></p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h4 class="doc doc-heading" data-toc-label="HueSaturationValue" id="albumentations.augmentations.transforms.HueSaturationValue">
 <code>class <strong>
 albumentations.augmentations.transforms.HueSaturationValue</strong></code>
@@ -8526,7 +8725,7 @@ albumentations.augmentations.transforms.HueSaturationValue</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L889" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L881" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.HueSaturationValue" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8586,7 +8785,7 @@ albumentations.augmentations.transforms.ImageCompression</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L254" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L246" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ImageCompression" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8651,7 +8850,7 @@ albumentations.augmentations.transforms.ImageCompression.ImageCompressionType</s
 albumentations.augmentations.transforms.InvertImg</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1552" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1362" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.InvertImg" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8677,7 +8876,7 @@ albumentations.augmentations.transforms.InvertImg</strong></code>
 </table> <p>Targets:
     image</p>
 <p>Image types:
-    uint8</p>
+    uint8, float32</p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -8693,7 +8892,7 @@ albumentations.augmentations.transforms.ISONoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1456" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1266" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ISONoise" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8747,7 +8946,7 @@ albumentations.augmentations.transforms.JpegCompression</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L316" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L308" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.JpegCompression" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8794,7 +8993,7 @@ albumentations.augmentations.transforms.Lambda</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1807" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1617" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Lambda" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8852,108 +9051,6 @@ Function signature must include **kwargs to accept optinal arguments like interp
 </div>
 </div>
 <div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="MedianBlur" id="albumentations.augmentations.transforms.MedianBlur">
-<code>class <strong>
-albumentations.augmentations.transforms.MedianBlur</strong></code>
-<code>
-
-
-    (blur_limit=7, always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1312" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.MedianBlur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Blur the input image using a median filter with a random aperture linear size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blur_limit</code></td>
-<td><code>int</code></td>
-<td><p>maximum aperture linear size for blurring the input image.
-Must be odd and in range [3, inf). Default: (3, 7).</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="MotionBlur" id="albumentations.augmentations.transforms.MotionBlur">
-<code>class <strong>
-albumentations.augmentations.transforms.MotionBlur</strong></code>
-<code>
-
-
-    (blur_limit=7, allow_shifted=True, always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1238" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.MotionBlur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Apply motion blur to the input image using a random-sized kernel.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blur_limit</code></td>
-<td><code>int</code></td>
-<td><p>maximum kernel size for blurring the input image.
-Should be in range [3, inf). Default: (3, 7).</p></td>
-</tr>
-<tr>
-<td><code>allow_shifted</code></td>
-<td><code>bool</code></td>
-<td><p>if set to true creates non shifted kernels only,
-otherwise creates randomly shifted kernels. Default: True.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    uint8, float32</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h4 class="doc doc-heading" data-toc-label="MultiplicativeNoise" id="albumentations.augmentations.transforms.MultiplicativeNoise">
 <code>class <strong>
 albumentations.augmentations.transforms.MultiplicativeNoise</strong></code>
@@ -8964,7 +9061,7 @@ albumentations.augmentations.transforms.MultiplicativeNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1889" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1699" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.MultiplicativeNoise" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9019,7 +9116,7 @@ albumentations.augmentations.transforms.Normalize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L212" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L204" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Normalize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9071,7 +9168,7 @@ albumentations.augmentations.transforms.PixelDropout</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2671" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2299" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.PixelDropout" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9141,7 +9238,7 @@ albumentations.augmentations.transforms.Posterize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L969" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L961" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Posterize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9192,7 +9289,7 @@ albumentations.augmentations.transforms.RandomBrightness</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1155" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1147" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightness" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9240,7 +9337,7 @@ albumentations.augmentations.transforms.RandomBrightnessContrast</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1114" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1106" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightnessContrast" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9300,7 +9397,7 @@ albumentations.augmentations.transforms.RandomContrast</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1181" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1173" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomContrast" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9348,7 +9445,7 @@ albumentations.augmentations.transforms.RandomFog</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L528" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L520" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomFog" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9401,7 +9498,7 @@ albumentations.augmentations.transforms.RandomGamma</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1573" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1383" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGamma" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9448,7 +9545,7 @@ albumentations.augmentations.transforms.RandomGridShuffle</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L101" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L93" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGridShuffle" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9490,7 +9587,7 @@ albumentations.augmentations.transforms.RandomRain</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L408" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L400" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomRain" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9568,7 +9665,7 @@ albumentations.augmentations.transforms.RandomShadow</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L762" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L754" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomShadow" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9629,7 +9726,7 @@ albumentations.augmentations.transforms.RandomSnow</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L353" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L345" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomSnow" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9682,7 +9779,7 @@ albumentations.augmentations.transforms.RandomSunFlare</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L611" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L603" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomSunFlare" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9758,7 +9855,7 @@ albumentations.augmentations.transforms.RandomToneCurve</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L848" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L840" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomToneCurve" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9802,7 +9899,7 @@ albumentations.augmentations.transforms.RGBShift</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1066" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1058" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RGBShift" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9862,7 +9959,7 @@ albumentations.augmentations.transforms.RingingOvershoot</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2412" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2157" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RingingOvershoot" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9918,7 +10015,7 @@ albumentations.augmentations.transforms.Sharpen</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2139" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1884" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Sharpen" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -9969,7 +10066,7 @@ albumentations.augmentations.transforms.Solarize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L933" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L925" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Solarize" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10017,7 +10114,7 @@ albumentations.augmentations.transforms.Spatter</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2779" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2407" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Spatter" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10104,7 +10201,7 @@ albumentations.augmentations.transforms.Superpixels</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2268" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2013" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Superpixels" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10193,7 +10290,7 @@ albumentations.augmentations.transforms.TemplateTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2318" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2063" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.TemplateTransform" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10264,7 +10361,7 @@ albumentations.augmentations.transforms.ToFloat</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1663" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1473" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToFloat" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10310,7 +10407,7 @@ image.</p>
 albumentations.augmentations.transforms.ToGray</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1602" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1412" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToGray" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10353,7 +10450,7 @@ albumentations.augmentations.transforms.ToSepia</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1628" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1438" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToSepia" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10395,7 +10492,7 @@ albumentations.augmentations.transforms.UnsharpMask</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2486" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2231" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.UnsharpMask" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -10452,62 +10549,6 @@ Must be in range [0, 255]. Default: 10.</p></td>
     arxiv.org/pdf/2107.10833.pdf</p>
 <p>Targets:
     image</p>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h4 class="doc doc-heading" data-toc-label="ZoomBlur" id="albumentations.augmentations.transforms.ZoomBlur">
-<code>class <strong>
-albumentations.augmentations.transforms.ZoomBlur</strong></code>
-<code>
-
-
-    (max_factor=1.31, step_factor=(0.01, 0.03), always_apply=False, p=0.5)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2937" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.transforms.ZoomBlur" title="Permanent link">¶</a>
-</h4>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Apply zoom blur transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>max_factor</code></td>
-<td><code>[float, float] or float</code></td>
-<td><p>range for max factor for blurring.
-If max_factor is a single float, the range will be (1, limit). Default: (1, 1.31).
-All max_factor values should be larger than 1.</p></td>
-</tr>
-<tr>
-<td><code>step_factor</code></td>
-<td><code>[float, float] or float</code></td>
-<td><p>If single float will be used as step parameter for np.arange.
-If tuple of float step_factor will be in range <code>[step_factor[0], step_factor[1])</code>. Default: (0.01, 0.03).
-All step_factor values should be positive.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
-    image</p>
-<p>Image types:
-    Any</p>
 <div class="doc doc-children">
 </div>
 </div>
