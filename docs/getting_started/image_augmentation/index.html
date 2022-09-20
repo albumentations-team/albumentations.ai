@@ -129,7 +129,7 @@
             <a href="https://albumentations.ai/whos_using">Who's using</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations-team-albumentations-demo-srcapp-w930cw.streamlitapp.com/" target="_blank">Demo</a>
+            <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
           </div>
           <div class="header-menu-item header-large-menu-item">
             <a href="https://albumentations.ai/team">Team</a>
@@ -1953,7 +1953,7 @@
     <span class="n">A</span><span class="o">.</span><span class="n">RandomBrightnessContrast</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
 <span class="p">])</span>
 </code></pre></div>
-<p>In the example, <code>Compose</code> receives a list with three augmentations: <code>A.RandomCrop</code>, <code>A.HorizontalFlip</code>, and <code>A.RandomBrighntessContrast</code>. You can find the full list of all available augmentations <a href="https://github.com/albumentations-team/albumentations#pixel-level-transforms" target="_blank">in the GitHub repository</a> and <a href="https://albumentations.ai/docs/api_reference/augmentations/">in the API Docs</a>. A demo playground that demonstrates how augmentations will transform the input image is available at <a href="https://albumentations-team-albumentations-demo-srcapp-w930cw.streamlitapp.com" target="_blank">https://albumentations-team-albumentations-demo-srcapp-w930cw.streamlitapp.com</a>.</p>
+<p>In the example, <code>Compose</code> receives a list with three augmentations: <code>A.RandomCrop</code>, <code>A.HorizontalFlip</code>, and <code>A.RandomBrighntessContrast</code>. You can find the full list of all available augmentations <a href="https://github.com/albumentations-team/albumentations#pixel-level-transforms" target="_blank">in the GitHub repository</a> and <a href="https://albumentations.ai/docs/api_reference/augmentations/">in the API Docs</a>. A demo playground that demonstrates how augmentations will transform the input image is available at <a href="https://demo.albumentations.ai" target="_blank">https://demo.albumentations.ai</a>.</p>
 <p>To create an augmentation, you create an instance of the required augmentation class and pass augmentation parameters to it. <code>A.RandomCrop</code> receives two parameters, <code>height</code> and <code>width</code>. <code>A.RandomCrop(width=256, height=256)</code> means that <code>A.RandomCrop</code> will take an input image, extract a random patch with size 256 by 256 pixels from it and then pass the result to the next augmentation in the pipeline (in this case to <code>A.HorizontalFlip</code>).</p>
 <p><code>A.HorizontalFlip</code> in this example has one parameter named <code>p</code>. <code>p</code> is a special parameter that is supported by almost all augmentations. It controls the probability of applying the augmentation. <code>p=0.5</code> means that with a probability of 50%, the transform will flip the image horizontally, and with a probability of 50%, the transform won't modify the input image.</p>
 <p><code>A.RandomBrighntessContrast</code> in the example also has one parameter, <code>p</code>. With a probability of 20%, this augmentation will change the brightness and contrast of the image received from <code>A.HorizontalFlip</code>. And with a probability of 80%, it will keep the received image unchanged.</p>
