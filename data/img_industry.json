@@ -88,5 +88,10 @@
   "url": "https://celsus.ai/en",
   "name": "Celsus",
   "img_filename": "celsus.png"
+  },
+  {
+  "url": "https://dataclap.co",
+  "name": "DataClap",
+  "img_filename": "dataclap.png"
   }
 ]
