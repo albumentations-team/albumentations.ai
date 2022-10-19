@@ -4159,7 +4159,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fcafebb7160&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f0e0eec8160&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4225,7 +4225,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fcafebb7160&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f0e0eec8160&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -4292,7 +4292,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fcafebb7160&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f0e0eec8160&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -11482,11 +11482,11 @@ albumentations.core.composition.Compose</strong></code>
 <code>
 
 
-    (transforms, bbox_params=None, keypoint_params=None, additional_targets=None, p=1.0)
+    (transforms, bbox_params=None, keypoint_params=None, additional_targets=None, p=1.0, is_check_shapes=True)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L186" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L191" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Compose" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11528,6 +11528,12 @@ albumentations.core.composition.Compose</strong></code>
 <td><code>float</code></td>
 <td><p>probability of applying all list of transforms. Default: 1.0.</p></td>
 </tr>
+<tr>
+<td><code>is_check_shapes</code></td>
+<td><code>bool</code></td>
+<td><p>If True shapes consistency of images/mask/masks would be checked on each call. If you
+would like to disable this check - pass False (do it only if you are sure in your data consistency).</p></td>
+</tr>
 </tbody>
 </table>
 <div class="doc doc-children">
@@ -11545,7 +11551,7 @@ albumentations.core.composition.OneOf</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L300" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L317" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.OneOf" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11590,7 +11596,7 @@ albumentations.core.composition.OneOrOther</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L369" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L386" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.OneOrOther" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11612,7 +11618,7 @@ albumentations.core.composition.PerChannel</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L397" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L414" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11662,7 +11668,7 @@ albumentations.core.composition.Sequential</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L530" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L550" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -11704,7 +11710,7 @@ albumentations.core.composition.SomeOf</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L332" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L349" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.SomeOf" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
