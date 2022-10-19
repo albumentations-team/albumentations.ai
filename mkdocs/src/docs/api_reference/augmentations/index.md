@@ -1,4 +1,5 @@
 - [Transforms (albumentations.augmentations.transforms)](transforms.md)
+- [Blur transforms (albumentations.augmentations.blur)](blur/index.md)
 - [Crop transforms (albumentations.augmentations.crops)](crops/index.md)
 - [Dropout transforms (albumentations.augmentations.dropout)](dropout/index.md)
 - [Geometric transforms (albumentations.augmentations.geometric)](geometric/index.md)

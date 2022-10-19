@@ -2,6 +2,7 @@ title: Augmentations
 nav:
   - index.md
   - transforms.md
+  - blur
   - crops
   - dropout
   - geometric
