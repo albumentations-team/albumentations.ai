@@ -184,6 +184,14 @@
      <lastmod>2022-10-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/blur/</loc>
+     <lastmod>2022-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/</loc>
+     <lastmod>2022-10-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://albumentations.ai/docs/api_reference/augmentations/crops/</loc>
      <lastmod>2022-10-19</lastmod>
      <changefreq>daily</changefreq>
