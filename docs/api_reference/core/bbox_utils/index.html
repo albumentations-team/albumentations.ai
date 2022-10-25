@@ -2026,7 +2026,7 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L218" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
-<p>Calculate the area of a bounding box in pixels.</p>
+<p>Calculate the area of a bounding box in (fractional) pixels.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2064,8 +2064,8 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 </thead>
 <tbody>
 <tr>
-<td><code>int</code></td>
-<td><p>Area of a bounding box in pixels.</p></td>
+<td><code>float</code></td>
+<td><p>Area in (fractional) pixels of the (denormalized) bounding box.</p></td>
 </tr>
 </tbody>
 </table>
