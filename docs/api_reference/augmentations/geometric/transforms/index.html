@@ -1967,11 +1967,11 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 <code>
 
 
-    (scale=None, translate_percent=None, translate_px=None, rotate=None, shear=None, interpolation=1, mask_interpolation=0, cval=0, cval_mask=0, mode=0, fit_output=False, keep_ratio=False, always_apply=False, p=0.5)
+    (scale=None, translate_percent=None, translate_px=None, rotate=None, shear=None, interpolation=1, mask_interpolation=0, cval=0, cval_mask=0, mode=0, fit_output=False, keep_ratio=False, rotate_method='largest_box', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L544" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L549" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2113,6 +2113,13 @@ after applying rotations. Default: False</p></td>
                Default: False.</p></td>
 </tr>
 <tr>
+<td><code>rotate_method</code></td>
+<td><code>str</code></td>
+<td><p>rotation method used for the bounding boxes. Should be one of "largest_box" or
+"ellipse"[1].
+Default: "largest_box"</p></td>
+</tr>
+<tr>
 <td><code>p</code></td>
 <td><code>float</code></td>
 <td><p>probability of applying the transform. Default: 0.5.</p></td>
@@ -2122,6 +2129,8 @@ after applying rotations. Default: False</p></td>
     image, mask, keypoints, bboxes</p>
 <p>Image types:
     uint8, float32</p>
+<p>Reference:
+    [1] <a href="https://arxiv.org/abs/2109.13488" target="_blank">https://arxiv.org/abs/2109.13488</a></p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2227,7 +2236,7 @@ Default: cv2.BORDER_REFLECT_101</p></td>
 albumentations.augmentations.geometric.transforms.Flip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1249" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1257" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Flip" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2279,7 +2288,7 @@ albumentations.augmentations.geometric.transforms.GridDistortion</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1405" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1413" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.GridDistortion" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2353,7 +2362,7 @@ See for more information: <a href="https://github.com/albumentations-team/albume
 albumentations.augmentations.geometric.transforms.HorizontalFlip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1218" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1226" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.HorizontalFlip" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2395,7 +2404,7 @@ albumentations.augmentations.geometric.transforms.OpticalDistortion</strong></co
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1322" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1330" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.OpticalDistortion" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2469,7 +2478,7 @@ albumentations.augmentations.geometric.transforms.PadIfNeeded</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1001" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1009" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PadIfNeeded" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2652,7 +2661,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L847" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L855" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2879,7 +2888,7 @@ Default: "largest_box"</p></td>
 albumentations.augmentations.geometric.transforms.Transpose</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1284" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1292" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Transpose" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2916,7 +2925,7 @@ albumentations.augmentations.geometric.transforms.Transpose</strong></code>
 albumentations.augmentations.geometric.transforms.VerticalFlip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1192" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1200" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.VerticalFlip" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
