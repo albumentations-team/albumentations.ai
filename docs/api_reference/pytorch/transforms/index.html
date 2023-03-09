@@ -2006,7 +2006,7 @@ albumentations.pytorch.transforms.ToTensorV2</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L73" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L75" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2030,12 +2030,19 @@ instead).</p>
 <tr>
 <td><code>transpose_mask</code></td>
 <td><code>bool</code></td>
-<td><p>if True and an input mask has three dimensions, this transform will transpose dimensions</p></td>
+<td><p>If True and an input mask has three dimensions, this transform will transpose dimensions
+so the shape <code>[height, width, num_channels]</code> becomes <code>[num_channels, height, width]</code>. The latter format is a
+standard format for PyTorch Tensors. Default: False.</p></td>
 </tr>
 <tr>
-<td><code>standard</code></td>
-<td><code>format for PyTorch Tensors. Default</code></td>
-<td><p>False.</p></td>
+<td><code>always_apply</code></td>
+<td><code>bool</code></td>
+<td><p>Indicates whether this transformation should be always applied. Default: True.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>Probability of applying the transform. Default: 1.0.</p></td>
 </tr>
 </tbody>
 </table>
