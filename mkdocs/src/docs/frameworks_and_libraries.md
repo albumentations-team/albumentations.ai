@@ -6,7 +6,7 @@
 
 MMDetection is an open source object detection toolbox based on PyTorch. It is a part of the [OpenMMLab](https://openmmlab.com/) project.
 
-- To install MMDetection with Albumentations follow the [installation instructions](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md#install-mmdetection).
+- To install MMDetection with Albumentations follow the [installation instructions](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation).
 - MMDetection has an [example config](https://github.com/open-mmlab/mmdetection/tree/master/configs/albu_example) with augmentations from Albumentations.
 
 
