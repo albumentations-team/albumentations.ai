@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
-{% block title %}Albumentations: fast and flexible image augmentations{% endblock %}{% block extra_title %}{% endblock %}
+{% block title %}Albumentations: fast and flexible image augmentations{% endblock %}{% block extra_title %}{% endblock
+%}
 {% block content %}
 <div class="container space-top-1 space-top-sm-3 space-bottom-0 space-bottom-sm-2">
     <div class="row justify-content-lg-between mb-7">
@@ -12,8 +13,8 @@
                         deep convolutional neural networks.</p>
                     <p>The library is widely used in <a href="{{ base_url }}/whos_using#industry">industry</a>, <a
                             href="{{ base_url }}/whos_using#research">deep
-                        learning research</a>, <a href="{{ base_url }}/whos_using#competitions">machine learning
-                        competitions</a>,
+                            learning research</a>, <a href="{{ base_url }}/whos_using#competitions">machine learning
+                            competitions</a>,
                         and <a href="{{ base_url }}/whos_using#open-source">open source projects</a>.</p>
                 </div>
             </div>
@@ -21,24 +22,23 @@
                 <div class="row">
                     <div class="col-12 col-lg-8 col-xl-6">
                         <a href="https://github.com/albumentations-team/albumentations" target="_blank"
-                           class="btn btn-outline-primary btn-wide mb-0 mb-sm-2 mr-0" style="padding: 0.65rem 0.25rem;">
-                        <span class="btn-padding"><i
-                                class="fab fa-github"></i> View on GitHub</span>
-                            <span class="btn-divider-left btn-padding"><i
-                                    class="fa fa-star"></i> {{ stars_count }}</span>
+                            class="btn btn-outline-primary btn-wide mb-0 mb-sm-2 mr-0"
+                            style="padding: 0.65rem 0.25rem;">
+                            <span class="btn-padding"><i class="fab fa-github"></i> View on GitHub</span>
+                            <span class="btn-divider-left btn-padding"><i class="fa fa-star"></i> {{ stars_count
+                                }}</span>
                         </a>
                     </div>
                     <div class="col-12 col-lg-8 col-xl-6 mt-3 mt-xl-0">
                         <a class="btn btn-outline-primary btn-wide mb-0 mb-sm-2 mr-0" style="padding: 0.65rem 0.875rem;"
-                           href="https://albumentations.ai/docs/">Open documentation</a>
+                            href="https://albumentations.ai/docs/">Open documentation</a>
                     </div>
                 </div>
             </div>
 
         </div>
         <div class="col-sm-12 col-lg-4">
-            <img src="./assets/img/custom/top_image.jpg"
-                 style="width: 350px">
+            <img src="./assets/img/custom/top_image.jpg" style="width: 350px">
         </div>
     </div>
 </div>
@@ -50,12 +50,10 @@
         <div class="row justify-content-center">
             <div class="col-12 main-section-div">
                 Albumentations is a Python library for fast and flexible <a href="#"
-                                                                            style="border-bottom: 1px dotted #377dff"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="top"
-                                                                            data-boundary="window"
-                                                                            title="Data augmentation is a commonly used technique for increasing both the size and the diversity of labeled training sets by leveraging input transformations that preserve output labels. In computer vision, image augmentations have become a common regularization technique to combat overfitting in deep convolutional neural networks and are ubiquitously used to improve performance on various tasks.">image
-                augmentations</a>. Albumentations efficiently implements a rich variety of
+                    style="border-bottom: 1px dotted #377dff" data-toggle="tooltip" data-placement="top"
+                    data-boundary="window"
+                    title="Data augmentation is a commonly used technique for increasing both the size and the diversity of labeled training sets by leveraging input transformations that preserve output labels. In computer vision, image augmentations have become a common regularization technique to combat overfitting in deep convolutional neural networks and are ubiquitously used to improve performance on various tasks.">image
+                    augmentations</a>. Albumentations efficiently implements a rich variety of
                 image transform operations that are optimized for performance, and does so
                 while providing a concise, yet powerful image augmentation interface for
                 different computer vision tasks, including object classification, segmentation,
@@ -78,15 +76,12 @@
         <div class="row justify-content-center">
             <div class="col-12 main-section-div">
 
-                <div class="js-slick-carousel u-slick u-slick--gutters-3"
-                     data-autoplay="true"
-                     data-infinite="true"
-                     data-slides-show="5"
-                     data-pause-hover="true"
-                     data-arrows-classes="u-slick__arrow u-slick__arrow--flat u-slick__arrow-centered--y rounded-circle"
-                     data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left ml-lg-2 ml-xl-4 left-arrow-pos"
-                     data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right mr-lg-2 mr-xl-4 right-arrow-pos"
-                     data-responsive='[{
+                <div class="js-slick-carousel u-slick u-slick--gutters-3" data-autoplay="true" data-infinite="true"
+                    data-slides-show="5" data-pause-hover="true"
+                    data-arrows-classes="u-slick__arrow u-slick__arrow--flat u-slick__arrow-centered--y rounded-circle"
+                    data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-inner u-slick__arrow-inner--left ml-lg-2 ml-xl-4 left-arrow-pos"
+                    data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-inner u-slick__arrow-inner--right mr-lg-2 mr-xl-4 right-arrow-pos"
+                    data-responsive='[{
        "breakpoint": 992,
        "settings": {
          "slidesToShow": 5,
@@ -104,16 +99,14 @@
          "slidesToShow": 1,
          "autoplay": true
        }
-     }]'
-
-                >
+     }]'>
                     {% for company in img_industry %}
 
                     <div class="js-slide">
                         <div class="row align-items-center" style="height: 200px">
                             <div class="col-12 align-self-center pl-4 pr-4">
                                 <a href="{{ company.url }}" target="_blank"> <img class="img-fluid"
-                                                                                  src="./assets/img/industry/{{ company.img_filename }}"></a>
+                                        src="./assets/img/industry/{{ company.img_filename }}"></a>
 
 
                             </div>
@@ -132,10 +125,9 @@
                 </div>
                 <div class="row ">
                     <div class="col-12"><a class="btn btn-soft-secondary float-right mt-10" href="#"
-                                           data-modal-target="#addCompanyModal" data-modal-effect="blur"
-                                           data-overlay-opacity="0.7">
-                        Add my company to this list
-                    </a>
+                            data-modal-target="#addCompanyModal" data-modal-effect="blur" data-overlay-opacity="0.7">
+                            Add my company to this list
+                        </a>
                     </div>
                 </div>
 
@@ -164,13 +156,6 @@
             </div>
         </div>
     </div>
-<!--    <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <hr>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
     <div class="container py-6">
         <div class="row align-items-lg-center">
@@ -189,14 +174,6 @@
         </div>
     </div>
     <div class="bg-light py-6">
-<!--        <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">-->
-<!--            <div class="row">-->
-<!--                <div class="col-12">-->
-<!--                    <hr>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-12 col-lg-7 mb-7 mb-lg-0">
@@ -207,16 +184,14 @@
                             Albumentations can work with various deep learning frameworks such as <a
                                 href="https://pytorch.org" target="_blank" class="border-link">PyTorch</a> and <a
                                 href="https://keras.io/" target="_blank" class="border-link">Keras</a>.
-                            The library is a part of the <a
-                                href="https://pytorch.org/ecosystem/" target="_blank" class="border-link">PyTorch
-                            ecosystem</a>.
+                            The library is a part of the <a href="https://pytorch.org/ecosystem/" target="_blank"
+                                class="border-link">PyTorch
+                                ecosystem</a>.
 
 
-                            <a
-                                    class="border-link"
-                                    href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}/frameworks_and_libraries/#mmdetection">MMDetection</a>
-                            and <a
-                                class="border-link"
+                            <a class="border-link"
+                                href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}/frameworks_and_libraries/#mmdetection">MMDetection</a>
+                            and <a class="border-link"
                                 href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}/frameworks_and_libraries/#yolov5">YOLOv5</a>
                             use Albumentations.
                         </p>
@@ -229,11 +204,6 @@
         </div>
     </div>
     <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <hr>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
 
     <div class="container pb-7">
@@ -244,8 +214,8 @@
                     </h2>
                     <p class="mb-0 main-feature-p">
                         Albumentations is MIT licensed. See the <a class="border-link"
-                                                                   href="https://github.com/albumentations-team/albumentations"
-                                                                   target="_blank">project on GitHub</a>.
+                            href="https://github.com/albumentations-team/albumentations" target="_blank">project on
+                            GitHub</a>.
                     </p>
                 </div>
             </div>
@@ -254,31 +224,24 @@
             </div>
         </div>
     </div>
-<!--    <div class="container space-top-1 space-top-sm-2 space-bottom-1 space-bottom-sm-1">-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <hr>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
     <div class="py-6 bg-light">
-    <div class="container space-bottom-1 space-bottom-sm-2">
-        <div class="row justify-content-between">
-            <div class="col-12 col-lg-7 mb-7 mb-lg-0">
-                <div class="pr-lg-4">
-                    <h2 class="h3 font-weight-semi-bold">Member of the NVIDIA Inception program</h2>
-                    <p class="mb-0 main-feature-p">
-                        The NVIDIA Inception program nurtures cutting-edge AI startups who are revolutionizing
-                        industries.
-                    </p>
+        <div class="container space-bottom-1 space-bottom-sm-2">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-7 mb-7 mb-lg-0">
+                    <div class="pr-lg-4">
+                        <h2 class="h3 font-weight-semi-bold">Member of the NVIDIA Inception program</h2>
+                        <p class="mb-0 main-feature-p">
+                            The NVIDIA Inception program nurtures cutting-edge AI startups who are revolutionizing
+                            industries.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-5 order-lg-1">
-                <img src="./assets/img/custom/nvidia_inception.png" class="img-fluid" alt="">
+                <div class="col-12 col-lg-5 order-lg-1">
+                    <img src="./assets/img/custom/nvidia_inception.png" class="img-fluid" alt="">
+                </div>
             </div>
         </div>
     </div>
-        </div>
 </div>
 <div>
     <div class="container space-0 space-sm-1">
@@ -289,14 +252,14 @@
             <div class="col-12 main-section-div">
                 Albumentations requires Python 3.6 or higher. To install the library from PyPI run
                 <div class="p-3 mt-2 mb-2 bg-white"
-                     style="font-size:21px; border: 1px solid #777; border-radius: 0.5rem">pip install -U albumentations
+                    style="font-size:21px; border: 1px solid #777; border-radius: 0.5rem">pip install -U albumentations
                 </div>
             </div>
         </div>
         <div class="row justify-content-center mt-2 mb-2">
             <div class="col-12 main-section-div">
                 <a class="btn btn-sm btn-primary btn-wide transition-3d-hover mt-1 mt-sm-0 mb-1"
-                   href="https://albumentations.ai/docs/">Open documentation<span
+                    href="https://albumentations.ai/docs/">Open documentation<span
                         class="fas fa-angle-right ml-2"></span></a>
             </div>
         </div>
@@ -323,7 +286,7 @@
         </div>
     </div>
 </div>
-<div>
+<!-- <div>
     <div class="container space-0 space-sm-1">
         <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-4 mt-4 mt-sm-2">
             <h2 class="font-weight-medium">What if augmentations is not enough?</h2>
@@ -331,7 +294,7 @@
         <div class="row justify-content-center align-self-center">
             <div class="col-12 main-section-div">
                 <a href="https://ternaus.com" target="_blank" class="mb-5"> <img class="img-fluid"
-                                                                                 src="https://habrastorage.org/getpro/habr/upload_files/e44/aa6/248/e44aa624888326de39379ccd116a99ed.jpg"></a>
+                        src="https://habrastorage.org/getpro/habr/upload_files/e44/aa6/248/e44aa624888326de39379ccd116a99ed.jpg"></a>
                 Augmentations is a powerful technique but you cannot beat the power of the new data.
                 If your model is not performing well on a set of images, you can use image search API on our
                 partner service <a href="https://ternaus.com">Ternaus.com</a> to get more relevant imagery and add
@@ -339,7 +302,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <div class="bg-light">
     <div class="container space-0 space-sm-1">
         <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-4 mt-4 mt-sm-2">
@@ -349,9 +312,9 @@
             <div class="col-12 main-section-div">
                 If you find this library useful for your research, please consider
                 citing <a href="https://www.mdpi.com/2078-2489/11/2/125" target="_blank"
-                          class="border-link">Albumentations: Fast and Flexible Image Augmentations</a>:
+                    class="border-link">Albumentations: Fast and Flexible Image Augmentations</a>:
                 <pre style="background-color: #f5f5f5; border: 1px solid #aaa; border-radius: 0.5rem; padding: 10px; white-space: pre-wrap; font-size: 15px; line-height: 25px;"
-                     class="mt-2"><code>@Article{info11020125,
+                    class="mt-2"><code>@Article{info11020125,
     AUTHOR = {Buslaev, Alexander and Iglovikov, Vladimir I. and Khvedchenya, Eugene and Parinov, Alex and Druzhinin, Mikhail and Kalinin, Alexandr A.},
     TITLE = {Albumentations: Fast and Flexible Image Augmentations},
     JOURNAL = {Information},
