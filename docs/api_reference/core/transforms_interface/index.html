@@ -2013,7 +2013,7 @@ by the way you must have at least one object with key 'image'</p>
 albumentations.core.transforms_interface.DualTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L247" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L246" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2030,7 +2030,7 @@ albumentations.core.transforms_interface.DualTransform</strong></code>
 albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L272" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L277" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2047,7 +2047,7 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 albumentations.core.transforms_interface.NoOp</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L286" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L291" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2063,10 +2063,10 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 <code class="highlight language-python">def
 albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L41" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L26" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
-<p>Convert input argument to min-max tuple</p>
+<p>Convert input argument to a min-max tuple.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2079,20 +2079,34 @@ albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None
 <tbody>
 <tr>
 <td><code>param</code></td>
-<td><code>scalar, tuple or list of 2+ elements</code></td>
-<td><p>Input value.
-If value is scalar, return value would be (offset - value, offset + value).
-If value is tuple, return value would be value + offset (broadcasted).</p></td>
+<td><code>Union[float, Tuple[float, float], int, Tuple[int, int]]</code></td>
+<td><p>Input value which could be a scalar or a sequence of exactly 2 scalars.</p></td>
 </tr>
 <tr>
 <td><code>low</code></td>
-<td></td>
-<td><p>Second element of tuple can be passed as optional argument</p></td>
+<td><code>Union[float, Tuple[float, float], int, Tuple[int, int]]</code></td>
+<td><p>Second element of the tuple, provided as an optional argument for when <code>param</code> is a scalar.</p></td>
 </tr>
 <tr>
 <td><code>bias</code></td>
-<td></td>
-<td><p>An offset factor added to each element</p></td>
+<td><code>Union[int, float]</code></td>
+<td><p>An offset added to both elements of the tuple.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Union[Tuple[int, int], Tuple[float, float]]</code></td>
+<td><p>A tuple of two scalars, optionally adjusted by <code>bias</code>.
+Raises ValueError for invalid combinations or types of arguments.</p></td>
 </tr>
 </tbody>
 </table>

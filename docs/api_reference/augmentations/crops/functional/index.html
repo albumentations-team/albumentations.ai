@@ -1952,7 +1952,7 @@
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.bbox_crop    (bbox, x_min, y_min, x_max, y_max, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L211" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.bbox_crop" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L213" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.bbox_crop" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Crop a bounding box.</p>
@@ -2013,7 +2013,7 @@ albumentations.augmentations.crops.functional.bbox_crop    (bbox, x_min, y_min, 
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A cropped bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2025,7 +2025,7 @@ albumentations.augmentations.crops.functional.bbox_crop    (bbox, x_min, y_min, 
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.crop_bbox_by_coords    (bbox, crop_coords, crop_height, crop_width, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L60" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_bbox_by_coords" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L61" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_bbox_by_coords" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Crop a bounding box using the provided coordinates of bottom-left and top-right corners in pixels and the
@@ -2082,7 +2082,7 @@ required height and width of the crop.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A cropped bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
@@ -2094,7 +2094,7 @@ required height and width of the crop.</p>
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.crop_keypoint_by_coords    (keypoint, crop_coords)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L97" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_keypoint_by_coords" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L98" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.crop_keypoint_by_coords" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Crop a keypoint using the provided coordinates of bottom-left and top-right corners in pixels and the
@@ -2131,7 +2131,7 @@ required height and width of the crop.</p>
 </thead>
 <tbody>
 <tr>
-<td><code></code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2194,7 +2194,7 @@ albumentations.augmentations.crops.functional.keypoint_center_crop    (keypoint,
 </thead>
 <tbody>
 <tr>
-<td><code>tuple</code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
@@ -2206,7 +2206,7 @@ albumentations.augmentations.crops.functional.keypoint_center_crop    (keypoint,
 <code class="highlight language-python">def
 albumentations.augmentations.crops.functional.keypoint_random_crop    (keypoint, crop_height, crop_width, h_start, w_start, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L116" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.keypoint_random_crop" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/functional.py#L117" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.crops.functional.keypoint_random_crop" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Keypoint random crop.</p>
@@ -2267,7 +2267,7 @@ albumentations.augmentations.crops.functional.keypoint_random_crop    (keypoint,
 </thead>
 <tbody>
 <tr>
-<td><code></code></td>
+<td><code>Tuple[float, float, float, float]</code></td>
 <td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>

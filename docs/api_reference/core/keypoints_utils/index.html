@@ -1299,6 +1299,19 @@
     albumentations.core.keypoints_utils
   </a>
   
+    <nav class="md-nav" aria-label="albumentations.core.keypoints_utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.core.keypoints_utils.KeypointsProcessor.filter" class="md-nav__link">
+    filter()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1956,7 +1969,7 @@ albumentations.core.keypoints_utils.KeypointParams</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L50" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L48" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.keypoints_utils.KeypointParams" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2010,12 +2023,52 @@ Default: <code>True</code></p></td>
 </div>
 </div>
 </div>
+<div class="doc doc-object doc-class">
+<h2 class="doc doc-heading" data-toc-label="KeypointsProcessor" id="albumentations.core.keypoints_utils.KeypointsProcessor">
+<code>class <strong>
+albumentations.core.keypoints_utils.KeypointsProcessor</strong></code>
+<code>
+
+
+    (params, additional_targets=None)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L82" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.core.keypoints_utils.KeypointsProcessor" title="Permanent link">¶</a>
+</h2>
+<div class="class-signature">
+</div>
+<div class="doc doc-contents">
+<div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.core.keypoints_utils.KeypointsProcessor.filter">
+<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">keypoints_utils</span><span class="o">.</span><span class="n">KeypointsProcessor</span><span class="o">.</span><span class="n">filter</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span></code>
+<a class="headerlink" href="#albumentations.core.keypoints_utils.KeypointsProcessor.filter" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<p>The function filters a sequence of data based on the number of rows and columns, and returns a
+sequence of keypoints.</p>
+<p>:param data: The <code>data</code> parameter is a sequence of sequences. Each inner sequence represents a
+set of keypoints
+:type data: Sequence[Sequence]
+:param rows: The <code>rows</code> parameter represents the number of rows in the data matrix. It specifies
+the number of rows that will be used for filtering the keypoints
+:type rows: int
+:param cols: The parameter "cols" represents the number of columns in the grid that the
+keypoints will be filtered on
+:type cols: int
+:return: a sequence of KeypointType objects.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="check_keypoint()" id="albumentations.core.keypoints_utils.check_keypoint">
 <code class="highlight language-python">def
 albumentations.core.keypoints_utils.check_keypoint    (kp, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L150" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoint" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L163" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoint" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if keypoint coordinates are less than image shapes</p>
@@ -2026,7 +2079,7 @@ albumentations.core.keypoints_utils.check_keypoint    (kp, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.keypoints_utils.check_keypoints    (keypoints, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L164" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoints" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L177" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoints" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if keypoints boundaries are less than image shapes</p>

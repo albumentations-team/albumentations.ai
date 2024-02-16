@@ -1956,7 +1956,7 @@ albumentations.imgaug.transforms.IAAAdditiveGaussianNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L256" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L297" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1976,12 +1976,12 @@ albumentations.imgaug.transforms.IAAAdditiveGaussianNoise</strong></code>
 <tbody>
 <tr>
 <td><code>loc</code></td>
-<td><code>int</code></td>
+<td></td>
 <td><p>mean of the normal distribution that generates the noise. Default: 0.</p></td>
 </tr>
 <tr>
 <td><code>scale</code></td>
-<td><code>[float, float]</code></td>
+<td></td>
 <td><p>standard deviation of the normal distribution that generates the noise.
 Default: (0.01 * 255, 0.05 * 255).</p></td>
 </tr>
@@ -2004,17 +2004,17 @@ albumentations.imgaug.transforms.IAAAffine</strong></code>
 <code>
 
 
-    (scale=1.0, translate_percent=None, translate_px=None, rotate=0.0, shear=0.0, order=1, cval=0, mode='reflect', always_apply=False, p=0.5)
+    (scale=1, translate_percent=None, translate_px=None, rotate=0.0, shear=0.0, order=1, cval=0, mode='reflect', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L324" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L380" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Place a regular grid of points on the input and randomly move the neighbourhood of these point around
+<p>Place a regular grid of points on the input and randomly move the neighborhood of these point around
 via affine transformations.</p>
 <p>This augmentation is deprecated. Please use Affine instead.</p>
 <p>Note: This class introduce interpolation artifacts to mask if it has values other than {0;1}</p>
@@ -2030,7 +2030,7 @@ via affine transformations.</p>
 <tbody>
 <tr>
 <td><code>p</code></td>
-<td><code>float</code></td>
+<td></td>
 <td><p>probability of applying the transform. Default: 0.5.</p></td>
 </tr>
 </tbody>
@@ -2051,7 +2051,7 @@ albumentations.imgaug.transforms.IAACropAndPad</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L109" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L129" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAACropAndPad" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2073,7 +2073,7 @@ albumentations.imgaug.transforms.IAAEmboss</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L170" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L199" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAEmboss" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2125,7 +2125,7 @@ albumentations.imgaug.transforms.IAAFliplr</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L129" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L158" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAFliplr" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2147,7 +2147,7 @@ albumentations.imgaug.transforms.IAAFlipud</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L144" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L173" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAFlipud" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2169,7 +2169,7 @@ albumentations.imgaug.transforms.IAAPerspective</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L380" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L443" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAPerspective" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2190,13 +2190,13 @@ This augmentation is deprecated. Please use Perspective instead.</p>
 <tbody>
 <tr>
 <td><code>scale</code></td>
-<td><code>[float, float]</code></td>
+<td></td>
 <td><p>standard deviation of the normal distributions. These are used to sample
 the random distances of the subimage's corners from the full image's corners. Default: (0.05, 0.1).</p></td>
 </tr>
 <tr>
 <td><code>p</code></td>
-<td><code>float</code></td>
+<td></td>
 <td><p>probability of applying the transform. Default: 0.5.</p></td>
 </tr>
 </tbody>
@@ -2217,13 +2217,13 @@ albumentations.imgaug.transforms.IAAPiecewiseAffine</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L289" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L337" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAAPiecewiseAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Place a regular grid of points on the input and randomly move the neighbourhood of these point around
+<p>Place a regular grid of points on the input and randomly move the neighborhood of these point around
 via affine transformations.</p>
 <p>This augmentation is deprecated. Please use PiecewiseAffine instead.</p>
 <p>Note: This class introduce interpolation artifacts to mask if it has values other than {0;1}</p>
@@ -2239,22 +2239,22 @@ via affine transformations.</p>
 <tbody>
 <tr>
 <td><code>scale</code></td>
-<td><code>[float, float]</code></td>
+<td></td>
 <td><p>factor range that determines how far each point is moved. Default: (0.03, 0.05).</p></td>
 </tr>
 <tr>
 <td><code>nb_rows</code></td>
-<td><code>int</code></td>
+<td></td>
 <td><p>number of rows of points that the regular grid should have. Default: 4.</p></td>
 </tr>
 <tr>
 <td><code>nb_cols</code></td>
-<td><code>int</code></td>
+<td></td>
 <td><p>number of columns of points that the regular grid should have. Default: 4.</p></td>
 </tr>
 <tr>
 <td><code>p</code></td>
-<td><code>float</code></td>
+<td></td>
 <td><p>probability of applying the transform. Default: 0.5.</p></td>
 </tr>
 </tbody>
@@ -2275,7 +2275,7 @@ albumentations.imgaug.transforms.IAASharpen</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L227" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L262" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAASharpen" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2327,7 +2327,7 @@ albumentations.imgaug.transforms.IAASuperpixels</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L200" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/imgaug/transforms.py#L235" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.imgaug.transforms.IAASuperpixels" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">

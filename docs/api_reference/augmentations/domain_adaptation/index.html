@@ -1952,11 +1952,11 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fbe90e04700&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f819ce78280&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L213" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L216" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.FDA" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2021,11 +2021,11 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fbe90e04700&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f819ce78280&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L152" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L149" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.HistogramMatching" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2034,7 +2034,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <p>Apply histogram matching. It manipulates the pixels of an input image so that its histogram matches
 the histogram of the reference image. If the images have multiple channels, the matching is done independently
 for each channel, as long as the number of channels is equal in the input image and the reference.</p>
-<p>Histogram matching can be used as a lightweight normalisation for image processing,
+<p>Histogram matching can be used as a lightweight normalization for image processing,
 such as feature matching, especially in circumstances where the images have been taken from different
 sources or in different conditions (i.e. lighting).</p>
 <p>See:
@@ -2056,7 +2056,7 @@ sources or in different conditions (i.e. lighting).</p>
 </tr>
 <tr>
 <td><code>blend_ratio</code></td>
-<td><code>[float, float]</code></td>
+<td></td>
 <td><p>Tuple of min and max blend ratio. Matched image will be blended with original
 with random blend factor for increased diversity of generated images.</p></td>
 </tr>
@@ -2072,7 +2072,7 @@ with random blend factor for increased diversity of generated images.</p></td>
 </tr>
 <tr>
 <td><code>p</code></td>
-<td><code>float</code></td>
+<td></td>
 <td><p>probability of applying the transform. Default: 1.0.</p></td>
 </tr>
 </tbody>
@@ -2091,11 +2091,11 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fbe90e04700&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f819ce78280&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L275" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L280" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2160,7 +2160,7 @@ with random blend factor for increased diversity of generated images.</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.domain_adaptation.fourier_domain_adaptation    (img, target_img, beta)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L32" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L33" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a></p>
