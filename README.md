@@ -27,3 +27,15 @@ To do that, you need to generate a [personal access token](https://help.github.c
 - [mkdocs](./mkdocs) - Files for a Docker service that uses [MkDocs](https://www.mkdocs.org/) to build the documentation.
 - [data](./data) - A directory with JSON files that contain data for building the site.
 - [html](./html) - A directory with Jinja2 templates and static assets.
+
+## To update site
+
+It may happen that we add / remove files in the [Albumentations repository](https://github.com/albumentations-team/albumentations/)
+
+To update the site, you need to update [mkdocs/src]
+
+After that run
+
+```bash
+make
+```

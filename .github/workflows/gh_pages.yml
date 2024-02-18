@@ -2,7 +2,7 @@ name: Build GitHub Pages
 
 on:
   push:
-    branches: master
+    branches: main
   schedule:
     - cron:  '0 5 * * *'
 
@@ -27,7 +27,7 @@ jobs:
       - name: Build site
         run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GOOGLE_ANALYTICS_TID: UA-158065353-1
       - name: Generate sitemap
         run: python tools/generate_sitemap.py ${GITHUB_WORKSPACE}/gh_pages
@@ -42,5 +42,5 @@ jobs:
         uses: ad-m/github-push-action@fe38f0a751bf9149f0270cc1fe20bf9156854365
         with:
           directory: ${{ github.workspace }}/gh_pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
           branch: gh-pages
