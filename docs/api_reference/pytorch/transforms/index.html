@@ -1524,23 +1524,6 @@
         
 
     <li class="md-nav__item">
-      <a href="../../augmentations/dropout/cutout/" class="md-nav__link">
-        Cutout augmentation (augmentations.dropout.cutout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
       <a href="../../augmentations/dropout/grid_dropout/" class="md-nav__link">
         GridDropout augmentation (augmentations.dropout.grid_dropout)
       </a>
@@ -1560,6 +1543,23 @@
     <li class="md-nav__item">
       <a href="../../augmentations/dropout/mask_dropout/" class="md-nav__link">
         MaskDropout augmentation (augmentations.dropout.mask_dropout)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/dropout/xy_masking/" class="md-nav__link">
+        XYMasking augmentation (augmentations.dropout.xy_masking)
       </a>
     </li>
               
@@ -1721,60 +1721,6 @@
             
   
   
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
-      
-      <label class="md-nav__link" for="__nav_10_5">
-        ImgAug Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="ImgAug Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          ImgAug Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../imgaug/transforms/" class="md-nav__link">
-        Transforms (imgaug.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -1782,14 +1728,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" checked>
       
-      <label class="md-nav__link" for="__nav_10_6">
+      <label class="md-nav__link" for="__nav_10_5">
         PyTorch Helpers
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_6">
+        <label class="md-nav__title" for="__nav_10_5">
           <span class="md-nav__icon md-icon"></span>
           PyTorch Helpers
         </label>
@@ -1946,56 +1892,6 @@
 <div class="doc doc-contents first">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" data-toc-label="ToTensor" id="albumentations.pytorch.transforms.ToTensor">
-<code>class <strong>
-albumentations.pytorch.transforms.ToTensor</strong></code>
-<code>
-
-
-    (num_classes=1, sigmoid=True, normalize=None)
-
-
-                </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L49" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.pytorch.transforms.ToTensor" title="Permanent link">¶</a>
-</h2>
-<div class="class-signature">
-</div>
-<div class="doc doc-contents">
-<p>Convert image and mask to <code>torch.Tensor</code> and divide by 255 if image or mask are <code>uint8</code> type.
-This transform is now removed from Albumentations. If you need it downgrade the library to version 0.5.2.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>num_classes</code></td>
-<td><code>int</code></td>
-<td><p>only for segmentation</p></td>
-</tr>
-<tr>
-<td><code>sigmoid</code></td>
-<td><code>bool</code></td>
-<td><p>only for segmentation, transform mask to LongTensor or not.</p></td>
-</tr>
-<tr>
-<td><code>normalize</code></td>
-<td><code>dict</code></td>
-<td><p>dict with keys [mean, std] to pass it into torchvision.normalize</p></td>
-</tr>
-</tbody>
-</table>
-<div class="doc doc-children">
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="ToTensorV2" id="albumentations.pytorch.transforms.ToTensorV2">
 <code>class <strong>
 albumentations.pytorch.transforms.ToTensorV2</strong></code>
@@ -2006,18 +1902,15 @@ albumentations.pytorch.transforms.ToTensorV2</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L73" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L22" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Convert image and mask to <code>torch.Tensor</code>. The numpy <code>HWC</code> image is converted to pytorch <code>CHW</code> tensor.
-If the image is in <code>HW</code> format (grayscale image), it will be converted to pytorch <code>HW</code> tensor.
-This is a simplified and improved version of the old <code>ToTensor</code>
-transform (<code>ToTensor</code> was deprecated, and now it is not present in Albumentations. You should use <code>ToTensorV2</code>
-instead).</p>
-<p><strong>Parameters:</strong></p>
+<p>Converts images/masks to PyTorch Tensors, inheriting from BasicTransform. Supports images in numpy <code>HWC</code> format
+and converts them to PyTorch <code>CHW</code> format. If the image is in <code>HW</code> format, it will be converted to PyTorch <code>HW</code>.</p>
+<p><strong>Attributes:</strong></p>
 <table>
 <thead>
 <tr>
@@ -2030,14 +1923,13 @@ instead).</p>
 <tr>
 <td><code>transpose_mask</code></td>
 <td><code>bool</code></td>
-<td><p>If True and an input mask has three dimensions, this transform will transpose dimensions
-so the shape <code>[height, width, num_channels]</code> becomes <code>[num_channels, height, width]</code>. The latter format is a
-standard format for PyTorch Tensors. Default: False.</p></td>
+<td><p>If True, transposes 3D input mask dimensions from <code>[height, width, num_channels]</code> to
+<code>[num_channels, height, width]</code>.</p></td>
 </tr>
 <tr>
 <td><code>always_apply</code></td>
 <td><code>bool</code></td>
-<td><p>Indicates whether this transformation should be always applied. Default: True.</p></td>
+<td><p>Indicates if this transformation should be always applied. Default: True.</p></td>
 </tr>
 <tr>
 <td><code>p</code></td>

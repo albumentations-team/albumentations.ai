@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://albumentations.ai/docs/api_reference/augmentations/dropout/cutout/">
+        <link rel="canonical" href="https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/">
       
       <link rel="icon" href="../../../../images/logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>Cutout augmentation (augmentations.dropout.cutout) - Albumentations Documentation</title>
+        <title>XYMasking augmentation (augmentations.dropout.xy_masking) - Albumentations Documentation</title>
       
     
     
@@ -64,13 +64,13 @@
   
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Albumentations Documentation - Cutout augmentation (augmentations.dropout.cutout)">
+  <meta property="og:title" content="Albumentations Documentation - XYMasking augmentation (augmentations.dropout.xy_masking)">
   <meta property="og:description" content="Albumentations: fast and flexible image augmentations">
-  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/augmentations/dropout/cutout/">
+  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/">
   <meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Albumentations Documentation - Cutout augmentation (augmentations.dropout.cutout)">
+  <meta name="twitter:title" content="Albumentations Documentation - XYMasking augmentation (augmentations.dropout.xy_masking)">
   <meta name="twitter:description" content="Albumentations: fast and flexible image augmentations">
   <meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
 
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cutout-augmentation-augmentationsdropoutcutout" class="md-skip">
+        <a href="#xymasking-augmentation-augmentationsdropoutxy_masking" class="md-skip">
           Skip to content
         </a>
       
@@ -1523,58 +1523,6 @@
             
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Cutout augmentation (augmentations.dropout.cutout)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Cutout augmentation (augmentations.dropout.cutout)
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#albumentations.augmentations.dropout.cutout" class="md-nav__link">
-    albumentations.augmentations.dropout.cutout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
   
 
         
@@ -1603,6 +1551,71 @@
     </li>
               
 
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          XYMasking augmentation (augmentations.dropout.xy_masking)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        XYMasking augmentation (augmentations.dropout.xy_masking)
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#albumentations.augmentations.dropout.xy_masking" class="md-nav__link">
+    albumentations.augmentations.dropout.xy_masking
+  </a>
+  
+    <nav class="md-nav" aria-label="albumentations.augmentations.dropout.xy_masking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.augmentations.dropout.xy_masking.XYMasking.validate_mask_length" class="md-nav__link">
+    validate_mask_length()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
   
 
           
@@ -1768,65 +1781,11 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
       
       <label class="md-nav__link" for="__nav_10_5">
-        ImgAug Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="ImgAug Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          ImgAug Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../imgaug/transforms/" class="md-nav__link">
-        Transforms (imgaug.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" >
-      
-      <label class="md-nav__link" for="__nav_10_6">
         PyTorch Helpers
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_6">
+        <label class="md-nav__title" for="__nav_10_5">
           <span class="md-nav__icon md-icon"></span>
           PyTorch Helpers
         </label>
@@ -1931,7 +1890,7 @@
 </style>
 
 
-  <a href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/dropout/cutout.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/albumentations-team/albumentations.ai/tree/master/mkdocs/src/docs/api_reference/augmentations/dropout/xy_masking.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
   </a>
 
@@ -1942,29 +1901,34 @@
   
 
 
-<h1 id="cutout-augmentation-augmentationsdropoutcutout">Cutout augmentation (augmentations.dropout.cutout)<a class="headerlink" href="#cutout-augmentation-augmentationsdropoutcutout" title="Permanent link">¶</a></h1>
+<h1 id="xymasking-augmentation-augmentationsdropoutxy_masking">XYMasking augmentation (augmentations.dropout.xy_masking)<a class="headerlink" href="#xymasking-augmentation-augmentationsdropoutxy_masking" title="Permanent link">¶</a></h1>
 <div class="doc doc-object doc-module">
-<a id="albumentations.augmentations.dropout.cutout"></a>
+<a id="albumentations.augmentations.dropout.xy_masking"></a>
 <div class="doc doc-contents first">
 <div class="doc doc-children">
 <div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" data-toc-label="Cutout" id="albumentations.augmentations.dropout.cutout.Cutout">
+<h2 class="doc doc-heading" data-toc-label="XYMasking" id="albumentations.augmentations.dropout.xy_masking.XYMasking">
 <code>class <strong>
-albumentations.augmentations.dropout.cutout.Cutout</strong></code>
+albumentations.augmentations.dropout.xy_masking.XYMasking</strong></code>
 <code>
 
 
-    (num_holes=8, max_h_size=8, max_w_size=8, fill_value=0, always_apply=False, p=0.5)
+    (num_masks_x=0, num_masks_y=0, mask_x_length=0, mask_y_length=0, fill_value=0, mask_fill_value=0, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/cutout.py#L35" target="_blank">[view source on GitHub]</a>
-</span><a class="headerlink" href="#albumentations.augmentations.dropout.cutout.Cutout" title="Permanent link">¶</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/xy_masking.py#L51" target="_blank">[view source on GitHub]</a>
+</span><a class="headerlink" href="#albumentations.augmentations.dropout.xy_masking.XYMasking" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>CoarseDropout of the square regions in the image.</p>
+<p>Applies masking strips to an image, either horizontally (X axis) or vertically (Y axis),
+simulating occlusions. This transform is useful for training models to recognize images
+with varied visibility conditions. It's particularly effective for spectrogram images,
+allowing spectral and frequency masking to improve model robustness.</p>
+<p>At least one of <code>max_x_length</code> or <code>max_y_length</code> must be specified, dictating the mask's
+maximum size along each axis.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1976,35 +1940,92 @@ albumentations.augmentations.dropout.cutout.Cutout</strong></code>
 </thead>
 <tbody>
 <tr>
-<td><code>num_holes</code></td>
-<td><code>int</code></td>
-<td><p>number of regions to zero out</p></td>
+<td><code>num_masks_x</code></td>
+<td><code>Union[int, Tuple[int, int]]</code></td>
+<td><p>Number or range of horizontal regions to mask. Defaults to 0.</p></td>
 </tr>
 <tr>
-<td><code>max_h_size</code></td>
-<td><code>int</code></td>
-<td><p>maximum height of the hole</p></td>
+<td><code>num_masks_y</code></td>
+<td><code>Union[int, Tuple[int, int]]</code></td>
+<td><p>Number or range of vertical regions to mask. Defaults to 0.</p></td>
 </tr>
 <tr>
-<td><code>max_w_size</code></td>
-<td><code>int</code></td>
-<td><p>maximum width of the hole</p></td>
+<td><code>mask_x_length</code></td>
+<td><code>[Union[int, Tuple[int, int]]</code></td>
+<td><p>Specifies the length of the masks along
+the X (horizontal) axis. If an integer is provided, it sets a fixed mask length.
+If a tuple of two integers (min, max) is provided,
+the mask length is randomly chosen within this range for each mask.
+This allows for variable-length masks in the horizontal direction.</p></td>
+</tr>
+<tr>
+<td><code>mask_y_length</code></td>
+<td><code>Union[int, Tuple[int, int]]</code></td>
+<td><p>Specifies the height of the masks along
+the Y (vertical) axis. Similar to <code>mask_x_length</code>, an integer sets a fixed mask height,
+while a tuple (min, max) allows for variable-height masks, chosen randomly
+within the specified range for each mask. This flexibility facilitates creating masks of various
+sizes in the vertical direction.</p></td>
 </tr>
 <tr>
 <td><code>fill_value</code></td>
-<td><code>int, float, list of int, list of float</code></td>
-<td><p>value for dropped pixels.</p></td>
+<td><code>Union[int, float, List[int], List[float]]</code></td>
+<td><p>Value to fill image masks. Defaults to 0.</p></td>
+</tr>
+<tr>
+<td><code>mask_fill_value</code></td>
+<td><code>Optional[Union[int, float, List[int], List[float]]]</code></td>
+<td><p>Value to fill masks in the mask.
+If <code>None</code>, uses mask is not affected. Default: <code>None</code>.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>Probability of applying the transform. Defaults to 0.5.</p></td>
 </tr>
 </tbody>
 </table> <p>Targets:
-    image</p>
+    image, mask, keypoints</p>
 <p>Image types:
     uint8, float32</p>
-<p>Reference:
-|  <a href="https://arxiv.org/abs/1708.04552" target="_blank">https://arxiv.org/abs/1708.04552</a>
-|  <a href="https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py" target="_blank">https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py</a>
-|  <a href="https://github.com/aleju/imgaug/blob/master/imgaug/augmenters/arithmetic.py" target="_blank">https://github.com/aleju/imgaug/blob/master/imgaug/augmenters/arithmetic.py</a></p>
+<p>Note: Either <code>max_x_length</code> or <code>max_y_length</code> or both must be defined.</p>
 <div class="doc doc-children">
+<div class="doc doc-object doc-method">
+<h3 class="doc doc-heading" id="albumentations.augmentations.dropout.xy_masking.XYMasking.validate_mask_length">
+<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">augmentations</span><span class="o">.</span><span class="n">dropout</span><span class="o">.</span><span class="n">xy_masking</span><span class="o">.</span><span class="n">XYMasking</span><span class="o">.</span><span class="n">validate_mask_length</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask_length</span><span class="p">,</span> <span class="n">dimension_size</span><span class="p">,</span> <span class="n">dimension_name</span><span class="p">)</span></code>
+<a class="headerlink" href="#albumentations.augmentations.dropout.xy_masking.XYMasking.validate_mask_length" title="Permanent link">¶</a></h3>
+<div class="doc doc-contents">
+<p>Validate the mask length against the corresponding image dimension size.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mask_length</code></td>
+<td><code>Union[int, Tuple[int, int]]</code></td>
+<td><p>The length of the mask to be validated.</p></td>
+</tr>
+<tr>
+<td><code>dimension_size</code></td>
+<td><code>int</code></td>
+<td><p>The size of the image dimension (width or height)
+against which to validate the mask length.</p></td>
+</tr>
+<tr>
+<td><code>dimension_name</code></td>
+<td><code>str</code></td>
+<td><p>The name of the dimension ('width' or 'height') for error messaging.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2033,7 +2054,7 @@ albumentations.augmentations.dropout.cutout.Cutout</strong></code>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../coarse_dropout/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../mask_dropout/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2042,19 +2063,19 @@ albumentations.augmentations.dropout.cutout.Cutout</strong></code>
               <span class="md-footer__direction">
                 Previous
               </span>
-              CoarseDropout augmentation (augmentations.dropout.coarse_dropout)
+              MaskDropout augmentation (augmentations.dropout.mask_dropout)
             </div>
           </div>
         </a>
       
       
-        <a href="../grid_dropout/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../geometric/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              GridDropout augmentation (augmentations.dropout.grid_dropout)
+              Index
             </div>
           </div>
           <div class="md-footer__button md-icon">

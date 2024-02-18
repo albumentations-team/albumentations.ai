@@ -1586,23 +1586,6 @@
         
 
     <li class="md-nav__item">
-      <a href="../../api_reference/augmentations/dropout/cutout/" class="md-nav__link">
-        Cutout augmentation (augmentations.dropout.cutout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
       <a href="../../api_reference/augmentations/dropout/grid_dropout/" class="md-nav__link">
         GridDropout augmentation (augmentations.dropout.grid_dropout)
       </a>
@@ -1622,6 +1605,23 @@
     <li class="md-nav__item">
       <a href="../../api_reference/augmentations/dropout/mask_dropout/" class="md-nav__link">
         MaskDropout augmentation (augmentations.dropout.mask_dropout)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../api_reference/augmentations/dropout/xy_masking/" class="md-nav__link">
+        XYMasking augmentation (augmentations.dropout.xy_masking)
       </a>
     </li>
               
@@ -1791,65 +1791,11 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
       
       <label class="md-nav__link" for="__nav_10_5">
-        ImgAug Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="ImgAug Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          ImgAug Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../api_reference/imgaug/transforms/" class="md-nav__link">
-        Transforms (imgaug.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" >
-      
-      <label class="md-nav__link" for="__nav_10_6">
         PyTorch Helpers
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_6">
+        <label class="md-nav__title" for="__nav_10_5">
           <span class="md-nav__icon md-icon"></span>
           PyTorch Helpers
         </label>
@@ -1966,7 +1912,7 @@
 
 
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h1>
-<p>Albumentations requires Python 3.6 or higher.</p>
+<p>Albumentations requires Python 3.8 or higher.</p>
 <h2 id="install-the-latest-stable-version-from-pypi">Install the latest stable version from PyPI<a class="headerlink" href="#install-the-latest-stable-version-from-pypi" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code>pip install -U albumentations
 </code></pre></div>
@@ -1976,7 +1922,7 @@
 <h3 id="note-on-opencv-dependencies">Note on OpenCV dependencies<a class="headerlink" href="#note-on-opencv-dependencies" title="Permanent link">¶</a></h3>
 <p>By default, pip downloads a wheel distribution of Albumentations. This distribution has <code>opencv-python-headless</code> as its dependency.</p>
 <p>If you already have some OpenCV distribution (such as <code>opencv-python-headless</code>, <code>opencv-python</code>, <code>opencv-contrib-python</code> or <code>opencv-contrib-python-headless</code>) installed in your Python environment, you can force Albumentations to use it by providing the <code>--no-binary qudida,albumentations</code> argument to pip, e.g.</p>
-<div class="highlight"><pre><span></span><code>pip install -U albumentations --no-binary qudida,albumentations
+<div class="highlight"><pre><span></span><code>pip install -U albumentations
 </code></pre></div>
 <p>pip will use the following logic to determine the required OpenCV distribution:</p>
 <ol>
@@ -1985,8 +1931,7 @@
 </ol>
 <h2 id="install-the-latest-stable-version-from-conda-forge">Install the latest stable version from conda-forge<a class="headerlink" href="#install-the-latest-stable-version-from-conda-forge" title="Permanent link">¶</a></h2>
 <p>If you are using Anaconda or Miniconda you can install Albumentations from conda-forge:</p>
-<div class="highlight"><pre><span></span><code>conda install -c conda-forge imgaug
-conda install -c conda-forge albumentations
+<div class="highlight"><pre><span></span><code>conda install -c conda-forge albumentations
 </code></pre></div>
 
 

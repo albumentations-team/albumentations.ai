@@ -1574,23 +1574,6 @@
         
 
     <li class="md-nav__item">
-      <a href="../../augmentations/dropout/cutout/" class="md-nav__link">
-        Cutout augmentation (augmentations.dropout.cutout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
       <a href="../../augmentations/dropout/grid_dropout/" class="md-nav__link">
         GridDropout augmentation (augmentations.dropout.grid_dropout)
       </a>
@@ -1610,6 +1593,23 @@
     <li class="md-nav__item">
       <a href="../../augmentations/dropout/mask_dropout/" class="md-nav__link">
         MaskDropout augmentation (augmentations.dropout.mask_dropout)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/dropout/xy_masking/" class="md-nav__link">
+        XYMasking augmentation (augmentations.dropout.xy_masking)
       </a>
     </li>
               
@@ -1779,65 +1779,11 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
       
       <label class="md-nav__link" for="__nav_10_5">
-        ImgAug Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="ImgAug Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          ImgAug Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../imgaug/transforms/" class="md-nav__link">
-        Transforms (imgaug.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" >
-      
-      <label class="md-nav__link" for="__nav_10_6">
         PyTorch Helpers
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_6">
+        <label class="md-nav__title" for="__nav_10_5">
           <span class="md-nav__icon md-icon"></span>
           PyTorch Helpers
         </label>
@@ -1969,7 +1915,7 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L92" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L93" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2013,7 +1959,7 @@ by the way you must have at least one object with key 'image'</p>
 albumentations.core.transforms_interface.DualTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L246" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L247" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2030,7 +1976,7 @@ albumentations.core.transforms_interface.DualTransform</strong></code>
 albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L277" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L278" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2047,7 +1993,7 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 albumentations.core.transforms_interface.NoOp</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L291" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L292" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2063,7 +2009,7 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 <code class="highlight language-python">def
 albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L26" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L27" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert input argument to a min-max tuple.</p>

@@ -1581,23 +1581,6 @@
         
 
     <li class="md-nav__item">
-      <a href="../../augmentations/dropout/cutout/" class="md-nav__link">
-        Cutout augmentation (augmentations.dropout.cutout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
       <a href="../../augmentations/dropout/grid_dropout/" class="md-nav__link">
         GridDropout augmentation (augmentations.dropout.grid_dropout)
       </a>
@@ -1617,6 +1600,23 @@
     <li class="md-nav__item">
       <a href="../../augmentations/dropout/mask_dropout/" class="md-nav__link">
         MaskDropout augmentation (augmentations.dropout.mask_dropout)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/dropout/xy_masking/" class="md-nav__link">
+        XYMasking augmentation (augmentations.dropout.xy_masking)
       </a>
     </li>
               
@@ -1786,65 +1786,11 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
       
       <label class="md-nav__link" for="__nav_10_5">
-        ImgAug Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="ImgAug Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          ImgAug Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../imgaug/transforms/" class="md-nav__link">
-        Transforms (imgaug.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" >
-      
-      <label class="md-nav__link" for="__nav_10_6">
         PyTorch Helpers
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_6">
+        <label class="md-nav__title" for="__nav_10_5">
           <span class="md-nav__icon md-icon"></span>
           PyTorch Helpers
         </label>
@@ -2048,7 +1994,7 @@ so they can be found later while deserializing transformation pipeline using cla
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="from_dict()" id="albumentations.core.serialization.from_dict">
 <code class="highlight language-python">def
-albumentations.core.serialization.from_dict    (transform_dict, nonserializable=None, lambda_transforms='deprecated')
+albumentations.core.serialization.from_dict    (transform_dict, nonserializable=None)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L142" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
 </h2>
@@ -2076,11 +2022,6 @@ This dictionary is required when you are restoring a pipeline that contains non-
 Keys in that dictionary should be named same as <code>name</code> arguments in respective transforms from
 a serialized pipeline.</p></td>
 </tr>
-<tr>
-<td><code>lambda_transforms</code></td>
-<td><code>Union[Dict[str, Any], NoneType, str]</code></td>
-<td><p>Deprecated. Use 'nonserizalizable' instead.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -2090,7 +2031,7 @@ a serialized pipeline.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.get_shortest_class_fullname    (cls)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L282" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.get_shortest_class_fullname" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L275" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.get_shortest_class_fullname" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>The function <code>get_shortest_class_fullname</code> takes a class object as input and returns its shortened
@@ -2106,7 +2047,7 @@ is a subclass of <code>BasicCompose</code>
 <code class="highlight language-python">def
 albumentations.core.serialization.load    (filepath_or_buffer, data_format='json', nonserializable=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L224" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L217" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Load a serialized pipeline from a file or file-like object and construct a transform pipeline.</p>
@@ -2181,7 +2122,7 @@ from the serialized pipeline. Defaults to None.</p></td>
 <code class="highlight language-python">def
 albumentations.core.serialization.register_additional_transforms    ()
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L271" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L264" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Register transforms that are not imported directly into the <code>albumentations</code> module.</p>
@@ -2192,7 +2133,7 @@ albumentations.core.serialization.register_additional_transforms    ()
 <code class="highlight language-python">def
 albumentations.core.serialization.save    (transform, filepath_or_buffer, data_format='json', on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L178" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L171" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Serialize a transform pipeline and save it to either a file specified by a path or a file-like object
