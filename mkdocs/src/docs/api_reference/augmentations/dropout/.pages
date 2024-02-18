@@ -3,6 +3,6 @@ nav:
   - index.md
   - channel_dropout.md
   - coarse_dropout.md
-  - cutout.md
   - grid_dropout.md
   - mask_dropout.md
+  - xy_masking.md
