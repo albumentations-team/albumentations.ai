@@ -1,1 +1,37 @@
-[{"name": "Alexander Buslaev", "photo": "buslaev.jpg", "twitter": "AlBuslaev", "github": "albu", "linkedin": "al-buslaev"}, {"name": "Alex Parinov", "photo": "parinov.jpg", "twitter": "creaf", "github": "creafz", "linkedin": "alex-parinov"}, {"name": "Vladimir Iglovikov", "photo": "iglovikov.jpg", "twitter": "viglovikov", "github": "ternaus", "linkedin": "iglovikov"}, {"name": "Evegene Khvedchenya", "photo": "khvedchenya.jpg", "twitter": "cvtalks", "github": "BloodAxe", "linkedin": "cvtalks"}, {"name": "Mikhail Druzhinin", "photo": "druzhinin.jpg", "twitter": "Dipetm", "github": "Dipet", "linkedin": "mikhail-druzhinin-548229100"}]
+[
+    {
+        "name": "Vladimir Iglovikov",
+        "photo": "iglovikov.jpg",
+        "twitter": "viglovikov",
+        "github": "ternaus",
+        "linkedin": "iglovikov"
+    },
+    {
+        "name": "Mikhail Druzhinin",
+        "photo": "druzhinin.jpg",
+        "twitter": "Dipetm",
+        "github": "Dipet",
+        "linkedin": "mikhail-druzhinin-548229100"
+    },
+    {
+        "name": "Alex Parinov",
+        "photo": "parinov.jpg",
+        "twitter": "creaf",
+        "github": "creafz",
+        "linkedin": "alex-parinov"
+    },
+    {
+        "name": "Alexander Buslaev",
+        "photo": "buslaev.jpg",
+        "twitter": "AlBuslaev",
+        "github": "albu",
+        "linkedin": "al-buslaev"
+    },
+    {
+        "name": "Evegene Khvedchenya",
+        "photo": "khvedchenya.jpg",
+        "twitter": "cvtalks",
+        "github": "BloodAxe",
+        "linkedin": "cvtalks"
+    }
+]

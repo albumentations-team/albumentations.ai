@@ -8,7 +8,5 @@
 - Augmentations (albumentations.augmentations)
     - [Transforms (albumentations.augmentations.transforms)](augmentations/transforms.md)
     - [Functional transforms (albumentations.augmentations.functional)](augmentations/functional.md)
-- ImgAug Helpers (albumentations.imgaug)
-    - [Transforms (albumentations.imgaug.transforms)](imgaug/transforms.md)
 - PyTorch Helpers (albumentations.pytorch)
     - [Transforms (albumentations.pytorch.transforms)](pytorch/transforms.md)
