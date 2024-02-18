@@ -1,5 +1,71 @@
 # Release notes
 
+## 1.4.0 (17 Debruary 2024)
+
+# Albumentations 1.4.0 Release Notes
+
+- Request
+- Highlights
+- New transform
+- Backwards Incompatible Changes
+- Improvements
+- Bug fixes
+
+## Request
+1. If you enjoy using the library as an individual developer or during the day job as a part of the company, please consider becoming a [sponsor for the library](https://github.com/sponsors/albumentations-team). Every dollar helps.
+2. If you did not give our repo a ⭐, it is [only one mouse click].(https://github.com/albumentations-team/albumentations)
+3. If you have feature requests, proposals, or encounter issues - submit your request to [issues](https://github.com/albumentations-team/albumentations/issues) or, our new initiative, - [Discord server for albumentations](https://discord.gg/AmMnDBdzYs)
+
+## Highlights
+
+In this release, we mainly focused on the technical debt as its decrease allows faster iterations and bug fixes in the codebase. We added only one new transform, did not work on speeding up transforms, and other changes are minor.
+
+1. We are removing the dependency on the imgaug library. The library was one of our inspirations when we created Albumentations, but maintainers of imgaug ceased its support which caused inconsistencies in library versions. It was done in 2021, say commit https://github.com/albumentations-team/albumentations/commit/ba44effb0369ba5eae1e8eb4909105eac9709230 by @Dipet .
+
+But, somehow, we are cutting this dependency only in 2024.
+
+2. Added typing in all of the codebase. When we started the library, Python 2 was still widely used; hence, none of the original codebases had types specified for function arguments and return types. Since the end of the support for Python 2, we added types to the new or updated code, but only now have we covered all the codebase.
+
+## New transform
+
+<img width="560" alt="Screenshot 2024-02-17 at 13 09 01" src="https://github.com/albumentations-team/albumentations/assets/5481618/18aaebad-4b58-4cc6-932f-e2d8a1f352ab">
+
+* Added `XYMasking` transform: applies masking strips to an image, either horizontally (X axis) or vertically (Y axis), simulating occlusions. This transform is helpful for training models to recognize images with varied visibility conditions. It's particularly effective for spectrogram images, allowing spectral and frequency masking to improve model robustness.
+As other dropout transforms [CoarseDropout](https://albumentations.ai/docs/api_reference/augmentations/dropout/coarse_dropout/), [MaskDropout](https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/), [GridDropout](https://albumentations.ai/docs/api_reference/augmentations/dropout/grid_dropout/) it supports images, masks and keypoints as targets. (https://github.com/albumentations-team/albumentations/commit/004fabbf90794fbc21ee356e2dde6637b7fecbd4 by @ternaus )
+
+## Backward Incompatible Changes
+The deprecated code, including 15 transforms, was removed.
+Dependency on the [imgaug](https://imgaug.readthedocs.io/en/latest/) library was removed.
+
+(https://github.com/albumentations-team/albumentations/commit/be6a217b207b3d7ebe792caabb438d660b45f2a5 by @ternaus )
+
+### Deleted Transforms
+1. `JpegCompression`. Use [ImageCompression](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression) instead.
+2. `RandomBrightness`. Use [RandomBrigtnessContrast](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast) instead.
+3. `RandomContrast`. Use [RandomBrigtnessContrast](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast) instead.
+4. `Cutout`. Use [CoarseDropout](https://albumentations.ai/docs/api_reference/augmentations/dropout/coarse_dropout/#coarsedropout-augmentation-augmentationsdropoutcoarse_dropout) instead.
+5. `ToTensor`. Use [ToTensorV2](https://albumentations.ai/docs/api_reference/pytorch/transforms/#albumentations.pytorch.transforms.ToTensorV2) instead.
+6. `IAAAdditiveGaussianNoise`. Use [GaussNoise](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise) instead.
+7. `IAAAffine`. Use [Affine](https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.Affine) instead.
+8. IAACropAndPad. Use [CropAndPad](https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.CropAndPad) instead.
+9. `IAAEmboss`. Use [Emboss](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Emboss) instead.
+10. `IAAFliplr`. Use [HorizontalFlip](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HorizontalFlip) instead.
+11. `IAAFlipud`. Use [VerticalFlip](https://albumentations.ai/docs/api_reference/full_reference/#albumentations.augmentations.geometric.transforms.VerticalFlip) instead.
+12. `IAAPerspective`. Use [Perspective](https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.Perspective) instead.
+13. `IAAPiecewiseAffine`. Use [PiecewiseAffine](https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.PiecewiseAffine) instead.
+14. `IAASharpen`. Use [Sharpen](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Sharpen) instead.
+15. `IAASuperpixels`. Use [Superpixels](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Superpixels) instead.
+
+### Other deprecated functionality
+* Removed  `eps` parameter in [RandomGamma](https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGamma)
+* Removed `lambda_transforms`in `serialization.from_dict` function.
+
+ ## Minor changes and Bug Fixes
+ * Added details [Contributor's guide](https://github.com/albumentations-team/albumentations/blob/main/CONTRIBUTING.md)
+ * Added support for `matrix=None` case for Piecewise affine transform (https://github.com/albumentations-team/albumentations/commit/c70e664e060bfd7463c20674927aed217f72d437 @Dipet )
+ * Bugfix - Eliminated the possibility of the Perspective transform collapsing (https://github.com/albumentations-team/albumentations/commit/a919a772d763e0c62b674ca490a97c89e0b9c5a3 @alicangok )
+ * Fixes in docstrings (@domef, @aaronzs, @Dipet, @ternaus  )
+ * Added checks for python 3.12
 
 ## 0.5.2 (29 November 2020)
 

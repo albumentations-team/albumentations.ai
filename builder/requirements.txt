@@ -42,7 +42,7 @@ pyjwt==2.4.0
     # via pygithub
 pynacl==1.5.0
     # via pygithub
-pyyaml==5.4
+pyyaml==6.0.1
     # via watchdog
 requests==2.22.0
     # via

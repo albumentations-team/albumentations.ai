@@ -4,5 +4,4 @@ nav:
   - index.md
   - core
   - augmentations
-  - imgaug
   - pytorch

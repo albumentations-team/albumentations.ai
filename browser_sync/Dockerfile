@@ -1,4 +1,4 @@
-FROM node:13.8.0
+FROM node:20.5.0
 
 RUN npm install -g npm@latest
 
