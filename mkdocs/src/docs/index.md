@@ -11,11 +11,13 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ["API Reference"](#api-reference) contains the description of Albumentations' methods and classes.
 
 ## Introduction to image augmentation
+
 - [What is image augmentation and how it can improve the performance of deep neural networks](introduction/image_augmentation.md)
 - [Why you need a dedicated library for image augmentation](introduction/why_you_need_a_dedicated_library_for_image_augmentation.md)
 - [Why Albumentations](introduction/why_albumentations.md)
 
 ## Getting started with Albumentations
+
 - [Installation](getting_started/installation.md)
 - [Image augmentation for classification](getting_started/image_augmentation.md)
 - [Mask augmentation for segmentation](getting_started/mask_augmentation.md)
@@ -27,6 +29,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ](getting_started/setting_probabilities.md)
 
 ## Examples
+
 - [Defining a simple augmentation pipeline for image augmentation](examples/example/)
 - [Working with non-8-bit images](examples/example_16_bit_tiff/)
 - [Using Albumentations to augment bounding boxes for object detection tasks](examples/example_bboxes/)
@@ -35,12 +38,14 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Using Albumentations to augment keypoints](examples/example_keypoints/)
 - [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](examples/example_multi_target/)
 - [Weather augmentations in Albumentations](examples/example_weather_transforms/)
+- [Example of applying XYMasking transform](examples/example_xymasking/)
 - [Migrating from torchvision to Albumentations](examples/migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](examples/showcase/)
 
 ## Examples of how to use Albumentations with different deep learning frameworks
+
 - PyTorch
     - [PyTorch and Albumentations for image classification](examples/pytorch_classification/)
     - [PyTorch and Albumentations for semantic segmentation](examples/pytorch_semantic_segmentation/)
@@ -48,10 +53,12 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
     - [Using Albumentations with Tensorflow](examples/tensorflow-example/)
 
 ## External resources
+
 - [Blog posts, podcasts, talks, and videos about Albumentations](external_resources/blog_posts_podcasts_talks.md)
 - [Books that mention Albumentations](external_resources/books.md)
 
 ## Other topics
+
 - [Frequently Asked Questions](faq.md)
 - [AutoAlbument - AutoML for image augmentation](autoalbument/index.md)
 - [Albumentations Experimental - experimental features for Albumentations](experimental/overview.md)
@@ -59,6 +66,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Contributing](contributing.md)
 
 ## API Reference
+
 - [Full API Reference on a single page](api_reference/full_reference.md)
 - [Index](api_reference/index.md)
     - [Core API (albumentations.core)](api_reference/core/index.md)
