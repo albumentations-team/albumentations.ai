@@ -5,10 +5,10 @@ RUN mkdir /mkdocs
 COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 RUN pip install --no-cache-dir -r /mkdocs/requirements.txt
 
-RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
-
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations.git /albumentations
 RUN pip install -e /albumentations
+
+RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
 
 RUN git clone --depth=1 https://github.com/albumentations-team/albumentations_experimental.git /albumentations_experimental
 RUN pip install -e /albumentations_experimental
@@ -24,6 +24,7 @@ RUN ~/.cargo/bin/rargs -d ' → ' ~/.cargo/bin/sd '{1}' '{2}' $(~/.cargo/bin/fd 
 
 RUN mkdir -p /mkdocs/src/docs/examples
 RUN cp -rf /albumentations_examples/notebooks/*.ipynb /mkdocs/src/docs/examples
+
 COPY ./mkdocs/src/docs/examples /mkdocs/src/docs/examples/
 
 ENV PYTHONPATH "${PYTHONPATH}:/mkdocs/src:/albumentations"
