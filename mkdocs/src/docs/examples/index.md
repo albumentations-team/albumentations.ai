@@ -8,12 +8,14 @@
 - [Using Albumentations to augment keypoints](example_keypoints/)
 - [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](example_multi_target/)
 - [Weather augmentations in Albumentations](example_weather_transforms/)
+- [Example of applying XYMasking transform](example_xymasking/)
 - [Migrating from torchvision to Albumentations](migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](replay/)
 - [How to save and load parameters of an augmentation pipeline](serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](showcase/)
 
 ## Examples of how to use Albumentations with different deep learning frameworks
+
 - PyTorch
     - [PyTorch and Albumentations for image classification](pytorch_classification/)
     - [PyTorch and Albumentations for semantic segmentation](pytorch_semantic_segmentation/)
