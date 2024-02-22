@@ -1917,7 +1917,7 @@ albumentations.augmentations.dropout.xy_masking.XYMasking</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/xy_masking.py#L51" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/xy_masking.py#L52" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.dropout.xy_masking.XYMasking" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1929,62 +1929,25 @@ with varied visibility conditions. It's particularly effective for spectrogram i
 allowing spectral and frequency masking to improve model robustness.</p>
 <p>At least one of <code>max_x_length</code> or <code>max_y_length</code> must be specified, dictating the mask's
 maximum size along each axis.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>num_masks_x</code></td>
-<td><code>Union[int, Tuple[int, int]]</code></td>
-<td><p>Number or range of horizontal regions to mask. Defaults to 0.</p></td>
-</tr>
-<tr>
-<td><code>num_masks_y</code></td>
-<td><code>Union[int, Tuple[int, int]]</code></td>
-<td><p>Number or range of vertical regions to mask. Defaults to 0.</p></td>
-</tr>
-<tr>
-<td><code>mask_x_length</code></td>
-<td><code>[Union[int, Tuple[int, int]]</code></td>
-<td><p>Specifies the length of the masks along
-the X (horizontal) axis. If an integer is provided, it sets a fixed mask length.
-If a tuple of two integers (min, max) is provided,
-the mask length is randomly chosen within this range for each mask.
-This allows for variable-length masks in the horizontal direction.</p></td>
-</tr>
-<tr>
-<td><code>mask_y_length</code></td>
-<td><code>Union[int, Tuple[int, int]]</code></td>
-<td><p>Specifies the height of the masks along
-the Y (vertical) axis. Similar to <code>mask_x_length</code>, an integer sets a fixed mask height,
-while a tuple (min, max) allows for variable-height masks, chosen randomly
-within the specified range for each mask. This flexibility facilitates creating masks of various
-sizes in the vertical direction.</p></td>
-</tr>
-<tr>
-<td><code>fill_value</code></td>
-<td><code>Union[int, float, List[int], List[float]]</code></td>
-<td><p>Value to fill image masks. Defaults to 0.</p></td>
-</tr>
-<tr>
-<td><code>mask_fill_value</code></td>
-<td><code>Optional[Union[int, float, List[int], List[float]]]</code></td>
-<td><p>Value to fill masks in the mask.
-If <code>None</code>, uses mask is not affected. Default: <code>None</code>.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>Probability of applying the transform. Defaults to 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">num_masks_x</span> <span class="p">(</span><span class="n">Union</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="nb nb-Type">int</span><span class="p">]]):</span> <span class="n">Number</span> <span class="ow">or</span> <span class="nb">range</span> <span class="n">of</span> <span class="n">horizontal</span> <span class="n">regions</span> <span class="n">to</span> <span class="n">mask</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="mf">0.</span>
+<span class="n">num_masks_y</span> <span class="p">(</span><span class="n">Union</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="nb nb-Type">int</span><span class="p">]]):</span> <span class="n">Number</span> <span class="ow">or</span> <span class="nb">range</span> <span class="n">of</span> <span class="n">vertical</span> <span class="n">regions</span> <span class="n">to</span> <span class="n">mask</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="mf">0.</span>
+<span class="n">mask_x_length</span> <span class="p">([</span><span class="n">Union</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="nb nb-Type">int</span><span class="p">]]):</span> <span class="n">Specifies</span> <span class="n">the</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">masks</span> <span class="n">along</span>
+    <span class="n">the</span> <span class="n">X</span> <span class="p">(</span><span class="n">horizontal</span><span class="p">)</span> <span class="n">axis</span><span class="o">.</span> <span class="n">If</span> <span class="n">an</span> <span class="n">integer</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span> <span class="n">it</span> <span class="n">sets</span> <span class="n">a</span> <span class="n">fixed</span> <span class="n">mask</span> <span class="n">length</span><span class="o">.</span>
+    <span class="n">If</span> <span class="n">a</span> <span class="n">tuple</span> <span class="n">of</span> <span class="n">two</span> <span class="n">integers</span> <span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span>
+    <span class="n">the</span> <span class="n">mask</span> <span class="n">length</span> <span class="k">is</span> <span class="n">randomly</span> <span class="n">chosen</span> <span class="n">within</span> <span class="n">this</span> <span class="nb">range</span> <span class="k">for</span> <span class="n">each</span> <span class="n">mask</span><span class="o">.</span>
+    <span class="n">This</span> <span class="n">allows</span> <span class="k">for</span> <span class="n">variable</span><span class="o">-</span><span class="n">length</span> <span class="n">masks</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">horizontal</span> <span class="n">direction</span><span class="o">.</span>
+<span class="n">mask_y_length</span> <span class="p">(</span><span class="n">Union</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="nb nb-Type">int</span><span class="p">]]):</span> <span class="n">Specifies</span> <span class="n">the</span> <span class="n">height</span> <span class="n">of</span> <span class="n">the</span> <span class="n">masks</span> <span class="n">along</span>
+    <span class="n">the</span> <span class="n">Y</span> <span class="p">(</span><span class="n">vertical</span><span class="p">)</span> <span class="n">axis</span><span class="o">.</span> <span class="n">Similar</span> <span class="n">to</span> <span class="err">`</span><span class="n">mask_x_length</span><span class="err">`</span><span class="p">,</span> <span class="n">an</span> <span class="n">integer</span> <span class="n">sets</span> <span class="n">a</span> <span class="n">fixed</span> <span class="n">mask</span> <span class="n">height</span><span class="p">,</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="n">tuple</span> <span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span> <span class="n">allows</span> <span class="k">for</span> <span class="n">variable</span><span class="o">-</span><span class="n">height</span> <span class="n">masks</span><span class="p">,</span> <span class="n">chosen</span> <span class="n">randomly</span>
+    <span class="n">within</span> <span class="n">the</span> <span class="n">specified</span> <span class="nb">range</span> <span class="k">for</span> <span class="n">each</span> <span class="n">mask</span><span class="o">.</span> <span class="n">This</span> <span class="n">flexibility</span> <span class="n">facilitates</span> <span class="n">creating</span> <span class="n">masks</span> <span class="n">of</span> <span class="n">various</span>
+    <span class="n">sizes</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">vertical</span> <span class="n">direction</span><span class="o">.</span>
+<span class="n">fill_value</span> <span class="p">(</span><span class="n">Union</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="nb nb-Type">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb nb-Type">float</span><span class="p">]]):</span> <span class="n">Value</span> <span class="n">to</span> <span class="n">fill</span> <span class="n">image</span> <span class="n">masks</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="mf">0.</span>
+<span class="n">mask_fill_value</span> <span class="p">(</span><span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">,</span> <span class="nb nb-Type">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb nb-Type">int</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb nb-Type">float</span><span class="p">]]]):</span> <span class="n">Value</span> <span class="n">to</span> <span class="n">fill</span> <span class="n">masks</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">mask</span><span class="o">.</span>
+    <span class="n">If</span> <span class="err">`</span><span class="n">None</span><span class="err">`</span><span class="p">,</span> <span class="n">uses</span> <span class="n">mask</span> <span class="k">is</span> <span class="ow">not</span> <span class="n">affected</span><span class="o">.</span> <span class="n">Default</span><span class="p">:</span> <span class="err">`</span><span class="n">None</span><span class="err">`</span><span class="o">.</span>
+<span class="n">p</span> <span class="p">(</span><span class="nb nb-Type">float</span><span class="p">):</span> <span class="n">Probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="mf">0.5</span><span class="o">.</span>
+</code></pre></div>
+<p>Targets:
     image, mask, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -1996,34 +1959,12 @@ If <code>None</code>, uses mask is not affected. Default: <code>None</code>.</p>
 <a class="headerlink" href="#albumentations.augmentations.dropout.xy_masking.XYMasking.validate_mask_length" title="Permanent link">¶</a></h3>
 <div class="doc doc-contents">
 <p>Validate the mask length against the corresponding image dimension size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mask_length</code></td>
-<td><code>Union[int, Tuple[int, int]]</code></td>
-<td><p>The length of the mask to be validated.</p></td>
-</tr>
-<tr>
-<td><code>dimension_size</code></td>
-<td><code>int</code></td>
-<td><p>The size of the image dimension (width or height)
-against which to validate the mask length.</p></td>
-</tr>
-<tr>
-<td><code>dimension_name</code></td>
-<td><code>str</code></td>
-<td><p>The name of the dimension ('width' or 'height') for error messaging.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="nv">mask_length</span> <span class="ss">(</span><span class="nv">Optional</span>[<span class="nv">Union</span>[<span class="nv">int</span>, <span class="nv">Tuple</span>[<span class="nv">int</span>, <span class="nv">int</span>]]]<span class="ss">)</span>: <span class="nv">The</span> <span class="nv">length</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">mask</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">validated</span>.
+<span class="nv">dimension_size</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">The</span> <span class="nv">size</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">image</span> <span class="nv">dimension</span> <span class="ss">(</span><span class="nv">width</span> <span class="nv">or</span> <span class="nv">height</span><span class="ss">)</span>
+    <span class="nv">against</span> <span class="nv">which</span> <span class="nv">to</span> <span class="nv">validate</span> <span class="nv">the</span> <span class="nv">mask</span> <span class="nv">length</span>.
+<span class="nv">dimension_name</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">The</span> <span class="nv">name</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">dimension</span> <span class="ss">(</span><span class="s1">'</span><span class="s">width</span><span class="s1">'</span> <span class="nv">or</span> <span class="s1">'</span><span class="s">height</span><span class="s1">'</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">error</span> <span class="nv">messaging</span>.
+</code></pre></div>
 </div>
 </div>
 </div>

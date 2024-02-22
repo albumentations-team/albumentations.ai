@@ -1231,6 +1231,19 @@
     albumentations.core.composition
   </a>
   
+    <nav class="md-nav" aria-label="albumentations.core.composition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.core.composition--note" class="md-nav__link">
+    Note:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1902,56 +1915,22 @@ albumentations.core.composition.Compose</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L194" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L198" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Compose" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Compose transforms and handle all transformations regarding bounding boxes</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>transforms</code></td>
-<td><code>list</code></td>
-<td><p>list of transformations to compose.</p></td>
-</tr>
-<tr>
-<td><code>bbox_params</code></td>
-<td><code>BboxParams</code></td>
-<td><p>Parameters for bounding boxes transforms</p></td>
-</tr>
-<tr>
-<td><code>keypoint_params</code></td>
-<td><code>KeypointParams</code></td>
-<td><p>Parameters for keypoints transforms</p></td>
-</tr>
-<tr>
-<td><code>additional_targets</code></td>
-<td><code>dict</code></td>
-<td><p>Dict with keys - new target name, values - old target name. ex: {'image2': 'image'}</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying all list of transforms. Default: 1.0.</p></td>
-</tr>
-<tr>
-<td><code>is_check_shapes</code></td>
-<td><code>bool</code></td>
-<td><p>If True shapes consistency of images/mask/masks would be checked on each call. If you
-would like to disable this check - pass False (do it only if you are sure in your data consistency).</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="nv">transforms</span> <span class="ss">(</span><span class="nv">list</span><span class="ss">)</span>: <span class="nv">list</span> <span class="nv">of</span> <span class="nv">transformations</span> <span class="nv">to</span> <span class="nv">compose</span>.
+<span class="nv">bbox_params</span> <span class="ss">(</span><span class="nv">BboxParams</span><span class="ss">)</span>: <span class="nv">Parameters</span> <span class="k">for</span> <span class="nv">bounding</span> <span class="nv">boxes</span> <span class="nv">transforms</span>
+<span class="nv">keypoint_params</span> <span class="ss">(</span><span class="nv">KeypointParams</span><span class="ss">)</span>: <span class="nv">Parameters</span> <span class="k">for</span> <span class="nv">keypoints</span> <span class="nv">transforms</span>
+<span class="nv">additional_targets</span> <span class="ss">(</span><span class="nv">dict</span><span class="ss">)</span>: <span class="nv">Dict</span> <span class="nv">with</span> <span class="nv">keys</span> <span class="o">-</span> <span class="nv">new</span> <span class="nv">target</span> <span class="nv">name</span>, <span class="nv">values</span> <span class="o">-</span> <span class="nv">old</span> <span class="nv">target</span> <span class="nv">name</span>. <span class="nv">ex</span>: {<span class="s1">'</span><span class="s">image2</span><span class="s1">'</span>: <span class="s1">'</span><span class="s">image</span><span class="s1">'</span>}
+<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">all</span> <span class="nv">list</span> <span class="nv">of</span> <span class="nv">transforms</span>. <span class="nv">Default</span>: <span class="mi">1</span>.<span class="mi">0</span>.
+<span class="nv">is_check_shapes</span> <span class="ss">(</span><span class="nv">bool</span><span class="ss">)</span>: <span class="k">If</span> <span class="nv">True</span> <span class="nv">shapes</span> <span class="nv">consistency</span> <span class="nv">of</span> <span class="nv">images</span><span class="o">/</span><span class="nv">mask</span><span class="o">/</span><span class="nv">masks</span> <span class="nv">would</span> <span class="nv">be</span> <span class="nv">checked</span> <span class="nv">on</span> <span class="nv">each</span> <span class="nv">call</span>. <span class="k">If</span> <span class="nv">you</span>
+    <span class="nv">would</span> <span class="nv">like</span> <span class="nv">to</span> <span class="nv">disable</span> <span class="nv">this</span> <span class="nv">check</span> <span class="o">-</span> <span class="nv">pass</span> <span class="nv">False</span> <span class="ss">(</span><span class="k">do</span> <span class="nv">it</span> <span class="nv">only</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">are</span> <span class="nv">sure</span> <span class="nv">in</span> <span class="nv">your</span> <span class="nv">data</span> <span class="nv">consistency</span><span class="ss">)</span>.
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1967,7 +1946,7 @@ albumentations.core.composition.OneOf</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L315" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L329" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.OneOf" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1975,28 +1954,10 @@ albumentations.core.composition.OneOf</strong></code>
 <div class="doc doc-contents">
 <p>Select one of transforms to apply. Selected transform will be called with <code>force_apply=True</code>.
 Transforms probabilities will be normalized to one 1, so in this case transforms probabilities works as weights.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>transforms</code></td>
-<td><code>list</code></td>
-<td><p>list of transformations to compose.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying selected transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code>transforms (list): list of transformations to compose.
+p (float): probability of applying selected transform. Default: 0.5.
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2012,7 +1973,7 @@ albumentations.core.composition.OneOrOther</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L384" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L401" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.OneOrOther" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2034,45 +1995,19 @@ albumentations.core.composition.PerChannel</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L410" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L429" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.PerChannel" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply transformations per-channel</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>transforms</code></td>
-<td><code>list</code></td>
-<td><p>list of transformations to compose.</p></td>
-</tr>
-<tr>
-<td><code>channels</code></td>
-<td><code>sequence</code></td>
-<td><p>channels to apply the transform to. Pass None to apply to all.</p></td>
-</tr>
-<tr>
-<td><code>Default</code></td>
-<td></td>
-<td><p>None (apply to all)</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code>transforms (list): list of transformations to compose.
+channels (sequence): channels to apply the transform to. Pass None to apply to all.
+Default: None (apply to all)
+p (float): probability of applying the transform. Default: 0.5.
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2088,19 +2023,21 @@ albumentations.core.composition.Sequential</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L543" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L566" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.Sequential" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Sequentially applies all transforms to targets.</p>
-<p>Note:
-    This transform is not intended to be a replacement for <code>Compose</code>. Instead, it should be used inside <code>Compose</code>
-    the same way <code>OneOf</code> or <code>OneOrOther</code> are used. For instance, you can combine <code>OneOf</code> with <code>Sequential</code> to
-    create an augmentation pipeline that contains multiple sequences of augmentations and applies one randomly
-    chose sequence to input data (see the <code>Example</code> section for an example definition of such pipeline).</p>
+<h4 id="albumentations.core.composition--note">Note:<a class="headerlink" href="#albumentations.core.composition--note" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">This</span> <span class="n">transform</span> <span class="k">is</span> <span class="k">not</span> <span class="n">intended</span> <span class="k">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">replacement</span> <span class="k">for</span> <span class="n n-Quoted">`Compose`</span><span class="p">.</span> <span class="n">Instead</span><span class="p">,</span> <span class="n">it</span> <span class="n">should</span> <span class="n">be</span> <span class="n">used</span> <span class="n">inside</span> <span class="n n-Quoted">`Compose`</span>
+<span class="n">the</span> <span class="n">same</span> <span class="n">way</span> <span class="n n-Quoted">`OneOf`</span> <span class="k">or</span> <span class="n n-Quoted">`OneOrOther`</span> <span class="n">are</span> <span class="n">used</span><span class="p">.</span> <span class="k">For</span> <span class="k">instance</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">combine</span> <span class="n n-Quoted">`OneOf`</span> <span class="k">with</span> <span class="n n-Quoted">`Sequential`</span> <span class="k">to</span>
+<span class="k">create</span> <span class="n">an</span> <span class="n">augmentation</span> <span class="n">pipeline</span> <span class="n">that</span> <span class="k">contains</span> <span class="n">multiple</span> <span class="n">sequences</span> <span class="k">of</span> <span class="n">augmentations</span> <span class="k">and</span> <span class="n">applies</span> <span class="k">one</span> <span class="n">randomly</span>
+<span class="n">chose</span> <span class="n">sequence</span> <span class="k">to</span> <span class="n">input</span> <span class="k">data</span> <span class="p">(</span><span class="n">see</span> <span class="n">the</span> <span class="n n-Quoted">`Example`</span> <span class="n">section</span> <span class="k">for</span> <span class="n">an</span> <span class="n">example</span> <span class="k">definition</span> <span class="k">of</span> <span class="n">such</span> <span class="n">pipeline</span><span class="p">).</span>
+</code></pre></div>
 <p><strong>Examples:</strong></p>
+<hr/>
 <div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
 <span class="o">&gt;&gt;&gt;</span>    <span class="n">A</span><span class="o">.</span><span class="n">OneOf</span><span class="p">([</span>
@@ -2130,7 +2067,7 @@ albumentations.core.composition.SomeOf</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L347" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/composition.py#L363" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.composition.SomeOf" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2138,38 +2075,12 @@ albumentations.core.composition.SomeOf</strong></code>
 <div class="doc doc-contents">
 <p>Select N transforms to apply. Selected transforms will be called with <code>force_apply=True</code>.
 Transforms probabilities will be normalized to one 1, so in this case transforms probabilities works as weights.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>transforms</code></td>
-<td><code>list</code></td>
-<td><p>list of transformations to compose.</p></td>
-</tr>
-<tr>
-<td><code>n</code></td>
-<td><code>int</code></td>
-<td><p>number of transforms to apply.</p></td>
-</tr>
-<tr>
-<td><code>replace</code></td>
-<td><code>bool</code></td>
-<td><p>Whether the sampled transforms are with or without replacement. Default: True.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying selected transform. Default: 1.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code>transforms (list): list of transformations to compose.
+n (int): number of transforms to apply.
+replace (bool): Whether the sampled transforms are with or without replacement. Default: True.
+p (float): probability of applying selected transform. Default: 1.
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>

@@ -1898,11 +1898,11 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7fb09489d160&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f1b436e1ee0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L216" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L220" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.FDA" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1910,38 +1910,14 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <div class="doc doc-contents">
 <p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a>
 Simple "style transfer".</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>reference_images</code></td>
-<td><code>Sequence[Any]</code></td>
-<td><p>Sequence of objects that will be converted to images by <code>read_fn</code>. By default,</p></td>
-</tr>
-<tr>
-<td><code>beta_limit</code></td>
-<td><code>float or tuple of float</code></td>
-<td><p>coefficient beta from paper. Recommended less 0.3.</p></td>
-</tr>
-<tr>
-<td><code>read_fn</code></td>
-<td><code>Callable</code></td>
-<td><p>Used-defined function to read image. Function should get an element of <code>reference_images</code></p></td>
-</tr>
-<tr>
-<td><code>and</code></td>
-<td><code>return numpy array of image pixels. Default</code></td>
-<td><p>takes as input a path to an image and returns a numpy array.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">reference_images</span> <span class="p">(</span><span class="n">Sequence</span><span class="err">[</span><span class="k">Any</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">Sequence</span> <span class="k">of</span> <span class="n">objects</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">converted</span> <span class="k">to</span> <span class="n">images</span> <span class="k">by</span> <span class="n n-Quoted">`read_fn`</span><span class="p">.</span> <span class="k">By</span> <span class="k">default</span><span class="p">,</span>
+<span class="n">it</span> <span class="n">expects</span> <span class="n">a</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">paths</span> <span class="k">to</span> <span class="n">images</span><span class="p">.</span>
+<span class="n">beta_limit</span> <span class="p">(</span><span class="kt">float</span> <span class="k">or</span> <span class="n">tuple</span> <span class="k">of</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">coefficient</span> <span class="n">beta</span> <span class="k">from</span> <span class="n">paper</span><span class="p">.</span> <span class="n">Recommended</span> <span class="k">less</span> <span class="mf">0.3</span><span class="p">.</span>
+<span class="n">read_fn</span> <span class="p">(</span><span class="n">Callable</span><span class="p">)</span><span class="o">:</span> <span class="n">Used</span><span class="o">-</span><span class="n">defined</span> <span class="k">function</span> <span class="k">to</span> <span class="k">read</span> <span class="n">image</span><span class="p">.</span> <span class="k">Function</span> <span class="n">should</span> <span class="k">get</span> <span class="n">an</span> <span class="n">element</span> <span class="k">of</span> <span class="n n-Quoted">`reference_images`</span>
+<span class="k">and</span> <span class="k">return</span> <span class="n">numpy</span> <span class="k">array</span> <span class="k">of</span> <span class="n">image</span> <span class="n">pixels</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n">takes</span> <span class="k">as</span> <span class="n">input</span> <span class="n">a</span> <span class="k">path</span> <span class="k">to</span> <span class="n">an</span> <span class="n">image</span> <span class="k">and</span> <span class="k">returns</span> <span class="n">a</span> <span class="n">numpy</span> <span class="k">array</span><span class="p">.</span>
+</code></pre></div>
+<p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -1949,10 +1925,11 @@ Simple "style transfer".</p>
     <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a>
 <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_FDA_Fourier_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2020_paper.pdf" target="_blank">https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_FDA_Fourier_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2020_paper.pdf</a></p>
 <p><strong>Examples:</strong></p>
+<hr/>
 <div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">A</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">target_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="kp">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">target_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="kp">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">A</span><span class="o">.</span><span class="n">FDA</span><span class="p">([</span><span class="n">target_image</span><span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">read_fn</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">)])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div>
@@ -1967,11 +1944,11 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7fb09489d160&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f1b436e1ee0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L149" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L151" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.HistogramMatching" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1985,44 +1962,16 @@ such as feature matching, especially in circumstances where the images have been
 sources or in different conditions (i.e. lighting).</p>
 <p>See:
     <a href="https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_histogram_matching.html" target="_blank">https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_histogram_matching.html</a></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>reference_images</code></td>
-<td><code>Sequence[Any]</code></td>
-<td><p>Sequence of objects that will be converted to images by <code>read_fn</code>. By default,</p></td>
-</tr>
-<tr>
-<td><code>blend_ratio</code></td>
-<td></td>
-<td><p>Tuple of min and max blend ratio. Matched image will be blended with original
-with random blend factor for increased diversity of generated images.</p></td>
-</tr>
-<tr>
-<td><code>read_fn</code></td>
-<td><code>Callable</code></td>
-<td><p>Used-defined function to read image. Function should get an element of <code>reference_images</code></p></td>
-</tr>
-<tr>
-<td><code>and</code></td>
-<td><code>return numpy array of image pixels. Default</code></td>
-<td><p>takes as input a path to an image and returns a numpy array.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td></td>
-<td><p>probability of applying the transform. Default: 1.0.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">reference_images</span> <span class="p">(</span><span class="n">Sequence</span><span class="err">[</span><span class="k">Any</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">Sequence</span> <span class="k">of</span> <span class="n">objects</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">converted</span> <span class="k">to</span> <span class="n">images</span> <span class="k">by</span> <span class="n n-Quoted">`read_fn`</span><span class="p">.</span> <span class="k">By</span> <span class="k">default</span><span class="p">,</span>
+<span class="n">it</span> <span class="n">expects</span> <span class="n">a</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">paths</span> <span class="k">to</span> <span class="n">images</span><span class="p">.</span>
+<span class="n">blend_ratio</span><span class="o">:</span> <span class="n">Tuple</span> <span class="k">of</span> <span class="n">min</span> <span class="k">and</span> <span class="n">max</span> <span class="n">blend</span> <span class="n">ratio</span><span class="p">.</span> <span class="n">Matched</span> <span class="n">image</span> <span class="n">will</span> <span class="n">be</span> <span class="n">blended</span> <span class="k">with</span> <span class="n">original</span>
+    <span class="k">with</span> <span class="k">random</span> <span class="n">blend</span> <span class="n">factor</span> <span class="k">for</span> <span class="n">increased</span> <span class="n">diversity</span> <span class="k">of</span> <span class="k">generated</span> <span class="n">images</span><span class="p">.</span>
+<span class="n">read_fn</span> <span class="p">(</span><span class="n">Callable</span><span class="p">)</span><span class="o">:</span> <span class="n">Used</span><span class="o">-</span><span class="n">defined</span> <span class="k">function</span> <span class="k">to</span> <span class="k">read</span> <span class="n">image</span><span class="p">.</span> <span class="k">Function</span> <span class="n">should</span> <span class="k">get</span> <span class="n">an</span> <span class="n">element</span> <span class="k">of</span> <span class="n n-Quoted">`reference_images`</span>
+<span class="k">and</span> <span class="k">return</span> <span class="n">numpy</span> <span class="k">array</span> <span class="k">of</span> <span class="n">image</span> <span class="n">pixels</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n">takes</span> <span class="k">as</span> <span class="n">input</span> <span class="n">a</span> <span class="k">path</span> <span class="k">to</span> <span class="n">an</span> <span class="n">image</span> <span class="k">and</span> <span class="k">returns</span> <span class="n">a</span> <span class="n">numpy</span> <span class="k">array</span><span class="p">.</span>
+<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">.</span>
+</code></pre></div>
+<p>Targets:
     image</p>
 <p>Image types:
     uint8, uint16, float32</p>
@@ -2037,11 +1986,11 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7fb09489d160&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f1b436e1ee0&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L280" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L286" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2050,49 +1999,17 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <p>Another naive and quick pixel-level domain adaptation. It fits a simple transform (such as PCA, StandardScaler
 or MinMaxScaler) on both original and reference image, transforms original image with transform trained on this
 image and then performs inverse transformation using transform fitted on reference image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>reference_images</code></td>
-<td><code>Sequence[Any]</code></td>
-<td><p>Sequence of objects that will be converted to images by <code>read_fn</code>. By default,</p></td>
-</tr>
-<tr>
-<td><code>blend_ratio</code></td>
-<td><code>[float, float]</code></td>
-<td><p>Tuple of min and max blend ratio. Matched image will be blended with original
-with random blend factor for increased diversity of generated images.</p></td>
-</tr>
-<tr>
-<td><code>read_fn</code></td>
-<td><code>Callable</code></td>
-<td><p>Used-defined function to read image. Function should get an element of <code>reference_images</code></p></td>
-</tr>
-<tr>
-<td><code>and</code></td>
-<td><code>return numpy array of image pixels. Default</code></td>
-<td><p>takes as input a path to an image and returns a numpy array.</p></td>
-</tr>
-<tr>
-<td><code>transform_type</code></td>
-<td><code>str</code></td>
-<td><p>type of transform; "pca", "standard", "minmax" are allowed.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 1.0.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">reference_images</span> <span class="p">(</span><span class="n">Sequence</span><span class="err">[</span><span class="k">Any</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">Sequence</span> <span class="k">of</span> <span class="n">objects</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">converted</span> <span class="k">to</span> <span class="n">images</span> <span class="k">by</span> <span class="n n-Quoted">`read_fn`</span><span class="p">.</span> <span class="k">By</span> <span class="k">default</span><span class="p">,</span>
+<span class="n">it</span> <span class="n">expects</span> <span class="n">a</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">paths</span> <span class="k">to</span> <span class="n">images</span><span class="p">.</span>
+<span class="n">blend_ratio</span> <span class="err">[</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="err">]</span><span class="o">:</span> <span class="n">Tuple</span> <span class="k">of</span> <span class="n">min</span> <span class="k">and</span> <span class="n">max</span> <span class="n">blend</span> <span class="n">ratio</span><span class="p">.</span> <span class="n">Matched</span> <span class="n">image</span> <span class="n">will</span> <span class="n">be</span> <span class="n">blended</span> <span class="k">with</span> <span class="n">original</span>
+    <span class="k">with</span> <span class="k">random</span> <span class="n">blend</span> <span class="n">factor</span> <span class="k">for</span> <span class="n">increased</span> <span class="n">diversity</span> <span class="k">of</span> <span class="k">generated</span> <span class="n">images</span><span class="p">.</span>
+<span class="n">read_fn</span> <span class="p">(</span><span class="n">Callable</span><span class="p">)</span><span class="o">:</span> <span class="n">Used</span><span class="o">-</span><span class="n">defined</span> <span class="k">function</span> <span class="k">to</span> <span class="k">read</span> <span class="n">image</span><span class="p">.</span> <span class="k">Function</span> <span class="n">should</span> <span class="k">get</span> <span class="n">an</span> <span class="n">element</span> <span class="k">of</span> <span class="n n-Quoted">`reference_images`</span>
+<span class="k">and</span> <span class="k">return</span> <span class="n">numpy</span> <span class="k">array</span> <span class="k">of</span> <span class="n">image</span> <span class="n">pixels</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n">takes</span> <span class="k">as</span> <span class="n">input</span> <span class="n">a</span> <span class="k">path</span> <span class="k">to</span> <span class="n">an</span> <span class="n">image</span> <span class="k">and</span> <span class="k">returns</span> <span class="n">a</span> <span class="n">numpy</span> <span class="k">array</span><span class="p">.</span>
+<span class="n">transform_type</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="k">type</span> <span class="k">of</span> <span class="n">transform</span><span class="p">;</span> <span class="s2">"pca"</span><span class="p">,</span> <span class="s2">"standard"</span><span class="p">,</span> <span class="s2">"minmax"</span> <span class="n">are</span> <span class="n">allowed</span><span class="p">.</span>
+<span class="n">p</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">.</span>
+</code></pre></div>
+<p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2106,37 +2023,15 @@ with random blend factor for increased diversity of generated images.</p></td>
 <code class="highlight language-python">def
 albumentations.augmentations.domain_adaptation.fourier_domain_adaptation    (img, target_img, beta)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L33" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L34" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>img</code></td>
-<td><code>ndarray</code></td>
-<td><p>source image</p></td>
-</tr>
-<tr>
-<td><code>target_img</code></td>
-<td><code>ndarray</code></td>
-<td><p>target image for domain adaptation</p></td>
-</tr>
-<tr>
-<td><code>beta</code></td>
-<td><code>float</code></td>
-<td><p>coefficient from source paper</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span>  <span class="n">source</span> <span class="n">image</span>
+<span class="n">target_img</span><span class="o">:</span>  <span class="n">target</span> <span class="n">image</span> <span class="k">for</span> <span class="n">domain</span> <span class="n">adaptation</span>
+<span class="n">beta</span><span class="o">:</span> <span class="n">coefficient</span> <span class="n">from</span> <span class="n">source</span> <span class="n">paper</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2148,10 +2043,12 @@ albumentations.augmentations.domain_adaptation.fourier_domain_adaptation    (img
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td><p>transformed image</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>transformed image
+</code></pre></div>
 </div>
 </div>
 </div>

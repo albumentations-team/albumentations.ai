@@ -1911,34 +1911,13 @@ albumentations.augmentations.geometric.resize.LongestMaxSize</strong></code>
 </div>
 <div class="doc doc-contents">
 <p>Rescale an image so that maximum side is equal to max_size, keeping the aspect ratio of the initial image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>max_size</code></td>
-<td><code>int, list of int</code></td>
-<td><p>maximum size of the image after the transformation. When using a list, max size
-will be randomly selected from the values in the list.</p></td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>interpolation method. Default: cv2.INTER_LINEAR.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 1.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code>max_size (int, list of int): maximum size of the image after the transformation. When using a list, max size
+    will be randomly selected from the values in the list.
+interpolation (OpenCV flag): interpolation method. Default: cv2.INTER_LINEAR.
+p (float): probability of applying the transform. Default: 1.
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -1957,45 +1936,24 @@ albumentations.augmentations.geometric.resize.RandomScale</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L39" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L37" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.RandomScale" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly resize the input. Output image size is different from the input image size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>scale_limit</code></td>
-<td><code>[float, float] or float</code></td>
-<td><p>scaling factor range. If scale_limit is a single float value, the
-range will be (-scale_limit, scale_limit). Note that the scale_limit will be biased by 1.
-If scale_limit is a tuple, like (low, high), sampling will be done from the range (1 + low, 1 + high).
-Default: (-0.1, 0.1).</p></td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="nv">scale_limit</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">scaling</span> <span class="nv">factor</span> <span class="nv">range</span>. <span class="k">If</span> <span class="nv">scale_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">value</span>, <span class="nv">the</span>
+    <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">scale_limit</span>, <span class="nv">scale_limit</span><span class="ss">)</span>. <span class="nv">Note</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">scale_limit</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">biased</span> <span class="nv">by</span> <span class="mi">1</span>.
+    <span class="k">If</span> <span class="nv">scale_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">tuple</span>, <span class="nv">like</span> <span class="ss">(</span><span class="nv">low</span>, <span class="nv">high</span><span class="ss">)</span>, <span class="nv">sampling</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">done</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">range</span> <span class="ss">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nv">low</span>, <span class="mi">1</span> <span class="o">+</span> <span class="nv">high</span><span class="ss">)</span>.
+    <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">1</span>, <span class="mi">0</span>.<span class="mi">1</span><span class="ss">)</span>.
+<span class="nv">interpolation</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">interpolation</span> <span class="nv">algorithm</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
+    <span class="nv">cv2</span>.<span class="nv">INTER_NEAREST</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>, <span class="nv">cv2</span>.<span class="nv">INTER_CUBIC</span>, <span class="nv">cv2</span>.<span class="nv">INTER_AREA</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LANCZOS4</span>.
+    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>.
+<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2014,47 +1972,22 @@ albumentations.augmentations.geometric.resize.Resize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L192" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L196" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.Resize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Resize the input to the given height and width.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td><p>desired height of the output.</p></td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td><p>desired width of the output.</p></td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 1.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code>height (int): desired height of the output.
+width (int): desired width of the output.
+interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:
+    cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+    Default: cv2.INTER_LINEAR.
+p (float): probability of applying the transform. Default: 1.
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2073,41 +2006,20 @@ albumentations.augmentations.geometric.resize.SmallestMaxSize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L139" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/resize.py#L141" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.resize.SmallestMaxSize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Rescale an image so that minimum side is equal to max_size, keeping the aspect ratio of the initial image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>max_size</code></td>
-<td><code>int, list of int</code></td>
-<td><p>maximum size of smallest side of the image after the transformation. When using a
-list, max size will be randomly selected from the values in the list.</p></td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>interpolation method. Default: cv2.INTER_LINEAR.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 1.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code>max_size (int, list of int): maximum size of smallest side of the image after the transformation. When using a
+    list, max size will be randomly selected from the values in the list.
+interpolation (OpenCV flag): interpolation method. Default: cv2.INTER_LINEAR.
+p (float): probability of applying the transform. Default: 1.
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>

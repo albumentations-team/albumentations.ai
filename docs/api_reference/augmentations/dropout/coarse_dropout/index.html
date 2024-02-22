@@ -1904,71 +1904,33 @@ albumentations.augmentations.dropout.coarse_dropout.CoarseDropout</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/coarse_dropout.py#L47" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/coarse_dropout.py#L50" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.dropout.coarse_dropout.CoarseDropout" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>CoarseDropout of the rectangular regions in the image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>max_holes</code></td>
-<td><code>int</code></td>
-<td><p>Maximum number of regions to zero out.</p></td>
-</tr>
-<tr>
-<td><code>max_height</code></td>
-<td><code>int, float</code></td>
-<td><p>Maximum height of the hole.</p></td>
-</tr>
-<tr>
-<td><code>max_width</code></td>
-<td><code>int, float</code></td>
-<td><p>Maximum width of the hole.</p></td>
-</tr>
-<tr>
-<td><code>min_holes</code></td>
-<td><code>int</code></td>
-<td><p>Minimum number of regions to zero out. If <code>None</code>,
-<code>min_holes</code> is be set to <code>max_holes</code>. Default: <code>None</code>.</p></td>
-</tr>
-<tr>
-<td><code>min_height</code></td>
-<td><code>int, float</code></td>
-<td><p>Minimum height of the hole. Default: None. If <code>None</code>,
-<code>min_height</code> is set to <code>max_height</code>. Default: <code>None</code>.
-If float, it is calculated as a fraction of the image height.</p></td>
-</tr>
-<tr>
-<td><code>min_width</code></td>
-<td><code>int, float</code></td>
-<td><p>Minimum width of the hole. If <code>None</code>, <code>min_height</code> is
-set to <code>max_width</code>. Default: <code>None</code>.
-If float, it is calculated as a fraction of the image width.</p></td>
-</tr>
-<tr>
-<td><code>fill_value</code></td>
-<td><code>int, float, list of int, list of float</code></td>
-<td><p>value for dropped pixels.</p></td>
-</tr>
-<tr>
-<td><code>mask_fill_value</code></td>
-<td><code>int, float, list of int, list of float</code></td>
-<td><p>fill value for dropped pixels
-in mask. If <code>None</code> - mask is not affected. Default: <code>None</code>.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">max_holes</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">:</span> <span class="n">Maximum</span> <span class="k">number</span> <span class="k">of</span> <span class="n">regions</span> <span class="k">to</span> <span class="n">zero</span> <span class="k">out</span><span class="p">.</span>
+<span class="n">max_height</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">Maximum</span> <span class="n">height</span> <span class="k">of</span> <span class="n">the</span> <span class="n">hole</span><span class="p">.</span>
+<span class="k">If</span> <span class="kt">float</span><span class="p">,</span> <span class="n">it</span> <span class="k">is</span> <span class="n">calculated</span> <span class="k">as</span> <span class="n">a</span> <span class="n">fraction</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">height</span><span class="p">.</span>
+<span class="n">max_width</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">Maximum</span> <span class="n">width</span> <span class="k">of</span> <span class="n">the</span> <span class="n">hole</span><span class="p">.</span>
+<span class="k">If</span> <span class="kt">float</span><span class="p">,</span> <span class="n">it</span> <span class="k">is</span> <span class="n">calculated</span> <span class="k">as</span> <span class="n">a</span> <span class="n">fraction</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">width</span><span class="p">.</span>
+<span class="n">min_holes</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">:</span> <span class="n">Minimum</span> <span class="k">number</span> <span class="k">of</span> <span class="n">regions</span> <span class="k">to</span> <span class="n">zero</span> <span class="k">out</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`None`</span><span class="p">,</span>
+    <span class="n n-Quoted">`min_holes`</span> <span class="k">is</span> <span class="n">be</span> <span class="k">set</span> <span class="k">to</span> <span class="n n-Quoted">`max_holes`</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n n-Quoted">`None`</span><span class="p">.</span>
+<span class="n">min_height</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">height</span> <span class="k">of</span> <span class="n">the</span> <span class="n">hole</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="k">None</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`None`</span><span class="p">,</span>
+    <span class="n n-Quoted">`min_height`</span> <span class="k">is</span> <span class="k">set</span> <span class="k">to</span> <span class="n n-Quoted">`max_height`</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n n-Quoted">`None`</span><span class="p">.</span>
+    <span class="k">If</span> <span class="kt">float</span><span class="p">,</span> <span class="n">it</span> <span class="k">is</span> <span class="n">calculated</span> <span class="k">as</span> <span class="n">a</span> <span class="n">fraction</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">height</span><span class="p">.</span>
+<span class="n">min_width</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">width</span> <span class="k">of</span> <span class="n">the</span> <span class="n">hole</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`None`</span><span class="p">,</span> <span class="n n-Quoted">`min_height`</span> <span class="k">is</span>
+    <span class="k">set</span> <span class="k">to</span> <span class="n n-Quoted">`max_width`</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n n-Quoted">`None`</span><span class="p">.</span>
+    <span class="k">If</span> <span class="kt">float</span><span class="p">,</span> <span class="n">it</span> <span class="k">is</span> <span class="n">calculated</span> <span class="k">as</span> <span class="n">a</span> <span class="n">fraction</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">width</span><span class="p">.</span>
+
+<span class="n">fill_value</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="k">list</span> <span class="k">of</span> <span class="kt">int</span><span class="p">,</span> <span class="k">list</span> <span class="k">of</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="k">value</span> <span class="k">for</span> <span class="n">dropped</span> <span class="n">pixels</span><span class="p">.</span>
+<span class="n">mask_fill_value</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="k">list</span> <span class="k">of</span> <span class="kt">int</span><span class="p">,</span> <span class="k">list</span> <span class="k">of</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">fill</span> <span class="k">value</span> <span class="k">for</span> <span class="n">dropped</span> <span class="n">pixels</span>
+    <span class="k">in</span> <span class="n">mask</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`None`</span> <span class="o">-</span> <span class="n">mask</span> <span class="k">is</span> <span class="k">not</span> <span class="n">affected</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="n n-Quoted">`None`</span><span class="p">.</span>
+</code></pre></div>
+<p>Targets:
     image, mask, keypoints</p>
 <p>Image types:
     uint8, float32</p>

@@ -1282,6 +1282,26 @@
     albumentations.core.bbox_utils
   </a>
   
+    <nav class="md-nav" aria-label="albumentations.core.bbox_utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.core.bbox_utils--note" class="md-nav__link">
+    Note:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.core.bbox_utils--note" class="md-nav__link">
+    Note:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1902,76 +1922,39 @@ albumentations.core.bbox_utils.BboxParams</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L59" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L62" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.bbox_utils.BboxParams" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Parameters of bounding boxes</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>format</code></td>
-<td><code>str</code></td>
-<td><p>format of bounding boxes. Should be 'coco', 'pascal_voc', 'albumentations' or 'yolo'.</p>
-<p>The <code>coco</code> format
-    <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
-The <code>pascal_voc</code> format
-    <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
-The <code>albumentations</code> format
-    is like <code>pascal_voc</code>, but normalized,
-    in other words: <code>[x_min, y_min, x_max, y_max]</code>, e.g. [0.2, 0.3, 0.4, 0.5].
-The <code>yolo</code> format
-    <code>[x, y, width, height]</code>, e.g. [0.1, 0.2, 0.3, 0.4];
-    <code>x</code>, <code>y</code> - normalized bbox center; <code>width</code>, <code>height</code> - normalized bbox width and height.</p></td>
-</tr>
-<tr>
-<td><code>label_fields</code></td>
-<td><code>list</code></td>
-<td><p>list of fields that are joined with boxes, e.g labels.
-Should be same type as boxes.</p></td>
-</tr>
-<tr>
-<td><code>min_area</code></td>
-<td><code>float</code></td>
-<td><p>minimum area of a bounding box. All bounding boxes whose
-visible area in pixels is less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_visibility</code></td>
-<td><code>float</code></td>
-<td><p>minimum fraction of area for a bounding box
-to remain this box in list. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_width</code></td>
-<td><code>float</code></td>
-<td><p>Minimum width of a bounding box. All bounding boxes whose width is
-less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_height</code></td>
-<td><code>float</code></td>
-<td><p>Minimum height of a bounding box. All bounding boxes whose height is
-less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>check_each_transform</code></td>
-<td><code>bool</code></td>
-<td><p>if <code>True</code>, then bboxes will be checked after each dual transform.
-Default: <code>True</code></p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="k">format</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="k">format</span> <span class="k">of</span> <span class="n">bounding</span> <span class="n">boxes</span><span class="p">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="s1">'coco'</span><span class="p">,</span> <span class="s1">'pascal_voc'</span><span class="p">,</span> <span class="s1">'albumentations'</span> <span class="k">or</span> <span class="s1">'yolo'</span><span class="p">.</span>
+
+    <span class="n">The</span> <span class="n n-Quoted">`coco`</span> <span class="k">format</span>
+        <span class="n n-Quoted">`[x_min, y_min, width, height]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="err">]</span><span class="p">.</span>
+    <span class="n">The</span> <span class="n n-Quoted">`pascal_voc`</span> <span class="k">format</span>
+        <span class="n n-Quoted">`[x_min, y_min, x_max, y_max]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">212</span><span class="err">]</span><span class="p">.</span>
+    <span class="n">The</span> <span class="n n-Quoted">`albumentations`</span> <span class="k">format</span>
+        <span class="k">is</span> <span class="k">like</span> <span class="n n-Quoted">`pascal_voc`</span><span class="p">,</span> <span class="n">but</span> <span class="n">normalized</span><span class="p">,</span>
+        <span class="k">in</span> <span class="n">other</span> <span class="n">words</span><span class="o">:</span> <span class="n n-Quoted">`[x_min, y_min, x_max, y_max]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="err">]</span><span class="p">.</span>
+    <span class="n">The</span> <span class="n n-Quoted">`yolo`</span> <span class="k">format</span>
+        <span class="n n-Quoted">`[x, y, width, height]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="err">]</span><span class="p">;</span>
+        <span class="n n-Quoted">`x`</span><span class="p">,</span> <span class="n n-Quoted">`y`</span> <span class="o">-</span> <span class="n">normalized</span> <span class="n">bbox</span> <span class="n">center</span><span class="p">;</span> <span class="n n-Quoted">`width`</span><span class="p">,</span> <span class="n n-Quoted">`height`</span> <span class="o">-</span> <span class="n">normalized</span> <span class="n">bbox</span> <span class="n">width</span> <span class="k">and</span> <span class="n">height</span><span class="p">.</span>
+<span class="n">label_fields</span> <span class="p">(</span><span class="k">list</span><span class="p">)</span><span class="o">:</span> <span class="k">list</span> <span class="k">of</span> <span class="k">fields</span> <span class="n">that</span> <span class="n">are</span> <span class="n">joined</span> <span class="k">with</span> <span class="n">boxes</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span> <span class="n">labels</span><span class="p">.</span>
+    <span class="n">Should</span> <span class="n">be</span> <span class="n">same</span> <span class="k">type</span> <span class="k">as</span> <span class="n">boxes</span><span class="p">.</span>
+<span class="n">min_area</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">minimum</span> <span class="n">area</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span><span class="p">.</span> <span class="k">All</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">whose</span>
+    <span class="k">visible</span> <span class="n">area</span> <span class="k">in</span> <span class="n">pixels</span> <span class="k">is</span> <span class="k">less</span> <span class="k">than</span> <span class="n">this</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">.</span>
+<span class="n">min_visibility</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">minimum</span> <span class="n">fraction</span> <span class="k">of</span> <span class="n">area</span> <span class="k">for</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span>
+    <span class="k">to</span> <span class="n">remain</span> <span class="n">this</span> <span class="n">box</span> <span class="k">in</span> <span class="k">list</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">.</span>
+<span class="n">min_width</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">width</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span><span class="p">.</span> <span class="k">All</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">whose</span> <span class="n">width</span> <span class="k">is</span>
+    <span class="k">less</span> <span class="k">than</span> <span class="n">this</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">.</span>
+<span class="n">min_height</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">height</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span><span class="p">.</span> <span class="k">All</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">whose</span> <span class="n">height</span> <span class="k">is</span>
+    <span class="k">less</span> <span class="k">than</span> <span class="n">this</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">.</span>
+<span class="n">check_each_transform</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">if</span> <span class="n n-Quoted">`True`</span><span class="p">,</span> <span class="k">then</span> <span class="n">bboxes</span> <span class="n">will</span> <span class="n">be</span> <span class="n">checked</span> <span class="k">after</span> <span class="k">each</span> <span class="k">dual</span> <span class="n">transform</span><span class="p">.</span>
+    <span class="k">Default</span><span class="o">:</span> <span class="n n-Quoted">`True`</span>
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1981,37 +1964,15 @@ Default: <code>True</code></p></td>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L233" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L249" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Calculate the area of a bounding box in (fractional) pixels.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bbox</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2023,10 +1984,12 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 <tbody>
 <tr>
 <td><code>float</code></td>
-<td><p>Area in (fractional) pixels of the (denormalized) bounding box.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>Area in (fractional) pixels of the (denormalized) bounding box.
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2034,7 +1997,7 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.check_bbox    (bbox)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L428" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L458" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bbox boundaries are in range 0, 1 and minimums are lesser then maximums</p>
@@ -2045,7 +2008,7 @@ albumentations.core.bbox_utils.check_bbox    (bbox)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.check_bboxes    (bboxes)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L440" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L470" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bboxes boundaries are in range 0, 1 and minimums are lesser then maximums</p>
@@ -2056,47 +2019,17 @@ albumentations.core.bbox_utils.check_bboxes    (bboxes)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L353" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L377" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a bounding box from the format used by albumentations to a format, specified in <code>target_format</code>.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>An albumentations bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
-</tr>
-<tr>
-<td><code>target_format</code></td>
-<td><code>str</code></td>
-<td><p>required format of the output bounding box. Should be 'coco', 'pascal_voc' or 'yolo'.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-<tr>
-<td><code>check_validity</code></td>
-<td><code>bool</code></td>
-<td><p>Check if all boxes are valid boxes.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bbox</span><span class="o">:</span> <span class="n">An</span> <span class="n">albumentations</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">target_format</span><span class="o">:</span> <span class="n">required</span> <span class="n">format</span> <span class="n">of</span> <span class="n">the</span> <span class="n">output</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="s1">'coco'</span><span class="o">,</span> <span class="s1">'pascal_voc'</span> <span class="n">or</span> <span class="s1">'yolo'</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+<span class="n">check_validity</span><span class="o">:</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">all</span> <span class="n">boxes</span> <span class="n">are</span> <span class="n">valid</span> <span class="n">boxes</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2108,28 +2041,20 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 <tbody>
 <tr>
 <td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>tuple: A bounding box.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table> <p>Note:
-    The <code>coco</code> format of a bounding box looks like <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
-    The <code>pascal_voc</code> format of a bounding box looks like <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
-    The <code>yolo</code> format of a bounding box looks like <code>[x, y, width, height]</code>, e.g. [0.3, 0.1, 0.05, 0.07].</p>
-<p><strong>Exceptions:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td><p>if <code>target_format</code> is not equal to <code>coco</code>, <code>pascal_voc</code> or <code>yolo</code>.</p></td>
-</tr>
-</tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">tuple</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span>
+</code></pre></div>
+<h4 id="albumentations.core.bbox_utils--note">Note:<a class="headerlink" href="#albumentations.core.bbox_utils--note" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">The</span> <span class="n n-Quoted">`coco`</span> <span class="k">format</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">looks</span> <span class="k">like</span> <span class="n n-Quoted">`[x_min, y_min, width, height]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="err">]</span><span class="p">.</span>
+<span class="n">The</span> <span class="n n-Quoted">`pascal_voc`</span> <span class="k">format</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">looks</span> <span class="k">like</span> <span class="n n-Quoted">`[x_min, y_min, x_max, y_max]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">212</span><span class="err">]</span><span class="p">.</span>
+<span class="n">The</span> <span class="n n-Quoted">`yolo`</span> <span class="k">format</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">looks</span> <span class="k">like</span> <span class="n n-Quoted">`[x, y, width, height]`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.07</span><span class="err">]</span><span class="p">.</span>
+</code></pre></div>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">ValueError</span><span class="o">:</span> <span class="k">if</span> <span class="n n-Quoted">`target_format`</span> <span class="k">is</span> <span class="k">not</span> <span class="n">equal</span> <span class="k">to</span> <span class="n n-Quoted">`coco`</span><span class="p">,</span> <span class="n n-Quoted">`pascal_voc`</span> <span class="k">or</span> <span class="n n-Quoted">`yolo`</span><span class="p">.</span>
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2137,49 +2062,19 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bbox_to_albumentations    (bbox, source_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L291" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L310" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a bounding box from a format specified in <code>source_format</code> to the format used by albumentations:
 normalized coordinates of top-left and bottom-right corners of the bounding box in a form of
 <code>(x_min, y_min, x_max, y_max)</code> e.g. <code>(0.15, 0.27, 0.67, 0.5)</code>.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>A bounding box tuple.</p></td>
-</tr>
-<tr>
-<td><code>source_format</code></td>
-<td><code>str</code></td>
-<td><p>format of the bounding box. Should be 'coco', 'pascal_voc', or 'yolo'.</p></td>
-</tr>
-<tr>
-<td><code>check_validity</code></td>
-<td><code>bool</code></td>
-<td><p>Check if all boxes are valid boxes.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bbox</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">tuple</span><span class="o">.</span>
+<span class="n">source_format</span><span class="o">:</span> <span class="n">format</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="s1">'coco'</span><span class="o">,</span> <span class="s1">'pascal_voc'</span><span class="o">,</span> <span class="n">or</span> <span class="s1">'yolo'</span><span class="o">.</span>
+<span class="n">check_validity</span><span class="o">:</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">all</span> <span class="n">boxes</span> <span class="n">are</span> <span class="n">valid</span> <span class="n">boxes</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2191,33 +2086,22 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 <tbody>
 <tr>
 <td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table> <p>Note:
-    The <code>coco</code> format of a bounding box looks like <code>(x_min, y_min, width, height)</code>, e.g. (97, 12, 150, 200).
-    The <code>pascal_voc</code> format of a bounding box looks like <code>(x_min, y_min, x_max, y_max)</code>, e.g. (97, 12, 247, 212).
-    The <code>yolo</code> format of a bounding box looks like <code>(x, y, width, height)</code>, e.g. (0.3, 0.1, 0.05, 0.07);
-    where <code>x</code>, <code>y</code> coordinates of the center of the box, all values normalized to 1 by image height and width.</p>
-<p><strong>Exceptions:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td><p>if <code>target_format</code> is not equal to <code>coco</code> or <code>pascal_voc</code>, or <code>yolo</code>.</p></td>
-</tr>
-<tr>
-<td><code>ValueError</code></td>
-<td><p>If in YOLO format all labels not in range (0, 1).</p></td>
-</tr>
-</tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">tuple</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+</code></pre></div>
+<h4 id="albumentations.core.bbox_utils--note">Note:<a class="headerlink" href="#albumentations.core.bbox_utils--note" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">The</span> <span class="n n-Quoted">`coco`</span> <span class="k">format</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">looks</span> <span class="k">like</span> <span class="n n-Quoted">`(x_min, y_min, width, height)`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="p">(</span><span class="mi">97</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">).</span>
+<span class="n">The</span> <span class="n n-Quoted">`pascal_voc`</span> <span class="k">format</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">looks</span> <span class="k">like</span> <span class="n n-Quoted">`(x_min, y_min, x_max, y_max)`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="p">(</span><span class="mi">97</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">212</span><span class="p">).</span>
+<span class="n">The</span> <span class="n n-Quoted">`yolo`</span> <span class="k">format</span> <span class="k">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">looks</span> <span class="k">like</span> <span class="n n-Quoted">`(x, y, width, height)`</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.07</span><span class="p">);</span>
+<span class="k">where</span> <span class="n n-Quoted">`x`</span><span class="p">,</span> <span class="n n-Quoted">`y`</span> <span class="n">coordinates</span> <span class="k">of</span> <span class="n">the</span> <span class="n">center</span> <span class="k">of</span> <span class="n">the</span> <span class="n">box</span><span class="p">,</span> <span class="k">all</span> <span class="k">values</span> <span class="n">normalized</span> <span class="k">to</span> <span class="mi">1</span> <span class="k">by</span> <span class="n">image</span> <span class="n">height</span> <span class="k">and</span> <span class="n">width</span><span class="p">.</span>
+</code></pre></div>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">ValueError</span><span class="o">:</span> <span class="k">if</span> <span class="n n-Quoted">`target_format`</span> <span class="k">is</span> <span class="k">not</span> <span class="n">equal</span> <span class="k">to</span> <span class="n n-Quoted">`coco`</span> <span class="k">or</span> <span class="n n-Quoted">`pascal_voc`</span><span class="p">,</span> <span class="k">or</span> <span class="n n-Quoted">`yolo`</span><span class="p">.</span>
+<span class="n">ValueError</span><span class="o">:</span> <span class="k">If</span> <span class="k">in</span> <span class="n">YOLO</span> <span class="k">format</span> <span class="k">all</span> <span class="n">labels</span> <span class="k">not</span> <span class="k">in</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span>
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2225,48 +2109,18 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bboxes_from_albumentations    (bboxes, target_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L408" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L436" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list of bounding boxes from the format used by albumentations to a format, specified
 in <code>target_format</code>.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List of albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
-</tr>
-<tr>
-<td><code>target_format</code></td>
-<td><code>str</code></td>
-<td><p>required format of the output bounding box. Should be 'coco', 'pascal_voc' or 'yolo'.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-<tr>
-<td><code>check_validity</code></td>
-<td><code>bool</code></td>
-<td><p>Check if all boxes are valid boxes.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bboxes</span><span class="o">:</span> <span class="n">List</span> <span class="n">of</span> <span class="n">albumentations</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">target_format</span><span class="o">:</span> <span class="n">required</span> <span class="n">format</span> <span class="n">of</span> <span class="n">the</span> <span class="n">output</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="s1">'coco'</span><span class="o">,</span> <span class="s1">'pascal_voc'</span> <span class="n">or</span> <span class="s1">'yolo'</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+<span class="n">check_validity</span><span class="o">:</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">all</span> <span class="n">boxes</span> <span class="n">are</span> <span class="n">valid</span> <span class="n">boxes</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2278,10 +2132,12 @@ in <code>target_format</code>.</p>
 <tbody>
 <tr>
 <td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List of bounding boxes.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>List of bounding boxes.
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2289,7 +2145,7 @@ in <code>target_format</code>.</p>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.convert_bboxes_to_albumentations    (bboxes, source_format, rows, cols, check_validity=False)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L401" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L429" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list bounding boxes from a format specified in <code>source_format</code> to the format used by albumentations</p>
@@ -2300,38 +2156,16 @@ albumentations.core.bbox_utils.convert_bboxes_to_albumentations    (bboxes, sour
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.denormalize_bbox    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L173" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L180" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Denormalize coordinates of a bounding box. Multiply x-coordinates by image width and y-coordinates
 by image height. This is an inverse operation for :func:<code>~albumentations.augmentations.bbox.normalize_bbox</code>.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bbox</span><span class="o">:</span> <span class="n">Normalized</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2343,25 +2177,15 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 <tbody>
 <tr>
 <td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
-<p><strong>Exceptions:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td><p>If rows or cols is less or equal zero</p></td>
-</tr>
-</tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>Denormalized bounding box `(x_min, y_min, x_max, y_max)`.
+</code></pre></div>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">ValueError</span><span class="o">:</span> <span class="n">If</span> <span class="n">rows</span> <span class="n">or</span> <span class="n">cols</span> <span class="k">is</span> <span class="n">less</span> <span class="n">or</span> <span class="n">equal</span> <span class="n">zero</span>
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2369,37 +2193,15 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L218" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L232" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Denormalize a list of bounding boxes.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bboxes</span><span class="o">:</span> <span class="n">Normalized</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="err">`</span><span class="o">[(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)]</span><span class="err">`</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2411,10 +2213,12 @@ albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
 <tbody>
 <tr>
 <td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List: Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">List</span><span class="o">:</span> <span class="n">Denormalized</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="err">`</span><span class="o">[(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)]</span><span class="err">`</span><span class="o">.</span>
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2422,61 +2226,23 @@ albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.filter_bboxes    (bboxes, rows, cols, min_area=0.0, min_visibility=0.0, min_width=0.0, min_height=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L446" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L476" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Remove bounding boxes that either lie outside of the visible area by more then min_visibility
 or whose area in pixels is under the threshold set by <code>min_area</code>. Also it crops boxes to final image size.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List of albumentation bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-<tr>
-<td><code>min_area</code></td>
-<td><code>float</code></td>
-<td><p>Minimum area of a bounding box. All bounding boxes whose visible area in pixels.
-is less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_visibility</code></td>
-<td><code>float</code></td>
-<td><p>Minimum fraction of area for a bounding box to remain this box in list. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_width</code></td>
-<td><code>float</code></td>
-<td><p>Minimum width of a bounding box. All bounding boxes whose width is
-less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-<tr>
-<td><code>min_height</code></td>
-<td><code>float</code></td>
-<td><p>Minimum height of a bounding box. All bounding boxes whose height is
-less than this value will be removed. Default: 0.0.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bboxes</span><span class="o">:</span> <span class="n">List</span> <span class="n">of</span> <span class="n">albumentation</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+<span class="n">min_area</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">area</span> <span class="n">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">All</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">whose</span> <span class="n">visible</span> <span class="n">area</span> <span class="k">in</span> <span class="n">pixels</span><span class="o">.</span>
+    <span class="k">is</span> <span class="n">less</span> <span class="n">than</span> <span class="k">this</span> <span class="n">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="o">.</span>
+<span class="n">min_visibility</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">fraction</span> <span class="n">of</span> <span class="n">area</span> <span class="k">for</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">to</span> <span class="n">remain</span> <span class="k">this</span> <span class="n">box</span> <span class="k">in</span> <span class="n">list</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="o">.</span>
+<span class="n">min_width</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">width</span> <span class="n">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">All</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">whose</span> <span class="n">width</span> <span class="k">is</span>
+    <span class="n">less</span> <span class="n">than</span> <span class="k">this</span> <span class="n">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="o">.</span>
+<span class="n">min_height</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">height</span> <span class="n">of</span> <span class="n">a</span> <span class="n">bounding</span> <span class="n">box</span><span class="o">.</span> <span class="n">All</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">whose</span> <span class="n">height</span> <span class="k">is</span>
+    <span class="n">less</span> <span class="n">than</span> <span class="k">this</span> <span class="n">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.0</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2488,10 +2254,12 @@ less than this value will be removed. Default: 0.0.</p></td>
 <tbody>
 <tr>
 <td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List of bounding boxes.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>List of bounding boxes.
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2499,53 +2267,19 @@ less than this value will be removed. Default: 0.0.</p></td>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.filter_bboxes_by_visibility    (original_shape, bboxes, transformed_shape, transformed_bboxes, threshold=0.0, min_area=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L251" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L268" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Filter bounding boxes and return only those boxes whose visibility after transformation is above
 the threshold and minimal area of bounding box in pixels is more then min_area.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>original_shape</code></td>
-<td><code>Sequence[int]</code></td>
-<td><p>Original image shape <code>(height, width, ...)</code>.</p></td>
-</tr>
-<tr>
-<td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>Original bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
-</tr>
-<tr>
-<td><code>transformed_shape</code></td>
-<td><code>Sequence[int]</code></td>
-<td><p>Transformed image shape <code>(height, width)</code>.</p></td>
-</tr>
-<tr>
-<td><code>transformed_bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>Transformed bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
-</tr>
-<tr>
-<td><code>threshold</code></td>
-<td><code>float</code></td>
-<td><p>visibility threshold. Should be a value in the range [0.0, 1.0].</p></td>
-</tr>
-<tr>
-<td><code>min_area</code></td>
-<td><code>float</code></td>
-<td><p>Minimal area threshold.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">original_shape</span><span class="o">:</span> <span class="n">Original</span> <span class="n">image</span> <span class="n">shape</span> <span class="err">`</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="o">...)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">bboxes</span><span class="o">:</span> <span class="n">Original</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="err">`</span><span class="o">[(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)]</span><span class="err">`</span><span class="o">.</span>
+<span class="n">transformed_shape</span><span class="o">:</span> <span class="n">Transformed</span> <span class="n">image</span> <span class="n">shape</span> <span class="err">`</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">width</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">transformed_bboxes</span><span class="o">:</span> <span class="n">Transformed</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="err">`</span><span class="o">[(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)]</span><span class="err">`</span><span class="o">.</span>
+<span class="n">threshold</span><span class="o">:</span> <span class="n">visibility</span> <span class="n">threshold</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="n">a</span> <span class="n">value</span> <span class="k">in</span> <span class="n">the</span> <span class="n">range</span> <span class="o">[</span><span class="mf">0.0</span><span class="o">,</span> <span class="mf">1.0</span><span class="o">].</span>
+<span class="n">min_area</span><span class="o">:</span> <span class="n">Minimal</span> <span class="n">area</span> <span class="n">threshold</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2557,10 +2291,12 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 <tbody>
 <tr>
 <td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>Filtered bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>Filtered bounding boxes `[(x_min, y_min, x_max, y_max)]`.
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2568,38 +2304,16 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.normalize_bbox    (bbox, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L141" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L144" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Normalize coordinates of a bounding box. Divide x-coordinates by image width and y-coordinates
 by image height.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bbox</code></td>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>Denormalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bbox</span><span class="o">:</span> <span class="n">Denormalized</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2611,25 +2325,15 @@ by image height.</p>
 <tbody>
 <tr>
 <td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>Normalized bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
-<p><strong>Exceptions:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ValueError</code></td>
-<td><p>If rows or cols is less or equal zero</p></td>
-</tr>
-</tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>Normalized bounding box `(x_min, y_min, x_max, y_max)`.
+</code></pre></div>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">ValueError</span><span class="o">:</span> <span class="n">If</span> <span class="n">rows</span> <span class="n">or</span> <span class="n">cols</span> <span class="k">is</span> <span class="n">less</span> <span class="n">or</span> <span class="n">equal</span> <span class="n">zero</span>
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2637,37 +2341,15 @@ by image height.</p>
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L203" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L215" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Normalize a list of bounding boxes.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
-</tr>
-<tr>
-<td><code>rows</code></td>
-<td><code>int</code></td>
-<td><p>Image height.</p></td>
-</tr>
-<tr>
-<td><code>cols</code></td>
-<td><code>int</code></td>
-<td><p>Image width.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">bboxes</span><span class="o">:</span> <span class="n">Denormalized</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="err">`</span><span class="o">[(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)]</span><span class="err">`</span><span class="o">.</span>
+<span class="n">rows</span><span class="o">:</span> <span class="n">Image</span> <span class="n">height</span><span class="o">.</span>
+<span class="n">cols</span><span class="o">:</span> <span class="n">Image</span> <span class="n">width</span><span class="o">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2679,10 +2361,12 @@ albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 <tbody>
 <tr>
 <td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>Normalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code>Normalized bounding boxes `[(x_min, y_min, x_max, y_max)]`.
+</code></pre></div>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2690,43 +2374,17 @@ albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.bbox_utils.union_of_bboxes    (height, width, bboxes, erosion_rate=0.0)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L496" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L529" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Calculate union of bounding boxes.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>height</code></td>
-<td><code>int</code></td>
-<td><p>Height of image or space.</p></td>
-</tr>
-<tr>
-<td><code>width</code></td>
-<td><code>int</code></td>
-<td><p>Width of image or space.</p></td>
-</tr>
-<tr>
-<td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List like bounding boxes. Format is <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
-</tr>
-<tr>
-<td><code>erosion_rate</code></td>
-<td><code>float</code></td>
-<td><p>How much each bounding box can be shrinked, useful for erosive cropping.
-Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to lose its volume.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">height</span><span class="w"> </span><span class="p">(</span><span class="nc">float</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">Height</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nf">space</span><span class="p">.</span><span class="w"></span>
+<span class="n">width</span><span class="w"> </span><span class="p">(</span><span class="nc">float</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">Width</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nf">space</span><span class="p">.</span><span class="w"></span>
+<span class="n">bboxes</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">[</span><span class="n">tuple</span><span class="o">]</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="ow">like</span><span class="w"> </span><span class="n">bounding</span><span class="w"> </span><span class="n">boxes</span><span class="p">.</span><span class="w"> </span><span class="nf">Format</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">`</span><span class="o">[</span><span class="n">(x_min, y_min, x_max, y_max)</span><span class="o">]</span><span class="err">`</span><span class="p">.</span><span class="w"></span>
+<span class="n">erosion_rate</span><span class="w"> </span><span class="p">(</span><span class="nc">float</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">bounding</span><span class="w"> </span><span class="n">box</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">shrinked</span><span class="p">,</span><span class="w"> </span><span class="n">useful</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">erosive</span><span class="w"> </span><span class="n">cropping</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">Set</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="o">[</span><span class="n">0, 1</span><span class="o">]</span><span class="p">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">erosive</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="ow">all</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="n">bbox</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">lose</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">volume</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2738,10 +2396,12 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
 <tbody>
 <tr>
 <td><code>Tuple[float, float, float, float]</code></td>
-<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">tuple</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
+</code></pre></div>
 </div>
 </div>
 </div>

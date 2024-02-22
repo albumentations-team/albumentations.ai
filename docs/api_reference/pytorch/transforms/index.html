@@ -1793,6 +1793,19 @@
     albumentations.pytorch.transforms
   </a>
   
+    <nav class="md-nav" aria-label="albumentations.pytorch.transforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albumentations.pytorch.transforms--attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1902,7 +1915,7 @@ albumentations.pytorch.transforms.ToTensorV2</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L22" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L27" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1910,34 +1923,12 @@ albumentations.pytorch.transforms.ToTensorV2</strong></code>
 <div class="doc doc-contents">
 <p>Converts images/masks to PyTorch Tensors, inheriting from BasicTransform. Supports images in numpy <code>HWC</code> format
 and converts them to PyTorch <code>CHW</code> format. If the image is in <code>HW</code> format, it will be converted to PyTorch <code>HW</code>.</p>
-<p><strong>Attributes:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>transpose_mask</code></td>
-<td><code>bool</code></td>
-<td><p>If True, transposes 3D input mask dimensions from <code>[height, width, num_channels]</code> to
-<code>[num_channels, height, width]</code>.</p></td>
-</tr>
-<tr>
-<td><code>always_apply</code></td>
-<td><code>bool</code></td>
-<td><p>Indicates if this transformation should be always applied. Default: True.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>Probability of applying the transform. Default: 1.0.</p></td>
-</tr>
-</tbody>
-</table>
+<h4 id="albumentations.pytorch.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.pytorch.transforms--attributes" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nv">transpose_mask</span> <span class="ss">(</span><span class="nv">bool</span><span class="ss">)</span>: <span class="k">If</span> <span class="nv">True</span>, <span class="nv">transposes</span> <span class="mi">3</span><span class="nv">D</span> <span class="nv">input</span> <span class="nv">mask</span> <span class="nv">dimensions</span> <span class="nv">from</span> `[<span class="nv">height</span>, <span class="nv">width</span>, <span class="nv">num_channels</span>]` <span class="nv">to</span>
+    `[<span class="nv">num_channels</span>, <span class="nv">height</span>, <span class="nv">width</span>]`.
+<span class="nv">always_apply</span> <span class="ss">(</span><span class="nv">bool</span><span class="ss">)</span>: <span class="nv">Indicates</span> <span class="k">if</span> <span class="nv">this</span> <span class="nv">transformation</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">always</span> <span class="nv">applied</span>. <span class="nv">Default</span>: <span class="nv">True</span>.
+<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">Probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">1</span>.<span class="mi">0</span>.
+</code></pre></div>
 <div class="doc doc-children">
 </div>
 </div>

@@ -1915,7 +1915,7 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L93" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L100" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1931,23 +1931,9 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 ex: {'target_image': 'image'}
 ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}
 by the way you must have at least one object with key 'image'</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>additional_targets</code></td>
-<td><code>Dict[str, str]</code></td>
-<td><p>keys - new target name, values - old target name. ex: {'image2': 'image'}</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code>additional_targets (dict): keys - new target name, values - old target name. ex: {'image2': 'image'}
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -1959,7 +1945,7 @@ by the way you must have at least one object with key 'image'</p>
 albumentations.core.transforms_interface.DualTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L247" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L261" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1976,7 +1962,7 @@ albumentations.core.transforms_interface.DualTransform</strong></code>
 albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L278" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L292" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1993,7 +1979,7 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 albumentations.core.transforms_interface.NoOp</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L292" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L306" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2009,37 +1995,15 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 <code class="highlight language-python">def
 albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L27" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L30" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert input argument to a min-max tuple.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>param</code></td>
-<td><code>Union[float, Tuple[float, float], int, Tuple[int, int]]</code></td>
-<td><p>Input value which could be a scalar or a sequence of exactly 2 scalars.</p></td>
-</tr>
-<tr>
-<td><code>low</code></td>
-<td><code>Union[float, Tuple[float, float], int, Tuple[int, int]]</code></td>
-<td><p>Second element of the tuple, provided as an optional argument for when <code>param</code> is a scalar.</p></td>
-</tr>
-<tr>
-<td><code>bias</code></td>
-<td><code>Union[int, float]</code></td>
-<td><p>An offset added to both elements of the tuple.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">param</span><span class="o">:</span> <span class="n">Input</span> <span class="k">value</span> <span class="n">which</span> <span class="n">could</span> <span class="n">be</span> <span class="n">a</span> <span class="n">scalar</span> <span class="k">or</span> <span class="n">a</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">exactly</span> <span class="mi">2</span> <span class="n">scalars</span><span class="p">.</span>
+<span class="n">low</span><span class="o">:</span> <span class="k">Second</span> <span class="n">element</span> <span class="k">of</span> <span class="n">the</span> <span class="n">tuple</span><span class="p">,</span> <span class="n">provided</span> <span class="k">as</span> <span class="n">an</span> <span class="k">optional</span> <span class="n">argument</span> <span class="k">for</span> <span class="k">when</span> <span class="n n-Quoted">`param`</span> <span class="k">is</span> <span class="n">a</span> <span class="n">scalar</span><span class="p">.</span>
+<span class="n">bias</span><span class="o">:</span> <span class="n">An</span> <span class="k">offset</span> <span class="n">added</span> <span class="k">to</span> <span class="k">both</span> <span class="n">elements</span> <span class="k">of</span> <span class="n">the</span> <span class="n">tuple</span><span class="p">.</span>
+</code></pre></div>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2051,11 +2015,13 @@ albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None
 <tbody>
 <tr>
 <td><code>Union[Tuple[int, int], Tuple[float, float]]</code></td>
-<td><p>A tuple of two scalars, optionally adjusted by <code>bias</code>.
-Raises ValueError for invalid combinations or types of arguments.</p></td>
+<td></td>
 </tr>
 </tbody>
-</table>
+</table> <hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">A</span> <span class="n">tuple</span> <span class="k">of</span> <span class="n">two</span> <span class="n">scalars</span><span class="p">,</span> <span class="k">optionally</span> <span class="n">adjusted</span> <span class="k">by</span> <span class="n n-Quoted">`bias`</span><span class="p">.</span>
+<span class="n">Raises</span> <span class="n">ValueError</span> <span class="k">for</span> <span class="n">invalid</span> <span class="n">combinations</span> <span class="k">or</span> <span class="k">types</span> <span class="k">of</span> <span class="n">arguments</span><span class="p">.</span>
+</code></pre></div>
 </div>
 </div>
 </div>

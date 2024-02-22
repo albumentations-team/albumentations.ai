@@ -1904,40 +1904,19 @@ albumentations.augmentations.dropout.channel_dropout.ChannelDropout</strong></co
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/channel_dropout.py#L28" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/channel_dropout.py#L32" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.dropout.channel_dropout.ChannelDropout" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly Drop Channels in the input Image.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>channel_drop_range</code></td>
-<td><code>[int, int]</code></td>
-<td><p>range from which we choose the number of channels to drop.</p></td>
-</tr>
-<tr>
-<td><code>fill_value</code></td>
-<td><code>int, float</code></td>
-<td><p>pixel value for the dropped channel.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="nv">channel_drop_range</span> [<span class="nv">int</span>, <span class="nv">int</span>]: <span class="nv">range</span> <span class="nv">from</span> <span class="nv">which</span> <span class="nv">we</span> <span class="nv">choose</span> <span class="nv">the</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">channels</span> <span class="nv">to</span> <span class="nv">drop</span>.
+<span class="nv">fill_value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span><span class="ss">)</span>: <span class="nv">pixel</span> <span class="nv">value</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">dropped</span> <span class="nv">channel</span>.
+<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
+</code></pre></div>
+<p>Targets:
     image</p>
 <p>Image types:
     uint8, uint16, unit32, float32</p>

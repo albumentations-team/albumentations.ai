@@ -1912,30 +1912,17 @@
 albumentations.augmentations.geometric.rotate.RandomRotate90</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L29" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L34" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.rotate.RandomRotate90" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly rotate the input by 90 degrees zero or more times.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>p</code></td>
-<td></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -1945,23 +1932,9 @@ albumentations.augmentations.geometric.rotate.RandomRotate90</strong></code>
 <code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">augmentations</span><span class="o">.</span><span class="n">geometric</span><span class="o">.</span><span class="n">rotate</span><span class="o">.</span><span class="n">RandomRotate90</span><span class="o">.</span><span class="n">apply</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 <a class="headerlink" href="#albumentations.augmentations.geometric.rotate.RandomRotate90.apply" title="Permanent link">¶</a></h3>
 <div class="doc doc-contents">
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>factor</code></td>
-<td><code>float</code></td>
-<td><p>number of times the input will be rotated by 90 degrees.</p></td>
-</tr>
-</tbody>
-</table>
+<hr/>
+<div class="codehilite"><pre><span></span><code>factor (int): number of times the input will be rotated by 90 degrees.
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -1978,73 +1951,32 @@ albumentations.augmentations.geometric.rotate.Rotate</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L78" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L86" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.rotate.Rotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Rotate the input by an angle selected randomly from the uniform distribution.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>limit</code></td>
-<td></td>
-<td><p>range from which a random angle is picked. If limit is a single int
-an angle is picked from (-limit, limit). Default: (-90, 90)</p></td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p></td>
-</tr>
-<tr>
-<td><code>border_mode</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
-cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
-Default: cv2.BORDER_REFLECT_101</p></td>
-</tr>
-<tr>
-<td><code>value</code></td>
-<td><code>int, float, list of ints, list of float</code></td>
-<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
-</tr>
-<tr>
-<td><code>mask_value</code></td>
-<td><code>int, float,
-        list of ints,
-        list of float</code></td>
-<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
-</tr>
-<tr>
-<td><code>rotate_method</code></td>
-<td><code>str</code></td>
-<td><p>rotation method used for the bounding boxes. Should be one of "largest_box" or "ellipse".
-Default: "largest_box"</p></td>
-</tr>
-<tr>
-<td><code>crop_border</code></td>
-<td><code>bool</code></td>
-<td><p>If True would make a largest possible crop within rotated image</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="n">limit</span><span class="o">:</span> <span class="n">range</span> <span class="n">from</span> <span class="n">which</span> <span class="n">a</span> <span class="n">random</span> <span class="n">angle</span> <span class="k">is</span> <span class="n">picked</span><span class="o">.</span> <span class="n">If</span> <span class="n">limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">int</span>
+    <span class="n">an</span> <span class="n">angle</span> <span class="k">is</span> <span class="n">picked</span> <span class="n">from</span> <span class="o">(-</span><span class="n">limit</span><span class="o">,</span> <span class="n">limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">90</span><span class="o">,</span> <span class="mi">90</span><span class="o">)</span>
+<span class="n">interpolation</span> <span class="o">(</span><span class="n">OpenCV</span> <span class="n">flag</span><span class="o">):</span> <span class="n">flag</span> <span class="n">that</span> <span class="k">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">interpolation</span> <span class="n">algorithm</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span><span class="o">:</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_NEAREST</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_LINEAR</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_CUBIC</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_AREA</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_LANCZOS4</span><span class="o">.</span>
+    <span class="n">Default</span><span class="o">:</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_LINEAR</span><span class="o">.</span>
+<span class="n">border_mode</span> <span class="o">(</span><span class="n">OpenCV</span> <span class="n">flag</span><span class="o">):</span> <span class="n">flag</span> <span class="n">that</span> <span class="k">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">pixel</span> <span class="n">extrapolation</span> <span class="n">method</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span><span class="o">:</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_CONSTANT</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_REPLICATE</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_REFLECT</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_WRAP</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_REFLECT_101</span><span class="o">.</span>
+    <span class="n">Default</span><span class="o">:</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_REFLECT_101</span>
+<span class="n">value</span> <span class="o">(</span><span class="n">int</span><span class="o">,</span> <span class="n">float</span><span class="o">,</span> <span class="n">list</span> <span class="n">of</span> <span class="n">ints</span><span class="o">,</span> <span class="n">list</span> <span class="n">of</span> <span class="n">float</span><span class="o">):</span> <span class="n">padding</span> <span class="n">value</span> <span class="k">if</span> <span class="n">border_mode</span> <span class="k">is</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_CONSTANT</span><span class="o">.</span>
+<span class="n">mask_value</span> <span class="o">(</span><span class="n">int</span><span class="o">,</span> <span class="n">float</span><span class="o">,</span>
+            <span class="n">list</span> <span class="n">of</span> <span class="n">ints</span><span class="o">,</span>
+            <span class="n">list</span> <span class="n">of</span> <span class="n">float</span><span class="o">):</span> <span class="n">padding</span> <span class="n">value</span> <span class="k">if</span> <span class="n">border_mode</span> <span class="k">is</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_CONSTANT</span> <span class="n">applied</span> <span class="k">for</span> <span class="n">masks</span><span class="o">.</span>
+<span class="n">rotate_method</span> <span class="o">(</span><span class="n">str</span><span class="o">):</span> <span class="n">rotation</span> <span class="n">method</span> <span class="n">used</span> <span class="k">for</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">boxes</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span> <span class="s2">"largest_box"</span> <span class="n">or</span> <span class="s2">"ellipse"</span><span class="o">.</span>
+    <span class="n">Default</span><span class="o">:</span> <span class="s2">"largest_box"</span>
+<span class="n">crop_border</span> <span class="o">(</span><span class="n">bool</span><span class="o">):</span> <span class="n">If</span> <span class="n">True</span> <span class="n">would</span> <span class="n">make</span> <span class="n">a</span> <span class="n">largest</span> <span class="n">possible</span> <span class="n">crop</span> <span class="n">within</span> <span class="n">rotated</span> <span class="n">image</span>
+<span class="n">p</span> <span class="o">(</span><span class="n">float</span><span class="o">):</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2063,7 +1995,7 @@ albumentations.augmentations.geometric.rotate.SafeRotate</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L245" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/rotate.py#L253" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.rotate.SafeRotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2073,55 +2005,22 @@ albumentations.augmentations.geometric.rotate.SafeRotate</strong></code>
 <p>The resulting image may have artifacts in it. After rotation, the image may have a different aspect ratio, and
 after resizing, it returns to its original shape with the original aspect ratio of the image. For these reason we
 may see some artifacts.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>limit</code></td>
-<td><code>[int, int] or int</code></td>
-<td><p>range from which a random angle is picked. If limit is a single int
-an angle is picked from (-limit, limit). Default: (-90, 90)</p></td>
-</tr>
-<tr>
-<td><code>interpolation</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
-cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-Default: cv2.INTER_LINEAR.</p></td>
-</tr>
-<tr>
-<td><code>border_mode</code></td>
-<td><code>OpenCV flag</code></td>
-<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
-cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
-Default: cv2.BORDER_REFLECT_101</p></td>
-</tr>
-<tr>
-<td><code>value</code></td>
-<td><code>int, float, list of ints, list of float</code></td>
-<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
-</tr>
-<tr>
-<td><code>mask_value</code></td>
-<td><code>int, float,
-        list of ints,
-        list of float</code></td>
-<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td><code>float</code></td>
-<td><p>probability of applying the transform. Default: 0.5.</p></td>
-</tr>
-</tbody>
-</table> <p>Targets:
+<hr/>
+<div class="codehilite"><pre><span></span><code><span class="nv">limit</span> <span class="ss">(</span>[<span class="nv">int</span>, <span class="nv">int</span>] <span class="nv">or</span> <span class="nv">int</span><span class="ss">)</span>: <span class="nv">range</span> <span class="nv">from</span> <span class="nv">which</span> <span class="nv">a</span> <span class="k">random</span> <span class="nv">angle</span> <span class="nv">is</span> <span class="nv">picked</span>. <span class="k">If</span> <span class="nv">limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">int</span>
+    <span class="nv">an</span> <span class="nv">angle</span> <span class="nv">is</span> <span class="nv">picked</span> <span class="nv">from</span> <span class="ss">(</span><span class="o">-</span><span class="nv">limit</span>, <span class="nv">limit</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">90</span>, <span class="mi">90</span><span class="ss">)</span>
+<span class="nv">interpolation</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">interpolation</span> <span class="nv">algorithm</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
+    <span class="nv">cv2</span>.<span class="nv">INTER_NEAREST</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>, <span class="nv">cv2</span>.<span class="nv">INTER_CUBIC</span>, <span class="nv">cv2</span>.<span class="nv">INTER_AREA</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LANCZOS4</span>.
+    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>.
+<span class="nv">border_mode</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">pixel</span> <span class="nv">extrapolation</span> <span class="nv">method</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
+    <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REPLICATE</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_WRAP</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>.
+    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>
+<span class="nv">value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>.
+<span class="nv">mask_value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>,
+            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span>,
+            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span> <span class="nv">applied</span> <span class="k">for</span> <span class="nv">masks</span>.
+<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
+</code></pre></div>
+<p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
