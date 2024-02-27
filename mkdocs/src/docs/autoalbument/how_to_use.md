@@ -6,25 +6,26 @@
 2. AutoAlbument will use Generative Adversarial Network to discover augmentation policies and then create a file containing those policies.
 3. Finally, you can use [Albumentations](../index.md) to load augmentation policies from the file and utilize them in your computer vision pipeline.
 
-## Step 1. Create a configuration file and a custom PyTorch Dataset for your data.
+## Step 1. Create a configuration file and a custom PyTorch Dataset for your data
 
-### a. Create a directory with configuration files.
+### a. Create a directory with configuration files
+
  Run `autoalbument-create --config-dir </path/to/directory> --task <deep_learning_task> --num-classes <num_classes>`, e.g. `autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10`.
  - A value for the `--config-dir` option should contain a path to the directory. AutoAlbument will create this directory and put two files into it: `dataset.py` and `search.yaml` (more on them later).
   - A value for the `--task` option should contain the name of a deep learning task. Supported values are `classification` and `semantic_segmentation`.
  - A value for the `--num-classes` option should contain the number of distinct classes in the classification or segmentation dataset.
 
 !!! note ""
-    By default, AutoAlbument creates a `search.yaml` file that contains only most important configuration parameters. To explore all avaiable parameters you can create a config file that contans them all by providing the `--generate-full-config` argument, e.g. `autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10 --generate-full-config`
+    By default, AutoAlbument creates a `search.yaml` file that contains only most important configuration parameters. To explore all available parameters you can create a config file that contains them all by providing the `--generate-full-config` argument, e.g. `autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10 --generate-full-config`
 
-
-### b. Add implementation for `__len__` and `__getitem__` methods in `dataset.py`.
+### b. Add implementation for `__len__` and `__getitem__` methods in `dataset.py`
 
 The `dataset.py` file created at step 1 by `autoalbument-create` contains stubs for implementing a PyTorch dataset (you can read more about creating custom PyTorch datasets [here](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)). You need to add implementation for `__len__` and `__getitem__` methods (and optionally add the initialization logic if required).
 
 A dataset for a classification task should return an image and a class label. A dataset for a segmentation task should return an image and an associated mask.
 
-### c. \[Optional\] Adjust search parameters in `search.yaml`.
+### c. \[Optional\] Adjust search parameters in `search.yaml`
+
 You may want to change the parameters that AutoAlbument will use to search for augmentation policies. To do this, you need to edit the `search.yaml` file created by `autoalbument-create` at step 1. Each configuration parameter contains a comment that describes the meaning of the setting. Please refer to the  "Tuning the search parameters" section that includes a description of the most critical parameters.
 
 `search.yaml` is a [Hydra](https://hydra.cc/) config file. You can use all Hydra features inside it.

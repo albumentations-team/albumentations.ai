@@ -2,7 +2,7 @@
 
 ## Different annotations formats
 
-Bounding boxes are rectangles that mark objects on an image. There are multiple formats of bounding boxes annotations. Each format uses its specific representation of bouning boxes coordinates. Albumentations supports four formats: `pascal_voc`, `albumentations`, `coco`, and `yolo` .
+Bounding boxes are rectangles that mark objects on an image. There are multiple formats of bounding boxes annotations. Each format uses its specific representation of bounding boxes coordinates. Albumentations supports four formats: `pascal_voc`, `albumentations`, `coco`, and `yolo` .
 
 Let's take a look at each of those formats and how they represent coordinates of bounding boxes.
 
@@ -13,8 +13,8 @@ The bounding box has the following `(x, y)` coordinates of its corners: top-left
 ![An example image with a bounding box from the COCO dataset](../images/getting_started/augmenting_bboxes/bbox_example.jpg "An example image with a bounding box from the COCO dataset")
 **An example image with a bounding box from the COCO dataset**
 
-
 ### pascal_voc
+
 `pascal_voc` is a format used by the [Pascal VOC dataset](http://host.robots.ox.ac.uk/pascal/VOC/).
 Coordinates of a bounding box are encoded with four values in pixels: `[x_min, y_min, x_max, y_max]`.  `x_min` and `y_min` are coordinates of the top-left corner of the bounding box. `x_max` and `y_max` are coordinates of bottom-right corner of the bounding box.
 
@@ -164,9 +164,10 @@ Albumentations expects that bounding boxes will be represented as a list of list
 
 As discussed in Step 2, there are two ways of passing class labels along with bounding boxes coordinates:
 
-#### 1. Pass class labels along with coordinates.
+### 1. Pass class labels along with coordinates
 
 So, if you have coordinates of three bounding boxes that look like this:
+
 ```python
 bboxes = [
     [23, 74, 295, 388],
@@ -174,7 +175,9 @@ bboxes = [
     [333, 421, 49, 49],
 ]
 ```
+
 you can add a class label for each bounding box as an additional element of the list along with four coordinates. So now a list with bounding boxes and their coordinates will look the following:
+
 ```python
 bboxes = [
     [23, 74, 295, 388, 'dog'],
