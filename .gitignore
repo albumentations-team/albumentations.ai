@@ -3,3 +3,4 @@ _build/
 __pycache__
 data/cache/*
 mkdocs.dev.yml
+.ruff_cache/

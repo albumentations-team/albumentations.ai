@@ -12,9 +12,7 @@ In the case of face detection, keypoints mark important areas of the face such a
 ![Facial keypoints](../images/getting_started/augmenting_keypoints/facial_keypoints.jpg "Facial keypoints.")
 **Facial keypoints. Source: the "Facial Keypoints Detection" competition on [Kaggle](https://www.kaggle.com/c/facial-keypoints-detection).**
 
-
 To define a keypoint, you usually need two values, x and y coordinates of the keypoint. Coordinates of the keypoint are calculated with respect to the top-left corner of the image which has `(x, y)` coordinates `(0, 0)`. Often keypoints have associated labels such as `right_elbow`, `left_wrist`, etc.
-
 
 ![An example image with five keypoints from the COCO dataset](../images/getting_started/augmenting_keypoints/keypoints_coco_example.jpg "An example image with five keypoints from the COCO dataset")
 **An example image with five keypoints from the COCO dataset**
@@ -126,6 +124,7 @@ keypoints = [
     (65, 341),
 ]
 ```
+
 Then you pass those keypoints to the `transform` function along with the image and receive the augmented versions of image and keypoints.
 
 ```python
@@ -137,7 +136,7 @@ transformed_keypoints = transformed['keypoints']
 ![The augmented image with augmented keypoints](../images/getting_started/augmenting_keypoints/augmented_image_with_keypoints.jpg "The augmented image with augmented keypoints")
 **The augmented image with augmented keypoints**
 
-If you set `remove_invisible` to `False` in `keypoint_params`, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right hip is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.
+If you set `remove_invisible` to `False` in `keypoint_params`, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right hip is located outside the image, but Albumentations still returned it. The area outside the image is highlighted in yellow.
 
 ![When `remove_invisible` is set to `False` Albumentations will return all keypoints, even those located outside the image](../images/getting_started/augmenting_keypoints/invisible_keypoints.jpg "When `remove_invisible` is set to `False` Albumentations will return all keypoints, even those located outside the image")
 **When `remove_invisible` is set to `False` Albumentations will return all keypoints, even those located outside the image**
@@ -159,14 +158,12 @@ Also, you need to declare the name of the argument to `transform` that will cont
 
 For example, we could use the `class_labels` name for the argument with labels.
 
-
 ```python
 transform = A.Compose([
     A.RandomCrop(width=330, height=330),
     A.RandomBrightnessContrast(p=0.2),
 ], keypoint_params=A.KeypointParams(format='xy', label_fields=['class_labels']))
 ```
-
 
 Next, you pass both keypoints' coordinates and class labels to `transform`.
 
@@ -186,7 +183,6 @@ transform = A.Compose([
     A.RandomBrightnessContrast(p=0.2),
 ], keypoint_params=A.KeypointParams(format='xy', label_fields=['class_labels', 'class_sides']))
 ```
-
 
 you can use those multiple arguments to pass info about class labels, like
 
@@ -218,4 +214,5 @@ transformed_image = transformed['image']
     `HorizontalFlip` may make keypoints' labels incorrect
 
 ## Examples
+
 - [Using Albumentations to augment keypoints](../../examples/example_keypoints/)
