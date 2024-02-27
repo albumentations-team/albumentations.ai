@@ -27,7 +27,7 @@ def on_page_content(html, _, config, **kwargs):
     return str(soup)
 
 
-def on_nav(nav, _, __):
+def on_nav(nav, config, __):
     for page in nav.pages:
         if isinstance(page.file, NotebookFile):
             with Path(page.file.abs_src_path).open() as f:
