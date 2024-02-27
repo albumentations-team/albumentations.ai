@@ -53,7 +53,7 @@
     
       
         
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-DCXRDR9HJ0","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
@@ -545,15 +545,21 @@
         
           <li class="md-nav__item">
   <a href="#1-pass-class-labels-along-with-coordinates" class="md-nav__link">
-    1. Pass class labels along with coordinates.
+    1. Pass class labels along with coordinates
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="1. Pass class labels along with coordinates">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#2-pass-class-labels-in-a-separate-argument-to-transform-the-preferred-way" class="md-nav__link">
     2. Pass class labels in a separate argument to transform (the preferred way).
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2022,7 +2028,7 @@
 
 <h1 id="bounding-boxes-augmentation-for-object-detection">Bounding boxes augmentation for object detection<a class="headerlink" href="#bounding-boxes-augmentation-for-object-detection" title="Permanent link">¶</a></h1>
 <h2 id="different-annotations-formats">Different annotations formats<a class="headerlink" href="#different-annotations-formats" title="Permanent link">¶</a></h2>
-<p>Bounding boxes are rectangles that mark objects on an image. There are multiple formats of bounding boxes annotations. Each format uses its specific representation of bouning boxes coordinates. Albumentations supports four formats: <code>pascal_voc</code>, <code>albumentations</code>, <code>coco</code>, and <code>yolo</code> .</p>
+<p>Bounding boxes are rectangles that mark objects on an image. There are multiple formats of bounding boxes annotations. Each format uses its specific representation of bounding boxes coordinates. Albumentations supports four formats: <code>pascal_voc</code>, <code>albumentations</code>, <code>coco</code>, and <code>yolo</code> .</p>
 <p>Let's take a look at each of those formats and how they represent coordinates of bounding boxes.</p>
 <p>As an example, we will use an image from the dataset named <a href="http://cocodataset.org/" target="_blank">Common Objects in Context</a>. It contains one bounding box that marks a cat. The image width is 640 pixels, and its height is 480 pixels. The width of the bounding box is 322 pixels, and its height is 117 pixels.</p>
 <p>The bounding box has the following <code>(x, y)</code> coordinates of its corners: top-left is <code>(x_min, y_min)</code> or <code>(98px, 345px)</code>, top-right is <code>(x_max, y_min)</code> or <code>(420px, 345px)</code>, bottom-left is <code>(x_min, y_max)</code> or <code>(98px, 462px)</code>, bottom-right is <code>(x_max, y_max)</code> or <code>(420px, 462px)</code>. As you see, coordinates of the bounding box's corners are calculated with respect to the top-left corner of the image which has <code>(x, y)</code> coordinates <code>(0, 0)</code>.</p>
@@ -2118,21 +2124,21 @@ Coordinates of a bounding box are encoded with four values in pixels: <code>[x_m
 <p>Albumentations expects that bounding boxes will be represented as a list of lists. Each list contains information about a single bounding box. A bounding box definition should have at list four elements that represent the coordinates of that bounding box. The actual meaning of those four values depends on the format of bounding boxes (either <code>pascal_voc</code>, <code>albumentations</code>, <code>coco</code>, or <code>yolo</code>). Besides four coordinates, each definition of a bounding box may contain one or more extra values. You can use those extra values to store additional information about the bounding box, such as a class label of the object inside the box. During augmentation, Albumentations will not process those extra values. The library will return them as is along with the updated coordinates of the augmented bounding box.</p>
 <h2 id="step-4-pass-an-image-and-bounding-boxes-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes">Step 4. Pass an image and bounding boxes to the augmentation pipeline and receive augmented images and boxes.<a class="headerlink" href="#step-4-pass-an-image-and-bounding-boxes-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes" title="Permanent link">¶</a></h2>
 <p>As discussed in Step 2, there are two ways of passing class labels along with bounding boxes coordinates:</p>
-<h4 id="1-pass-class-labels-along-with-coordinates">1. Pass class labels along with coordinates.<a class="headerlink" href="#1-pass-class-labels-along-with-coordinates" title="Permanent link">¶</a></h4>
-<p>So, if you have coordinates of three bounding boxes that look like this:
+<h3 id="1-pass-class-labels-along-with-coordinates">1. Pass class labels along with coordinates<a class="headerlink" href="#1-pass-class-labels-along-with-coordinates" title="Permanent link">¶</a></h3>
+<p>So, if you have coordinates of three bounding boxes that look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="n">bboxes</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">295</span><span class="p">,</span> <span class="mi">388</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">377</span><span class="p">,</span> <span class="mi">294</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">161</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">333</span><span class="p">,</span> <span class="mi">421</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">49</span><span class="p">],</span>
 <span class="p">]</span>
 </code></pre></div>
-you can add a class label for each bounding box as an additional element of the list along with four coordinates. So now a list with bounding boxes and their coordinates will look the following:
+<p>you can add a class label for each bounding box as an additional element of the list along with four coordinates. So now a list with bounding boxes and their coordinates will look the following:</p>
 <div class="highlight"><pre><span></span><code><span class="n">bboxes</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">295</span><span class="p">,</span> <span class="mi">388</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">377</span><span class="p">,</span> <span class="mi">294</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="s1">'cat'</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">333</span><span class="p">,</span> <span class="mi">421</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="s1">'sports ball'</span><span class="p">],</span>
 <span class="p">]</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>or with multiple labels per each bounding box:
 <div class="highlight"><pre><span></span><code><span class="n">bboxes</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">295</span><span class="p">,</span> <span class="mi">388</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">,</span> <span class="s1">'animal'</span><span class="p">],</span>

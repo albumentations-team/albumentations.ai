@@ -53,7 +53,7 @@
     
       
         
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-DCXRDR9HJ0","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
@@ -665,29 +665,29 @@
       
         <li class="md-nav__item">
   <a href="#step-1-create-a-configuration-file-and-a-custom-pytorch-dataset-for-your-data" class="md-nav__link">
-    Step 1. Create a configuration file and a custom PyTorch Dataset for your data.
+    Step 1. Create a configuration file and a custom PyTorch Dataset for your data
   </a>
   
-    <nav class="md-nav" aria-label="Step 1. Create a configuration file and a custom PyTorch Dataset for your data.">
+    <nav class="md-nav" aria-label="Step 1. Create a configuration file and a custom PyTorch Dataset for your data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#a-create-a-directory-with-configuration-files" class="md-nav__link">
-    a. Create a directory with configuration files.
+    a. Create a directory with configuration files
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy" class="md-nav__link">
-    b. Add implementation for __len__ and __getitem__ methods in dataset.py.
+    b. Add implementation for __len__ and __getitem__ methods in dataset.py
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#c-optional-adjust-search-parameters-in-searchyaml" class="md-nav__link">
-    c. [Optional] Adjust search parameters in search.yaml.
+    c. [Optional] Adjust search parameters in search.yaml
   </a>
   
 </li>
@@ -1939,19 +1939,19 @@
 <li>AutoAlbument will use Generative Adversarial Network to discover augmentation policies and then create a file containing those policies.</li>
 <li>Finally, you can use <a href="../..">Albumentations</a> to load augmentation policies from the file and utilize them in your computer vision pipeline.</li>
 </ol>
-<h2 id="step-1-create-a-configuration-file-and-a-custom-pytorch-dataset-for-your-data">Step 1. Create a configuration file and a custom PyTorch Dataset for your data.<a class="headerlink" href="#step-1-create-a-configuration-file-and-a-custom-pytorch-dataset-for-your-data" title="Permanent link">¶</a></h2>
-<h3 id="a-create-a-directory-with-configuration-files">a. Create a directory with configuration files.<a class="headerlink" href="#a-create-a-directory-with-configuration-files" title="Permanent link">¶</a></h3>
+<h2 id="step-1-create-a-configuration-file-and-a-custom-pytorch-dataset-for-your-data">Step 1. Create a configuration file and a custom PyTorch Dataset for your data<a class="headerlink" href="#step-1-create-a-configuration-file-and-a-custom-pytorch-dataset-for-your-data" title="Permanent link">¶</a></h2>
+<h3 id="a-create-a-directory-with-configuration-files">a. Create a directory with configuration files<a class="headerlink" href="#a-create-a-directory-with-configuration-files" title="Permanent link">¶</a></h3>
 <p>Run <code>autoalbument-create --config-dir &lt;/path/to/directory&gt; --task &lt;deep_learning_task&gt; --num-classes &lt;num_classes&gt;</code>, e.g. <code>autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10</code>.
  - A value for the <code>--config-dir</code> option should contain a path to the directory. AutoAlbument will create this directory and put two files into it: <code>dataset.py</code> and <code>search.yaml</code> (more on them later).
   - A value for the <code>--task</code> option should contain the name of a deep learning task. Supported values are <code>classification</code> and <code>semantic_segmentation</code>.
  - A value for the <code>--num-classes</code> option should contain the number of distinct classes in the classification or segmentation dataset.</p>
 <div class="admonition note">
-<p>By default, AutoAlbument creates a <code>search.yaml</code> file that contains only most important configuration parameters. To explore all avaiable parameters you can create a config file that contans them all by providing the <code>--generate-full-config</code> argument, e.g. <code>autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10 --generate-full-config</code></p>
+<p>By default, AutoAlbument creates a <code>search.yaml</code> file that contains only most important configuration parameters. To explore all available parameters you can create a config file that contains them all by providing the <code>--generate-full-config</code> argument, e.g. <code>autoalbument-create --config-dir ~/experiments/autoalbument-search-cifar10 --task classification --num-classes 10 --generate-full-config</code></p>
 </div>
-<h3 id="b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy">b. Add implementation for <code>__len__</code> and <code>__getitem__</code> methods in <code>dataset.py</code>.<a class="headerlink" href="#b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy" title="Permanent link">¶</a></h3>
+<h3 id="b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy">b. Add implementation for <code>__len__</code> and <code>__getitem__</code> methods in <code>dataset.py</code><a class="headerlink" href="#b-add-implementation-for-__len__-and-__getitem__-methods-in-datasetpy" title="Permanent link">¶</a></h3>
 <p>The <code>dataset.py</code> file created at step 1 by <code>autoalbument-create</code> contains stubs for implementing a PyTorch dataset (you can read more about creating custom PyTorch datasets <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html" target="_blank">here</a>). You need to add implementation for <code>__len__</code> and <code>__getitem__</code> methods (and optionally add the initialization logic if required).</p>
 <p>A dataset for a classification task should return an image and a class label. A dataset for a segmentation task should return an image and an associated mask.</p>
-<h3 id="c-optional-adjust-search-parameters-in-searchyaml">c. [Optional] Adjust search parameters in <code>search.yaml</code>.<a class="headerlink" href="#c-optional-adjust-search-parameters-in-searchyaml" title="Permanent link">¶</a></h3>
+<h3 id="c-optional-adjust-search-parameters-in-searchyaml">c. [Optional] Adjust search parameters in <code>search.yaml</code><a class="headerlink" href="#c-optional-adjust-search-parameters-in-searchyaml" title="Permanent link">¶</a></h3>
 <p>You may want to change the parameters that AutoAlbument will use to search for augmentation policies. To do this, you need to edit the <code>search.yaml</code> file created by <code>autoalbument-create</code> at step 1. Each configuration parameter contains a comment that describes the meaning of the setting. Please refer to the  "Tuning the search parameters" section that includes a description of the most critical parameters.</p>
 <p><code>search.yaml</code> is a <a href="https://hydra.cc/" target="_blank">Hydra</a> config file. You can use all Hydra features inside it.</p>
 <h2 id="step-2-use-autoalbument-to-search-for-augmentation-policies">Step 2. Use AutoAlbument to search for augmentation policies.<a class="headerlink" href="#step-2-use-autoalbument-to-search-for-augmentation-policies" title="Permanent link">¶</a></h2>

@@ -53,7 +53,7 @@
     
       
         
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-158065353-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-DCXRDR9HJ0","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
@@ -2040,7 +2040,7 @@ Keypoints can be stored on the disk in different serialization formats: JSON, XM
 <h2 id="step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes">Step 4. Pass an image and keypoints to the augmentation pipeline and receive augmented images and boxes.<a class="headerlink" href="#step-4-pass-an-image-and-keypoints-to-the-augmentation-pipeline-and-receive-augmented-images-and-boxes" title="Permanent link">¶</a></h2>
 <p>Let's say you have an example image with five keypoints.</p>
 <p>A list with those five keypoints' coordinates in the <code>xy</code> format will look the following:</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">keypoints</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="n">keypoints</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">(</span><span class="mi">264</span><span class="p">,</span> <span class="mi">203</span><span class="p">),</span>
     <span class="p">(</span><span class="mi">86</span><span class="p">,</span> <span class="mi">88</span><span class="p">),</span>
     <span class="p">(</span><span class="mi">254</span><span class="p">,</span> <span class="mi">160</span><span class="p">),</span>
@@ -2048,14 +2048,14 @@ Keypoints can be stored on the disk in different serialization formats: JSON, XM
     <span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">341</span><span class="p">),</span>
 <span class="p">]</span>
 </code></pre></div>
-Then you pass those keypoints to the <code>transform</code> function along with the image and receive the augmented versions of image and keypoints.</p>
+<p>Then you pass those keypoints to the <code>transform</code> function along with the image and receive the augmented versions of image and keypoints.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transformed</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">keypoints</span><span class="o">=</span><span class="n">keypoints</span><span class="p">)</span>
 <span class="n">transformed_image</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
 <span class="n">transformed_keypoints</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="s1">'keypoints'</span><span class="p">]</span>
 </code></pre></div>
 <p><img alt="The augmented image with augmented keypoints" src="../../images/getting_started/augmenting_keypoints/augmented_image_with_keypoints.jpg" title="The augmented image with augmented keypoints"/>
 <strong>The augmented image with augmented keypoints</strong></p>
-<p>If you set <code>remove_invisible</code> to <code>False</code> in <code>keypoint_params</code>, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right hip is located outside the image, but Albumentations still retuned it. The area outside the image is highlighted in yellow.</p>
+<p>If you set <code>remove_invisible</code> to <code>False</code> in <code>keypoint_params</code>, then Albumentations will return all keypoints, even if they lie outside the visible area. In the example image below, you can see that the keypoint for the right hip is located outside the image, but Albumentations still returned it. The area outside the image is highlighted in yellow.</p>
 <p><img alt="When remove_invisible is set to False Albumentations will return all keypoints, even those located outside the image" src="../../images/getting_started/augmenting_keypoints/invisible_keypoints.jpg" title="When remove_invisible is set to False Albumentations will return all keypoints, even those located outside the image"/>
 <strong>When <code>remove_invisible</code> is set to <code>False</code> Albumentations will return all keypoints, even those located outside the image</strong></p>
 <p>If keypoints have associated class labels, you need to create a list that contains those labels:</p>
