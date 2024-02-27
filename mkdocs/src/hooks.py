@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from mkdocs_jupyter.plugin import NotebookFile
 
 
-def on_pre_page(page, config, _):
+def on_pre_page(page, config, files):
     if isinstance(page.file, NotebookFile):
         filename = Path(page.file.src_path).name
         page.is_jupyter_notebook = True
@@ -27,7 +27,7 @@ def on_page_content(html, _, config, **kwargs):
     return str(soup)
 
 
-def on_nav(nav, config, __):
+def on_nav(nav, config, files):
     for page in nav.pages:
         if isinstance(page.file, NotebookFile):
             with Path(page.file.abs_src_path).open() as f:
