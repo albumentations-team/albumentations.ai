@@ -15,7 +15,7 @@ def on_pre_page(page, config, files):
     return page
 
 
-def on_page_content(html, _, config, **kwargs):
+def on_page_content(html, page, config, **kwargs):
     site_netloc = urlparse(config["site_url"]).netloc
     soup = BeautifulSoup(html, "html.parser")
     links = soup.find_all("a", href=True)
