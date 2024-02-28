@@ -1898,11 +1898,11 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f78c6712ee0&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f53480173a0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L220" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L126" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.FDA" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1944,11 +1944,11 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f78c6712ee0&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f53480173a0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L151" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L57" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.HistogramMatching" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1986,11 +1986,11 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f78c6712ee0&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f53480173a0&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L286" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L192" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2016,39 +2016,6 @@ image and then performs inverse transformation using transform fitted on referen
 <p>See also: <a href="https://github.com/arsenyinfo/qudida" target="_blank">https://github.com/arsenyinfo/qudida</a></p>
 <div class="doc doc-children">
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-function">
-<h2 class="doc doc-heading" data-toc-label="fourier_domain_adaptation()" id="albumentations.augmentations.domain_adaptation.fourier_domain_adaptation">
-<code class="highlight language-python">def
-albumentations.augmentations.domain_adaptation.fourier_domain_adaptation    (img, target_img, beta)
-   </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation.py#L34" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation.fourier_domain_adaptation" title="Permanent link">¶</a>
-</h2>
-<div class="doc doc-contents">
-<p>Fourier Domain Adaptation from <a href="https://github.com/YanchaoYang/FDA" target="_blank">https://github.com/YanchaoYang/FDA</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span>  <span class="n">source</span> <span class="n">image</span>
-<span class="n">target_img</span><span class="o">:</span>  <span class="n">target</span> <span class="n">image</span> <span class="k">for</span> <span class="n">domain</span> <span class="n">adaptation</span>
-<span class="n">beta</span><span class="o">:</span> <span class="n">coefficient</span> <span class="n">from</span> <span class="n">source</span> <span class="n">paper</span>
-</code></pre></div>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ndarray</code></td>
-<td></td>
-</tr>
-</tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>transformed image
-</code></pre></div>
 </div>
 </div>
 </div>
