@@ -15,8 +15,8 @@
                     {% for company in img_industry %}
                     <div class="col-md-2 col-sm-4 p-5 align-self-center">
                         <a href="{{ company.url }}" target="_blank"><img
-                                src="./assets/img/industry/{{ company.img_filename }}"
-                                alt="{{ company.name }}" title="{{ company.name }}" class="img-fluid"></a>
+                                src="./assets/img/industry/{{ company.img_filename }}" alt="{{ company.name }}"
+                                title="{{ company.name }}" class="img-fluid"></a>
                     </div>
                     {% endfor %}
                 </div>
@@ -24,16 +24,15 @@
         </div>
     </div>
 
-<div class="row"><div class="col-12"><a class="btn btn-soft-secondary float-right mb-4" href="#" data-modal-target="#addCompanyModal" data-modal-effect="blur" data-overlay-opacity="0.7">
-                      Add my company to this list
-                    </a>
-</div> </div>
-
-
+    <div class="row">
+        <div class="col-12"><a class="btn btn-soft-secondary float-right mb-4" href="#"
+                data-modal-target="#addCompanyModal" data-modal-effect="blur" data-overlay-opacity="0.7">
+                Add my company to this list
+            </a>
+        </div>
+    </div>
 
 </div>
-        {% include "_add_company_form.html" %}
-
 
 
 <hr class="my-0">
@@ -48,10 +47,9 @@
         <div class="col-12 mt-2">
             Albumentations is widely used in research areas related to computer vision and deep
             learning. If you find this library useful for your research, please consider
-            citing <a href="https://www.mdpi.com/2078-2489/11/2/125" target="_blank"
-                      class="border-link">Albumentations: Fast and Flexible Image Augmentations</a>:
-            <pre style="background-color: #eee; border: 1px solid #777; padding: 10px"
-                 class="mt-2"><code>@Article{info11020125,
+            citing <a href="https://www.mdpi.com/2078-2489/11/2/125" target="_blank" class="border-link">Albumentations:
+                Fast and Flexible Image Augmentations</a>:
+            <pre style="background-color: #eee; border: 1px solid #777; padding: 10px" class="mt-2"><code>@Article{info11020125,
     AUTHOR = {Buslaev, Alexander and Iglovikov, Vladimir I. and Khvedchenya, Eugene and Parinov, Alex and Druzhinin, Mikhail and Kalinin, Alexandr A.},
     TITLE = {Albumentations: Fast and Flexible Image Augmentations},
     JOURNAL = {Information},
@@ -73,8 +71,7 @@
                 <h3 class="text-center mt-3" style="font-size: 1.5rem">List of papers that cite
                     Albumentations</h3>
                 {% for citation in citations[:num_visible_citations] %}
-                <div class="row  mb-3 mt-3"
-                     style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
+                <div class="row  mb-3 mt-3" style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
                     <div class="col-12" style="font-size: 1.05rem;">
                         {{ loop.index }}. {{ citation.title }}
                     </div>
@@ -84,17 +81,16 @@
                 </div>
                 {% endfor %}
                 <div class="row">
-                    <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse"
-                       href="#citations-all"
-                       role="button" aria-expanded="false" aria-controls="#citations-all"
-                       data-length="{{ citations[num_visible_citations:]|length }}" data-state="hidden">
+                    <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse" href="#citations-all"
+                        role="button" aria-expanded="false" aria-controls="#citations-all"
+                        data-length="{{ citations[num_visible_citations:]|length }}" data-state="hidden">
                         Show {{ citations[num_visible_citations:]|length }} more <i class="fa fa-angle-down"></i>
                     </a>
                 </div>
                 <div id="citations-all" class="collapse">
                     {% for citation in citations[num_visible_citations:] %}
                     <div class="row  mb-3 mt-3"
-                         style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
+                        style="border: 1px solid #e7eaf3; border-radius: 0.3125rem; padding: 10px">
                         <div class="col-12" style="font-size: 1.05rem;">
                             {{ loop.index + num_visible_citations }}. {{ citation.title }}
                         </div>
@@ -119,10 +115,9 @@
     {% for competition in competitions[:num_visible_competitions] %}
     {% include '_competition.j2' %}
     {% endfor %}
-    <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse"
-       href="#competitions-all"
-       role="button" aria-expanded="false" aria-controls="#competitions-all"
-       data-length="{{ competitions[num_visible_competitions:]|length }}" data-state="hidden">
+    <a class="btn btn-primary btn-block collapse-button" data-toggle="collapse" href="#competitions-all" role="button"
+        aria-expanded="false" aria-controls="#competitions-all"
+        data-length="{{ competitions[num_visible_competitions:]|length }}" data-state="hidden">
         Show {{ competitions[num_visible_competitions:]|length }} more <i class="fa fa-angle-down"></i>
     </a>
     <div id="competitions-all" class="collapse">
@@ -139,14 +134,12 @@
     <div class="row">
         {% for repository in top_repositories %}
         <div class="col-12 col-sm-6 mb-4">
-            <div
-                    style="border: 1px solid #aaa; border-radius: 0.3125rem; padding: 10px; min-height:150px">
-                <h5><a class="border-link" target="_blank"
-                       href="https://github.com/{{ repository.title }}">{{ repository.title }}</a>
-                    <a target="_blank"
-                       href="https://github.com/{{ repository.title }}"
-                       style="padding-left: 5px"><span class="badge badge-light" style="font-size: 1.25rem; padding: 0.4rem"><i
-                            class="fa fa-star"></i> {{ repository.stars_rounded }}</span></a>
+            <div style="border: 1px solid #aaa; border-radius: 0.3125rem; padding: 10px; min-height:150px">
+                <h5><a class="border-link" target="_blank" href="https://github.com/{{ repository.title }}">{{
+                        repository.title }}</a>
+                    <a target="_blank" href="https://github.com/{{ repository.title }}" style="padding-left: 5px"><span
+                            class="badge badge-light" style="font-size: 1.25rem; padding: 0.4rem"><i
+                                class="fa fa-star"></i> {{ repository.stars_rounded }}</span></a>
                 </h5>
                 <div style="font-size: 1rem" class="mt-4">{{ repository.description or 'No description provided.' }}
                 </div>
@@ -157,7 +150,9 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <a class="btn btn-primary btn-block" href="https://github.com/albumentations-team/albumentations/network/dependents" target="_blank"><i class="fab fa-github"></i> View all open source projects on GitHub</a>
+            <a class="btn btn-primary btn-block"
+                href="https://github.com/albumentations-team/albumentations/network/dependents" target="_blank"><i
+                    class="fab fa-github"></i> View all open source projects on GitHub</a>
         </div>
     </div>
 </div>
