@@ -1355,19 +1355,6 @@
     functional
   </a>
   
-    <nav class="md-nav" aria-label="functional">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.functional--returns" class="md-nav__link">
-    Returns
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1441,13 +1428,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#albumentations.augmentations.geometric.transforms--attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#albumentations.augmentations.geometric.transforms--note" class="md-nav__link">
     Note:
   </a>
@@ -1478,20 +1458,6 @@
   
     <nav class="md-nav" aria-label="transforms">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.transforms--attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.transforms--attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#albumentations.augmentations.transforms--see-also" class="md-nav__link">
@@ -1656,19 +1622,6 @@
   <a href="#albumentations.pytorch.transforms" class="md-nav__link">
     transforms
   </a>
-  
-    <nav class="md-nav" aria-label="transforms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.pytorch.transforms--attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2392,6 +2345,7 @@
 <h2 id="pixel-level-transforms">Pixel-level transforms<a class="headerlink" href="#pixel-level-transforms" title="Permanent link">¶</a></h2>
 <p>Here is a list of all available pixel-level transforms. You can apply a pixel-level transform to any target, and under the hood, the transform will change only the input image and return any other input targets such as masks, bounding boxes, or keypoints unchanged.</p>
 <ul>
+<li><a href="#albumentations.augmentations.blur.transforms.AdvancedBlur">AdvancedBlur</a></li>
 <li><a href="#albumentations.augmentations.blur.transforms.Blur">Blur</a></li>
 <li><a href="#albumentations.augmentations.transforms.CLAHE">CLAHE</a></li>
 <li><a href="#albumentations.augmentations.dropout.channel_dropout.ChannelDropout">ChannelDropout</a></li>
@@ -2802,9 +2756,9 @@ data augmentation.</p>
     "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data",
     available at <a href="https://arxiv.org/abs/2107.10833" target="_blank">https://arxiv.org/abs/2107.10833</a></p>
 <p>Targets:
-    This transformation is applied to images only.</p>
+    image</p>
 <p>Image types:
-    This transform supports uint8 and float32 image types.</p>
+    uint8, float32</p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -3725,7 +3679,7 @@ albumentations.augmentations.domain_adaptation.FDA</strong></code>
 <code>
 
 
-    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f672f1f23a0&gt;, always_apply=False, p=0.5)
+    (reference_images, beta_limit=0.1, read_fn=&lt;function read_rgb_image at 0x7f4a23dde3a0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3771,7 +3725,7 @@ albumentations.augmentations.domain_adaptation.HistogramMatching</strong></code>
 <code>
 
 
-    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f672f1f23a0&gt;, always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.5, 1.0), read_fn=&lt;function read_rgb_image at 0x7f4a23dde3a0&gt;, always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3813,7 +3767,7 @@ albumentations.augmentations.domain_adaptation.PixelDistributionAdaptation</stro
 <code>
 
 
-    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f672f1f23a0&gt;, transform_type='pca', always_apply=False, p=0.5)
+    (reference_images, blend_ratio=(0.25, 1.0), read_fn=&lt;function read_rgb_image at 0x7f4a23dde3a0&gt;, transform_type='pca', always_apply=False, p=0.5)
 
 
                 </code> <span class="doc-github-link">
@@ -3865,7 +3819,7 @@ albumentations.augmentations.domain_adaptation_functional.DomainAdapter</strong>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation_functional.py#L77" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/domain_adaptation_functional.py#L74" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.domain_adaptation_functional.DomainAdapter" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -4547,7 +4501,21 @@ albumentations.augmentations.functional.multiply    (img, multiplier)
 <div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">Image</span><span class="o">.</span>
 <span class="n">multiplier</span><span class="o">:</span> <span class="n">Multiplier</span> <span class="n">coefficient</span><span class="o">.</span>
 </code></pre></div>
-<h6 id="albumentations.augmentations.functional--returns">Returns<a class="headerlink" href="#albumentations.augmentations.functional--returns" title="Permanent link">¶</a></h6>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndarray</code></td>
+<td></td>
+</tr>
+</tbody>
+</table> <hr/>
 <div class="codehilite"><pre><span></span><code><span class="n">Image</span> <span class="n">multiplied</span> <span class="k">by</span> <span class="n n-Quoted">`multiplier`</span> <span class="n">coefficient</span><span class="p">.</span>
 </code></pre></div>
 </div>
@@ -5957,7 +5925,7 @@ albumentations.augmentations.geometric.transforms.PadIfNeeded.PositionType</stro
 <p>This Enum class is utilized to define specific anchor positions that an object can
 assume relative to a container. It's particularly useful in image processing, UI layout,
 and graphic design to specify the alignment and positioning of elements.</p>
-<h6 id="albumentations.augmentations.geometric.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.augmentations.geometric.transforms--attributes" title="Permanent link">¶</a></h6>
+<hr/>
 <div class="codehilite"><pre><span></span><code><span class="nv">CENTER</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">center</span>.
 <span class="nv">TOP_LEFT</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">top</span><span class="o">-</span><span class="nv">left</span> <span class="nv">corner</span>.
 <span class="nv">TOP_RIGHT</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">top</span><span class="o">-</span><span class="nv">right</span> <span class="nv">corner</span>.
@@ -6586,7 +6554,7 @@ albumentations.augmentations.transforms.ImageCompression.ImageCompressionType</s
 <div class="doc doc-contents">
 <p>Defines the types of image compression.</p>
 <p>This Enum class is used to specify the image compression format.</p>
-<h6 id="albumentations.augmentations.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.augmentations.transforms--attributes" title="Permanent link">¶</a></h6>
+<hr/>
 <div class="codehilite"><pre><span></span><code>JPEG (int): Represents the JPEG image compression format.
 WEBP (int): Represents the WEBP image compression format.
 </code></pre></div>
@@ -6919,7 +6887,7 @@ albumentations.augmentations.transforms.RandomGamma</strong></code>
 selected gamma value from a specified range. Gamma correction can simulate various lighting
 conditions, potentially enhancing model generalization. For more details on gamma correction,
 see: <a href="https://en.wikipedia.org/wiki/Gamma_correction" target="_blank">https://en.wikipedia.org/wiki/Gamma_correction</a></p>
-<h6 id="albumentations.augmentations.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.augmentations.transforms--attributes" title="Permanent link">¶</a></h6>
+<hr/>
 <div class="codehilite"><pre><span></span><code><span class="n">gamma_limit</span> <span class="p">(</span><span class="k">Union</span><span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="err">]]</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">range</span> <span class="k">for</span> <span class="n">gamma</span> <span class="n">adjustment</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`gamma_limit`</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span>
     <span class="kt">int</span><span class="p">,</span> <span class="n">the</span> <span class="k">range</span> <span class="n">will</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="p">(</span><span class="o">-</span><span class="n">gamma_limit</span><span class="p">,</span> <span class="n">gamma_limit</span><span class="p">),</span> <span class="n">defining</span> <span class="n">how</span> <span class="n">much</span>
     <span class="k">to</span> <span class="n">adjust</span> <span class="n">the</span> <span class="n">image</span><span class="s1">'s gamma. Default is (80, 120).</span>
@@ -8885,7 +8853,7 @@ albumentations.pytorch.transforms.ToTensorV2</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L27" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/pytorch/transforms.py#L26" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.pytorch.transforms.ToTensorV2" title="Permanent link">¶</a>
 </h4>
 <div class="class-signature">
@@ -8893,12 +8861,34 @@ albumentations.pytorch.transforms.ToTensorV2</strong></code>
 <div class="doc doc-contents">
 <p>Converts images/masks to PyTorch Tensors, inheriting from BasicTransform. Supports images in numpy <code>HWC</code> format
 and converts them to PyTorch <code>CHW</code> format. If the image is in <code>HW</code> format, it will be converted to PyTorch <code>HW</code>.</p>
-<h6 id="albumentations.pytorch.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.pytorch.transforms--attributes" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code><span class="nv">transpose_mask</span> <span class="ss">(</span><span class="nv">bool</span><span class="ss">)</span>: <span class="k">If</span> <span class="nv">True</span>, <span class="nv">transposes</span> <span class="mi">3</span><span class="nv">D</span> <span class="nv">input</span> <span class="nv">mask</span> <span class="nv">dimensions</span> <span class="nv">from</span> `[<span class="nv">height</span>, <span class="nv">width</span>, <span class="nv">num_channels</span>]` <span class="nv">to</span>
-    `[<span class="nv">num_channels</span>, <span class="nv">height</span>, <span class="nv">width</span>]`.
-<span class="nv">always_apply</span> <span class="ss">(</span><span class="nv">bool</span><span class="ss">)</span>: <span class="nv">Indicates</span> <span class="k">if</span> <span class="nv">this</span> <span class="nv">transformation</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">always</span> <span class="nv">applied</span>. <span class="nv">Default</span>: <span class="nv">True</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">Probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">1</span>.<span class="mi">0</span>.
-</code></pre></div>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transpose_mask</code></td>
+<td><code>bool</code></td>
+<td><p>If True, transposes 3D input mask dimensions from <code>[height, width, num_channels]</code> to
+<code>[num_channels, height, width]</code>.</p></td>
+</tr>
+<tr>
+<td><code>always_apply</code></td>
+<td><code>bool</code></td>
+<td><p>Indicates if this transformation should be always applied. Default: True.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>Probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
 </div>
 </div>

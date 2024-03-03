@@ -1357,20 +1357,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#albumentations.augmentations.transforms--attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.transforms--attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#albumentations.augmentations.transforms--see-also" class="md-nav__link">
     See Also:
   </a>
@@ -2295,7 +2281,7 @@ albumentations.augmentations.transforms.ImageCompression.ImageCompressionType</s
 <div class="doc doc-contents">
 <p>Defines the types of image compression.</p>
 <p>This Enum class is used to specify the image compression format.</p>
-<h5 id="albumentations.augmentations.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.augmentations.transforms--attributes" title="Permanent link">¶</a></h5>
+<hr/>
 <div class="codehilite"><pre><span></span><code>JPEG (int): Represents the JPEG image compression format.
 WEBP (int): Represents the WEBP image compression format.
 </code></pre></div>
@@ -2628,7 +2614,7 @@ albumentations.augmentations.transforms.RandomGamma</strong></code>
 selected gamma value from a specified range. Gamma correction can simulate various lighting
 conditions, potentially enhancing model generalization. For more details on gamma correction,
 see: <a href="https://en.wikipedia.org/wiki/Gamma_correction" target="_blank">https://en.wikipedia.org/wiki/Gamma_correction</a></p>
-<h4 id="albumentations.augmentations.transforms--attributes">Attributes<a class="headerlink" href="#albumentations.augmentations.transforms--attributes" title="Permanent link">¶</a></h4>
+<hr/>
 <div class="codehilite"><pre><span></span><code><span class="n">gamma_limit</span> <span class="p">(</span><span class="k">Union</span><span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="err">]]</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">range</span> <span class="k">for</span> <span class="n">gamma</span> <span class="n">adjustment</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`gamma_limit`</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span>
     <span class="kt">int</span><span class="p">,</span> <span class="n">the</span> <span class="k">range</span> <span class="n">will</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="p">(</span><span class="o">-</span><span class="n">gamma_limit</span><span class="p">,</span> <span class="n">gamma_limit</span><span class="p">),</span> <span class="n">defining</span> <span class="n">how</span> <span class="n">much</span>
     <span class="k">to</span> <span class="n">adjust</span> <span class="n">the</span> <span class="n">image</span><span class="s1">'s gamma. Default is (80, 120).</span>
