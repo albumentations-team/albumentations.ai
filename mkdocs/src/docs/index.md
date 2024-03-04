@@ -39,6 +39,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](examples/example_multi_target/)
 - [Weather augmentations in Albumentations](examples/example_weather_transforms/)
 - [Example of applying XYMasking transform](examples/example_xymasking/)
+- [Example of applying MixUp transform](examples/example_mixup/)
 - [Migrating from torchvision to Albumentations](examples/migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)

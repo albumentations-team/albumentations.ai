@@ -7,7 +7,9 @@ sys.path.append("/albumentations/tools")
 
 from make_transforms_docs import (
     Targets,
-    get_transforms_info,
+    get_dual_transforms_info,
+    get_image_only_transforms_info,
+    get_mixing_transforms_info,
     make_transforms_targets_links,
     make_transforms_targets_table,
 )
@@ -25,9 +27,8 @@ def replace_path(transforms):
 
 
 def define_env(env):
-    transforms_info = get_transforms_info()
-    image_only_transforms = {transform: info for transform, info in transforms_info.items() if info["image_only"]}
-    dual_transforms = {transform: info for transform, info in transforms_info.items() if not info["image_only"]}
+    image_only_transforms = dict(get_image_only_transforms_info().items())
+    dual_transforms = dict({**get_mixing_transforms_info(), **get_dual_transforms_info()}.items())
 
     @env.macro
     def image_only_transforms_links(only_anchor=False):
