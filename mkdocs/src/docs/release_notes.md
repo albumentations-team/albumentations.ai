@@ -1,6 +1,6 @@
 # Release notes
 
-## 1.4.0 (17 Debruary 2024)
+## 1.4.0 (17 February 2024)
 
 # Albumentations 1.4.0 Release Notes
 
