@@ -1732,6 +1732,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1860,7 +1931,7 @@
 
     <li class="md-nav__item">
       <a href="../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1915,7 +1986,7 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L100" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L95" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1931,9 +2002,23 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 ex: {'target_image': 'image'}
 ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}
 by the way you must have at least one object with key 'image'</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>additional_targets (dict): keys - new target name, values - old target name. ex: {'image2': 'image'}
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>additional_targets</code></td>
+<td><code>Dict[str, str]</code></td>
+<td><p>keys - new target name, values - old target name. ex: {'image2': 'image'}</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1945,13 +2030,40 @@ by the way you must have at least one object with key 'image'</p>
 albumentations.core.transforms_interface.DualTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L261" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L287" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.DualTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<p>Transform for segmentation task.</p>
+<p>A base class for transformations that should be applied both to an image and its corresponding properties
+such as masks, bounding boxes, and keypoints. This class ensures that when a transform is applied to an image,
+all associated entities are transformed accordingly to maintain consistency between the image and its annotations.</p>
+<p>Properties:
+    targets (Dict[str, Callable[..., Any]]): Defines the types of targets (e.g., image, mask, bboxes, keypoints)
+        that the transform should be applied to and maps them to the corresponding methods.</p>
+<p>Methods:
+    apply_to_bbox(bbox: BoxInternalType, <em>args: Any, </em>*params: Any) -&gt; BoxInternalType:
+        Applies the transform to a single bounding box. Should be implemented in the subclass.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">apply_to_keypoint</span><span class="p">(</span><span class="nl">keypoint</span><span class="p">:</span><span class="w"> </span><span class="n">KeypointInternalType</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">KeypointInternalType</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">keypoint</span><span class="p">.</span><span class="w"> </span><span class="n">Should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">implemented</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">subclass</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">apply_to_bboxes</span><span class="p">(</span><span class="nl">bboxes</span><span class="p">:</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">BoxType</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">BoxType</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">bounding</span><span class="w"> </span><span class="n">boxes</span><span class="p">.</span><span class="w"> </span><span class="n">Delegates</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="err">`</span><span class="n">apply_to_bbox</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">bounding</span><span class="w"> </span><span class="n">box</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">apply_to_keypoints</span><span class="p">(</span><span class="nl">keypoints</span><span class="p">:</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">KeypointType</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">KeypointType</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">keypoints</span><span class="p">.</span><span class="w"> </span><span class="n">Delegates</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="err">`</span><span class="n">apply_to_keypoint</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">keypoint</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">apply_to_mask</span><span class="p">(</span><span class="nl">mask</span><span class="p">:</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="nl">ndarray</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="n">specifically</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">mask</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">apply_to_masks</span><span class="p">(</span><span class="nl">masks</span><span class="p">:</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">np.ndarray</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">np.ndarray</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">masks</span><span class="p">.</span><span class="w"> </span><span class="n">Delegates</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="err">`</span><span class="n">apply_to_mask</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">mask</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+<p>Note:
+    This class is intended to be subclassed and should not be used directly. Subclasses are expected to
+    implement the specific logic for each type of target (e.g., image, mask, bboxes, keypoints) in the
+    corresponding <code>apply_to_*</code> methods.</p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1962,7 +2074,7 @@ albumentations.core.transforms_interface.DualTransform</strong></code>
 albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L292" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L329" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.ImageOnlyTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1979,13 +2091,15 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 albumentations.core.transforms_interface.NoOp</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L306" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L349" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.transforms_interface.NoOp" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Does nothing</p>
+<p>Targets:
+    image, mask, bboxes, keypoints, global_label</p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1995,15 +2109,37 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 <code class="highlight language-python">def
 albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L30" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L27" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert input argument to a min-max tuple.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">param</span><span class="o">:</span> <span class="n">Input</span> <span class="k">value</span> <span class="n">which</span> <span class="n">could</span> <span class="n">be</span> <span class="n">a</span> <span class="n">scalar</span> <span class="k">or</span> <span class="n">a</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">exactly</span> <span class="mi">2</span> <span class="n">scalars</span><span class="p">.</span>
-<span class="n">low</span><span class="o">:</span> <span class="k">Second</span> <span class="n">element</span> <span class="k">of</span> <span class="n">the</span> <span class="n">tuple</span><span class="p">,</span> <span class="n">provided</span> <span class="k">as</span> <span class="n">an</span> <span class="k">optional</span> <span class="n">argument</span> <span class="k">for</span> <span class="k">when</span> <span class="n n-Quoted">`param`</span> <span class="k">is</span> <span class="n">a</span> <span class="n">scalar</span><span class="p">.</span>
-<span class="n">bias</span><span class="o">:</span> <span class="n">An</span> <span class="k">offset</span> <span class="n">added</span> <span class="k">to</span> <span class="k">both</span> <span class="n">elements</span> <span class="k">of</span> <span class="n">the</span> <span class="n">tuple</span><span class="p">.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>param</code></td>
+<td><code>Union[float, Tuple[float, float], int, Tuple[int, int]]</code></td>
+<td><p>Input value which could be a scalar or a sequence of exactly 2 scalars.</p></td>
+</tr>
+<tr>
+<td><code>low</code></td>
+<td><code>Union[float, Tuple[float, float], int, Tuple[int, int]]</code></td>
+<td><p>Second element of the tuple, provided as an optional argument for when <code>param</code> is a scalar.</p></td>
+</tr>
+<tr>
+<td><code>bias</code></td>
+<td><code>Union[int, float]</code></td>
+<td><p>An offset added to both elements of the tuple.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2015,13 +2151,11 @@ albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None
 <tbody>
 <tr>
 <td><code>Union[Tuple[int, int], Tuple[float, float]]</code></td>
-<td></td>
+<td><p>A tuple of two scalars, optionally adjusted by <code>bias</code>.
+Raises ValueError for invalid combinations or types of arguments.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">A</span> <span class="n">tuple</span> <span class="k">of</span> <span class="n">two</span> <span class="n">scalars</span><span class="p">,</span> <span class="k">optionally</span> <span class="n">adjusted</span> <span class="k">by</span> <span class="n n-Quoted">`bias`</span><span class="p">.</span>
-<span class="n">Raises</span> <span class="n">ValueError</span> <span class="k">for</span> <span class="n">invalid</span> <span class="n">combinations</span> <span class="k">or</span> <span class="k">types</span> <span class="k">of</span> <span class="n">arguments</span><span class="p">.</span>
-</code></pre></div>
+</table>
 </div>
 </div>
 </div>

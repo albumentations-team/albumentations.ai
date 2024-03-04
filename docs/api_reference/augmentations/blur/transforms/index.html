@@ -1721,6 +1721,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1849,7 +1920,7 @@
 
     <li class="md-nav__item">
       <a href="../../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1904,7 +1975,7 @@ albumentations.augmentations.blur.transforms.AdvancedBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L336" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L330" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.AdvancedBlur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1914,34 +1985,71 @@ albumentations.augmentations.blur.transforms.AdvancedBlur</strong></code>
 <p>This transform also adds multiplicative noise to the generated kernel before convolution,
 affecting the image in a unique way that combines blurring and noise injection for enhanced
 data augmentation.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">blur_limit</span> <span class="p">(</span><span class="n">ScaleIntType</span><span class="p">,</span> <span class="k">optional</span><span class="p">)</span><span class="o">:</span> <span class="n">Maximum</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">size</span> <span class="k">for</span> <span class="n">blurring</span> <span class="n">the</span> <span class="n">input</span> <span class="n">image</span><span class="p">.</span>
-    <span class="n">Must</span> <span class="n">be</span> <span class="n">zero</span> <span class="k">or</span> <span class="n">odd</span> <span class="k">and</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">inf</span><span class="p">).</span> <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="mi">0</span><span class="p">,</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">computed</span> <span class="k">from</span> <span class="n">sigma</span>
-    <span class="k">as</span> <span class="n n-Quoted">`round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1`</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n">a</span> <span class="n">single</span> <span class="k">value</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span> <span class="n n-Quoted">`blur_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="n">the</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">blur_limit</span><span class="p">).</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">).</span>
-<span class="n">sigma_x_limit</span> <span class="n">ScaleFloatType</span><span class="o">:</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">standard</span> <span class="n">deviation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">X</span> <span class="n">dimension</span><span class="p">.</span>
-    <span class="n">Must</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">inf</span><span class="p">).</span> <span class="k">If</span> <span class="n">a</span> <span class="n">single</span> <span class="k">value</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span> <span class="n n-Quoted">`sigma_x_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="n">the</span> <span class="k">range</span>
-    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma_limit</span><span class="p">).</span> <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sigma</span> <span class="n">will</span> <span class="n">be</span> <span class="n">computed</span> <span class="k">as</span> <span class="n n-Quoted">`sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8`</span><span class="p">.</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">).</span>
-<span class="n">sigma_y_limit</span> <span class="n">ScaleFloatType</span><span class="o">:</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">standard</span> <span class="n">deviation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">Y</span> <span class="n">dimension</span><span class="p">.</span>
-    <span class="n">Must</span> <span class="n">follow</span> <span class="n">the</span> <span class="n">same</span> <span class="n">rules</span> <span class="k">as</span> <span class="n n-Quoted">`sigma_x_limit`</span><span class="p">.</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">).</span>
-<span class="n">rotate_limit</span> <span class="p">(</span><span class="n">ScaleIntType</span><span class="p">,</span> <span class="k">optional</span><span class="p">)</span><span class="o">:</span> <span class="k">Range</span> <span class="k">from</span> <span class="n">which</span> <span class="n">a</span> <span class="k">random</span> <span class="n">angle</span> <span class="n">used</span> <span class="k">to</span> <span class="k">rotate</span> <span class="n">the</span> <span class="n">Gaussian</span> <span class="n">kernel</span>
-    <span class="k">is</span> <span class="n">picked</span><span class="p">.</span> <span class="k">If</span> <span class="k">limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="kt">int</span><span class="p">,</span> <span class="n">an</span> <span class="n">angle</span> <span class="k">is</span> <span class="n">picked</span> <span class="k">from</span> <span class="p">(</span><span class="o">-</span><span class="n">rotate_limit</span><span class="p">,</span> <span class="n">rotate_limit</span><span class="p">).</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">).</span>
-<span class="n">beta_limit</span> <span class="p">(</span><span class="n">ScaleFloatType</span><span class="p">,</span> <span class="k">optional</span><span class="p">)</span><span class="o">:</span> <span class="n">Distribution</span> <span class="n">shape</span> <span class="n">parameter</span><span class="p">.</span> <span class="mi">1</span> <span class="n">represents</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">distribution</span><span class="p">.</span>
-    <span class="k">Values</span> <span class="n">below</span> <span class="mf">1.0</span> <span class="n">make</span> <span class="n">distribution</span> <span class="n">tails</span> <span class="n">heavier</span> <span class="k">than</span> <span class="n">normal</span><span class="p">,</span> <span class="k">and</span> <span class="k">values</span> <span class="n">above</span> <span class="mf">1.0</span> <span class="n">make</span> <span class="n">it</span>
-    <span class="n">lighter</span> <span class="k">than</span> <span class="n">normal</span><span class="p">.</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">).</span>
-<span class="n">noise_limit</span> <span class="p">(</span><span class="n">ScaleFloatType</span><span class="p">,</span> <span class="k">optional</span><span class="p">)</span><span class="o">:</span> <span class="n">Multiplicative</span> <span class="n">factor</span> <span class="n">that</span> <span class="n">controls</span> <span class="n">the</span> <span class="n">strength</span> <span class="k">of</span> <span class="n">kernel</span> <span class="n">noise</span><span class="p">.</span>
-    <span class="n">Must</span> <span class="n">be</span> <span class="n">positive</span> <span class="k">and</span> <span class="n">preferably</span> <span class="n">centered</span> <span class="n">around</span> <span class="mf">1.0</span><span class="p">.</span> <span class="k">If</span> <span class="n">a</span> <span class="n">single</span> <span class="k">value</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span>
-    <span class="n n-Quoted">`noise_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="n">the</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_limit</span><span class="p">).</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">).</span>
-<span class="n">p</span> <span class="p">(</span><span class="kt">float</span><span class="p">,</span> <span class="k">optional</span><span class="p">)</span><span class="o">:</span> <span class="n">Probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="mf">0.5</span><span class="p">.</span>
-</code></pre></div>
-<p>Reference:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>ScaleIntType</code></td>
+<td><p>Maximum Gaussian kernel size for blurring the input image.
+Must be zero or odd and in range [0, inf). If set to 0, it will be computed from sigma
+as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
+If a single value is provided, <code>blur_limit</code> will be in the range (0, blur_limit).
+Defaults to (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>sigma_x_limit</code></td>
+<td><code>ScaleFloatType</code></td>
+<td><p>Gaussian kernel standard deviation for the X dimension.
+Must be in range [0, inf). If a single value is provided, <code>sigma_x_limit</code> will be in the range
+(0, sigma_limit). If set to 0, sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>.
+Defaults to (0.2, 1.0).</p></td>
+</tr>
+<tr>
+<td><code>sigma_y_limit</code></td>
+<td><code>ScaleFloatType</code></td>
+<td><p>Gaussian kernel standard deviation for the Y dimension.
+Must follow the same rules as <code>sigma_x_limit</code>.
+Defaults to (0.2, 1.0).</p></td>
+</tr>
+<tr>
+<td><code>rotate_limit</code></td>
+<td><code>ScaleIntType</code></td>
+<td><p>Range from which a random angle used to rotate the Gaussian kernel
+is picked. If limit is a single int, an angle is picked from (-rotate_limit, rotate_limit).
+Defaults to (-90, 90).</p></td>
+</tr>
+<tr>
+<td><code>beta_limit</code></td>
+<td><code>ScaleFloatType</code></td>
+<td><p>Distribution shape parameter. 1 represents the normal distribution.
+Values below 1.0 make distribution tails heavier than normal, and values above 1.0 make it
+lighter than normal.
+Defaults to (0.5, 8.0).</p></td>
+</tr>
+<tr>
+<td><code>noise_limit</code></td>
+<td><code>ScaleFloatType</code></td>
+<td><p>Multiplicative factor that controls the strength of kernel noise.
+Must be positive and preferably centered around 1.0. If a single value is provided,
+<code>noise_limit</code> will be in the range (0, noise_limit).
+Defaults to (0.75, 1.25).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>Probability of applying the transform.
+Defaults to 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Reference:
     "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data",
     available at <a href="https://arxiv.org/abs/2107.10833" target="_blank">https://arxiv.org/abs/2107.10833</a></p>
 <p>Targets:
@@ -1963,19 +2071,36 @@ albumentations.augmentations.blur.transforms.Blur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L38" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L37" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.Blur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Blur the input image using a random-sized kernel.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">blur_limit</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">kernel</span> <span class="n">size</span> <span class="k">for</span> <span class="n">blurring</span> <span class="n">the</span> <span class="n">input</span> <span class="n">image</span><span class="o">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">3</span><span class="o">,</span> <span class="n">inf</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">7</span><span class="o">).</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td></td>
+<td><p>maximum kernel size for blurring the input image.
+Should be in range [3, inf). Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -1994,21 +2119,42 @@ albumentations.augmentations.blur.transforms.Defocus</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L455" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L448" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.Defocus" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply defocus transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">radius</span> <span class="ss">(</span>[<span class="nv">int</span>, <span class="nv">int</span>] <span class="nv">or</span> <span class="nv">int</span><span class="ss">)</span>: <span class="nv">range</span> <span class="k">for</span> <span class="nv">radius</span> <span class="nv">of</span> <span class="nv">defocusing</span>.
-    <span class="k">If</span> <span class="nv">limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">int</span>, <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> [<span class="mi">1</span>, <span class="nv">limit</span>]. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">3</span>, <span class="mi">10</span><span class="ss">)</span>.
-<span class="nv">alias_blur</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">range</span> <span class="k">for</span> <span class="nv">alias_blur</span> <span class="nv">of</span> <span class="nv">defocusing</span> <span class="ss">(</span><span class="nv">sigma</span> <span class="nv">of</span> <span class="nv">gaussian</span> <span class="nv">blur</span><span class="ss">)</span>.
-    <span class="k">If</span> <span class="nv">limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span>, <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="mi">0</span>, <span class="nv">limit</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">0</span>.<span class="mi">1</span>, <span class="mi">0</span>.<span class="mi">5</span><span class="ss">)</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>radius</code></td>
+<td><code>[int, int] or int</code></td>
+<td><p>range for radius of defocusing.
+If limit is a single int, the range will be [1, limit]. Default: (3, 10).</p></td>
+</tr>
+<tr>
+<td><code>alias_blur</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>range for alias_blur of defocusing (sigma of gaussian blur).
+If limit is a single float, the range will be (0, limit). Default: (0.1, 0.5).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     Any</p>
@@ -2027,25 +2173,46 @@ albumentations.augmentations.blur.transforms.GaussianBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L180" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L176" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.GaussianBlur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Blur the input image using a Gaussian filter with a random kernel size.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">blur_limit</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">size</span> <span class="k">for</span> <span class="n">blurring</span> <span class="n">the</span> <span class="n">input</span> <span class="n">image</span><span class="p">.</span>
-    <span class="n">Must</span> <span class="n">be</span> <span class="n">zero</span> <span class="k">or</span> <span class="n">odd</span> <span class="k">and</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">inf</span><span class="p">).</span> <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="mi">0</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">computed</span> <span class="k">from</span> <span class="n">sigma</span>
-    <span class="k">as</span> <span class="n n-Quoted">`round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1`</span><span class="p">.</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="n">single</span> <span class="k">value</span> <span class="n n-Quoted">`blur_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">blur_limit</span><span class="p">).</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">).</span>
-<span class="n">sigma_limit</span> <span class="p">(</span><span class="kt">float</span><span class="p">,</span> <span class="err">[</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">standard</span> <span class="n">deviation</span><span class="p">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">inf</span><span class="p">).</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="n">single</span> <span class="k">value</span> <span class="n n-Quoted">`sigma_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma_limit</span><span class="p">).</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="mi">0</span> <span class="n">sigma</span> <span class="n">will</span> <span class="n">be</span> <span class="n">computed</span> <span class="k">as</span> <span class="n n-Quoted">`sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8`</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.</span>
-<span class="n">p</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int, [int, int]</code></td>
+<td><p>maximum Gaussian kernel size for blurring the input image.
+Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma
+as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
+If set single value <code>blur_limit</code> will be in range (0, blur_limit).
+Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>sigma_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>Gaussian kernel standard deviation. Must be in range [0, inf).
+If set single value <code>sigma_limit</code> will be in range (0, sigma_limit).
+If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. Default: 0.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2064,22 +2231,51 @@ albumentations.augmentations.blur.transforms.GlassBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L242" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L237" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.GlassBlur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply glass noise to the input image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">sigma</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">standard</span> <span class="nv">deviation</span> <span class="k">for</span> <span class="nv">Gaussian</span> <span class="nv">kernel</span>.
-<span class="nv">max_delta</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">max</span> <span class="nv">distance</span> <span class="nv">between</span> <span class="nv">pixels</span> <span class="nv">which</span> <span class="nv">are</span> <span class="nv">swapped</span>.
-<span class="nv">iterations</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">number</span> <span class="nv">of</span> <span class="nv">repeats</span>.
-    <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">in</span> <span class="nv">range</span> [<span class="mi">1</span>, <span class="nv">inf</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>.
-<span class="nv">mode</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">mode</span> <span class="nv">of</span> <span class="nv">computation</span>: <span class="nv">fast</span> <span class="nv">or</span> <span class="nv">exact</span>. <span class="nv">Default</span>: <span class="s2">"</span><span class="s">fast</span><span class="s2">"</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sigma</code></td>
+<td><code>float</code></td>
+<td><p>standard deviation for Gaussian kernel.</p></td>
+</tr>
+<tr>
+<td><code>max_delta</code></td>
+<td><code>int</code></td>
+<td><p>max distance between pixels which are swapped.</p></td>
+</tr>
+<tr>
+<td><code>iterations</code></td>
+<td><code>int</code></td>
+<td><p>number of repeats.
+Should be in range [1, inf). Default: (2).</p></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td><p>mode of computation: fast or exact. Default: "fast".</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2101,19 +2297,36 @@ albumentations.augmentations.blur.transforms.MedianBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L146" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L143" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.MedianBlur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Blur the input image using a median filter with a random aperture linear size.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">blur_limit</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">maximum</span> <span class="nv">aperture</span> <span class="nv">linear</span> <span class="nv">size</span> <span class="k">for</span> <span class="nv">blurring</span> <span class="nv">the</span> <span class="nv">input</span> <span class="nv">image</span>.
-    <span class="nv">Must</span> <span class="nv">be</span> <span class="nv">odd</span> <span class="nv">and</span> <span class="nv">in</span> <span class="nv">range</span> [<span class="mi">3</span>, <span class="nv">inf</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">3</span>, <span class="mi">7</span><span class="ss">)</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td><p>maximum aperture linear size for blurring the input image.
+Must be odd and in range [3, inf). Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2132,21 +2345,42 @@ albumentations.augmentations.blur.transforms.MotionBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L71" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L69" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.MotionBlur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply motion blur to the input image using a random-sized kernel.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">blur_limit</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">maximum</span> <span class="nv">kernel</span> <span class="nv">size</span> <span class="k">for</span> <span class="nv">blurring</span> <span class="nv">the</span> <span class="nv">input</span> <span class="nv">image</span>.
-    <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">in</span> <span class="nv">range</span> [<span class="mi">3</span>, <span class="nv">inf</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">3</span>, <span class="mi">7</span><span class="ss">)</span>.
-<span class="nv">allow_shifted</span> <span class="ss">(</span><span class="nv">bool</span><span class="ss">)</span>: <span class="k">if</span> <span class="nv">set</span> <span class="nv">to</span> <span class="nv">true</span> <span class="nv">creates</span> <span class="nv">non</span> <span class="nv">shifted</span> <span class="nv">kernels</span> <span class="nv">only</span>,
-    <span class="nv">otherwise</span> <span class="nv">creates</span> <span class="nv">randomly</span> <span class="nv">shifted</span> <span class="nv">kernels</span>. <span class="nv">Default</span>: <span class="nv">True</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td><code>int</code></td>
+<td><p>maximum kernel size for blurring the input image.
+Should be in range [3, inf). Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>allow_shifted</code></td>
+<td><code>bool</code></td>
+<td><p>if set to true creates non shifted kernels only,
+otherwise creates randomly shifted kernels. Default: True.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2165,23 +2399,44 @@ albumentations.augmentations.blur.transforms.ZoomBlur</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L508" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/blur/transforms.py#L500" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.blur.transforms.ZoomBlur" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply zoom blur transform. See <a href="https://arxiv.org/abs/1903.12261" target="_blank">https://arxiv.org/abs/1903.12261</a>.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">max_factor</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">range</span> <span class="k">for</span> <span class="nv">max</span> <span class="nv">factor</span> <span class="k">for</span> <span class="nv">blurring</span>.
-    <span class="k">If</span> <span class="nv">max_factor</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span>, <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="mi">1</span>, <span class="nv">limit</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">1</span>, <span class="mi">1</span>.<span class="mi">31</span><span class="ss">)</span>.
-    <span class="nv">All</span> <span class="nv">max_factor</span> <span class="nv">values</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">larger</span> <span class="nv">than</span> <span class="mi">1</span>.
-<span class="nv">step_factor</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="k">If</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">step</span> <span class="nv">parameter</span> <span class="k">for</span> <span class="nv">np</span>.<span class="nv">arange</span>.
-    <span class="k">If</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span> <span class="nv">step_factor</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">in</span> <span class="nv">range</span> `[<span class="nv">step_factor</span>[<span class="mi">0</span>], <span class="nv">step_factor</span>[<span class="mi">1</span>]<span class="ss">)</span>`. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">0</span>.<span class="mi">01</span>, <span class="mi">0</span>.<span class="mi">03</span><span class="ss">)</span>.
-    <span class="nv">All</span> <span class="nv">step_factor</span> <span class="nv">values</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">positive</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_factor</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>range for max factor for blurring.
+If max_factor is a single float, the range will be (1, limit). Default: (1, 1.31).
+All max_factor values should be larger than 1.</p></td>
+</tr>
+<tr>
+<td><code>step_factor</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>If single float will be used as step parameter for np.arange.
+If tuple of float step_factor will be in range <code>[step_factor[0], step_factor[1])</code>. Default: (0.01, 0.03).
+All step_factor values should be positive.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     Any</p>

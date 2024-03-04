@@ -1709,26 +1709,6 @@
     apply()
   </a>
   
-    <nav class="md-nav" aria-label="apply()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.geometric.transforms--note" class="md-nav__link">
-    Note:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.geometric.transforms--note_1" class="md-nav__link">
-    Note:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1741,6 +1721,77 @@
 </nav>
       
     </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
   
 
           
@@ -1882,7 +1933,7 @@
 
     <li class="md-nav__item">
       <a href="../../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1937,7 +1988,7 @@ albumentations.augmentations.geometric.transforms.Affine</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L608" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L613" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Affine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1958,75 +2009,140 @@ The parameters <code>cval</code> and <code>mode</code> of this class deal with t
 <p>Some transformations involve interpolations between several pixels
 of the input image to generate output pixel values. The parameters <code>interpolation</code> and
 <code>mask_interpolation</code> deals with the method of interpolation used for this.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">scale</span> <span class="p">(</span><span class="k">number</span><span class="p">,</span> <span class="n">tuple</span> <span class="k">of</span> <span class="k">number</span> <span class="k">or</span> <span class="n">dict</span><span class="p">)</span><span class="o">:</span> <span class="n">Scaling</span> <span class="n">factor</span> <span class="k">to</span> <span class="k">use</span><span class="p">,</span> <span class="k">where</span> <span class="n n-Quoted">``</span><span class="mf">1.0</span><span class="n n-Quoted">``</span> <span class="n">denotes</span> <span class="s2">"no change"</span> <span class="k">and</span>
-    <span class="n n-Quoted">``</span><span class="mf">0.5</span><span class="n n-Quoted">``</span> <span class="k">is</span> <span class="n">zoomed</span> <span class="k">out</span> <span class="k">to</span> <span class="n n-Quoted">``</span><span class="mi">50</span><span class="n n-Quoted">``</span> <span class="n">percent</span> <span class="k">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">size</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">single</span> <span class="k">number</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">all</span> <span class="n">images</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">tuple</span> <span class="n n-Quoted">``</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">a</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">uniformly</span> <span class="n">sampled</span> <span class="n">per</span> <span class="n">image</span> <span class="k">from</span> <span class="n">the</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">.</span>
-          <span class="n">That</span> <span class="n">the</span> <span class="n">same</span> <span class="k">range</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">both</span> <span class="n">x</span><span class="o">-</span> <span class="k">and</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span><span class="p">.</span> <span class="k">To</span> <span class="n">keep</span> <span class="n">the</span> <span class="n">aspect</span> <span class="n">ratio</span><span class="p">,</span> <span class="k">set</span>
-          <span class="n n-Quoted">``</span><span class="n">keep_ratio</span><span class="o">=</span><span class="no">True</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">the</span> <span class="n">same</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">both</span> <span class="n">x</span><span class="o">-</span> <span class="k">and</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">dictionary</span><span class="p">,</span> <span class="k">then</span> <span class="n">it</span> <span class="k">is</span> <span class="n">expected</span> <span class="k">to</span> <span class="n">have</span> <span class="n">the</span> <span class="k">keys</span> <span class="n n-Quoted">``</span><span class="n">x</span><span class="n n-Quoted">``</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="n n-Quoted">``</span><span class="n">y</span><span class="n n-Quoted">``</span><span class="p">.</span>
-          <span class="k">Each</span> <span class="k">of</span> <span class="n">these</span> <span class="k">keys</span> <span class="n">can</span> <span class="n">have</span> <span class="n">the</span> <span class="n">same</span> <span class="k">values</span> <span class="k">as</span> <span class="n">described</span> <span class="n">above</span><span class="p">.</span>
-          <span class="k">Using</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">allows</span> <span class="k">to</span> <span class="k">set</span> <span class="n">different</span> <span class="k">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">two</span> <span class="n">axis</span> <span class="k">and</span> <span class="n">sampling</span> <span class="n">will</span> <span class="k">then</span> <span class="n">happen</span>
-          <span class="o">*</span><span class="n">independently</span><span class="o">*</span> <span class="n">per</span> <span class="n">axis</span><span class="p">,</span> <span class="n">resulting</span> <span class="k">in</span> <span class="n">samples</span> <span class="n">that</span> <span class="n">differ</span> <span class="k">between</span> <span class="n">the</span> <span class="n">axes</span><span class="p">.</span> <span class="n">Note</span> <span class="n">that</span> <span class="k">when</span>
-          <span class="n">the</span> <span class="n n-Quoted">``</span><span class="n">keep_ratio</span><span class="o">=</span><span class="no">True</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="n">the</span> <span class="n">x</span><span class="o">-</span> <span class="k">and</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span> <span class="n">ranges</span> <span class="n">should</span> <span class="n">be</span> <span class="n">the</span> <span class="n">same</span><span class="p">.</span>
-<span class="n">translate_percent</span> <span class="p">(</span><span class="k">None</span><span class="p">,</span> <span class="k">number</span><span class="p">,</span> <span class="n">tuple</span> <span class="k">of</span> <span class="k">number</span> <span class="k">or</span> <span class="n">dict</span><span class="p">)</span><span class="o">:</span> <span class="n">Translation</span> <span class="k">as</span> <span class="n">a</span> <span class="n">fraction</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">height</span><span class="o">/</span><span class="n">width</span>
-    <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">translation</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">translation</span><span class="p">),</span> <span class="k">where</span> <span class="n n-Quoted">``</span><span class="mi">0</span><span class="n n-Quoted">``</span> <span class="n">denotes</span> <span class="s2">"no change"</span>
-    <span class="k">and</span> <span class="n n-Quoted">``</span><span class="mf">0.5</span><span class="n n-Quoted">``</span> <span class="n">denotes</span> <span class="s2">"half of the axis size"</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n n-Quoted">``</span><span class="k">None</span><span class="n n-Quoted">``</span> <span class="k">then</span> <span class="n">equivalent</span> <span class="k">to</span> <span class="n n-Quoted">``</span><span class="mf">0.0</span><span class="n n-Quoted">``</span> <span class="n">unless</span> <span class="n n-Quoted">`translate_px`</span> <span class="n">has</span> <span class="n">a</span> <span class="k">value</span> <span class="n">other</span> <span class="k">than</span> <span class="n n-Quoted">``</span><span class="k">None</span><span class="n n-Quoted">``</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">single</span> <span class="k">number</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">all</span> <span class="n">images</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">tuple</span> <span class="n n-Quoted">``</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">a</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">uniformly</span> <span class="n">sampled</span> <span class="n">per</span> <span class="n">image</span> <span class="k">from</span> <span class="n">the</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">.</span>
-          <span class="n">That</span> <span class="n">sampled</span> <span class="n">fraction</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="n">identically</span> <span class="k">for</span> <span class="k">both</span> <span class="n">x</span><span class="o">-</span> <span class="k">and</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">dictionary</span><span class="p">,</span> <span class="k">then</span> <span class="n">it</span> <span class="k">is</span> <span class="n">expected</span> <span class="k">to</span> <span class="n">have</span> <span class="n">the</span> <span class="k">keys</span> <span class="n n-Quoted">``</span><span class="n">x</span><span class="n n-Quoted">``</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="n n-Quoted">``</span><span class="n">y</span><span class="n n-Quoted">``</span><span class="p">.</span>
-          <span class="k">Each</span> <span class="k">of</span> <span class="n">these</span> <span class="k">keys</span> <span class="n">can</span> <span class="n">have</span> <span class="n">the</span> <span class="n">same</span> <span class="k">values</span> <span class="k">as</span> <span class="n">described</span> <span class="n">above</span><span class="p">.</span>
-          <span class="k">Using</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">allows</span> <span class="k">to</span> <span class="k">set</span> <span class="n">different</span> <span class="k">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">two</span> <span class="n">axis</span> <span class="k">and</span> <span class="n">sampling</span> <span class="n">will</span> <span class="k">then</span> <span class="n">happen</span>
-          <span class="o">*</span><span class="n">independently</span><span class="o">*</span> <span class="n">per</span> <span class="n">axis</span><span class="p">,</span> <span class="n">resulting</span> <span class="k">in</span> <span class="n">samples</span> <span class="n">that</span> <span class="n">differ</span> <span class="k">between</span> <span class="n">the</span> <span class="n">axes</span><span class="p">.</span>
-<span class="n">translate_px</span> <span class="p">(</span><span class="k">None</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="n">tuple</span> <span class="k">of</span> <span class="kt">int</span> <span class="k">or</span> <span class="n">dict</span><span class="p">)</span><span class="o">:</span> <span class="n">Translation</span> <span class="k">in</span> <span class="n">pixels</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n n-Quoted">``</span><span class="k">None</span><span class="n n-Quoted">``</span> <span class="k">then</span> <span class="n">equivalent</span> <span class="k">to</span> <span class="n n-Quoted">``</span><span class="mi">0</span><span class="n n-Quoted">``</span> <span class="n">unless</span> <span class="n n-Quoted">`translate_percent`</span> <span class="n">has</span> <span class="n">a</span> <span class="k">value</span> <span class="n">other</span> <span class="k">than</span> <span class="n n-Quoted">``</span><span class="k">None</span><span class="n n-Quoted">``</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">single</span> <span class="kt">int</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">all</span> <span class="n">images</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">tuple</span> <span class="n n-Quoted">``</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">a</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">uniformly</span> <span class="n">sampled</span> <span class="n">per</span> <span class="n">image</span> <span class="k">from</span>
-          <span class="n">the</span> <span class="n">discrete</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">..</span><span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">.</span> <span class="n">That</span> <span class="k">number</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="n">identically</span> <span class="k">for</span> <span class="k">both</span> <span class="n">x</span><span class="o">-</span> <span class="k">and</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">dictionary</span><span class="p">,</span> <span class="k">then</span> <span class="n">it</span> <span class="k">is</span> <span class="n">expected</span> <span class="k">to</span> <span class="n">have</span> <span class="n">the</span> <span class="k">keys</span> <span class="n n-Quoted">``</span><span class="n">x</span><span class="n n-Quoted">``</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="n n-Quoted">``</span><span class="n">y</span><span class="n n-Quoted">``</span><span class="p">.</span>
-          <span class="k">Each</span> <span class="k">of</span> <span class="n">these</span> <span class="k">keys</span> <span class="n">can</span> <span class="n">have</span> <span class="n">the</span> <span class="n">same</span> <span class="k">values</span> <span class="k">as</span> <span class="n">described</span> <span class="n">above</span><span class="p">.</span>
-          <span class="k">Using</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">allows</span> <span class="k">to</span> <span class="k">set</span> <span class="n">different</span> <span class="k">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">two</span> <span class="n">axis</span> <span class="k">and</span> <span class="n">sampling</span> <span class="n">will</span> <span class="k">then</span> <span class="n">happen</span>
-          <span class="o">*</span><span class="n">independently</span><span class="o">*</span> <span class="n">per</span> <span class="n">axis</span><span class="p">,</span> <span class="n">resulting</span> <span class="k">in</span> <span class="n">samples</span> <span class="n">that</span> <span class="n">differ</span> <span class="k">between</span> <span class="n">the</span> <span class="n">axes</span><span class="p">.</span>
-<span class="k">rotate</span> <span class="p">(</span><span class="k">number</span> <span class="k">or</span> <span class="n">tuple</span> <span class="k">of</span> <span class="k">number</span><span class="p">)</span><span class="o">:</span> <span class="n">Rotation</span> <span class="k">in</span> <span class="nf">degrees</span> <span class="p">(</span><span class="o">**</span><span class="k">NOT</span><span class="o">**</span> <span class="n">radians</span><span class="p">),</span> <span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.</span> <span class="n">expected</span> <span class="k">value</span> <span class="k">range</span> <span class="k">is</span>
-    <span class="n">around</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="o">-</span><span class="mi">360</span><span class="p">,</span> <span class="mi">360</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">.</span> <span class="n">Rotation</span> <span class="n">happens</span> <span class="n">around</span> <span class="n">the</span> <span class="o">*</span><span class="n">center</span><span class="o">*</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span><span class="p">,</span>
-    <span class="k">not</span> <span class="n">the</span> <span class="n">top</span> <span class="k">left</span> <span class="n">corner</span> <span class="k">as</span> <span class="k">in</span> <span class="k">some</span> <span class="n">other</span> <span class="n">frameworks</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="k">number</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">all</span> <span class="n">images</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">tuple</span> <span class="n n-Quoted">``</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">a</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">uniformly</span> <span class="n">sampled</span> <span class="n">per</span> <span class="n">image</span> <span class="k">from</span> <span class="n">the</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span>
-          <span class="k">and</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">rotation</span> <span class="k">value</span><span class="p">.</span>
-<span class="n">shear</span> <span class="p">(</span><span class="k">number</span><span class="p">,</span> <span class="n">tuple</span> <span class="k">of</span> <span class="k">number</span> <span class="k">or</span> <span class="n">dict</span><span class="p">)</span><span class="o">:</span> <span class="n">Shear</span> <span class="k">in</span> <span class="nf">degrees</span> <span class="p">(</span><span class="o">**</span><span class="k">NOT</span><span class="o">**</span> <span class="n">radians</span><span class="p">),</span> <span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.</span> <span class="n">expected</span> <span class="k">value</span> <span class="k">range</span> <span class="k">is</span>
-    <span class="n">around</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="o">-</span><span class="mi">360</span><span class="p">,</span> <span class="mi">360</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">with</span> <span class="n">reasonable</span> <span class="k">values</span> <span class="n">being</span> <span class="k">in</span> <span class="n">the</span> <span class="k">range</span> <span class="k">of</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="mi">45</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="k">number</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="k">all</span> <span class="n">images</span> <span class="k">as</span>
-          <span class="n">the</span> <span class="n">shear</span> <span class="k">on</span> <span class="n">the</span> <span class="n">x</span><span class="o">-</span><span class="n">axis</span> <span class="p">(</span><span class="k">no</span> <span class="n">shear</span> <span class="k">on</span> <span class="n">the</span> <span class="n">y</span><span class="o">-</span><span class="n">axis</span> <span class="n">will</span> <span class="n">be</span> <span class="n">done</span><span class="p">).</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">tuple</span> <span class="n n-Quoted">``</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">two</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">uniformly</span> <span class="n">sampled</span> <span class="n">per</span> <span class="n">image</span>
-          <span class="k">from</span> <span class="n">the</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span> <span class="k">and</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">x</span><span class="o">-</span> <span class="k">and</span> <span class="n">y</span><span class="o">-</span><span class="n">shear</span> <span class="k">value</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n">dictionary</span><span class="p">,</span> <span class="k">then</span> <span class="n">it</span> <span class="k">is</span> <span class="n">expected</span> <span class="k">to</span> <span class="n">have</span> <span class="n">the</span> <span class="k">keys</span> <span class="n n-Quoted">``</span><span class="n">x</span><span class="n n-Quoted">``</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="n n-Quoted">``</span><span class="n">y</span><span class="n n-Quoted">``</span><span class="p">.</span>
-          <span class="k">Each</span> <span class="k">of</span> <span class="n">these</span> <span class="k">keys</span> <span class="n">can</span> <span class="n">have</span> <span class="n">the</span> <span class="n">same</span> <span class="k">values</span> <span class="k">as</span> <span class="n">described</span> <span class="n">above</span><span class="p">.</span>
-          <span class="k">Using</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="n">allows</span> <span class="k">to</span> <span class="k">set</span> <span class="n">different</span> <span class="k">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">two</span> <span class="n">axis</span> <span class="k">and</span> <span class="n">sampling</span> <span class="n">will</span> <span class="k">then</span> <span class="n">happen</span>
-          <span class="o">*</span><span class="n">independently</span><span class="o">*</span> <span class="n">per</span> <span class="n">axis</span><span class="p">,</span> <span class="n">resulting</span> <span class="k">in</span> <span class="n">samples</span> <span class="n">that</span> <span class="n">differ</span> <span class="k">between</span> <span class="n">the</span> <span class="n">axes</span><span class="p">.</span>
-<span class="n">interpolation</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">:</span> <span class="n">OpenCV</span> <span class="n">interpolation</span> <span class="n">flag</span><span class="p">.</span>
-<span class="n">mask_interpolation</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">:</span> <span class="n">OpenCV</span> <span class="n">interpolation</span> <span class="n">flag</span><span class="p">.</span>
-<span class="n">cval</span> <span class="p">(</span><span class="k">number</span> <span class="k">or</span> <span class="n">sequence</span> <span class="k">of</span> <span class="k">number</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="n">constant</span> <span class="k">value</span> <span class="k">to</span> <span class="k">use</span> <span class="k">when</span> <span class="n">filling</span> <span class="k">in</span> <span class="n">newly</span> <span class="n">created</span> <span class="n">pixels</span><span class="p">.</span>
-    <span class="p">(</span><span class="n">E</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">translating</span> <span class="k">by</span> <span class="n">1px</span> <span class="k">to</span> <span class="n">the</span> <span class="k">right</span> <span class="n">will</span> <span class="k">create</span> <span class="n">a</span> <span class="k">new</span> <span class="n">1px</span><span class="o">-</span><span class="n">wide</span> <span class="k">column</span> <span class="k">of</span> <span class="n">pixels</span>
-    <span class="k">on</span> <span class="n">the</span> <span class="k">left</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span><span class="p">).</span>
-    <span class="n">The</span> <span class="k">value</span> <span class="k">is</span> <span class="k">only</span> <span class="n">used</span> <span class="k">when</span> <span class="n n-Quoted">`mode=constant`</span><span class="p">.</span> <span class="n">The</span> <span class="n">expected</span> <span class="k">value</span> <span class="k">range</span> <span class="k">is</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="err">]</span><span class="n n-Quoted">``</span> <span class="k">for</span> <span class="n n-Quoted">``</span><span class="n">uint8</span><span class="n n-Quoted">``</span> <span class="n">images</span><span class="p">.</span>
-<span class="n">cval_mask</span> <span class="p">(</span><span class="k">number</span> <span class="k">or</span> <span class="n">tuple</span> <span class="k">of</span> <span class="k">number</span><span class="p">)</span><span class="o">:</span> <span class="n">Same</span> <span class="k">as</span> <span class="n">cval</span> <span class="n">but</span> <span class="k">only</span> <span class="k">for</span> <span class="n">masks</span><span class="p">.</span>
-<span class="k">mode</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">:</span> <span class="n">OpenCV</span> <span class="n">border</span> <span class="n">flag</span><span class="p">.</span>
-<span class="n">fit_output</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">If</span> <span class="no">True</span><span class="p">,</span> <span class="n">the</span> <span class="n">image</span> <span class="n">plane</span> <span class="n">size</span> <span class="k">and</span> <span class="n">position</span> <span class="n">will</span> <span class="n">be</span> <span class="n">adjusted</span> <span class="k">to</span> <span class="n">tightly</span> <span class="n">capture</span>
-    <span class="n">the</span> <span class="n">whole</span> <span class="n">image</span> <span class="k">after</span> <span class="n">affine</span> <span class="n">transformation</span> <span class="p">(</span><span class="n n-Quoted">`translate_percent`</span> <span class="k">and</span> <span class="n n-Quoted">`translate_px`</span> <span class="n">are</span> <span class="n">ignored</span><span class="p">).</span>
-    <span class="n">Otherwise</span> <span class="p">(</span><span class="n n-Quoted">``</span><span class="no">False</span><span class="n n-Quoted">``</span><span class="p">),</span>  <span class="n">parts</span> <span class="k">of</span> <span class="n">the</span> <span class="n">transformed</span> <span class="n">image</span> <span class="n">may</span> <span class="k">end</span> <span class="n">up</span> <span class="n">outside</span> <span class="n">the</span> <span class="n">image</span> <span class="n">plane</span><span class="p">.</span>
-    <span class="n">Fitting</span> <span class="n">the</span> <span class="n">output</span> <span class="n">shape</span> <span class="n">can</span> <span class="n">be</span> <span class="n">useful</span> <span class="k">to</span> <span class="n">avoid</span> <span class="n">corners</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">being</span> <span class="n">outside</span> <span class="n">the</span> <span class="n">image</span> <span class="n">plane</span>
-    <span class="k">after</span> <span class="n">applying</span> <span class="n">rotations</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="no">False</span>
-<span class="n">keep_ratio</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">When</span> <span class="no">True</span><span class="p">,</span> <span class="n">the</span> <span class="n">original</span> <span class="n">aspect</span> <span class="n">ratio</span> <span class="n">will</span> <span class="n">be</span> <span class="n">kept</span> <span class="k">when</span> <span class="n">the</span> <span class="k">random</span> <span class="n">scale</span> <span class="k">is</span> <span class="n">applied</span><span class="p">.</span>
-                   <span class="k">Default</span><span class="o">:</span> <span class="no">False</span><span class="p">.</span>
-<span class="n">rotate_method</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="n">rotation</span> <span class="n">method</span> <span class="n">used</span> <span class="k">for</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">boxes</span><span class="p">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">one</span> <span class="k">of</span> <span class="s2">"largest_box"</span> <span class="k">or</span>
-    <span class="s2">"ellipse"</span><span class="err">[</span><span class="mi">1</span><span class="err">]</span><span class="p">.</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="s2">"largest_box"</span>
-<span class="n">p</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td><code>number, tuple of number or dict</code></td>
+<td><p>Scaling factor to use, where <code>1.0</code> denotes "no change" and
+<code>0.5</code> is zoomed out to <code>50</code> percent of the original size.
+    * If a single number, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>.
+      That the same range will be used for both x- and y-axis. To keep the aspect ratio, set
+      <code>keep_ratio=True</code>, then the same value will be used for both x- and y-axis.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes. Note that when
+      the <code>keep_ratio=True</code>, the x- and y-axis ranges should be the same.</p></td>
+</tr>
+<tr>
+<td><code>translate_percent</code></td>
+<td><code>None, number, tuple of number or dict</code></td>
+<td><p>Translation as a fraction of the image height/width
+(x-translation, y-translation), where <code>0</code> denotes "no change"
+and <code>0.5</code> denotes "half of the axis size".
+    * If <code>None</code> then equivalent to <code>0.0</code> unless <code>translate_px</code> has a value other than <code>None</code>.
+    * If a single number, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>.
+      That sampled fraction value will be used identically for both x- and y-axis.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p></td>
+</tr>
+<tr>
+<td><code>translate_px</code></td>
+<td><code>None, int, tuple of int or dict</code></td>
+<td><p>Translation in pixels.
+    * If <code>None</code> then equivalent to <code>0</code> unless <code>translate_percent</code> has a value other than <code>None</code>.
+    * If a single int, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from
+      the discrete interval <code>[a..b]</code>. That number will be used identically for both x- and y-axis.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p></td>
+</tr>
+<tr>
+<td><code>rotate</code></td>
+<td><code>number or tuple of number</code></td>
+<td><p>Rotation in degrees (<strong>NOT</strong> radians), i.e. expected value range is
+around <code>[-360, 360]</code>. Rotation happens around the <em>center</em> of the image,
+not the top left corner as in some other frameworks.
+    * If a number, then that value will be used for all images.
+    * If a tuple <code>(a, b)</code>, then a value will be uniformly sampled per image from the interval <code>[a, b]</code>
+      and used as the rotation value.</p></td>
+</tr>
+<tr>
+<td><code>shear</code></td>
+<td><code>number, tuple of number or dict</code></td>
+<td><p>Shear in degrees (<strong>NOT</strong> radians), i.e. expected value range is
+around <code>[-360, 360]</code>, with reasonable values being in the range of <code>[-45, 45]</code>.
+    * If a number, then that value will be used for all images as
+      the shear on the x-axis (no shear on the y-axis will be done).
+    * If a tuple <code>(a, b)</code>, then two value will be uniformly sampled per image
+      from the interval <code>[a, b]</code> and be used as the x- and y-shear value.
+    * If a dictionary, then it is expected to have the keys <code>x</code> and/or <code>y</code>.
+      Each of these keys can have the same values as described above.
+      Using a dictionary allows to set different values for the two axis and sampling will then happen
+      <em>independently</em> per axis, resulting in samples that differ between the axes.</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>int</code></td>
+<td><p>OpenCV interpolation flag.</p></td>
+</tr>
+<tr>
+<td><code>mask_interpolation</code></td>
+<td><code>int</code></td>
+<td><p>OpenCV interpolation flag.</p></td>
+</tr>
+<tr>
+<td><code>cval</code></td>
+<td><code>number or sequence of number</code></td>
+<td><p>The constant value to use when filling in newly created pixels.
+(E.g. translating by 1px to the right will create a new 1px-wide column of pixels
+on the left of the image).
+The value is only used when <code>mode=constant</code>. The expected value range is <code>[0, 255]</code> for <code>uint8</code> images.</p></td>
+</tr>
+<tr>
+<td><code>cval_mask</code></td>
+<td><code>number or tuple of number</code></td>
+<td><p>Same as cval but only for masks.</p></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>int</code></td>
+<td><p>OpenCV border flag.</p></td>
+</tr>
+<tr>
+<td><code>fit_output</code></td>
+<td><code>bool</code></td>
+<td><p>If True, the image plane size and position will be adjusted to tightly capture
+the whole image after affine transformation (<code>translate_percent</code> and <code>translate_px</code> are ignored).
+Otherwise (<code>False</code>),  parts of the transformed image may end up outside the image plane.
+Fitting the output shape can be useful to avoid corners of the image being outside the image plane
+after applying rotations. Default: False</p></td>
+</tr>
+<tr>
+<td><code>keep_ratio</code></td>
+<td><code>bool</code></td>
+<td><p>When True, the original aspect ratio will be kept when the random scale is applied.
+               Default: False.</p></td>
+</tr>
+<tr>
+<td><code>rotate_method</code></td>
+<td><code>str</code></td>
+<td><p>rotation method used for the bounding boxes. Should be one of "largest_box" or
+"ellipse"[1].
+Default: "largest_box"</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, keypoints, bboxes</p>
 <p>Image types:
     uint8, float32</p>
@@ -2047,7 +2163,7 @@ albumentations.augmentations.geometric.transforms.ElasticTransform</strong></cod
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L211" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L214" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ElasticTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2059,27 +2175,72 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
      Convolutional Neural Networks applied to Visual Document Analysis", in
      Proc. of the International Conference on Document Analysis and
      Recognition, 2003.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">alpha</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>:
-<span class="nv">sigma</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">Gaussian</span> <span class="nv">filter</span> <span class="nv">parameter</span>.
-<span class="nv">alpha_affine</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">The</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">alpha_affine</span>, <span class="nv">alpha_affine</span><span class="ss">)</span>
-<span class="nv">interpolation</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">interpolation</span> <span class="nv">algorithm</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
-    <span class="nv">cv2</span>.<span class="nv">INTER_NEAREST</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>, <span class="nv">cv2</span>.<span class="nv">INTER_CUBIC</span>, <span class="nv">cv2</span>.<span class="nv">INTER_AREA</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LANCZOS4</span>.
-    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>.
-<span class="nv">border_mode</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">pixel</span> <span class="nv">extrapolation</span> <span class="nv">method</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
-    <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REPLICATE</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_WRAP</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>.
-    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>
-<span class="nv">value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>.
-<span class="nv">mask_value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span> <span class="nv">applied</span> <span class="k">for</span> <span class="nv">masks</span>.
-<span class="nv">approximate</span> <span class="ss">(</span><span class="nv">boolean</span><span class="ss">)</span>: <span class="nv">Whether</span> <span class="nv">to</span> <span class="nv">smooth</span> <span class="nv">displacement</span> <span class="nv">map</span> <span class="nv">with</span> <span class="nv">fixed</span> <span class="nv">kernel</span> <span class="nv">size</span>.
-                       <span class="nv">Enabling</span> <span class="nv">this</span> <span class="nv">option</span> <span class="nv">gives</span> <span class="o">~</span><span class="mi">2</span><span class="nv">X</span> <span class="nv">speedup</span> <span class="nv">on</span> <span class="nv">large</span> <span class="nv">images</span>.
-<span class="nv">same_dxdy</span> <span class="ss">(</span><span class="nv">boolean</span><span class="ss">)</span>: <span class="nv">Whether</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">same</span> <span class="k">random</span> <span class="nv">generated</span> <span class="nv">shift</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">and</span> <span class="nv">y</span>.
-                     <span class="nv">Enabling</span> <span class="nv">this</span> <span class="nv">option</span> <span class="nv">gives</span> <span class="o">~</span><span class="mi">2</span><span class="nv">X</span> <span class="nv">speedup</span>.
-</code></pre></div>
-<p>Targets:
-    image, mask, bbox</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alpha</code></td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sigma</code></td>
+<td><code>float</code></td>
+<td><p>Gaussian filter parameter.</p></td>
+</tr>
+<tr>
+<td><code>alpha_affine</code></td>
+<td><code>float</code></td>
+<td><p>The range will be (-alpha_affine, alpha_affine)</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
+</tr>
+<tr>
+<td><code>approximate</code></td>
+<td><code>boolean</code></td>
+<td><p>Whether to smooth displacement map with fixed kernel size.
+                   Enabling this option gives ~2X speedup on large images.</p></td>
+</tr>
+<tr>
+<td><code>same_dxdy</code></td>
+<td><code>boolean</code></td>
+<td><p>Whether to use same random generated shift for x and y.
+                 Enabling this option gives ~2X speedup.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes</p>
 <p>Image types:
     uint8, float32</p>
 <div class="doc doc-children">
@@ -2092,17 +2253,30 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
 albumentations.augmentations.geometric.transforms.Flip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1371" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1378" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Flip" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Flip the input either horizontally, vertically or both horizontally and vertically.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>p (float): probability of applying the transform. Default: 0.5.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2131,31 +2305,68 @@ albumentations.augmentations.geometric.transforms.GridDistortion</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1538" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1551" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.GridDistortion" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">num_steps</span><span class="w"> </span><span class="p">(</span><span class="nc">int</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="nf">count</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="n">cells</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">side</span><span class="p">.</span><span class="w"></span>
-<span class="n">distort_limit</span><span class="w"> </span><span class="p">(</span><span class="nc">float</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">float, float</span><span class="o">]</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">distort_limit</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="nc">float</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">range</span><span class="w"></span>
-<span class="w">    </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="n">distort_limit</span><span class="p">,</span><span class="w"> </span><span class="n">distort_limit</span><span class="p">).</span><span class="w"> </span><span class="k">Default</span><span class="err">:</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mf">0.03</span><span class="p">,</span><span class="w"> </span><span class="mf">0.03</span><span class="p">).</span><span class="w"></span>
-<span class="n">interpolation</span><span class="w"> </span><span class="p">(</span><span class="n">OpenCV</span><span class="w"> </span><span class="n">flag</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">interpolation</span><span class="w"> </span><span class="n">algorithm</span><span class="p">.</span><span class="w"> </span><span class="n">Should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">of</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_NEAREST</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_CUBIC</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_AREA</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LANCZOS4</span><span class="p">.</span><span class="w"></span>
-<span class="w">    </span><span class="k">Default</span><span class="err">:</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LINEAR</span><span class="p">.</span><span class="w"></span>
-<span class="n">border_mode</span><span class="w"> </span><span class="p">(</span><span class="n">OpenCV</span><span class="w"> </span><span class="n">flag</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">pixel</span><span class="w"> </span><span class="n">extrapolation</span><span class="w"> </span><span class="k">method</span><span class="p">.</span><span class="w"> </span><span class="n">Should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">of</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_CONSTANT</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_REPLICATE</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_REFLECT</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_WRAP</span><span class="p">,</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_REFLECT_101</span><span class="p">.</span><span class="w"></span>
-<span class="w">    </span><span class="k">Default</span><span class="err">:</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_REFLECT_101</span><span class="w"></span>
-<span class="k">value</span><span class="w"> </span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="w"> </span><span class="nc">float</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">ints</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">float</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">padding</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">border_mode</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_CONSTANT</span><span class="p">.</span><span class="w"></span>
-<span class="n">mask_value</span><span class="w"> </span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="w"> </span><span class="nc">float</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">ints</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">float</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">padding</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">border_mode</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">cv2</span><span class="p">.</span><span class="n">BORDER_CONSTANT</span><span class="w"> </span><span class="n">applied</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">masks</span><span class="p">.</span><span class="w"></span>
-<span class="n">normalized</span><span class="w"> </span><span class="p">(</span><span class="n">bool</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">true</span><span class="p">,</span><span class="w"> </span><span class="n">distortion</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">normalized</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="n">outside</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">image</span><span class="p">.</span><span class="w"> </span><span class="k">Default</span><span class="err">:</span><span class="w"> </span><span class="k">False</span><span class="w"></span>
-<span class="w">    </span><span class="n">See</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="nl">information</span><span class="p">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">albumentations</span><span class="o">-</span><span class="n">team</span><span class="o">/</span><span class="n">albumentations</span><span class="o">/</span><span class="n">pull</span><span class="o">/</span><span class="mi">722</span><span class="w"></span>
-</code></pre></div>
-<p>Targets:
-    image, mask</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>num_steps</code></td>
+<td><code>int</code></td>
+<td><p>count of grid cells on each side.</p></td>
+</tr>
+<tr>
+<td><code>distort_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>If distort_limit is a single float, the range
+will be (-distort_limit, distort_limit). Default: (-0.03, 0.03).</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
+</tr>
+<tr>
+<td><code>normalized</code></td>
+<td><code>bool</code></td>
+<td><p>if true, distortion will be normalized to do not go outside the image. Default: False
+See for more information: <a href="https://github.com/albumentations-team/albumentations/pull/722" target="_blank">https://github.com/albumentations-team/albumentations/pull/722</a></p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes</p>
 <p>Image types:
     uint8, float32</p>
 <div class="doc doc-children">
@@ -2168,17 +2379,30 @@ albumentations.augmentations.geometric.transforms.GridDistortion</strong></code>
 albumentations.augmentations.geometric.transforms.HorizontalFlip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1338" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1344" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.HorizontalFlip" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Flip the input horizontally around the y-axis.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>p (float): probability of applying the transform. Default: 0.5.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2197,30 +2421,63 @@ albumentations.augmentations.geometric.transforms.OpticalDistortion</strong></co
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1447" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1459" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.OpticalDistortion" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">distort_limit</span> <span class="ss">(</span><span class="nv">float</span>, [<span class="nv">float</span>, <span class="nv">float</span>]<span class="ss">)</span>: <span class="k">If</span> <span class="nv">distort_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span>, <span class="nv">the</span> <span class="nv">range</span>
-    <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">distort_limit</span>, <span class="nv">distort_limit</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">05</span>, <span class="mi">0</span>.<span class="mi">05</span><span class="ss">)</span>.
-<span class="nv">shift_limit</span> <span class="ss">(</span><span class="nv">float</span>, [<span class="nv">float</span>, <span class="nv">float</span>]<span class="ss">))</span>: <span class="k">If</span> <span class="nv">shift_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span>, <span class="nv">the</span> <span class="nv">range</span>
-    <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">shift_limit</span>, <span class="nv">shift_limit</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">05</span>, <span class="mi">0</span>.<span class="mi">05</span><span class="ss">)</span>.
-<span class="nv">interpolation</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">interpolation</span> <span class="nv">algorithm</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
-    <span class="nv">cv2</span>.<span class="nv">INTER_NEAREST</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>, <span class="nv">cv2</span>.<span class="nv">INTER_CUBIC</span>, <span class="nv">cv2</span>.<span class="nv">INTER_AREA</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LANCZOS4</span>.
-    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>.
-<span class="nv">border_mode</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">pixel</span> <span class="nv">extrapolation</span> <span class="nv">method</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
-    <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REPLICATE</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_WRAP</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>.
-    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>
-<span class="nv">value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>.
-<span class="nv">mask_value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span> <span class="nv">applied</span> <span class="k">for</span> <span class="nv">masks</span>.
-</code></pre></div>
-<p>Targets:
-    image, mask, bbox</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>distort_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>If distort_limit is a single float, the range
+will be (-distort_limit, distort_limit). Default: (-0.05, 0.05).</p></td>
+</tr>
+<tr>
+<td><code>shift_limit</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>If shift_limit is a single float, the range
+will be (-shift_limit, shift_limit). Default: (-0.05, 0.05).</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of ints, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of ints,
+        list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes</p>
 <p>Image types:
     uint8, float32</p>
 <div class="doc doc-children">
@@ -2238,30 +2495,75 @@ albumentations.augmentations.geometric.transforms.PadIfNeeded</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1103" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1107" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PadIfNeeded" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Pad side of the image / max if side is less than desired number.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">min_height</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">minimal</span> <span class="nb">result</span> <span class="nv">image</span> <span class="nv">height</span>.
-<span class="nv">min_width</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="nv">minimal</span> <span class="nb">result</span> <span class="nv">image</span> <span class="nv">width</span>.
-<span class="nv">pad_height_divisor</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="k">if</span> <span class="nv">not</span> <span class="nv">None</span>, <span class="nv">ensures</span> <span class="nv">image</span> <span class="nv">height</span> <span class="nv">is</span> <span class="nv">dividable</span> <span class="nv">by</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">argument</span>.
-<span class="nv">pad_width_divisor</span> <span class="ss">(</span><span class="nv">int</span><span class="ss">)</span>: <span class="k">if</span> <span class="nv">not</span> <span class="nv">None</span>, <span class="nv">ensures</span> <span class="nv">image</span> <span class="nv">width</span> <span class="nv">is</span> <span class="nv">dividable</span> <span class="nv">by</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">argument</span>.
-<span class="nv">position</span> <span class="ss">(</span><span class="nv">Union</span>[<span class="nv">str</span>, <span class="nv">PositionType</span>]<span class="ss">)</span>: <span class="nv">Position</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">image</span>. <span class="nv">should</span> <span class="nv">be</span> <span class="nv">PositionType</span>.<span class="nv">CENTER</span> <span class="nv">or</span>
-    <span class="nv">PositionType</span>.<span class="nv">TOP_LEFT</span> <span class="nv">or</span> <span class="nv">PositionType</span>.<span class="nv">TOP_RIGHT</span> <span class="nv">or</span> <span class="nv">PositionType</span>.<span class="nv">BOTTOM_LEFT</span> <span class="nv">or</span> <span class="nv">PositionType</span>.<span class="nv">BOTTOM_RIGHT</span>.
-    <span class="nv">or</span> <span class="nv">PositionType</span>.<span class="k">RANDOM</span>. <span class="nv">Default</span>: <span class="nv">PositionType</span>.<span class="nv">CENTER</span>.
-<span class="nv">border_mode</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">OpenCV</span> <span class="nv">border</span> <span class="nv">mode</span>.
-<span class="nv">value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">int</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>.
-<span class="nv">mask_value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">int</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">for</span> <span class="nv">mask</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">1</span>.<span class="mi">0</span>.
-</code></pre></div>
-<p>Targets:
-    image, mask, bbox, keypoints</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min_height</code></td>
+<td><code>int</code></td>
+<td><p>minimal result image height.</p></td>
+</tr>
+<tr>
+<td><code>min_width</code></td>
+<td><code>int</code></td>
+<td><p>minimal result image width.</p></td>
+</tr>
+<tr>
+<td><code>pad_height_divisor</code></td>
+<td><code>int</code></td>
+<td><p>if not None, ensures image height is dividable by value of this argument.</p></td>
+</tr>
+<tr>
+<td><code>pad_width_divisor</code></td>
+<td><code>int</code></td>
+<td><p>if not None, ensures image width is dividable by value of this argument.</p></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td><code>Union[str, PositionType]</code></td>
+<td><p>Position of the image. should be PositionType.CENTER or
+PositionType.TOP_LEFT or PositionType.TOP_RIGHT or PositionType.BOTTOM_LEFT or PositionType.BOTTOM_RIGHT.
+or PositionType.RANDOM. Default: PositionType.CENTER.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>OpenCV border mode.</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of int, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of int,
+        list of float</code></td>
+<td><p>padding value for mask if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
 <div class="doc doc-children">
@@ -2279,14 +2581,48 @@ albumentations.augmentations.geometric.transforms.PadIfNeeded.PositionType</stro
 <p>This Enum class is utilized to define specific anchor positions that an object can
 assume relative to a container. It's particularly useful in image processing, UI layout,
 and graphic design to specify the alignment and positioning of elements.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">CENTER</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">center</span>.
-<span class="nv">TOP_LEFT</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">top</span><span class="o">-</span><span class="nv">left</span> <span class="nv">corner</span>.
-<span class="nv">TOP_RIGHT</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">top</span><span class="o">-</span><span class="nv">right</span> <span class="nv">corner</span>.
-<span class="nv">BOTTOM_LEFT</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">bottom</span><span class="o">-</span><span class="nv">left</span> <span class="nv">corner</span>.
-<span class="nv">BOTTOM_RIGHT</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Specifies</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">bottom</span><span class="o">-</span><span class="nv">right</span> <span class="nv">corner</span>.
-<span class="k">RANDOM</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">Indicates</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">object</span><span class="s1">'</span><span class="s">s position should be determined randomly.</span>
-</code></pre></div>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CENTER</code></td>
+<td><code>str</code></td>
+<td><p>Specifies that the object should be placed at the center.</p></td>
+</tr>
+<tr>
+<td><code>TOP_LEFT</code></td>
+<td><code>str</code></td>
+<td><p>Specifies that the object should be placed at the top-left corner.</p></td>
+</tr>
+<tr>
+<td><code>TOP_RIGHT</code></td>
+<td><code>str</code></td>
+<td><p>Specifies that the object should be placed at the top-right corner.</p></td>
+</tr>
+<tr>
+<td><code>BOTTOM_LEFT</code></td>
+<td><code>str</code></td>
+<td><p>Specifies that the object should be placed at the bottom-left corner.</p></td>
+</tr>
+<tr>
+<td><code>BOTTOM_RIGHT</code></td>
+<td><code>str</code></td>
+<td><p>Specifies that the object should be placed at the bottom-right corner.</p></td>
+</tr>
+<tr>
+<td><code>RANDOM</code></td>
+<td><code>str</code></td>
+<td><p>Indicates that the object's position should be determined randomly.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2305,33 +2641,70 @@ albumentations.augmentations.geometric.transforms.Perspective</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L337" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L341" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Perspective" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Perform a random four point perspective transform of the input.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">scale</span><span class="o">:</span> <span class="n">standard</span> <span class="n">deviation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">distributions</span><span class="o">.</span> <span class="n">These</span> <span class="n">are</span> <span class="n">used</span> <span class="n">to</span> <span class="n">sample</span>
-    <span class="n">the</span> <span class="n">random</span> <span class="n">distances</span> <span class="n">of</span> <span class="n">the</span> <span class="n">subimage</span><span class="s1">'s corners from the full image'</span><span class="n">s</span> <span class="n">corners</span><span class="o">.</span>
-    <span class="n">If</span> <span class="n">scale</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">float</span> <span class="n">value</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">scale</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mf">0.05</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">).</span>
-<span class="n">keep_size</span><span class="o">:</span> <span class="n">Whether</span> <span class="n">to</span> <span class="n">resize</span> <span class="n">image</span> <span class="n">back</span> <span class="n">to</span> <span class="n">their</span> <span class="n">original</span> <span class="n">size</span> <span class="n">after</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">perspective</span>
-    <span class="n">transform</span><span class="o">.</span> <span class="n">If</span> <span class="kd">set</span> <span class="n">to</span> <span class="n">False</span><span class="o">,</span> <span class="n">the</span> <span class="n">resulting</span> <span class="n">images</span> <span class="n">may</span> <span class="n">end</span> <span class="n">up</span> <span class="n">having</span> <span class="n">different</span> <span class="n">shapes</span>
-    <span class="n">and</span> <span class="n">will</span> <span class="n">always</span> <span class="n">be</span> <span class="n">a</span> <span class="n">list</span><span class="o">,</span> <span class="n">never</span> <span class="n">an</span> <span class="n">array</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="n">True</span>
-<span class="n">pad_mode</span> <span class="o">(</span><span class="n">OpenCV</span> <span class="n">flag</span><span class="o">):</span> <span class="n">OpenCV</span> <span class="n">border</span> <span class="n">mode</span><span class="o">.</span>
-<span class="n">pad_val</span> <span class="o">(</span><span class="n">int</span><span class="o">,</span> <span class="n">float</span><span class="o">,</span> <span class="n">list</span> <span class="n">of</span> <span class="n">int</span><span class="o">,</span> <span class="n">list</span> <span class="n">of</span> <span class="n">float</span><span class="o">):</span> <span class="n">padding</span> <span class="n">value</span> <span class="k">if</span> <span class="n">border_mode</span> <span class="k">is</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_CONSTANT</span><span class="o">.</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="mi">0</span>
-<span class="n">mask_pad_val</span> <span class="o">(</span><span class="n">int</span><span class="o">,</span> <span class="n">float</span><span class="o">,</span> <span class="n">list</span> <span class="n">of</span> <span class="n">int</span><span class="o">,</span> <span class="n">list</span> <span class="n">of</span> <span class="n">float</span><span class="o">):</span> <span class="n">padding</span> <span class="n">value</span> <span class="k">for</span> <span class="n">mask</span>
-    <span class="k">if</span> <span class="n">border_mode</span> <span class="k">is</span> <span class="n">cv2</span><span class="o">.</span><span class="na">BORDER_CONSTANT</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">0</span>
-<span class="n">fit_output</span> <span class="o">(</span><span class="n">bool</span><span class="o">):</span> <span class="n">If</span> <span class="n">True</span><span class="o">,</span> <span class="n">the</span> <span class="n">image</span> <span class="n">plane</span> <span class="n">size</span> <span class="n">and</span> <span class="n">position</span> <span class="n">will</span> <span class="n">be</span> <span class="n">adjusted</span> <span class="n">to</span> <span class="n">still</span> <span class="n">capture</span>
-    <span class="n">the</span> <span class="n">whole</span> <span class="n">image</span> <span class="n">after</span> <span class="n">perspective</span> <span class="n">transformation</span><span class="o">.</span> <span class="o">(</span><span class="n">Followed</span> <span class="n">by</span> <span class="n">image</span> <span class="n">resizing</span> <span class="k">if</span> <span class="n">keep_size</span> <span class="k">is</span> <span class="kd">set</span> <span class="n">to</span> <span class="n">True</span><span class="o">.)</span>
-    <span class="n">Otherwise</span><span class="o">,</span> <span class="n">parts</span> <span class="n">of</span> <span class="n">the</span> <span class="n">transformed</span> <span class="n">image</span> <span class="n">may</span> <span class="n">be</span> <span class="n">outside</span> <span class="n">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">plane</span><span class="o">.</span>
-    <span class="n">This</span> <span class="n">setting</span> <span class="n">should</span> <span class="n">not</span> <span class="n">be</span> <span class="kd">set</span> <span class="n">to</span> <span class="n">True</span> <span class="n">when</span> <span class="n">using</span> <span class="n">large</span> <span class="n">scale</span> <span class="n">values</span> <span class="k">as</span> <span class="n">it</span> <span class="n">could</span> <span class="n">lead</span> <span class="n">to</span> <span class="n">very</span> <span class="n">large</span> <span class="n">images</span><span class="o">.</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="n">False</span>
-<span class="n">p</span> <span class="o">(</span><span class="n">float</span><span class="o">):</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td></td>
+<td><p>standard deviation of the normal distributions. These are used to sample
+the random distances of the subimage's corners from the full image's corners.
+If scale is a single float value, the range will be (0, scale). Default: (0.05, 0.1).</p></td>
+</tr>
+<tr>
+<td><code>keep_size</code></td>
+<td></td>
+<td><p>Whether to resize image back to their original size after applying the perspective
+transform. If set to False, the resulting images may end up having different shapes
+and will always be a list, never an array. Default: True</p></td>
+</tr>
+<tr>
+<td><code>pad_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>OpenCV border mode.</p></td>
+</tr>
+<tr>
+<td><code>pad_val</code></td>
+<td><code>int, float, list of int, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.
+Default: 0</p></td>
+</tr>
+<tr>
+<td><code>mask_pad_val</code></td>
+<td><code>int, float, list of int, list of float</code></td>
+<td><p>padding value for mask
+if border_mode is cv2.BORDER_CONSTANT. Default: 0</p></td>
+</tr>
+<tr>
+<td><code>fit_output</code></td>
+<td><code>bool</code></td>
+<td><p>If True, the image plane size and position will be adjusted to still capture
+the whole image after perspective transformation. (Followed by image resizing if keep_size is set to True.)
+Otherwise, parts of the transformed image may be outside of the image plane.
+This setting should not be set to True when using large scale values as it could lead to very large images.
+Default: False</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, keypoints, bboxes</p>
 <p>Image types:
     uint8, float32</p>
@@ -2350,7 +2723,7 @@ albumentations.augmentations.geometric.transforms.PiecewiseAffine</strong></code
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L923" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L927" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.PiecewiseAffine" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2361,51 +2734,98 @@ This augmentation places a regular grid of points on an image and randomly moves
 around via affine transformations. This leads to local distortions.</p>
 <p>This is mostly a wrapper around scikit-image's <code>PiecewiseAffine</code>.
 See also <code>Affine</code> for a similar technique.</p>
-<h4 id="albumentations.augmentations.geometric.transforms--note">Note:<a class="headerlink" href="#albumentations.augmentations.geometric.transforms--note" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="n">This</span> <span class="n">augmenter</span> <span class="k">is</span> <span class="n">very</span> <span class="k">slow</span><span class="p">.</span> <span class="n">Try</span> <span class="k">to</span> <span class="k">use</span> <span class="n n-Quoted">``</span><span class="n">ElasticTransformation</span><span class="n n-Quoted">``</span> <span class="n">instead</span><span class="p">,</span> <span class="n">which</span> <span class="k">is</span> <span class="k">at</span> <span class="n">least</span> <span class="n">10x</span> <span class="n">faster</span><span class="p">.</span>
-</code></pre></div>
-<h4 id="albumentations.augmentations.geometric.transforms--note_1">Note:<a class="headerlink" href="#albumentations.augmentations.geometric.transforms--note_1" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="k">For</span> <span class="nv">coordinate</span><span class="o">-</span><span class="nv">based</span> <span class="nv">inputs</span> <span class="ss">(</span><span class="nv">keypoints</span>, <span class="nv">bounding</span> <span class="nv">boxes</span>, <span class="nv">polygons</span>, ...<span class="ss">)</span>,
-<span class="nv">this</span> <span class="nv">augmenter</span> <span class="nv">still</span> <span class="nv">has</span> <span class="nv">to</span> <span class="nv">perform</span> <span class="nv">an</span> <span class="nv">image</span><span class="o">-</span><span class="nv">based</span> <span class="nv">augmentation</span>,
-<span class="nv">which</span> <span class="nv">will</span> <span class="nv">make</span> <span class="nv">it</span> <span class="nv">significantly</span> <span class="nv">slower</span> <span class="nv">and</span> <span class="nv">not</span> <span class="nv">fully</span> <span class="nv">correct</span> <span class="k">for</span> <span class="nv">such</span> <span class="nv">inputs</span> <span class="nv">than</span> <span class="nv">other</span> <span class="nv">transforms</span>.
-</code></pre></div>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">scale</span> <span class="p">(</span><span class="kt">float</span><span class="p">,</span> <span class="n">tuple</span> <span class="k">of</span> <span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="k">Each</span> <span class="kt">point</span> <span class="k">on</span> <span class="n">the</span> <span class="n">regular</span> <span class="n">grid</span> <span class="k">is</span> <span class="n">moved</span> <span class="n">around</span> <span class="n">via</span> <span class="n">a</span> <span class="n">normal</span> <span class="n">distribution</span><span class="p">.</span>
-    <span class="n">This</span> <span class="n">scale</span> <span class="n">factor</span> <span class="k">is</span> <span class="n">equivalent</span> <span class="k">to</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">distribution</span><span class="s1">'s sigma.</span>
-<span class="s1">    Note that the jitter (how far each point is moved in which direction) is multiplied by the height/width of</span>
-<span class="s1">    the image if ``absolute_scale=False`` (default), so this scale can be the same for different sized images.</span>
-<span class="s1">    Recommended values are in the range ``0.01`` to ``0.05`` (weak to strong augmentations).</span>
-<span class="s1">        * If a single ``float``, then that value will always be used as the scale.</span>
-<span class="s1">        * If a tuple ``(a, b)`` of ``float`` s, then a random value will</span>
-<span class="s1">          be uniformly sampled per image from the interval ``[a, b]``.</span>
-<span class="s1">nb_rows (int, tuple of int): Number of rows of points that the regular grid should have.</span>
-<span class="s1">    Must be at least ``2``. For large images, you might want to pick a higher value than ``4``.</span>
-<span class="s1">    You might have to then adjust scale to lower values.</span>
-<span class="s1">        * If a single ``int``, then that value will always be used as the number of rows.</span>
-<span class="s1">        * If a tuple ``(a, b)``, then a value from the discrete interval</span>
-<span class="s1">          ``[a..b]`` will be uniformly sampled per image.</span>
-<span class="s1">nb_cols (int, tuple of int): Number of columns. Analogous to `nb_rows`.</span>
-<span class="s1">interpolation (int): The order of interpolation. The order has to be in the range 0-5:</span>
-<span class="s1">     - 0: Nearest-neighbor</span>
-<span class="s1">     - 1: Bi-linear (default)</span>
-<span class="s1">     - 2: Bi-quadratic</span>
-<span class="s1">     - 3: Bi-cubic</span>
-<span class="s1">     - 4: Bi-quartic</span>
-<span class="s1">     - 5: Bi-quintic</span>
-<span class="s1">mask_interpolation (int): same as interpolation but for mask.</span>
-<span class="s1">cval (number): The constant value to use when filling in newly created pixels.</span>
-<span class="s1">cval_mask (number): Same as cval but only for masks.</span>
-<span class="s1">mode (str): {'</span><span class="n">constant</span><span class="s1">', '</span><span class="n">edge</span><span class="s1">', '</span><span class="n">symmetric</span><span class="s1">', '</span><span class="n">reflect</span><span class="s1">', '</span><span class="n">wrap</span><span class="s1">'}, optional</span>
-<span class="s1">    Points outside the boundaries of the input are filled according</span>
-<span class="s1">    to the given mode.  Modes match the behaviour of `numpy.pad`.</span>
-<span class="s1">absolute_scale (bool): Take `scale` as an absolute value rather than a relative value.</span>
-<span class="s1">keypoints_threshold (float): Used as threshold in conversion from distance maps to keypoints.</span>
-<span class="s1">    The search for keypoints works by searching for the</span>
-<span class="s1">    argmin (non-inverted) or argmax (inverted) in each channel. This</span>
-<span class="s1">    parameters contains the maximum (non-inverted) or minimum (inverted) value to accept in order to view a hit</span>
-<span class="s1">    as a keypoint. Use ``None`` to use no min/max. Default: 0.01</span>
-</code></pre></div>
-<p>Targets:
+<p>Note:
+    This augmenter is very slow. Try to use <code>ElasticTransformation</code> instead, which is at least 10x faster.</p>
+<p>Note:
+    For coordinate-based inputs (keypoints, bounding boxes, polygons, ...),
+    this augmenter still has to perform an image-based augmentation,
+    which will make it significantly slower and not fully correct for such inputs than other transforms.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td><code>float, tuple of float</code></td>
+<td><p>Each point on the regular grid is moved around via a normal distribution.
+This scale factor is equivalent to the normal distribution's sigma.
+Note that the jitter (how far each point is moved in which direction) is multiplied by the height/width of
+the image if <code>absolute_scale=False</code> (default), so this scale can be the same for different sized images.
+Recommended values are in the range <code>0.01</code> to <code>0.05</code> (weak to strong augmentations).
+    * If a single <code>float</code>, then that value will always be used as the scale.
+    * If a tuple <code>(a, b)</code> of <code>float</code> s, then a random value will
+      be uniformly sampled per image from the interval <code>[a, b]</code>.</p></td>
+</tr>
+<tr>
+<td><code>nb_rows</code></td>
+<td><code>int, tuple of int</code></td>
+<td><p>Number of rows of points that the regular grid should have.
+Must be at least <code>2</code>. For large images, you might want to pick a higher value than <code>4</code>.
+You might have to then adjust scale to lower values.
+    * If a single <code>int</code>, then that value will always be used as the number of rows.
+    * If a tuple <code>(a, b)</code>, then a value from the discrete interval
+      <code>[a..b]</code> will be uniformly sampled per image.</p></td>
+</tr>
+<tr>
+<td><code>nb_cols</code></td>
+<td><code>int, tuple of int</code></td>
+<td><p>Number of columns. Analogous to <code>nb_rows</code>.</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>int</code></td>
+<td><p>The order of interpolation. The order has to be in the range 0-5:
+ - 0: Nearest-neighbor
+ - 1: Bi-linear (default)
+ - 2: Bi-quadratic
+ - 3: Bi-cubic
+ - 4: Bi-quartic
+ - 5: Bi-quintic</p></td>
+</tr>
+<tr>
+<td><code>mask_interpolation</code></td>
+<td><code>int</code></td>
+<td><p>same as interpolation but for mask.</p></td>
+</tr>
+<tr>
+<td><code>cval</code></td>
+<td><code>number</code></td>
+<td><p>The constant value to use when filling in newly created pixels.</p></td>
+</tr>
+<tr>
+<td><code>cval_mask</code></td>
+<td><code>number</code></td>
+<td><p>Same as cval but only for masks.</p></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td><p>{'constant', 'edge', 'symmetric', 'reflect', 'wrap'}, optional
+Points outside the boundaries of the input are filled according
+to the given mode.  Modes match the behaviour of <code>numpy.pad</code>.</p></td>
+</tr>
+<tr>
+<td><code>absolute_scale</code></td>
+<td><code>bool</code></td>
+<td><p>Take <code>scale</code> as an absolute value rather than a relative value.</p></td>
+</tr>
+<tr>
+<td><code>keypoints_threshold</code></td>
+<td><code>float</code></td>
+<td><p>Used as threshold in conversion from distance maps to keypoints.
+The search for keypoints works by searching for the
+argmin (non-inverted) or argmax (inverted) in each channel. This
+parameters contains the maximum (non-inverted) or minimum (inverted) value to accept in order to view a hit
+as a keypoint. Use <code>None</code> to use no min/max. Default: 0.01</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, keypoints, bboxes</p>
 <p>Image types:
     uint8, float32</p>
@@ -2424,47 +2844,100 @@ albumentations.augmentations.geometric.transforms.ShiftScaleRotate</strong></cod
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L88" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L90" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.ShiftScaleRotate" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly apply affine transforms: translate, scale and rotate the input.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">shift_limit</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">shift</span> <span class="nv">factor</span> <span class="nv">range</span> <span class="k">for</span> <span class="nv">both</span> <span class="nv">height</span> <span class="nv">and</span> <span class="nv">width</span>. <span class="k">If</span> <span class="nv">shift_limit</span>
-    <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">value</span>, <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">shift_limit</span>, <span class="nv">shift_limit</span><span class="ss">)</span>. <span class="nv">Absolute</span> <span class="nv">values</span> <span class="k">for</span> <span class="nv">lower</span> <span class="nv">and</span>
-    <span class="nv">upper</span> <span class="nv">bounds</span> <span class="nv">should</span> <span class="nv">lie</span> <span class="nv">in</span> <span class="nv">range</span> [<span class="mi">0</span>, <span class="mi">1</span>]. <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">0625</span>, <span class="mi">0</span>.<span class="mi">0625</span><span class="ss">)</span>.
-<span class="nv">scale_limit</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">scaling</span> <span class="nv">factor</span> <span class="nv">range</span>. <span class="k">If</span> <span class="nv">scale_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">value</span>, <span class="nv">the</span>
-    <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">scale_limit</span>, <span class="nv">scale_limit</span><span class="ss">)</span>. <span class="nv">Note</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">scale_limit</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">biased</span> <span class="nv">by</span> <span class="mi">1</span>.
-    <span class="k">If</span> <span class="nv">scale_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">tuple</span>, <span class="nv">like</span> <span class="ss">(</span><span class="nv">low</span>, <span class="nv">high</span><span class="ss">)</span>, <span class="nv">sampling</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">done</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">range</span> <span class="ss">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nv">low</span>, <span class="mi">1</span> <span class="o">+</span> <span class="nv">high</span><span class="ss">)</span>.
-    <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">1</span>, <span class="mi">0</span>.<span class="mi">1</span><span class="ss">)</span>.
-<span class="nv">rotate_limit</span> <span class="ss">(</span>[<span class="nv">int</span>, <span class="nv">int</span>] <span class="nv">or</span> <span class="nv">int</span><span class="ss">)</span>: <span class="nv">rotation</span> <span class="nv">range</span>. <span class="k">If</span> <span class="nv">rotate_limit</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">int</span> <span class="nv">value</span>, <span class="nv">the</span>
-    <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">rotate_limit</span>, <span class="nv">rotate_limit</span><span class="ss">)</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="o">-</span><span class="mi">45</span>, <span class="mi">45</span><span class="ss">)</span>.
-<span class="nv">interpolation</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">interpolation</span> <span class="nv">algorithm</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
-    <span class="nv">cv2</span>.<span class="nv">INTER_NEAREST</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>, <span class="nv">cv2</span>.<span class="nv">INTER_CUBIC</span>, <span class="nv">cv2</span>.<span class="nv">INTER_AREA</span>, <span class="nv">cv2</span>.<span class="nv">INTER_LANCZOS4</span>.
-    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">INTER_LINEAR</span>.
-<span class="nv">border_mode</span> <span class="ss">(</span><span class="nv">OpenCV</span> <span class="nv">flag</span><span class="ss">)</span>: <span class="nv">flag</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">the</span> <span class="nv">pixel</span> <span class="nv">extrapolation</span> <span class="nv">method</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span>:
-    <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REPLICATE</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_WRAP</span>, <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>.
-    <span class="nv">Default</span>: <span class="nv">cv2</span>.<span class="nv">BORDER_REFLECT_101</span>
-<span class="nv">value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">int</span>, <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span>.
-<span class="nv">mask_value</span> <span class="ss">(</span><span class="nv">int</span>, <span class="nv">float</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">int</span>,
-            <span class="nv">list</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">padding</span> <span class="nv">value</span> <span class="k">if</span> <span class="nv">border_mode</span> <span class="nv">is</span> <span class="nv">cv2</span>.<span class="nv">BORDER_CONSTANT</span> <span class="nv">applied</span> <span class="k">for</span> <span class="nv">masks</span>.
-<span class="nv">shift_limit_x</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">shift</span> <span class="nv">factor</span> <span class="nv">range</span> <span class="k">for</span> <span class="nv">width</span>. <span class="k">If</span> <span class="nv">it</span> <span class="nv">is</span> <span class="nv">set</span> <span class="k">then</span> <span class="nv">this</span> <span class="nv">value</span>
-    <span class="nv">instead</span> <span class="nv">of</span> <span class="nv">shift_limit</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">shifting</span> <span class="nv">width</span>.  <span class="k">If</span> <span class="nv">shift_limit_x</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">value</span>,
-    <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">shift_limit_x</span>, <span class="nv">shift_limit_x</span><span class="ss">)</span>. <span class="nv">Absolute</span> <span class="nv">values</span> <span class="k">for</span> <span class="nv">lower</span> <span class="nv">and</span> <span class="nv">upper</span> <span class="nv">bounds</span> <span class="nv">should</span> <span class="nv">lie</span> <span class="nv">in</span>
-    <span class="nv">the</span> <span class="nv">range</span> [<span class="mi">0</span>, <span class="mi">1</span>]. <span class="nv">Default</span>: <span class="nv">None</span>.
-<span class="nv">shift_limit_y</span> <span class="ss">(</span>[<span class="nv">float</span>, <span class="nv">float</span>] <span class="nv">or</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">shift</span> <span class="nv">factor</span> <span class="nv">range</span> <span class="k">for</span> <span class="nv">height</span>. <span class="k">If</span> <span class="nv">it</span> <span class="nv">is</span> <span class="nv">set</span> <span class="k">then</span> <span class="nv">this</span> <span class="nv">value</span>
-    <span class="nv">instead</span> <span class="nv">of</span> <span class="nv">shift_limit</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">shifting</span> <span class="nv">height</span>.  <span class="k">If</span> <span class="nv">shift_limit_y</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">value</span>,
-    <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> <span class="ss">(</span><span class="o">-</span><span class="nv">shift_limit_y</span>, <span class="nv">shift_limit_y</span><span class="ss">)</span>. <span class="nv">Absolute</span> <span class="nv">values</span> <span class="k">for</span> <span class="nv">lower</span> <span class="nv">and</span> <span class="nv">upper</span> <span class="nv">bounds</span> <span class="nv">should</span> <span class="nv">lie</span>
-    <span class="nv">in</span> <span class="nv">the</span> <span class="nv">range</span> [<span class="mi">0</span>, <span class="mi">1</span>]. <span class="nv">Default</span>: <span class="nv">None</span>.
-<span class="nv">rotate_method</span> <span class="ss">(</span><span class="nv">str</span><span class="ss">)</span>: <span class="nv">rotation</span> <span class="nv">method</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">bounding</span> <span class="nv">boxes</span>. <span class="nv">Should</span> <span class="nv">be</span> <span class="nv">one</span> <span class="nv">of</span> <span class="s2">"</span><span class="s">largest_box</span><span class="s2">"</span> <span class="nv">or</span> <span class="s2">"</span><span class="s">ellipse</span><span class="s2">"</span>.
-    <span class="nv">Default</span>: <span class="s2">"</span><span class="s">largest_box</span><span class="s2">"</span>
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
-    image, mask, keypoints</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shift_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>shift factor range for both height and width. If shift_limit
+is a single float value, the range will be (-shift_limit, shift_limit). Absolute values for lower and
+upper bounds should lie in range [0, 1]. Default: (-0.0625, 0.0625).</p></td>
+</tr>
+<tr>
+<td><code>scale_limit</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>scaling factor range. If scale_limit is a single float value, the
+range will be (-scale_limit, scale_limit). Note that the scale_limit will be biased by 1.
+If scale_limit is a tuple, like (low, high), sampling will be done from the range (1 + low, 1 + high).
+Default: (-0.1, 0.1).</p></td>
+</tr>
+<tr>
+<td><code>rotate_limit</code></td>
+<td><code>[int, int] or int</code></td>
+<td><p>rotation range. If rotate_limit is a single int value, the
+range will be (-rotate_limit, rotate_limit). Default: (-45, 45).</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>border_mode</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the pixel extrapolation method. Should be one of:
+cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.
+Default: cv2.BORDER_REFLECT_101</p></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>int, float, list of int, list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT.</p></td>
+</tr>
+<tr>
+<td><code>mask_value</code></td>
+<td><code>int, float,
+        list of int,
+        list of float</code></td>
+<td><p>padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.</p></td>
+</tr>
+<tr>
+<td><code>shift_limit_x</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>shift factor range for width. If it is set then this value
+instead of shift_limit will be used for shifting width.  If shift_limit_x is a single float value,
+the range will be (-shift_limit_x, shift_limit_x). Absolute values for lower and upper bounds should lie in
+the range [0, 1]. Default: None.</p></td>
+</tr>
+<tr>
+<td><code>shift_limit_y</code></td>
+<td><code>[float, float] or float</code></td>
+<td><p>shift factor range for height. If it is set then this value
+instead of shift_limit will be used for shifting height.  If shift_limit_y is a single float value,
+the range will be (-shift_limit_y, shift_limit_y). Absolute values for lower and upper bounds should lie
+in the range [0, 1]. Default: None.</p></td>
+</tr>
+<tr>
+<td><code>rotate_method</code></td>
+<td><code>str</code></td>
+<td><p>rotation method used for the bounding boxes. Should be one of "largest_box" or "ellipse".
+Default: "largest_box"</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, keypoints, bboxes</p>
 <p>Image types:
     uint8, float32</p>
 <div class="doc doc-children">
@@ -2476,18 +2949,36 @@ albumentations.augmentations.geometric.transforms.ShiftScaleRotate</strong></cod
 <code>class <strong>
 albumentations.augmentations.geometric.transforms.Transpose</strong></code>
 <code>
-</code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1408" target="_blank">[view source on GitHub]</a>
+
+
+    (always_apply=False, p=0.5)
+
+
+                </code> <span class="doc-github-link">
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1416" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.Transpose" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Transpose the input by swapping rows and columns.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>p (float): probability of applying the transform. Default: 0.5.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2501,17 +2992,30 @@ albumentations.augmentations.geometric.transforms.Transpose</strong></code>
 albumentations.augmentations.geometric.transforms.VerticalFlip</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1310" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/transforms.py#L1315" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.geometric.transforms.VerticalFlip" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Flip the input vertically around the x-axis.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>p (float): probability of applying the transform. Default: 0.5.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2559,13 +3063,13 @@ albumentations.augmentations.geometric.transforms.VerticalFlip</strong></code>
         </a>
       
       
-        <a href="../../domain_adaptation/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../mixing/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Domain adaptation transforms (augmentations.domain_adaptation)
+              Index
             </div>
           </div>
           <div class="md-footer__button md-icon">

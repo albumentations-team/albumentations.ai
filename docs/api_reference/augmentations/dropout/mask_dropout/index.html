@@ -1721,6 +1721,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1849,7 +1920,7 @@
 
     <li class="md-nav__item">
       <a href="../../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1904,7 +1975,7 @@ albumentations.augmentations.dropout.mask_dropout.MaskDropout</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/mask_dropout.py#L38" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/dropout/mask_dropout.py#L39" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.dropout.mask_dropout.MaskDropout" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1915,13 +1986,34 @@ to randomly chosen object instance from mask.</p>
 <p>Mask must be single-channel image, zero values treated as background.
 Image can be any number of channels.</p>
 <p>Inspired by <a href="https://www.kaggle.com/c/severstal-steel-defect-detection/discussion/114254" target="_blank">https://www.kaggle.com/c/severstal-steel-defect-detection/discussion/114254</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">max_objects</span><span class="o">:</span> <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">labels</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">zeroed</span> <span class="n">out</span><span class="o">.</span> <span class="n">Can</span> <span class="n">be</span> <span class="n">tuple</span><span class="o">,</span> <span class="k">in</span> <span class="k">this</span> <span class="k">case</span> <span class="n">it</span><span class="s1">'s [min, max]</span>
-<span class="s1">image_fill_value: Fill value to use when filling image.</span>
-<span class="s1">    Can be '</span><span class="n">inpaint</span><span class="err">'</span> <span class="n">to</span> <span class="n">apply</span> <span class="n">inpaining</span> <span class="o">(</span><span class="n">works</span> <span class="n">only</span>  <span class="k">for</span> <span class="mi">3</span><span class="o">-</span><span class="n">chahnel</span> <span class="n">images</span><span class="o">)</span>
-<span class="n">mask_fill_value</span><span class="o">:</span> <span class="n">Fill</span> <span class="n">value</span> <span class="n">to</span> <span class="n">use</span> <span class="n">when</span> <span class="n">filling</span> <span class="n">mask</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_objects</code></td>
+<td></td>
+<td><p>Maximum number of labels that can be zeroed out. Can be tuple, in this case it's [min, max]</p></td>
+</tr>
+<tr>
+<td><code>image_fill_value</code></td>
+<td></td>
+<td><p>Fill value to use when filling image.
+Can be 'inpaint' to apply inpainting (works only  for 3-channel images)</p></td>
+</tr>
+<tr>
+<td><code>mask_fill_value</code></td>
+<td></td>
+<td><p>Fill value to use when filling mask.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask</p>
 <p>Image types:
     uint8, float32</p>

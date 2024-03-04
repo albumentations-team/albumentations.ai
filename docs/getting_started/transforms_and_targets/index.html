@@ -1724,6 +1724,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../api_reference/augmentations/mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../api_reference/augmentations/mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1852,7 +1923,7 @@
 
     <li class="md-nav__item">
       <a href="../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1953,9 +2024,10 @@
 <tr>
 <th>Transform</th>
 <th align="center">Image</th>
-<th align="center">Masks</th>
+<th align="center">Mask</th>
 <th align="center">BBoxes</th>
 <th align="center">Keypoints</th>
+<th align="center">Global Label</th>
 </tr>
 </thead>
 <tbody>
@@ -1965,12 +2037,14 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop">BBoxSafeRandomCrop</a></td>
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
@@ -1979,6 +2053,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/dropout/coarse_dropout/#albumentations.augmentations.dropout.coarse_dropout.CoarseDropout">CoarseDropout</a></td>
@@ -1986,6 +2061,7 @@
 <td align="center">✓</td>
 <td align="center"></td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.Crop">Crop</a></td>
@@ -1993,6 +2069,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.CropAndPad">CropAndPad</a></td>
@@ -2000,6 +2077,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.CropNonEmptyMaskIfExists">CropNonEmptyMaskIfExists</a></td>
@@ -2007,12 +2085,14 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.ElasticTransform">ElasticTransform</a></td>
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
@@ -2021,6 +2101,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.GridDistortion">GridDistortion</a></td>
@@ -2028,11 +2109,13 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/dropout/grid_dropout/#albumentations.augmentations.dropout.grid_dropout.GridDropout">GridDropout</a></td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
@@ -2042,9 +2125,11 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Lambda">Lambda</a></td>
+<td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
@@ -2056,6 +2141,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/#albumentations.augmentations.dropout.mask_dropout.MaskDropout">MaskDropout</a></td>
@@ -2063,9 +2149,19 @@
 <td align="center">✓</td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><a href="https://albumentations.ai/docs/api_reference/augmentations/mixing/transforms/#albumentations.augmentations.mixing.transforms.MixUp">MixUp</a></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✓</td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/core/transforms_interface/#albumentations.core.transforms_interface.NoOp">NoOp</a></td>
+<td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
@@ -2077,6 +2173,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.PadIfNeeded">PadIfNeeded</a></td>
@@ -2084,6 +2181,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.Perspective">Perspective</a></td>
@@ -2091,6 +2189,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.PiecewiseAffine">PiecewiseAffine</a></td>
@@ -2098,13 +2197,15 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.PixelDropout">PixelDropout</a></td>
 <td align="center">✓</td>
 <td align="center">✓</td>
-<td align="center">✓</td>
-<td align="center">✓</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.RandomCrop">RandomCrop</a></td>
@@ -2112,6 +2213,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.RandomCropFromBorders">RandomCropFromBorders</a></td>
@@ -2119,6 +2221,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.RandomCropNearBBox">RandomCropNearBBox</a></td>
@@ -2126,6 +2229,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGridShuffle">RandomGridShuffle</a></td>
@@ -2133,6 +2237,7 @@
 <td align="center">✓</td>
 <td align="center"></td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.RandomResizedCrop">RandomResizedCrop</a></td>
@@ -2140,6 +2245,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/#albumentations.augmentations.geometric.rotate.RandomRotate90">RandomRotate90</a></td>
@@ -2147,6 +2253,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/resize/#albumentations.augmentations.geometric.resize.RandomScale">RandomScale</a></td>
@@ -2154,12 +2261,14 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/#albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop">RandomSizedBBoxSafeCrop</a></td>
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
@@ -2168,6 +2277,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/resize/#albumentations.augmentations.geometric.resize.Resize">Resize</a></td>
@@ -2175,6 +2285,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/#albumentations.augmentations.geometric.rotate.Rotate">Rotate</a></td>
@@ -2182,6 +2293,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/#albumentations.augmentations.geometric.rotate.SafeRotate">SafeRotate</a></td>
@@ -2189,6 +2301,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.ShiftScaleRotate">ShiftScaleRotate</a></td>
@@ -2196,6 +2309,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/resize/#albumentations.augmentations.geometric.resize.SmallestMaxSize">SmallestMaxSize</a></td>
@@ -2203,6 +2317,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.Transpose">Transpose</a></td>
@@ -2210,6 +2325,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/#albumentations.augmentations.geometric.transforms.VerticalFlip">VerticalFlip</a></td>
@@ -2217,6 +2333,7 @@
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td><a href="https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#albumentations.augmentations.dropout.xy_masking.XYMasking">XYMasking</a></td>
@@ -2224,6 +2341,7 @@
 <td align="center">✓</td>
 <td align="center"></td>
 <td align="center">✓</td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>

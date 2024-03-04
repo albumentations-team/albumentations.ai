@@ -1474,26 +1474,6 @@
     albumentations.augmentations.crops.transforms
   </a>
   
-    <nav class="md-nav" aria-label="albumentations.augmentations.crops.transforms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.crops.transforms--note" class="md-nav__link">
-    Note:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.crops.transforms--note" class="md-nav__link">
-    Note:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1741,6 +1721,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1869,7 +1920,7 @@
 
     <li class="md-nav__item">
       <a href="../../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1924,18 +1975,35 @@ albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L567" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L574" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.BBoxSafeRandomCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop a random part of the input without loss of bboxes.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">erosion_rate</span><span class="o">:</span> <span class="n">erosion</span> <span class="n">rate</span> <span class="n">applied</span> <span class="n">on</span> <span class="n">input</span> <span class="n">image</span> <span class="n">height</span> <span class="n">before</span> <span class="n">crop</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">1</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>erosion_rate</code></td>
+<td></td>
+<td><p>erosion rate applied on input image height before crop.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes
 Image types:
     uint8, float32</p>
@@ -1954,27 +2022,47 @@ albumentations.augmentations.crops.transforms.CenterCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L94" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L95" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CenterCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop the central part of the input.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">height</span><span class="o">:</span> <span class="n">height</span> <span class="n">of</span> <span class="n">the</span> <span class="n">crop</span><span class="o">.</span>
-<span class="n">width</span><span class="o">:</span> <span class="n">width</span> <span class="n">of</span> <span class="n">the</span> <span class="n">crop</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">1</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td></td>
+<td><p>height of the crop.</p></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td></td>
+<td><p>width of the crop.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
-<h4 id="albumentations.augmentations.crops.transforms--note">Note:<a class="headerlink" href="#albumentations.augmentations.crops.transforms--note" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="n">It</span> <span class="n">is</span> <span class="n">recommended</span> <span class="n">to</span> <span class="n">use</span> <span class="n">uint8</span> <span class="n">images</span> <span class="kr">as</span> <span class="n">input</span><span class="p">.</span>
-<span class="n">Otherwise</span> <span class="n">the</span> <span class="n">operation</span> <span class="n">will</span> <span class="n">require</span> <span class="n">internal</span> <span class="n">conversion</span>
-<span class="n">float32</span> <span class="o">-&gt;</span> <span class="n">uint8</span> <span class="o">-&gt;</span> <span class="n">float32</span> <span class="n">that</span> <span class="n">causes</span> <span class="n">worse</span> <span class="n">performance</span><span class="p">.</span>
-</code></pre></div>
+<p>Note:
+    It is recommended to use uint8 images as input.
+    Otherwise the operation will require internal conversion
+    float32 -&gt; uint8 -&gt; float32 that causes worse performance.</p>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1990,20 +2078,45 @@ albumentations.augmentations.crops.transforms.Crop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L130" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L132" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.Crop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop region from image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">x_min</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">upper</span> <span class="n">left</span> <span class="n">x</span> <span class="n">coordinate</span><span class="o">.</span>
-<span class="n">y_min</span><span class="o">:</span> <span class="n">Minimum</span> <span class="n">upper</span> <span class="n">left</span> <span class="n">y</span> <span class="n">coordinate</span><span class="o">.</span>
-<span class="n">x_max</span><span class="o">:</span> <span class="n">Maximum</span> <span class="n">lower</span> <span class="n">right</span> <span class="n">x</span> <span class="n">coordinate</span><span class="o">.</span>
-<span class="n">y_max</span><span class="o">:</span> <span class="n">Maximum</span> <span class="n">lower</span> <span class="n">right</span> <span class="n">y</span> <span class="n">coordinate</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x_min</code></td>
+<td></td>
+<td><p>Minimum upper left x coordinate.</p></td>
+</tr>
+<tr>
+<td><code>y_min</code></td>
+<td></td>
+<td><p>Minimum upper left y coordinate.</p></td>
+</tr>
+<tr>
+<td><code>x_max</code></td>
+<td></td>
+<td><p>Maximum lower right x coordinate.</p></td>
+</tr>
+<tr>
+<td><code>y_max</code></td>
+<td></td>
+<td><p>Maximum lower right y coordinate.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2022,7 +2135,7 @@ albumentations.augmentations.crops.transforms.CropAndPad</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L768" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L776" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CropAndPad" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2032,81 +2145,116 @@ albumentations.augmentations.crops.transforms.CropAndPad</strong></code>
 Cropping removes pixels at the sides (i.e. extracts a subimage from a given full image).
 Padding adds pixels to the sides (e.g. black pixels).
 This transformation will never crop images below a height or width of <code>1</code>.</p>
-<h4 id="albumentations.augmentations.crops.transforms--note">Note:<a class="headerlink" href="#albumentations.augmentations.crops.transforms--note" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code>This transformation automatically resizes images back to their original size. To deactivate this, add the
-parameter ``keep_size=False``.
-</code></pre></div>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">px</span> <span class="p">(</span><span class="kt">int</span> <span class="k">or</span> <span class="n">tuple</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">The</span> <span class="k">number</span> <span class="k">of</span> <span class="n">pixels</span> <span class="k">to</span> <span class="n">crop</span> <span class="p">(</span><span class="n">negative</span> <span class="k">values</span><span class="p">)</span> <span class="k">or</span> <span class="n">pad</span> <span class="p">(</span><span class="n">positive</span> <span class="k">values</span><span class="p">)</span>
-    <span class="k">on</span> <span class="k">each</span> <span class="n">side</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span><span class="p">.</span> <span class="n">Either</span> <span class="n">this</span> <span class="k">or</span> <span class="n">the</span> <span class="n">parameter</span> <span class="n n-Quoted">`percent`</span> <span class="n">may</span>
-    <span class="n">be</span> <span class="k">set</span><span class="p">,</span> <span class="k">not</span> <span class="k">both</span> <span class="k">at</span> <span class="n">the</span> <span class="n">same</span> <span class="kt">time</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n n-Quoted">``</span><span class="k">None</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">pixel</span><span class="o">-</span><span class="n">based</span> <span class="n">cropping</span><span class="o">/</span><span class="n">padding</span> <span class="n">will</span> <span class="k">not</span> <span class="n">be</span> <span class="n">used</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n n-Quoted">``</span><span class="kt">int</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="n">exact</span> <span class="k">number</span> <span class="k">of</span> <span class="n">pixels</span> <span class="n">will</span> <span class="k">always</span> <span class="n">be</span> <span class="n">cropped</span><span class="o">/</span><span class="n">padded</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n n-Quoted">``</span><span class="n">tuple</span><span class="n n-Quoted">``</span> <span class="k">of</span> <span class="n">two</span> <span class="n n-Quoted">``</span><span class="kt">int</span><span class="n n-Quoted">``</span> <span class="n">s</span> <span class="k">with</span> <span class="k">values</span> <span class="n n-Quoted">``</span><span class="n">a</span><span class="n n-Quoted">``</span> <span class="k">and</span> <span class="n n-Quoted">``</span><span class="n">b</span><span class="n n-Quoted">``</span><span class="p">,</span>
-          <span class="k">then</span> <span class="k">each</span> <span class="n">side</span> <span class="n">will</span> <span class="n">be</span> <span class="n">cropped</span><span class="o">/</span><span class="n">padded</span> <span class="k">by</span> <span class="n">a</span> <span class="k">random</span> <span class="n">amount</span> <span class="n">sampled</span>
-          <span class="n">uniformly</span> <span class="n">per</span> <span class="n">image</span> <span class="k">and</span> <span class="n">side</span> <span class="k">from</span> <span class="n">the</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">.</span> <span class="k">If</span>
-          <span class="n">however</span> <span class="n n-Quoted">`sample_independently`</span> <span class="k">is</span> <span class="k">set</span> <span class="k">to</span> <span class="n n-Quoted">``</span><span class="no">False</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">only</span> <span class="k">one</span>
-          <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="n">per</span> <span class="n">image</span> <span class="k">and</span> <span class="n">used</span> <span class="k">for</span> <span class="k">all</span> <span class="n">sides</span><span class="p">.</span>
-        <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n n-Quoted">``</span><span class="n">tuple</span><span class="n n-Quoted">``</span> <span class="k">of</span> <span class="n">four</span> <span class="n">entries</span><span class="p">,</span> <span class="k">then</span> <span class="n">the</span> <span class="n">entries</span> <span class="n">represent</span> <span class="n">top</span><span class="p">,</span>
-          <span class="k">right</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="k">left</span><span class="p">.</span> <span class="k">Each</span> <span class="n">entry</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">single</span> <span class="n n-Quoted">``</span><span class="kt">int</span><span class="n n-Quoted">``</span> <span class="p">(</span><span class="k">always</span>
-          <span class="n">crop</span><span class="o">/</span><span class="n">pad</span> <span class="k">by</span> <span class="n">exactly</span> <span class="n">that</span> <span class="k">value</span><span class="p">),</span> <span class="n">a</span> <span class="n n-Quoted">``</span><span class="n">tuple</span><span class="n n-Quoted">``</span> <span class="k">of</span> <span class="n">two</span> <span class="n n-Quoted">``</span><span class="kt">int</span><span class="n n-Quoted">``</span> <span class="n">s</span>
-          <span class="n n-Quoted">``</span><span class="n">a</span><span class="n n-Quoted">``</span> <span class="k">and</span> <span class="n n-Quoted">``</span><span class="n">b</span><span class="n n-Quoted">``</span> <span class="p">(</span><span class="n">crop</span><span class="o">/</span><span class="n">pad</span> <span class="k">by</span> <span class="n">an</span> <span class="n">amount</span> <span class="n">within</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span><span class="p">),</span> <span class="n">a</span>
-          <span class="n n-Quoted">``</span><span class="k">list</span><span class="n n-Quoted">``</span> <span class="k">of</span> <span class="n n-Quoted">``</span><span class="kt">int</span><span class="n n-Quoted">``</span> <span class="n">s</span> <span class="p">(</span><span class="n">crop</span><span class="o">/</span><span class="n">pad</span> <span class="k">by</span> <span class="n">a</span> <span class="k">random</span> <span class="k">value</span> <span class="n">that</span> <span class="k">is</span>
-          <span class="n">contained</span> <span class="k">in</span> <span class="n">the</span> <span class="n n-Quoted">``</span><span class="k">list</span><span class="n n-Quoted">``</span><span class="p">).</span>
-<span class="n">percent</span> <span class="p">(</span><span class="kt">float</span> <span class="k">or</span> <span class="n">tuple</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">The</span> <span class="k">number</span> <span class="k">of</span> <span class="n">pixels</span> <span class="k">to</span> <span class="n">crop</span> <span class="p">(</span><span class="n">negative</span> <span class="k">values</span><span class="p">)</span> <span class="k">or</span> <span class="n">pad</span> <span class="p">(</span><span class="n">positive</span> <span class="k">values</span><span class="p">)</span>
-    <span class="k">on</span> <span class="k">each</span> <span class="n">side</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="n">given</span> <span class="k">as</span> <span class="n">a</span> <span class="o">*</span><span class="n">fraction</span><span class="o">*</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span>
-    <span class="n">height</span><span class="o">/</span><span class="n">width</span><span class="p">.</span> <span class="n">E</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="k">if</span> <span class="n">this</span> <span class="k">is</span> <span class="k">set</span> <span class="k">to</span> <span class="n n-Quoted">``</span><span class="o">-</span><span class="mf">0.1</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="n">the</span> <span class="n">transformation</span> <span class="n">will</span>
-    <span class="k">always</span> <span class="n">crop</span> <span class="n">away</span> <span class="n n-Quoted">``</span><span class="mi">10</span><span class="o">%</span><span class="n n-Quoted">``</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span><span class="s1">'s height at both the top and the</span>
-<span class="s1">    bottom (both ``10%`` each), as well as ``10%`` of the width at the</span>
-<span class="s1">    right and left.</span>
-<span class="s1">    Expected value range is ``(-1.0, inf)``.</span>
-<span class="s1">    Either this or the parameter `px` may be set, not both</span>
-<span class="s1">    at the same time.</span>
-<span class="s1">        * If ``None``, then fraction-based cropping/padding will not be</span>
-<span class="s1">          used.</span>
-<span class="s1">        * If ``float``, then that fraction will always be cropped/padded.</span>
-<span class="s1">        * If a ``tuple`` of two ``float`` s with values ``a`` and ``b``,</span>
-<span class="s1">          then each side will be cropped/padded by a random fraction</span>
-<span class="s1">          sampled uniformly per image and side from the interval</span>
-<span class="s1">          ``[a, b]``. If however `sample_independently` is set to</span>
-<span class="s1">          ``False``, only one value will be sampled per image and used for</span>
-<span class="s1">          all sides.</span>
-<span class="s1">        * If a ``tuple`` of four entries, then the entries represent top,</span>
-<span class="s1">          right, bottom, left. Each entry may be a single ``float``</span>
-<span class="s1">          (always crop/pad by exactly that percent value), a ``tuple`` of</span>
-<span class="s1">          two ``float`` s ``a`` and ``b`` (crop/pad by a fraction from</span>
-<span class="s1">          ``[a, b]``), a ``list`` of ``float`` s (crop/pad by a random</span>
-<span class="s1">          value that is contained in the list).</span>
-<span class="s1">pad_mode (int): OpenCV border mode.</span>
-<span class="s1">pad_cval (number, Sequence[number]):</span>
-<span class="s1">    The constant value to use if the pad mode is ``BORDER_CONSTANT``.</span>
-<span class="s1">        * If ``number``, then that value will be used.</span>
-<span class="s1">        * If a ``tuple`` of two ``number`` s and at least one of them is</span>
-<span class="s1">          a ``float``, then a random number will be uniformly sampled per</span>
-<span class="s1">          image from the continuous interval ``[a, b]`` and used as the</span>
-<span class="s1">          value. If both ``number`` s are ``int`` s, the interval is</span>
-<span class="s1">          discrete.</span>
-<span class="s1">        * If a ``list`` of ``number``, then a random value will be chosen</span>
-<span class="s1">          from the elements of the ``list`` and used as the value.</span>
-<span class="s1">pad_cval_mask (number, Sequence[number]): Same as pad_cval but only for masks.</span>
-<span class="s1">keep_size (bool):</span>
-<span class="s1">    After cropping and padding, the result image will usually have a</span>
-<span class="s1">    different height/width compared to the original input image. If this</span>
-<span class="s1">    parameter is set to ``True``, then the cropped/padded image will be</span>
-<span class="s1">    resized to the input image'</span><span class="n">s</span> <span class="n">size</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.</span> <span class="n">the</span> <span class="n">output</span> <span class="n">shape</span> <span class="k">is</span> <span class="k">always</span> <span class="n">identical</span> <span class="k">to</span> <span class="n">the</span> <span class="n">input</span> <span class="n">shape</span><span class="p">.</span>
-<span class="n">sample_independently</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">If</span> <span class="n n-Quoted">``</span><span class="no">False</span><span class="n n-Quoted">``</span> <span class="o">*</span><span class="k">and</span><span class="o">*</span> <span class="n">the</span> <span class="k">values</span> <span class="k">for</span> <span class="n n-Quoted">`px`</span><span class="o">/</span><span class="n n-Quoted">`percent`</span> <span class="n">result</span> <span class="k">in</span> <span class="n">exactly</span>
-    <span class="o">*</span><span class="k">one</span><span class="o">*</span> <span class="n">probability</span> <span class="n">distribution</span> <span class="k">for</span> <span class="k">all</span> <span class="n">image</span> <span class="n">sides</span><span class="p">,</span> <span class="k">only</span> <span class="k">one</span> <span class="n">single</span>
-    <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="k">from</span> <span class="n">that</span> <span class="n">probability</span> <span class="n">distribution</span> <span class="k">and</span> <span class="n">used</span> <span class="k">for</span>
-    <span class="k">all</span> <span class="n">sides</span><span class="p">.</span> <span class="n">I</span><span class="p">.</span><span class="n">e</span><span class="p">.</span> <span class="n">the</span> <span class="n">crop</span><span class="o">/</span><span class="n">pad</span> <span class="n">amount</span> <span class="k">then</span> <span class="k">is</span> <span class="n">the</span> <span class="n">same</span> <span class="k">for</span> <span class="k">all</span> <span class="n">sides</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n n-Quoted">``</span><span class="no">True</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="n">four</span> <span class="k">values</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="n">independently</span><span class="p">,</span> <span class="k">one</span> <span class="n">per</span> <span class="n">side</span><span class="p">.</span>
-<span class="n">interpolation</span> <span class="p">(</span><span class="n">OpenCV</span> <span class="n">flag</span><span class="p">)</span><span class="o">:</span> <span class="n">flag</span> <span class="n">that</span> <span class="k">is</span> <span class="n">used</span> <span class="k">to</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">interpolation</span> <span class="k">algorithm</span><span class="p">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">one</span> <span class="k">of</span><span class="o">:</span>
-    <span class="n">cv2</span><span class="p">.</span><span class="n">INTER_NEAREST</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">INTER_CUBIC</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">INTER_AREA</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LANCZOS4</span><span class="p">.</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="n">cv2</span><span class="p">.</span><span class="n">INTER_LINEAR</span><span class="p">.</span>
-</code></pre></div>
-<p>Targets:
+<p>Note:
+    This transformation automatically resizes images back to their original size. To deactivate this, add the
+    parameter <code>keep_size=False</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>px</code></td>
+<td><code>int or tuple</code></td>
+<td><p>The number of pixels to crop (negative values) or pad (positive values)
+on each side of the image. Either this or the parameter <code>percent</code> may
+be set, not both at the same time.
+    * If <code>None</code>, then pixel-based cropping/padding will not be used.
+    * If <code>int</code>, then that exact number of pixels will always be cropped/padded.
+    * If a <code>tuple</code> of two <code>int</code> s with values <code>a</code> and <code>b</code>,
+      then each side will be cropped/padded by a random amount sampled
+      uniformly per image and side from the interval <code>[a, b]</code>. If
+      however <code>sample_independently</code> is set to <code>False</code>, only one
+      value will be sampled per image and used for all sides.
+    * If a <code>tuple</code> of four entries, then the entries represent top,
+      right, bottom, left. Each entry may be a single <code>int</code> (always
+      crop/pad by exactly that value), a <code>tuple</code> of two <code>int</code> s
+      <code>a</code> and <code>b</code> (crop/pad by an amount within <code>[a, b]</code>), a
+      <code>list</code> of <code>int</code> s (crop/pad by a random value that is
+      contained in the <code>list</code>).</p></td>
+</tr>
+<tr>
+<td><code>percent</code></td>
+<td><code>float or tuple</code></td>
+<td><p>The number of pixels to crop (negative values) or pad (positive values)
+on each side of the image given as a <em>fraction</em> of the image
+height/width. E.g. if this is set to <code>-0.1</code>, the transformation will
+always crop away <code>10%</code> of the image's height at both the top and the
+bottom (both <code>10%</code> each), as well as <code>10%</code> of the width at the
+right and left.
+Expected value range is <code>(-1.0, inf)</code>.
+Either this or the parameter <code>px</code> may be set, not both
+at the same time.
+    * If <code>None</code>, then fraction-based cropping/padding will not be
+      used.
+    * If <code>float</code>, then that fraction will always be cropped/padded.
+    * If a <code>tuple</code> of two <code>float</code> s with values <code>a</code> and <code>b</code>,
+      then each side will be cropped/padded by a random fraction
+      sampled uniformly per image and side from the interval
+      <code>[a, b]</code>. If however <code>sample_independently</code> is set to
+      <code>False</code>, only one value will be sampled per image and used for
+      all sides.
+    * If a <code>tuple</code> of four entries, then the entries represent top,
+      right, bottom, left. Each entry may be a single <code>float</code>
+      (always crop/pad by exactly that percent value), a <code>tuple</code> of
+      two <code>float</code> s <code>a</code> and <code>b</code> (crop/pad by a fraction from
+      <code>[a, b]</code>), a <code>list</code> of <code>float</code> s (crop/pad by a random
+      value that is contained in the list).</p></td>
+</tr>
+<tr>
+<td><code>pad_mode</code></td>
+<td><code>int</code></td>
+<td><p>OpenCV border mode.</p></td>
+</tr>
+<tr>
+<td><code>pad_cval</code></td>
+<td><code>number, Sequence[number]</code></td>
+<td><p>The constant value to use if the pad mode is <code>BORDER_CONSTANT</code>.
+    * If <code>number</code>, then that value will be used.
+    * If a <code>tuple</code> of two <code>number</code> s and at least one of them is
+      a <code>float</code>, then a random number will be uniformly sampled per
+      image from the continuous interval <code>[a, b]</code> and used as the
+      value. If both <code>number</code> s are <code>int</code> s, the interval is
+      discrete.
+    * If a <code>list</code> of <code>number</code>, then a random value will be chosen
+      from the elements of the <code>list</code> and used as the value.</p></td>
+</tr>
+<tr>
+<td><code>pad_cval_mask</code></td>
+<td><code>number, Sequence[number]</code></td>
+<td><p>Same as pad_cval but only for masks.</p></td>
+</tr>
+<tr>
+<td><code>keep_size</code></td>
+<td><code>bool</code></td>
+<td><p>After cropping and padding, the result image will usually have a
+different height/width compared to the original input image. If this
+parameter is set to <code>True</code>, then the cropped/padded image will be
+resized to the input image's size, i.e. the output shape is always identical to the input shape.</p></td>
+</tr>
+<tr>
+<td><code>sample_independently</code></td>
+<td><code>bool</code></td>
+<td><p>If <code>False</code> <em>and</em> the values for <code>px</code>/<code>percent</code> result in exactly
+<em>one</em> probability distribution for all image sides, only one single
+value will be sampled from that probability distribution and used for
+all sides. I.e. the crop/pad amount then is the same for all sides.
+If <code>True</code>, four values will be sampled independently, one per side.</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     any</p>
@@ -2125,23 +2273,52 @@ albumentations.augmentations.crops.transforms.CropNonEmptyMaskIfExists</strong><
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L179" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L182" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.CropNonEmptyMaskIfExists" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop area with mask if mask is non-empty, else make random crop.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">height</span><span class="o">:</span> <span class="n">vertical</span> <span class="n">size</span> <span class="n">of</span> <span class="n">crop</span> <span class="k">in</span> <span class="n">pixels</span>
-<span class="n">width</span><span class="o">:</span> <span class="n">horizontal</span> <span class="n">size</span> <span class="n">of</span> <span class="n">crop</span> <span class="k">in</span> <span class="n">pixels</span>
-<span class="n">ignore_values</span> <span class="o">(</span><span class="n">list</span> <span class="n">of</span> <span class="n">int</span><span class="o">):</span> <span class="n">values</span> <span class="n">to</span> <span class="n">ignore</span> <span class="k">in</span> <span class="n">mask</span><span class="o">,</span> <span class="err">`</span><span class="mi">0</span><span class="err">`</span> <span class="n">values</span> <span class="n">are</span> <span class="n">always</span> <span class="n">ignored</span>
-    <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">g</span><span class="o">.</span> <span class="k">if</span> <span class="n">background</span> <span class="n">value</span> <span class="k">is</span> <span class="mi">5</span> <span class="kd">set</span> <span class="err">`</span><span class="n">ignore_values</span><span class="o">=[</span><span class="mi">5</span><span class="o">]</span><span class="err">`</span> <span class="n">to</span> <span class="n">ignore</span><span class="o">)</span>
-<span class="n">ignore_channels</span> <span class="o">(</span><span class="n">list</span> <span class="n">of</span> <span class="n">int</span><span class="o">):</span> <span class="n">channels</span> <span class="n">to</span> <span class="n">ignore</span> <span class="k">in</span> <span class="n">mask</span>
-    <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">g</span><span class="o">.</span> <span class="k">if</span> <span class="n">background</span> <span class="k">is</span> <span class="n">a</span> <span class="n">first</span> <span class="n">channel</span> <span class="kd">set</span> <span class="err">`</span><span class="n">ignore_channels</span><span class="o">=[</span><span class="mi">0</span><span class="o">]</span><span class="err">`</span> <span class="n">to</span> <span class="n">ignore</span><span class="o">)</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">1.0</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td></td>
+<td><p>vertical size of crop in pixels</p></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td></td>
+<td><p>horizontal size of crop in pixels</p></td>
+</tr>
+<tr>
+<td><code>ignore_values</code></td>
+<td><code>list of int</code></td>
+<td><p>values to ignore in mask, <code>0</code> values are always ignored
+(e.g. if background value is 5 set <code>ignore_values=[5]</code> to ignore)</p></td>
+</tr>
+<tr>
+<td><code>ignore_channels</code></td>
+<td><code>list of int</code></td>
+<td><p>channels to ignore in mask
+(e.g. if background is a first channel set <code>ignore_channels=[0]</code> to ignore)</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2160,19 +2337,40 @@ albumentations.augmentations.crops.transforms.RandomCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L50" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L51" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop a random part of the input.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">height</span><span class="o">:</span> <span class="n">height</span> <span class="n">of</span> <span class="n">the</span> <span class="n">crop</span><span class="o">.</span>
-<span class="n">width</span><span class="o">:</span> <span class="n">width</span> <span class="n">of</span> <span class="n">the</span> <span class="n">crop</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">1</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td></td>
+<td><p>height of the crop.</p></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td></td>
+<td><p>width of the crop.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2191,25 +2389,50 @@ albumentations.augmentations.crops.transforms.RandomCropFromBorders</strong></co
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L1032" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L1041" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCropFromBorders" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop bbox from image randomly cut parts from borders without resize at the end</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>crop_left (float): single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut
-from left side in range [0, crop_left * width)
-crop_right (float): single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut
-from right side in range [(1 - crop_right) * width, width)
-crop_top (float): singlefloat value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut
-from top side in range [0, crop_top * height)
-crop_bottom (float): single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut
-from bottom side in range [(1 - crop_bottom) * height, height)
-p (float): probability of applying the transform. Default: 1.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>crop_left</code></td>
+<td><code>float</code></td>
+<td><p>single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut</p></td>
+</tr>
+<tr>
+<td><code>crop_right</code></td>
+<td><code>float</code></td>
+<td><p>single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut</p></td>
+</tr>
+<tr>
+<td><code>crop_top</code></td>
+<td><code>float</code></td>
+<td><p>singlefloat value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut</p></td>
+</tr>
+<tr>
+<td><code>crop_bottom</code></td>
+<td><code>float</code></td>
+<td><p>single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2228,30 +2451,50 @@ albumentations.augmentations.crops.transforms.RandomCropNearBBox</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L496" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L502" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomCropNearBBox" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop bbox from image with random shift by x,y coordinates</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">max_part_shift</span> <span class="p">(</span><span class="kt">float</span><span class="p">,</span> <span class="err">[</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">Max</span> <span class="n">shift</span> <span class="k">in</span> <span class="n n-Quoted">`height`</span> <span class="k">and</span> <span class="n n-Quoted">`width`</span> <span class="n">dimensions</span> <span class="n">relative</span>
-    <span class="k">to</span> <span class="n n-Quoted">`cropping_bbox`</span> <span class="n">dimension</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n">max_part_shift</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="kt">float</span><span class="p">,</span> <span class="n">the</span> <span class="k">range</span> <span class="n">will</span> <span class="n">be</span> <span class="p">(</span><span class="n">max_part_shift</span><span class="p">,</span> <span class="n">max_part_shift</span><span class="p">).</span>
-    <span class="k">Default</span> <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">).</span>
-<span class="n">cropping_box_key</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="n">Additional</span> <span class="n">target</span> <span class="k">key</span> <span class="k">for</span> <span class="n">cropping</span> <span class="n">box</span><span class="p">.</span> <span class="k">Default</span> <span class="n n-Quoted">`cropping_bbox`</span>
-<span class="n">p</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">1.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_part_shift</code></td>
+<td><code>float, [float, float]</code></td>
+<td><p>Max shift in <code>height</code> and <code>width</code> dimensions relative
+to <code>cropping_bbox</code> dimension.
+If max_part_shift is a single float, the range will be (max_part_shift, max_part_shift).
+Default (0.3, 0.3).</p></td>
+</tr>
+<tr>
+<td><code>cropping_box_key</code></td>
+<td><code>str</code></td>
+<td><p>Additional target key for cropping box. Default <code>cropping_bbox</code></p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
 <p><strong>Examples:</strong></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>&gt;&gt;&gt; aug = Compose([RandomCropNearBBox(max_part_shift=(0.1, 0.5), cropping_box_key='test_box')],
-&gt;&gt;&gt;              bbox_params=BboxParams("pascal_voc"))
-&gt;&gt;&gt; result = aug(image=image, bboxes=bboxes, test_box=[0, 5, 10, 20])
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">aug</span> <span class="o">=</span> <span class="n">Compose</span><span class="p">([</span><span class="n">RandomCropNearBBox</span><span class="p">(</span><span class="n">max_part_shift</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">cropping_box_key</span><span class="o">=</span><span class="s1">'test_box'</span><span class="p">)],</span>
+<span class="o">&gt;&gt;&gt;</span>              <span class="n">bbox_params</span><span class="o">=</span><span class="n">BboxParams</span><span class="p">(</span><span class="s2">"pascal_voc"</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">aug</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bboxes</span><span class="o">=</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">test_box</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
 </code></pre></div>
 <div class="doc doc-children">
 </div>
@@ -2268,24 +2511,57 @@ albumentations.augmentations.crops.transforms.RandomResizedCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L403" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L409" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomResizedCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Torchvision's variant of crop a random part of the input and rescale it to some size.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>height (int): height after crop and resize.
-width (int): width after crop and resize.
-scale ([float, float]): range of size of the origin size cropped
-ratio ([float, float]): range of aspect ratio of the origin aspect ratio cropped
-interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:
-    cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-    Default: cv2.INTER_LINEAR.
-p (float): probability of applying the transform. Default: 1.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td><p>height after crop and resize.</p></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td><p>width after crop and resize.</p></td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td><code>[float, float]</code></td>
+<td><p>range of size of the origin size cropped</p></td>
+</tr>
+<tr>
+<td><code>ratio</code></td>
+<td><code>[float, float]</code></td>
+<td><p>range of aspect ratio of the origin aspect ratio cropped</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2304,23 +2580,52 @@ albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop</strong></
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L647" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L655" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomSizedBBoxSafeCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop a random part of the input and rescale it to some size without loss of bboxes.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">height</span><span class="o">:</span> <span class="n">height</span> <span class="n">after</span> <span class="n">crop</span> <span class="n">and</span> <span class="n">resize</span><span class="o">.</span>
-<span class="n">width</span><span class="o">:</span> <span class="n">width</span> <span class="n">after</span> <span class="n">crop</span> <span class="n">and</span> <span class="n">resize</span><span class="o">.</span>
-<span class="n">erosion_rate</span><span class="o">:</span> <span class="n">erosion</span> <span class="n">rate</span> <span class="n">applied</span> <span class="n">on</span> <span class="n">input</span> <span class="n">image</span> <span class="n">height</span> <span class="n">before</span> <span class="n">crop</span><span class="o">.</span>
-<span class="n">interpolation</span> <span class="o">(</span><span class="n">OpenCV</span> <span class="n">flag</span><span class="o">):</span> <span class="n">flag</span> <span class="n">that</span> <span class="k">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">interpolation</span> <span class="n">algorithm</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span><span class="o">:</span>
-    <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_NEAREST</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_LINEAR</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_CUBIC</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_AREA</span><span class="o">,</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_LANCZOS4</span><span class="o">.</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="n">cv2</span><span class="o">.</span><span class="na">INTER_LINEAR</span><span class="o">.</span>
-<span class="n">p</span> <span class="o">(</span><span class="n">float</span><span class="o">):</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">1</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>height</code></td>
+<td></td>
+<td><p>height after crop and resize.</p></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td></td>
+<td><p>width after crop and resize.</p></td>
+</tr>
+<tr>
+<td><code>erosion_rate</code></td>
+<td></td>
+<td><p>erosion rate applied on input image height before crop.</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes
 Image types:
     uint8, float32</p>
@@ -2339,24 +2644,57 @@ albumentations.augmentations.crops.transforms.RandomSizedCrop</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L354" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/crops/transforms.py#L358" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.crops.transforms.RandomSizedCrop" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Crop a random part of the input and rescale it to some size.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>min_max_height ([int, int]): crop size limits.
-height (int): height after crop and resize.
-width (int): width after crop and resize.
-w2h_ratio (float): aspect ratio of crop.
-interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:
-    cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
-    Default: cv2.INTER_LINEAR.
-p (float): probability of applying the transform. Default: 1.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min_max_height</code></td>
+<td><code>[int, int]</code></td>
+<td><p>crop size limits.</p></td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td><code>int</code></td>
+<td><p>height after crop and resize.</p></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>int</code></td>
+<td><p>width after crop and resize.</p></td>
+</tr>
+<tr>
+<td><code>w2h_ratio</code></td>
+<td><code>float</code></td>
+<td><p>aspect ratio of crop.</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td><code>OpenCV flag</code></td>
+<td><p>flag that is used to specify the interpolation algorithm. Should be one of:
+cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.
+Default: cv2.INTER_LINEAR.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, bboxes, keypoints</p>
 <p>Image types:
     uint8, float32</p>

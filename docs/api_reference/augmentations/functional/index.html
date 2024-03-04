@@ -1684,6 +1684,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1847,7 +1918,7 @@
 
     <li class="md-nav__item">
       <a href="../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1896,17 +1967,43 @@
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, haze_list)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L626" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_fog" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L617" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_fog" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Add fog to the image.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">Image</span><span class="o">.</span>
-<span class="n">fog_coef</span><span class="o">:</span> <span class="n">Fog</span> <span class="n">coefficient</span><span class="o">.</span>
-<span class="n">alpha_coef</span><span class="o">:</span> <span class="n">Alpha</span> <span class="n">coefficient</span><span class="o">.</span>
-<span class="n">haze_list</span><span class="o">:</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>Image.</p></td>
+</tr>
+<tr>
+<td><code>fog_coef</code></td>
+<td><code>float</code></td>
+<td><p>Fog coefficient.</p></td>
+</tr>
+<tr>
+<td><code>alpha_coef</code></td>
+<td><code>float</code></td>
+<td><p>Alpha coefficient.</p></td>
+</tr>
+<tr>
+<td><code>haze_list</code></td>
+<td><code>List[Tuple[int, int]]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -1918,12 +2015,10 @@ albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, h
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>Image.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>Image.
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -1931,16 +2026,34 @@ albumentations.augmentations.functional.add_fog    (img, fog_coef, alpha_coef, h
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_gravel    (img, gravels)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L790" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_gravel" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L775" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_gravel" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Add gravel to the image.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>img (numpy.ndarray): image to add gravel to
-gravels (list): list of gravel parameters. (float, float, float, float):
-    (top-left x, top-left y, bottom-right x, bottom right y)
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>image to add gravel to</p></td>
+</tr>
+<tr>
+<td><code>gravels</code></td>
+<td><code>List[Any]</code></td>
+<td><p>list of gravel parameters. (float, float, float, float):
+(top-left x, top-left y, bottom-right x, bottom right y)</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -1952,12 +2065,10 @@ gravels (list): list of gravel parameters. (float, float, float, float):
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>numpy.ndarray:</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>numpy.ndarray:
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -1965,20 +2076,62 @@ gravels (list): list of gravel parameters. (float, float, float, float):
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_rain    (img, slant, drop_length, drop_width, drop_color, blur_value, brightness_coefficient, rain_drops)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L560" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_rain" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L553" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_rain" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">Image</span><span class="o">.</span>
-<span class="n">slant</span><span class="o">:</span>
-<span class="n">drop_length</span><span class="o">:</span>
-<span class="n">drop_width</span><span class="o">:</span>
-<span class="n">drop_color</span><span class="o">:</span>
-<span class="n">blur_value</span><span class="o">:</span> <span class="n">Rainy</span> <span class="n">view</span> <span class="n">are</span> <span class="n">blurry</span><span class="o">.</span>
-<span class="n">brightness_coefficient</span><span class="o">:</span> <span class="n">Rainy</span> <span class="n">days</span> <span class="n">are</span> <span class="n">usually</span> <span class="n">shady</span><span class="o">.</span>
-<span class="n">rain_drops</span><span class="o">:</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>Image.</p></td>
+</tr>
+<tr>
+<td><code>slant</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>drop_length</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>drop_width</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>drop_color</code></td>
+<td><code>Tuple[int, int, int]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>blur_value</code></td>
+<td><code>int</code></td>
+<td><p>Rainy view are blurry.</p></td>
+</tr>
+<tr>
+<td><code>brightness_coefficient</code></td>
+<td><code>float</code></td>
+<td><p>Rainy days are usually shady.</p></td>
+</tr>
+<tr>
+<td><code>rain_drops</code></td>
+<td><code>List[Tuple[int, int]]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -1990,12 +2143,10 @@ albumentations.augmentations.functional.add_rain    (img, slant, drop_length, dr
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>Image</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>Image.
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2003,15 +2154,33 @@ albumentations.augmentations.functional.add_rain    (img, slant, drop_length, dr
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_shadow    (img, vertices_list)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L744" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_shadow" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L731" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_shadow" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Add shadows to the image.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>img (numpy.ndarray):
-vertices_list (list):
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>vertices_list</code></td>
+<td><code>List[List[Tuple[int, int]]]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2023,12 +2192,10 @@ vertices_list (list):
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>numpy.ndarray:</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>numpy.ndarray:
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2036,16 +2203,38 @@ vertices_list (list):
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_snow    (img, snow_point, brightness_coeff)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L512" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_snow" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L507" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_snow" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Bleaches out pixels, imitation snow.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">Image</span><span class="o">.</span>
-<span class="n">snow_point</span><span class="o">:</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">show</span> <span class="n">points</span><span class="o">.</span>
-<span class="n">brightness_coeff</span><span class="o">:</span> <span class="n">Brightness</span> <span class="n">coefficient</span><span class="o">.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>Image.</p></td>
+</tr>
+<tr>
+<td><code>snow_point</code></td>
+<td><code>float</code></td>
+<td><p>Number of show points.</p></td>
+</tr>
+<tr>
+<td><code>brightness_coeff</code></td>
+<td><code>float</code></td>
+<td><p>Brightness coefficient.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2057,12 +2246,10 @@ albumentations.augmentations.functional.add_snow    (img, snow_point, brightness
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>Image.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>Image.
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2070,19 +2257,53 @@ albumentations.augmentations.functional.add_snow    (img, snow_point, brightness
 <code class="highlight language-python">def
 albumentations.augmentations.functional.add_sun_flare    (img, flare_center_x, flare_center_y, src_radius, src_color, circles)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L679" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_sun_flare" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L668" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.add_sun_flare" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Add sun flare.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>img (numpy.ndarray):
-flare_center_x (float):
-flare_center_y (float):
-src_radius:
-src_color (int, int, int):
-circles (list):
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flare_center_x</code></td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flare_center_y</code></td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>src_radius</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>src_color</code></td>
+<td><code>Union[int, float, Sequence[int], Sequence[float]]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>circles</code></td>
+<td><code>List[Any]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2094,12 +2315,10 @@ circles (list):
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>numpy.ndarray:</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>numpy.ndarray:
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2107,13 +2326,27 @@ circles (list):
 <code class="highlight language-python">def
 albumentations.augmentations.functional.bbox_from_mask    (mask)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1088" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.bbox_from_mask" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1066" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.bbox_from_mask" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Create bounding box from binary mask (fast version)</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>mask (numpy.ndarray): binary mask.
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mask</code></td>
+<td><code>ndarray</code></td>
+<td><p>binary mask.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2125,12 +2358,10 @@ albumentations.augmentations.functional.bbox_from_mask    (mask)
 <tbody>
 <tr>
 <td><code>Tuple[int, int, int, int]</code></td>
-<td></td>
+<td><p>tuple: A bounding box tuple <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">tuple</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">tuple</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span><span class="o">.</span>
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2138,16 +2369,34 @@ albumentations.augmentations.functional.bbox_from_mask    (mask)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1128" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.fancy_pca" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1102" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.fancy_pca" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Perform 'Fancy PCA' augmentation from:
 <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank">http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">numpy</span> <span class="n">array</span> <span class="k">with</span> <span class="o">(</span><span class="n">h</span><span class="o">,</span> <span class="n">w</span><span class="o">,</span> <span class="n">rgb</span><span class="o">)</span> <span class="n">shape</span><span class="o">,</span> <span class="k">as</span> <span class="n">ints</span> <span class="n">between</span> <span class="mi">0</span><span class="o">-</span><span class="mi">255</span>
-<span class="n">alpha</span><span class="o">:</span> <span class="n">how</span> <span class="n">much</span> <span class="n">to</span> <span class="n">perturb</span><span class="o">/</span><span class="n">scale</span> <span class="n">the</span> <span class="n">eigen</span> <span class="n">vecs</span> <span class="n">and</span> <span class="n">vals</span>
-        <span class="n">the</span> <span class="n">paper</span> <span class="n">used</span> <span class="n">std</span><span class="o">=</span><span class="mf">0.1</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>numpy array with (h, w, rgb) shape, as ints between 0-255</p></td>
+</tr>
+<tr>
+<td><code>alpha</code></td>
+<td><code>float</code></td>
+<td><p>how much to perturb/scale the eigen vecs and vals
+    the paper used std=0.1</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2159,12 +2408,10 @@ albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>numpy image-like array as uint8 range(0, 255)</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>numpy image-like array as uint8 range(0, 255)
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2173,18 +2420,48 @@ albumentations.augmentations.functional.fancy_pca    (img, alpha=0.1)
 albumentations.augmentations.functional.iso_noise    (image, color_shift=0.05, intensity=0.5, random_state=None, **
 kwargs)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L905" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.iso_noise" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L888" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.iso_noise" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Apply poisson noise to image to simulate camera sensor noise.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">image</span> <span class="ss">(</span><span class="nv">numpy</span>.<span class="nv">ndarray</span><span class="ss">)</span>: <span class="nv">Input</span> <span class="nv">image</span>, <span class="nv">currently</span>, <span class="nv">only</span> <span class="nv">RGB</span>, <span class="nv">uint8</span> <span class="nv">images</span> <span class="nv">are</span> <span class="nv">supported</span>.
-<span class="nv">color_shift</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>:
-<span class="nv">intensity</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">Multiplication</span> <span class="nv">factor</span> <span class="k">for</span> <span class="nv">noise</span> <span class="nv">values</span>. <span class="nv">Values</span> <span class="nv">of</span> <span class="o">~</span><span class="mi">0</span>.<span class="mi">5</span> <span class="nv">are</span> <span class="nv">produce</span> <span class="nv">noticeable</span>,
-           <span class="nv">yet</span> <span class="nv">acceptable</span> <span class="nv">level</span> <span class="nv">of</span> <span class="nv">noise</span>.
-<span class="nv">random_state</span>:
-<span class="o">**</span><span class="nv">kwargs</span>:
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td><code>ndarray</code></td>
+<td><p>Input image, currently, only RGB, uint8 images are supported.</p></td>
+</tr>
+<tr>
+<td><code>color_shift</code></td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>intensity</code></td>
+<td><code>float</code></td>
+<td><p>Multiplication factor for noise values. Values of ~0.5 are produce noticeable,
+       yet acceptable level of noise.</p></td>
+</tr>
+<tr>
+<td><code>random_state</code></td>
+<td><code>Optional[int]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>**kwargs</code></td>
+<td><code>Any</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2196,12 +2473,10 @@ kwargs)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>numpy.ndarray: Noised image</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>numpy.ndarray: Noised image
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2209,14 +2484,32 @@ kwargs)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1109" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.mask_from_bbox" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1085" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.mask_from_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Create binary mask from bounding box</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">input</span> <span class="n">image</span>
-<span class="n">bbox</span><span class="o">:</span> <span class="n">A</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">tuple</span> <span class="err">`</span><span class="o">(</span><span class="n">x_min</span><span class="o">,</span> <span class="n">y_min</span><span class="o">,</span> <span class="n">x_max</span><span class="o">,</span> <span class="n">y_max</span><span class="o">)</span><span class="err">`</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>input image</p></td>
+</tr>
+<tr>
+<td><code>bbox</code></td>
+<td><code>Tuple[int, int, int, int]</code></td>
+<td><p>A bounding box tuple <code>(x_min, y_min, x_max, y_max)</code></p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2228,12 +2521,10 @@ albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>mask: binary mask</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">mask</span><span class="o">:</span> <span class="n">binary</span> <span class="n">mask</span>
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2241,17 +2532,39 @@ albumentations.augmentations.functional.mask_from_bbox    (img, bbox)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.move_tone_curve    (img, low_y, high_y)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L369" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.move_tone_curve" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L365" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.move_tone_curve" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Rescales the relationship between bright and dark areas of the image by manipulating its tone curve.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">RGB</span> <span class="n">or</span> <span class="n">grayscale</span> <span class="n">image</span><span class="o">.</span>
-<span class="n">low_y</span><span class="o">:</span> <span class="n">y</span><span class="o">-</span><span class="n">position</span> <span class="n">of</span> <span class="n">a</span> <span class="n">Bezier</span> <span class="n">control</span> <span class="n">point</span> <span class="n">used</span>
-    <span class="n">to</span> <span class="n">adjust</span> <span class="n">the</span> <span class="n">tone</span> <span class="n">curve</span><span class="o">,</span> <span class="n">must</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span>
-<span class="n">high_y</span><span class="o">:</span> <span class="n">y</span><span class="o">-</span><span class="n">position</span> <span class="n">of</span> <span class="n">a</span> <span class="n">Bezier</span> <span class="n">control</span> <span class="n">point</span> <span class="n">used</span>
-    <span class="n">to</span> <span class="n">adjust</span> <span class="n">image</span> <span class="n">tone</span> <span class="n">curve</span><span class="o">,</span> <span class="n">must</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>RGB or grayscale image.</p></td>
+</tr>
+<tr>
+<td><code>low_y</code></td>
+<td><code>float</code></td>
+<td><p>y-position of a Bezier control point used
+to adjust the tone curve, must be in range [0, 1]</p></td>
+</tr>
+<tr>
+<td><code>high_y</code></td>
+<td><code>float</code></td>
+<td><p>y-position of a Bezier control point used
+to adjust image tone curve, must be in range [0, 1]</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2259,13 +2572,31 @@ albumentations.augmentations.functional.move_tone_curve    (img, low_y, high_y)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.multiply    (img, multiplier)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1068" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.multiply" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1047" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.multiply" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">Image</span><span class="o">.</span>
-<span class="n">multiplier</span><span class="o">:</span> <span class="n">Multiplier</span> <span class="n">coefficient</span><span class="o">.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>Image.</p></td>
+</tr>
+<tr>
+<td><code>multiplier</code></td>
+<td><code>ndarray</code></td>
+<td><p>Multiplier coefficient.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2277,12 +2608,10 @@ albumentations.augmentations.functional.multiply    (img, multiplier)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>Image multiplied by <code>multiplier</code> coefficient.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">Image</span> <span class="n">multiplied</span> <span class="k">by</span> <span class="n n-Quoted">`multiplier`</span> <span class="n">coefficient</span><span class="p">.</span>
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2290,14 +2619,32 @@ albumentations.augmentations.functional.multiply    (img, multiplier)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.posterize    (img, bits)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L214" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.posterize" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L212" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.posterize" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Reduce the number of bits for each color channel.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">image</span> <span class="n">to</span> <span class="n">posterize</span><span class="o">.</span>
-<span class="n">bits</span><span class="o">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">high</span> <span class="n">bits</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">8</span><span class="o">]</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>image to posterize.</p></td>
+</tr>
+<tr>
+<td><code>bits</code></td>
+<td><code>int</code></td>
+<td><p>number of high bits. Must be in range [0, 8]</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2309,12 +2656,10 @@ albumentations.augmentations.functional.posterize    (img, bits)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>Image with reduced color channels.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>Image with reduced color channels.
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2326,10 +2671,28 @@ albumentations.augmentations.functional.solarize    (img, threshold=128)
 </h2>
 <div class="doc doc-contents">
 <p>Invert all pixel values above a threshold.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">img</span><span class="o">:</span> <span class="n">The</span> <span class="n">image</span> <span class="n">to</span> <span class="n">solarize</span><span class="o">.</span>
-<span class="n">threshold</span><span class="o">:</span> <span class="n">All</span> <span class="n">pixels</span> <span class="n">above</span> <span class="k">this</span> <span class="n">grayscale</span> <span class="n">level</span> <span class="n">are</span> <span class="n">inverted</span><span class="o">.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>ndarray</code></td>
+<td><p>The image to solarize.</p></td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td><code>int</code></td>
+<td><p>All pixels above this grayscale level are inverted.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2341,12 +2704,10 @@ albumentations.augmentations.functional.solarize    (img, threshold=128)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>Solarized image.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>Solarized image.
-</code></pre></div>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2354,17 +2715,35 @@ albumentations.augmentations.functional.solarize    (img, threshold=128)
 <code class="highlight language-python">def
 albumentations.augmentations.functional.swap_tiles_on_image    (image, tiles)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L1007" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.swap_tiles_on_image" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/functional.py#L988" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.functional.swap_tiles_on_image" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Swap tiles on image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">image</span><span class="o">:</span> <span class="n">Input</span> <span class="n">image</span><span class="o">.</span>
-<span class="n">tiles</span><span class="o">:</span> <span class="n">array</span> <span class="n">of</span> <span class="n">tuples</span><span class="o">(</span>
-    <span class="n">current_left_up_corner_row</span><span class="o">,</span> <span class="n">current_left_up_corner_col</span><span class="o">,</span>
-    <span class="n">old_left_up_corner_row</span><span class="o">,</span> <span class="n">old_left_up_corner_col</span><span class="o">,</span>
-    <span class="n">height_tile</span><span class="o">,</span> <span class="n">width_tile</span><span class="o">)</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td><code>ndarray</code></td>
+<td><p>Input image.</p></td>
+</tr>
+<tr>
+<td><code>tiles</code></td>
+<td><code>ndarray</code></td>
+<td><p>array of tuples(
+current_left_up_corner_row, current_left_up_corner_col,
+old_left_up_corner_row, old_left_up_corner_col,
+height_tile, width_tile)</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2376,12 +2755,10 @@ albumentations.augmentations.functional.swap_tiles_on_image    (image, tiles)
 <tbody>
 <tr>
 <td><code>ndarray</code></td>
-<td></td>
+<td><p>np.ndarray: Output image.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code>np.ndarray: Output image.
-</code></pre></div>
+</table>
 </div>
 </div>
 </div>

@@ -1739,6 +1739,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1867,7 +1938,7 @@
 
     <li class="md-nav__item">
       <a href="../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1931,13 +2002,31 @@ albumentations.core.serialization.Serializable</strong></code>
 <div class="doc doc-contents">
 <p>Take a transform pipeline and convert it to a serializable representation that uses only standard
 python data types: dictionaries, lists, strings, integers, and floats.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">self</span><span class="o">:</span> <span class="n">A</span> <span class="n">transform</span> <span class="n">that</span> <span class="n">should</span> <span class="n">be</span> <span class="n">serialized</span><span class="p">.</span> <span class="k">If</span> <span class="n">the</span> <span class="n">transform</span> <span class="n">doesn</span><span class="s1">'t implement the `to_dict`</span>
-<span class="s1">    method and `on_not_implemented_error` equals to '</span><span class="n">raise</span><span class="s1">' then `NotImplementedError` is raised.</span>
-<span class="s1">    If `on_not_implemented_error` equals to '</span><span class="n">warn</span><span class="s1">' then `NotImplementedError` will be ignored</span>
-<span class="s1">    but no transform parameters will be serialized.</span>
-<span class="s1">on_not_implemented_error (str): `raise` or `warn`.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>self</code></td>
+<td></td>
+<td><p>A transform that should be serialized. If the transform doesn't implement the <code>to_dict</code>
+method and <code>on_not_implemented_error</code> equals to 'raise' then <code>NotImplementedError</code> is raised.
+If <code>on_not_implemented_error</code> equals to 'warn' then <code>NotImplementedError</code> will be ignored
+but no transform parameters will be serialized.</p></td>
+</tr>
+<tr>
+<td><code>on_not_implemented_error</code></td>
+<td><code>str</code></td>
+<td><p><code>raise</code> or <code>warn</code>.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1978,16 +2067,14 @@ so they can be found later while deserializing transformation pipeline using cla
 <code class="highlight language-python">def
 albumentations.core.serialization.from_dict    (transform_dict, nonserializable=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L141" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L139" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.from_dict" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">transform_dict</span><span class="o">:</span> <span class="n">A</span> <span class="n">dictionary</span> <span class="k">with</span> <span class="n">serialized</span> <span class="n">transform</span> <span class="n">pipeline</span><span class="p">.</span>
-<span class="n">nonserializable</span> <span class="p">(</span><span class="n">dict</span><span class="p">)</span><span class="o">:</span> <span class="n">A</span> <span class="n">dictionary</span> <span class="n">that</span> <span class="k">contains</span> <span class="n">non</span><span class="o">-</span><span class="k">serializable</span> <span class="n">transforms</span><span class="p">.</span>
-    <span class="n">This</span> <span class="n">dictionary</span> <span class="k">is</span> <span class="n">required</span> <span class="k">when</span> <span class="n">you</span> <span class="n">are</span> <span class="n">restoring</span> <span class="n">a</span> <span class="n">pipeline</span> <span class="n">that</span> <span class="k">contains</span> <span class="n">non</span><span class="o">-</span><span class="k">serializable</span> <span class="n">transforms</span><span class="p">.</span>
-    <span class="k">Keys</span> <span class="k">in</span> <span class="n">that</span> <span class="n">dictionary</span> <span class="n">should</span> <span class="n">be</span> <span class="n">named</span> <span class="n">same</span> <span class="k">as</span> <span class="n n-Quoted">`name`</span> <span class="n">arguments</span> <span class="k">in</span> <span class="n">respective</span> <span class="n">transforms</span> <span class="k">from</span>
-    <span class="n">a</span> <span class="n">serialized</span> <span class="n">pipeline</span><span class="p">.</span>
-</code></pre></div>
+<p>transform_dict: A dictionary with serialized transform pipeline.
+nonserializable (dict): A dictionary that contains non-serializable transforms.
+    This dictionary is required when you are restoring a pipeline that contains non-serializable transforms.
+    Keys in that dictionary should be named same as <code>name</code> arguments in respective transforms from
+    a serialized pipeline.</p>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -1995,7 +2082,7 @@ albumentations.core.serialization.from_dict    (transform_dict, nonserializable=
 <code class="highlight language-python">def
 albumentations.core.serialization.get_shortest_class_fullname    (cls)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L286" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.get_shortest_class_fullname" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L278" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.get_shortest_class_fullname" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>The function <code>get_shortest_class_fullname</code> takes a class object as input and returns its shortened
@@ -2011,22 +2098,44 @@ is a subclass of <code>BasicCompose</code>
 <code class="highlight language-python">def
 albumentations.core.serialization.load    (filepath_or_buffer, data_format='json', nonserializable=None)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L220" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L215" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.load" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Load a serialized pipeline from a file or file-like object and construct a transform pipeline.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">filepath_or_buffer</span> <span class="p">(</span><span class="k">Union</span><span class="err">[</span><span class="n">str</span><span class="p">,</span> <span class="k">Path</span><span class="p">,</span> <span class="n">TextIO</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">file</span> <span class="k">path</span> <span class="k">or</span> <span class="k">file</span><span class="o">-</span><span class="k">like</span> <span class="n">object</span> <span class="k">to</span> <span class="k">read</span> <span class="n">the</span> <span class="n">serialized</span>
-    <span class="k">data</span> <span class="k">from</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n">a</span> <span class="k">string</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span> <span class="n">it</span> <span class="k">is</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">a</span> <span class="k">path</span> <span class="k">to</span> <span class="n">a</span> <span class="k">file</span><span class="p">.</span> <span class="k">If</span> <span class="n">a</span> <span class="k">file</span><span class="o">-</span><span class="k">like</span> <span class="n">object</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span>
-    <span class="n">the</span> <span class="n">serialized</span> <span class="k">data</span> <span class="n">will</span> <span class="n">be</span> <span class="k">read</span> <span class="k">from</span> <span class="n">it</span> <span class="n">directly</span><span class="p">.</span>
-<span class="n">data_format</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">format</span> <span class="k">of</span> <span class="n">the</span> <span class="n">serialized</span> <span class="k">data</span><span class="p">.</span> <span class="n">Valid</span> <span class="k">options</span> <span class="n">are</span> <span class="s1">'json'</span> <span class="k">and</span> <span class="s1">'yaml'</span><span class="p">.</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="s1">'json'</span><span class="p">.</span>
-<span class="n">nonserializable</span> <span class="p">(</span><span class="k">Optional</span><span class="err">[</span><span class="n">Dict</span><span class="err">[</span><span class="n">str</span><span class="p">,</span> <span class="k">Any</span><span class="err">]]</span><span class="p">)</span><span class="o">:</span> <span class="n">A</span> <span class="n">dictionary</span> <span class="n">that</span> <span class="k">contains</span> <span class="n">non</span><span class="o">-</span><span class="k">serializable</span> <span class="n">transforms</span><span class="p">.</span>
-    <span class="n">This</span> <span class="n">dictionary</span> <span class="k">is</span> <span class="n">required</span> <span class="k">when</span> <span class="n">restoring</span> <span class="n">a</span> <span class="n">pipeline</span> <span class="n">that</span> <span class="k">contains</span> <span class="n">non</span><span class="o">-</span><span class="k">serializable</span> <span class="n">transforms</span><span class="p">.</span>
-    <span class="k">Keys</span> <span class="k">in</span> <span class="n">the</span> <span class="n">dictionary</span> <span class="n">should</span> <span class="n">be</span> <span class="n">named</span> <span class="n">the</span> <span class="n">same</span> <span class="k">as</span> <span class="n">the</span> <span class="n n-Quoted">`name`</span> <span class="n">arguments</span> <span class="k">in</span> <span class="n">respective</span> <span class="n">transforms</span>
-    <span class="k">from</span> <span class="n">the</span> <span class="n">serialized</span> <span class="n">pipeline</span><span class="p">.</span> <span class="n">Defaults</span> <span class="k">to</span> <span class="k">None</span><span class="p">.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filepath_or_buffer</code></td>
+<td><code>Union[str, pathlib.Path, TextIO]</code></td>
+<td><p>The file path or file-like object to read the serialized
+data from.
+If a string is provided, it is interpreted as a path to a file. If a file-like object is provided,
+the serialized data will be read from it directly.</p></td>
+</tr>
+<tr>
+<td><code>data_format</code></td>
+<td><code>str</code></td>
+<td><p>The format of the serialized data. Valid options are 'json' and 'yaml'.
+Defaults to 'json'.</p></td>
+</tr>
+<tr>
+<td><code>nonserializable</code></td>
+<td><code>Optional[Dict[str, Any]]</code></td>
+<td><p>A dictionary that contains non-serializable transforms.
+This dictionary is required when restoring a pipeline that contains non-serializable transforms.
+Keys in the dictionary should be named the same as the <code>name</code> arguments in respective transforms
+from the serialized pipeline. Defaults to None.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2038,15 +2147,25 @@ albumentations.core.serialization.load    (filepath_or_buffer, data_format='json
 <tbody>
 <tr>
 <td><code>object</code></td>
-<td></td>
+<td><p>object: The deserialized transform pipeline.</p></td>
 </tr>
 </tbody>
-</table> <hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">object</span><span class="o">:</span> <span class="n">The</span> <span class="n">deserialized</span> <span class="n">transform</span> <span class="n">pipeline</span><span class="o">.</span>
-</code></pre></div>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">ValueError</span><span class="o">:</span> <span class="k">If</span> <span class="n n-Quoted">`data_format`</span> <span class="k">is</span> <span class="s1">'yaml'</span> <span class="n">but</span> <span class="n">PyYAML</span> <span class="k">is</span> <span class="k">not</span> <span class="n">installed</span><span class="p">.</span>
-</code></pre></div>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td><p>If <code>data_format</code> is 'yaml' but PyYAML is not installed.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2054,7 +2173,7 @@ albumentations.core.serialization.load    (filepath_or_buffer, data_format='json
 <code class="highlight language-python">def
 albumentations.core.serialization.register_additional_transforms    ()
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L271" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L263" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.register_additional_transforms" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Register transforms that are not imported directly into the <code>albumentations</code> module by checking
@@ -2066,26 +2185,64 @@ the availability of optional dependencies.</p>
 <code class="highlight language-python">def
 albumentations.core.serialization.save    (transform, filepath_or_buffer, data_format='json', on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L171" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L168" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.save" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Serialize a transform pipeline and save it to either a file specified by a path or a file-like object
 in either JSON or YAML format.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">transform</span> <span class="p">(</span><span class="k">Serializable</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="n">transform</span> <span class="n">pipeline</span> <span class="k">to</span> <span class="n">serialize</span><span class="p">.</span>
-<span class="n">filepath_or_buffer</span> <span class="p">(</span><span class="k">Union</span><span class="err">[</span><span class="n">str</span><span class="p">,</span> <span class="k">Path</span><span class="p">,</span> <span class="n">TextIO</span><span class="err">]</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">file</span> <span class="k">path</span> <span class="k">or</span> <span class="k">file</span><span class="o">-</span><span class="k">like</span> <span class="n">object</span> <span class="k">to</span> <span class="k">write</span> <span class="n">the</span> <span class="n">serialized</span>
-    <span class="k">data</span> <span class="k">to</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n">a</span> <span class="k">string</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span> <span class="n">it</span> <span class="k">is</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">a</span> <span class="k">path</span> <span class="k">to</span> <span class="n">a</span> <span class="k">file</span><span class="p">.</span> <span class="k">If</span> <span class="n">a</span> <span class="k">file</span><span class="o">-</span><span class="k">like</span> <span class="n">object</span> <span class="k">is</span> <span class="n">provided</span><span class="p">,</span>
-    <span class="n">the</span> <span class="n">serialized</span> <span class="k">data</span> <span class="n">will</span> <span class="n">be</span> <span class="n">written</span> <span class="k">to</span> <span class="n">it</span> <span class="n">directly</span><span class="p">.</span>
-<span class="n">data_format</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">format</span> <span class="k">to</span> <span class="n">serialize</span> <span class="n">the</span> <span class="k">data</span> <span class="k">in</span><span class="p">.</span> <span class="n">Valid</span> <span class="k">options</span> <span class="n">are</span> <span class="s1">'json'</span> <span class="k">and</span> <span class="s1">'yaml'</span><span class="p">.</span>
-    <span class="n">Defaults</span> <span class="k">to</span> <span class="s1">'json'</span><span class="p">.</span>
-<span class="n">on_not_implemented_error</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="n">Determines</span> <span class="n">the</span> <span class="n">behavior</span> <span class="k">if</span> <span class="n">a</span> <span class="n">transform</span> <span class="n">does</span> <span class="k">not</span> <span class="n">implement</span> <span class="n">the</span> <span class="n n-Quoted">`to_dict`</span> <span class="n">method</span><span class="p">.</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="s1">'raise'</span><span class="p">,</span> <span class="n">a</span> <span class="n n-Quoted">`NotImplementedError`</span> <span class="k">is</span> <span class="n">raised</span><span class="p">.</span> <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="s1">'warn'</span><span class="p">,</span> <span class="n">the</span> <span class="n">exception</span> <span class="k">is</span> <span class="n">ignored</span><span class="p">,</span> <span class="k">and</span>
-    <span class="k">no</span> <span class="n">transform</span> <span class="n">arguments</span> <span class="n">are</span> <span class="n">saved</span><span class="p">.</span> <span class="n">Defaults</span> <span class="k">to</span> <span class="s1">'raise'</span><span class="p">.</span>
-</code></pre></div>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">ValueError</span><span class="o">:</span> <span class="k">If</span> <span class="n n-Quoted">`data_format`</span> <span class="k">is</span> <span class="s1">'yaml'</span> <span class="n">but</span> <span class="n">PyYAML</span> <span class="k">is</span> <span class="k">not</span> <span class="n">installed</span><span class="p">.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transform</code></td>
+<td><code>Serializable</code></td>
+<td><p>The transform pipeline to serialize.</p></td>
+</tr>
+<tr>
+<td><code>filepath_or_buffer</code></td>
+<td><code>Union[str, pathlib.Path, TextIO]</code></td>
+<td><p>The file path or file-like object to write the serialized
+data to.
+If a string is provided, it is interpreted as a path to a file. If a file-like object is provided,
+the serialized data will be written to it directly.</p></td>
+</tr>
+<tr>
+<td><code>data_format</code></td>
+<td><code>str</code></td>
+<td><p>The format to serialize the data in. Valid options are 'json' and 'yaml'.
+Defaults to 'json'.</p></td>
+</tr>
+<tr>
+<td><code>on_not_implemented_error</code></td>
+<td><code>str</code></td>
+<td><p>Determines the behavior if a transform does not implement the <code>to_dict</code> method.
+If set to 'raise', a <code>NotImplementedError</code> is raised. If set to 'warn', the exception is ignored, and
+no transform arguments are saved. Defaults to 'raise'.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td><p>If <code>data_format</code> is 'yaml' but PyYAML is not installed.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="doc doc-object doc-function">
@@ -2093,18 +2250,36 @@ in either JSON or YAML format.</p>
 <code class="highlight language-python">def
 albumentations.core.serialization.to_dict    (transform, on_not_implemented_error='raise')
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L109" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/serialization.py#L108" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.serialization.to_dict" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Take a transform pipeline and convert it to a serializable representation that uses only standard
 python data types: dictionaries, lists, strings, integers, and floats.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">transform</span><span class="o">:</span> <span class="n">A</span> <span class="n">transform</span> <span class="n">that</span> <span class="n">should</span> <span class="n">be</span> <span class="n">serialized</span><span class="p">.</span> <span class="k">If</span> <span class="n">the</span> <span class="n">transform</span> <span class="n">doesn</span><span class="s1">'t implement the `to_dict`</span>
-<span class="s1">    method and `on_not_implemented_error` equals to '</span><span class="n">raise</span><span class="s1">' then `NotImplementedError` is raised.</span>
-<span class="s1">    If `on_not_implemented_error` equals to '</span><span class="n">warn</span><span class="s1">' then `NotImplementedError` will be ignored</span>
-<span class="s1">    but no transform parameters will be serialized.</span>
-<span class="s1">on_not_implemented_error (str): `raise` or `warn`.</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transform</code></td>
+<td><code>Serializable</code></td>
+<td><p>A transform that should be serialized. If the transform doesn't implement the <code>to_dict</code>
+method and <code>on_not_implemented_error</code> equals to 'raise' then <code>NotImplementedError</code> is raised.
+If <code>on_not_implemented_error</code> equals to 'warn' then <code>NotImplementedError</code> will be ignored
+but no transform parameters will be serialized.</p></td>
+</tr>
+<tr>
+<td><code>on_not_implemented_error</code></td>
+<td><code>str</code></td>
+<td><p><code>raise</code> or <code>warn</code>.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>

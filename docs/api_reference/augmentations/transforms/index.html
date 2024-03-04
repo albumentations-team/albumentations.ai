@@ -1353,19 +1353,6 @@
     albumentations.augmentations.transforms
   </a>
   
-    <nav class="md-nav" aria-label="albumentations.augmentations.transforms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.augmentations.transforms--see-also" class="md-nav__link">
-    See Also:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1732,6 +1719,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1860,7 +1918,7 @@
 
     <li class="md-nav__item">
       <a href="../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1910,17 +1968,30 @@
 albumentations.augmentations.transforms.ChannelShuffle</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1474" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1457" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ChannelShuffle" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly rearrange channels of the input RGB image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -1939,20 +2010,41 @@ albumentations.augmentations.transforms.CLAHE</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1430" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1414" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.CLAHE" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply Contrast Limited Adaptive Histogram Equalization to the input image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">clip_limit</span><span class="o">:</span> <span class="n">upper</span> <span class="n">threshold</span> <span class="n">value</span> <span class="k">for</span> <span class="n">contrast</span> <span class="n">limiting</span><span class="o">.</span>
-    <span class="n">If</span> <span class="n">clip_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">float</span> <span class="n">value</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">clip_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">).</span>
-<span class="n">tile_grid_size</span><span class="o">:</span> <span class="n">size</span> <span class="n">of</span> <span class="n">grid</span> <span class="k">for</span> <span class="n">histogram</span> <span class="n">equalization</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="mi">8</span><span class="o">).</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clip_limit</code></td>
+<td></td>
+<td><p>upper threshold value for contrast limiting.
+If clip_limit is a single float value, the range will be (1, clip_limit). Default: (1, 4).</p></td>
+</tr>
+<tr>
+<td><code>tile_grid_size</code></td>
+<td></td>
+<td><p>size of grid for histogram equalization. Default: (8, 8).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8</p>
@@ -1971,7 +2063,7 @@ albumentations.augmentations.transforms.ColorJitter</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2008" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1987" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ColorJitter" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1981,20 +2073,46 @@ albumentations.augmentations.transforms.ColorJitter</strong></code>
 this transform gives a little bit different results because Pillow (used in torchvision) and OpenCV (used in
 Albumentations) transform an image to HSV format by different formulas. Another difference - Pillow uses uint8
 overflow, but we use value saturation.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>brightness (float or tuple of float (min, max)): How much to jitter brightness.
-    brightness_factor is chosen uniformly from [max(0, 1 - brightness), 1 + brightness]
-    or the given [min, max]. Should be non negative numbers.
-contrast (float or tuple of float (min, max)): How much to jitter contrast.
-    contrast_factor is chosen uniformly from [max(0, 1 - contrast), 1 + contrast]
-    or the given [min, max]. Should be non negative numbers.
-saturation (float or tuple of float (min, max)): How much to jitter saturation.
-    saturation_factor is chosen uniformly from [max(0, 1 - saturation), 1 + saturation]
-    or the given [min, max]. Should be non negative numbers.
-hue (float or tuple of float (min, max)): How much to jitter hue.
-    hue_factor is chosen uniformly from [-hue, hue] or the given [min, max].
-    Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brightness</code></td>
+<td><code>float or tuple of float (min, max</code></td>
+<td><p>How much to jitter brightness.
+brightness_factor is chosen uniformly from [max(0, 1 - brightness), 1 + brightness]
+or the given [min, max]. Should be non negative numbers.</p></td>
+</tr>
+<tr>
+<td><code>contrast</code></td>
+<td><code>float or tuple of float (min, max</code></td>
+<td><p>How much to jitter contrast.
+contrast_factor is chosen uniformly from [max(0, 1 - contrast), 1 + contrast]
+or the given [min, max]. Should be non negative numbers.</p></td>
+</tr>
+<tr>
+<td><code>saturation</code></td>
+<td><code>float or tuple of float (min, max</code></td>
+<td><p>How much to jitter saturation.
+saturation_factor is chosen uniformly from [max(0, 1 - saturation), 1 + saturation]
+or the given [min, max]. Should be non negative numbers.</p></td>
+</tr>
+<tr>
+<td><code>hue</code></td>
+<td><code>float or tuple of float (min, max</code></td>
+<td><p>How much to jitter hue.
+hue_factor is chosen uniformly from [-hue, hue] or the given [min, max].
+Should have 0 &lt;= hue &lt;= 0.5 or -0.5 &lt;= min &lt;= max &lt;= 0.5.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2010,23 +2128,44 @@ albumentations.augmentations.transforms.Downscale</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1740" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1714" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Downscale" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Decreases image quality by downscaling and upscaling back.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">scale_min</span><span class="o">:</span> <span class="n">lower</span> <span class="n">bound</span> <span class="n">on</span> <span class="n">the</span> <span class="n">image</span> <span class="n">scale</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">.</span>
-<span class="n">scale_max</span><span class="o">:</span>  <span class="n">lower</span> <span class="n">bound</span> <span class="n">on</span> <span class="n">the</span> <span class="n">image</span> <span class="n">scale</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="o">.</span>
-<span class="n">interpolation</span><span class="o">:</span> <span class="n">cv2</span> <span class="n">interpolation</span> <span class="n">method</span><span class="o">.</span> <span class="n">Could</span> <span class="n">be</span><span class="o">:</span>
-    <span class="o">-</span> <span class="n">single</span> <span class="n">cv2</span> <span class="n">interpolation</span> <span class="n">flag</span> <span class="o">-</span> <span class="n">selected</span> <span class="n">method</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">downscale</span> <span class="n">and</span> <span class="n">upscale</span><span class="o">.</span>
-    <span class="o">-</span> <span class="n">dict</span><span class="o">(</span><span class="n">downscale</span><span class="o">=</span><span class="n">flag</span><span class="o">,</span> <span class="n">upscale</span><span class="o">=</span><span class="n">flag</span><span class="o">)</span>
-    <span class="o">-</span> <span class="n">Downscale</span><span class="o">.</span><span class="na">Interpolation</span><span class="o">(</span><span class="n">downscale</span><span class="o">=</span><span class="n">flag</span><span class="o">,</span> <span class="n">upscale</span><span class="o">=</span><span class="n">flag</span><span class="o">)</span> <span class="o">-</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="n">Interpolation</span><span class="o">(</span><span class="n">downscale</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="na">INTER_NEAREST</span><span class="o">,</span> <span class="n">upscale</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="na">INTER_NEAREST</span><span class="o">)</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale_min</code></td>
+<td></td>
+<td><p>lower bound on the image scale. Should be &lt; 1.</p></td>
+</tr>
+<tr>
+<td><code>scale_max</code></td>
+<td></td>
+<td><p>lower bound on the image scale. Should be .</p></td>
+</tr>
+<tr>
+<td><code>interpolation</code></td>
+<td></td>
+<td><p>cv2 interpolation method. Could be:
+- single cv2 interpolation flag - selected method will be used for downscale and upscale.
+- dict(downscale=flag, upscale=flag)
+- Downscale.Interpolation(downscale=flag, upscale=flag) -
+Default: Interpolation(downscale=cv2.INTER_NEAREST, upscale=cv2.INTER_NEAREST)</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2045,20 +2184,41 @@ albumentations.augmentations.transforms.Emboss</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2166" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2143" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Emboss" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Emboss the input image and overlays the result with the original image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">alpha</span><span class="o">:</span> <span class="n">range</span> <span class="n">to</span> <span class="n">choose</span> <span class="n">the</span> <span class="n">visibility</span> <span class="n">of</span> <span class="n">the</span> <span class="n">embossed</span> <span class="n">image</span><span class="o">.</span> <span class="n">At</span> <span class="mi">0</span><span class="o">,</span> <span class="n">only</span> <span class="n">the</span> <span class="n">original</span> <span class="n">image</span> <span class="k">is</span>
-    <span class="n">visible</span><span class="o">,</span><span class="n">at</span> <span class="mf">1.0</span> <span class="n">only</span> <span class="n">its</span> <span class="n">embossed</span> <span class="n">version</span> <span class="k">is</span> <span class="n">visible</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mf">0.2</span><span class="o">,</span> <span class="mf">0.5</span><span class="o">).</span>
-<span class="n">strength</span><span class="o">:</span> <span class="n">strength</span> <span class="n">range</span> <span class="n">of</span> <span class="n">the</span> <span class="n">embossing</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mf">0.2</span><span class="o">,</span> <span class="mf">0.7</span><span class="o">).</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alpha</code></td>
+<td></td>
+<td><p>range to choose the visibility of the embossed image. At 0, only the original image is
+visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).</p></td>
+</tr>
+<tr>
+<td><code>strength</code></td>
+<td></td>
+<td><p>strength range of the embossing. Default: (0.2, 0.7).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <div class="doc doc-children">
 </div>
@@ -2075,23 +2235,48 @@ albumentations.augmentations.transforms.Equalize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1154" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1143" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Equalize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Equalize the image histogram.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="k">mode</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="err">{</span><span class="s1">'cv'</span><span class="p">,</span> <span class="s1">'pil'</span><span class="err">}</span><span class="p">.</span> <span class="k">Use</span> <span class="n">OpenCV</span> <span class="k">or</span> <span class="n">Pillow</span> <span class="n">equalization</span> <span class="n">method</span><span class="p">.</span>
-<span class="n">by_channels</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">If</span> <span class="no">True</span><span class="p">,</span> <span class="k">use</span> <span class="n">equalization</span> <span class="k">by</span> <span class="n">channels</span> <span class="n">separately</span><span class="p">,</span>
-    <span class="k">else</span> <span class="k">convert</span> <span class="n">image</span> <span class="k">to</span> <span class="n">YCbCr</span> <span class="n">representation</span> <span class="k">and</span> <span class="k">use</span> <span class="n">equalization</span> <span class="k">by</span> <span class="n n-Quoted">`Y`</span> <span class="k">channel</span><span class="p">.</span>
-<span class="n">mask</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">callable</span><span class="p">)</span><span class="o">:</span> <span class="k">If</span> <span class="n">given</span><span class="p">,</span> <span class="k">only</span> <span class="n">the</span> <span class="n">pixels</span> <span class="n">selected</span> <span class="k">by</span>
-    <span class="n">the</span> <span class="n">mask</span> <span class="n">are</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="n">analysis</span><span class="p">.</span> <span class="n">Maybe</span> <span class="mi">1</span> <span class="k">channel</span> <span class="k">or</span> <span class="mi">3</span> <span class="k">channel</span> <span class="k">array</span> <span class="k">or</span> <span class="n">callable</span><span class="p">.</span>
-    <span class="k">Function</span> <span class="n">signature</span> <span class="n">must</span> <span class="n">include</span> <span class="n n-Quoted">`image`</span> <span class="n">argument</span><span class="p">.</span>
-<span class="n">mask_params</span> <span class="p">(</span><span class="k">list</span> <span class="k">of</span> <span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="n">Params</span> <span class="k">for</span> <span class="n">mask</span> <span class="k">function</span><span class="p">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td><p>{'cv', 'pil'}. Use OpenCV or Pillow equalization method.</p></td>
+</tr>
+<tr>
+<td><code>by_channels</code></td>
+<td><code>bool</code></td>
+<td><p>If True, use equalization by channels separately,
+else convert image to YCbCr representation and use equalization by <code>Y</code> channel.</p></td>
+</tr>
+<tr>
+<td><code>mask</code></td>
+<td><code>np.ndarray, callable</code></td>
+<td><p>If given, only the pixels selected by
+the mask are included in the analysis. Maybe 1 channel or 3 channel array or callable.
+Function signature must include <code>image</code> argument.</p></td>
+</tr>
+<tr>
+<td><code>mask_params</code></td>
+<td><code>list of str</code></td>
+<td><p>Params for mask function.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8</p>
@@ -2110,7 +2295,7 @@ albumentations.augmentations.transforms.FancyPCA</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1971" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1951" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.FancyPCA" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2118,11 +2303,24 @@ albumentations.augmentations.transforms.FancyPCA</strong></code>
 <div class="doc doc-contents">
 <p>Augment RGB image using FancyPCA from Krizhevsky's paper
 "ImageNet Classification with Deep Convolutional Neural Networks"</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">alpha</span><span class="o">:</span>  <span class="n">how</span> <span class="n">much</span> <span class="n">to</span> <span class="n">perturb</span><span class="o">/</span><span class="n">scale</span> <span class="n">the</span> <span class="n">eigen</span> <span class="n">vecs</span> <span class="n">and</span> <span class="n">vals</span><span class="o">.</span>
-    <span class="n">scale</span> <span class="k">is</span> <span class="n">samples</span> <span class="n">from</span> <span class="n">gaussian</span> <span class="n">distribution</span> <span class="o">(</span><span class="n">mu</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">alpha</span><span class="o">)</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alpha</code></td>
+<td></td>
+<td><p>how much to perturb/scale the eigen vecs and vals.
+scale is samples from gaussian distribution (mu=0, sigma=alpha)</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     3-channel uint8 images only</p>
@@ -2145,7 +2343,7 @@ albumentations.augmentations.transforms.FromFloat</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1705" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1680" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.FromFloat" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2155,13 +2353,34 @@ albumentations.augmentations.transforms.FromFloat</strong></code>
 cast the resulted value to a type specified by <code>dtype</code>. If <code>max_value</code> is None the transform will try to infer
 the maximum value for the data type from the <code>dtype</code> argument.</p>
 <p>This is the inverse transform for :class:<code>~albumentations.augmentations.transforms.ToFloat</code>.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">max_value</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">possible</span> <span class="n">input</span> <span class="n">value</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="n">None</span><span class="o">.</span>
-<span class="n">dtype</span><span class="o">:</span> <span class="n">data</span> <span class="n">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">output</span><span class="o">.</span> <span class="n">See</span> <span class="n">the</span> <span class="err">`</span><span class="s1">'Data types'</span> <span class="n">page</span> <span class="n">from</span> <span class="n">the</span> <span class="n">NumPy</span> <span class="n">docs</span><span class="err">`</span><span class="n">_</span><span class="o">.</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="s1">'uint16'</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">1.0</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_value</code></td>
+<td></td>
+<td><p>maximum possible input value. Default: None.</p></td>
+</tr>
+<tr>
+<td><code>dtype</code></td>
+<td></td>
+<td><p>data type of the output. See the <code>'Data types' page from the NumPy docs</code>_.
+Default: 'uint16'.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     float32</p>
@@ -2182,22 +2401,47 @@ albumentations.augmentations.transforms.GaussNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1307" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1293" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.GaussNoise" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply gaussian noise to the input image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">var_limit</span><span class="o">:</span> <span class="n">variance</span> <span class="n">range</span> <span class="k">for</span> <span class="n">noise</span><span class="o">.</span> <span class="n">If</span> <span class="n">var_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">float</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span>
-    <span class="n">will</span> <span class="n">be</span> <span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">var_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mf">10.0</span><span class="o">,</span> <span class="mf">50.0</span><span class="o">).</span>
-<span class="n">mean</span><span class="o">:</span> <span class="n">mean</span> <span class="n">of</span> <span class="n">the</span> <span class="n">noise</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">0</span>
-<span class="n">per_channel</span><span class="o">:</span> <span class="k">if</span> <span class="kd">set</span> <span class="n">to</span> <span class="n">True</span><span class="o">,</span> <span class="n">noise</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="k">for</span> <span class="k">each</span> <span class="n">channel</span> <span class="n">independently</span><span class="o">.</span>
-    <span class="n">Otherwise</span><span class="o">,</span> <span class="n">the</span> <span class="n">noise</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="n">once</span> <span class="k">for</span> <span class="n">all</span> <span class="n">channels</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="n">True</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>var_limit</code></td>
+<td></td>
+<td><p>variance range for noise. If var_limit is a single float, the range
+will be (0, var_limit). Default: (10.0, 50.0).</p></td>
+</tr>
+<tr>
+<td><code>mean</code></td>
+<td></td>
+<td><p>mean of the noise. Default: 0</p></td>
+</tr>
+<tr>
+<td><code>per_channel</code></td>
+<td></td>
+<td><p>if set to True, noise will be sampled for each channel independently.
+Otherwise, the noise will be sampled once for all channels. Default: True</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2216,23 +2460,48 @@ albumentations.augmentations.transforms.HueSaturationValue</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1016" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1008" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.HueSaturationValue" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly change hue, saturation and value of the input image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">hue_shift_limit</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">hue</span><span class="o">.</span> <span class="n">If</span> <span class="n">hue_shift_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">int</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span>
-    <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">hue_shift_limit</span><span class="o">,</span> <span class="n">hue_shift_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">).</span>
-<span class="n">sat_shift_limit</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">saturation</span><span class="o">.</span> <span class="n">If</span> <span class="n">sat_shift_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">int</span><span class="o">,</span>
-    <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">sat_shift_limit</span><span class="o">,</span> <span class="n">sat_shift_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">30</span><span class="o">,</span> <span class="mi">30</span><span class="o">).</span>
-<span class="n">val_shift_limit</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">value</span><span class="o">.</span> <span class="n">If</span> <span class="n">val_shift_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">int</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span>
-    <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">val_shift_limit</span><span class="o">,</span> <span class="n">val_shift_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">).</span>
-<span class="n">p</span> <span class="o">(</span><span class="n">float</span><span class="o">):</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hue_shift_limit</code></td>
+<td></td>
+<td><p>range for changing hue. If hue_shift_limit is a single int, the range
+will be (-hue_shift_limit, hue_shift_limit). Default: (-20, 20).</p></td>
+</tr>
+<tr>
+<td><code>sat_shift_limit</code></td>
+<td></td>
+<td><p>range for changing saturation. If sat_shift_limit is a single int,
+the range will be (-sat_shift_limit, sat_shift_limit). Default: (-30, 30).</p></td>
+</tr>
+<tr>
+<td><code>val_shift_limit</code></td>
+<td></td>
+<td><p>range for changing value. If val_shift_limit is a single int, the range
+will be (-val_shift_limit, val_shift_limit). Default: (-20, 20).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2258,13 +2527,34 @@ albumentations.augmentations.transforms.ImageCompression</strong></code>
 </div>
 <div class="doc doc-contents">
 <p>Decreases image quality by Jpeg, WebP compression of an image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">quality_lower</span><span class="o">:</span> <span class="n">lower</span> <span class="n">bound</span> <span class="n">on</span> <span class="n">the</span> <span class="n">image</span> <span class="n">quality</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">100</span><span class="o">]</span> <span class="n">range</span> <span class="k">for</span> <span class="n">jpeg</span> <span class="n">and</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">100</span><span class="o">]</span> <span class="k">for</span> <span class="n">webp</span><span class="o">.</span>
-<span class="n">quality_upper</span><span class="o">:</span> <span class="n">upper</span> <span class="n">bound</span> <span class="n">on</span> <span class="n">the</span> <span class="n">image</span> <span class="n">quality</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">100</span><span class="o">]</span> <span class="n">range</span> <span class="k">for</span> <span class="n">jpeg</span> <span class="n">and</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">100</span><span class="o">]</span> <span class="k">for</span> <span class="n">webp</span><span class="o">.</span>
-<span class="n">compression_type</span> <span class="o">(</span><span class="n">ImageCompressionType</span><span class="o">):</span> <span class="n">should</span> <span class="n">be</span> <span class="n">ImageCompressionType</span><span class="o">.</span><span class="na">JPEG</span> <span class="n">or</span> <span class="n">ImageCompressionType</span><span class="o">.</span><span class="na">WEBP</span><span class="o">.</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="n">ImageCompressionType</span><span class="o">.</span><span class="na">JPEG</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quality_lower</code></td>
+<td></td>
+<td><p>lower bound on the image quality. Should be in [0, 100] range for jpeg and [1, 100] for webp.</p></td>
+</tr>
+<tr>
+<td><code>quality_upper</code></td>
+<td></td>
+<td><p>upper bound on the image quality. Should be in [0, 100] range for jpeg and [1, 100] for webp.</p></td>
+</tr>
+<tr>
+<td><code>compression_type</code></td>
+<td><code>ImageCompressionType</code></td>
+<td><p>should be ImageCompressionType.JPEG or ImageCompressionType.WEBP.
+Default: ImageCompressionType.JPEG</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2281,10 +2571,28 @@ albumentations.augmentations.transforms.ImageCompression.ImageCompressionType</s
 <div class="doc doc-contents">
 <p>Defines the types of image compression.</p>
 <p>This Enum class is used to specify the image compression format.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>JPEG (int): Represents the JPEG image compression format.
-WEBP (int): Represents the WEBP image compression format.
-</code></pre></div>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>JPEG</code></td>
+<td><code>int</code></td>
+<td><p>Represents the JPEG image compression format.</p></td>
+</tr>
+<tr>
+<td><code>WEBP</code></td>
+<td><code>int</code></td>
+<td><p>Represents the WEBP image compression format.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2298,7 +2606,7 @@ WEBP (int): Represents the WEBP image compression format.
 albumentations.augmentations.transforms.InvertImg</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1503" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1485" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.InvertImg" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2306,10 +2614,23 @@ albumentations.augmentations.transforms.InvertImg</strong></code>
 <div class="doc doc-contents">
 <p>Invert the input image by subtracting pixel values from max values of the image types,
 i.e., 255 for uint8 and 1.0 for float32.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2328,21 +2649,42 @@ albumentations.augmentations.transforms.ISONoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1380" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1365" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ISONoise" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply camera sensor noise.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">color_shift</span> <span class="p">[</span><span class="nb nb-Type">float</span><span class="p">,</span> <span class="nb nb-Type">float</span><span class="p">]:</span> <span class="n">variance</span> <span class="nb">range</span> <span class="k">for</span> <span class="n">color</span> <span class="n">hue</span> <span class="n">change</span><span class="o">.</span>
-    <span class="n">Measured</span> <span class="k">as</span> <span class="n">a</span> <span class="n">fraction</span> <span class="n">of</span> <span class="mi">360</span> <span class="n">degree</span> <span class="n">Hue</span> <span class="n">angle</span> <span class="ow">in</span> <span class="n">HLS</span> <span class="n">colorspace</span><span class="o">.</span>
-<span class="n">intensity</span> <span class="p">([</span><span class="nb nb-Type">float</span><span class="p">,</span> <span class="nb nb-Type">float</span><span class="p">]:</span> <span class="n">Multiplicative</span> <span class="n">factor</span> <span class="n">that</span> <span class="n">control</span> <span class="n">strength</span>
-    <span class="n">of</span> <span class="n">color</span> <span class="ow">and</span> <span class="n">luminace</span> <span class="n">noise</span><span class="o">.</span>
-<span class="n">p</span> <span class="p">(</span><span class="nb nb-Type">float</span><span class="p">):</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="p">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color_shift</code></td>
+<td><code>[float, float]</code></td>
+<td><p>variance range for color hue change.
+Measured as a fraction of 360 degree Hue angle in HLS colorspace.</p></td>
+</tr>
+<tr>
+<td><code>intensity</code></td>
+<td><code>[float, float]</code></td>
+<td><p>Multiplicative factor that control strength
+of color and luminace noise.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8</p>
@@ -2357,11 +2699,11 @@ albumentations.augmentations.transforms.Lambda</strong></code>
 <code>
 
 
-    (image=None, mask=None, keypoint=None, bbox=None, name=None, always_apply=False, p=1.0)
+    (image=None, mask=None, keypoint=None, bbox=None, global_label=None, name=None, always_apply=False, p=1.0)
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1822" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1796" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Lambda" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2369,16 +2711,54 @@ albumentations.augmentations.transforms.Lambda</strong></code>
 <div class="doc doc-contents">
 <p>A flexible transformation class for using user-defined transformation functions per targets.
 Function signature must include **kwargs to accept optional arguments like interpolation method, image size, etc:</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">image</span><span class="o">:</span> <span class="n">Image</span> <span class="n">transformation</span> <span class="kd">function</span><span class="o">.</span>
-<span class="n">mask</span><span class="o">:</span> <span class="n">Mask</span> <span class="n">transformation</span> <span class="kd">function</span><span class="o">.</span>
-<span class="n">keypoint</span><span class="o">:</span> <span class="n">Keypoint</span> <span class="n">transformation</span> <span class="kd">function</span><span class="o">.</span>
-<span class="n">bbox</span><span class="o">:</span> <span class="n">BBox</span> <span class="n">transformation</span> <span class="kd">function</span><span class="o">.</span>
-<span class="n">always_apply</span><span class="o">:</span> <span class="n">Indicates</span> <span class="n">whether</span> <span class="k">this</span> <span class="n">transformation</span> <span class="n">should</span> <span class="n">be</span> <span class="n">always</span> <span class="n">applied</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">1.0</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
-    image, mask, bboxes, keypoints</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td></td>
+<td><p>Image transformation function.</p></td>
+</tr>
+<tr>
+<td><code>mask</code></td>
+<td></td>
+<td><p>Mask transformation function.</p></td>
+</tr>
+<tr>
+<td><code>keypoint</code></td>
+<td></td>
+<td><p>Keypoint transformation function.</p></td>
+</tr>
+<tr>
+<td><code>bbox</code></td>
+<td></td>
+<td><p>BBox transformation function.</p></td>
+</tr>
+<tr>
+<td><code>global_label</code></td>
+<td></td>
+<td><p>Global label transformation function.</p></td>
+</tr>
+<tr>
+<td><code>always_apply</code></td>
+<td></td>
+<td><p>Indicates whether this transformation should be always applied.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
+    image, mask, bboxes, keypoints, global_label</p>
 <p>Image types:
     Any</p>
 <div class="doc doc-children">
@@ -2396,22 +2776,43 @@ albumentations.augmentations.transforms.MultiplicativeNoise</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1907" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1888" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.MultiplicativeNoise" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Multiply image to random number or array of numbers.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">multiplier</span><span class="o">:</span> <span class="k">If</span> <span class="n">single</span> <span class="kt">float</span> <span class="n">image</span> <span class="n">will</span> <span class="n">be</span> <span class="n">multiplied</span> <span class="k">to</span> <span class="n">this</span> <span class="k">number</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n">tuple</span> <span class="k">of</span> <span class="kt">float</span> <span class="n">multiplier</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="n n-Quoted">`[multiplier[0], multiplier[1])`</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">).</span>
-<span class="n">per_channel</span><span class="o">:</span> <span class="k">If</span> <span class="n n-Quoted">`False`</span><span class="p">,</span> <span class="n">same</span> <span class="k">values</span> <span class="k">for</span> <span class="k">all</span> <span class="n">channels</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n n-Quoted">`True`</span> <span class="k">use</span> <span class="n">sample</span> <span class="k">values</span> <span class="k">for</span> <span class="k">each</span> <span class="n">channels</span><span class="p">.</span> <span class="k">Default</span> <span class="no">False</span><span class="p">.</span>
-<span class="n">elementwise</span><span class="o">:</span> <span class="k">If</span> <span class="n n-Quoted">`False`</span> <span class="n">multiply</span> <span class="n">multiply</span> <span class="k">all</span> <span class="n">pixels</span> <span class="k">in</span> <span class="n">an</span> <span class="n">image</span> <span class="k">with</span> <span class="n">a</span> <span class="k">random</span> <span class="k">value</span> <span class="n">sampled</span> <span class="n">once</span><span class="p">.</span>
-    <span class="k">If</span> <span class="n n-Quoted">`True`</span> <span class="n">Multiply</span> <span class="n">image</span> <span class="n">pixels</span> <span class="k">with</span> <span class="k">values</span> <span class="n">that</span> <span class="n">are</span> <span class="n">pixelwise</span> <span class="n">randomly</span> <span class="n">sampled</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="no">False</span><span class="p">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>multiplier</code></td>
+<td></td>
+<td><p>If single float image will be multiplied to this number.
+If tuple of float multiplier will be in range <code>[multiplier[0], multiplier[1])</code>. Default: (0.9, 1.1).</p></td>
+</tr>
+<tr>
+<td><code>per_channel</code></td>
+<td></td>
+<td><p>If <code>False</code>, same values for all channels will be used.
+If <code>True</code> use sample values for each channels. Default False.</p></td>
+</tr>
+<tr>
+<td><code>elementwise</code></td>
+<td></td>
+<td><p>If <code>False</code> multiply multiply all pixels in an image with a random value sampled once.
+If <code>True</code> Multiply image pixels with values that are pixelwise randomly sampled. Default: False.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     Any</p>
@@ -2430,19 +2831,40 @@ albumentations.augmentations.transforms.Normalize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L213" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L215" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Normalize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Normalization is applied by the formula: <code>img = (img - mean * max_pixel_value) / (std * max_pixel_value)</code></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">mean</span><span class="o">:</span> <span class="n">mean</span> <span class="n">values</span>
-<span class="n">std</span><span class="o">:</span> <span class="n">std</span> <span class="n">values</span>
-<span class="n">max_pixel_value</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">possible</span> <span class="n">pixel</span> <span class="n">value</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mean</code></td>
+<td></td>
+<td><p>mean values</p></td>
+</tr>
+<tr>
+<td><code>std</code></td>
+<td></td>
+<td><p>std values</p></td>
+</tr>
+<tr>
+<td><code>max_pixel_value</code></td>
+<td></td>
+<td><p>maximum possible pixel value</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2461,29 +2883,58 @@ albumentations.augmentations.transforms.PixelDropout</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2564" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2538" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.PixelDropout" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Set pixels to 0 with some probability.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">dropout_prob</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">pixel</span> <span class="k">drop</span> <span class="n">probability</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.01</span>
-<span class="n">per_channel</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">if</span> <span class="k">set</span> <span class="k">to</span> <span class="n n-Quoted">`True`</span> <span class="k">drop</span> <span class="n">mask</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="k">for</span> <span class="k">each</span> <span class="k">channel</span><span class="p">,</span>
-    <span class="n">otherwise</span> <span class="n">the</span> <span class="n">same</span> <span class="n">mask</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="k">for</span> <span class="k">all</span> <span class="n">channels</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="no">False</span>
-<span class="n">drop_value</span> <span class="p">(</span><span class="k">number</span> <span class="k">or</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">numbers</span> <span class="k">or</span> <span class="k">None</span><span class="p">)</span><span class="o">:</span> <span class="k">Value</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="k">set</span> <span class="k">in</span> <span class="n">dropped</span> <span class="n">place</span><span class="p">.</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="k">None</span> <span class="k">value</span> <span class="n">will</span> <span class="n">be</span> <span class="n">sampled</span> <span class="n">randomly</span><span class="p">,</span> <span class="k">default</span> <span class="n">ranges</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span><span class="o">:</span>
-        <span class="o">-</span> <span class="n">uint8</span> <span class="o">-</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="err">]</span>
-        <span class="o">-</span> <span class="n">uint16</span> <span class="o">-</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">65535</span><span class="err">]</span>
-        <span class="o">-</span> <span class="n">uint32</span> <span class="o">-</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4294967295</span><span class="err">]</span>
-        <span class="o">-</span> <span class="kt">float</span><span class="p">,</span> <span class="kt">double</span> <span class="o">-</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="err">]</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="mi">0</span>
-<span class="n">mask_drop_value</span> <span class="p">(</span><span class="k">number</span> <span class="k">or</span> <span class="n">sequence</span> <span class="k">of</span> <span class="n">numbers</span> <span class="k">or</span> <span class="k">None</span><span class="p">)</span><span class="o">:</span> <span class="k">Value</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="k">set</span> <span class="k">in</span> <span class="n">dropped</span> <span class="n">place</span> <span class="k">in</span> <span class="n">masks</span><span class="p">.</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="k">None</span> <span class="n">masks</span> <span class="n">will</span> <span class="n">be</span> <span class="n">unchanged</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mi">0</span>
-<span class="n">p</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">:</span> <span class="n">probability</span> <span class="k">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dropout_prob</code></td>
+<td><code>float</code></td>
+<td><p>pixel drop probability. Default: 0.01</p></td>
+</tr>
+<tr>
+<td><code>per_channel</code></td>
+<td><code>bool</code></td>
+<td><p>if set to <code>True</code> drop mask will be sampled for each channel,
+otherwise the same mask will be sampled for all channels. Default: False</p></td>
+</tr>
+<tr>
+<td><code>drop_value</code></td>
+<td><code>number or sequence of numbers or None</code></td>
+<td><p>Value that will be set in dropped place.
+If set to None value will be sampled randomly, default ranges will be used:
+    - uint8 - [0, 255]
+    - uint16 - [0, 65535]
+    - uint32 - [0, 4294967295]
+    - float, double - [0, 1]
+Default: 0</p></td>
+</tr>
+<tr>
+<td><code>mask_drop_value</code></td>
+<td><code>number or sequence of numbers or None</code></td>
+<td><p>Value that will be set in dropped place in masks.
+If set to None masks will be unchanged. Default: 0</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask
 Image types:
     any</p>
@@ -2502,22 +2953,39 @@ albumentations.augmentations.transforms.Posterize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1105" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1095" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Posterize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Reduce the number of bits for each color channel.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">num_bits</span> <span class="ss">(</span>[<span class="nv">int</span>, <span class="nv">int</span>] <span class="nv">or</span> <span class="nv">int</span>,
-          <span class="nv">or</span> <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span> [<span class="nv">r</span>, <span class="nv">g</span>, <span class="nv">b</span>],
-          <span class="nv">or</span> <span class="nv">list</span> <span class="nv">of</span> <span class="nv">ints</span> [[<span class="nv">r1</span>, <span class="nv">r1</span>], [<span class="nv">g1</span>, <span class="nv">g2</span>], [<span class="nv">b1</span>, <span class="nv">b2</span>]]<span class="ss">)</span>: <span class="nv">number</span> <span class="nv">of</span> <span class="nv">high</span> <span class="nv">bits</span>.
-    <span class="k">If</span> <span class="nv">num_bits</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">value</span>, <span class="nv">the</span> <span class="nv">range</span> <span class="nv">will</span> <span class="nv">be</span> [<span class="nv">num_bits</span>, <span class="nv">num_bits</span>].
-    <span class="nv">Must</span> <span class="nv">be</span> <span class="nv">in</span> <span class="nv">range</span> [<span class="mi">0</span>, <span class="mi">8</span>]. <span class="nv">Default</span>: <span class="mi">4</span>.
-<span class="nv">p</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>num_bits</code></td>
+<td><code>[int, int] or int,
+      or list of ints [r, g, b],
+      or list of ints [[r1, r1], [g1, g2], [b1, b2]]</code></td>
+<td><p>number of high bits.
+If num_bits is a single value, the range will be [num_bits, num_bits].
+Must be in range [0, 8]. Default: 4.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
 image</p>
 <p>Image types:
     uint8</p>
@@ -2536,23 +3004,48 @@ albumentations.augmentations.transforms.RandomBrightnessContrast</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1261" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1248" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomBrightnessContrast" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly change brightness and contrast of the input image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">brightness_limit</span><span class="o">:</span> <span class="n">factor</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">brightness</span><span class="o">.</span>
-    <span class="n">If</span> <span class="n">limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">float</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">limit</span><span class="o">,</span> <span class="n">limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mf">0.2</span><span class="o">,</span> <span class="mf">0.2</span><span class="o">).</span>
-<span class="n">contrast_limit</span><span class="o">:</span> <span class="n">factor</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">contrast</span><span class="o">.</span>
-    <span class="n">If</span> <span class="n">limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">float</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">limit</span><span class="o">,</span> <span class="n">limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mf">0.2</span><span class="o">,</span> <span class="mf">0.2</span><span class="o">).</span>
-<span class="n">brightness_by_max</span><span class="o">:</span> <span class="n">If</span> <span class="n">True</span> <span class="n">adjust</span> <span class="n">contrast</span> <span class="n">by</span> <span class="n">image</span> <span class="n">dtype</span> <span class="n">maximum</span><span class="o">,</span>
-    <span class="k">else</span> <span class="n">adjust</span> <span class="n">contrast</span> <span class="n">by</span> <span class="n">image</span> <span class="n">mean</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brightness_limit</code></td>
+<td></td>
+<td><p>factor range for changing brightness.
+If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).</p></td>
+</tr>
+<tr>
+<td><code>contrast_limit</code></td>
+<td></td>
+<td><p>factor range for changing contrast.
+If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).</p></td>
+</tr>
+<tr>
+<td><code>brightness_by_max</code></td>
+<td></td>
+<td><p>If True adjust contrast by image dtype maximum,
+else adjust contrast by image mean.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2571,7 +3064,7 @@ albumentations.augmentations.transforms.RandomFog</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L629" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L625" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomFog" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2579,12 +3072,33 @@ albumentations.augmentations.transforms.RandomFog</strong></code>
 <div class="doc doc-contents">
 <p>Simulates fog for the image</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">fog_coef_lower</span><span class="o">:</span> <span class="n">lower</span> <span class="n">limit</span> <span class="k">for</span> <span class="n">fog</span> <span class="n">intensity</span> <span class="n">coefficient</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span> <span class="n">range</span><span class="o">.</span>
-<span class="n">fog_coef_upper</span><span class="o">:</span> <span class="n">upper</span> <span class="n">limit</span> <span class="k">for</span> <span class="n">fog</span> <span class="n">intensity</span> <span class="n">coefficient</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span> <span class="n">range</span><span class="o">.</span>
-<span class="n">alpha_coef</span><span class="o">:</span> <span class="n">transparency</span> <span class="n">of</span> <span class="n">the</span> <span class="n">fog</span> <span class="n">circles</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span> <span class="n">range</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fog_coef_lower</code></td>
+<td></td>
+<td><p>lower limit for fog intensity coefficient. Should be in [0, 1] range.</p></td>
+</tr>
+<tr>
+<td><code>fog_coef_upper</code></td>
+<td></td>
+<td><p>upper limit for fog intensity coefficient. Should be in [0, 1] range.</p></td>
+</tr>
+<tr>
+<td><code>alpha_coef</code></td>
+<td></td>
+<td><p>transparency of the fog circles. Should be in [0, 1] range.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2603,7 +3117,7 @@ albumentations.augmentations.transforms.RandomGamma</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1535" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1516" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGamma" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2614,15 +3128,36 @@ albumentations.augmentations.transforms.RandomGamma</strong></code>
 selected gamma value from a specified range. Gamma correction can simulate various lighting
 conditions, potentially enhancing model generalization. For more details on gamma correction,
 see: <a href="https://en.wikipedia.org/wiki/Gamma_correction" target="_blank">https://en.wikipedia.org/wiki/Gamma_correction</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">gamma_limit</span> <span class="p">(</span><span class="k">Union</span><span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="err">[</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="err">]]</span><span class="p">)</span><span class="o">:</span> <span class="n">The</span> <span class="k">range</span> <span class="k">for</span> <span class="n">gamma</span> <span class="n">adjustment</span><span class="p">.</span> <span class="k">If</span> <span class="n n-Quoted">`gamma_limit`</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span>
-    <span class="kt">int</span><span class="p">,</span> <span class="n">the</span> <span class="k">range</span> <span class="n">will</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="p">(</span><span class="o">-</span><span class="n">gamma_limit</span><span class="p">,</span> <span class="n">gamma_limit</span><span class="p">),</span> <span class="n">defining</span> <span class="n">how</span> <span class="n">much</span>
-    <span class="k">to</span> <span class="n">adjust</span> <span class="n">the</span> <span class="n">image</span><span class="s1">'s gamma. Default is (80, 120).</span>
-<span class="s1">always_apply (bool): If `True`, the transform will always be applied, regardless of `p`.</span>
-<span class="s1">    Default is `False`.</span>
-<span class="s1">p (float): The probability that the transform will be applied. Default is 0.5.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gamma_limit</code></td>
+<td><code>Union[int, Tuple[int, int]]</code></td>
+<td><p>The range for gamma adjustment. If <code>gamma_limit</code> is a single
+int, the range will be interpreted as (-gamma_limit, gamma_limit), defining how much
+to adjust the image's gamma. Default is (80, 120).</p></td>
+</tr>
+<tr>
+<td><code>always_apply</code></td>
+<td><code>bool</code></td>
+<td><p>If <code>True</code>, the transform will always be applied, regardless of <code>p</code>.
+Default is <code>False</code>.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>The probability that the transform will be applied. Default is 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2641,7 +3176,7 @@ albumentations.augmentations.transforms.RandomGravel</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L385" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L383" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGravel" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2649,12 +3184,29 @@ albumentations.augmentations.transforms.RandomGravel</strong></code>
 <div class="doc doc-contents">
 <p>Add gravels.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>gravel_roi: (top-left x, top-left y,
-    bottom-right x, bottom right y). Should be in [0, 1] range
-number_of_patches: no. of gravel patches required
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gravel_roi</code></td>
+<td></td>
+<td><p>(top-left x, top-left y,
+bottom-right x, bottom right y). Should be in [0, 1] range</p></td>
+</tr>
+<tr>
+<td><code>number_of_patches</code></td>
+<td></td>
+<td><p>no. of gravel patches required</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2673,17 +3225,30 @@ albumentations.augmentations.transforms.RandomGridShuffle</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L101" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L103" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomGridShuffle" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Random shuffle grid's cells on image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">grid</span> <span class="ss">(</span>[<span class="nv">int</span>, <span class="nv">int</span>]<span class="ss">)</span>: <span class="nv">size</span> <span class="nv">of</span> <span class="nv">grid</span> <span class="k">for</span> <span class="nv">splitting</span> <span class="nv">image</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grid</code></td>
+<td><code>[int, int]</code></td>
+<td><p>size of grid for splitting image.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image, mask, keypoints</p>
 <p>Image types:
     uint8, float32</p>
@@ -2702,7 +3267,7 @@ albumentations.augmentations.transforms.RandomRain</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L504" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L501" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomRain" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2710,17 +3275,58 @@ albumentations.augmentations.transforms.RandomRain</strong></code>
 <div class="doc doc-contents">
 <p>Adds rain effects.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">slant_lower</span><span class="o">:</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">].</span>
-<span class="n">slant_upper</span><span class="o">:</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">].</span>
-<span class="n">drop_length</span><span class="o">:</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">100</span><span class="o">].</span>
-<span class="n">drop_width</span><span class="o">:</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">5</span><span class="o">].</span>
-<span class="n">drop_color</span> <span class="o">(</span><span class="n">list</span> <span class="n">of</span> <span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">)):</span> <span class="n">rain</span> <span class="n">lines</span> <span class="n">color</span><span class="o">.</span>
-<span class="n">blur_value</span> <span class="o">(</span><span class="n">int</span><span class="o">):</span> <span class="n">rainy</span> <span class="n">view</span> <span class="n">are</span> <span class="n">blurry</span>
-<span class="n">brightness_coefficient</span> <span class="o">(</span><span class="n">float</span><span class="o">):</span> <span class="n">rainy</span> <span class="n">days</span> <span class="n">are</span> <span class="n">usually</span> <span class="n">shady</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">].</span>
-<span class="n">rain_type</span><span class="o">:</span> <span class="n">One</span> <span class="n">of</span> <span class="o">[</span><span class="n">None</span><span class="o">,</span> <span class="s2">"drizzle"</span><span class="o">,</span> <span class="s2">"heavy"</span><span class="o">,</span> <span class="s2">"torrential"</span><span class="o">]</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slant_lower</code></td>
+<td></td>
+<td><p>should be in range [-20, 20].</p></td>
+</tr>
+<tr>
+<td><code>slant_upper</code></td>
+<td></td>
+<td><p>should be in range [-20, 20].</p></td>
+</tr>
+<tr>
+<td><code>drop_length</code></td>
+<td></td>
+<td><p>should be in range [0, 100].</p></td>
+</tr>
+<tr>
+<td><code>drop_width</code></td>
+<td></td>
+<td><p>should be in range [1, 5].</p></td>
+</tr>
+<tr>
+<td><code>drop_color</code></td>
+<td><code>list of (r, g, b</code></td>
+<td><p>rain lines color.</p></td>
+</tr>
+<tr>
+<td><code>blur_value</code></td>
+<td><code>int</code></td>
+<td><p>rainy view are blurry</p></td>
+</tr>
+<tr>
+<td><code>brightness_coefficient</code></td>
+<td><code>float</code></td>
+<td><p>rainy days are usually shady. Should be in range [0, 1].</p></td>
+</tr>
+<tr>
+<td><code>rain_type</code></td>
+<td></td>
+<td><p>One of [None, "drizzle", "heavy", "torrential"]</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2739,7 +3345,7 @@ albumentations.augmentations.transforms.RandomShadow</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L882" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L876" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomShadow" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2747,16 +3353,41 @@ albumentations.augmentations.transforms.RandomShadow</strong></code>
 <div class="doc doc-contents">
 <p>Simulates shadows for the image</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">shadow_roi</span><span class="o">:</span> <span class="n">region</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="k">where</span> <span class="n">shadows</span>
-    <span class="n">will</span> <span class="n">appear</span><span class="p">.</span> <span class="k">All</span> <span class="k">values</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="err">]</span><span class="p">.</span>
-<span class="n">num_shadows_lower</span><span class="o">:</span> <span class="n">Lower</span> <span class="k">limit</span> <span class="k">for</span> <span class="n">the</span> <span class="n">possible</span> <span class="k">number</span> <span class="k">of</span> <span class="n">shadows</span><span class="p">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n n-Quoted">`num_shadows_upper`</span><span class="err">]</span><span class="p">.</span>
-<span class="n">num_shadows_upper</span><span class="o">:</span> <span class="n">Lower</span> <span class="k">limit</span> <span class="k">for</span> <span class="n">the</span> <span class="n">possible</span> <span class="k">number</span> <span class="k">of</span> <span class="n">shadows</span><span class="p">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="n n-Quoted">`num_shadows_lower`</span><span class="p">,</span> <span class="n">inf</span><span class="err">]</span><span class="p">.</span>
-<span class="n">shadow_dimension</span><span class="o">:</span> <span class="k">number</span> <span class="k">of</span> <span class="n">edges</span> <span class="k">in</span> <span class="n">the</span> <span class="n">shadow</span> <span class="n">polygons</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shadow_roi</code></td>
+<td></td>
+<td><p>region of the image where shadows
+will appear. All values should be in range [0, 1].</p></td>
+</tr>
+<tr>
+<td><code>num_shadows_lower</code></td>
+<td></td>
+<td><p>Lower limit for the possible number of shadows.
+Should be in range [0, <code>num_shadows_upper</code>].</p></td>
+</tr>
+<tr>
+<td><code>num_shadows_upper</code></td>
+<td></td>
+<td><p>Lower limit for the possible number of shadows.
+Should be in range [<code>num_shadows_lower</code>, inf].</p></td>
+</tr>
+<tr>
+<td><code>shadow_dimension</code></td>
+<td></td>
+<td><p>number of edges in the shadow polygons</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2775,7 +3406,7 @@ albumentations.augmentations.transforms.RandomSnow</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L334" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L333" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomSnow" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2783,12 +3414,33 @@ albumentations.augmentations.transforms.RandomSnow</strong></code>
 <div class="doc doc-contents">
 <p>Bleach out some pixel values simulating snow.</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">snow_point_lower</span><span class="o">:</span> <span class="n">lower_bond</span> <span class="n">of</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">snow</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span> <span class="n">range</span>
-<span class="n">snow_point_upper</span><span class="o">:</span> <span class="n">upper_bond</span> <span class="n">of</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">snow</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">]</span> <span class="n">range</span>
-<span class="n">brightness_coeff</span><span class="o">:</span> <span class="n">larger</span> <span class="n">number</span> <span class="n">will</span> <span class="n">lead</span> <span class="n">to</span> <span class="n">a</span> <span class="n">more</span> <span class="n">snow</span> <span class="n">on</span> <span class="n">the</span> <span class="n">image</span><span class="o">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>snow_point_lower</code></td>
+<td></td>
+<td><p>lower_bond of the amount of snow. Should be in [0, 1] range</p></td>
+</tr>
+<tr>
+<td><code>snow_point_upper</code></td>
+<td></td>
+<td><p>upper_bond of the amount of snow. Should be in [0, 1] range</p></td>
+</tr>
+<tr>
+<td><code>brightness_coeff</code></td>
+<td></td>
+<td><p>larger number will lead to a more snow on the image. Should be &gt;= 0</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2807,7 +3459,7 @@ albumentations.augmentations.transforms.RandomSunFlare</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L720" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L715" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomSunFlare" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -2815,19 +3467,56 @@ albumentations.augmentations.transforms.RandomSunFlare</strong></code>
 <div class="doc doc-contents">
 <p>Simulates Sun Flare for the image</p>
 <p>From <a href="https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library" target="_blank">https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library</a></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">flare_roi</span><span class="o">:</span> <span class="n">region</span> <span class="k">of</span> <span class="n">the</span> <span class="n">image</span> <span class="k">where</span> <span class="n">flare</span> <span class="n">will</span> <span class="n">appear</span> <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">).</span>
-    <span class="k">All</span> <span class="k">values</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="err">]</span><span class="p">.</span>
-<span class="n">angle_lower</span><span class="o">:</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n n-Quoted">`angle_upper`</span><span class="err">]</span><span class="p">.</span>
-<span class="n">angle_upper</span><span class="o">:</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="n n-Quoted">`angle_lower`</span><span class="p">,</span> <span class="mi">1</span><span class="err">]</span><span class="p">.</span>
-<span class="n">num_flare_circles_lower</span><span class="o">:</span> <span class="n">lower</span> <span class="k">limit</span> <span class="k">for</span> <span class="n">the</span> <span class="k">number</span> <span class="k">of</span> <span class="n">flare</span> <span class="n">circles</span><span class="p">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n n-Quoted">`num_flare_circles_upper`</span><span class="err">]</span><span class="p">.</span>
-<span class="n">num_flare_circles_upper</span><span class="o">:</span> <span class="n">upper</span> <span class="k">limit</span> <span class="k">for</span> <span class="n">the</span> <span class="k">number</span> <span class="k">of</span> <span class="n">flare</span> <span class="n">circles</span><span class="p">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="n n-Quoted">`num_flare_circles_lower`</span><span class="p">,</span> <span class="n">inf</span><span class="err">]</span><span class="p">.</span>
-<span class="n">src_radius</span><span class="o">:</span>
-<span class="n">src_color</span><span class="o">:</span> <span class="n">color</span> <span class="k">of</span> <span class="n">the</span> <span class="n">flare</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flare_roi</code></td>
+<td></td>
+<td><p>region of the image where flare will appear (x_min, y_min, x_max, y_max).
+All values should be in range [0, 1].</p></td>
+</tr>
+<tr>
+<td><code>angle_lower</code></td>
+<td></td>
+<td><p>should be in range [0, <code>angle_upper</code>].</p></td>
+</tr>
+<tr>
+<td><code>angle_upper</code></td>
+<td></td>
+<td><p>should be in range [<code>angle_lower</code>, 1].</p></td>
+</tr>
+<tr>
+<td><code>num_flare_circles_lower</code></td>
+<td></td>
+<td><p>lower limit for the number of flare circles.
+Should be in range [0, <code>num_flare_circles_upper</code>].</p></td>
+</tr>
+<tr>
+<td><code>num_flare_circles_upper</code></td>
+<td></td>
+<td><p>upper limit for the number of flare circles.
+Should be in range [<code>num_flare_circles_lower</code>, inf].</p></td>
+</tr>
+<tr>
+<td><code>src_radius</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>src_color</code></td>
+<td></td>
+<td><p>color of the flare</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2846,19 +3535,32 @@ albumentations.augmentations.transforms.RandomToneCurve</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L973" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L966" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RandomToneCurve" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly change the relationship between bright and dark areas of the image by manipulating its tone curve.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">scale</span><span class="o">:</span> <span class="n">standard</span> <span class="n">deviation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">distribution</span><span class="o">.</span>
-    <span class="n">Used</span> <span class="n">to</span> <span class="n">sample</span> <span class="n">random</span> <span class="n">distances</span> <span class="n">to</span> <span class="n">move</span> <span class="n">two</span> <span class="n">control</span> <span class="n">points</span> <span class="n">that</span> <span class="n">modify</span> <span class="n">the</span> <span class="n">image</span><span class="err">'</span><span class="n">s</span> <span class="n">curve</span><span class="o">.</span>
-    <span class="n">Values</span> <span class="n">should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">].</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.1</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale</code></td>
+<td></td>
+<td><p>standard deviation of the normal distribution.
+Used to sample random distances to move two control points that modify the image's curve.
+Values should be in range [0, 1]. Default: 0.1</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8</p>
@@ -2877,23 +3579,48 @@ albumentations.augmentations.transforms.RGBShift</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1210" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1198" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RGBShift" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Randomly shift values for each channel of the input RGB image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">r_shift_limit</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">red</span> <span class="n">channel</span><span class="o">.</span> <span class="n">If</span> <span class="n">r_shift_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span>
-    <span class="n">int</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">r_shift_limit</span><span class="o">,</span> <span class="n">r_shift_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">).</span>
-<span class="n">g_shift_limit</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">green</span> <span class="n">channel</span><span class="o">.</span> <span class="n">If</span> <span class="n">g_shift_limit</span> <span class="k">is</span> <span class="n">a</span>
-    <span class="n">single</span> <span class="n">int</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span>  <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">g_shift_limit</span><span class="o">,</span> <span class="n">g_shift_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">).</span>
-<span class="n">b_shift_limit</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">values</span> <span class="k">for</span> <span class="n">the</span> <span class="n">blue</span> <span class="n">channel</span><span class="o">.</span> <span class="n">If</span> <span class="n">b_shift_limit</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span>
-    <span class="n">int</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">(-</span><span class="n">b_shift_limit</span><span class="o">,</span> <span class="n">b_shift_limit</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">).</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r_shift_limit</code></td>
+<td></td>
+<td><p>range for changing values for the red channel. If r_shift_limit is a single
+int, the range will be (-r_shift_limit, r_shift_limit). Default: (-20, 20).</p></td>
+</tr>
+<tr>
+<td><code>g_shift_limit</code></td>
+<td></td>
+<td><p>range for changing values for the green channel. If g_shift_limit is a
+single int, the range  will be (-g_shift_limit, g_shift_limit). Default: (-20, 20).</p></td>
+</tr>
+<tr>
+<td><code>b_shift_limit</code></td>
+<td></td>
+<td><p>range for changing values for the blue channel. If b_shift_limit is a single
+int, the range will be (-b_shift_limit, b_shift_limit). Default: (-20, 20).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -2912,22 +3639,43 @@ albumentations.augmentations.transforms.RingingOvershoot</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2413" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2387" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.RingingOvershoot" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Create ringing or overshoot artefacts by conlvolving image with 2D sinc filter.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">blur_limit</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">kernel</span> <span class="n">size</span> <span class="k">for</span> <span class="n">sinc</span> <span class="n">filter</span><span class="o">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">[</span><span class="mi">3</span><span class="o">,</span> <span class="n">inf</span><span class="o">).</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mi">7</span><span class="o">,</span> <span class="mi">15</span><span class="o">).</span>
-<span class="n">cutoff</span><span class="o">:</span> <span class="n">range</span> <span class="n">to</span> <span class="n">choose</span> <span class="n">the</span> <span class="n">cutoff</span> <span class="n">frequency</span> <span class="k">in</span> <span class="n">radians</span><span class="o">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="k">in</span> <span class="n">range</span> <span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">np</span><span class="o">.</span><span class="na">pi</span><span class="o">)</span>
-    <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="n">np</span><span class="o">.</span><span class="na">pi</span> <span class="sr">/ 4, np.pi /</span> <span class="mi">2</span><span class="o">).</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Reference:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td></td>
+<td><p>maximum kernel size for sinc filter.
+Should be in range [3, inf). Default: (7, 15).</p></td>
+</tr>
+<tr>
+<td><code>cutoff</code></td>
+<td></td>
+<td><p>range to choose the cutoff frequency in radians.
+Should be in range (0, np.pi)
+Default: (np.pi / 4, np.pi / 2).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Reference:
     dsp.stackexchange.com/questions/58301/2-d-circularly-symmetric-low-pass-filter
     <a href="https://arxiv.org/abs/2107.10833" target="_blank">https://arxiv.org/abs/2107.10833</a></p>
 <p>Targets:
@@ -2947,20 +3695,41 @@ albumentations.augmentations.transforms.Sharpen</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2109" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2087" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Sharpen" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Sharpen the input image and overlays the result with the original image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">alpha</span><span class="o">:</span> <span class="n">range</span> <span class="n">to</span> <span class="n">choose</span> <span class="n">the</span> <span class="n">visibility</span> <span class="n">of</span> <span class="n">the</span> <span class="n">sharpened</span> <span class="n">image</span><span class="o">.</span> <span class="n">At</span> <span class="mi">0</span><span class="o">,</span> <span class="n">only</span> <span class="n">the</span> <span class="n">original</span> <span class="n">image</span> <span class="k">is</span>
-    <span class="n">visible</span><span class="o">,</span> <span class="n">at</span> <span class="mf">1.0</span> <span class="n">only</span> <span class="n">its</span> <span class="n">sharpened</span> <span class="n">version</span> <span class="k">is</span> <span class="n">visible</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mf">0.2</span><span class="o">,</span> <span class="mf">0.5</span><span class="o">).</span>
-<span class="n">lightness</span><span class="o">:</span> <span class="n">range</span> <span class="n">to</span> <span class="n">choose</span> <span class="n">the</span> <span class="n">lightness</span> <span class="n">of</span> <span class="n">the</span> <span class="n">sharpened</span> <span class="n">image</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="o">(</span><span class="mf">0.5</span><span class="o">,</span> <span class="mf">1.0</span><span class="o">).</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alpha</code></td>
+<td></td>
+<td><p>range to choose the visibility of the sharpened image. At 0, only the original image is
+visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).</p></td>
+</tr>
+<tr>
+<td><code>lightness</code></td>
+<td></td>
+<td><p>range to choose the lightness of the sharpened image. Default: (0.5, 1.0).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <div class="doc doc-children">
 </div>
@@ -2977,19 +3746,36 @@ albumentations.augmentations.transforms.Solarize</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1065" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1056" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Solarize" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Invert all pixel values above a threshold.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">threshold</span><span class="o">:</span> <span class="n">range</span> <span class="k">for</span> <span class="n">solarizing</span> <span class="n">threshold</span><span class="o">.</span>
-    <span class="n">If</span> <span class="n">threshold</span> <span class="k">is</span> <span class="n">a</span> <span class="n">single</span> <span class="n">value</span><span class="o">,</span> <span class="n">the</span> <span class="n">range</span> <span class="n">will</span> <span class="n">be</span> <span class="o">[</span><span class="n">threshold</span><span class="o">,</span> <span class="n">threshold</span><span class="o">].</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">128</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>threshold</code></td>
+<td></td>
+<td><p>range for solarizing threshold.
+If threshold is a single value, the range will be [threshold, threshold]. Default: 128.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     any</p>
@@ -3008,39 +3794,80 @@ albumentations.augmentations.transforms.Spatter</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2681" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2654" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Spatter" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Apply spatter transform. It simulates corruption which can occlude a lens in the form of rain or mud.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">mean</span> <span class="ss">(</span><span class="nv">float</span>, <span class="nv">or</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">floats</span><span class="ss">)</span>: <span class="nv">Mean</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">normal</span> <span class="nv">distribution</span> <span class="k">for</span> <span class="nv">generating</span> <span class="nv">liquid</span> <span class="nv">layer</span>.
-    <span class="k">If</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">it</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">mean</span>.
-    <span class="k">If</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span> <span class="nv">mean</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">sampled</span> <span class="nv">from</span> <span class="nv">range</span> `[<span class="nv">mean</span>[<span class="mi">0</span>], <span class="nv">mean</span>[<span class="mi">1</span>]<span class="ss">)</span>`. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">0</span>.<span class="mi">65</span><span class="ss">)</span>.
-<span class="nv">std</span> <span class="ss">(</span><span class="nv">float</span>, <span class="nv">or</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">floats</span><span class="ss">)</span>: <span class="nv">Standard</span> <span class="nv">deviation</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">normal</span> <span class="nv">distribution</span> <span class="k">for</span> <span class="nv">generating</span> <span class="nv">liquid</span> <span class="nv">layer</span>.
-    <span class="k">If</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">it</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">std</span>.
-    <span class="k">If</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span> <span class="nv">std</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">sampled</span> <span class="nv">from</span> <span class="nv">range</span> `[<span class="nv">std</span>[<span class="mi">0</span>], <span class="nv">std</span>[<span class="mi">1</span>]<span class="ss">)</span>`. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">0</span>.<span class="mi">3</span><span class="ss">)</span>.
-<span class="nv">gauss_sigma</span> <span class="ss">(</span><span class="nv">float</span>, <span class="nv">or</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">floats</span><span class="ss">)</span>: <span class="nv">Sigma</span> <span class="nv">value</span> <span class="k">for</span> <span class="nv">gaussian</span> <span class="nv">filtering</span> <span class="nv">of</span> <span class="nv">liquid</span> <span class="nv">layer</span>.
-    <span class="k">If</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">it</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">gauss_sigma</span>.
-    <span class="k">If</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span> <span class="nv">gauss_sigma</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">sampled</span> <span class="nv">from</span> <span class="nv">range</span> `[<span class="nv">sigma</span>[<span class="mi">0</span>], <span class="nv">sigma</span>[<span class="mi">1</span>]<span class="ss">)</span>`. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>.
-<span class="nv">cutout_threshold</span> <span class="ss">(</span><span class="nv">float</span>, <span class="nv">or</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">floats</span><span class="ss">)</span>: <span class="nv">Threshold</span> <span class="k">for</span> <span class="nv">filtering</span> <span class="nv">liqued</span> <span class="nv">layer</span>
-    <span class="ss">(</span><span class="nv">determines</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">drops</span><span class="ss">)</span>. <span class="k">If</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">it</span> <span class="nv">will</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">cutout_threshold</span>.
-    <span class="k">If</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span> <span class="nv">cutout_threshold</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">sampled</span> <span class="nv">from</span> <span class="nv">range</span> `[<span class="nv">cutout_threshold</span>[<span class="mi">0</span>], <span class="nv">cutout_threshold</span>[<span class="mi">1</span>]<span class="ss">)</span>`.
-    <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">0</span>.<span class="mi">68</span><span class="ss">)</span>.
-<span class="nv">intensity</span> <span class="ss">(</span><span class="nv">float</span>, <span class="nv">or</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">floats</span><span class="ss">)</span>: <span class="nv">Intensity</span> <span class="nv">of</span> <span class="nv">corruption</span>.
-    <span class="k">If</span> <span class="nv">single</span> <span class="nv">float</span> <span class="nv">it</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">intensity</span>.
-    <span class="k">If</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span> <span class="nv">intensity</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">sampled</span> <span class="nv">from</span> <span class="nv">range</span> `[<span class="nv">intensity</span>[<span class="mi">0</span>], <span class="nv">intensity</span>[<span class="mi">1</span>]<span class="ss">)</span>`. <span class="nv">Default</span>: <span class="ss">(</span><span class="mi">0</span>.<span class="mi">6</span><span class="ss">)</span>.
-<span class="nv">mode</span> <span class="ss">(</span><span class="nv">string</span>, <span class="nv">or</span> <span class="nv">list</span> <span class="nv">of</span> <span class="nv">strings</span><span class="ss">)</span>: <span class="nv">Type</span> <span class="nv">of</span> <span class="nv">corruption</span>. <span class="nv">Currently</span>, <span class="nv">supported</span> <span class="nv">options</span> <span class="nv">are</span> <span class="s1">'</span><span class="s">rain</span><span class="s1">'</span> <span class="nv">and</span> <span class="s1">'</span><span class="s">mud</span><span class="s1">'</span>.
-     <span class="k">If</span> <span class="nv">list</span> <span class="nv">is</span> <span class="nv">provided</span> <span class="nv">type</span> <span class="nv">of</span> <span class="nv">corruption</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">sampled</span> <span class="nv">list</span>. <span class="nv">Default</span>: <span class="ss">(</span><span class="s2">"</span><span class="s">rain</span><span class="s2">"</span><span class="ss">)</span>.
-<span class="nv">color</span> <span class="ss">(</span><span class="nv">list</span> <span class="nv">of</span> <span class="ss">(</span><span class="nv">r</span>, <span class="nv">g</span>, <span class="nv">b</span><span class="ss">)</span> <span class="nv">or</span> <span class="nv">dict</span> <span class="nv">or</span> <span class="nv">None</span><span class="ss">)</span>: <span class="nv">Corruption</span> <span class="nv">elements</span> <span class="nv">color</span>.
-    <span class="k">If</span> <span class="nv">list</span> <span class="nv">uses</span> <span class="nv">provided</span> <span class="nv">list</span> <span class="nv">as</span> <span class="nv">color</span> <span class="k">for</span> <span class="nv">specified</span> <span class="nv">mode</span>.
-    <span class="k">If</span> <span class="nv">dict</span> <span class="nv">uses</span> <span class="nv">provided</span> <span class="nv">color</span> <span class="k">for</span> <span class="nv">specified</span> <span class="nv">mode</span>. <span class="nv">Color</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">specified</span> <span class="nv">mode</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">provided</span> <span class="nv">in</span> <span class="nv">dict</span>.
-    <span class="k">If</span> <span class="nv">None</span> <span class="nv">uses</span> <span class="nv">default</span> <span class="nv">colors</span> <span class="ss">(</span><span class="nv">rain</span>: <span class="ss">(</span><span class="mi">238</span>, <span class="mi">238</span>, <span class="mi">175</span><span class="ss">)</span>, <span class="nv">mud</span>: <span class="ss">(</span><span class="mi">20</span>, <span class="mi">42</span>, <span class="mi">63</span><span class="ss">))</span>.
-<span class="nv">p</span> <span class="ss">(</span><span class="nv">float</span><span class="ss">)</span>: <span class="nv">probability</span> <span class="nv">of</span> <span class="nv">applying</span> <span class="nv">the</span> <span class="nv">transform</span>. <span class="nv">Default</span>: <span class="mi">0</span>.<span class="mi">5</span>.
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mean</code></td>
+<td><code>float, or tuple of floats</code></td>
+<td><p>Mean value of normal distribution for generating liquid layer.
+If single float it will be used as mean.
+If tuple of float mean will be sampled from range <code>[mean[0], mean[1])</code>. Default: (0.65).</p></td>
+</tr>
+<tr>
+<td><code>std</code></td>
+<td><code>float, or tuple of floats</code></td>
+<td><p>Standard deviation value of normal distribution for generating liquid layer.
+If single float it will be used as std.
+If tuple of float std will be sampled from range <code>[std[0], std[1])</code>. Default: (0.3).</p></td>
+</tr>
+<tr>
+<td><code>gauss_sigma</code></td>
+<td><code>float, or tuple of floats</code></td>
+<td><p>Sigma value for gaussian filtering of liquid layer.
+If single float it will be used as gauss_sigma.
+If tuple of float gauss_sigma will be sampled from range <code>[sigma[0], sigma[1])</code>. Default: (2).</p></td>
+</tr>
+<tr>
+<td><code>cutout_threshold</code></td>
+<td><code>float, or tuple of floats</code></td>
+<td><p>Threshold for filtering liqued layer
+(determines number of drops). If single float it will used as cutout_threshold.
+If tuple of float cutout_threshold will be sampled from range <code>[cutout_threshold[0], cutout_threshold[1])</code>.
+Default: (0.68).</p></td>
+</tr>
+<tr>
+<td><code>intensity</code></td>
+<td><code>float, or tuple of floats</code></td>
+<td><p>Intensity of corruption.
+If single float it will be used as intensity.
+If tuple of float intensity will be sampled from range <code>[intensity[0], intensity[1])</code>. Default: (0.6).</p></td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td><code>string, or list of strings</code></td>
+<td><p>Type of corruption. Currently, supported options are 'rain' and 'mud'.
+ If list is provided type of corruption will be sampled list. Default: ("rain").</p></td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td><code>list of (r, g, b) or dict or None</code></td>
+<td><p>Corruption elements color.
+If list uses provided list as color for specified mode.
+If dict uses provided color for specified mode. Color for each specified mode should be provided in dict.
+If None uses default colors (rain: (238, 238, 175), mud: (20, 42, 63)).</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>float</code></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -3062,7 +3889,7 @@ albumentations.augmentations.transforms.Superpixels</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2258" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2233" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.Superpixels" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -3070,21 +3897,36 @@ albumentations.augmentations.transforms.Superpixels</strong></code>
 <div class="doc doc-contents">
 <p>Transform images partially/completely to their superpixel representation.
 This implementation uses skimage's version of the SLIC algorithm.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="nv">p_replace</span> <span class="ss">(</span><span class="nv">float</span> <span class="nv">or</span> <span class="nv">tuple</span> <span class="nv">of</span> <span class="nv">float</span><span class="ss">)</span>: <span class="nv">Defines</span> <span class="k">for</span> <span class="nv">any</span> <span class="nv">segment</span> <span class="nv">the</span> <span class="nv">probability</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">pixels</span> <span class="nv">within</span> <span class="nv">that</span>
-    <span class="nv">segment</span> <span class="nv">are</span> <span class="nv">replaced</span> <span class="nv">by</span> <span class="nv">their</span> <span class="nv">average</span> <span class="nv">color</span> <span class="ss">(</span><span class="nv">otherwise</span>, <span class="nv">the</span> <span class="nv">pixels</span> <span class="nv">are</span> <span class="nv">not</span> <span class="nv">changed</span><span class="ss">)</span>.
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_replace</code></td>
+<td><code>float or tuple of float</code></td>
+<td><p>Defines for any segment the probability that the pixels within that
+segment are replaced by their average color (otherwise, the pixels are not changed).</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Examples:</strong></p>
-<hr/>
-<div class="codehilite"><pre><span></span><code>        <span class="o">*</span> <span class="n">A</span> <span class="n">probability</span> <span class="k">of</span> <span class="n n-Quoted">``</span><span class="mf">0.0</span><span class="n n-Quoted">``</span> <span class="n">would</span> <span class="n">mean</span><span class="p">,</span> <span class="n">that</span> <span class="n">the</span> <span class="n">pixels</span> <span class="k">in</span> <span class="k">no</span>
-          <span class="n">segment</span> <span class="n">are</span> <span class="n">replaced</span> <span class="k">by</span> <span class="n">their</span> <span class="n">average</span> <span class="n">color</span> <span class="p">(</span><span class="n">image</span> <span class="k">is</span> <span class="k">not</span>
-          <span class="k">changed</span> <span class="k">at</span> <span class="k">all</span><span class="p">).</span>
-        <span class="o">*</span> <span class="n">A</span> <span class="n">probability</span> <span class="k">of</span> <span class="n n-Quoted">``</span><span class="mf">0.5</span><span class="n n-Quoted">``</span> <span class="n">would</span> <span class="n">mean</span><span class="p">,</span> <span class="n">that</span> <span class="n">around</span> <span class="n">half</span> <span class="k">of</span> <span class="k">all</span>
-          <span class="n">segments</span> <span class="n">are</span> <span class="n">replaced</span> <span class="k">by</span> <span class="n">their</span> <span class="n">average</span> <span class="n">color</span><span class="p">.</span>
-        <span class="o">*</span> <span class="n">A</span> <span class="n">probability</span> <span class="k">of</span> <span class="n n-Quoted">``</span><span class="mf">1.0</span><span class="n n-Quoted">``</span> <span class="n">would</span> <span class="n">mean</span><span class="p">,</span> <span class="n">that</span> <span class="k">all</span> <span class="n">segments</span> <span class="n">are</span>
-          <span class="n">replaced</span> <span class="k">by</span> <span class="n">their</span> <span class="n">average</span> <span class="n">color</span> <span class="p">(</span><span class="n">resulting</span> <span class="k">in</span> <span class="n">a</span> <span class="n">voronoi</span>
-          <span class="n">image</span><span class="p">).</span>
-    <span class="n">Behaviour</span> <span class="n">based</span> <span class="k">on</span> <span class="n">chosen</span> <span class="k">data</span> <span class="k">types</span> <span class="k">for</span> <span class="n">this</span> <span class="n">parameter</span><span class="o">:</span>
+<ul>
+<li>A probability of <code>0.0</code> would mean, that the pixels in no
+  segment are replaced by their average color (image is not
+  changed at all).</li>
+<li>A probability of <code>0.5</code> would mean, that around half of all
+  segments are replaced by their average color.</li>
+<li>A probability of <code>1.0</code> would mean, that all segments are
+  replaced by their average color (resulting in a voronoi
+  image).</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="n">Behaviour</span> <span class="n">based</span> <span class="k">on</span> <span class="n">chosen</span> <span class="k">data</span> <span class="k">types</span> <span class="k">for</span> <span class="n">this</span> <span class="n">parameter</span><span class="o">:</span>
         <span class="o">*</span> <span class="k">If</span> <span class="n">a</span> <span class="n n-Quoted">``</span><span class="kt">float</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">that</span> <span class="n n-Quoted">``</span><span class="n">flat</span><span class="n n-Quoted">``</span> <span class="n">will</span> <span class="k">always</span> <span class="n">be</span> <span class="n">used</span><span class="p">.</span>
         <span class="o">*</span> <span class="k">If</span> <span class="n n-Quoted">``</span><span class="n">tuple</span><span class="n n-Quoted">``</span> <span class="n n-Quoted">``</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="n n-Quoted">``</span><span class="p">,</span> <span class="k">then</span> <span class="n">a</span> <span class="k">random</span> <span class="n">probability</span> <span class="n">will</span> <span class="n">be</span>
           <span class="n">sampled</span> <span class="k">from</span> <span class="n">the</span> <span class="k">interval</span> <span class="n n-Quoted">``</span><span class="err">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="err">]</span><span class="n n-Quoted">``</span> <span class="n">per</span> <span class="n">image</span><span class="p">.</span>
@@ -3124,7 +3966,7 @@ albumentations.augmentations.transforms.TemplateTransform</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2309" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2284" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.TemplateTransform" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -3195,7 +4037,7 @@ albumentations.augmentations.transforms.ToFloat</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1669" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1645" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToFloat" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -3204,14 +4046,30 @@ albumentations.augmentations.transforms.ToFloat</strong></code>
 <p>Divide pixel values by <code>max_value</code> to get a float32 output array where all values lie in the range [0, 1.0].
 If <code>max_value</code> is None the transform will try to infer the maximum value by inspecting the data type of the input
 image.</p>
-<h4 id="albumentations.augmentations.transforms--see-also">See Also:<a class="headerlink" href="#albumentations.augmentations.transforms--see-also" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code>:class:`~albumentations.augmentations.transforms.FromFloat`
-</code></pre></div>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">max_value</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">possible</span> <span class="n">input</span> <span class="n">value</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="n">None</span><span class="o">.</span>
-<span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">1.0</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p>See Also:
+    :class:<code>~albumentations.augmentations.transforms.FromFloat</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_value</code></td>
+<td></td>
+<td><p>maximum possible input value. Default: None.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.0.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     any type</p>
@@ -3225,7 +4083,7 @@ image.</p>
 albumentations.augmentations.transforms.ToGray</strong></code>
 <code>
 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1570" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1550" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToGray" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -3233,10 +4091,23 @@ albumentations.augmentations.transforms.ToGray</strong></code>
 <div class="doc doc-contents">
 <p>Convert the input RGB image to grayscale. If the mean pixel value for the resulting image is greater
 than 127, invert the resulting grayscale image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -3255,17 +4126,30 @@ albumentations.augmentations.transforms.ToRGB</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1599" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1578" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToRGB" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Convert the input grayscale image to RGB.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mi">1</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 1.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -3284,17 +4168,30 @@ albumentations.augmentations.transforms.ToSepia</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1631" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L1609" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.ToSepia" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Applies sepia filter to the input RGB image</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">p</span><span class="o">:</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">applying</span> <span class="n">the</span> <span class="n">transform</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="mf">0.5</span><span class="o">.</span>
-</code></pre></div>
-<p>Targets:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Targets:
     image</p>
 <p>Image types:
     uint8, float32</p>
@@ -3313,31 +4210,60 @@ albumentations.augmentations.transforms.UnsharpMask</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2490" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/transforms.py#L2463" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.augmentations.transforms.UnsharpMask" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Sharpen the input image using Unsharp Masking processing and overlays the result with the original image.</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="n">blur_limit</span><span class="o">:</span> <span class="n">maximum</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">size</span> <span class="k">for</span> <span class="n">blurring</span> <span class="n">the</span> <span class="n">input</span> <span class="n">image</span><span class="p">.</span>
-    <span class="n">Must</span> <span class="n">be</span> <span class="n">zero</span> <span class="k">or</span> <span class="n">odd</span> <span class="k">and</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">inf</span><span class="p">).</span> <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="mi">0</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">computed</span> <span class="k">from</span> <span class="n">sigma</span>
-    <span class="k">as</span> <span class="n n-Quoted">`round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1`</span><span class="p">.</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="n">single</span> <span class="k">value</span> <span class="n n-Quoted">`blur_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">blur_limit</span><span class="p">).</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">).</span>
-<span class="n">sigma_limit</span><span class="o">:</span> <span class="n">Gaussian</span> <span class="n">kernel</span> <span class="n">standard</span> <span class="n">deviation</span><span class="p">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="err">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">inf</span><span class="p">).</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="n">single</span> <span class="k">value</span> <span class="n n-Quoted">`sigma_limit`</span> <span class="n">will</span> <span class="n">be</span> <span class="k">in</span> <span class="k">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma_limit</span><span class="p">).</span>
-    <span class="k">If</span> <span class="k">set</span> <span class="k">to</span> <span class="mi">0</span> <span class="n">sigma</span> <span class="n">will</span> <span class="n">be</span> <span class="n">computed</span> <span class="k">as</span> <span class="n n-Quoted">`sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8`</span><span class="p">.</span> <span class="k">Default</span><span class="o">:</span> <span class="mf">0.</span>
-<span class="n">alpha</span><span class="o">:</span> <span class="k">range</span> <span class="k">to</span> <span class="n">choose</span> <span class="n">the</span> <span class="n">visibility</span> <span class="k">of</span> <span class="n">the</span> <span class="n">sharpened</span> <span class="n">image</span><span class="p">.</span>
-    <span class="k">At</span> <span class="mi">0</span><span class="p">,</span> <span class="k">only</span> <span class="n">the</span> <span class="n">original</span> <span class="n">image</span> <span class="k">is</span> <span class="k">visible</span><span class="p">,</span> <span class="k">at</span> <span class="mf">1.0</span> <span class="k">only</span> <span class="n">its</span> <span class="n">sharpened</span> <span class="n">version</span> <span class="k">is</span> <span class="k">visible</span><span class="p">.</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">).</span>
-<span class="n">threshold</span><span class="o">:</span> <span class="k">Value</span> <span class="k">to</span> <span class="k">limit</span> <span class="n">sharpening</span> <span class="k">only</span> <span class="k">for</span> <span class="n">areas</span> <span class="k">with</span> <span class="n">high</span> <span class="n">pixel</span> <span class="n">difference</span> <span class="k">between</span> <span class="n">original</span> <span class="n">image</span>
-    <span class="k">and</span> <span class="n">it</span><span class="s1">'s smoothed version. Higher threshold means less sharpening on flat areas.</span>
-<span class="s1">    Must be in range [0, 255]. Default: 10.</span>
-<span class="s1">p: probability of applying the transform. Default: 0.5.</span>
-</code></pre></div>
-<p>Reference:
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur_limit</code></td>
+<td></td>
+<td><p>maximum Gaussian kernel size for blurring the input image.
+Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma
+as <code>round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1</code>.
+If set single value <code>blur_limit</code> will be in range (0, blur_limit).
+Default: (3, 7).</p></td>
+</tr>
+<tr>
+<td><code>sigma_limit</code></td>
+<td></td>
+<td><p>Gaussian kernel standard deviation. Must be in range [0, inf).
+If set single value <code>sigma_limit</code> will be in range (0, sigma_limit).
+If set to 0 sigma will be computed as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. Default: 0.</p></td>
+</tr>
+<tr>
+<td><code>alpha</code></td>
+<td></td>
+<td><p>range to choose the visibility of the sharpened image.
+At 0, only the original image is visible, at 1.0 only its sharpened version is visible.
+Default: (0.2, 0.5).</p></td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td></td>
+<td><p>Value to limit sharpening only for areas with high pixel difference between original image
+and it's smoothed version. Higher threshold means less sharpening on flat areas.
+Must be in range [0, 255]. Default: 10.</p></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td></td>
+<td><p>probability of applying the transform. Default: 0.5.</p></td>
+</tr>
+</tbody>
+</table> <p>Reference:
     arxiv.org/pdf/2107.10833.pdf</p>
 <p>Targets:
     image</p>

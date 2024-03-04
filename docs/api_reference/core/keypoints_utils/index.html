@@ -1732,6 +1732,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
+      
+      <label class="md-nav__link" for="__nav_10_4_7">
+        Mixing transforms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mixing transforms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+
+        
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/mixing/transforms/" class="md-nav__link">
+        Mixing transforms (augmentations.mixing.transforms)
+      </a>
+    </li>
+              
+
+  
+
+          
+            
+  
+  
+  
+
+        
+
+    <li class="md-nav__item">
+      <a href="../../augmentations/mixing/functional/" class="md-nav__link">
+        Mixing functional transforms (augmentations.mixing.functional)
+      </a>
+    </li>
+              
+
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
 
         
 
@@ -1860,7 +1931,7 @@
 
     <li class="md-nav__item">
       <a href="../../../contributing/" class="md-nav__link">
-        Contributing
+        Contributing to Albumentations
       </a>
     </li>
               
@@ -1915,30 +1986,56 @@ albumentations.core.keypoints_utils.KeypointParams</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L48" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L47" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.keypoints_utils.KeypointParams" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
 <p>Parameters of keypoints</p>
-<hr/>
-<div class="codehilite"><pre><span></span><code><span class="k">format</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span> <span class="k">format</span> <span class="k">of</span> <span class="n">keypoints</span><span class="p">.</span> <span class="n">Should</span> <span class="n">be</span> <span class="s1">'xy'</span><span class="p">,</span> <span class="s1">'yx'</span><span class="p">,</span> <span class="s1">'xya'</span><span class="p">,</span> <span class="s1">'xys'</span><span class="p">,</span> <span class="s1">'xyas'</span><span class="p">,</span> <span class="s1">'xysa'</span><span class="p">.</span>
-
-    <span class="n">x</span> <span class="o">-</span> <span class="n">X</span> <span class="n">coordinate</span><span class="p">,</span>
-
-    <span class="n">y</span> <span class="o">-</span> <span class="n">Y</span> <span class="n">coordinate</span>
-
-    <span class="n">s</span> <span class="o">-</span> <span class="n">Keypoint</span> <span class="n">scale</span>
-
-    <span class="n">a</span> <span class="o">-</span> <span class="n">Keypoint</span> <span class="n">orientation</span> <span class="k">in</span> <span class="n">radians</span> <span class="k">or</span> <span class="nf">degrees</span> <span class="p">(</span><span class="n">depending</span> <span class="k">on</span> <span class="n">KeypointParams</span><span class="p">.</span><span class="n">angle_in_degrees</span><span class="p">)</span>
-<span class="n">label_fields</span> <span class="p">(</span><span class="k">list</span><span class="p">)</span><span class="o">:</span> <span class="k">list</span> <span class="k">of</span> <span class="k">fields</span> <span class="n">that</span> <span class="n">are</span> <span class="n">joined</span> <span class="k">with</span> <span class="n">keypoints</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span> <span class="n">labels</span><span class="p">.</span>
-    <span class="n">Should</span> <span class="n">be</span> <span class="n">same</span> <span class="k">type</span> <span class="k">as</span> <span class="n">keypoints</span><span class="p">.</span>
-<span class="n">remove_invisible</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">to</span> <span class="k">remove</span> <span class="k">invisible</span> <span class="n">points</span> <span class="k">after</span> <span class="n">transform</span> <span class="k">or</span> <span class="k">not</span>
-<span class="n">angle_in_degrees</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="n">angle</span> <span class="k">in</span> <span class="n">degrees</span> <span class="k">or</span> <span class="n">radians</span> <span class="k">in</span> <span class="s1">'xya'</span><span class="p">,</span> <span class="s1">'xyas'</span><span class="p">,</span> <span class="s1">'xysa'</span> <span class="n">keypoints</span>
-<span class="n">check_each_transform</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">:</span> <span class="k">if</span> <span class="n n-Quoted">`True`</span><span class="p">,</span> <span class="k">then</span> <span class="n">keypoints</span> <span class="n">will</span> <span class="n">be</span> <span class="n">checked</span> <span class="k">after</span> <span class="k">each</span> <span class="k">dual</span> <span class="n">transform</span><span class="p">.</span>
-    <span class="k">Default</span><span class="o">:</span> <span class="n n-Quoted">`True`</span>
-</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format</code></td>
+<td><code>str</code></td>
+<td><p>format of keypoints. Should be 'xy', 'yx', 'xya', 'xys', 'xyas', 'xysa'.</p>
+<p>x - X coordinate,</p>
+<p>y - Y coordinate</p>
+<p>s - Keypoint scale</p>
+<p>a - Keypoint orientation in radians or degrees (depending on KeypointParams.angle_in_degrees)</p></td>
+</tr>
+<tr>
+<td><code>label_fields</code></td>
+<td><code>list</code></td>
+<td><p>list of fields that are joined with keypoints, e.g labels.
+Should be same type as keypoints.</p></td>
+</tr>
+<tr>
+<td><code>remove_invisible</code></td>
+<td><code>bool</code></td>
+<td><p>to remove invisible points after transform or not</p></td>
+</tr>
+<tr>
+<td><code>angle_in_degrees</code></td>
+<td><code>bool</code></td>
+<td><p>angle in degrees or radians in 'xya', 'xyas', 'xysa' keypoints</p></td>
+</tr>
+<tr>
+<td><code>check_each_transform</code></td>
+<td><code>bool</code></td>
+<td><p>if <code>True</code>, then keypoints will be checked after each dual transform.
+Default: <code>True</code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
 </div>
 </div>
@@ -1954,7 +2051,7 @@ albumentations.core.keypoints_utils.KeypointsProcessor</strong></code>
 
 
                 </code> <span class="doc-github-link">
-<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L82" target="_blank">[view source on GitHub]</a>
+<a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L81" target="_blank">[view source on GitHub]</a>
 </span><a class="headerlink" href="#albumentations.core.keypoints_utils.KeypointsProcessor" title="Permanent link">¶</a>
 </h2>
 <div class="class-signature">
@@ -1988,7 +2085,7 @@ keypoints will be filtered on
 <code class="highlight language-python">def
 albumentations.core.keypoints_utils.check_keypoint    (kp, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L138" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoint" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L137" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoint" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if keypoint coordinates are less than image shapes</p>
@@ -1999,7 +2096,7 @@ albumentations.core.keypoints_utils.check_keypoint    (kp, rows, cols)
 <code class="highlight language-python">def
 albumentations.core.keypoints_utils.check_keypoints    (keypoints, rows, cols)
    </code>
-<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L149" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoints" title="Permanent link">¶</a>
+<span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/keypoints_utils.py#L148" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.keypoints_utils.check_keypoints" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if keypoints boundaries are less than image shapes</p>
