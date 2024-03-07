@@ -3,9 +3,12 @@ site_name: Albumentations Documentation
 plugins:
   - mkdocs-jupyter
   - awesome-pages
+  - autorefs
   - mkdocstrings:
       handlers:
         python:
+          parsing:
+            paths: /albumentations
           rendering:
             show_source: false
             show_if_no_docstring: false
@@ -14,8 +17,6 @@ plugins:
             docstring_style: google  # this is the default
             docstring_options:
               replace_admonitions: no
-      watch:
-        - /albumentations
       custom_templates: mkdocstrings_theme
   - mkdocs-simple-hooks:
       hooks:
@@ -23,10 +24,6 @@ plugins:
         on_page_content: "hooks:on_page_content"
         on_nav: "hooks:on_nav"
   - macros
-
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
-  - auto
 
 markdown_extensions:
   - codehilite
@@ -40,6 +37,8 @@ markdown_extensions:
       permalink: true
 
 theme:
+  analytics:
+    gtag: G-DCXRDR9HJ0
   name: material
   palette:
     primary: "white"

@@ -51,8 +51,7 @@
                                 <a class="nav-link u-header__nav-link" href="{{ base_url }}/">Home</a>
                             </li>
                             <li class="nav-item u-header__nav-item">
-                                <a class="nav-link u-header__nav-link"
-                                    href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}">Documentation</a>
+                                <a class="nav-link u-header__nav-link" href="{{ base_url }}/docs">Documentation</a>
                             </li>
                             <li class="nav-item u-header__nav-item">
                                 <a class="nav-link u-header__nav-link" href="{{ base_url }}/whos_using">Who's using</a>
@@ -62,19 +61,18 @@
                                     target="_blank">Demo</a>
                             </li>
                             <li class="nav-item u-header__nav-item">
-                                <a class="nav-link u-header__nav-link" href="{{ base_url }}/team">Team</a>
-                            </li>
-                            <li class="nav-item u-header__nav-item">
-                                <a class="btn btn-outline-primary mb-2 mb-sm-0 btn-sm mr-3"
-                                    href="https://github.com/albumentations-team/albumentations" target="_blank"><i
-                                        class="fab fa-github"></i> GitHub</a>
+                                <a class="nav-link u-header__nav-link" href="{{ base_url }}/people">People</a>
                             </li>
                             <li class="nav-item u-header__nav-item">
                                 <a class="btn btn-outline-success mb-2 mb-sm-0 btn-sm"
                                     href="https://github.com/sponsors/albumentations-team" target="_blank"><i
                                         class="fa fa-heart"></i> Sponsor</a>
                             </li>
-
+                            <li class="nav-item u-header__nav-item">
+                                <a class="btn btn-outline-primary mb-2 mb-sm-0 btn-sm mr-3"
+                                    href="https://github.com/albumentations-team/albumentations" target="_blank"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -105,7 +103,7 @@
                                 target="_blank">Demo</a>
                         </li>
                         <li class="list-inline-item pl-3">
-                            <a class="list-group-item-action" href="{{ base_url }}/team">Team</a>
+                            <a class="list-group-item-action" href="{{ base_url }}/people">People</a>
                         </li>
                         <li class="list-inline-item pl-3">
                             <a class="list-group-item-action"

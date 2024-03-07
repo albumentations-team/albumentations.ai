@@ -4,10 +4,8 @@ nav:
   - getting_started
   - examples
   - FAQ: faq.md
-  - autoalbument
-  - experimental
   - external_resources
   - frameworks_and_libraries.md
   - api_reference
   - release_notes.md
-  - contributing.md
+  - CONTRIBUTING.md

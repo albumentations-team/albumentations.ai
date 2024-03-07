@@ -5,6 +5,7 @@ from pathlib import Path
 
 sys.path.append("/albumentations/tools")
 
+
 from make_transforms_docs import (
     Targets,
     get_dual_transforms_info,
