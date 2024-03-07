@@ -51,7 +51,8 @@
                                 <a class="nav-link u-header__nav-link" href="{{ base_url }}/">Home</a>
                             </li>
                             <li class="nav-item u-header__nav-item">
-                                <a class="nav-link u-header__nav-link" href="{{ base_url }}/docs">Documentation</a>
+                                <a class="nav-link u-header__nav-link"
+                                    href="{% if mkdocs_port %}http://localhost:{{ mkdocs_port }}{% else %}{{ base_url }}/docs{% endif %}">Documentation</a>
                             </li>
                             <li class="nav-item u-header__nav-item">
                                 <a class="nav-link u-header__nav-link" href="{{ base_url }}/whos_using">Who's using</a>
