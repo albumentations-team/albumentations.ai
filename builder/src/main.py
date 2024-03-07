@@ -1,5 +1,5 @@
 import json
-from pathlib import Path  # Use Path from pathlib instead of os.path
+from pathlib import Path
 
 import click
 from lib import staticjinja
@@ -41,15 +41,16 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
     top_repositories = json.loads((cache_dir_path / "top_repositories.json").read_text())
     img_industry = json.loads((data_dir_path / "img_industry.json").read_text())
     team = json.loads((data_dir_path / "team.json").read_text())
-    sponsors = json.loads((data_dir_path / "people.json").read_text())
+    ex_team = json.loads((data_dir_path / "ex_team.json").read_text())
+    sponsors = json.loads((data_dir_path / "sponsors.json").read_text())
     competitions = json.loads((data_dir_path / "competitions.json").read_text())
     citations = json.loads((data_dir_path / "citations.json").read_text())
 
     prepared_citations = get_prepared_citations(citations)
 
     staticjinja.build(
-        build_dir=str(build_dir),  # Convert Path object to string
-        searchpath=str(searchpath),  # Convert Path object to string
+        build_dir=str(build_dir),
+        searchpath=str(searchpath),
         staticpaths=["assets/"],
         use_reloader=use_reloader,
         env_globals={"base_url": base_url, "mkdocs_port": mkdocs_port},
@@ -64,7 +65,7 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
                     "img_industry": img_industry,
                 },
             ),
-            ("people.html", {"team": team, "contributors": contributors, "sponsors": sponsors}),
+            ("people.html", {"team": team, "contributors": contributors, "sponsors": sponsors, "ex_team": ex_team}),
         ],
     )
 

@@ -7,14 +7,15 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          parsing:
-            paths: /albumentations
           rendering:
             show_source: false
             show_if_no_docstring: false
             show_object_full_path: true
+          parsing:
+            paths:
+              - /albumentations
           selection:
-            docstring_style: google  # this is the default
+            docstring_style: google
             docstring_options:
               replace_admonitions: no
       custom_templates: mkdocstrings_theme
@@ -37,13 +38,11 @@ markdown_extensions:
       permalink: true
 
 theme:
-  analytics:
-    gtag: G-DCXRDR9HJ0
   name: material
   palette:
     primary: "white"
     accent: "white"
-  custom_dir: custom_theme/
+  # custom_dir: custom_theme/
   logo: images/logo.png
   favicon: images/logo.png
   icon:
@@ -71,4 +70,10 @@ notebook_github_uri: https://github.com/albumentations-team/albumentations_examp
 notebook_colab_uri: https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/
 
 site_dir: /site
+
 site_description: "Albumentations: fast and flexible image augmentations"
+
+extra:
+  analytics:
+    provider: google
+    property: G-DCXRDR9HJ0

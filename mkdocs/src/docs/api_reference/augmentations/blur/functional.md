@@ -1,3 +1,3 @@
-# Blur functional transforms (augmentations.blur.functional)
+# Geometric functional transforms (augmentations.blur.functional)
 
 ::: albumentations.augmentations.blur.functional

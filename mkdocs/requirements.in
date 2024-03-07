@@ -9,4 +9,4 @@ mkdocs-macros-plugin
 mkdocs-exclude
 beautifulsoup4
 pytkdocs
-mkdocstrings[python]
+mkdocstrings[python-legacy]

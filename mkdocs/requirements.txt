@@ -11,9 +11,7 @@ appnope==0.1.4
 asttokens==2.4.1
     # via stack-data
 astunparse==1.6.3
-    # via
-    #   griffe
-    #   pytkdocs
+    # via pytkdocs
 attrs==23.2.0
     # via
     #   jsonschema
@@ -39,9 +37,7 @@ click==8.1.7
     #   mkdocs
     #   mkdocstrings
 colorama==0.4.6
-    # via
-    #   griffe
-    #   mkdocs-material
+    # via mkdocs-material
 comm==0.2.1
     # via ipykernel
 debugpy==1.8.1
@@ -56,8 +52,6 @@ fastjsonschema==2.19.1
     # via nbformat
 ghp-import==2.1.0
     # via mkdocs
-griffe==0.41.3
-    # via mkdocstrings-python
 idna==3.6
     # via requests
 importlib-metadata==7.0.1
@@ -165,10 +159,10 @@ mkdocs-material-extensions==1.3.1
 mkdocs-simple-hooks==0.1.5
     # via
     #   -r requirements.in
-    #   mkdocstrings-python
-mkdocstrings-python==1.8.0
+    #   mkdocstrings-python-legacy
+mkdocstrings-python-legacy==0.2.3
     # via -r requirements.in
-mkdocstrings[python]==0.24.1
+mkdocstrings[python-legacy]==0.24.1
     # via mkdocstrings
 natsort==8.4.0
     # via mkdocs-awesome-pages-plugin
@@ -233,7 +227,9 @@ python-dateutil==2.9.0.post0
     #   jupyter-client
     #   mkdocs-macros-plugin
 pytkdocs==0.16.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   mkdocstrings-python-legacy
 pytz==2024.1
     # via babel
 pyyaml==6.0.1

@@ -11,11 +11,8 @@ docs_directory = directory / "docs"
 sitemap_path = docs_directory / "sitemap.xml"
 sitemap_path_gz = docs_directory / "sitemap.xml.gz"
 
-# Addressing the lxml usage warning is complex; it's based on your data source.
-# If your XML data is trusted, this might be a false positive.
-# Otherwise, consider sanitization or alternative parsing libraries for untrusted data.
-# Here, I proceed assuming the data is trusted:
-tree = etree.parse(str(sitemap_path))  # Convert Path object to string for lxml compatibility
+
+tree = etree.parse(str(sitemap_path))
 root = tree.getroot()
 
 base_url = "https://albumentations.ai"

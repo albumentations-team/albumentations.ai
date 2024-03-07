@@ -1,9 +1,12 @@
 import json
+import sys
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
 from mkdocs_jupyter.plugin import NotebookFile
+
+sys.path.append("/albumentations/tools")
 
 
 def on_pre_page(page, config, files):

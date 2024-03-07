@@ -43,11 +43,8 @@ services:
       - "127.0.0.1:${MKDOCS_PORT}:8000"
     tty: true
     environment:
-      - GOOGLE_ANALYTICS_TID
-      - CONFIG_FILE
-    # volumes:
-      # - ./mkdocs/src:/mkdocs/src
-      # - /mkdocs/src/docs/examples/
+      - GOOGLE_ANALYTICS_TID=G-DCXRDR9HJ0
+      - CONFIG_FILE=/mkdocs/src/mkdocs.yml
     command:
       serve --dev-addr 0.0.0.0:8000
 
