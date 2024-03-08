@@ -1,8 +1,33 @@
 # Release notes
 
-## 1.4.0 (17 February 2024)
+## Albumentations 1.4.1 Release Notes (4 March 2024)
 
-# Albumentations 1.4.0 Release Notes
+- Request
+- Highlights
+- New transform
+- Improvements
+- Bug fixes
+
+## Request
+
+1. If you enjoy using the library as an individual developer or during the day job as a part of the company, please consider becoming a [sponsor for the library](https://github.com/sponsors/albumentations-team). Every dollar helps.
+2. If you did not give our repo a ⭐, it is [only one mouse click](https://github.com/albumentations-team/albumentations)
+3. If you have feature requests or proposals or encounter issues - submit your request to [issues](https://github.com/albumentations-team/albumentations/issues) or our new initiative, - [Discord server for albumentations](https://discord.gg/AmMnDBdzYs)
+
+## New transform
+
+<img width="660" alt="Screenshot 2024-03-04 at 14 52 15" src="https://github.com/albumentations-team/albumentations/assets/5481618/68e5031b-e45e-4578-abe8-1d8e33db4831">
+
+* Added `MixUp` transform: which linearly combines an input (image, mask, and class label) with another set from a predefined reference dataset. The mixing degree is controlled by a parameter λ (lambda), sampled from a Beta distribution. This method is known for improving model generalization by promoting linear behavior between classes and smoothing decision boundaries.
+
+## Minor changes and Bug Fixes
+* Moved from `isort`, `flake8`, `black` to `ruff`
+* Added extra checks for docstrings to match Google Style.
+* Updated [Who's using](https://albumentations.ai/whos_using)
+* Removed quidda dependency, which addresses `opencv` library inconsistencies issues
+* New, updated version of [benchmark](https://github.com/albumentations-team/albumentations?tab=readme-ov-file#benchmarking-results).
+
+## Albumentations 1.4.0 Release Notes (17 February 2024)
 
 - Request
 - Highlights

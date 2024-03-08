@@ -3,6 +3,7 @@ site_name: Albumentations Documentation
 plugins:
   - mkdocs-jupyter
   - awesome-pages
+  - autorefs
   - mkdocstrings:
       handlers:
         python:
@@ -10,12 +11,13 @@ plugins:
             show_source: false
             show_if_no_docstring: false
             show_object_full_path: true
+          parsing:
+            paths:
+              - /albumentations
           selection:
-            docstring_style: google  # this is the default
+            docstring_style: google
             docstring_options:
               replace_admonitions: no
-      watch:
-        - /albumentations
       custom_templates: mkdocstrings_theme
   - mkdocs-simple-hooks:
       hooks:
@@ -23,10 +25,6 @@ plugins:
         on_page_content: "hooks:on_page_content"
         on_nav: "hooks:on_nav"
   - macros
-
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TID"]
-  - auto
 
 markdown_extensions:
   - codehilite
@@ -72,4 +70,10 @@ notebook_github_uri: https://github.com/albumentations-team/albumentations_examp
 notebook_colab_uri: https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/
 
 site_dir: /site
-site_description: "Albumentations: fast and flexible image augmentations"
+
+site_description: "Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations."
+
+extra:
+  analytics:
+    provider: google
+    property: G-DCXRDR9HJ0

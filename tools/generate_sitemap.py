@@ -1,37 +1,42 @@
-from datetime import datetime
-from lxml import etree
-import os
 import sys
+from datetime import datetime, timezone
+from pathlib import Path
 
-directory = sys.argv[1]
+from lxml import etree
 
-docs_directory = os.path.join(directory, "docs")
-sitemap_path = os.path.join(docs_directory, "sitemap.xml")
-sitemap_path_gz = os.path.join(docs_directory, "sitemap.xml.gz")
+# Assuming the first argument is the directory
+directory = Path(sys.argv[1])
 
-tree = etree.parse(sitemap_path)
+docs_directory = directory / "docs"
+sitemap_path = docs_directory / "sitemap.xml"
+sitemap_path_gz = docs_directory / "sitemap.xml.gz"
+
+
+tree = etree.parse(str(sitemap_path))
 root = tree.getroot()
 
 base_url = "https://albumentations.ai"
 pages = [
     "",
     "/whos_using",
-    "/team",
-    "/contact_us",
+    "/people",
+    "/documentation",
 ]
-date = datetime.utcnow().strftime("%Y-%m-%d")
+date = datetime.now(timezone.utc).strftime("%Y-%m-%d")  # Compliant with best practices for timezones
 for page in pages:
     sitemap_entry = etree.fromstring(
         f"""<url>
     <loc>{base_url}{page}</loc>
     <lastmod>{date}</lastmod>
     <changefreq>daily</changefreq>
-</url>"""
+</url>""",
     )
     root.append(sitemap_entry)
 
-with open(os.path.join(directory, "sitemap.xml"), "w") as f:
+# Replace open with Path.open
+with (directory / "sitemap.xml").open("w", encoding="utf-8") as f:  # This uses Path's open method directly
     f.write(etree.tostring(root, pretty_print=True, xml_declaration=True, encoding="UTF-8").decode("utf-8"))
 
-os.remove(sitemap_path)
-os.remove(sitemap_path_gz)
+# Use unlink for Path objects instead of os.remove
+sitemap_path.unlink(missing_ok=True)  # The missing_ok=True argument ignores the error if the file doesn't exist.
+sitemap_path_gz.unlink(missing_ok=True)

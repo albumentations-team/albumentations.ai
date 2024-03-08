@@ -2,10 +2,11 @@ mkdocs
 mkdocs-material
 mkdocs-jupyter
 Pygments
+mkdocs-autorefs
 mkdocs-awesome-pages-plugin
 mkdocs-simple-hooks
 mkdocs-macros-plugin
 mkdocs-exclude
 beautifulsoup4
 pytkdocs
-mkdocstrings
+mkdocstrings[python-legacy]
