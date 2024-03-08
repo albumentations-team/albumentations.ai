@@ -49,8 +49,13 @@ theme:
     repo: fontawesome/brands/github
   features:
     - navigation.instant
-    - navigation.top
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.sections
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
