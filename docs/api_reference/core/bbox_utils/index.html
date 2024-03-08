@@ -6,15 +6,21 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Albumentations: fast and flexible image augmentations">
-      
+        <meta name="description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
       
       
       
         <link rel="canonical" href="https://albumentations.ai/docs/api_reference/core/bbox_utils/">
       
+      
+        <link rel="prev" href="../serialization/">
+      
+      
+        <link rel="next" href="../keypoints_utils/">
+      
+      
       <link rel="icon" href="../../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -22,26 +28,26 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ffffff">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
-    
+      
+
+
     
     
       
+    
+    
+      
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
@@ -50,29 +56,46 @@
     
       <link rel="stylesheet" href="../../../css/extra.css">
     
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-DCXRDR9HJ0","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DCXRDR9HJ0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DCXRDR9HJ0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DCXRDR9HJ0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
     
     
-  
-  
     
-  
-  
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.core.bbox_utils)">
-  <meta property="og:description" content="Albumentations: fast and flexible image augmentations">
-  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/core/bbox_utils/">
-  <meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
-  <meta property="og:image:type" content="image/png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.core.bbox_utils)">
-  <meta name="twitter:description" content="Albumentations: fast and flexible image augmentations">
-  <meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.core.bbox_utils)">
+<meta property="og:description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://albumentations.ai/docs/api_reference/core/bbox_utils/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@albumentations">
+<meta name="twitter:creator" content="@viglovikov">
+<meta name="twitter:title" content="Albumentations Documentation - Helper functions for working with bounding boxes (augmentations.core.bbox_utils)">
+<meta name="twitter:description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+<meta name="description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta name="keywords"
+  content="Albumentations, image augmentation, machine learning, computer vision, data augmentation, image processing, deep learning, AI, artificial intelligence, Python">
+
 
   </head>
   
@@ -82,10 +105,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
   
-    
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -102,66 +123,67 @@
       
     </div>
     
+    
       <header class="md-header" data-md-component="header">
 
-    <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Albumentations Documentation" class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="header.title">
+    <a href="../../.." title="Albumentations Documentation"
+      class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
       
   <img src="../../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
 
     </div>
 
-
-      <div class="md-header-nav__title">
-          <div class="header-menu-item">
-            <a href="https://albumentations.ai">Home</a>
-          </div>
-          <div class="header-menu-item header-menu-item-selected">
-            <a href="https://albumentations.ai/docs/">Documentation</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations.ai/whos_using">Who's using</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations.ai/team">Team</a>
-          </div>
+    <div class="md-header-nav__title">
+      <div class="header-menu-item">
+        <a href="https://albumentations.ai">Home</a>
       </div>
-      
+      <div class="header-menu-item header-menu-item-selected">
+        <a href="https://albumentations.ai/docs/">Documentation</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://albumentations.ai/whos_using">Who's using</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://albumentations.ai/people">People</a>
+      </div>
+    </div>
+
+    
 <div class="md-search" data-md-component="search-query" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-state="active">
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
     </form>
   </div>
 </div>
 
     
-      <div class="md-header__source">
-        
-<a href="https://github.com/albumentations-team/albumentations/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      <a href="https://github.com/albumentations-team/albumentations" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     albumentations
   </div>
 </a>
-      </div>
+    </div>
     
   </nav>
 </header>
@@ -170,1791 +192,47 @@
       
       
         
+          
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-    
-      
-      <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-        <div class="md-sidebar__scrollwrap">
-          <div class="md-sidebar__inner">
-            
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Albumentations Documentation" class="md-nav__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
-      
-  <img src="../../../images/logo.png" alt="logo">
-
-    </a>
-    Albumentations Documentation
-  </label>
-  
-    <div class="md-nav__source">
-      
-<a href="https://github.com/albumentations-team/albumentations/" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    albumentations
-  </div>
-</a>
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
     </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
+  </div>
+</div>
 
-  
-  
-  
 
-        
-
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        Documentation
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      <label class="md-nav__link" for="__nav_2">
-        Introduction
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Introduction
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../introduction/image_augmentation/" class="md-nav__link">
-        What is image augmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" class="md-nav__link">
-        Why you need a dedicated library
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../introduction/why_albumentations/" class="md-nav__link">
-        Why Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        Getting started
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Getting started
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/image_augmentation/" class="md-nav__link">
-        Image augmentation for classification
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/mask_augmentation/" class="md-nav__link">
-        Mask augmentation for segmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/bounding_boxes_augmentation/" class="md-nav__link">
-        Bounding boxes augmentation for object detection
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/keypoints_augmentation/" class="md-nav__link">
-        Keypoints augmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/simultaneous_augmentation/" class="md-nav__link">
-        Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/transforms_and_targets/" class="md-nav__link">
-        A list of transforms and their supported targets
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/setting_probabilities/" class="md-nav__link">
-        Setting probabilities for transforms
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        Examples
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Examples" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../examples/" class="md-nav__link">
-        List of examples
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      <label class="md-nav__link" for="__nav_6">
-        AutoAlbument
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="AutoAlbument" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          AutoAlbument
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/" class="md-nav__link">
-        AutoAlbument Overview
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/benchmarks/" class="md-nav__link">
-        Benchmarks and a comparison with baseline augmentation strategies
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/how_to_use/" class="md-nav__link">
-        How to use AutoAlbument
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/docker/" class="md-nav__link">
-        How to use an AutoAlbument Docker image
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/custom_model/" class="md-nav__link">
-        How to use a custom classification or semantic segmentation model
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/metrics/" class="md-nav__link">
-        Metrics and their meaning
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/tuning_parameters/" class="md-nav__link">
-        Tuning the search parameters
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
-      
-      <label class="md-nav__link" for="__nav_6_9">
-        Examples
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Examples" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
-          <span class="md-nav__icon md-icon"></span>
-          Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/list/" class="md-nav__link">
-        List of examples
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/cifar10/" class="md-nav__link">
-        Image classification on the CIFAR10 dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/svhn/" class="md-nav__link">
-        Image classification on the SVHN dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/imagenet/" class="md-nav__link">
-        Image classification on the ImageNet dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/pascal_voc/" class="md-nav__link">
-        Semantic segmentation on the Pascal VOC dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/cityscapes/" class="md-nav__link">
-        Semantic segmentation on the Pascal VOC dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/search_algorithms/" class="md-nav__link">
-        Search algorithms
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      <label class="md-nav__link" for="__nav_7">
-        Albumentations Experimental
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Albumentations Experimental" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Albumentations Experimental
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../experimental/overview/" class="md-nav__link">
-        Albumentations Experimental Overview
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../experimental/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
-      
-      <label class="md-nav__link" for="__nav_7_3">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API Reference" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_3">
-          <span class="md-nav__icon md-icon"></span>
-          API Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_1" type="checkbox" id="__nav_7_3_1" >
-      
-      <label class="md-nav__link" for="__nav_7_3_1">
-        Augmentations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Augmentations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Augmentations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../experimental/api_reference/augmentations/transforms/" class="md-nav__link">
-        Albumentations Experimental Transforms (augmentations.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      <label class="md-nav__link" for="__nav_8">
-        External resources
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="External resources" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          External resources
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../external_resources/blog_posts_podcasts_talks/" class="md-nav__link">
-        Blog posts, podcasts, talks, and videos about Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../external_resources/books/" class="md-nav__link">
-        Books that mention Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../frameworks_and_libraries/" class="md-nav__link">
-        Frameworks and libraries that use Albumentations
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
-      
-      <label class="md-nav__link" for="__nav_10">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          API Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../full_reference/" class="md-nav__link">
-        Full API Reference
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" checked>
-      
-      <label class="md-nav__link" for="__nav_10_3">
-        Core API
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Core API" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_3">
-          <span class="md-nav__icon md-icon"></span>
-          Core API
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../composition/" class="md-nav__link">
-        Composition API (core.composition)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../transforms_interface/" class="md-nav__link">
-        Transforms Interface (core.transforms_interface)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../serialization/" class="md-nav__link">
-        Serialization API (core.serialization)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#albumentations.core.bbox_utils" class="md-nav__link">
-    albumentations.core.bbox_utils
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../keypoints_utils/" class="md-nav__link">
-        Helper functions for working with keypoints (augmentations.core.keypoints_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" >
-      
-      <label class="md-nav__link" for="__nav_10_4">
-        Augmentations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Augmentations" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_4">
-          <span class="md-nav__icon md-icon"></span>
-          Augmentations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/transforms/" class="md-nav__link">
-        Transforms (augmentations.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_3" type="checkbox" id="__nav_10_4_3" >
-      
-      <label class="md-nav__link" for="__nav_10_4_3">
-        Blur transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Blur transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_3">
-          <span class="md-nav__icon md-icon"></span>
-          Blur transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/blur/transforms/" class="md-nav__link">
-        Blur transforms (augmentations.blur.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_4" type="checkbox" id="__nav_10_4_4" >
-      
-      <label class="md-nav__link" for="__nav_10_4_4">
-        Crop transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Crop transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_4">
-          <span class="md-nav__icon md-icon"></span>
-          Crop transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/crops/functional/" class="md-nav__link">
-        Crop functional transforms (augmentations.crops.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/crops/transforms/" class="md-nav__link">
-        Crop transforms (augmentations.crops.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_5" type="checkbox" id="__nav_10_4_5" >
-      
-      <label class="md-nav__link" for="__nav_10_4_5">
-        Dropout transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Dropout transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_5">
-          <span class="md-nav__icon md-icon"></span>
-          Dropout transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/channel_dropout/" class="md-nav__link">
-        ChannelDropout augmentation (augmentations.dropout.channel_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/coarse_dropout/" class="md-nav__link">
-        CoarseDropout augmentation (augmentations.dropout.coarse_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/grid_dropout/" class="md-nav__link">
-        GridDropout augmentation (augmentations.dropout.grid_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/mask_dropout/" class="md-nav__link">
-        MaskDropout augmentation (augmentations.dropout.mask_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/xy_masking/" class="md-nav__link">
-        XYMasking augmentation (augmentations.dropout.xy_masking)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_6" type="checkbox" id="__nav_10_4_6" >
-      
-      <label class="md-nav__link" for="__nav_10_4_6">
-        Geometric transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Geometric transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_6">
-          <span class="md-nav__icon md-icon"></span>
-          Geometric transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/functional/" class="md-nav__link">
-        Geometric functional transforms (augmentations.geometric.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/resize/" class="md-nav__link">
-        Resizing transforms (augmentations.geometric.resize)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/rotate/" class="md-nav__link">
-        Rotation transforms (augmentations.geometric.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/transforms/" class="md-nav__link">
-        Geometric transforms (augmentations.geometric.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
-      
-      <label class="md-nav__link" for="__nav_10_4_7">
-        Mixing transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_7">
-          <span class="md-nav__icon md-icon"></span>
-          Mixing transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/mixing/transforms/" class="md-nav__link">
-        Mixing transforms (augmentations.mixing.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/mixing/functional/" class="md-nav__link">
-        Mixing functional transforms (augmentations.mixing.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/domain_adaptation/" class="md-nav__link">
-        Domain adaptation transforms (augmentations.domain_adaptation)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/functional/" class="md-nav__link">
-        Functional transforms (augmentations.functional)
-      </a>
-    </li>
-              
-
-  
-
           
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
-      
-      <label class="md-nav__link" for="__nav_10_5">
-        PyTorch Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          PyTorch Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../pytorch/transforms/" class="md-nav__link">
-        Transforms (pytorch.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../release_notes/" class="md-nav__link">
-        Release notes
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../contributing/" class="md-nav__link">
-        Contributing to Albumentations
-      </a>
-    </li>
-              
-
-  
-
-    
-  </ul>
-</nav>
-          </div>
-        </div>
-      </div>
-    
-  
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
 <style>
-    .highlight-ipynb {
-        font-size: 0.7rem;
-    }
-    .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
-        font-size: 0.8rem;
-    }
+  .highlight-ipynb {
+    font-size: 0.7rem;
+  }
+
+  .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
+    font-size: 0.8rem;
+  }
 </style>
 
 
-  <a href="https://github.com/albumentations-team/albumentations.ai/tree/main/mkdocs/src/docs/api_reference/core/bbox_utils.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-  </a>
+<a href="https://github.com/albumentations-team/albumentations.ai/tree/main/mkdocs/src/docs/api_reference/core/bbox_utils.md"
+  title="edit.link.title" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+</a>
 
 
 
 
 
-  
+
 
 
 <h1 id="helper-functions-for-working-with-bounding-boxes-augmentationscorebbox_utils">Helper functions for working with bounding boxes (augmentations.core.bbox_utils)<a class="headerlink" href="#helper-functions-for-working-with-bounding-boxes-augmentationscorebbox_utils" title="Permanent link">¶</a></h1>
@@ -1965,7 +243,7 @@
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="BboxParams" id="albumentations.core.bbox_utils.BboxParams">
 <code>class <strong>
-albumentations.core.bbox_utils.BboxParams</strong></code>
+BboxParams</strong></code>
 <code>
 
 
@@ -2043,6 +321,78 @@ Default: <code>True</code></p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">BboxParams</span><span class="p">(</span><span class="n">Params</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Parameters of bounding boxes</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        format (str): format of bounding boxes. Should be 'coco', 'pascal_voc', 'albumentations' or 'yolo'.</span>
+
+<span class="sd">            The `coco` format</span>
+<span class="sd">                `[x_min, y_min, width, height]`, e.g. [97, 12, 150, 200].</span>
+<span class="sd">            The `pascal_voc` format</span>
+<span class="sd">                `[x_min, y_min, x_max, y_max]`, e.g. [97, 12, 247, 212].</span>
+<span class="sd">            The `albumentations` format</span>
+<span class="sd">                is like `pascal_voc`, but normalized,</span>
+<span class="sd">                in other words: `[x_min, y_min, x_max, y_max]`, e.g. [0.2, 0.3, 0.4, 0.5].</span>
+<span class="sd">            The `yolo` format</span>
+<span class="sd">                `[x, y, width, height]`, e.g. [0.1, 0.2, 0.3, 0.4];</span>
+<span class="sd">                `x`, `y` - normalized bbox center; `width`, `height` - normalized bbox width and height.</span>
+<span class="sd">        label_fields (list): list of fields that are joined with boxes, e.g labels.</span>
+<span class="sd">            Should be same type as boxes.</span>
+<span class="sd">        min_area (float): minimum area of a bounding box. All bounding boxes whose</span>
+<span class="sd">            visible area in pixels is less than this value will be removed. Default: 0.0.</span>
+<span class="sd">        min_visibility (float): minimum fraction of area for a bounding box</span>
+<span class="sd">            to remain this box in list. Default: 0.0.</span>
+<span class="sd">        min_width (float): Minimum width of a bounding box. All bounding boxes whose width is</span>
+<span class="sd">            less than this value will be removed. Default: 0.0.</span>
+<span class="sd">        min_height (float): Minimum height of a bounding box. All bounding boxes whose height is</span>
+<span class="sd">            less than this value will be removed. Default: 0.0.</span>
+<span class="sd">        check_each_transform (bool): if `True`, then bboxes will be checked after each dual transform.</span>
+<span class="sd">            Default: `True`</span>
+
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">label_fields</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">min_area</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">min_visibility</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">min_width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">min_height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">check_each_transform</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">label_fields</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_area</span> <span class="o">=</span> <span class="n">min_area</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_visibility</span> <span class="o">=</span> <span class="n">min_visibility</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_width</span> <span class="o">=</span> <span class="n">min_width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_height</span> <span class="o">=</span> <span class="n">min_height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_each_transform</span> <span class="o">=</span> <span class="n">check_each_transform</span>
+
+    <span class="k">def</span> <span class="nf">to_dict_private</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">to_dict_private</span><span class="p">()</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">"min_area"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_area</span><span class="p">,</span>
+                <span class="s2">"min_visibility"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_visibility</span><span class="p">,</span>
+                <span class="s2">"min_width"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_width</span><span class="p">,</span>
+                <span class="s2">"min_height"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_height</span><span class="p">,</span>
+                <span class="s2">"check_each_transform"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_each_transform</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">is_serializable</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_class_fullname</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"BboxParams"</span>
+</code></pre></div>
+</details>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2050,7 +400,7 @@ Default: <code>True</code></p></td>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="calculate_bbox_area()" id="albumentations.core.bbox_utils.calculate_bbox_area">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
+calculate_bbox_area    (bbox, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L238" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.calculate_bbox_area" title="Permanent link">¶</a>
 </h2>
@@ -2098,34 +448,75 @@ albumentations.core.bbox_utils.calculate_bbox_area    (bbox, rows, cols)
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_bbox_area</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Calculate the area of a bounding box in (fractional) pixels.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Return:</span>
+<span class="sd">        Area in (fractional) pixels of the (denormalized) bounding box.</span>
+
+<span class="sd">    """</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">denormalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="check_bbox()" id="albumentations.core.bbox_utils.check_bbox">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.check_bbox    (bbox)
+check_bbox    (bbox)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L433" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bbox" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bbox boundaries are in range 0, 1 and minimums are lesser then maximums</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">check_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Check if bbox boundaries are in range 0, 1 and minimums are lesser then maximums"""</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="s2">"x_min"</span><span class="p">,</span> <span class="s2">"y_min"</span><span class="p">,</span> <span class="s2">"x_max"</span><span class="p">,</span> <span class="s2">"y_max"</span><span class="p">],</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Expected </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> for bbox </span><span class="si">{</span><span class="n">bbox</span><span class="si">}</span><span class="s2"> to be in the range [0.0, 1.0], got </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">x_max</span> <span class="o">&lt;=</span> <span class="n">x_min</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x_max is less than or equal to x_min for bbox </span><span class="si">{</span><span class="n">bbox</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y_max</span> <span class="o">&lt;=</span> <span class="n">y_min</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y_max is less than or equal to y_min for bbox </span><span class="si">{</span><span class="n">bbox</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="check_bboxes()" id="albumentations.core.bbox_utils.check_bboxes">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.check_bboxes    (bboxes)
+check_bboxes    (bboxes)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L445" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.check_bboxes" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Check if bboxes boundaries are in range 0, 1 and minimums are lesser then maximums</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">check_bboxes</span><span class="p">(</span><span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Check if bboxes boundaries are in range 0, 1 and minimums are lesser then maximums"""</span>
+    <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">:</span>
+        <span class="n">check_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="convert_bbox_from_albumentations()" id="albumentations.core.bbox_utils.convert_bbox_from_albumentations">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target_format, rows, cols, check_validity=False)
+convert_bbox_from_albumentations    (bbox, target_format, rows, cols, check_validity=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L358" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_from_albumentations" title="Permanent link">¶</a>
 </h2>
@@ -2178,14 +569,16 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>tuple: A bounding box.</p></td>
+<td><code>tuple</code></td>
+<td><p>A bounding box.</p></td>
 </tr>
 </tbody>
-</table> <p>Note:
-    The <code>coco</code> format of a bounding box looks like <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
-    The <code>pascal_voc</code> format of a bounding box looks like <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
-    The <code>yolo</code> format of a bounding box looks like <code>[x, y, width, height]</code>, e.g. [0.3, 0.1, 0.05, 0.07].</p>
+</table> <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>coco</code> format of a bounding box looks like <code>[x_min, y_min, width, height]</code>, e.g. [97, 12, 150, 200].
+The <code>pascal_voc</code> format of a bounding box looks like <code>[x_min, y_min, x_max, y_max]</code>, e.g. [97, 12, 247, 212].
+The <code>yolo</code> format of a bounding box looks like <code>[x, y, width, height]</code>, e.g. [0.3, 0.1, 0.05, 0.07].</p>
+</div>
 <p><strong>Exceptions:</strong></p>
 <table>
 <thead>
@@ -2201,12 +594,62 @@ albumentations.core.bbox_utils.convert_bbox_from_albumentations    (bbox, target
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_bbox_from_albumentations</span><span class="p">(</span>
+    <span class="n">bbox</span><span class="p">:</span> <span class="n">BoxType</span><span class="p">,</span> <span class="n">target_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Convert a bounding box from the format used by albumentations to a format, specified in `target_format`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: An albumentations bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        target_format: required format of the output bounding box. Should be 'coco', 'pascal_voc' or 'yolo'.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+<span class="sd">        check_validity: Check if all boxes are valid boxes.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A bounding box.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        The `coco` format of a bounding box looks like `[x_min, y_min, width, height]`, e.g. [97, 12, 150, 200].</span>
+<span class="sd">        The `pascal_voc` format of a bounding box looks like `[x_min, y_min, x_max, y_max]`, e.g. [97, 12, 247, 212].</span>
+<span class="sd">        The `yolo` format of a bounding box looks like `[x, y, width, height]`, e.g. [0.3, 0.1, 0.05, 0.07].</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if `target_format` is not equal to `coco`, `pascal_voc` or `yolo`.</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">target_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"coco"</span><span class="p">,</span> <span class="s2">"pascal_voc"</span><span class="p">,</span> <span class="s2">"yolo"</span><span class="p">}:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Unknown target_format </span><span class="si">{</span><span class="n">target_format</span><span class="si">}</span><span class="s2">. Supported formats are: 'coco', 'pascal_voc' and 'yolo'"</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_validity</span><span class="p">:</span>
+        <span class="n">check_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">target_format</span> <span class="o">!=</span> <span class="s2">"yolo"</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">denormalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"coco"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">BoxType</span><span class="p">,</span> <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="o">*</span><span class="n">tail</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">target_format</span> <span class="o">==</span> <span class="s2">"yolo"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_min</span> <span class="o">+</span> <span class="n">x_max</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_min</span> <span class="o">+</span> <span class="n">y_max</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">BoxType</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="o">*</span><span class="n">tail</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">bbox</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="convert_bbox_to_albumentations()" id="albumentations.core.bbox_utils.convert_bbox_to_albumentations">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.convert_bbox_to_albumentations    (bbox, source_format, rows, cols, check_validity=False)
+convert_bbox_to_albumentations    (bbox, source_format, rows, cols, check_validity=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L295" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bbox_to_albumentations" title="Permanent link">¶</a>
 </h2>
@@ -2261,15 +704,17 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 </thead>
 <tbody>
 <tr>
-<td><code>Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]</code></td>
-<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>tuple</code></td>
+<td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
-</table> <p>Note:
-    The <code>coco</code> format of a bounding box looks like <code>(x_min, y_min, width, height)</code>, e.g. (97, 12, 150, 200).
-    The <code>pascal_voc</code> format of a bounding box looks like <code>(x_min, y_min, x_max, y_max)</code>, e.g. (97, 12, 247, 212).
-    The <code>yolo</code> format of a bounding box looks like <code>(x, y, width, height)</code>, e.g. (0.3, 0.1, 0.05, 0.07);
-    where <code>x</code>, <code>y</code> coordinates of the center of the box, all values normalized to 1 by image height and width.</p>
+</table> <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>coco</code> format of a bounding box looks like <code>(x_min, y_min, width, height)</code>, e.g. (97, 12, 150, 200).
+The <code>pascal_voc</code> format of a bounding box looks like <code>(x_min, y_min, x_max, y_max)</code>, e.g. (97, 12, 247, 212).
+The <code>yolo</code> format of a bounding box looks like <code>(x, y, width, height)</code>, e.g. (0.3, 0.1, 0.05, 0.07);
+where <code>x</code>, <code>y</code> coordinates of the center of the box, all values normalized to 1 by image height and width.</p>
+</div>
 <p><strong>Exceptions:</strong></p>
 <table>
 <thead>
@@ -2289,12 +734,77 @@ normalized coordinates of top-left and bottom-right corners of the bounding box 
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_bbox_to_albumentations</span><span class="p">(</span>
+    <span class="n">bbox</span><span class="p">:</span> <span class="n">BoxType</span><span class="p">,</span> <span class="n">source_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Convert a bounding box from a format specified in `source_format` to the format used by albumentations:</span>
+<span class="sd">    normalized coordinates of top-left and bottom-right corners of the bounding box in a form of</span>
+<span class="sd">    `(x_min, y_min, x_max, y_max)` e.g. `(0.15, 0.27, 0.67, 0.5)`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box tuple.</span>
+<span class="sd">        source_format: format of the bounding box. Should be 'coco', 'pascal_voc', or 'yolo'.</span>
+<span class="sd">        check_validity: Check if all boxes are valid boxes.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        The `coco` format of a bounding box looks like `(x_min, y_min, width, height)`, e.g. (97, 12, 150, 200).</span>
+<span class="sd">        The `pascal_voc` format of a bounding box looks like `(x_min, y_min, x_max, y_max)`, e.g. (97, 12, 247, 212).</span>
+<span class="sd">        The `yolo` format of a bounding box looks like `(x, y, width, height)`, e.g. (0.3, 0.1, 0.05, 0.07);</span>
+<span class="sd">        where `x`, `y` coordinates of the center of the box, all values normalized to 1 by image height and width.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if `target_format` is not equal to `coco` or `pascal_voc`, or `yolo`.</span>
+<span class="sd">        ValueError: If in YOLO format all labels not in range (0, 1).</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">source_format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"coco"</span><span class="p">,</span> <span class="s2">"pascal_voc"</span><span class="p">,</span> <span class="s2">"yolo"</span><span class="p">}:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Unknown source_format </span><span class="si">{</span><span class="n">source_format</span><span class="si">}</span><span class="s2">. Supported formats are: 'coco', 'pascal_voc' and 'yolo'"</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"coco"</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+        <span class="n">x_max</span> <span class="o">=</span> <span class="n">x_min</span> <span class="o">+</span> <span class="n">width</span>
+        <span class="n">y_max</span> <span class="o">=</span> <span class="n">y_min</span> <span class="o">+</span> <span class="n">height</span>
+    <span class="k">elif</span> <span class="n">source_format</span> <span class="o">==</span> <span class="s2">"yolo"</span><span class="p">:</span>
+        <span class="c1"># https://github.com/pjreddie/darknet/blob/f6d861736038da22c9eb0739dca84003c5a5e275/scripts/voc_label.py#L12</span>
+        <span class="n">_bbox</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">check_validity</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">_bbox</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">_bbox</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"In YOLO format all coordinates must be float and in range (0, 1]"</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+
+        <span class="n">w_half</span><span class="p">,</span> <span class="n">h_half</span> <span class="o">=</span> <span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">h</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">x_min</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">w_half</span>
+        <span class="n">y_min</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">h_half</span>
+        <span class="n">x_max</span> <span class="o">=</span> <span class="n">x_min</span> <span class="o">+</span> <span class="n">w</span>
+        <span class="n">y_max</span> <span class="o">=</span> <span class="n">y_min</span> <span class="o">+</span> <span class="n">h</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+
+    <span class="n">bbox</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="o">*</span><span class="nb">tuple</span><span class="p">(</span><span class="n">tail</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">source_format</span> <span class="o">!=</span> <span class="s2">"yolo"</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">normalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_validity</span><span class="p">:</span>
+        <span class="n">check_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">bbox</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="convert_bboxes_from_albumentations()" id="albumentations.core.bbox_utils.convert_bboxes_from_albumentations">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.convert_bboxes_from_albumentations    (bboxes, target_format, rows, cols, check_validity=False)
+convert_bboxes_from_albumentations    (bboxes, target_format, rows, cols, check_validity=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L413" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_from_albumentations" title="Permanent link">¶</a>
 </h2>
@@ -2353,23 +863,54 @@ in <code>target_format</code>.</p>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_bboxes_from_albumentations</span><span class="p">(</span>
+    <span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span> <span class="n">target_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Convert a list of bounding boxes from the format used by albumentations to a format, specified</span>
+<span class="sd">    in `target_format`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bboxes: List of albumentations bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        target_format: required format of the output bounding box. Should be 'coco', 'pascal_voc' or 'yolo'.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+<span class="sd">        check_validity: Check if all boxes are valid boxes.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of bounding boxes.</span>
+
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">convert_bbox_from_albumentations</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">target_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">)</span> <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">]</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="convert_bboxes_to_albumentations()" id="albumentations.core.bbox_utils.convert_bboxes_to_albumentations">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.convert_bboxes_to_albumentations    (bboxes, source_format, rows, cols, check_validity=False)
+convert_bboxes_to_albumentations    (bboxes, source_format, rows, cols, check_validity=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L406" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.convert_bboxes_to_albumentations" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert a list bounding boxes from a format specified in <code>source_format</code> to the format used by albumentations</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_bboxes_to_albumentations</span><span class="p">(</span>
+    <span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span> <span class="n">source_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Convert a list bounding boxes from a format specified in `source_format` to the format used by albumentations"""</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">convert_bbox_to_albumentations</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">source_format</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">check_validity</span><span class="p">)</span> <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">]</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="denormalize_bbox()" id="albumentations.core.bbox_utils.denormalize_bbox">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.denormalize_bbox    (bbox, rows, cols)
+denormalize_bbox    (bbox, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L176" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bbox" title="Permanent link">¶</a>
 </h2>
@@ -2433,12 +974,46 @@ by image height. This is an inverse operation for :func:<code>~albumentations.au
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">denormalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Denormalize coordinates of a bounding box. Multiply x-coordinates by image width and y-coordinates</span>
+<span class="sd">    by image height. This is an inverse operation for :func:`~albumentations.augmentations.bbox.normalize_bbox`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: Normalized bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Denormalized bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If rows or cols is less or equal zero</span>
+
+<span class="sd">    """</span>
+    <span class="n">tail</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+    <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+
+    <span class="k">if</span> <span class="n">rows</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Argument rows must be positive integer"</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cols</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Argument cols must be positive integer"</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">x_min</span> <span class="o">*</span> <span class="n">cols</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">*</span> <span class="n">cols</span>
+    <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">y_min</span> <span class="o">*</span> <span class="n">rows</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">*</span> <span class="n">rows</span>
+
+    <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">BoxType</span><span class="p">,</span> <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="o">*</span><span class="n">tail</span><span class="p">))</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="denormalize_bboxes()" id="albumentations.core.bbox_utils.denormalize_bboxes">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
+denormalize_bboxes    (bboxes, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L223" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.denormalize_bboxes" title="Permanent link">¶</a>
 </h2>
@@ -2481,17 +1056,34 @@ albumentations.core.bbox_utils.denormalize_bboxes    (bboxes, rows, cols)
 </thead>
 <tbody>
 <tr>
-<td><code>List[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
-<td><p>List: Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
+<td><code>List</code></td>
+<td><p>Denormalized bounding boxes <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">denormalize_bboxes</span><span class="p">(</span><span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Denormalize a list of bounding boxes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bboxes: Normalized bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List: Denormalized bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">denormalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">]</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="filter_bboxes()" id="albumentations.core.bbox_utils.filter_bboxes">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.filter_bboxes    (bboxes, rows, cols, min_area=0.0, min_visibility=0.0, min_width=0.0, min_height=0.0)
+filter_bboxes    (bboxes, rows, cols, min_area=0.0, min_visibility=0.0, min_width=0.0, min_height=0.0)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L451" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes" title="Permanent link">¶</a>
 </h2>
@@ -2563,12 +1155,65 @@ less than this value will be removed. Default: 0.0.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">filter_bboxes</span><span class="p">(</span>
+    <span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span>
+    <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">min_area</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">min_visibility</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">min_width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">min_height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Remove bounding boxes that either lie outside of the visible area by more then min_visibility</span>
+<span class="sd">    or whose area in pixels is under the threshold set by `min_area`. Also it crops boxes to final image size.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bboxes: List of albumentations bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+<span class="sd">        min_area: Minimum area of a bounding box. All bounding boxes whose visible area in pixels.</span>
+<span class="sd">            is less than this value will be removed. Default: 0.0.</span>
+<span class="sd">        min_visibility: Minimum fraction of area for a bounding box to remain this box in list. Default: 0.0.</span>
+<span class="sd">        min_width: Minimum width of a bounding box. All bounding boxes whose width is</span>
+<span class="sd">            less than this value will be removed. Default: 0.0.</span>
+<span class="sd">        min_height: Minimum height of a bounding box. All bounding boxes whose height is</span>
+<span class="sd">            less than this value will be removed. Default: 0.0.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of bounding boxes.</span>
+
+<span class="sd">    """</span>
+    <span class="n">resulting_boxes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bboxes</span><span class="p">)):</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">bboxes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1"># Calculate areas of bounding box before and after clipping.</span>
+        <span class="n">transformed_box_area</span> <span class="o">=</span> <span class="n">calculate_bbox_area</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+        <span class="n">bbox</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">BoxType</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">clipped_box_area</span> <span class="o">=</span> <span class="n">calculate_bbox_area</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+
+        <span class="c1"># Calculate width and height of the clipped bounding box.</span>
+        <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">denormalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)[:</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">clipped_width</span><span class="p">,</span> <span class="n">clipped_height</span> <span class="o">=</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">clipped_box_area</span> <span class="o">!=</span> <span class="mi">0</span>  <span class="c1"># to ensure transformed_box_area!=0 and to handle min_area=0 or min_visibility=0</span>
+            <span class="ow">and</span> <span class="n">clipped_box_area</span> <span class="o">&gt;=</span> <span class="n">min_area</span>
+            <span class="ow">and</span> <span class="n">clipped_box_area</span> <span class="o">/</span> <span class="n">transformed_box_area</span> <span class="o">&gt;=</span> <span class="n">min_visibility</span>
+            <span class="ow">and</span> <span class="n">clipped_width</span> <span class="o">&gt;=</span> <span class="n">min_width</span>
+            <span class="ow">and</span> <span class="n">clipped_height</span> <span class="o">&gt;=</span> <span class="n">min_height</span>
+        <span class="p">):</span>
+            <span class="n">resulting_boxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">BoxType</span><span class="p">,</span> <span class="n">bbox</span> <span class="o">+</span> <span class="n">tail</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">resulting_boxes</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="filter_bboxes_by_visibility()" id="albumentations.core.bbox_utils.filter_bboxes_by_visibility">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.filter_bboxes_by_visibility    (original_shape, bboxes, transformed_shape, transformed_bboxes, threshold=0.0, min_area=0.0)
+filter_bboxes_by_visibility    (original_shape, bboxes, transformed_shape, transformed_bboxes, threshold=0.0, min_area=0.0)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L255" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.filter_bboxes_by_visibility" title="Permanent link">¶</a>
 </h2>
@@ -2632,12 +1277,54 @@ the threshold and minimal area of bounding box in pixels is more then min_area.<
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">filter_bboxes_by_visibility</span><span class="p">(</span>
+    <span class="n">original_shape</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span>
+    <span class="n">transformed_shape</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="n">transformed_bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span>
+    <span class="n">threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">min_area</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Filter bounding boxes and return only those boxes whose visibility after transformation is above</span>
+<span class="sd">    the threshold and minimal area of bounding box in pixels is more then min_area.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        original_shape: Original image shape `(height, width, ...)`.</span>
+<span class="sd">        bboxes: Original bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+<span class="sd">        transformed_shape: Transformed image shape `(height, width)`.</span>
+<span class="sd">        transformed_bboxes: Transformed bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+<span class="sd">        threshold: visibility threshold. Should be a value in the range [0.0, 1.0].</span>
+<span class="sd">        min_area: Minimal area threshold.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Filtered bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span> <span class="o">=</span> <span class="n">original_shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">transformed_img_height</span><span class="p">,</span> <span class="n">transformed_img_width</span> <span class="o">=</span> <span class="n">transformed_shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">visible_bboxes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">transformed_bbox</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bboxes</span><span class="p">,</span> <span class="n">transformed_bboxes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">&lt;=</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mf">1.0</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">transformed_bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]):</span>
+            <span class="k">continue</span>
+        <span class="n">bbox_area</span> <span class="o">=</span> <span class="n">calculate_bbox_area</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">)</span>
+        <span class="n">transformed_bbox_area</span> <span class="o">=</span> <span class="n">calculate_bbox_area</span><span class="p">(</span><span class="n">transformed_bbox</span><span class="p">,</span> <span class="n">transformed_img_height</span><span class="p">,</span> <span class="n">transformed_img_width</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">transformed_bbox_area</span> <span class="o">&lt;</span> <span class="n">min_area</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">visibility</span> <span class="o">=</span> <span class="n">transformed_bbox_area</span> <span class="o">/</span> <span class="n">bbox_area</span>
+        <span class="k">if</span> <span class="n">visibility</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
+            <span class="n">visible_bboxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">transformed_bbox</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">visible_bboxes</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="normalize_bbox()" id="albumentations.core.bbox_utils.normalize_bbox">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.normalize_bbox    (bbox, rows, cols)
+normalize_bbox    (bbox, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L143" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bbox" title="Permanent link">¶</a>
 </h2>
@@ -2701,12 +1388,47 @@ by image height.</p>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">normalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Normalize coordinates of a bounding box. Divide x-coordinates by image width and y-coordinates</span>
+<span class="sd">    by image height.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: Denormalized bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Normalized bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If rows or cols is less or equal zero</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">rows</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Argument rows must be positive integer"</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cols</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Argument cols must be positive integer"</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">tail</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+    <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">),</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+    <span class="n">x_min</span> <span class="o">/=</span> <span class="n">cols</span>
+    <span class="n">x_max</span> <span class="o">/=</span> <span class="n">cols</span>
+    <span class="n">y_min</span> <span class="o">/=</span> <span class="n">rows</span>
+    <span class="n">y_max</span> <span class="o">/=</span> <span class="n">rows</span>
+
+    <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">BoxType</span><span class="p">,</span> <span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="o">*</span><span class="n">tail</span><span class="p">))</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="normalize_bboxes()" id="albumentations.core.bbox_utils.normalize_bboxes">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
+normalize_bboxes    (bboxes, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L208" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.normalize_bboxes" title="Permanent link">¶</a>
 </h2>
@@ -2754,12 +1476,29 @@ albumentations.core.bbox_utils.normalize_bboxes    (bboxes, rows, cols)
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">normalize_bboxes</span><span class="p">(</span><span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Normalize a list of bounding boxes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bboxes: Denormalized bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Normalized bounding boxes `[(x_min, y_min, x_max, y_max)]`.</span>
+
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">normalize_bbox</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span> <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">]</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="union_of_bboxes()" id="albumentations.core.bbox_utils.union_of_bboxes">
 <code class="highlight language-python">def
-albumentations.core.bbox_utils.union_of_bboxes    (height, width, bboxes, erosion_rate=0.0)
+union_of_bboxes    (height, width, bboxes, erosion_rate=0.0)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/bbox_utils.py#L502" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.bbox_utils.union_of_bboxes" title="Permanent link">¶</a>
 </h2>
@@ -2777,17 +1516,17 @@ albumentations.core.bbox_utils.union_of_bboxes    (height, width, bboxes, erosio
 <tbody>
 <tr>
 <td><code>height</code></td>
-<td><code>int</code></td>
+<td><code>float</code></td>
 <td><p>Height of image or space.</p></td>
 </tr>
 <tr>
 <td><code>width</code></td>
-<td><code>int</code></td>
+<td><code>float</code></td>
 <td><p>Width of image or space.</p></td>
 </tr>
 <tr>
 <td><code>bboxes</code></td>
-<td><code>Sequence[Union[Tuple[float, float, float, float], Tuple[float, float, float, float, Any]]]</code></td>
+<td><code>List[tuple]</code></td>
 <td><p>List like bounding boxes. Format is <code>[(x_min, y_min, x_max, y_max)]</code>.</p></td>
 </tr>
 <tr>
@@ -2808,11 +1547,39 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple[float, float, float, float]</code></td>
-<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>tuple</code></td>
+<td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/bbox_utils.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">union_of_bboxes</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span> <span class="n">erosion_rate</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Calculate union of bounding boxes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        height (float): Height of image or space.</span>
+<span class="sd">        width (float): Width of image or space.</span>
+<span class="sd">        bboxes (List[tuple]): List like bounding boxes. Format is `[(x_min, y_min, x_max, y_max)]`.</span>
+<span class="sd">        erosion_rate (float): How much each bounding box can be shrunk, useful for erosive cropping.</span>
+<span class="sd">            Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to lose its volume.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span>
+    <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span><span class="p">:</span>
+        <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span>
+        <span class="n">lim_x1</span><span class="p">,</span> <span class="n">lim_y1</span> <span class="o">=</span> <span class="n">x_min</span> <span class="o">+</span> <span class="n">erosion_rate</span> <span class="o">*</span> <span class="n">w</span><span class="p">,</span> <span class="n">y_min</span> <span class="o">+</span> <span class="n">erosion_rate</span> <span class="o">*</span> <span class="n">h</span>
+        <span class="n">lim_x2</span><span class="p">,</span> <span class="n">lim_y2</span> <span class="o">=</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">erosion_rate</span> <span class="o">*</span> <span class="n">w</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">erosion_rate</span> <span class="o">*</span> <span class="n">h</span>
+        <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">lim_x1</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">y1</span><span class="p">,</span> <span class="n">lim_y1</span><span class="p">])</span>
+        <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">x2</span><span class="p">,</span> <span class="n">lim_x2</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">y2</span><span class="p">,</span> <span class="n">lim_y2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 </div>
@@ -2820,29 +1587,29 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
 </div>
 
 
-              
-                
-
-
-              
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    <nav class="md-footer__inner md-grid" aria-label="footer.title">
       
         <a href="../serialization/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -2865,7 +1632,7 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -2878,10 +1645,12 @@ Set this in range [0, 1]. 0 will not be erosive at all, 1.0 can make any bbox to
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
       

@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Team | Albumentations: fast and flexible
+        image augmentations</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Albumentations: Efficient Image Augmentation Library for Machine Learning">
+    <meta property="og:description"
+        content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+    <meta property="og:image" content="https://albumentations.ai/assets/img/custom/albumentations_card.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://albumentations.ai">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@albumentations">
+    <meta name="twitter:creator" content="@viglovikov">
+    <meta name="twitter:title" content="Albumentations: Efficient Image Augmentation Library for Machine Learning">
+    <meta name="twitter:description"
+        content="Maximize your machine learning model's performance with Albumentations: a fast, flexible framework for comprehensive image augmentation tailored for computer vision.">
+    <meta name="twitter:image" content="https://albumentations.ai/assets/img/custom/albumentations_card.png">
+    <meta name="description"
+        content="Discover Albumentations: an open-source library offering efficient and customizable image augmentations to boost machine learning and computer vision model performance.">
+    <meta name="keywords"
+        content="Albumentations, image augmentation, machine learning, computer vision, data augmentation, image processing, deep learning, AI, artificial intelligence, Python">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCXRDR9HJ0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DCXRDR9HJ0');
+    </script>
+</head>
+
+<body>
+    <header id="header" class="u-header u-header--sticky-top" data-header-fix-moment="500"
+        data-header-fix-effect="slide">
+        <div class="u-header__section">
+            <div id="logoAndNav" class="container">
+                <nav class="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
+                    <a class="navbar-brand u-header__navbar-brand" href="https://albumentations.ai/" aria-label="Albumentations">
+                        <img class="u-header__navbar-brand-default" src="./assets/img/custom/albumentations_logo.png"
+                            alt="Albumentations logo" style="width: 3.375rem">
+                        <span
+                            style="color: #777777; font-weight: bold; position: absolute; top: 1.3rem; left: 4rem; font-size: 22px;">Albumentations</span>
+                    </a>
+                    <button type="button" class="navbar-toggler btn u-hamburger" aria-label="Toggle navigation"
+                        aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+                        <span id="hamburgerTrigger" class="u-hamburger__box">
+                            <span class="u-hamburger__inner"></span>
+                        </span>
+                    </button>
+                    <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+                        <ul class="navbar-nav align-items-md-center u-header__navbar-nav">
+                            <li class="nav-item u-header__nav-item">
+                                <a class="nav-link u-header__nav-link" href="https://albumentations.ai/">Home</a>
+                            </li>
+                            <li class="nav-item u-header__nav-item">
+                                <a class="nav-link u-header__nav-link"
+                                    href="https://albumentations.ai/docs">Documentation</a>
+                            </li>
+                            <li class="nav-item u-header__nav-item">
+                                <a class="nav-link u-header__nav-link" href="https://albumentations.ai/whos_using">Who's using</a>
+                            </li>
+                            <li class="nav-item u-header__nav-item">
+                                <a class="nav-link u-header__nav-link" href="https://demo.albumentations.ai"
+                                    target="_blank">Demo</a>
+                            </li>
+                            <li class="nav-item u-header__nav-item">
+                                <a class="nav-link u-header__nav-link" href="https://albumentations.ai/people">People</a>
+                            </li>
+                            <li class="nav-item u-header__nav-item">
+                                <a class="btn btn-outline-success mb-2 mb-sm-0 btn-sm mr-3"
+                                    href="https://github.com/sponsors/albumentations-team" target="_blank"><i
+                                        class="fa fa-heart"></i> Sponsor</a>
+                            </li>
+                            <li class="nav-item u-header__nav-item">
+                                <a class="btn btn-outline-primary mb-2 mb-sm-0 btn-sm"
+                                    href="https://github.com/albumentations-team/albumentations" target="_blank"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div style="padding-top: 65px !important;">
+    </div>
+    
+<div class="container">
+    <div class="text-left mb-4 mt-6">
+        <h1 class="font-weight-medium text-center">Core team</h1>
+    </div>
+    <div class="row justify-content-md-center mx-n2 mb-1 row-cols-1 row-cols-md-3 row-cols-xl-5">
+        
+        <div class="col px-2 mb-3">
+            <div class="card shadow p-4 align-items-center text-center">
+                <div class="mb-4">
+                    <img class="img-fluid" src="./assets/img/team_avatars/iglovikov.jpg" alt="Vladimir Iglovikov">
+                </div>
+                <h4 class="h5 text-lh-sm" style="height: 60px">Vladimir Iglovikov</h4>
+                <ul class="list-inline mb-0 mt-2">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://linkedin.com/in/iglovikov" target="_blank">
+                            <span class="fab fa-linkedin btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://github.com/ternaus" target="_blank">
+                            <span class="fab fa-github btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://twitter.com/viglovikov" target="_blank">
+                            <span class="fab fa-twitter btn-icon__inner"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col px-2 mb-3">
+            <div class="card shadow p-4 align-items-center text-center">
+                <div class="mb-4">
+                    <img class="img-fluid" src="./assets/img/team_avatars/druzhinin.jpg" alt="Mikhail Druzhinin">
+                </div>
+                <h4 class="h5 text-lh-sm" style="height: 60px">Mikhail Druzhinin</h4>
+                <ul class="list-inline mb-0 mt-2">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://linkedin.com/in/mikhail-druzhinin-548229100" target="_blank">
+                            <span class="fab fa-linkedin btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://github.com/Dipet" target="_blank">
+                            <span class="fab fa-github btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://twitter.com/Dipetm" target="_blank">
+                            <span class="fab fa-twitter btn-icon__inner"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="container">
+    <div class="text-left mb-4 mt-6">
+        <h1 class="font-weight-small text-center">Honorary Developers. Were behind the creation of the library. Sadly
+            not
+            active anymore.</h1>
+    </div>
+    <div class="row justify-content-md-center mx-n2 mb-1 row-cols-1 row-cols-md-3 row-cols-xl-5">
+        
+        <div class="col px-2 mb-3">
+            <div class="card shadow p-4 align-items-center text-center">
+                <div class="mb-4">
+                    <img class="img-fluid" src="./assets/img/team_avatars/buslaev.jpg" alt="Alexander Buslaev">
+                </div>
+                <h4 class="h5 text-lh-sm" style="height: 60px">Alexander Buslaev</h4>
+                <ul class="list-inline mb-0 mt-2">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://linkedin.com/in/al-buslaev" target="_blank">
+                            <span class="fab fa-linkedin btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://github.com/albu" target="_blank">
+                            <span class="fab fa-github btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://twitter.com/AlBuslaev" target="_blank">
+                            <span class="fab fa-twitter btn-icon__inner"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col px-2 mb-3">
+            <div class="card shadow p-4 align-items-center text-center">
+                <div class="mb-4">
+                    <img class="img-fluid" src="./assets/img/team_avatars/parinov.jpg" alt="Alex Parinov">
+                </div>
+                <h4 class="h5 text-lh-sm" style="height: 60px">Alex Parinov</h4>
+                <ul class="list-inline mb-0 mt-2">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://linkedin.com/in/alex-parinov" target="_blank">
+                            <span class="fab fa-linkedin btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://github.com/creafz" target="_blank">
+                            <span class="fab fa-github btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://twitter.com/creaf" target="_blank">
+                            <span class="fab fa-twitter btn-icon__inner"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col px-2 mb-3">
+            <div class="card shadow p-4 align-items-center text-center">
+                <div class="mb-4">
+                    <img class="img-fluid" src="./assets/img/team_avatars/khvedchenya.jpg" alt="Evegene Khvedchenya">
+                </div>
+                <h4 class="h5 text-lh-sm" style="height: 60px">Evegene Khvedchenya</h4>
+                <ul class="list-inline mb-0 mt-2">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://linkedin.com/in/cvtalks" target="_blank">
+                            <span class="fab fa-linkedin btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://github.com/BloodAxe" target="_blank">
+                            <span class="fab fa-github btn-icon__inner"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-icon btn-soft-primary rounded member-social-network"
+                            href="https://twitter.com/cvtalks" target="_blank">
+                            <span class="fab fa-twitter btn-icon__inner"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="container space-top-2 space-bottom-1">
+    <div class="text-left mb-4">
+        <h1 class="font-weight-medium text-center">Contributors</h1>
+    </div>
+    <div class="row">
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/creafz" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/681989?v=4" alt="creafz" title="creafz"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/albu" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1128788?v=4" alt="albu" title="albu"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/BloodAxe" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/532320?v=4" alt="BloodAxe" title="BloodAxe"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/vfdev-5" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/2459423?v=4" alt="vfdev-5" title="vfdev-5"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/arsenyinfo" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/4929993?v=4" alt="arsenyinfo" title="arsenyinfo"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ZFTurbo" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/4013811?v=4" alt="ZFTurbo" title="ZFTurbo"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/i-aki-y" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/9190086?v=4" alt="i-aki-y" title="i-aki-y"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/MichaelMonashev" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/6323434?v=4" alt="MichaelMonashev" title="MichaelMonashev"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/zakajd" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/15848838?v=4" alt="zakajd" title="zakajd"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/victor1cea" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/12428490?v=4" alt="victor1cea" title="victor1cea"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/akarsakov" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/5549721?v=4" alt="akarsakov" title="akarsakov"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/IlyaOvodov" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/34230114?v=4" alt="IlyaOvodov" title="IlyaOvodov"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/LinaShiryaeva" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/8642759?v=4" alt="LinaShiryaeva" title="LinaShiryaeva"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/IliaLarchenko" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/41329713?v=4" alt="IliaLarchenko" title="IliaLarchenko"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/qubvel" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/31920396?v=4" alt="qubvel" title="qubvel"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/StrikerRUS" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/25141164?v=4" alt="StrikerRUS" title="StrikerRUS"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Arquestro" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/7341001?v=4" alt="Arquestro" title="Arquestro"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/jangop" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/17318436?v=4" alt="jangop" title="jangop"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/bfialkoff" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/39707315?v=4" alt="bfialkoff" title="bfialkoff"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/VirajBagal" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/51148252?v=4" alt="VirajBagal" title="VirajBagal"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/5n7" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/59395084?v=4" alt="5n7" title="5n7"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/sergei3000" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/18502517?v=4" alt="sergei3000" title="sergei3000"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/libfun" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/301147?v=4" alt="libfun" title="libfun"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/gavrin-s" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/15730417?v=4" alt="gavrin-s" title="gavrin-s"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/SunQpark" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/31339583?v=4" alt="SunQpark" title="SunQpark"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/alimbekovKZ" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/2087546?v=4" alt="alimbekovKZ" title="alimbekovKZ"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/onurtore" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/20031290?v=4" alt="onurtore" title="onurtore"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ajinkyakhadilkar" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/27129645?v=4" alt="ajinkyakhadilkar" title="ajinkyakhadilkar"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/alekseynp" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/4382608?v=4" alt="alekseynp" title="alekseynp"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/alexander-rakhlin" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/10095956?v=4" alt="alexander-rakhlin" title="alexander-rakhlin"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Andredance" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/23104744?v=4" alt="Andredance" title="Andredance"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/toshiks" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/29678445?v=4" alt="toshiks" title="toshiks"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/erikgaas" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/2773725?v=4" alt="erikgaas" title="erikgaas"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/domef" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/38183728?v=4" alt="domef" title="domef"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/KiriLev" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/13079303?v=4" alt="KiriLev" title="KiriLev"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/marcocaccin" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/7538983?v=4" alt="marcocaccin" title="marcocaccin"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/mys007" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/5921083?v=4" alt="mys007" title="mys007"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ocourtin" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1718264?v=4" alt="ocourtin" title="ocourtin"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/nathanhubens" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/23050329?v=4" alt="nathanhubens" title="nathanhubens"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ORippler" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/24656669?v=4" alt="ORippler" title="ORippler"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ruancomelli" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/22752929?v=4" alt="ruancomelli" title="ruancomelli"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/kaichoulyc" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/32312252?v=4" alt="kaichoulyc" title="kaichoulyc"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/rsokl" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/29104956?v=4" alt="rsokl" title="rsokl"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/bryant1410" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3905501?v=4" alt="bryant1410" title="bryant1410"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/bes-dev" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3617413?v=4" alt="bes-dev" title="bes-dev"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/tashay" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/14319581?v=4" alt="tashay" title="tashay"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/tmramalho" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/2317298?v=4" alt="tmramalho" title="tmramalho"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/timgates42" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/47873678?v=4" alt="timgates42" title="timgates42"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/tabula-rosa" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/45348789?v=4" alt="tabula-rosa" title="tabula-rosa"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/NatanBagrov" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/20153650?v=4" alt="NatanBagrov" title="NatanBagrov"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/namangup" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/32638824?v=4" alt="namangup" title="namangup"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/b0nce" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/27873390?v=4" alt="b0nce" title="b0nce"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/amirassov" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/14277430?v=4" alt="amirassov" title="amirassov"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/deleomike" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/34043765?v=4" alt="deleomike" title="deleomike"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Matthew-J-Payne" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/106391289?v=4" alt="Matthew-J-Payne" title="Matthew-J-Payne"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/InCogNiTo124" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/12953598?v=4" alt="InCogNiTo124" title="InCogNiTo124"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/maksimovkonstantin" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/10925437?v=4" alt="maksimovkonstantin" title="maksimovkonstantin"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Kupchanski" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/13433909?v=4" alt="Kupchanski" title="Kupchanski"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/kirillbobyrev" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3352968?v=4" alt="kirillbobyrev" title="kirillbobyrev"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/jveitchmichaelis" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3159591?v=4" alt="jveitchmichaelis" title="jveitchmichaelis"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/rbu" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/65913?v=4" alt="rbu" title="rbu"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Diyago" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/8073766?v=4" alt="Diyago" title="Diyago"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/tatigabru" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/47729437?v=4" alt="tatigabru" title="tatigabru"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/shyn" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/899449?v=4" alt="shyn" title="shyn"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/oguz-hanoglu" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/99868596?v=4" alt="oguz-hanoglu" title="oguz-hanoglu"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/notmatthancock" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1588456?v=4" alt="notmatthancock" title="notmatthancock"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/kmistry-wx" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/39906469?v=4" alt="kmistry-wx" title="kmistry-wx"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/jovenwayfarer" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/47921506?v=4" alt="jovenwayfarer" title="jovenwayfarer"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/jasonrock-a3" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/107961397?v=4" alt="jasonrock-a3" title="jasonrock-a3"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/pomacanthidae" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/18525734?v=4" alt="pomacanthidae" title="pomacanthidae"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/haarisr" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/122410226?v=4" alt="haarisr" title="haarisr"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/gyaneshwar-sunkara" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/52619288?v=4" alt="gyaneshwar-sunkara" title="gyaneshwar-sunkara"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/dmitrie-ai" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/72915468?v=4" alt="dmitrie-ai" title="dmitrie-ai"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/bonlime" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/14337581?v=4" alt="bonlime" title="bonlime"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/aaroswings" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/35984064?v=4" alt="aaroswings" title="aaroswings"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/zahragolpa" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/20627999?v=4" alt="zahragolpa" title="zahragolpa"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/yisaienkov" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/25550114?v=4" alt="yisaienkov" title="yisaienkov"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/WesleyYue" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/5280818?v=4" alt="WesleyYue" title="WesleyYue"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/notplus" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/47047973?v=4" alt="notplus" title="notplus"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/vladserkoff" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/9671366?v=4" alt="vladserkoff" title="vladserkoff"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/johngull" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1451797?v=4" alt="johngull" title="johngull"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Vcv85" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/34249234?v=4" alt="Vcv85" title="Vcv85"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/t-hanya" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/18238865?v=4" alt="t-hanya" title="t-hanya"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Juphex" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/20795522?v=4" alt="Juphex" title="Juphex"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/cdicle" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/4490559?v=4" alt="cdicle" title="cdicle"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Multihuntr" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/10515040?v=4" alt="Multihuntr" title="Multihuntr"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/spsancti" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/8904387?v=4" alt="spsancti" title="spsancti"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/poke1024" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/11859538?v=4" alt="poke1024" title="poke1024"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/bmabey" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1837?v=4" alt="bmabey" title="bmabey"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/artyompal" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/15948033?v=4" alt="artyompal" title="artyompal"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/sneddy" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/11714584?v=4" alt="sneddy" title="sneddy"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/AndreyGurevich" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/8684917?v=4" alt="AndreyGurevich" title="AndreyGurevich"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Erlemar" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/19382479?v=4" alt="Erlemar" title="Erlemar"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/agchang-cgl" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/61133390?v=4" alt="agchang-cgl" title="agchang-cgl"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/alicangok" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/26303095?v=4" alt="alicangok" title="alicangok"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/golunovas" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/19951039?v=4" alt="golunovas" title="golunovas"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/alxndrkalinin" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1107762?v=4" alt="alxndrkalinin" title="alxndrkalinin"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/kinoooshnik" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3081499?v=4" alt="kinoooshnik" title="kinoooshnik"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Alex-JG3" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/49785867?v=4" alt="Alex-JG3" title="Alex-JG3"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/aidonchuk" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/485590?v=4" alt="aidonchuk" title="aidonchuk"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/alessiobonfiglio" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/48260001?v=4" alt="alessiobonfiglio" title="alessiobonfiglio"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/belskikh" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/13022305?v=4" alt="belskikh" title="belskikh"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/aaronzs" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1827365?v=4" alt="aaronzs" title="aaronzs"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/AaronPinto" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/10177767?v=4" alt="AaronPinto" title="AaronPinto"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ah651" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/26356801?v=4" alt="ah651" title="ah651"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Erotemic" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3186211?v=4" alt="Erotemic" title="Erotemic"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/xiaoyuan0203" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/78028879?v=4" alt="xiaoyuan0203" title="xiaoyuan0203"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/jaehyuck0103" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/16634896?v=4" alt="jaehyuck0103" title="jaehyuck0103"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/cannon" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/8286907?v=4" alt="cannon" title="cannon"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ifeherva" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/3716849?v=4" alt="ifeherva" title="ifeherva"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Ingwar" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1016854?v=4" alt="Ingwar" title="Ingwar"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/hoel-bagard" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/34478245?v=4" alt="hoel-bagard" title="hoel-bagard"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/henrique" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/128897?v=4" alt="henrique" title="henrique"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/hassiahk" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/13920778?v=4" alt="hassiahk" title="hassiahk"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/steermomo" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/10905619?v=4" alt="steermomo" title="steermomo"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/georgymironov" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/5487801?v=4" alt="georgymironov" title="georgymironov"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/GalDude33" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/18334824?v=4" alt="GalDude33" title="GalDude33"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/farizrahman4u" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/11006006?v=4" alt="farizrahman4u" title="farizrahman4u"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/maruschin" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/678620?v=4" alt="maruschin" title="maruschin"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ErlingLie" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/55686577?v=4" alt="ErlingLie" title="ErlingLie"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/plashchynski" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/30833?v=4" alt="plashchynski" title="plashchynski"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/cortwave" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/8936357?v=4" alt="cortwave" title="cortwave"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/Datasciensyash" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/60406311?v=4" alt="Datasciensyash" title="Datasciensyash"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/daisukelab" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/14831220?v=4" alt="daisukelab" title="daisukelab"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/dskkato" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/46243939?v=4" alt="dskkato" title="dskkato"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/DBusAI" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/25797646?v=4" alt="DBusAI" title="DBusAI"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/ChristofHenkel" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/24292431?v=4" alt="ChristofHenkel" title="ChristofHenkel"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/benihime91" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/52747515?v=4" alt="benihime91" title="benihime91"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/rgaiacs" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/1506457?v=4" alt="rgaiacs" title="rgaiacs"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/juanma9613" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/39193747?v=4" alt="juanma9613" title="juanma9613"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/sergiopaniego" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/17179696?v=4" alt="sergiopaniego" title="sergiopaniego"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/dependabot[bot]" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/in/29110?v=4" alt="dependabot[bot]" title="dependabot[bot]"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/adimyth" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/26377913?v=4" alt="adimyth" title="adimyth"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/K4rBie" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/31359280?v=4" alt="K4rBie" title="K4rBie"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/tongliang11" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/25971913?v=4" alt="tongliang11" title="tongliang11"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/slm37102" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/57283103?v=4" alt="slm37102" title="slm37102"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-wrap">
+            <div class="m-1" style="border: 1px solid #ccc">
+                <a href="https://github.com/telemachor" target="_blank"><img
+                        src="https://avatars.githubusercontent.com/u/24947123?v=4" alt="telemachor" title="telemachor"
+                        style="width: 70px;" /></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="container space-top-2 space-bottom-1">
+    <div class="text-left mb-4">
+        <h1 class="font-weight-medium text-center"> Bronze Sponsors</h1>
+    </div>
+    <div class="row">
+        
+        <div class="col-md-2 col-sm-4 p-5 align-self-center">
+            <a href="" target="_blank"><img src="https://avatars.githubusercontent.com/u/53104118?s=200&v=4" alt="Roboflow"
+                    title="Roboflow" class="img-fluid"></a>
+        </div>
+        
+    </div>
+</div>
+
+    <footer class="border-top">
+        <div class="container space-1">
+            <div class="row justify-content-sm-between">
+                <div class="col-12 col-sm-9 col-xl-10 mb-4 pt-3">
+                    <ul class="list-inline list-group-flush list-group-borderless">
+                        <li class="list-inline-item pl-3">
+                            <a class="list-group-item-action" href="https://albumentations.ai/">Home</a>
+                        </li>
+                        <li class="list-inline-item pl-3">
+                            <a class="list-group-item-action"
+                                href="https://albumentations.ai/docs"
+                                target="_blank">Documentation</a>
+                        </li>
+                        <li class="list-inline-item pl-3">
+                            <a class="list-group-item-action" href="https://albumentations.ai/whos_using">Who's using</a>
+                        </li>
+                        <li class="list-inline-item pl-3">
+                            <a class="list-group-item-action" href="https://demo.albumentations.ai"
+                                target="_blank">Demo</a>
+                        </li>
+                        <li class="list-inline-item pl-3">
+                            <a class="list-group-item-action" href="https://albumentations.ai/people">People</a>
+                        </li>
+                        <li class="list-inline-item pl-3">
+                            <a class="list-group-item-action"
+                                href="https://github.com/albumentations-team/albumentations" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-3 col-xl-2 text-sm-right mb-4 mb-sm-0">
+                    <a type="button" class="btn btn-soft-success" href="https://github.com/sponsors/albumentations-team"
+                        target="_blank">Sponsor</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="./assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/vendor/slick/slick.min.js"></script>
+    <script src="./assets/vendor/custombox/custombox.min.js"></script>
+    <script src="./assets/vendor/custombox/custombox.legacy.min.js"></script>
+
+    <script src="./assets/js/hs.core.js"></script>
+    <script src="./assets/js/components/hs.unfold.js"></script>
+    <script src="./assets/js/hs.slick-carousel.js"></script>
+    <script src="./assets/js/hs.modal-window.js"></script>
+
+    <script>
+        $(document).on('ready', function () {
+            $('.collapse-button').click(function () {
+                var that = $(this)
+                var length = that.data('length')
+                var state = that.data('state')
+                if (state === 'hidden') {
+                    that.data('state', 'shown')
+                    that.html('Hide ' + length + ' more <i class="fa fa-angle-up"></i>')
+                } else {
+                    that.data('state', 'hidden')
+                    that.html('Show ' + length + ' more <i class="fa fa-angle-down"></i>')
+                }
+            });
+            $('.js-slick-carousel').each(function () {
+                $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+            });
+            $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-modal-window', {
+                autonomous: true
+            });
+
+        });
+        $(window).on('load', function () {
+            // initialization of HSScrollNav component
+            $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+        });
+    </script>
+     
+</body>
+
+</html>

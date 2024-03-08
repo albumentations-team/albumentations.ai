@@ -6,15 +6,21 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Albumentations: fast and flexible image augmentations">
-      
+        <meta name="description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
       
       
       
         <link rel="canonical" href="https://albumentations.ai/docs/api_reference/augmentations/geometric/functional/">
       
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../resize/">
+      
+      
       <link rel="icon" href="../../../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -22,26 +28,26 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.f1a3b89f.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ffffff">
-        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
-    
+      
+
+
     
     
       
+    
+    
+      
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
@@ -50,29 +56,46 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-DCXRDR9HJ0","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DCXRDR9HJ0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DCXRDR9HJ0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DCXRDR9HJ0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
     
     
-  
-  
     
-  
-  
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Albumentations Documentation - Geometric functional transforms (augmentations.geometric.functional)">
-  <meta property="og:description" content="Albumentations: fast and flexible image augmentations">
-  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/augmentations/geometric/functional/">
-  <meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
-  <meta property="og:image:type" content="image/png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Albumentations Documentation - Geometric functional transforms (augmentations.geometric.functional)">
-  <meta name="twitter:description" content="Albumentations: fast and flexible image augmentations">
-  <meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:title" content="Albumentations Documentation - Geometric functional transforms (augmentations.geometric.functional)">
+<meta property="og:description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://albumentations.ai/docs/api_reference/augmentations/geometric/functional/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@albumentations">
+<meta name="twitter:creator" content="@viglovikov">
+<meta name="twitter:title" content="Albumentations Documentation - Geometric functional transforms (augmentations.geometric.functional)">
+<meta name="twitter:description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+<meta name="description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta name="keywords"
+  content="Albumentations, image augmentation, machine learning, computer vision, data augmentation, image processing, deep learning, AI, artificial intelligence, Python">
+
 
   </head>
   
@@ -82,10 +105,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
   
-    
-    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -102,66 +123,67 @@
       
     </div>
     
+    
       <header class="md-header" data-md-component="header">
 
-    <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Albumentations Documentation" class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="header.title">
+    <a href="../../../.." title="Albumentations Documentation"
+      class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
       
   <img src="../../../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
 
     </div>
 
-
-      <div class="md-header-nav__title">
-          <div class="header-menu-item">
-            <a href="https://albumentations.ai">Home</a>
-          </div>
-          <div class="header-menu-item header-menu-item-selected">
-            <a href="https://albumentations.ai/docs/">Documentation</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations.ai/whos_using">Who's using</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations.ai/team">Team</a>
-          </div>
+    <div class="md-header-nav__title">
+      <div class="header-menu-item">
+        <a href="https://albumentations.ai">Home</a>
       </div>
-      
+      <div class="header-menu-item header-menu-item-selected">
+        <a href="https://albumentations.ai/docs/">Documentation</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://albumentations.ai/whos_using">Who's using</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://albumentations.ai/people">People</a>
+      </div>
+    </div>
+
+    
 <div class="md-search" data-md-component="search-query" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-state="active">
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
     </form>
   </div>
 </div>
 
     
-      <div class="md-header__source">
-        
-<a href="https://github.com/albumentations-team/albumentations/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      <a href="https://github.com/albumentations-team/albumentations" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     albumentations
   </div>
 </a>
-      </div>
+    </div>
     
   </nav>
 </header>
@@ -170,1793 +192,47 @@
       
       
         
+          
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-    
-      
-      <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-        <div class="md-sidebar__scrollwrap">
-          <div class="md-sidebar__inner">
-            
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Albumentations Documentation" class="md-nav__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
-      
-  <img src="../../../../images/logo.png" alt="logo">
-
-    </a>
-    Albumentations Documentation
-  </label>
-  
-    <div class="md-nav__source">
-      
-<a href="https://github.com/albumentations-team/albumentations/" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    albumentations
-  </div>
-</a>
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
     </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
+  </div>
+</div>
 
-  
-  
-  
 
-        
-
-    <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
-        Documentation
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      <label class="md-nav__link" for="__nav_2">
-        Introduction
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Introduction
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../introduction/image_augmentation/" class="md-nav__link">
-        What is image augmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" class="md-nav__link">
-        Why you need a dedicated library
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../introduction/why_albumentations/" class="md-nav__link">
-        Why Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        Getting started
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Getting started
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/image_augmentation/" class="md-nav__link">
-        Image augmentation for classification
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/mask_augmentation/" class="md-nav__link">
-        Mask augmentation for segmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/bounding_boxes_augmentation/" class="md-nav__link">
-        Bounding boxes augmentation for object detection
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/keypoints_augmentation/" class="md-nav__link">
-        Keypoints augmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/simultaneous_augmentation/" class="md-nav__link">
-        Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/transforms_and_targets/" class="md-nav__link">
-        A list of transforms and their supported targets
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../getting_started/setting_probabilities/" class="md-nav__link">
-        Setting probabilities for transforms
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        Examples
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Examples" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../examples/" class="md-nav__link">
-        List of examples
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      <label class="md-nav__link" for="__nav_6">
-        AutoAlbument
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="AutoAlbument" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          AutoAlbument
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/" class="md-nav__link">
-        AutoAlbument Overview
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/benchmarks/" class="md-nav__link">
-        Benchmarks and a comparison with baseline augmentation strategies
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/how_to_use/" class="md-nav__link">
-        How to use AutoAlbument
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/docker/" class="md-nav__link">
-        How to use an AutoAlbument Docker image
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/custom_model/" class="md-nav__link">
-        How to use a custom classification or semantic segmentation model
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/metrics/" class="md-nav__link">
-        Metrics and their meaning
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/tuning_parameters/" class="md-nav__link">
-        Tuning the search parameters
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
-      
-      <label class="md-nav__link" for="__nav_6_9">
-        Examples
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Examples" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
-          <span class="md-nav__icon md-icon"></span>
-          Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/examples/list/" class="md-nav__link">
-        List of examples
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/examples/cifar10/" class="md-nav__link">
-        Image classification on the CIFAR10 dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/examples/svhn/" class="md-nav__link">
-        Image classification on the SVHN dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/examples/imagenet/" class="md-nav__link">
-        Image classification on the ImageNet dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/examples/pascal_voc/" class="md-nav__link">
-        Semantic segmentation on the Pascal VOC dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/examples/cityscapes/" class="md-nav__link">
-        Semantic segmentation on the Pascal VOC dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/search_algorithms/" class="md-nav__link">
-        Search algorithms
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../autoalbument/faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      <label class="md-nav__link" for="__nav_7">
-        Albumentations Experimental
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Albumentations Experimental" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Albumentations Experimental
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../experimental/overview/" class="md-nav__link">
-        Albumentations Experimental Overview
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../experimental/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
-      
-      <label class="md-nav__link" for="__nav_7_3">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API Reference" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_3">
-          <span class="md-nav__icon md-icon"></span>
-          API Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_1" type="checkbox" id="__nav_7_3_1" >
-      
-      <label class="md-nav__link" for="__nav_7_3_1">
-        Augmentations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Augmentations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Augmentations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../experimental/api_reference/augmentations/transforms/" class="md-nav__link">
-        Albumentations Experimental Transforms (augmentations.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      <label class="md-nav__link" for="__nav_8">
-        External resources
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="External resources" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          External resources
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../external_resources/blog_posts_podcasts_talks/" class="md-nav__link">
-        Blog posts, podcasts, talks, and videos about Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../external_resources/books/" class="md-nav__link">
-        Books that mention Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../frameworks_and_libraries/" class="md-nav__link">
-        Frameworks and libraries that use Albumentations
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
-      
-      <label class="md-nav__link" for="__nav_10">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          API Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../full_reference/" class="md-nav__link">
-        Full API Reference
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
-      
-      <label class="md-nav__link" for="__nav_10_3">
-        Core API
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Core API" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_3">
-          <span class="md-nav__icon md-icon"></span>
-          Core API
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../core/composition/" class="md-nav__link">
-        Composition API (core.composition)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../core/transforms_interface/" class="md-nav__link">
-        Transforms Interface (core.transforms_interface)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../core/serialization/" class="md-nav__link">
-        Serialization API (core.serialization)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../core/bbox_utils/" class="md-nav__link">
-        Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../core/keypoints_utils/" class="md-nav__link">
-        Helper functions for working with keypoints (augmentations.core.keypoints_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" checked>
-      
-      <label class="md-nav__link" for="__nav_10_4">
-        Augmentations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Augmentations" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_4">
-          <span class="md-nav__icon md-icon"></span>
-          Augmentations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../transforms/" class="md-nav__link">
-        Transforms (augmentations.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_3" type="checkbox" id="__nav_10_4_3" >
-      
-      <label class="md-nav__link" for="__nav_10_4_3">
-        Blur transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Blur transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_3">
-          <span class="md-nav__icon md-icon"></span>
-          Blur transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../blur/transforms/" class="md-nav__link">
-        Blur transforms (augmentations.blur.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_4" type="checkbox" id="__nav_10_4_4" >
-      
-      <label class="md-nav__link" for="__nav_10_4_4">
-        Crop transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Crop transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_4">
-          <span class="md-nav__icon md-icon"></span>
-          Crop transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../crops/functional/" class="md-nav__link">
-        Crop functional transforms (augmentations.crops.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../crops/transforms/" class="md-nav__link">
-        Crop transforms (augmentations.crops.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_5" type="checkbox" id="__nav_10_4_5" >
-      
-      <label class="md-nav__link" for="__nav_10_4_5">
-        Dropout transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Dropout transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_5">
-          <span class="md-nav__icon md-icon"></span>
-          Dropout transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../dropout/channel_dropout/" class="md-nav__link">
-        ChannelDropout augmentation (augmentations.dropout.channel_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../dropout/coarse_dropout/" class="md-nav__link">
-        CoarseDropout augmentation (augmentations.dropout.coarse_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../dropout/grid_dropout/" class="md-nav__link">
-        GridDropout augmentation (augmentations.dropout.grid_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../dropout/mask_dropout/" class="md-nav__link">
-        MaskDropout augmentation (augmentations.dropout.mask_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../dropout/xy_masking/" class="md-nav__link">
-        XYMasking augmentation (augmentations.dropout.xy_masking)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_6" type="checkbox" id="__nav_10_4_6" checked>
-      
-      <label class="md-nav__link" for="__nav_10_4_6">
-        Geometric transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Geometric transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_6">
-          <span class="md-nav__icon md-icon"></span>
-          Geometric transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Geometric functional transforms (augmentations.geometric.functional)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Geometric functional transforms (augmentations.geometric.functional)
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#albumentations.augmentations.geometric.functional" class="md-nav__link">
-    albumentations.augmentations.geometric.functional
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../resize/" class="md-nav__link">
-        Resizing transforms (augmentations.geometric.resize)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../rotate/" class="md-nav__link">
-        Rotation transforms (augmentations.geometric.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../transforms/" class="md-nav__link">
-        Geometric transforms (augmentations.geometric.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
-      
-      <label class="md-nav__link" for="__nav_10_4_7">
-        Mixing transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_7">
-          <span class="md-nav__icon md-icon"></span>
-          Mixing transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../mixing/transforms/" class="md-nav__link">
-        Mixing transforms (augmentations.mixing.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../mixing/functional/" class="md-nav__link">
-        Mixing functional transforms (augmentations.mixing.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../domain_adaptation/" class="md-nav__link">
-        Domain adaptation transforms (augmentations.domain_adaptation)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../functional/" class="md-nav__link">
-        Functional transforms (augmentations.functional)
-      </a>
-    </li>
-              
-
-  
-
           
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
-      
-      <label class="md-nav__link" for="__nav_10_5">
-        PyTorch Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          PyTorch Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../pytorch/transforms/" class="md-nav__link">
-        Transforms (pytorch.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../release_notes/" class="md-nav__link">
-        Release notes
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../../contributing/" class="md-nav__link">
-        Contributing to Albumentations
-      </a>
-    </li>
-              
-
-  
-
-    
-  </ul>
-</nav>
-          </div>
-        </div>
-      </div>
-    
-  
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
 <style>
-    .highlight-ipynb {
-        font-size: 0.7rem;
-    }
-    .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
-        font-size: 0.8rem;
-    }
+  .highlight-ipynb {
+    font-size: 0.7rem;
+  }
+
+  .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
+    font-size: 0.8rem;
+  }
 </style>
 
 
-  <a href="https://github.com/albumentations-team/albumentations.ai/tree/main/mkdocs/src/docs/api_reference/augmentations/geometric/functional.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-  </a>
+<a href="https://github.com/albumentations-team/albumentations.ai/tree/main/mkdocs/src/docs/api_reference/augmentations/geometric/functional.md"
+  title="edit.link.title" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+</a>
 
 
 
 
 
-  
+
 
 
 <h1 id="geometric-functional-transforms-augmentationsgeometricfunctional">Geometric functional transforms (augmentations.geometric.functional)<a class="headerlink" href="#geometric-functional-transforms-augmentationsgeometricfunctional" title="Permanent link">¶</a></h1>
@@ -1967,7 +243,7 @@
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_flip()" id="albumentations.augmentations.geometric.functional.bbox_flip">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, cols)
+bbox_flip    (bbox, d, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L930" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_flip" title="Permanent link">¶</a>
 </h2>
@@ -2035,12 +311,42 @@ albumentations.augmentations.geometric.functional.bbox_flip    (bbox, d, rows, c
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_flip</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Flip a bounding box either vertically, horizontally or both depending on the value of `d`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        d: dimension. 0 for vertical flip, 1 for horizontal, -1 for transpose</span>
+<span class="sd">        rows: Image rows.</span>
+<span class="sd">        cols: Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if value of `d` is not -1, 0 or 1.</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">bbox_vflip</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">bbox_hflip</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">d</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">bbox_hflip</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">bbox_vflip</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid d value </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">. Valid values are -1, 0 and 1"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">bbox</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_hflip()" id="albumentations.augmentations.geometric.functional.bbox_hflip">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, cols)
+bbox_hflip    (bbox, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L914" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_hflip" title="Permanent link">¶</a>
 </h2>
@@ -2088,12 +394,30 @@ albumentations.augmentations.geometric.functional.bbox_hflip    (bbox, rows, col
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_hflip</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Flip a bounding box horizontally around the y-axis.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        rows: Image rows.</span>
+<span class="sd">        cols: Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_max</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_rot90()" id="albumentations.augmentations.geometric.functional.bbox_rot90">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, rows, cols)
+bbox_rot90    (bbox, factor, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L77" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rot90" title="Permanent link">¶</a>
 </h2>
@@ -2141,17 +465,45 @@ albumentations.augmentations.geometric.functional.bbox_rot90    (bbox, factor, r
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple[float, float, float, float]</code></td>
-<td><p>tuple: A bounding box tuple (x_min, y_min, x_max, y_max).</p></td>
+<td><code>tuple</code></td>
+<td><p>A bounding box tuple (x_min, y_min, x_max, y_max).</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_rot90</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="n">factor</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Rotates a bounding box by 90 degrees CCW (see np.rot90)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box tuple (x_min, y_min, x_max, y_max).</span>
+<span class="sd">        factor: Number of CCW rotations. Must be in set {0, 1, 2, 3} See np.rot90.</span>
+<span class="sd">        rows: Image rows.</span>
+<span class="sd">        cols: Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A bounding box tuple (x_min, y_min, x_max, y_max).</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">factor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Parameter n must be in set {0, 1, 2, 3}"</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">y_min</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_min</span>
+    <span class="k">elif</span> <span class="n">factor</span> <span class="o">==</span> <span class="n">TWO</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_min</span>
+    <span class="k">elif</span> <span class="n">factor</span> <span class="o">==</span> <span class="n">THREE</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span>
+    <span class="k">return</span> <span class="n">bbox</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_rotate()" id="albumentations.augmentations.geometric.functional.bbox_rotate">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, method, rows, cols)
+bbox_rotate    (bbox, angle, method, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L157" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_rotate" title="Permanent link">¶</a>
 </h2>
@@ -2208,14 +560,60 @@ albumentations.augmentations.geometric.functional.bbox_rotate    (bbox, angle, m
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
-</table> <p>References:
-    <a href="https://arxiv.org/abs/2109.13488" target="_blank">https://arxiv.org/abs/2109.13488</a></p>
+</table> <div class="admonition references">
+<p class="admonition-title">References</p>
+<p><a href="https://arxiv.org/abs/2109.13488" target="_blank">https://arxiv.org/abs/2109.13488</a></p>
+</div>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_rotate</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Rotates a bounding box by angle degrees.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        angle: Angle of rotation in degrees.</span>
+<span class="sd">        method: Rotation method used. Should be one of: "largest_box", "ellipse". Default: "largest_box".</span>
+<span class="sd">        rows: Image rows.</span>
+<span class="sd">        cols: Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        https://arxiv.org/abs/2109.13488</span>
+
+<span class="sd">    """</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="n">cols</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">"largest_box"</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">x_min</span><span class="p">])</span> <span class="o">-</span> <span class="mf">0.5</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">])</span> <span class="o">-</span> <span class="mf">0.5</span>
+    <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">"ellipse"</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">w</span> <span class="o">+</span> <span class="n">x_min</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">h</span> <span class="o">+</span> <span class="n">y_min</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Method </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2"> is not a valid rotation method."</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">x_t</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">scale</span>
+    <span class="n">y_t</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="n">x_t</span> <span class="o">=</span> <span class="n">x_t</span> <span class="o">+</span> <span class="mf">0.5</span>
+    <span class="n">y_t</span> <span class="o">=</span> <span class="n">y_t</span> <span class="o">+</span> <span class="mf">0.5</span>
+
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">x_t</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_t</span><span class="p">)</span>
+    <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">y_t</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">y_t</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_shift_scale_rotate()" id="albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate    (bbox, angle, scale, dx, dy, rotate_method, rows, cols, **
+bbox_shift_scale_rotate    (bbox, angle, scale, dx, dy, rotate_method, rows, cols, **
 kwargs)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L270" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_shift_scale_rotate" title="Permanent link">¶</a>
@@ -2235,17 +633,17 @@ scaling is made by scale factor and shifting is made by dx and dy.</p>
 <tbody>
 <tr>
 <td><code>bbox</code></td>
-<td><code>Tuple[float, float, float, float]</code></td>
+<td><code>tuple</code></td>
 <td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 <tr>
 <td><code>angle</code></td>
-<td><code>float</code></td>
+<td><code>int</code></td>
 <td><p>Angle of rotation in degrees.</p></td>
 </tr>
 <tr>
 <td><code>scale</code></td>
-<td><code>float</code></td>
+<td><code>int</code></td>
 <td><p>Scale factor.</p></td>
 </tr>
 <tr>
@@ -2291,12 +689,70 @@ Default: "largest_box".</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_shift_scale_rotate</span><span class="p">(</span>
+    <span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span>
+    <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">scale</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">dx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">dy</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">rotate_method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Rotates, shifts and scales a bounding box. Rotation is made by angle degrees,</span>
+<span class="sd">    scaling is made by scale factor and shifting is made by dx and dy.</span>
+
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox (tuple): A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        angle (int): Angle of rotation in degrees.</span>
+<span class="sd">        scale (int): Scale factor.</span>
+<span class="sd">        dx (int): Shift along x-axis in pixel units.</span>
+<span class="sd">        dy (int): Shift along y-axis in pixel units.</span>
+<span class="sd">        rotate_method(str): Rotation method used. Should be one of: "largest_box", "ellipse".</span>
+<span class="sd">            Default: "largest_box".</span>
+<span class="sd">        rows (int): Image rows.</span>
+<span class="sd">        cols (int): Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span>
+    <span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rotate_method</span> <span class="o">==</span> <span class="s2">"ellipse"</span><span class="p">:</span>
+        <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox_rotate</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">rotate_method</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getRotationMatrix2D</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getRotationMatrix2D</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+    <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">width</span>
+    <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dy</span> <span class="o">*</span> <span class="n">height</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">x_min</span><span class="p">])</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">y_max</span><span class="p">])</span>
+    <span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+    <span class="n">points_ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ones</span><span class="p">])</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+    <span class="n">points_ones</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="n">width</span>
+    <span class="n">points_ones</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="n">height</span>
+    <span class="n">tr_points</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">points_ones</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">tr_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/=</span> <span class="n">width</span>
+    <span class="n">tr_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/=</span> <span class="n">height</span>
+
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">tr_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">tr_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">tr_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">tr_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_transpose()" id="albumentations.augmentations.geometric.functional.bbox_transpose">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis, rows, cols)
+bbox_transpose    (bbox, axis, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L958" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_transpose" title="Permanent link">¶</a>
 </h2>
@@ -2364,12 +820,41 @@ albumentations.augmentations.geometric.functional.bbox_transpose    (bbox, axis,
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_transpose</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Transposes a bounding box along given axis.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        axis: 0 - main axis, 1 - secondary axis.</span>
+<span class="sd">        rows: Image rows.</span>
+<span class="sd">        cols: Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bounding box tuple `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If axis not equal to 0 or 1.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">axis</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">}:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Axis must be either 0 or 1."</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">axis</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">axis</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_min</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">bbox</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="bbox_vflip()" id="albumentations.augmentations.geometric.functional.bbox_vflip">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, cols)
+bbox_vflip    (bbox, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L898" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.bbox_vflip" title="Permanent link">¶</a>
 </h2>
@@ -2412,17 +897,35 @@ albumentations.augmentations.geometric.functional.bbox_vflip    (bbox, rows, col
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple[float, float, float, float]</code></td>
-<td><p>tuple: A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
+<td><code>tuple</code></td>
+<td><p>A bounding box <code>(x_min, y_min, x_max, y_max)</code>.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">bbox_vflip</span><span class="p">(</span><span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Flip a bounding box vertically around the x-axis.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bbox: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+<span class="sd">        rows: Image rows.</span>
+<span class="sd">        cols: Image cols.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A bounding box `(x_min, y_min, x_max, y_max)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">x_min</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">y_min</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="elastic_transform()" id="albumentations.augmentations.geometric.functional.elastic_transform">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.elastic_transform    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None, approximate=False, same_dxdy=False)
+elastic_transform    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None, approximate=False, same_dxdy=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L326" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform" title="Permanent link">¶</a>
 </h2>
@@ -2433,12 +936,98 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
      Convolutional Neural Networks applied to Visual Document Analysis", in
      Proc. of the International Conference on Document Analysis and
      Recognition, 2003.</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@preserve_shape</span>
+<span class="k">def</span> <span class="nf">elastic_transform</span><span class="p">(</span>
+    <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">sigma</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">alpha_affine</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">interpolation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span>
+    <span class="n">border_mode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">BORDER_REFLECT_101</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ImageColorType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">approximate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">same_dxdy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Elastic deformation of images as described in [Simard2003]_ (with modifications).</span>
+<span class="sd">    Based on https://gist.github.com/ernestum/601cdf56d2b424757de5</span>
+
+<span class="sd">    .. [Simard2003] Simard, Steinkraus and Platt, "Best Practices for</span>
+<span class="sd">         Convolutional Neural Networks applied to Visual Document Analysis", in</span>
+<span class="sd">         Proc. of the International Conference on Document Analysis and</span>
+<span class="sd">         Recognition, 2003.</span>
+<span class="sd">    """</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="c1"># Random affine</span>
+    <span class="n">center_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">square_size</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">))</span> <span class="o">//</span> <span class="mi">3</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+    <span class="n">alpha_affine</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">alpha_affine</span><span class="p">)</span>
+
+    <span class="n">pts1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">center_square</span> <span class="o">+</span> <span class="n">square_size</span><span class="p">,</span>
+            <span class="p">[</span><span class="n">center_square</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">square_size</span><span class="p">,</span> <span class="n">center_square</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">square_size</span><span class="p">],</span>
+            <span class="n">center_square</span> <span class="o">-</span> <span class="n">square_size</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">pts2</span> <span class="o">=</span> <span class="n">pts1</span> <span class="o">+</span> <span class="n">random_utils</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">alpha_affine</span><span class="p">,</span> <span class="n">alpha_affine</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">pts1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">float32</span>
+    <span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getAffineTransform</span><span class="p">(</span><span class="n">pts1</span><span class="p">,</span> <span class="n">pts2</span><span class="p">)</span>
+
+    <span class="n">warp_fn</span> <span class="o">=</span> <span class="n">_maybe_process_in_chunks</span><span class="p">(</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">warpAffine</span><span class="p">,</span> <span class="n">M</span><span class="o">=</span><span class="n">matrix</span><span class="p">,</span> <span class="n">dsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">flags</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span> <span class="n">borderMode</span><span class="o">=</span><span class="n">border_mode</span><span class="p">,</span> <span class="n">borderValue</span><span class="o">=</span><span class="n">value</span>
+    <span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">warp_fn</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">approximate</span><span class="p">:</span>
+        <span class="c1"># Approximate computation smooth displacement map with a large enough kernel.</span>
+        <span class="c1"># On large images (512+) this is approximately 2X times faster</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">random_utils</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">dx</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">*=</span> <span class="n">alpha</span>
+        <span class="k">if</span> <span class="n">same_dxdy</span><span class="p">:</span>
+            <span class="c1"># Speed up even more</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="n">dx</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="n">random_utils</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">dy</span><span class="p">)</span>
+            <span class="n">dy</span> <span class="o">*=</span> <span class="n">alpha</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span>
+            <span class="n">gaussian_filter</span><span class="p">((</span><span class="n">random_utils</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">*</span> <span class="n">alpha</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">same_dxdy</span><span class="p">:</span>
+            <span class="c1"># Speed up</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="n">dx</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span>
+                <span class="n">gaussian_filter</span><span class="p">((</span><span class="n">random_utils</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">*</span> <span class="n">alpha</span>
+            <span class="p">)</span>
+
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">width</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
+
+    <span class="n">map_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">)</span>
+    <span class="n">map_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
+
+    <span class="n">remap_fn</span> <span class="o">=</span> <span class="n">_maybe_process_in_chunks</span><span class="p">(</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">remap</span><span class="p">,</span> <span class="n">map1</span><span class="o">=</span><span class="n">map_x</span><span class="p">,</span> <span class="n">map2</span><span class="o">=</span><span class="n">map_y</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span> <span class="n">borderMode</span><span class="o">=</span><span class="n">border_mode</span><span class="p">,</span> <span class="n">borderValue</span><span class="o">=</span><span class="n">value</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">remap_fn</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="elastic_transform_approx()" id="albumentations.augmentations.geometric.functional.elastic_transform_approx">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.elastic_transform_approx    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None)
+elastic_transform_approx    (img, alpha, sigma, alpha_affine, interpolation=1, border_mode=4, value=None, random_state=None)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1222" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.elastic_transform_approx" title="Permanent link">¶</a>
 </h2>
@@ -2449,48 +1038,239 @@ Based on <a href="https://gist.github.com/ernestum/601cdf56d2b424757de5" target=
      Convolutional Neural Networks applied to Visual Document Analysis", in
      Proc. of the International Conference on Document Analysis and
      Recognition, 2003.</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@preserve_shape</span>
+<span class="k">def</span> <span class="nf">elastic_transform_approx</span><span class="p">(</span>
+    <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">sigma</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">alpha_affine</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">interpolation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span>
+    <span class="n">border_mode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">BORDER_REFLECT_101</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ImageColorType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Elastic deformation of images as described in [Simard2003]_ (with modifications for speed).</span>
+<span class="sd">    Based on https://gist.github.com/ernestum/601cdf56d2b424757de5</span>
+
+<span class="sd">    .. [Simard2003] Simard, Steinkraus and Platt, "Best Practices for</span>
+<span class="sd">         Convolutional Neural Networks applied to Visual Document Analysis", in</span>
+<span class="sd">         Proc. of the International Conference on Document Analysis and</span>
+<span class="sd">         Recognition, 2003.</span>
+<span class="sd">    """</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="c1"># Random affine</span>
+    <span class="n">center_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">square_size</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">))</span> <span class="o">//</span> <span class="mi">3</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+    <span class="n">alpha_affine</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">alpha_affine</span><span class="p">)</span>
+
+    <span class="n">pts1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">center_square</span> <span class="o">+</span> <span class="n">square_size</span><span class="p">,</span>
+            <span class="p">[</span><span class="n">center_square</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">square_size</span><span class="p">,</span> <span class="n">center_square</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">square_size</span><span class="p">],</span>
+            <span class="n">center_square</span> <span class="o">-</span> <span class="n">square_size</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">pts2</span> <span class="o">=</span> <span class="n">pts1</span> <span class="o">+</span> <span class="n">random_utils</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">alpha_affine</span><span class="p">,</span> <span class="n">alpha_affine</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">pts1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">float32</span>
+    <span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getAffineTransform</span><span class="p">(</span><span class="n">pts1</span><span class="p">,</span> <span class="n">pts2</span><span class="p">)</span>
+
+    <span class="n">warp_fn</span> <span class="o">=</span> <span class="n">_maybe_process_in_chunks</span><span class="p">(</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">warpAffine</span><span class="p">,</span>
+        <span class="n">M</span><span class="o">=</span><span class="n">matrix</span><span class="p">,</span>
+        <span class="n">dsize</span><span class="o">=</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span>
+        <span class="n">flags</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span>
+        <span class="n">borderMode</span><span class="o">=</span><span class="n">border_mode</span><span class="p">,</span>
+        <span class="n">borderValue</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">warp_fn</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">random_utils</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">dx</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">*=</span> <span class="n">alpha</span>
+
+    <span class="n">dy</span> <span class="o">=</span> <span class="n">random_utils</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">dy</span><span class="p">)</span>
+    <span class="n">dy</span> <span class="o">*=</span> <span class="n">alpha</span>
+
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">width</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
+
+    <span class="n">map_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">)</span>
+    <span class="n">map_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
+
+    <span class="n">remap_fn</span> <span class="o">=</span> <span class="n">_maybe_process_in_chunks</span><span class="p">(</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">remap</span><span class="p">,</span>
+        <span class="n">map1</span><span class="o">=</span><span class="n">map_x</span><span class="p">,</span>
+        <span class="n">map2</span><span class="o">=</span><span class="n">map_y</span><span class="p">,</span>
+        <span class="n">interpolation</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span>
+        <span class="n">borderMode</span><span class="o">=</span><span class="n">border_mode</span><span class="p">,</span>
+        <span class="n">borderValue</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">remap_fn</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="find_keypoint()" id="albumentations.augmentations.geometric.functional.find_keypoint">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.find_keypoint    (position, distance_map, threshold, inverted)
+find_keypoint    (position, distance_map, threshold, inverted)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L786" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.find_keypoint" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Determine if a valid keypoint can be found at the given position.</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">find_keypoint</span><span class="p">(</span>
+    <span class="n">position</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">distance_map</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">threshold</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">inverted</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">"""Determine if a valid keypoint can be found at the given position."""</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">position</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">distance_map</span><span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">inverted</span> <span class="ow">and</span> <span class="n">threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">inverted</span> <span class="ow">and</span> <span class="n">threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">threshold</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="from_distance_maps()" id="albumentations.augmentations.geometric.functional.from_distance_maps">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.from_distance_maps    (distance_maps, inverted, if_not_found_coords, threshold=None)
+from_distance_maps    (distance_maps, inverted, if_not_found_coords, threshold=None)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L799" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.from_distance_maps" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Convert outputs of <code>to_distance_maps</code> to <code>KeypointsOnImage</code>.
 This is the inverse of <code>to_distance_maps</code>.</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">from_distance_maps</span><span class="p">(</span>
+    <span class="n">distance_maps</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">inverted</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">if_not_found_coords</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span>
+    <span class="n">threshold</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">"""Convert outputs of `to_distance_maps` to `KeypointsOnImage`.</span>
+<span class="sd">    This is the inverse of `to_distance_maps`.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">distance_maps</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="n">THREE</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Expected three-dimensional input, got </span><span class="si">{</span><span class="n">distance_maps</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2"> dimensions and shape </span><span class="si">{</span><span class="n">distance_maps</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">."</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">nb_keypoints</span> <span class="o">=</span> <span class="n">distance_maps</span><span class="o">.</span><span class="n">shape</span>
+
+    <span class="n">drop_if_not_found</span><span class="p">,</span> <span class="n">if_not_found_x</span><span class="p">,</span> <span class="n">if_not_found_y</span> <span class="o">=</span> <span class="n">validate_if_not_found_coords</span><span class="p">(</span><span class="n">if_not_found_coords</span><span class="p">)</span>
+
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_keypoints</span><span class="p">):</span>
+        <span class="n">hitidx_flat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">distance_maps</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">])</span> <span class="k">if</span> <span class="n">inverted</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">distance_maps</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">])</span>
+        <span class="n">hitidx_ndim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">hitidx_flat</span><span class="p">,</span> <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">))</span>
+        <span class="n">keypoint</span> <span class="o">=</span> <span class="n">find_keypoint</span><span class="p">(</span><span class="n">hitidx_ndim</span><span class="p">,</span> <span class="n">distance_maps</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">inverted</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">keypoint</span><span class="p">:</span>
+            <span class="n">keypoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">keypoint</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">drop_if_not_found</span><span class="p">:</span>
+            <span class="n">keypoints</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">if_not_found_x</span><span class="p">,</span> <span class="n">if_not_found_y</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">keypoints</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="grid_distortion()" id="albumentations.augmentations.geometric.functional.grid_distortion">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.grid_distortion    (img, num_steps=10, xsteps=(), ysteps=(), interpolation=1, border_mode=4, value=None)
+grid_distortion    (img, num_steps=10, xsteps=(), ysteps=(), interpolation=1, border_mode=4, value=None)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1158" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.grid_distortion" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Perform a grid distortion of an input image.</p>
-<p>Reference:
-    <a href="http://pythology.blogspot.sg/2014/03/interpolation-on-regular-distorted-grid.html" target="_blank">http://pythology.blogspot.sg/2014/03/interpolation-on-regular-distorted-grid.html</a></p>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p><a href="http://pythology.blogspot.sg/2014/03/interpolation-on-regular-distorted-grid.html" target="_blank">http://pythology.blogspot.sg/2014/03/interpolation-on-regular-distorted-grid.html</a></p>
+</div>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@preserve_shape</span>
+<span class="k">def</span> <span class="nf">grid_distortion</span><span class="p">(</span>
+    <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">num_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">xsteps</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[()]</span> <span class="o">=</span> <span class="p">(),</span>
+    <span class="n">ysteps</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[()]</span> <span class="o">=</span> <span class="p">(),</span>
+    <span class="n">interpolation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span>
+    <span class="n">border_mode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">BORDER_REFLECT_101</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ImageColorType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Perform a grid distortion of an input image.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        http://pythology.blogspot.sg/2014/03/interpolation-on-regular-distorted-grid.html</span>
+<span class="sd">    """</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">x_step</span> <span class="o">=</span> <span class="n">width</span> <span class="o">//</span> <span class="n">num_steps</span>
+    <span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">prev</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">*</span> <span class="n">x_step</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">x_step</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="o">&gt;</span> <span class="n">width</span><span class="p">:</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">width</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">prev</span> <span class="o">+</span> <span class="n">x_step</span> <span class="o">*</span> <span class="n">xsteps</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">xx</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">cur</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">cur</span>
+
+    <span class="n">y_step</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="n">num_steps</span>
+    <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">prev</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">*</span> <span class="n">y_step</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="n">y_step</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="o">&gt;</span> <span class="n">height</span><span class="p">:</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">height</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">prev</span> <span class="o">+</span> <span class="n">y_step</span> <span class="o">*</span> <span class="n">ysteps</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">yy</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">cur</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">cur</span>
+
+    <span class="n">map_x</span><span class="p">,</span> <span class="n">map_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">)</span>
+    <span class="n">map_x</span> <span class="o">=</span> <span class="n">map_x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">map_y</span> <span class="o">=</span> <span class="n">map_y</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+    <span class="n">remap_fn</span> <span class="o">=</span> <span class="n">_maybe_process_in_chunks</span><span class="p">(</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">remap</span><span class="p">,</span>
+        <span class="n">map1</span><span class="o">=</span><span class="n">map_x</span><span class="p">,</span>
+        <span class="n">map2</span><span class="o">=</span><span class="n">map_y</span><span class="p">,</span>
+        <span class="n">interpolation</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span>
+        <span class="n">borderMode</span><span class="o">=</span><span class="n">border_mode</span><span class="p">,</span>
+        <span class="n">borderValue</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">remap_fn</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_flip()" id="albumentations.augmentations.geometric.functional.keypoint_flip">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d, rows, cols)
+keypoint_flip    (keypoint, d, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1021" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_flip" title="Permanent link">¶</a>
 </h2>
@@ -2561,12 +1341,45 @@ albumentations.augmentations.geometric.functional.keypoint_flip    (keypoint, d,
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">keypoint_flip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Flip a keypoint either vertically, horizontally or both depending on the value of `d`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+<span class="sd">        d: Number of flip. Must be -1, 0 or 1:</span>
+<span class="sd">            * 0 - vertical flip,</span>
+<span class="sd">            * 1 - horizontal flip,</span>
+<span class="sd">            * -1 - vertical and horizontal flip.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if value of `d` is not -1, 0 or 1.</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">keypoint</span> <span class="o">=</span> <span class="n">keypoint_vflip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">keypoint</span> <span class="o">=</span> <span class="n">keypoint_hflip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">d</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">keypoint</span> <span class="o">=</span> <span class="n">keypoint_hflip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+        <span class="n">keypoint</span> <span class="o">=</span> <span class="n">keypoint_vflip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid d value </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">. Valid values are -1, 0 and 1"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">keypoint</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_hflip()" id="albumentations.augmentations.geometric.functional.keypoint_hflip">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, rows, cols)
+keypoint_hflip    (keypoint, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1003" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_hflip" title="Permanent link">¶</a>
 </h2>
@@ -2614,12 +1427,32 @@ albumentations.augmentations.geometric.functional.keypoint_hflip    (keypoint, r
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@angle_2pi_range</span>
+<span class="k">def</span> <span class="nf">keypoint_hflip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Flip a keypoint horizontally around the y-axis.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">angle</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">cols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_rot90()" id="albumentations.augmentations.geometric.functional.keypoint_rot90">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_rot90    (keypoint, factor, rows, cols, **
+keypoint_rot90    (keypoint, factor, rows, cols, **
 params)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L103" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rot90" title="Permanent link">¶</a>
@@ -2668,8 +1501,8 @@ params)
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple[float, float, float, float]</code></td>
-<td><p>tuple: A keypoint <code>(x, y, angle, scale)</code>.</p></td>
+<td><code>tuple</code></td>
+<td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2688,12 +1521,49 @@ params)
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@angle_2pi_range</span>
+<span class="k">def</span> <span class="nf">keypoint_rot90</span><span class="p">(</span>
+    <span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">factor</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Rotates a keypoint by 90 degrees CCW (see np.rot90)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+<span class="sd">        factor: Number of CCW rotations. Must be in range [0;3] See np.rot90.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if factor not in set {0, 1, 2, 3}</span>
+
+<span class="sd">    """</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">factor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Parameter n must be in set {0, 1, 2, 3}"</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">cols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">angle</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">factor</span> <span class="o">==</span> <span class="n">TWO</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="n">cols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">elif</span> <span class="n">factor</span> <span class="o">==</span> <span class="n">THREE</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">angle</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_rotate()" id="albumentations.augmentations.geometric.functional.keypoint_rotate">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_rotate    (keypoint, angle, rows, cols, **
+keypoint_rotate    (keypoint, angle, rows, cols, **
 params)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L199" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_rotate" title="Permanent link">¶</a>
@@ -2747,12 +1617,37 @@ params)
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@angle_2pi_range</span>
+<span class="k">def</span> <span class="nf">keypoint_rotate</span><span class="p">(</span>
+    <span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Rotate a keypoint by angle.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+<span class="sd">        angle: Rotation angle.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">cols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">,</span> <span class="p">(</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getRotationMatrix2D</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]]]),</span> <span class="n">matrix</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">s</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_scale()" id="albumentations.augmentations.geometric.functional.keypoint_scale">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, scale_x, scale_y)
+keypoint_scale    (keypoint, scale_x, scale_y)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L426" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_scale" title="Permanent link">¶</a>
 </h2>
@@ -2800,12 +1695,30 @@ albumentations.augmentations.geometric.functional.keypoint_scale    (keypoint, s
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">keypoint_scale</span><span class="p">(</span><span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">scale_x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">scale_y</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Scales a keypoint by scale_x and scale_y.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+<span class="sd">        scale_x: Scale coefficient x-axis.</span>
+<span class="sd">        scale_y: Scale coefficient y-axis.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">scale_x</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">scale_y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span> <span class="o">*</span> <span class="nb">max</span><span class="p">(</span><span class="n">scale_x</span><span class="p">,</span> <span class="n">scale_y</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_transpose()" id="albumentations.augmentations.geometric.functional.keypoint_transpose">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoint)
+keypoint_transpose    (keypoint)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1052" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_transpose" title="Permanent link">¶</a>
 </h2>
@@ -2843,12 +1756,31 @@ albumentations.augmentations.geometric.functional.keypoint_transpose    (keypoin
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">keypoint_transpose</span><span class="p">(</span><span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Rotate a keypoint by angle.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">angle</span> <span class="k">if</span> <span class="n">angle</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="k">else</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">angle</span>
+
+    <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="keypoint_vflip()" id="albumentations.augmentations.geometric.functional.keypoint_vflip">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, rows, cols)
+keypoint_vflip    (keypoint, rows, cols)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L985" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.keypoint_vflip" title="Permanent link">¶</a>
 </h2>
@@ -2891,45 +1823,115 @@ albumentations.augmentations.geometric.functional.keypoint_vflip    (keypoint, r
 </thead>
 <tbody>
 <tr>
-<td><code>Tuple[float, float, float, float]</code></td>
-<td><p>tuple: A keypoint <code>(x, y, angle, scale)</code>.</p></td>
+<td><code>tuple</code></td>
+<td><p>A keypoint <code>(x, y, angle, scale)</code>.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@angle_2pi_range</span>
+<span class="k">def</span> <span class="nf">keypoint_vflip</span><span class="p">(</span><span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Flip a keypoint vertically around the x-axis.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: A keypoint `(x, y, angle, scale)`.</span>
+<span class="sd">        rows: Image height.</span>
+<span class="sd">        cols: Image width.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A keypoint `(x, y, angle, scale)`.</span>
+
+<span class="sd">    """</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="o">-</span><span class="n">angle</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">scale</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="optical_distortion()" id="albumentations.augmentations.geometric.functional.optical_distortion">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.optical_distortion    (img, k=0, dx=0, dy=0, interpolation=1, border_mode=4, value=None)
+optical_distortion    (img, k=0, dx=0, dy=0, interpolation=1, border_mode=4, value=None)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L1125" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.optical_distortion" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Barrel / pincushion distortion. Unconventional augment.</p>
-<p>Reference:
-    |  <a href="https://stackoverflow.com/questions/6199636/formulas-for-barrel-pincushion-distortion" target="_blank">https://stackoverflow.com/questions/6199636/formulas-for-barrel-pincushion-distortion</a>
-    |  <a href="https://stackoverflow.com/questions/10364201/image-transformation-in-opencv" target="_blank">https://stackoverflow.com/questions/10364201/image-transformation-in-opencv</a>
-    |  <a href="https://stackoverflow.com/questions/2477774/correcting-fisheye-distortion-programmatically" target="_blank">https://stackoverflow.com/questions/2477774/correcting-fisheye-distortion-programmatically</a>
-    |  <a href="http://www.coldvision.io/2017/03/02/advanced-lane-finding-using-opencv/" target="_blank">http://www.coldvision.io/2017/03/02/advanced-lane-finding-using-opencv/</a></p>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p>|  <a href="https://stackoverflow.com/questions/6199636/formulas-for-barrel-pincushion-distortion" target="_blank">https://stackoverflow.com/questions/6199636/formulas-for-barrel-pincushion-distortion</a>
+|  <a href="https://stackoverflow.com/questions/10364201/image-transformation-in-opencv" target="_blank">https://stackoverflow.com/questions/10364201/image-transformation-in-opencv</a>
+|  <a href="https://stackoverflow.com/questions/2477774/correcting-fisheye-distortion-programmatically" target="_blank">https://stackoverflow.com/questions/2477774/correcting-fisheye-distortion-programmatically</a>
+|  <a href="http://www.coldvision.io/2017/03/02/advanced-lane-finding-using-opencv/" target="_blank">http://www.coldvision.io/2017/03/02/advanced-lane-finding-using-opencv/</a></p>
+</div>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="nd">@preserve_shape</span>
+<span class="k">def</span> <span class="nf">optical_distortion</span><span class="p">(</span>
+    <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">dx</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">dy</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">interpolation</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LINEAR</span><span class="p">,</span>
+    <span class="n">border_mode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">BORDER_REFLECT_101</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ImageColorType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Barrel / pincushion distortion. Unconventional augment.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        |  https://stackoverflow.com/questions/6199636/formulas-for-barrel-pincushion-distortion</span>
+<span class="sd">        |  https://stackoverflow.com/questions/10364201/image-transformation-in-opencv</span>
+<span class="sd">        |  https://stackoverflow.com/questions/2477774/correcting-fisheye-distortion-programmatically</span>
+<span class="sd">        |  http://www.coldvision.io/2017/03/02/advanced-lane-finding-using-opencv/</span>
+<span class="sd">    """</span>
+    <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">fx</span> <span class="o">=</span> <span class="n">width</span>
+    <span class="n">fy</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="n">cx</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">dx</span>
+    <span class="n">cy</span> <span class="o">=</span> <span class="n">height</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">dy</span>
+
+    <span class="n">camera_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">fx</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cx</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">cy</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+    <span class="n">distortion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">k</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">map1</span><span class="p">,</span> <span class="n">map2</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">initUndistortRectifyMap</span><span class="p">(</span><span class="n">camera_matrix</span><span class="p">,</span> <span class="n">distortion</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_32FC1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cv2</span><span class="o">.</span><span class="n">remap</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">map1</span><span class="p">,</span> <span class="n">map2</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span> <span class="n">borderMode</span><span class="o">=</span><span class="n">border_mode</span><span class="p">,</span> <span class="n">borderValue</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="rotation2d_matrix_to_euler_angles()" id="albumentations.augmentations.geometric.functional.rotation2d_matrix_to_euler_angles">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.rotation2d_matrix_to_euler_angles    (matrix, y_up=False)
+rotation2d_matrix_to_euler_angles    (matrix, y_up=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L519" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.rotation2d_matrix_to_euler_angles" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>matrix (np.ndarray): Rotation matrix
 y_up (bool): is Y axis looks up or down</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">rotation2d_matrix_to_euler_angles</span><span class="p">(</span><span class="n">matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y_up</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Args:</span>
+<span class="sd">    matrix (np.ndarray): Rotation matrix</span>
+<span class="sd">    y_up (bool): is Y axis looks up or down</span>
+
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">y_up</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="o">-</span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="to_distance_maps()" id="albumentations.augmentations.geometric.functional.to_distance_maps">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.to_distance_maps    (keypoints, height, width, inverted=False)
+to_distance_maps    (keypoints, height, width, inverted=False)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L723" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.to_distance_maps" title="Permanent link">¶</a>
 </h2>
@@ -2995,17 +1997,84 @@ exactly the position of the respective keypoint.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">to_distance_maps</span><span class="p">(</span>
+    <span class="n">keypoints</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]],</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">inverted</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Generate a ``(H,W,N)`` array of distance maps for ``N`` keypoints.</span>
+
+<span class="sd">    The ``n``-th distance map contains at every location ``(y, x)`` the</span>
+<span class="sd">    euclidean distance to the ``n``-th keypoint.</span>
+
+<span class="sd">    This function can be used as a helper when augmenting keypoints with a</span>
+<span class="sd">    method that only supports the augmentation of images.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoint: keypoint coordinates</span>
+<span class="sd">        height: image height</span>
+<span class="sd">        width: image width</span>
+<span class="sd">        inverted (bool): If ``True``, inverted distance maps are returned where each</span>
+<span class="sd">            distance value d is replaced by ``d/(d+1)``, i.e. the distance</span>
+<span class="sd">            maps have values in the range ``(0.0, 1.0]`` with ``1.0`` denoting</span>
+<span class="sd">            exactly the position of the respective keypoint.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (H, W, N) ndarray</span>
+<span class="sd">            A ``float32`` array containing ``N`` distance maps for ``N``</span>
+<span class="sd">            keypoints. Each location ``(y, x, n)`` in the array denotes the</span>
+<span class="sd">            euclidean distance at ``(y, x)`` to the ``n``-th keypoint.</span>
+<span class="sd">            If `inverted` is ``True``, the distance ``d`` is replaced</span>
+<span class="sd">            by ``d/(d+1)``. The height and width of the array match the</span>
+<span class="sd">            height and width in ``KeypointsOnImage.shape``.</span>
+
+<span class="sd">    """</span>
+    <span class="n">distance_maps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+    <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+    <span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+    <span class="n">grid_xx</span><span class="p">,</span> <span class="n">grid_yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>
+        <span class="n">distance_maps</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">grid_xx</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">grid_yy</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="n">distance_maps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">distance_maps</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">inverted</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">distance_maps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distance_maps</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="validate_if_not_found_coords()" id="albumentations.augmentations.geometric.functional.validate_if_not_found_coords">
 <code class="highlight language-python">def
-albumentations.augmentations.geometric.functional.validate_if_not_found_coords    (if_not_found_coords)
+validate_if_not_found_coords    (if_not_found_coords)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/augmentations/geometric/functional.py#L768" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.augmentations.geometric.functional.validate_if_not_found_coords" title="Permanent link">¶</a>
 </h2>
 <div class="doc doc-contents">
 <p>Validate and process <code>if_not_found_coords</code> parameter.</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/augmentations/geometric/functional.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">validate_if_not_found_coords</span><span class="p">(</span>
+    <span class="n">if_not_found_coords</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Validate and process `if_not_found_coords` parameter."""</span>
+    <span class="k">if</span> <span class="n">if_not_found_coords</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">if_not_found_coords</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">if_not_found_coords</span><span class="p">)</span> <span class="o">!=</span> <span class="n">TWO</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Expected tuple/list 'if_not_found_coords' to contain exactly two entries."</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">if_not_found_coords</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">if_not_found_coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">if_not_found_coords</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">if_not_found_coords</span><span class="p">[</span><span class="s2">"x"</span><span class="p">],</span> <span class="n">if_not_found_coords</span><span class="p">[</span><span class="s2">"y"</span><span class="p">]</span>
+
+    <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Expected if_not_found_coords to be None, tuple, list, or dict."</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 </div>
@@ -3013,29 +2082,29 @@ albumentations.augmentations.geometric.functional.validate_if_not_found_coords  
 </div>
 
 
-              
-                
-
-
-              
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    <nav class="md-footer__inner md-grid" aria-label="footer.title">
       
         <a href="../" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -3058,7 +2127,7 @@ albumentations.augmentations.geometric.functional.validate_if_not_found_coords  
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -3071,10 +2140,12 @@ albumentations.augmentations.geometric.functional.validate_if_not_found_coords  
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
       

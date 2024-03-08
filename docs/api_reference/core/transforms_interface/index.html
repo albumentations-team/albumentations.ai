@@ -6,15 +6,21 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Albumentations: fast and flexible image augmentations">
-      
+        <meta name="description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
       
       
       
         <link rel="canonical" href="https://albumentations.ai/docs/api_reference/core/transforms_interface/">
       
+      
+        <link rel="prev" href="../composition/">
+      
+      
+        <link rel="next" href="../serialization/">
+      
+      
       <link rel="icon" href="../../../images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -22,26 +28,26 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ffffff">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
-    
+      
+
+
     
     
       
+    
+    
+      
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
@@ -50,29 +56,46 @@
     
       <link rel="stylesheet" href="../../../css/extra.css">
     
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-DCXRDR9HJ0","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DCXRDR9HJ0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DCXRDR9HJ0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DCXRDR9HJ0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
     
     
-  
-  
     
-  
-  
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Albumentations Documentation - Transforms Interface (core.transforms_interface)">
-  <meta property="og:description" content="Albumentations: fast and flexible image augmentations">
-  <meta property="og:url" content="https://albumentations.ai/docs/api_reference/core/transforms_interface/">
-  <meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
-  <meta property="og:image:type" content="image/png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Albumentations Documentation - Transforms Interface (core.transforms_interface)">
-  <meta name="twitter:description" content="Albumentations: fast and flexible image augmentations">
-  <meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:title" content="Albumentations Documentation - Transforms Interface (core.transforms_interface)">
+<meta property="og:description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta property="og:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://albumentations.ai/docs/api_reference/core/transforms_interface/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@albumentations">
+<meta name="twitter:creator" content="@viglovikov">
+<meta name="twitter:title" content="Albumentations Documentation - Transforms Interface (core.transforms_interface)">
+<meta name="twitter:description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta name="twitter:image" content="https://albumentations.ai/docs/images/albumentations_card.png">
+<meta name="description" content="Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations.">
+<meta name="keywords"
+  content="Albumentations, image augmentation, machine learning, computer vision, data augmentation, image processing, deep learning, AI, artificial intelligence, Python">
+
 
   </head>
   
@@ -82,10 +105,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
   
-    
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -102,66 +123,67 @@
       
     </div>
     
+    
       <header class="md-header" data-md-component="header">
 
-    <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Albumentations Documentation" class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="header.title">
+    <a href="../../.." title="Albumentations Documentation"
+      class="md-header__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
       
   <img src="../../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
 
     </div>
 
-
-      <div class="md-header-nav__title">
-          <div class="header-menu-item">
-            <a href="https://albumentations.ai">Home</a>
-          </div>
-          <div class="header-menu-item header-menu-item-selected">
-            <a href="https://albumentations.ai/docs/">Documentation</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations.ai/whos_using">Who's using</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
-          </div>
-          <div class="header-menu-item header-large-menu-item">
-            <a href="https://albumentations.ai/team">Team</a>
-          </div>
+    <div class="md-header-nav__title">
+      <div class="header-menu-item">
+        <a href="https://albumentations.ai">Home</a>
       </div>
-      
+      <div class="header-menu-item header-menu-item-selected">
+        <a href="https://albumentations.ai/docs/">Documentation</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://albumentations.ai/whos_using">Who's using</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://demo.albumentations.ai" target="_blank">Demo</a>
+      </div>
+      <div class="header-menu-item header-large-menu-item">
+        <a href="https://albumentations.ai/people">People</a>
+      </div>
+    </div>
+
+    
 <div class="md-search" data-md-component="search-query" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-state="active">
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
     </form>
   </div>
 </div>
 
     
-      <div class="md-header__source">
-        
-<a href="https://github.com/albumentations-team/albumentations/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      <a href="https://github.com/albumentations-team/albumentations" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     albumentations
   </div>
 </a>
-      </div>
+    </div>
     
   </nav>
 </header>
@@ -170,1804 +192,47 @@
       
       
         
+          
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-    
-      
-      <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-        <div class="md-sidebar__scrollwrap">
-          <div class="md-sidebar__inner">
-            
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Albumentations Documentation" class="md-nav__button md-logo" aria-label="Albumentations Documentation" data-md-component="logo">
-      
-  <img src="../../../images/logo.png" alt="logo">
-
-    </a>
-    Albumentations Documentation
-  </label>
-  
-    <div class="md-nav__source">
-      
-<a href="https://github.com/albumentations-team/albumentations/" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    albumentations
-  </div>
-</a>
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
     </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
+  </div>
+</div>
 
-  
-  
-  
 
-        
-
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        Documentation
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      <label class="md-nav__link" for="__nav_2">
-        Introduction
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Introduction
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../introduction/image_augmentation/" class="md-nav__link">
-        What is image augmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../introduction/why_you_need_a_dedicated_library_for_image_augmentation/" class="md-nav__link">
-        Why you need a dedicated library
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../introduction/why_albumentations/" class="md-nav__link">
-        Why Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        Getting started
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Getting started
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/image_augmentation/" class="md-nav__link">
-        Image augmentation for classification
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/mask_augmentation/" class="md-nav__link">
-        Mask augmentation for segmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/bounding_boxes_augmentation/" class="md-nav__link">
-        Bounding boxes augmentation for object detection
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/keypoints_augmentation/" class="md-nav__link">
-        Keypoints augmentation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/simultaneous_augmentation/" class="md-nav__link">
-        Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/transforms_and_targets/" class="md-nav__link">
-        A list of transforms and their supported targets
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../getting_started/setting_probabilities/" class="md-nav__link">
-        Setting probabilities for transforms
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        Examples
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Examples" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../examples/" class="md-nav__link">
-        List of examples
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      <label class="md-nav__link" for="__nav_6">
-        AutoAlbument
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="AutoAlbument" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          AutoAlbument
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/" class="md-nav__link">
-        AutoAlbument Overview
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/benchmarks/" class="md-nav__link">
-        Benchmarks and a comparison with baseline augmentation strategies
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/how_to_use/" class="md-nav__link">
-        How to use AutoAlbument
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/docker/" class="md-nav__link">
-        How to use an AutoAlbument Docker image
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/custom_model/" class="md-nav__link">
-        How to use a custom classification or semantic segmentation model
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/metrics/" class="md-nav__link">
-        Metrics and their meaning
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/tuning_parameters/" class="md-nav__link">
-        Tuning the search parameters
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
-      
-      <label class="md-nav__link" for="__nav_6_9">
-        Examples
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Examples" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
-          <span class="md-nav__icon md-icon"></span>
-          Examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/list/" class="md-nav__link">
-        List of examples
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/cifar10/" class="md-nav__link">
-        Image classification on the CIFAR10 dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/svhn/" class="md-nav__link">
-        Image classification on the SVHN dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/imagenet/" class="md-nav__link">
-        Image classification on the ImageNet dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/pascal_voc/" class="md-nav__link">
-        Semantic segmentation on the Pascal VOC dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/examples/cityscapes/" class="md-nav__link">
-        Semantic segmentation on the Pascal VOC dataset
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/search_algorithms/" class="md-nav__link">
-        Search algorithms
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../autoalbument/faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      <label class="md-nav__link" for="__nav_7">
-        Albumentations Experimental
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Albumentations Experimental" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Albumentations Experimental
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../experimental/overview/" class="md-nav__link">
-        Albumentations Experimental Overview
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../experimental/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
-      
-      <label class="md-nav__link" for="__nav_7_3">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API Reference" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_3">
-          <span class="md-nav__icon md-icon"></span>
-          API Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_1" type="checkbox" id="__nav_7_3_1" >
-      
-      <label class="md-nav__link" for="__nav_7_3_1">
-        Augmentations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Augmentations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Augmentations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../experimental/api_reference/augmentations/transforms/" class="md-nav__link">
-        Albumentations Experimental Transforms (augmentations.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      <label class="md-nav__link" for="__nav_8">
-        External resources
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="External resources" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          External resources
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../external_resources/blog_posts_podcasts_talks/" class="md-nav__link">
-        Blog posts, podcasts, talks, and videos about Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../external_resources/books/" class="md-nav__link">
-        Books that mention Albumentations
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../frameworks_and_libraries/" class="md-nav__link">
-        Frameworks and libraries that use Albumentations
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
-      
-      <label class="md-nav__link" for="__nav_10">
-        API Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          API Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../full_reference/" class="md-nav__link">
-        Full API Reference
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" checked>
-      
-      <label class="md-nav__link" for="__nav_10_3">
-        Core API
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Core API" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_3">
-          <span class="md-nav__icon md-icon"></span>
-          Core API
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../composition/" class="md-nav__link">
-        Composition API (core.composition)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Transforms Interface (core.transforms_interface)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Transforms Interface (core.transforms_interface)
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#albumentations.core.transforms_interface" class="md-nav__link">
-    albumentations.core.transforms_interface
-  </a>
-  
-    <nav class="md-nav" aria-label="albumentations.core.transforms_interface">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#albumentations.core.transforms_interface.BasicTransform.add_targets" class="md-nav__link">
-    add_targets()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../serialization/" class="md-nav__link">
-        Serialization API (core.serialization)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../bbox_utils/" class="md-nav__link">
-        Helper functions for working with bounding boxes (augmentations.core.bbox_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../keypoints_utils/" class="md-nav__link">
-        Helper functions for working with keypoints (augmentations.core.keypoints_utils)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" >
-      
-      <label class="md-nav__link" for="__nav_10_4">
-        Augmentations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Augmentations" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_4">
-          <span class="md-nav__icon md-icon"></span>
-          Augmentations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/transforms/" class="md-nav__link">
-        Transforms (augmentations.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_3" type="checkbox" id="__nav_10_4_3" >
-      
-      <label class="md-nav__link" for="__nav_10_4_3">
-        Blur transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Blur transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_3">
-          <span class="md-nav__icon md-icon"></span>
-          Blur transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/blur/transforms/" class="md-nav__link">
-        Blur transforms (augmentations.blur.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_4" type="checkbox" id="__nav_10_4_4" >
-      
-      <label class="md-nav__link" for="__nav_10_4_4">
-        Crop transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Crop transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_4">
-          <span class="md-nav__icon md-icon"></span>
-          Crop transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/crops/functional/" class="md-nav__link">
-        Crop functional transforms (augmentations.crops.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/crops/transforms/" class="md-nav__link">
-        Crop transforms (augmentations.crops.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_5" type="checkbox" id="__nav_10_4_5" >
-      
-      <label class="md-nav__link" for="__nav_10_4_5">
-        Dropout transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Dropout transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_5">
-          <span class="md-nav__icon md-icon"></span>
-          Dropout transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/channel_dropout/" class="md-nav__link">
-        ChannelDropout augmentation (augmentations.dropout.channel_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/coarse_dropout/" class="md-nav__link">
-        CoarseDropout augmentation (augmentations.dropout.coarse_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/grid_dropout/" class="md-nav__link">
-        GridDropout augmentation (augmentations.dropout.grid_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/mask_dropout/" class="md-nav__link">
-        MaskDropout augmentation (augmentations.dropout.mask_dropout)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/dropout/xy_masking/" class="md-nav__link">
-        XYMasking augmentation (augmentations.dropout.xy_masking)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_6" type="checkbox" id="__nav_10_4_6" >
-      
-      <label class="md-nav__link" for="__nav_10_4_6">
-        Geometric transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Geometric transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_6">
-          <span class="md-nav__icon md-icon"></span>
-          Geometric transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/functional/" class="md-nav__link">
-        Geometric functional transforms (augmentations.geometric.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/resize/" class="md-nav__link">
-        Resizing transforms (augmentations.geometric.resize)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/rotate/" class="md-nav__link">
-        Rotation transforms (augmentations.geometric.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/geometric/transforms/" class="md-nav__link">
-        Geometric transforms (augmentations.geometric.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_4_7" type="checkbox" id="__nav_10_4_7" >
-      
-      <label class="md-nav__link" for="__nav_10_4_7">
-        Mixing transforms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Mixing transforms" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_4_7">
-          <span class="md-nav__icon md-icon"></span>
-          Mixing transforms
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/mixing/transforms/" class="md-nav__link">
-        Mixing transforms (augmentations.mixing.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/mixing/functional/" class="md-nav__link">
-        Mixing functional transforms (augmentations.mixing.functional)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/domain_adaptation/" class="md-nav__link">
-        Domain adaptation transforms (augmentations.domain_adaptation)
-      </a>
-    </li>
-              
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../augmentations/functional/" class="md-nav__link">
-        Functional transforms (augmentations.functional)
-      </a>
-    </li>
-              
-
-  
-
           
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
-      
-      <label class="md-nav__link" for="__nav_10_5">
-        PyTorch Helpers
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="PyTorch Helpers" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_5">
-          <span class="md-nav__icon md-icon"></span>
-          PyTorch Helpers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-
-        
-
-  
-
-          
-            
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../pytorch/transforms/" class="md-nav__link">
-        Transforms (pytorch.transforms)
-      </a>
-    </li>
-              
-
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../release_notes/" class="md-nav__link">
-        Release notes
-      </a>
-    </li>
-              
-
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-
-        
-
-    <li class="md-nav__item">
-      <a href="../../../contributing/" class="md-nav__link">
-        Contributing to Albumentations
-      </a>
-    </li>
-              
-
-  
-
-    
-  </ul>
-</nav>
-          </div>
-        </div>
-      </div>
-    
-  
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
 <style>
-    .highlight-ipynb {
-        font-size: 0.7rem;
-    }
-    .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
-        font-size: 0.8rem;
-    }
+  .highlight-ipynb {
+    font-size: 0.7rem;
+  }
+
+  .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
+    font-size: 0.8rem;
+  }
 </style>
 
 
-  <a href="https://github.com/albumentations-team/albumentations.ai/tree/main/mkdocs/src/docs/api_reference/core/transforms_interface.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-  </a>
+<a href="https://github.com/albumentations-team/albumentations.ai/tree/main/mkdocs/src/docs/api_reference/core/transforms_interface.md"
+  title="edit.link.title" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+</a>
 
 
 
 
 
-  
+
 
 
 <h1 id="transforms-interface-coretransforms_interface">Transforms Interface (core.transforms_interface)<a class="headerlink" href="#transforms-interface-coretransforms_interface" title="Permanent link">¶</a></h1>
@@ -1978,7 +243,7 @@
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="BasicTransform" id="albumentations.core.transforms_interface.BasicTransform">
 <code>class <strong>
-albumentations.core.transforms_interface.BasicTransform</strong></code>
+BasicTransform</strong></code>
 <code>
 
 
@@ -1992,10 +257,177 @@ albumentations.core.transforms_interface.BasicTransform</strong></code>
 <div class="class-signature">
 </div>
 <div class="doc doc-contents">
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">BasicTransform</span><span class="p">(</span><span class="n">Serializable</span><span class="p">):</span>
+    <span class="n">call_backup</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">interpolation</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Interpolation</span><span class="p">]</span>
+    <span class="n">fill_value</span><span class="p">:</span> <span class="n">ColorType</span>
+    <span class="n">mask_fill_value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ColorType</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">always_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">always_apply</span> <span class="o">=</span> <span class="n">always_apply</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># replay mode params</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">deterministic</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save_key</span> <span class="o">=</span> <span class="s2">"replay"</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">replay_mode</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">applied_in_replay</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">force_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"You have to pass data to augmentations as named arguments, for example: aug(image=image)"</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">replay_mode</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">applied_in_replay</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_with_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">kwargs</span>
+
+        <span class="k">if</span> <span class="n">force_apply</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">always_apply</span> <span class="ow">or</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">):</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">):</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> requires </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="si">}</span><span class="s2">"</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+                <span class="n">targets_as_params</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">}</span>
+                <span class="n">params_dependent_on_targets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_params_dependent_on_targets</span><span class="p">(</span><span class="n">targets_as_params</span><span class="p">)</span>
+                <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params_dependent_on_targets</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">deterministic</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets_as_params</span><span class="p">:</span>
+                    <span class="n">warn</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">get_class_fullname</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" could work incorrectly in ReplayMode for other input data"</span>
+                        <span class="s2">" because its' params depend on targets."</span>
+                    <span class="p">)</span>
+                <span class="n">kwargs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">save_key</span><span class="p">][</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_with_params</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">kwargs</span>
+
+    <span class="k">def</span> <span class="nf">apply_with_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">kwargs</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_params</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">arg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">target_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_target_function</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+                <span class="n">target_dependencies</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_dependence</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="p">[])}</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">target_function</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">target_dependencies</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span> <span class="nf">set_deterministic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">save_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"replay"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"BasicTransform"</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">save_key</span> <span class="o">==</span> <span class="s2">"params"</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"params save_key is reserved"</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">deterministic</span> <span class="o">=</span> <span class="n">flag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save_key</span> <span class="o">=</span> <span class="n">save_key</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_base_init_args</span><span class="p">()</span>
+        <span class="n">state</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_transform_init_args</span><span class="p">())</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">format_args</span><span class="p">(</span><span class="n">state</span><span class="p">)</span><span class="si">}</span><span class="s2">)"</span>
+
+    <span class="k">def</span> <span class="nf">_get_target_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="n">transform_key</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span><span class="p">:</span>
+            <span class="n">transform_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">transform_key</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">p</span><span class="p">:</span> <span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">get_params</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">targets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+        <span class="c1"># you must specify targets in subclass</span>
+        <span class="c1"># foe example:</span>
+        <span class="c1"># &gt;&gt;  ('image', 'mask')</span>
+        <span class="c1"># &gt;&gt;  ('image', 'boxes')</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">update_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"interpolation"</span><span class="p">):</span>
+            <span class="n">params</span><span class="p">[</span><span class="s2">"interpolation"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolation</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"fill_value"</span><span class="p">):</span>
+            <span class="n">params</span><span class="p">[</span><span class="s2">"fill_value"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_value</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">"mask_fill_value"</span><span class="p">):</span>
+            <span class="n">params</span><span class="p">[</span><span class="s2">"mask_fill_value"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_fill_value</span>
+        <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">"cols"</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"rows"</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+        <span class="k">return</span> <span class="n">params</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">target_dependence</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">add_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_targets</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Add targets to transform them the same way as one of existing targets</span>
+<span class="sd">        ex: {'target_image': 'image'}</span>
+<span class="sd">        ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}</span>
+<span class="sd">        by the way you must have at least one object with key 'image'</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            additional_targets (dict): keys - new target name, values - old target name. ex: {'image2': 'image'}</span>
+
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span> <span class="o">=</span> <span class="n">additional_targets</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">targets_as_params</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">get_params_dependent_on_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+            <span class="s2">"Method get_params_dependent_on_targets is not implemented in class "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+        <span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_class_fullname</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">get_shortest_class_fullname</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">is_serializable</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">get_transform_init_args_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Class </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_class_fullname</span><span class="p">()</span><span class="si">}</span><span class="s2"> is not serializable because the `get_transform_init_args_names` "</span>
+        <span class="s2">"method is not implemented"</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_base_init_args</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">"always_apply"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">always_apply</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">get_transform_init_args</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_transform_init_args_names</span><span class="p">()}</span>
+
+    <span class="k">def</span> <span class="nf">to_dict_private</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"__class_fullname__"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_class_fullname</span><span class="p">()}</span>
+        <span class="n">state</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_base_init_args</span><span class="p">())</span>
+        <span class="n">state</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_transform_init_args</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">state</span>
+
+    <span class="k">def</span> <span class="nf">get_dict_with_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict_private</span><span class="p">()</span>
+        <span class="n">d</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">d</span>
+</code></pre></div>
+</details>
 <div class="doc doc-children">
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="albumentations.core.transforms_interface.BasicTransform.add_targets">
-<code class="codehilite language-python"><span class="n">albumentations</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">transforms_interface</span><span class="o">.</span><span class="n">BasicTransform</span><span class="o">.</span><span class="n">add_targets</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_targets</span><span class="p">)</span></code>
+<code class="language-python"><span class="n">add_targets</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_targets</span><span class="p">)</span></code>
 <a class="headerlink" href="#albumentations.core.transforms_interface.BasicTransform.add_targets" title="Permanent link">¶</a></h3>
 <div class="doc doc-contents">
 <p>Add targets to transform them the same way as one of existing targets
@@ -2014,11 +446,26 @@ by the way you must have at least one object with key 'image'</p>
 <tbody>
 <tr>
 <td><code>additional_targets</code></td>
-<td><code>Dict[str, str]</code></td>
+<td><code>dict</code></td>
 <td><p>keys - new target name, values - old target name. ex: {'image2': 'image'}</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">add_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_targets</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Add targets to transform them the same way as one of existing targets</span>
+<span class="sd">    ex: {'target_image': 'image'}</span>
+<span class="sd">    ex: {'obj1_mask': 'mask', 'obj2_mask': 'mask'}</span>
+<span class="sd">    by the way you must have at least one object with key 'image'</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        additional_targets (dict): keys - new target name, values - old target name. ex: {'image2': 'image'}</span>
+
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_additional_targets</span> <span class="o">=</span> <span class="n">additional_targets</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 </div>
@@ -2027,7 +474,7 @@ by the way you must have at least one object with key 'image'</p>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="DualTransform" id="albumentations.core.transforms_interface.DualTransform">
 <code>class <strong>
-albumentations.core.transforms_interface.DualTransform</strong></code>
+DualTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
 <a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L287" target="_blank">[view source on GitHub]</a>
@@ -2039,31 +486,116 @@ albumentations.core.transforms_interface.DualTransform</strong></code>
 <p>A base class for transformations that should be applied both to an image and its corresponding properties
 such as masks, bounding boxes, and keypoints. This class ensures that when a transform is applied to an image,
 all associated entities are transformed accordingly to maintain consistency between the image and its annotations.</p>
-<p>Properties:
-    targets (Dict[str, Callable[..., Any]]): Defines the types of targets (e.g., image, mask, bboxes, keypoints)
-        that the transform should be applied to and maps them to the corresponding methods.</p>
-<p>Methods:
-    apply_to_bbox(bbox: BoxInternalType, <em>args: Any, </em>*params: Any) -&gt; BoxInternalType:
-        Applies the transform to a single bounding box. Should be implemented in the subclass.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">apply_to_keypoint</span><span class="p">(</span><span class="nl">keypoint</span><span class="p">:</span><span class="w"> </span><span class="n">KeypointInternalType</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">KeypointInternalType</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">keypoint</span><span class="p">.</span><span class="w"> </span><span class="n">Should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">implemented</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">subclass</span><span class="p">.</span><span class="w"></span>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>targets (Dict[str, Callable[..., Any]]): Defines the types of targets (e.g., image, mask, bboxes, keypoints)
+    that the transform should be applied to and maps them to the corresponding methods.</p>
+</div>
+<div class="admonition methods">
+<p class="admonition-title">Methods</p>
+<p>apply_to_bbox(bbox: BoxInternalType, <em>args: Any, </em>*params: Any) -&gt; BoxInternalType:
+    Applies the transform to a single bounding box. Should be implemented in the subclass.</p>
+<p>apply_to_keypoint(keypoint: KeypointInternalType, <em>args: Any, </em>*params: Any) -&gt; KeypointInternalType:
+    Applies the transform to a single keypoint. Should be implemented in the subclass.</p>
+<p>apply_to_bboxes(bboxes: Sequence[BoxType], <em>args: Any, </em>*params: Any) -&gt; Sequence[BoxType]:
+    Applies the transform to a list of bounding boxes. Delegates to <code>apply_to_bbox</code> for each bounding box.</p>
+<p>apply_to_keypoints(keypoints: Sequence[KeypointType], <em>args: Any, </em>*params: Any) -&gt; Sequence[KeypointType]:
+    Applies the transform to a list of keypoints. Delegates to <code>apply_to_keypoint</code> for each keypoint.</p>
+<p>apply_to_mask(mask: np.ndarray, <em>args: Any, </em>*params: Any) -&gt; np.ndarray:
+    Applies the transform specifically to a single mask.</p>
+<p>apply_to_masks(masks: Sequence[np.ndarray], **params: Any) -&gt; List[np.ndarray]:
+    Applies the transform to a list of masks. Delegates to <code>apply_to_mask</code> for each mask.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is intended to be subclassed and should not be used directly. Subclasses are expected to
+implement the specific logic for each type of target (e.g., image, mask, bboxes, keypoints) in the
+corresponding <code>apply_to_*</code> methods.</p>
+</div>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">DualTransform</span><span class="p">(</span><span class="n">BasicTransform</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""A base class for transformations that should be applied both to an image and its corresponding properties</span>
+<span class="sd">    such as masks, bounding boxes, and keypoints. This class ensures that when a transform is applied to an image,</span>
+<span class="sd">    all associated entities are transformed accordingly to maintain consistency between the image and its annotations.</span>
 
-<span class="n">apply_to_bboxes</span><span class="p">(</span><span class="nl">bboxes</span><span class="p">:</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">BoxType</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">BoxType</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">bounding</span><span class="w"> </span><span class="n">boxes</span><span class="p">.</span><span class="w"> </span><span class="n">Delegates</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="err">`</span><span class="n">apply_to_bbox</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">bounding</span><span class="w"> </span><span class="n">box</span><span class="p">.</span><span class="w"></span>
+<span class="sd">    Properties:</span>
+<span class="sd">        targets (Dict[str, Callable[..., Any]]): Defines the types of targets (e.g., image, mask, bboxes, keypoints)</span>
+<span class="sd">            that the transform should be applied to and maps them to the corresponding methods.</span>
 
-<span class="n">apply_to_keypoints</span><span class="p">(</span><span class="nl">keypoints</span><span class="p">:</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">KeypointType</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">KeypointType</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">keypoints</span><span class="p">.</span><span class="w"> </span><span class="n">Delegates</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="err">`</span><span class="n">apply_to_keypoint</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">keypoint</span><span class="p">.</span><span class="w"></span>
+<span class="sd">    Methods:</span>
+<span class="sd">        apply_to_bbox(bbox: BoxInternalType, *args: Any, **params: Any) -&gt; BoxInternalType:</span>
+<span class="sd">            Applies the transform to a single bounding box. Should be implemented in the subclass.</span>
 
-<span class="n">apply_to_mask</span><span class="p">(</span><span class="nl">mask</span><span class="p">:</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nl">args</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="nl">ndarray</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="n">specifically</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">mask</span><span class="p">.</span><span class="w"></span>
+<span class="sd">        apply_to_keypoint(keypoint: KeypointInternalType, *args: Any, **params: Any) -&gt; KeypointInternalType:</span>
+<span class="sd">            Applies the transform to a single keypoint. Should be implemented in the subclass.</span>
 
-<span class="n">apply_to_masks</span><span class="p">(</span><span class="nl">masks</span><span class="p">:</span><span class="w"> </span><span class="k">Sequence</span><span class="o">[</span><span class="n">np.ndarray</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">params</span><span class="p">:</span><span class="w"> </span><span class="ow">Any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">np.ndarray</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Applies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">masks</span><span class="p">.</span><span class="w"> </span><span class="n">Delegates</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="err">`</span><span class="n">apply_to_mask</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="n">mask</span><span class="p">.</span><span class="w"></span>
+<span class="sd">        apply_to_bboxes(bboxes: Sequence[BoxType], *args: Any, **params: Any) -&gt; Sequence[BoxType]:</span>
+<span class="sd">            Applies the transform to a list of bounding boxes. Delegates to `apply_to_bbox` for each bounding box.</span>
+
+<span class="sd">        apply_to_keypoints(keypoints: Sequence[KeypointType], *args: Any, **params: Any) -&gt; Sequence[KeypointType]:</span>
+<span class="sd">            Applies the transform to a list of keypoints. Delegates to `apply_to_keypoint` for each keypoint.</span>
+
+<span class="sd">        apply_to_mask(mask: np.ndarray, *args: Any, **params: Any) -&gt; np.ndarray:</span>
+<span class="sd">            Applies the transform specifically to a single mask.</span>
+
+<span class="sd">        apply_to_masks(masks: Sequence[np.ndarray], **params: Any) -&gt; List[np.ndarray]:</span>
+<span class="sd">            Applies the transform to a list of masks. Delegates to `apply_to_mask` for each mask.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        This class is intended to be subclassed and should not be used directly. Subclasses are expected to</span>
+<span class="sd">        implement the specific logic for each type of target (e.g., image, mask, bboxes, keypoints) in the</span>
+<span class="sd">        corresponding `apply_to_*` methods.</span>
+
+<span class="sd">    """</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">targets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">"image"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">,</span>
+            <span class="s2">"mask"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_to_mask</span><span class="p">,</span>
+            <span class="s2">"masks"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_to_masks</span><span class="p">,</span>
+            <span class="s2">"bboxes"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_to_bboxes</span><span class="p">,</span>
+            <span class="s2">"keypoints"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_to_keypoints</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Method apply_to_bbox is not implemented in class </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_keypoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Method apply_to_keypoint is not implemented in class </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_global_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Method apply_to_global_label is not implemented in class </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_bboxes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bboxes</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BoxType</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">apply_to_bbox</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">BoxInternalType</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">BoxInternalType</span><span class="p">,</span> <span class="n">bbox</span><span class="p">[:</span><span class="mi">4</span><span class="p">]))),</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+            <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">bbox</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+            <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">bboxes</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_keypoints</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">KeypointType</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">KeypointType</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">apply_to_keypoint</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">KeypointInternalType</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[:</span><span class="mi">4</span><span class="p">])),</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">keypoint</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+            <span class="k">for</span> <span class="n">keypoint</span> <span class="ow">in</span> <span class="n">keypoints</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_NEAREST</span> <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">"interpolation"</span> <span class="k">else</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_masks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">masks</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_to_mask</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">mask</span> <span class="ow">in</span> <span class="n">masks</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_global_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_to_global_label</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
 </code></pre></div>
-<p>Note:
-    This class is intended to be subclassed and should not be used directly. Subclasses are expected to
-    implement the specific logic for each type of target (e.g., image, mask, bboxes, keypoints) in the
-    corresponding <code>apply_to_*</code> methods.</p>
+</details>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2071,7 +603,7 @@ all associated entities are transformed accordingly to maintain consistency betw
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="ImageOnlyTransform" id="albumentations.core.transforms_interface.ImageOnlyTransform">
 <code>class <strong>
-albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
+ImageOnlyTransform</strong></code>
 <code>
 </code> <span class="doc-github-link">
 <a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L329" target="_blank">[view source on GitHub]</a>
@@ -2081,6 +613,18 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 </div>
 <div class="doc doc-contents">
 <p>Transform applied to image only.</p>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">ImageOnlyTransform</span><span class="p">(</span><span class="n">BasicTransform</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Transform applied to image only."""</span>
+
+    <span class="n">_targets</span> <span class="o">=</span> <span class="n">Targets</span><span class="o">.</span><span class="n">IMAGE</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">targets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">"image"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">}</span>
+</code></pre></div>
+</details>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2088,7 +632,7 @@ albumentations.core.transforms_interface.ImageOnlyTransform</strong></code>
 <div class="doc doc-object doc-class">
 <h2 class="doc doc-heading" data-toc-label="NoOp" id="albumentations.core.transforms_interface.NoOp">
 <code>class <strong>
-albumentations.core.transforms_interface.NoOp</strong></code>
+NoOp</strong></code>
 <code>
 </code> <span class="doc-github-link">
 <a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L349" target="_blank">[view source on GitHub]</a>
@@ -2098,8 +642,40 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 </div>
 <div class="doc doc-contents">
 <p>Does nothing</p>
-<p>Targets:
-    image, mask, bboxes, keypoints, global_label</p>
+<div class="admonition targets">
+<p class="admonition-title">Targets</p>
+<p>image, mask, bboxes, keypoints, global_label</p>
+</div>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">NoOp</span><span class="p">(</span><span class="n">DualTransform</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Does nothing</span>
+
+<span class="sd">    Targets:</span>
+<span class="sd">        image, mask, bboxes, keypoints, global_label</span>
+<span class="sd">    """</span>
+
+    <span class="n">_targets</span> <span class="o">=</span> <span class="p">(</span><span class="n">Targets</span><span class="o">.</span><span class="n">IMAGE</span><span class="p">,</span> <span class="n">Targets</span><span class="o">.</span><span class="n">MASK</span><span class="p">,</span> <span class="n">Targets</span><span class="o">.</span><span class="n">BBOXES</span><span class="p">,</span> <span class="n">Targets</span><span class="o">.</span><span class="n">KEYPOINTS</span><span class="p">,</span> <span class="n">Targets</span><span class="o">.</span><span class="n">GLOBAL_LABEL</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_keypoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keypoint</span><span class="p">:</span> <span class="n">KeypointInternalType</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KeypointInternalType</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">keypoint</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">:</span> <span class="n">BoxInternalType</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxInternalType</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">bbox</span>
+
+    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">img</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">mask</span>
+
+    <span class="k">def</span> <span class="nf">apply_to_global_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">label</span>
+
+    <span class="k">def</span> <span class="nf">get_transform_init_args_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">()</span>
+</code></pre></div>
+</details>
 <div class="doc doc-children">
 </div>
 </div>
@@ -2107,7 +683,7 @@ albumentations.core.transforms_interface.NoOp</strong></code>
 <div class="doc doc-object doc-function">
 <h2 class="doc doc-heading" data-toc-label="to_tuple()" id="albumentations.core.transforms_interface.to_tuple">
 <code class="highlight language-python">def
-albumentations.core.transforms_interface.to_tuple    (param, low=None, bias=None)
+to_tuple    (param, low=None, bias=None)
    </code>
 <span class="doc-github-link"><a href="https://github.com/albumentations-team/albumentations/blob/master/albumentations/core/transforms_interface.py#L27" target="_blank">[view source on GitHub]</a></span><a class="headerlink" href="#albumentations.core.transforms_interface.to_tuple" title="Permanent link">¶</a>
 </h2>
@@ -2156,6 +732,52 @@ Raises ValueError for invalid combinations or types of arguments.</p></td>
 </tr>
 </tbody>
 </table>
+<details class="quote">
+<summary>Source code in <code>albumentations/core/transforms_interface.py</code></summary>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">to_tuple</span><span class="p">(</span>
+    <span class="n">param</span><span class="p">:</span> <span class="n">ScaleType</span><span class="p">,</span>
+    <span class="n">low</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ScaleType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bias</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ScalarType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">"""Convert input argument to a min-max tuple.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        param: Input value which could be a scalar or a sequence of exactly 2 scalars.</span>
+<span class="sd">        low: Second element of the tuple, provided as an optional argument for when `param` is a scalar.</span>
+<span class="sd">        bias: An offset added to both elements of the tuple.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple of two scalars, optionally adjusted by `bias`.</span>
+<span class="sd">        Raises ValueError for invalid combinations or types of arguments.</span>
+
+<span class="sd">    """</span>
+    <span class="c1"># Validate mutually exclusive arguments</span>
+    <span class="k">if</span> <span class="n">low</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Arguments 'low' and 'bias' cannot be used together."</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="o">==</span> <span class="n">PAIR</span><span class="p">:</span>
+        <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">param</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+
+    <span class="c1"># Handle scalar input</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+            <span class="c1"># Use low and param to create a tuple</span>
+            <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span> <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">param</span> <span class="k">else</span> <span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">low</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Create a symmetric tuple around 0</span>
+            <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span> <span class="o">=</span> <span class="o">-</span><span class="n">param</span><span class="p">,</span> <span class="n">param</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Argument 'param' must be either a scalar or a sequence of 2 elements."</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># Apply bias if provided</span>
+    <span class="k">if</span> <span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">bias</span> <span class="o">+</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">bias</span> <span class="o">+</span> <span class="n">max_val</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 </div>
@@ -2163,29 +785,29 @@ Raises ValueError for invalid combinations or types of arguments.</p></td>
 </div>
 
 
-              
-                
-
-
-              
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    <nav class="md-footer__inner md-grid" aria-label="footer.title">
       
         <a href="../composition/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -2208,7 +830,7 @@ Raises ValueError for invalid combinations or types of arguments.</p></td>
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -2221,10 +843,12 @@ Raises ValueError for invalid combinations or types of arguments.</p></td>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
       
