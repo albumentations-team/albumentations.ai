@@ -71,7 +71,7 @@ notebook_colab_uri: https://colab.research.google.com/github/albumentations-team
 
 site_dir: /site
 
-site_description: "Albumentations: fast and flexible image augmentations"
+site_description: "Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations."
 
 extra:
   analytics:

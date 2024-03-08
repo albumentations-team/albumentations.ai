@@ -5,16 +5,24 @@
 {% set title = config.site_name ~ " - " ~ page.title | striptags %}
 {% endif %}
 {% set image = config.site_url ~ 'images/albumentations_card.png' %}
-<meta property="og:type" content="website">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ config.site_description }}">
-<meta property="og:url" content="{{ page.canonical_url }}">
 <meta property="og:image" content="{{ image }}">
 <meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.canonical_url }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@albumentations">
+<meta name="twitter:creator" content="@viglovikov">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ config.site_description }}">
 <meta name="twitter:image" content="{{ image }}">
+<meta name="description" content="{{ config.site_description }}">
+<meta name="keywords"
+  content="Albumentations, image augmentation, machine learning, computer vision, data augmentation, image processing, deep learning, AI, artificial intelligence, Python">
+
 {% endblock %}
 
 {% block site_nav %}
