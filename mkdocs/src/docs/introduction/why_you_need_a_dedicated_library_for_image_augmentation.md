@@ -57,11 +57,10 @@ The same is true for object detection tasks. For pixel-level augmentations, you 
 ![Example of pixel- and spatial-level augmentations for object detection](../images/introduction/dedicated_library/pixel_and_spatial_level_augmentations_for_object_detection.jpg)
 **Pixel-level augmentations such as brightness adjustment change only the input image but not the coordinates of bounding boxes. Spatial-level augmentations such as mirroring and cropping a part of the image change both the input image and the bounding boxes' coordinates.**
 
-
 Albumentations knows how to correctly apply transformation both to the input data as well as the output labels.
 
-
 ## Working with probabilities
+
 During training, you usually want to apply augmentations with a probability of less than 100% since you also need to have the original images in your training pipeline. Also, it is beneficial to be able to control the magnitude of image augmentation, how much does the augmentation change the original image. If the original dataset is large, you could apply only the basic augmentations with probability around 10-30% and with a small magnitude of changes. If the dataset is small, you need to act more aggressively with augmentations to prevent overfitting of neural networks, so you usually need to increase the probability of applying each augmentation to 40-50% and increase the magnitude of changes the augmentation makes to the image.
 
 Image augmentation libraries allow you to set the required probabilities and the magnitude of values for each transformation.

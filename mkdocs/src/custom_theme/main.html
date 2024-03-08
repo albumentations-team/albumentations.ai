@@ -1,73 +1,86 @@
 {% extends "base.html" %}
 {% block extrahead %}
-  {% set title = config.site_name %}
-  {% if page and page.title and not page.is_homepage %}
-    {% set title = config.site_name ~ " - " ~ page.title | striptags %}
-  {% endif %}
-  {% set image = config.site_url ~ 'images/albumentations_card.png' %}
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ config.site_description }}">
-  <meta property="og:url" content="{{ page.canonical_url }}">
-  <meta property="og:image" content="{{ image }}">
-  <meta property="og:image:type" content="image/png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ config.site_description }}">
-  <meta name="twitter:image" content="{{ image }}">
+{% set title = config.site_name %}
+{% if page and page.title and not page.is_homepage %}
+{% set title = config.site_name ~ " - " ~ page.title | striptags %}
+{% endif %}
+{% set image = config.site_url ~ 'images/albumentations_card.png' %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ config.site_description }}">
+<meta property="og:image" content="{{ image }}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.canonical_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@albumentations">
+<meta name="twitter:creator" content="@viglovikov">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ config.site_description }}">
+<meta name="twitter:image" content="{{ image }}">
+<meta name="description" content="{{ config.site_description }}">
+<meta name="keywords"
+  content="Albumentations, image augmentation, machine learning, computer vision, data augmentation, image processing, deep learning, AI, artificial intelligence, Python">
+
 {% endblock %}
 
-  {% block site_nav %}
-    {% if nav %}
-      {% if page and page.meta and page.meta.hide %}
-        {% set hidden = "hidden" if "navigation" in page.meta.hide %}
-      {% endif %}
-      <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
-        <div class="md-sidebar__scrollwrap">
-          <div class="md-sidebar__inner">
-            {% include "partials/nav.html" %}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  {% endblock %}
+{% block site_nav %}
+{% if nav %}
+{% if page and page.meta and page.meta.hide %}
+{% set hidden = "hidden" if "navigation" in page.meta.hide %}
+{% endif %}
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
 
 
 {% block content %}
 <style>
-    .highlight-ipynb {
-        font-size: 0.7rem;
-    }
-    .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
-        font-size: 0.8rem;
-    }
+  .highlight-ipynb {
+    font-size: 0.7rem;
+  }
+
+  .jupyter-wrapper .jp-MarkdownOutput.jp-RenderedHTMLCommon {
+    font-size: 0.8rem;
+  }
 </style>
 
 {% if page.edit_url %}
-  <a href="{% if page.is_jupyter_notebook %}{{ page.notebook_github_url }}{% else %}{{ page.edit_url }}{% endif %}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-    {% include ".icons/material/pencil.svg" %}
-  </a>
+<a href="{% if page.is_jupyter_notebook %}{{ page.notebook_github_url }}{% else %}{{ page.edit_url }}{% endif %}"
+  title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
+  {% include ".icons/material/pencil.svg" %}
+</a>
 {% endif %}
 
 {% if page.is_jupyter_notebook %}
-  <a href="{{ page.notebook_colab_url }}" target="_blank" class="highlight-button btn btn-large button xs-margin-bottom-five md-icon colab-button">{% include "icons/colab.svg" %} Run in Google Colab</a>
-  <a href="{{ page.notebook_github_url }}" target="_blank" class="highlight-button btn btn-large button xs-margin-bottom-five md-icon github-icon">{% include ".icons/material/github.svg" %} View notebook on GitHub</a>
+<a href="{{ page.notebook_colab_url }}" target="_blank"
+  class="highlight-button btn btn-large button xs-margin-bottom-five md-icon colab-button">{% include "icons/colab.svg"
+  %} Run in Google Colab</a>
+<a href="{{ page.notebook_github_url }}" target="_blank"
+  class="highlight-button btn btn-large button xs-margin-bottom-five md-icon github-icon">{% include
+  ".icons/material/github.svg" %} View notebook on GitHub</a>
 {% endif %}
 
 {% block source %}
-  {% if page and page.meta and page.meta.source %}
-    {% include "partials/source-link.html" %}
-  {% endif %}
+{% if page and page.meta and page.meta.source %}
+{% include "partials/source-link.html" %}
+{% endif %}
 {% endblock %}
 {% if not "\x3ch1" in page.content %}
-  <h1>{{ page.title | default(config.site_name, true)}}</h1>
+<h1>{{ page.title | default(config.site_name, true)}}</h1>
 {% endif %}
 {{ page.content }}
 {% if page and page.meta %}
-  {% if page.meta.git_revision_date_localized or
-        page.meta.revision_date
-  %}
-    {% include "partials/source-date.html" %}
-  {% endif %}
+{% if page.meta.git_revision_date_localized or
+page.meta.revision_date
+%}
+{% include "partials/source-date.html" %}
+{% endif %}
 {% endif %}
 {% endblock %}

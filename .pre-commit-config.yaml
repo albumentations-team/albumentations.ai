@@ -60,11 +60,6 @@ repos:
     -   id: codespell
         additional_dependencies:
         - tomli
--   repo: https://github.com/klieret/jekyll-relative-url-check
-    rev: v2.0.2
-    hooks:
-    -   id: jekyll-relative-url-check-html
-    -   id: jekyll-relative-url-check-markdown
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.8.0
     hooks:

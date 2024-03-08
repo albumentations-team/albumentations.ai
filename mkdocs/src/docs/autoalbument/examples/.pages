@@ -1,8 +1,0 @@
-title: Examples
-nav:
-  - list.md
-  - cifar10.md
-  - svhn.md
-  - imagenet.md
-  - pascal_voc.md
-  - cityscapes.md
