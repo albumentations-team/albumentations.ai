@@ -1,0 +1,13 @@
+title: AutoAlbument
+nav:
+  - index.md
+  - benchmarks.md
+  - installation.md
+  - how_to_use.md
+  - docker.md
+  - custom_model.md
+  - metrics.md
+  - tuning_parameters.md
+  - examples
+  - search_algorithms.md
+  - FAQ: faq.md

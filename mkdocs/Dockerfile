@@ -12,6 +12,8 @@ RUN git clone --depth=1 --branch main --single-branch https://github.com/albumen
 RUN git clone --depth=1 --branch main --single-branch https://github.com/albumentations-team/albumentations.git /albumentations \
 && pip install -e /albumentations
 
+RUN git clone --depth=1 --branch master --single-branch https://github.com/albumentations-team/autoalbument.git /autoalbument
+
 COPY ./mkdocs/entrypoint.sh /mkdocs/entrypoint.sh
 COPY ./mkdocs/replacements.txt /mkdocs/replacements.txt
 
