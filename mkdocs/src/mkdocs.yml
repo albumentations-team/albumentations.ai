@@ -33,9 +33,25 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.caret
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.superfences
+  - pymdownx.mark
   - tables
   - toc:
       permalink: true
+  - pymdownx.critic:
+      mode: view
 
 theme:
   name: material
