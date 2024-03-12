@@ -2857,12 +2857,12 @@ Downscale</strong></code>
 <tr>
 <td><code>scale_min</code></td>
 <td><code>float</code></td>
-<td><p>lower bound on the image scale. Should be &lt; 1.</p></td>
+<td><p>lower bound on the image scale. Should be &lt;= scale_max.</p></td>
 </tr>
 <tr>
 <td><code>scale_max</code></td>
 <td><code>float</code></td>
-<td><p>lower bound on the image scale. Should be .</p></td>
+<td><p>upper bound on the image scale. Should be &lt; 1.</p></td>
 </tr>
 <tr>
 <td><code>interpolation</code></td>
@@ -2886,8 +2886,8 @@ Default: Interpolation(downscale=cv2.INTER_NEAREST, upscale=cv2.INTER_NEAREST)</
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">    </span><span class="sd">"""Decreases image quality by downscaling and upscaling back.</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="sd">    Args:</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="sd">        scale_min: lower bound on the image scale. Should be &lt; 1.</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="sd">        scale_max:  lower bound on the image scale. Should be .</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="sd">        scale_min: lower bound on the image scale. Should be &lt;= scale_max.</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="sd">        scale_max: upper bound on the image scale. Should be &lt; 1.</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="sd">        interpolation: cv2 interpolation method. Could be:</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="sd">            - single cv2 interpolation flag - selected method will be used for downscale and upscale.</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="sd">            - dict(downscale=flag, upscale=flag)</span>
