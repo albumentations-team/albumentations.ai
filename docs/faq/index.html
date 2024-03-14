@@ -709,6 +709,33 @@
     </span>
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
     <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
@@ -736,7 +763,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#examples_1" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
     </span>
@@ -760,7 +787,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage_1" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
     </span>
@@ -768,15 +795,6 @@
   
     <nav class="md-nav" aria-label="Usage">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Which transformation should I use to convert a NumPy array with an image or a mask to a PyTorch tensor: ToTensor() or ToTensorV2()?
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used" class="md-nav__link">
@@ -2602,18 +2620,31 @@
 
 
 <h1 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">¶</a></h1>
-<p><strong>Installation</strong></p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem">I am receiving an error message <code>Failed building wheel for imagecodecs</code> when I am trying to install Albumentations. How can I fix the problem?</a></li>
 <li><a href="#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory">I successfully installed the library, but when I am trying to import it I receive an error <code>ImportError: libXrender.so.1: cannot open shared object file: No such file or directory</code>.</a></li>
 </ul>
-<p><strong>Examples</strong></p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples">Why do you call <code>cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</code> in your examples?</a></li>
 </ul>
-<p><strong>Usage</strong></p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="#which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2">Which transformation should I use to convert a NumPy array with an image or a mask to a PyTorch tensor: <code>ToTensor()</code> or <code>ToTensorV2()</code></a>?</li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#installation-1">Installation</a><ul>
+<li><a href="#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem">I am receiving an error message <code>Failed building wheel for imagecodecs</code> when I am trying to install Albumentations. How can I fix the problem?</a></li>
+<li><a href="#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory">I successfully installed the library, but when I am trying to import it I receive an error <code>ImportError: libXrender.so.1: cannot open shared object file: No such file or directory</code>.</a></li>
+</ul>
+</li>
+<li><a href="#examples-1">Examples</a><ul>
+<li><a href="#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples">Why do you call <code>cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</code> in your examples?</a></li>
+</ul>
+</li>
+<li><a href="#usage-1">Usage</a><ul>
 <li><a href="#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used">How can I find which augmentations were applied to the input data and which parameters they used?</a></li>
 <li><a href="#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it">My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?</a></li>
 <li><a href="#i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them">I want to augment 16-bit TIFF images. Can Albumentations work with them?</a></li>
@@ -2621,25 +2652,23 @@
 <li><a href="#when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug">When I use augmentations with the <code>border_mode</code> parameter (such as <code>Rotate</code>) and set <code>border_mode</code> to <code>cv2.BORDER_REFLECT</code> or <code>cv2.BORDER_REFLECT_101</code> Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?</a></li>
 <li><a href="#i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations">I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?</a></li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+</li>
+</ul>
+<h2 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">¶</a></h2>
 <h3 id="i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem">I am receiving an error message <code>Failed building wheel for imagecodecs</code> when I am trying to install Albumentations. How can I fix the problem?<a class="headerlink" href="#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem" title="Permanent link">¶</a></h3>
-<p>Try to update <code>pip</code> by running the following command:
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>python3 -m pip install --upgrade pip
-</span></code></pre></div></p>
+<p>Try to update <code>pip</code> by running the following command:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</span></code></pre></div>
 <h3 id="i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory">I successfully installed the library, but when I am trying to import it I receive an error <code>ImportError: libXrender.so.1: cannot open shared object file: No such file or directory</code>.<a class="headerlink" href="#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory" title="Permanent link">¶</a></h3>
-<p>Probably your system doesn't have <code>libXrender</code>. To install the <code>libXrender</code> package on Ubuntu or Debian run:
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a> sudo apt-get update
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a> sudo apt-get install libxrender1
-</span></code></pre></div></p>
+<p>Probably your system doesn't have <code>libXrender</code>. To install the <code>libXrender</code> package on Ubuntu or Debian run:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libxrender1
+</span></code></pre></div>
 <p>To install the package on other operating systems, consult the documentation for the OS' package manager.</p>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
+<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">¶</a></h2>
 <h3 id="why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples">Why do you call <code>cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</code> in your examples?<a class="headerlink" href="#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples" title="Permanent link">¶</a></h3>
 <p><a href="https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/" target="_blank">For historical reasons</a>, OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
-<h3 id="which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2">Which transformation should I use to convert a NumPy array with an image or a mask to a PyTorch tensor: <code>ToTensor()</code> or <code>ToTensorV2()</code>?<a class="headerlink" href="#which-transformation-should-i-use-to-convert-a-numpy-array-with-an-image-or-a-mask-to-a-pytorch-tensor-totensor-or-totensorv2" title="Permanent link">¶</a></h3>
-<p>Always use <a href="../api_reference/pytorch/transforms/#albumentations.pytorch.transforms.ToTensorV2"><code>ToTensorV2()</code></a>.</p>
-<p><code>ToTensor()</code> is a legacy transformation that contains complex and unnecessary logic for mask transformation. We don't want to break the existing pipelines that use that transformation, so instead of changing the behavior of the original <code>ToTensor()</code>, we created a new, more simple transformation.</p>
-<p><code>ToTensor()</code> is now deprecated and will be removed in future versions. For all new projects, you should always use ToTensorV2().</p>
+<h2 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">¶</a></h2>
 <h3 id="how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used">How can I find which augmentations were applied to the input data and which parameters they used?<a class="headerlink" href="#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used" title="Permanent link">¶</a></h3>
 <p>To save and inspect parameters of augmentations, you can replace Compose with ReplayCompose. ReplayCompose behaves just like regular Compose, but it also saves information about which augmentations were applied and which parameters were uses. Take a look at the example that shows how you can use ReplayCompose.</p>
 <h3 id="my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it">My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?<a class="headerlink" href="#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it" title="Permanent link">¶</a></h3>
