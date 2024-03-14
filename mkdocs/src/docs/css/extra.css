@@ -8,9 +8,10 @@
   text-decoration: underline;
 }
 
-
 @media only screen and (max-width: 1100px) {
-  .header-large-menu-item {display: none;}
+  .header-large-menu-item {
+    display: none;
+  }
 }
 
 .header-menu-item {
@@ -23,8 +24,7 @@
   color: #555;
 }
 
-
-img ~ strong {
+img~strong {
   display: block;
   text-align: center;
   color: #777;
@@ -115,8 +115,8 @@ p img {
   color: #222;
 }
 
-
-.md-typeset .highlight-button:active, .md-typeset .highlight-button:focus {
+.md-typeset .highlight-button:active,
+.md-typeset .highlight-button:focus {
   color: #222;
   border: 2px solid #777;
   color: #222;
@@ -130,7 +130,7 @@ p img {
   color: #fff
 }
 
-.highlight-button svg{
+.highlight-button svg {
   float: left;
   margin-right: 0.5em;
 }
@@ -152,7 +152,7 @@ p img {
 }
 
 .doc-heading {
-  background: rgba(68,138,255,.1);
+  background: rgba(68, 138, 255, .1);
   border-top: .2rem solid #448aff;
   scroll-margin-top: 2em !important;
   font-size: 1.5625em !important;
@@ -164,7 +164,7 @@ p img {
 }
 
 .md-typeset table:not([class]) {
-   display: table;
+  display: table;
 }
 
 .doc-object {
@@ -196,11 +196,10 @@ p img {
   vertical-align: middle;
 }
 
-
 .algolia-autocomplete .ds-dropdown-menu {
-    width: 100%;
-    max-width: 100%;
-    min-width: 300px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 300px;
 }
 
 @media (min-width: 576px) {
@@ -231,8 +230,6 @@ p img {
     max-width: 850px;
   }
 }
-
-
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
   font-size: 1.75em
