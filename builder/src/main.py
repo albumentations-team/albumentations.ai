@@ -26,7 +26,23 @@ def cli():
 @click.option("--searchpath", type=click.Path(), envvar="SEARCHPATH", required=True)
 @click.option("--base-url", type=str, envvar="BASE_URL", required=True)
 @click.option("--mkdocs-port", type=str, envvar="MKDOCS_PORT", default=None)
-def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mkdocs_port):
+@click.option("--google_analytics_id", type=str, envvar="GOOGLE_ANALYTICS_ID", default=None)
+def build(
+    use_reloader: bool,
+    data_dir: str,
+    cache_dir: str,
+    searchpath: str,
+    build_dir: str,
+    base_url: str,
+    mkdocs_port: str,
+    google_analytics_id: str,
+) -> None:
+    print(
+        f"Building site with use_reloader={use_reloader}, data_dir={data_dir}, "
+        f"cache_dir={cache_dir}, searchpath={searchpath}, build_dir={build_dir}, "
+        f"base_url={base_url}, mkdocs_port={mkdocs_port}, google_analytics_id={google_analytics_id}",
+    )
+
     cache_dir_path = Path(cache_dir)
     data_dir_path = Path(data_dir)
 
@@ -53,7 +69,7 @@ def build(use_reloader, data_dir, cache_dir, searchpath, build_dir, base_url, mk
         searchpath=str(searchpath),
         staticpaths=["assets/"],
         use_reloader=use_reloader,
-        env_globals={"base_url": base_url, "mkdocs_port": mkdocs_port},
+        env_globals={"base_url": base_url, "mkdocs_port": mkdocs_port, "google_analytics_id": google_analytics_id},
         contexts=[
             ("index.html", {"stars_count": stars_count, "img_industry": img_industry}),
             (

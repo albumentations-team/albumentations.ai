@@ -16,6 +16,7 @@ services:
       - ADDITIONAL_REPOSITORIES=albumentations-team/albumentations_examples albumentations-team/albumentations.ai
       - GITHUB_TOKEN
       - MKDOCS_PORT
+      - GOOGLE_ANALYTICS_ID
     volumes:
       - ./data:/data
       - ./builder/src:/builder/src
@@ -43,7 +44,7 @@ services:
       - "127.0.0.1:${MKDOCS_PORT}:8000"
     tty: true
     environment:
-      - GOOGLE_ANALYTICS_TID=G-DCXRDR9HJ0
+      - GOOGLE_ANALYTICS_ID
       - CONFIG_FILE=/mkdocs/src/mkdocs.yml
     command:
       serve --dev-addr 0.0.0.0:8000
