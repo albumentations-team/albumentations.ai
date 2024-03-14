@@ -28,7 +28,7 @@ jobs:
         run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          GOOGLE_ANALYTICS_TID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
       - name: Generate sitemap
         run: python tools/generate_sitemap.py ${GITHUB_WORKSPACE}/gh_pages
       - name: Commit filesdate +"%Y-%m-%d_%H-%M-%S"
