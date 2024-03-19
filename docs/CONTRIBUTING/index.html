@@ -2461,6 +2461,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#linux-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux / macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-cmdexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows cmd.exe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-development-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       Install development dependencies
@@ -2657,15 +2684,24 @@ community.</p>
 </span></code></pre></div>
 <h4 id="create-a-virtual-environment">Create a virtual environment<a class="headerlink" href="#create-a-virtual-environment" title="Permanent link">¶</a></h4>
 <p>We recommend using a virtual environment to isolate project dependencies. Ensure you have Python 3.8 or higher installed on your machine, as it is the minimum supported version for Albumentations. To create and activate a virtual environment, run the following commands:</p>
+<h4 id="linux-macos">Linux / macOS<a class="headerlink" href="#linux-macos" title="Permanent link">¶</a></h4>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="nb">source</span><span class="w"> </span>env/bin/activate
 </span></code></pre></div>
+<h4 id="windows-cmdexe">Windows cmd.exe<a class="headerlink" href="#windows-cmdexe" title="Permanent link">¶</a></h4>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+</span></code></pre></div>
+<h4 id="windows-powershell">Windows PowerShell<a class="headerlink" href="#windows-powershell" title="Permanent link">¶</a></h4>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.ps1
+</span></code></pre></div>
 <h4 id="install-development-dependencies">Install development dependencies<a class="headerlink" href="#install-development-dependencies" title="Permanent link">¶</a></h4>
 <p>Install the project's dependencies by running:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>develop<span class="o">]</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>develop<span class="o">]</span>
 </span></code></pre></div>
 <p>Additionally, to ensure you have all the necessary tools for code formatting, linting, and additional development utilities, install the requirements from <code>requirements-dev.txt</code>:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </span></code></pre></div>
 <h2 id="navigating-the-project">Navigating the Project<a class="headerlink" href="#navigating-the-project" title="Permanent link">¶</a></h2>
 <ul>
@@ -2700,29 +2736,29 @@ community.</p>
 <h3 id="using-pre-commit-hooks">Using Pre-commit Hooks<a class="headerlink" href="#using-pre-commit-hooks" title="Permanent link">¶</a></h3>
 <p>To maintain code quality and consistency, we use pre-commit hooks. Follow these steps to set up pre-commit hooks in your local repository:</p>
 <p><strong>Install pre-commit:</strong> If you haven't already, you need to install pre-commit on your machine. You can do this using pip:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>pre-commit
 </span></code></pre></div>
 <p><strong>Initialize pre-commit:</strong></p>
 <p>Navigate to the root of your cloned repository and run:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>pre-commit<span class="w"> </span>install
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a>pre-commit<span class="w"> </span>install
 </span></code></pre></div>
 <p>This command sets up the pre-commit hooks based on the configurations found in <code>.pre-commit-config.yaml</code> at the root of the repository.</p>
 <p><strong>Running pre-commit hooks:</strong></p>
 <p>Pre-commit will automatically run the configured hooks on each commit. You can also manually run the hooks on all files in the repository with:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
 </span></code></pre></div>
 <p>Ensure to fix any issues detected by the pre-commit hooks before submitting your pull request.</p>
 <h3 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">¶</a></h3>
 <p>Before submitting your contributions, it's important to ensure that all tests pass. This helps maintain the stability and reliability of Albumentations. Here's how you can run the tests:</p>
 <p>Install test dependencies:</p>
 <p>If you haven't installed the development dependencies, make sure to do so. These dependencies include <code>pytest</code>, which is required to run the tests.</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><a href="#__codelineno-10-1"><span class="linenos" data-linenos="1 "></span></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </span></code></pre></div>
 <p>Run the tests:</p>
 <p>With <code>pytest</code> installed, you can run all tests using the following command from the root of the repository:</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos="1 "></span></a>pytest
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><a href="#__codelineno-11-1"><span class="linenos" data-linenos="1 "></span></a>pytest
 </span></code></pre></div>
 <p>This will execute all the tests and display the results, indicating whether each test passed or failed.</p>
 <p><strong>Tip</strong>: If you've made changes to a specific area of the library, you can run a subset of the tests related to your changes. This can save time and make it easier to debug issues. Use the <code>pytest</code> documentation to learn more about running specific tests.</p>
