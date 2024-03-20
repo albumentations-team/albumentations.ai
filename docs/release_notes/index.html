@@ -2405,9 +2405,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#albumentations-141-release-notes-4-march-2024" class="md-nav__link">
+  <a href="#albumentations-142-release-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Albumentations 1.4.1 Release Notes (4 March 2024)
+      Albumentations 1.4.2 Release Notes
     </span>
   </a>
   
@@ -2424,6 +2424,51 @@
       
         <li class="md-nav__item">
   <a href="#new-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      New transform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      New functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements-and-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements and Bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#albumentations-141-release-notes-4-march-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Albumentations 1.4.1 Release Notes (4 March 2024)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-transform_1" class="md-nav__link">
     <span class="md-ellipsis">
       New transform
     </span>
@@ -2450,7 +2495,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#request_1" class="md-nav__link">
+  <a href="#request_2" class="md-nav__link">
     <span class="md-ellipsis">
       Request
     </span>
@@ -2468,7 +2513,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#new-transform_1" class="md-nav__link">
+  <a href="#new-transform_2" class="md-nav__link">
     <span class="md-ellipsis">
       New transform
     </span>
@@ -2731,6 +2776,50 @@
 
 
 <h1 id="release-notes">Release notes<a class="headerlink" href="#release-notes" title="Permanent link">¶</a></h1>
+<h2 id="albumentations-142-release-notes">Albumentations 1.4.2 Release Notes<a class="headerlink" href="#albumentations-142-release-notes" title="Permanent link">¶</a></h2>
+<ul>
+<li>Request</li>
+<li>Highlights</li>
+<li>New transform</li>
+<li>New functionality</li>
+<li>Improvements and bug fixes</li>
+</ul>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">¶</a></h2>
+<ol>
+<li>If you enjoy using the library as an individual developer or as a representative of the company please consider becoming a <a href="https://github.com/sponsors/albumentations-team" target="_blank">sponsor for the library</a>. Every dollar helps.</li>
+<li>If you did not give our repo a ⭐, it is <a href="https://github.com/albumentations-team/albumentations" target="_blank">only one mouse click</a></li>
+<li>If you have feature requests or proposals or encounter issues - submit your request to <a href="https://github.com/albumentations-team/albumentations/issues" target="_blank">issues</a> or ask in <a href="https://discord.gg/AmMnDBdzYs" target="_blank">Discord server for Albumentations</a></li>
+</ol>
+<h2 id="new-transform">New transform<a class="headerlink" href="#new-transform" title="Permanent link">¶</a></h2>
+<div align="center">
+<a href="https://i.imgur.com/8wWkMmL.jpeg" target="_blank">
+<img src="https://i.imgur.com/8wWkMmL.jpeg" width="30%"/>
+</a>
+<a href="https://i.imgur.com/B687Opr.jpeg" target="_blank">
+<img src="https://i.imgur.com/B687Opr.jpeg" width="30%"/>
+</a>
+<a href="https://i.imgur.com/jkjwFMB.jpeg" target="_blank">
+<img src="https://i.imgur.com/jkjwFMB.jpeg" width="30%"/>
+</a>
+<p>
+<b>Left:</b> Original, <b>Middle:</b> Chromatic aberration (default args, mode="green_purple"), <b>Right:</b>  Chromatic aberration (default args, mode="red_blue")
+    <br/>(Image is from our internal mobile mapping dataset)
+  </p>
+</div>
+<ul>
+<li>Added <code>ChromaticAbberation</code> transform that adds chromatic distortion to the image. <a href="https://en.wikipedia.org/wiki/Chromatic_aberration" target="_blank">Wiki</a> by @mrsmrynk</li>
+</ul>
+<h2 id="new-functionality">New functionality<a class="headerlink" href="#new-functionality" title="Permanent link">¶</a></h2>
+<ul>
+<li>Return <code>mixing parameter</code> for <code>MixUp</code> transform by @Dipet. For more details <a href="https://albumentations.ai/docs/examples/example_mixup/">Tutorial on MixUp</a></li>
+</ul>
+<h2 id="improvements-and-bugfixes">Improvements and Bugfixes<a class="headerlink" href="#improvements-and-bugfixes" title="Permanent link">¶</a></h2>
+<ul>
+<li>Do not throw deprecation warning when people do not use deprecated parameters in <code>AdvancedBlur</code> by @Aloqeely</li>
+<li>Updated <code>CONTRIBUTORS.md</code> for Windows users by @Aloqeely</li>
+<li>Fixed Docstring for <code>DownScale</code> transform by @ryoryon66</li>
+<li>Bugfix in <code>PadIfNeeded</code> serialization @ternaus</li>
+</ul>
 <h2 id="albumentations-141-release-notes-4-march-2024">Albumentations 1.4.1 Release Notes (4 March 2024)<a class="headerlink" href="#albumentations-141-release-notes-4-march-2024" title="Permanent link">¶</a></h2>
 <ul>
 <li>Request</li>
@@ -2739,13 +2828,13 @@
 <li>Improvements</li>
 <li>Bug fixes</li>
 </ul>
-<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">¶</a></h2>
+<h2 id="request_1">Request<a class="headerlink" href="#request_1" title="Permanent link">¶</a></h2>
 <ol>
 <li>If you enjoy using the library as an individual developer or during the day job as a part of the company, please consider becoming a <a href="https://github.com/sponsors/albumentations-team" target="_blank">sponsor for the library</a>. Every dollar helps.</li>
 <li>If you did not give our repo a ⭐, it is <a href="https://github.com/albumentations-team/albumentations" target="_blank">only one mouse click</a></li>
 <li>If you have feature requests or proposals or encounter issues - submit your request to <a href="https://github.com/albumentations-team/albumentations/issues" target="_blank">issues</a> or our new initiative, - <a href="https://discord.gg/AmMnDBdzYs" target="_blank">Discord server for albumentations</a></li>
 </ol>
-<h2 id="new-transform">New transform<a class="headerlink" href="#new-transform" title="Permanent link">¶</a></h2>
+<h2 id="new-transform_1">New transform<a class="headerlink" href="#new-transform_1" title="Permanent link">¶</a></h2>
 <p><img alt="Screenshot 2024-03-04 at 14 52 15" src="https://github.com/albumentations-team/albumentations/assets/5481618/68e5031b-e45e-4578-abe8-1d8e33db4831" width="660"/></p>
 <ul>
 <li>Added <code>MixUp</code> transform: which linearly combines an input (image, mask, and class label) with another set from a predefined reference dataset. The mixing degree is controlled by a parameter λ (lambda), sampled from a Beta distribution. This method is known for improving model generalization by promoting linear behavior between classes and smoothing decision boundaries.</li>
@@ -2767,7 +2856,7 @@
 <li>Improvements</li>
 <li>Bug fixes</li>
 </ul>
-<h2 id="request_1">Request<a class="headerlink" href="#request_1" title="Permanent link">¶</a></h2>
+<h2 id="request_2">Request<a class="headerlink" href="#request_2" title="Permanent link">¶</a></h2>
 <ol>
 <li>If you enjoy using the library as an individual developer or during the day job as a part of the company, please consider becoming a <a href="https://github.com/sponsors/albumentations-team" target="_blank">sponsor for the library</a>. Every dollar helps.</li>
 <li>If you did not give our repo a ⭐, it is [only one mouse click].(<a href="https://github.com/albumentations-team/albumentations" target="_blank">https://github.com/albumentations-team/albumentations</a>)</li>
@@ -2782,7 +2871,7 @@
 <ol>
 <li>Added typing in all of the codebase. When we started the library, Python 2 was still widely used; hence, none of the original codebases had types specified for function arguments and return types. Since the end of the support for Python 2, we added types to the new or updated code, but only now have we covered all the codebase.</li>
 </ol>
-<h2 id="new-transform_1">New transform<a class="headerlink" href="#new-transform_1" title="Permanent link">¶</a></h2>
+<h2 id="new-transform_2">New transform<a class="headerlink" href="#new-transform_2" title="Permanent link">¶</a></h2>
 <p><img alt="Screenshot 2024-02-17 at 13 09 01" src="https://github.com/albumentations-team/albumentations/assets/5481618/18aaebad-4b58-4cc6-932f-e2d8a1f352ab" width="560"/></p>
 <ul>
 <li>Added <code>XYMasking</code> transform: applies masking strips to an image, either horizontally (X axis) or vertically (Y axis), simulating occlusions. This transform is helpful for training models to recognize images with varied visibility conditions. It's particularly effective for spectrogram images, allowing spectral and frequency masking to improve model robustness.
