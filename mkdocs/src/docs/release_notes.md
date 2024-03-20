@@ -1,5 +1,50 @@
 # Release notes
 
+## Albumentations 1.4.2 Release Notes
+
+- Request
+- Highlights
+- New transform
+- New functionality
+- Improvements and bug fixes
+
+## Request
+
+1. If you enjoy using the library as an individual developer or as a representative of the company please consider becoming a [sponsor for the library](https://github.com/sponsors/albumentations-team). Every dollar helps.
+2. If you did not give our repo a ⭐, it is [only one mouse click](https://github.com/albumentations-team/albumentations)
+3. If you have feature requests or proposals or encounter issues - submit your request to [issues](https://github.com/albumentations-team/albumentations/issues) or ask in [Discord server for Albumentations](https://discord.gg/AmMnDBdzYs)
+
+## New transform
+
+<div align="center">
+  <a href="https://i.imgur.com/8wWkMmL.jpeg">
+    <img src="https://i.imgur.com/8wWkMmL.jpeg" width="30%">
+  </a>
+  <a href="https://i.imgur.com/B687Opr.jpeg">
+    <img src="https://i.imgur.com/B687Opr.jpeg" width="30%">
+  </a>
+  <a href="https://i.imgur.com/jkjwFMB.jpeg">
+    <img src="https://i.imgur.com/jkjwFMB.jpeg" width="30%">
+  </a>
+  <p>
+    <b>Left:</b> Original, <b>Middle:</b> Chromatic aberration (default args, mode="green_purple"), <b>Right:</b>  Chromatic aberration (default args, mode="red_blue")
+    <br>(Image is from our internal mobile mapping dataset)
+  </p>
+</div>
+
+* Added `ChromaticAbberation` transform that adds chromatic distortion to the image. [Wiki](https://en.wikipedia.org/wiki/Chromatic_aberration) by @mrsmrynk
+
+## New functionality
+
+* Return `mixing parameter` for `MixUp` transform by @Dipet. For more details [Tutorial on MixUp](https://albumentations.ai/docs/examples/example_mixup/)
+
+## Improvements and Bugfixes
+
+* Do not throw deprecation warning when people do not use deprecated parameters in `AdvancedBlur` by @Aloqeely
+* Updated `CONTRIBUTORS.md` for Windows users by @Aloqeely
+* Fixed Docstring for `DownScale` transform by @ryoryon66
+* Bugfix in `PadIfNeeded` serialization @ternaus
+
 ## Albumentations 1.4.1 Release Notes (4 March 2024)
 
 - Request
