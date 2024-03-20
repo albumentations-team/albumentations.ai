@@ -10,6 +10,7 @@
 - [Weather augmentations in Albumentations](example_weather_transforms/)
 - [Example of applying XYMasking transform](example_xymasking/)
 - [Example of applying MixUp transform](example_mixup/)
+- [Example of applying ChromaticAberration transform](example_chromatic_aberration/)
 - [Migrating from torchvision to Albumentations](migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](replay/)
 - [How to save and load parameters of an augmentation pipeline](serialization/)

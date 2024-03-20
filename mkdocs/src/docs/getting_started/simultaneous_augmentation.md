@@ -20,7 +20,8 @@ transform = A.Compose(
 )
 ```
 
-## Step 2. Load all required data from the disk.
+## Step 2. Load all required data from the disk
+
 Please refer to articles [Image augmentation for classification](image_augmentation.md), [Mask augmentation for segmentation](mask_augmentation.md), [Bounding boxes augmentation for object detection](bounding_boxes_augmentation.md), and [Keypoints augmentation](keypoints_augmentation.md) for more information about loading the input data.
 
 For example, here is an image from the [COCO dataset](https://cocodataset.org/). that has one associated mask, one bounding box with the class label `person`, and five keypoints that define body parts.
@@ -28,8 +29,8 @@ For example, here is an image from the [COCO dataset](https://cocodataset.org/).
 ![An example image with mask, bounding boxes and keypoints](../images/getting_started/augmenting_multiple_targets/original.jpg "An example image with mask, bounding boxes and keypoints")
 **An example image with mask, bounding boxes and keypoints**
 
-
 ## Step 3. Pass all targets to `transform` and receive their augmented versions
+
 ```python
 transformed = transform(
   image=img,
