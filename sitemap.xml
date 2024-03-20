@@ -321,6 +321,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://albumentations.ai/docs/examples/example_chromatic_abberation/</loc>
+         <lastmod>2024-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/examples/example_chromatic_aberration/</loc>
+         <lastmod>2024-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://albumentations.ai/docs/examples/example_kaggle_salt/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
