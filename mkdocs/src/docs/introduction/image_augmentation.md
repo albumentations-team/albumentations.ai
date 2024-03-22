@@ -26,7 +26,7 @@ Successive state-of-the-art models such as [Inception](https://arxiv.org/abs/140
 
 In 2018 Google published a [paper about AutoAugment](https://arxiv.org/abs/1805.09501) - an algorithm that automatically discovers the best set of augmentations for the dataset. They showed that a custom set of augmentations improves the performance of the model.
 
-Here is a comparison between a model that used only the base set of augmentations and a model that used a specific set of augmentations discovered by AutoAugment. The table shows Top-1 accuracy (%)  on the ImageNet validation set; higher is better.
+Here is a comparison between a model that used only the base set of augmentations and a model that used a specific set of augmentations discovered by AutoAugment. The table shows Top-1 accuracy (%) on the ImageNet validation set; higher is better.
 
 | Model               | Base augmentations | AutoAugment augmentations |
 |---------------------|:------------------:|:-------------------------:|
