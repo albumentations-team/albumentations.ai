@@ -14,7 +14,7 @@ certifi==2019.11.28
     # via requests
 cffi==1.15.0
     # via pynacl
-chardet==3.0.4
+charset-normalizer==3.3.2
     # via requests
 click==7.0
     # via -r requirements.in
@@ -44,7 +44,7 @@ pynacl==1.5.0
     # via pygithub
 pyyaml==6.0.1
     # via watchdog
-requests==2.22.0
+requests==2.31.0
     # via
     #   -r requirements.in
     #   pygithub
