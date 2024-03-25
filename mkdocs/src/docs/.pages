@@ -1,5 +1,6 @@
 nav:
   - Documentation: index.md
+  - Benchmarking Results: benchmarking_results.md
   - introduction
   - getting_started
   - examples

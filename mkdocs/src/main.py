@@ -27,6 +27,24 @@ def replace_path(transforms):
     return transforms
 
 
+def extract_benchmarking_results(readme_path: Path) -> str:
+    with readme_path.open(encoding="utf-8") as f:
+        readme_contents = f.read()
+
+    # Define start and end markers for the benchmarking section
+    start_marker = "## Benchmarking results"
+    end_marker = "##"  # Assuming each section starts with "## "
+    start_index = readme_contents.find(start_marker)
+
+    # Find the start of the next section to determine the end of the current section
+    end_index = readme_contents.find(end_marker, start_index + len(start_marker))
+
+    # Extract and return the section; if end_index is -1, it's the last section
+    result = readme_contents[start_index : end_index if end_index != -1 else None]
+    print("R = ", result)
+    return readme_contents[start_index : end_index if end_index != -1 else None]
+
+
 def define_env(env):
     image_only_transforms = dict(get_image_only_transforms_info().items())
     dual_transforms = dict({**get_mixing_transforms_info(), **get_dual_transforms_info()}.items())
@@ -51,3 +69,8 @@ def define_env(env):
                 return f.read()
         except Exception:
             return ""
+
+    @env.macro
+    def benchmarking_results():
+        readme_path = Path("/albumentations/README.md")
+        return extract_benchmarking_results(readme_path)

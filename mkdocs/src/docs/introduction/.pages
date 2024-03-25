@@ -1,5 +1,6 @@
 title: Introduction
 nav:
-  - What is image augmentation: image_augmentation.md
-  - Why you need a dedicated library: why_you_need_a_dedicated_library_for_image_augmentation.md
-  - why_albumentations.md
+
+- What is image augmentation: image_augmentation.md
+- Why you need a dedicated library: why_you_need_a_dedicated_library_for_image_augmentation.md
+- why_albumentations.md
