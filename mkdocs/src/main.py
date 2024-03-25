@@ -40,8 +40,6 @@ def extract_benchmarking_results(readme_path: Path) -> str:
     end_index = readme_contents.find(end_marker, start_index + len(start_marker))
 
     # Extract and return the section; if end_index is -1, it's the last section
-    result = readme_contents[start_index : end_index if end_index != -1 else None]
-    print("R = ", result)
     return readme_contents[start_index : end_index if end_index != -1 else None]
 
 
