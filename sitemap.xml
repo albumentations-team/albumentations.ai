@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://albumentations.ai/docs/benchmarking_results/</loc>
+         <lastmod>2024-03-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://albumentations.ai/docs/faq/</loc>
          <lastmod>2024-03-25</lastmod>
          <changefreq>daily</changefreq>
