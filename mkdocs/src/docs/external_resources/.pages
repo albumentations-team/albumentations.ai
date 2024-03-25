@@ -1,3 +1,4 @@
 nav:
-  - blog_posts_podcasts_talks.md
-  - books.md
+
+- blog_posts_podcasts_talks.md
+- books.md

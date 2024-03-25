@@ -36,7 +36,3 @@ for page in pages:
 # Replace open with Path.open
 with (directory / "sitemap.xml").open("w", encoding="utf-8") as f:  # This uses Path's open method directly
     f.write(etree.tostring(root, pretty_print=True, xml_declaration=True, encoding="UTF-8").decode("utf-8"))
-
-# Use unlink for Path objects instead of os.remove
-sitemap_path.unlink(missing_ok=True)  # The missing_ok=True argument ignores the error if the file doesn't exist.
-sitemap_path_gz.unlink(missing_ok=True)

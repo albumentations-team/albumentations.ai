@@ -19,7 +19,7 @@
 ## Examples of how to use Albumentations with different deep learning frameworks
 
 - PyTorch
-    - [PyTorch and Albumentations for image classification](pytorch_classification/)
-    - [PyTorch and Albumentations for semantic segmentation](pytorch_semantic_segmentation/)
+  - [PyTorch and Albumentations for image classification](pytorch_classification/)
+  - [PyTorch and Albumentations for semantic segmentation](pytorch_semantic_segmentation/)
 - TensorFlow 2
-    - [Using Albumentations with Tensorflow](tensorflow-example/)
+  - [Using Albumentations with Tensorflow](tensorflow-example/)

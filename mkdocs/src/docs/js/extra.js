@@ -1,8 +1,8 @@
 require.config({
   paths: {
-   "docSearch" : "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min"
+   "docSearch" : "https://cdn.jsdelivr.net/npm/docsearch.js@3/dist/cdn/docsearch.min"
   }
-});
+})
 
 require(["docSearch"], function(docsearch){
     docsearch({
@@ -10,5 +10,5 @@ require(["docSearch"], function(docsearch){
         indexName: 'albumentations',
         inputSelector: '.md-search__input',
         debug: false
-    });
-});
+    })
+})
