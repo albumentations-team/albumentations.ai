@@ -6,7 +6,9 @@ mkdocs-autorefs
 mkdocs-awesome-pages-plugin
 mkdocs-simple-hooks
 mkdocs-macros-plugin
+mkdocs-minify-plugin
 mkdocs-exclude
 beautifulsoup4
 pytkdocs
 mkdocstrings[python-legacy]
+mkdocs-material[imaging]

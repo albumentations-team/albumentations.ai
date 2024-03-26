@@ -1,14 +1,13 @@
-require.config({
-  paths: {
-   "docSearch" : "https://cdn.jsdelivr.net/npm/docsearch.js@3/dist/cdn/docsearch.min"
-  }
-})
+document.addEventListener('DOMContentLoaded', (event) => {
+    let items = document.querySelectorAll('.announce-wrapper .item')
+    let currentIndex = 0
 
-require(["docSearch"], function(docsearch){
-    docsearch({
-        apiKey: '53eb751204374323cd4564da62d1368c',
-        indexName: 'albumentations',
-        inputSelector: '.md-search__input',
-        debug: false
-    })
-})
+    function rotateItem() {
+      items.forEach(item => item.classList.remove('active'))
+      items[currentIndex].classList.add('active')
+      currentIndex = (currentIndex + 1) % items.length
+      setTimeout(rotateItem, 3000)
+    }
+
+    rotateItem()
+  })
