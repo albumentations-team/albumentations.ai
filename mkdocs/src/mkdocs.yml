@@ -1,6 +1,15 @@
 site_name: Albumentations Documentation
 
 plugins:
+  - search
+  - social
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
   - mkdocs-jupyter
   - awesome-pages
   - autorefs
@@ -54,8 +63,8 @@ markdown_extensions:
 theme:
   name: material
   palette:
-    primary: "white"
-    accent: "white"
+    primary: white
+    accent: white
   custom_dir: custom_theme/
   logo: images/logo.png
   favicon: images/logo.png
@@ -66,18 +75,29 @@ theme:
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.instant.preview
-    - navigation.sections
     - navigation.tracking
-    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
     - navigation.path
+    - navigation.prune
+    - navigation.expand
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - toc.integrate
+    - announce.dismiss
 
 extra_css:
-  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
   - css/extra.css
 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/MathJax.js?config=TeX-MML-AM_CHTML
   - js/extra.js
 
 repo_name: albumentations
@@ -96,3 +116,11 @@ extra:
   analytics:
     provider: google
     property: unknown
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/albumentations
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/100504475/
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/AKPrrDYNAt
+  generator: false
