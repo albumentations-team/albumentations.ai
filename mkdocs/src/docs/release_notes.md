@@ -1,5 +1,30 @@
 # Release notes
 
+## Albumentations 1.4.3 Release Notes
+
+- Request
+- Highlights
+- New transform
+- Minor improvements and bug fixes
+
+## Request
+
+1. If you enjoy using the library as an individual developer or a company representative, please consider becoming a [sponsor for the library](https://github.com/sponsors/albumentations-team). Every dollar helps.
+2. If you did not give our repo a ⭐, it is [only one mouse click](https://github.com/albumentations-team/albumentations)
+3. If you have feature requests or proposals or encounter issues - submit your request to [issues](https://github.com/albumentations-team/albumentations/issues) or ask in [Discord server for Albumentations](https://discord.gg/AmMnDBdzYs)
+
+## New transform
+
+<img width="1659" alt="Screenshot 2024-04-02 at 18 43 51" src="https://github.com/albumentations-team/albumentations/assets/5481618/e9c95aab-b2a8-4b12-9d72-86041b08f3ed">
+
+- Added `Morphological` transform that modifies the structure of the image. Dilation expands the white (foreground) regions in a binary or grayscale image, while erosion shrinks them.
+
+## Minor improvements and bug fixes
+
+- Updated benchmark for uint8 images, processed on CPU. Added Kornia and Augly. [LINK](https://albumentations.ai/docs/benchmarking_results/) by @ternaus
+- Bugfix in [FDA](https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/?h=fda#albumentations.augmentations.domain_adaptation.FDA) transform by @ternaus
+- Now [RandomSizedCrop](https://albumentations.ai/docs/api_reference/full_reference/?h=randomsizedcrop#albumentations.augmentations.crops.transforms.RandomSizedCrop) supports the same signature as analogous transform in torchvision by @zetyquickly
+
 ## Albumentations 1.4.2 Release Notes
 
 - Request
