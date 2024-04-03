@@ -50,15 +50,16 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ## Examples of how to use Albumentations with different deep learning frameworks
 
 - PyTorch
-    - [PyTorch and Albumentations for image classification](examples/pytorch_classification/)
-    - [PyTorch and Albumentations for semantic segmentation](examples/pytorch_semantic_segmentation/)
+  - [PyTorch and Albumentations for image classification](examples/pytorch_classification/)
+  - [PyTorch and Albumentations for semantic segmentation](examples/pytorch_semantic_segmentation/)
 - TensorFlow 2
-    - [Using Albumentations with Tensorflow](examples/tensorflow-example/)
+  - [Using Albumentations with Tensorflow](examples/tensorflow-example/)
 
 ## External resources
 
 - [Blog posts, podcasts, talks, and videos about Albumentations](external_resources/blog_posts_podcasts_talks.md)
 - [Books that mention Albumentations](external_resources/books.md)
+- [Online courses that cover Albumentations](external_resources/online_courses.md)
 
 ## Other topics
 
@@ -70,6 +71,6 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 
 - [Full API Reference on a single page](api_reference/full_reference.md)
 - [Index](api_reference/index.md)
-    - [Core API (albumentations.core)](api_reference/core/index.md)
-    - [Augmentations (albumentations.augmentations)](api_reference/augmentations/index.md)
-    - [PyTorch Helpers (albumentations.pytorch)](api_reference/pytorch/index.md)
+  - [Core API (albumentations.core)](api_reference/core/index.md)
+  - [Augmentations (albumentations.augmentations)](api_reference/augmentations/index.md)
+  - [PyTorch Helpers (albumentations.pytorch)](api_reference/pytorch/index.md)
