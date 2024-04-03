@@ -2,7 +2,6 @@ site_name: Albumentations Documentation
 
 plugins:
   - search
-  - social
   - minify:
       minify_html: true
       minify_js: true
