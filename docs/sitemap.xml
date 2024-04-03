@@ -416,6 +416,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://albumentations.ai/docs/external_resources/online_courses/</loc>
+         <lastmod>2024-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/</loc>
          <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
