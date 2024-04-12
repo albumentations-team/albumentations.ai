@@ -74,7 +74,6 @@ theme:
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.instant.preview
-    - navigation.tracking
     - navigation.sections
     - navigation.path
     - navigation.prune
