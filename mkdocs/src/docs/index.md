@@ -42,6 +42,8 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Example of applying MixUp transform](examples/example_mixup/)
 - [Example of applying ChromaticAberration transform](examples/example_chromatic_aberration/)
 - [Example of applying Morphological transform](examples/example_documents/)
+- [Example of applying D4 transform](examples/example_d4/)
+- [Example of applying RandomGridShuffle transform](examples/example_gridshuffle/)
 - [Migrating from torchvision to Albumentations](examples/migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)
