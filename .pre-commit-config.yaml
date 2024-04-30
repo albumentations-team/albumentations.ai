@@ -40,7 +40,7 @@ repos:
     -   id: trailing-whitespace
     -   id: requirements-txt-fixer
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.3.7
+    rev: v0.4.2
     hooks:
     -   id: ruff
         args:
@@ -60,8 +60,9 @@ repos:
     -   id: codespell
         additional_dependencies:
         - tomli
+        args: ['--ignore-words-list=fo']
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
     -   id: mypy
         files: ^albumentations/

@@ -6,6 +6,7 @@ nav:
   - examples
   - FAQ: faq.md
   - external_resources
+  - integrations
   - frameworks_and_libraries.md
   - api_reference
   - autoalbument

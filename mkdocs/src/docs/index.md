@@ -28,6 +28,9 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Setting probabilities for transforms in an augmentation pipeline
 ](getting_started/setting_probabilities.md)
 
+## Integrations
+- [FIftyOne](integrations/fiftyone.md)
+
 ## Examples
 
 - [Defining a simple augmentation pipeline for image augmentation](examples/example/)
@@ -51,11 +54,9 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 
 ## Examples of how to use Albumentations with different deep learning frameworks
 
-- PyTorch
-  - [PyTorch and Albumentations for image classification](examples/pytorch_classification/)
-  - [PyTorch and Albumentations for semantic segmentation](examples/pytorch_semantic_segmentation/)
-- TensorFlow 2
-  - [Using Albumentations with Tensorflow](examples/tensorflow-example/)
+- [PyTorch and Albumentations for image classification](examples/pytorch_classification/)
+- [PyTorch and Albumentations for semantic segmentation](examples/pytorch_semantic_segmentation/)
+- [Using Albumentations with Tensorflow](examples/tensorflow-example/)
 
 ## External resources
 
