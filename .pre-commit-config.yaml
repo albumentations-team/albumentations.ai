@@ -60,6 +60,7 @@ repos:
     -   id: codespell
         additional_dependencies:
         - tomli
+        args: ['--ignore-words-list=fo']
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.9.0
     hooks:

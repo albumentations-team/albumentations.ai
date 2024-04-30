@@ -1,5 +1,124 @@
 # Release notes
 
+## Albumentations 1.4.4 Release Notes
+
+- Support our work
+- Highlights
+- Transforms
+- Improvements and bug fixes
+
+## Support Our Work
+1. Love the library? You can contribute to its development by becoming a  [sponsor for the library](https://github.com/sponsors/albumentations-team). Your support is invaluable, and every contribution makes a difference.
+2. Haven't starred our repo yet? Show your support with a ⭐! It's just [only one mouse click](https://github.com/albumentations-team/albumentations).
+3. Got ideas or facing issues? We'd love to hear from you. Share your thoughts in our [issues](https://github.com/albumentations-team/albumentations/issues) or join the conversation on our [Discord server for Albumentations](https://discord.gg/AmMnDBdzYs)
+
+## Transforms
+### Added [**D4 transform**](https://albumentations.ai/docs/api_reference/full_reference/?h=d4#albumentations.augmentations.geometric.transforms.D4)
+
+![image](https://github.com/albumentations-team/albumentations/assets/5481618/3ad12afa-991d-4b96-a976-066b59e8eea9)
+
+Applies one of the eight possible D4 dihedral group transformations to a square-shaped input, maintaining the square shape. These transformations correspond to the symmetries of a square, including rotations and reflections by @ternaus
+
+ The D4 group transformations include:
+    - `e` (identity): No transformation is applied.
+    - `r90` (rotation by 90 degrees counterclockwise)
+    - `r180` (rotation by 180 degrees)
+    - `r270` (rotation by 270 degrees counterclockwise)
+    - `v` (reflection across the vertical midline)
+    - `hvt` (reflection across the anti-diagonal)
+    - `h` (reflection across the horizontal midline)
+    - `t` (reflection across the main diagonal)
+
+Could be applied to:
+- image
+- mask
+- bounding boxes
+- key points
+
+Does not generate interpolation artifacts as there is no interpolation.
+
+Provides the most value in tasks where data is invariant to rotations and reflections like:
+- Top view drone and satellite imagery
+- Medical images
+
+Example:
+
+<img width="831" alt="Screenshot 2024-04-16 at 19 00 05" src="https://github.com/albumentations-team/albumentations/assets/5481618/141a778e-33d5-4804-8a96-167b9bcbe621">
+
+### Added new normalizations to [Normalize](https://albumentations.ai/docs/api_reference/augmentations/transforms/?#albumentations.augmentations.transforms.Normalize) transform
+
+- `standard` - `subtract` fixed mean, divide by fixed `std`
+- `image` -  the same as `standard`, but `mean` and `std` computed for each image independently.
+- `image_per_channel` -  the same as before, but per channel
+- `min_max` - subtract `min(image)`and divide by `max(image) - min(image)`
+- `min_max_per_channel` - the same, but per channel
+by @ternaus
+
+### Changes in the interface of [RandomShadow](https://albumentations.ai/docs/api_reference/full_reference/?#albumentations.augmentations.transforms.RandomShadow)
+
+New, preferred wat is to use `num_shadows_limit` instead of `num_shadows_lower` / `num_shadows_upper` by @ayasyrev
+
+## Improvements and bug fixes
+
+### Added check for input parameters to transforms with Pydantic
+Now all input parameters are validated and prepared with Pydantic. This will prevent bugs, when transforms are initialized without errors with parameters that are outside of allowed ranges.
+by @ternaus
+
+### Updates in [RandomGridShuffle](https://albumentations.ai/docs/api_reference/full_reference/#albumentations.augmentations.transforms.RandomGridShuffle)
+1. Bugfix by @ayasyrev
+2. Transform updated to work even if side is not divisible by the number of tiles. by @ternaus
+
+Example:
+![image](https://github.com/albumentations-team/albumentations/assets/5481618/fd89826f-a457-4b5f-bf84-3f8cdb7fc4ee)
+
+### New way to add additional targets
+
+Standard way uses `additional_targets`
+
+```python
+transform = A.Compose(
+    transforms=[A.Rotate(limit=(90.0, 90.0), p=1.0)],
+    keypoint_params=A.KeypointParams(
+        angle_in_degrees=True,
+        check_each_transform=True,
+        format="xyas",
+        label_fields=None,
+        remove_invisible=False,
+    ),
+    additional_targets={"keypoints2": "keypoints"},
+)
+```
+
+Now you can also add them using `add_targets`:
+
+```python
+transform = A.Compose(
+    transforms=[A.Rotate(limit=(90.0, 90.0), p=1.0)],
+    keypoint_params=A.KeypointParams(
+        angle_in_degrees=True,
+        check_each_transform=True,
+        format="xyas",
+        label_fields=None,
+        remove_invisible=False,
+    ),
+)
+transform.add_targets({"keypoints2": "keypoints"})
+```
+
+by @ayasyrev
+
+## Small fixes
+
+- Small speedup in the code for transforms that use `add_weighted` function by @gogetron
+- Fix in error message in [Affine transform](https://albumentations.ai/docs/api_reference/full_reference/?#albumentations.augmentations.geometric.transforms.Affine) by @matsumotosan
+- Bugfix in [Sequential](https://albumentations.ai/docs/api_reference/full_reference/?h=sequential#albumentations.core.composition.Sequential) by @ayasyrev
+
+## Documentation
+
+- Updated Contributor's guide. by @ternaus
+- Added [example notebook on how to apply D4](https://albumentations.ai/docs/examples/example_d4/) to images, masks, bounding boxes and key points. by @ternaus
+- Added [example notebook on how to apply RandomGridShuffle](https://albumentations.ai/docs/examples/example_gridshuffle/) to images, masks and keypoints. by @ternaus
+
 ## Albumentations 1.4.3 Release Notes
 
 - Request
