@@ -4,10 +4,6 @@
 #
 #    pip-compile requirements.in
 #
-appnope==0.1.4
-    # via
-    #   ipykernel
-    #   ipython
 asttokens==2.4.1
     # via stack-data
 astunparse==1.6.3
@@ -85,7 +81,7 @@ ipython==8.12.3
     # via ipykernel
 jedi==0.19.1
     # via ipython
-jinja2==3.1.3
+jinja2==3.1.4
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
@@ -166,22 +162,22 @@ mkdocs-exclude==1.0.2
 mkdocs-jupyter==0.24.3
     # via -r requirements.in
 mkdocs-macros-plugin==1.0.5
+    # via -r requirements.in
+mkdocs-material[imaging]==9.5.12
     # via
     #   -r requirements.in
     #   mkdocs-jupyter
 mkdocs-material-extensions==1.3.1
-    # via -r requirements.in
-mkdocs-material[imaging]==9.5.12
     # via mkdocs-material
 mkdocs-minify-plugin==0.8.0
     # via -r requirements.in
 mkdocs-simple-hooks==0.1.5
+    # via -r requirements.in
+mkdocstrings[python-legacy]==0.24.1
     # via
     #   -r requirements.in
     #   mkdocstrings-python-legacy
 mkdocstrings-python-legacy==0.2.3
-    # via -r requirements.in
-mkdocstrings[python-legacy]==0.24.1
     # via mkdocstrings
 natsort==8.4.0
     # via mkdocs-awesome-pages-plugin
