@@ -29,6 +29,8 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ](getting_started/setting_probabilities.md)
 
 ## Integrations
+
+- [HuggingFace](integrations/huggingface/object_detection.md)
 - [FIftyOne](integrations/fiftyone.md)
 
 ## Examples
