@@ -6,7 +6,6 @@ AutoAlbument supports image classification and semantic segmentation tasks. The 
 
 The source code and issue tracker are available at [https://github.com/albumentations-team/autoalbument](https://github.com/albumentations-team/autoalbument)
 
-
 Table of contents:
 
 - [AutoAlbument introduction and core concepts](introduction.md)
