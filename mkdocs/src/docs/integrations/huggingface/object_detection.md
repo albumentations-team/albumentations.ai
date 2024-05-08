@@ -1,8 +1,8 @@
 # HuggingFace Object detection integration
 
-This is copy of the document from [Hugging Face](https://huggingface.co/docs/transformers/main/en/tasks/object_detection) with small modifications.
+This is a copy of the document from [Hugging Face](https://huggingface.co/docs/transformers/main/en/tasks/object_detection) with small modifications.
 
-Text below could be outdated, please refer to the original document for the most recent information.
+Text below could be outdated. This document is reviewed periodically, but for the most accurate and up-to-date information, please refer to the original document at [Hugging Face](https://huggingface.co/docs/transformers/main/en/tasks/object_detection).
 
 ## Introduction
 
