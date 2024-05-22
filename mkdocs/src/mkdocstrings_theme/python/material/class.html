@@ -18,18 +18,15 @@
                         {% if ns.line_start is not defined %}
                             {% set ns.line_start = child.source.line_start %}
                         {% endif %}
-                   {% if child.category == "method" and child.name == "__init__" %}
-
-                                {% with signature = child.signature, type="class" %}
-
-                                    {% include "signature.html" with context %}{% endwith %}
-
-
+                        {% if child.category == "method" and child.name == "__init__" %}
+                            {% with signature = child.signature, type="class" %}
+                                {% include "signature.html" with context %}
+                            {% endwith %}
                         {% endif %}
                     {% endfor %}
                 </code> {% if ns.line_start is defined %}<span class="doc-github-link">
     <a
-            href="https://github.com/albumentations-team/{% if class.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/master/{{ class.relative_file_path }}#L{{ ns.line_start }}"
+            href="https://github.com/albumentations-team/{% if class.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/main/{{ class.relative_file_path }}#L{{ ns.line_start }}"
             target="_blank">[view source on GitHub]</a>
 </span>{% endif %}<a class="headerlink" href="#{{ class.path }}" title="Permanent link">¶</a>
                 {% with properties = class.properties %}
@@ -53,6 +50,16 @@
             {% with docstring_sections = class.docstring_sections %}
                 {% include "docstring.html" with context %}
             {% endwith %}
+
+            <div class="admonition info">
+                <p class="admonition-title"><strong>Interactive Tool Available!</strong></p>
+                <p>
+                    <strong>Explore this transform visually and adjust parameters interactively using this tool:</strong>
+                </p>
+                <p>
+                    <a class="md-button md-button--primary" href="https://huggingface.co/spaces/qubvel-hf/albumentations-demo?transform={{ class.name }}" target="_blank">Open Tool</a>
+                </p>
+            </div>
 
             {% if config.show_source and class.source %}
                 <details class="quote">
