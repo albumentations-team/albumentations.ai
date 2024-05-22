@@ -1,9 +1,6 @@
 FROM albumentations/albumentations-ai-mkdocs-base:latest
 
 RUN mkdir /mkdocs
-
-
-
 RUN git clone --depth=1 --branch main --single-branch https://github.com/albumentations-team/albumentations.git /albumentations \
 && pip install -e /albumentations
 
