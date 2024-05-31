@@ -94,7 +94,7 @@ To visualize:
 - Probability of `Resize` being applied given `Compose` is applied: 1.0
 - Effective probability of `Resize` being applied: 0.9 * 1.0 = 0.9 (or 90%)
 
-This means that the effective probability of Resize being applied is the product of the probabilities of Compose and Resize, which is `0.9 * 1.0 = 0.9` or 90%.
+This means that the effective probability of `Resize` being applied is the product of the probabilities of `Compose` and `Resize`, which is `0.9 * 1.0 = 0.9` or 90%. This principle applies to other transformations as well, where the overall probability is the product of the individual probabilities within the transformation pipeline.
 
 Here’s another example:
 
