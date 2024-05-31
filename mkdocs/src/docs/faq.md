@@ -89,6 +89,11 @@ transform = A.Compose([
 
 In this case, `Resize` has a 90% chance to be applied. This is because there is a 90% chance for `Compose` to be applied (p=0.9). If `Compose` is applied, then `Resize` is applied with 100% probability `(p=1.0)`.
 
+To visualize:
+- Probability of `Compose` being applied: 0.9
+- Probability of `Resize` being applied given `Compose` is applied: 1.0
+- Effective probability of `Resize` being applied: 0.9 * 1.0 = 0.9 (or 90%)
+
 This means that the effective probability of Resize being applied is the product of the probabilities of Compose and Resize, which is `0.9 * 1.0 = 0.9` or 90%.
 
 Here’s another example:
