@@ -60,7 +60,7 @@ To install the package on other operating systems, consult the documentation for
 
 ### Supported Image Types
 
-Albumentations works with images of type uint8 and float32. uint8 images should be in the [0, 255] range, and float32 images should be in the [0, 1] range. If float32 images lie outside of the [0, 1] range, they will be automatically clipped to the [0, 1] range.
+Albumentations works with images of type uint8 and float32. uint8 images should be in the `[0, 255]` range, and float32 images should be in the `[0, 1]` range. If float32 images lie outside of the `[0, 1]` range, they will be automatically clipped to the `[0, 1]` range.
 
 ### How can I find which augmentations were applied to the input data and which parameters they used?
 
