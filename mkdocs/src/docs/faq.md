@@ -77,7 +77,7 @@ Yes. Albumentations can also work with non-8-bit images. See [this example](../e
 
 ### Augmentations have a parameter named `p` that sets the probability of applying that augmentation. How does `p` work in nested containers?
 
-The p parameter sets the probability of applying a specific augmentation. When augmentations are nested within a top-level container like `Compose`, the probability of applying each augmentation depends on the probability of the container being applied.
+The `p` parameter sets the probability of applying a specific augmentation. When augmentations are nested within a top-level container like `Compose`, the effective probability of each augmentation is the product of the container's probability and the augmentation's probability.
 
 Let's look at an example when a container `Compose` contains one augmentation `Resize`:
 
