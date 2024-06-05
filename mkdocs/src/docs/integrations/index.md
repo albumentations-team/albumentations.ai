@@ -4,3 +4,8 @@ Albumentations can be easily integrated with other libraries and frameworks. Her
 
 - [HuggingFace](huggingface/object_detection.md)
 - [FiftyOne](fiftyone.md)
+
+
+## Automatic update check.
+Albumentation automatically check for updates on library import.  
+This can be disabled setting the environment variable: `NO_ALBUMENTATIONS_UPDATE` to `1` or `true`.  
