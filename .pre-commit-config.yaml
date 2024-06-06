@@ -40,7 +40,7 @@ repos:
     -   id: trailing-whitespace
     -   id: requirements-txt-fixer
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.6
+    rev: v0.4.8
     hooks:
     -   id: ruff
         args:
