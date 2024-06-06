@@ -17,6 +17,7 @@
   - [Usage](#usage)
   - [Installation](#installation-1)
     - [I am receiving an error message `Failed building wheel for imagecodecs` when I am trying to install Albumentations. How can I fix the problem?](#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem)
+    - [How to disable automatic checks for new versions?](#how-to-disable-automatic-checks-for-new-versions)
     - [I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`.](#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory)
   - [Examples](#examples-1)
     - [Why do you call `cv2.cvtColor(image, cv2.COLOR_BGR2RGB)` in your examples?](#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples)
@@ -38,6 +39,10 @@ Try to update `pip` by running the following command:
 ```bash
 python3 -m pip install --upgrade pip
 ```
+
+### How to disable automatic checks for new versions?
+
+To disable automatic checks for new versions, set the environment variable `ALBUMENTATIONS_NO_AUTO_UPDATE` to `1`.
 
 ### I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`.
 
