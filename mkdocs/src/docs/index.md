@@ -19,14 +19,14 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ## Getting started with Albumentations
 
 - [Installation](getting_started/installation.md)
+- [Frequently Asked Questions](faq.md)
 - [Image augmentation for classification](getting_started/image_augmentation.md)
 - [Mask augmentation for segmentation](getting_started/mask_augmentation.md)
 - [Bounding boxes augmentation for object detection](getting_started/bounding_boxes_augmentation.md)
 - [Keypoints augmentation](getting_started/keypoints_augmentation.md)
 - [Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints](getting_started/simultaneous_augmentation.md)
 - [A list of transforms and their supported targets](getting_started/transforms_and_targets.md)
-- [Setting probabilities for transforms in an augmentation pipeline
-](getting_started/setting_probabilities.md)
+- [Setting probabilities for transforms in an augmentation pipeline](getting_started/setting_probabilities.md)
 
 ## Integrations
 
@@ -69,7 +69,6 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 
 ## Other topics
 
-- [Frequently Asked Questions](faq.md)
 - [Release notes](release_notes.md)
 - [Contributing](CONTRIBUTING.md)
 
