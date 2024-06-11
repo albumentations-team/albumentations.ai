@@ -24,6 +24,7 @@
   - [Usage](#usage-1)
     - [Supported Image Types](#supported-image-types)
     - [How can I find which augmentations were applied to the input data and which parameters they used?](#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used)
+    - [How to save and load augmentation transforms to HuggingFace Hub?](#how-to-save-and-load-augmentation-transforms-to-huggingface-hub)
     - [My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?](#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it)
     - [I want to augment 16-bit TIFF images. Can Albumentations work with them?](#i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them)
     - [Augmentations have a parameter named `p` that sets the probability of applying that augmentation. How does `p` work in nested containers?](#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-how-does-p-work-in-nested-containers)
@@ -70,6 +71,40 @@ Albumentations works with images of type uint8 and float32. uint8 images should 
 ### How can I find which augmentations were applied to the input data and which parameters they used?
 
 To save and inspect parameters of augmentations, you can replace Compose with ReplayCompose. ReplayCompose behaves just like regular Compose, but it also saves information about which augmentations were applied and which parameters were uses. Take a look at the example that shows how you can use ReplayCompose.
+
+### How to save and load images to HuggingFace Hub?
+
+```python
+import albumentations as A
+import numpy as np
+
+transform = A.Compose([
+    A.RandomCrop(256, 256),
+    A.HorizontalFlip(),
+    A.RandomBrightnessContrast(),
+    A.RGBShift(),
+    A.Normalize(),
+])
+
+transform.save_pretrained("qubvel-hf/albu", key="train")
+# The 'key' parameter specifies the context or purpose of the saved transform,
+# allowing for organized and context-specific retrieval.
+# ^ this will save the transform to a directory "qubvel-hf/albu" with filename "albumentations_config_train.json"
+
+transform.save_pretrained("qubvel-hf/albu", key="train", push_to_hub=True)
+# ^ this will save the transform to a directory "qubvel-hf/albu" with filename "albumentations_config_train.json"
+# + push the transform to the Hub to the repository "qubvel-hf/albu"
+
+transform.push_to_hub("qubvel-hf/albu", key="train")
+# Use `save_pretrained` to save the transform locally and optionally push to the Hub.
+# Use `push_to_hub` to directly push the transform to the Hub without saving it locally.
+# ^ this will push the transform to the Hub to the repository "qubvel-hf/albu" (without saving it locally)
+
+loaded_transform = A.Compose.from_pretrained("qubvel-hf/albu", key="train")
+# ^ this will load the transform from local folder if exist or from the Hub repository "qubvel-hf/albu"
+```
+
+See [this example](../examples/example_hfhub/) for more info.
 
 ### My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?
 
