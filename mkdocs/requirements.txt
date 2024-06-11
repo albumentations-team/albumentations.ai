@@ -16,7 +16,7 @@ attrs==23.2.0
     # via
     #   jsonschema
     #   referencing
-babel==2.14.0
+babel==2.15.0
     # via mkdocs-material
 backcall==0.2.0
     # via ipython
@@ -28,11 +28,11 @@ bleach==6.1.0
     # via nbconvert
 bracex==2.4
     # via wcmatch
-cairocffi==1.6.1
+cairocffi==1.7.0
     # via cairosvg
 cairosvg==2.7.1
     # via mkdocs-material
-certifi==2024.2.2
+certifi==2024.6.2
     # via requests
 cffi==1.16.0
     # via cairocffi
@@ -44,7 +44,7 @@ click==8.1.7
     #   mkdocstrings
 colorama==0.4.6
     # via mkdocs-material
-comm==0.2.1
+comm==0.2.2
     # via ipykernel
 csscompressor==0.9.5
     # via mkdocs-minify-plugin
@@ -66,26 +66,27 @@ ghp-import==2.1.0
     # via mkdocs
 htmlmin2==0.1.13
     # via mkdocs-minify-plugin
-idna==3.6
+idna==3.7
     # via requests
-importlib-metadata==7.0.1
+importlib-metadata==7.1.0
     # via
     #   jupyter-client
     #   markdown
     #   mkdocs
+    #   mkdocs-get-deps
     #   mkdocstrings
     #   nbconvert
-importlib-resources==6.1.2
+importlib-resources==6.4.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-ipykernel==6.29.3
+ipykernel==6.29.4
     # via mkdocs-jupyter
 ipython==8.12.3
     # via ipykernel
 jedi==0.19.1
     # via ipython
-jinja2==3.1.3
+jinja2==3.1.4
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
@@ -94,15 +95,15 @@ jinja2==3.1.3
     #   nbconvert
 jsmin==3.0.1
     # via mkdocs-minify-plugin
-jsonschema==4.21.1
+jsonschema==4.22.0
     # via nbformat
 jsonschema-specifications==2023.12.1
     # via jsonschema
-jupyter-client==8.6.0
+jupyter-client==8.6.2
     # via
     #   ipykernel
     #   nbclient
-jupyter-core==5.7.1
+jupyter-core==5.7.2
     # via
     #   ipykernel
     #   jupyter-client
@@ -111,9 +112,9 @@ jupyter-core==5.7.1
     #   nbformat
 jupyterlab-pygments==0.3.0
     # via nbconvert
-jupytext==1.16.1
+jupytext==1.16.2
     # via mkdocs-jupyter
-markdown==3.5.2
+markdown==3.6
     # via
     #   mkdocs
     #   mkdocs-autorefs
@@ -131,19 +132,21 @@ markupsafe==2.1.5
     #   mkdocs-autorefs
     #   mkdocstrings
     #   nbconvert
-matplotlib-inline==0.1.6
+matplotlib-inline==0.1.7
     # via
     #   ipykernel
     #   ipython
-mdit-py-plugins==0.4.0
+mdit-py-plugins==0.4.1
     # via jupytext
 mdurl==0.1.2
     # via markdown-it-py
 mergedeep==1.3.4
-    # via mkdocs
+    # via
+    #   mkdocs
+    #   mkdocs-get-deps
 mistune==3.0.2
     # via nbconvert
-mkdocs==1.5.3
+mkdocs==1.6.0
     # via
     #   -r requirements.in
     #   mkdocs-autorefs
@@ -163,7 +166,9 @@ mkdocs-awesome-pages-plugin==2.9.2
     # via -r requirements.in
 mkdocs-exclude==1.0.2
     # via -r requirements.in
-mkdocs-jupyter==0.24.3
+mkdocs-get-deps==0.2.0
+    # via mkdocs
+mkdocs-jupyter==0.24.7
     # via -r requirements.in
 mkdocs-macros-plugin==1.0.5
     # via
@@ -171,7 +176,7 @@ mkdocs-macros-plugin==1.0.5
     #   mkdocs-jupyter
 mkdocs-material-extensions==1.3.1
     # via -r requirements.in
-mkdocs-material[imaging]==9.5.12
+mkdocs-material[imaging]==9.5.26
     # via mkdocs-material
 mkdocs-minify-plugin==0.8.0
     # via -r requirements.in
@@ -181,22 +186,22 @@ mkdocs-simple-hooks==0.1.5
     #   mkdocstrings-python-legacy
 mkdocstrings-python-legacy==0.2.3
     # via -r requirements.in
-mkdocstrings[python-legacy]==0.24.1
+mkdocstrings[python-legacy]==0.25.1
     # via mkdocstrings
 natsort==8.4.0
     # via mkdocs-awesome-pages-plugin
-nbclient==0.9.0
+nbclient==0.10.0
     # via nbconvert
-nbconvert==7.16.2
+nbconvert==7.16.4
     # via mkdocs-jupyter
-nbformat==5.9.2
+nbformat==5.10.4
     # via
     #   jupytext
     #   nbclient
     #   nbconvert
 nest-asyncio==1.6.0
     # via ipykernel
-packaging==23.2
+packaging==24.1
     # via
     #   ipykernel
     #   jupytext
@@ -206,7 +211,7 @@ paginate==0.5.6
     # via mkdocs-material
 pandocfilters==1.5.1
     # via nbconvert
-parso==0.8.3
+parso==0.8.4
     # via jedi
 pathspec==0.12.1
     # via mkdocs
@@ -214,18 +219,18 @@ pexpect==4.9.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
-pillow==10.2.0
+pillow==10.3.0
     # via
     #   cairosvg
     #   mkdocs-material
 pkgutil-resolve-name==1.3.10
     # via jsonschema
-platformdirs==4.2.0
+platformdirs==4.2.2
     # via
     #   jupyter-core
-    #   mkdocs
+    #   mkdocs-get-deps
     #   mkdocstrings
-prompt-toolkit==3.0.43
+prompt-toolkit==3.0.47
     # via ipython
 psutil==5.9.8
     # via ipykernel
@@ -233,16 +238,16 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
-pycparser==2.21
+pycparser==2.22
     # via cffi
-pygments==2.17.2
+pygments==2.18.0
     # via
     #   -r requirements.in
     #   ipython
     #   mkdocs-jupyter
     #   mkdocs-material
     #   nbconvert
-pymdown-extensions==10.7.1
+pymdown-extensions==10.8.1
     # via
     #   mkdocs-material
     #   mkdocstrings
@@ -261,24 +266,25 @@ pyyaml==6.0.1
     # via
     #   jupytext
     #   mkdocs
+    #   mkdocs-get-deps
     #   mkdocs-macros-plugin
     #   pymdown-extensions
     #   pyyaml-env-tag
 pyyaml-env-tag==0.1
     # via mkdocs
-pyzmq==25.1.2
+pyzmq==26.0.3
     # via
     #   ipykernel
     #   jupyter-client
-referencing==0.33.0
+referencing==0.35.1
     # via
     #   jsonschema
     #   jsonschema-specifications
-regex==2023.12.25
+regex==2024.5.15
     # via mkdocs-material
-requests==2.31.0
+requests==2.32.3
     # via mkdocs-material
-rpds-py==0.18.0
+rpds-py==0.18.1
     # via
     #   jsonschema
     #   referencing
@@ -294,18 +300,18 @@ stack-data==0.6.3
     # via ipython
 termcolor==2.4.0
     # via mkdocs-macros-plugin
-tinycss2==1.2.1
+tinycss2==1.3.0
     # via
     #   cairosvg
     #   cssselect2
     #   nbconvert
-toml==0.10.2
+tomli==2.0.1
     # via jupytext
-tornado==6.4
+tornado==6.4.1
     # via
     #   ipykernel
     #   jupyter-client
-traitlets==5.14.1
+traitlets==5.14.3
     # via
     #   comm
     #   ipykernel
@@ -316,15 +322,15 @@ traitlets==5.14.1
     #   nbclient
     #   nbconvert
     #   nbformat
-typing-extensions==4.10.0
+typing-extensions==4.12.2
     # via
     #   ipython
     #   mkdocstrings
 urllib3==2.2.1
     # via requests
-watchdog==4.0.0
+watchdog==4.0.1
     # via mkdocs
-wcmatch==8.5.1
+wcmatch==8.5.2
     # via mkdocs-awesome-pages-plugin
 wcwidth==0.2.13
     # via prompt-toolkit
@@ -333,9 +339,9 @@ webencodings==0.5.1
     #   bleach
     #   cssselect2
     #   tinycss2
-wheel==0.42.0
+wheel==0.43.0
     # via astunparse
-zipp==3.17.0
+zipp==3.19.2
     # via
     #   importlib-metadata
     #   importlib-resources

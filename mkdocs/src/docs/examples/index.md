@@ -18,6 +18,7 @@
 - [Debugging an augmentation pipeline with ReplayCompose](replay/)
 - [How to save and load parameters of an augmentation pipeline](serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](showcase/)
+- [How to save and load transforms to HuggingFace Hub.](example_hfhub/)
 
 ## Examples of how to use Albumentations with different deep learning frameworks
 

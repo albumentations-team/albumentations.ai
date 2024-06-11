@@ -1,5 +1,268 @@
 # Release notes
 
+## Albumentations 1.4.8 Release Notes
+
+- Support our work
+- Documentation
+- Deprecations
+- Improvements and bug fixes
+
+## Support Our Work
+1. Love the library? You can contribute to its development by becoming a  [sponsor for the library](https://github.com/sponsors/albumentations-team). Your support is invaluable, and every contribution makes a difference.
+2. Haven't starred our repo yet? Show your support with a ⭐! It's just [only one mouse click](https://github.com/albumentations-team/albumentations).
+3. Got ideas or facing issues? We'd love to hear from you. Share your thoughts in our [issues](https://github.com/albumentations-team/albumentations/issues) or join the conversation on our [Discord server for Albumentations](https://discord.gg/AmMnDBdzYs)
+
+## Documentation
+Added to the documentation links to the UI on HuggingFace to explore hyperparameters visually.
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+    <img width="730" alt="Screenshot 2024-05-28 at 16 27 09" src="https://github.com/albumentations-team/albumentations/assets/5481618/525ca812-a2ad-46cb-9fb2-b89ec3a119a3">
+    <img width="885" alt="Screenshot 2024-05-28 at 16 28 03" src="https://github.com/albumentations-team/albumentations/assets/5481618/ff81c193-4355-4aee-962c-77459c8a1292">
+</div>
+
+
+## Deprecations
+### RandomSnow
+Updated interface:
+
+Old way:
+
+```python
+transform = A.Compose([A.RandomSnow(
+  snow_point_lower=0.1,
+  snow_point_upper=0.3,
+  p=0.5
+)])
+```
+
+New way:
+```python
+transform = A.Compose([A.RandomSnow(
+  snow_point_range=(0.1, 0.3),
+  p=0.5
+)])
+```
+
+by @MarognaLorenzo
+
+### RandomRain
+Old way
+```python
+transform = A.Compose([A.RandomSnow(
+  slant_lower=-10,
+  slant_upper=10,
+  p=0.5
+)])
+```
+
+New way:
+```python
+transform = A.Compose([A.RandomRain(
+  slant_range=(-10, 10),
+  p=0.5
+)])
+```
+
+by @MarognaLorenzo
+
+## Improvements
+Created library with core functions [albucore](https://github.com/albumentations-team/albucore). Moved a few helper functions there.
+We need this library to be sure that transforms are:
+1. At least as fast as `numpy` and `opencv`. For some functions it is possible to be faster than both of them.
+2. Easier to debug.
+3. Could be used in other projects, not related to Albumentations.
+
+## Bugfixes
+- Bugfix in `check_for_updates`. Now the pipeline does not throw an error regardless of why we cannot check for update.
+- Bugfix in `RandomShadow`. Does not create unexpected purple color on bright white regions with shadow overlay anymore.
+- BugFix in `Compose`. Now `Compose([])` does not throw an error, but just works as `NoOp` by @ayasyrev
+- Bugfix in `min_max` normalization. Now return 0 and not NaN on constant images. by @ternaus
+- Bugfix in `CropAndPad`. Now we can sample pad/crop values for all sides with interface like  `((-0.1, -0.2), (-0.2, -0.3), (0.3, 0.4), (0.4, 0.5))` by @christian-steinmeyer
+- Small refactoring to decrease tech debt by @ternaus and @ayasyrev
+
+
+
+
+
+## Albumentations 1.4.7 Release Notes
+
+- Support our work
+- Documentation
+- Deprecations
+- Improvements and bug fixes
+
+## Support Our Work
+1. Love the library? You can contribute to its development by becoming a  [sponsor for the library](https://github.com/sponsors/albumentations-team). Your support is invaluable, and every contribution makes a difference.
+2. Haven't starred our repo yet? Show your support with a ⭐! It's just [only one mouse click](https://github.com/albumentations-team/albumentations).
+3. Got ideas or facing issues? We'd love to hear from you. Share your thoughts in our [issues](https://github.com/albumentations-team/albumentations/issues) or join the conversation on our [Discord server for Albumentations](https://discord.gg/AmMnDBdzYs)
+
+## Documentation
+
+- Added to the [website tutorial](https://albumentations.ai/docs/integrations/huggingface/object_detection/) on how to use Albumentations with Hugginigface for object Detection. Based on the [tutorial](https://huggingface.co/docs/transformers/main/en/tasks/object_detection) by @qubvel
+
+## Deprecations
+### ImageCompression
+
+Old way:
+
+```python
+transform = A.Compose([A.ImageCompression(
+  quality_lower=75,
+  quality_upper=100,
+  p=0.5
+)])
+```
+
+New way:
+
+```python
+transform = A.Compose([A.ImageCompression(
+  quality_range=(75, 100),
+  p=0.5
+)])
+```
+by @MarognaLorenzo
+
+### Downscale
+
+Old way:
+```python
+transform = A.Compose([A.Downscale(
+  scale_min=0.25,
+  scale_max=1,
+  interpolation= {"downscale": cv2.INTER_AREA, "upscale": cv2.INTER_CUBIC},
+  p=0.5
+)])
+```
+
+New way:
+```python
+transform = A.Compose([A.Downscale(
+  scale_range=(0.25, 1),
+ interpolation_pair = {"downscale": cv2.INTER_AREA, "upscale": cv2.INTER_CUBIC},
+  p=0.5
+)])
+```
+
+As of now both ways work and will provide the same result, but old functionality will be removed in later releases.
+
+by @ternaus
+
+## Improvements
+- Buggix in `Blur`.
+- Bugfix in `bbox clipping`, it could be not intuitive, but boxes should be clipped by `height, width` and not `height - 1, width -1` by @ternaus
+- Allow to compose only keys, that are required there. Any extra unnecessary key will give an error by @ayasyrev
+- In `PadIfNeeded` if value parameter is not None, but border mode is reflection, border mode is changed to `cv2.BORDER_CONSTANT` by @ternaus
+
+
+
+
+## Albumentations 1.4.6 Release Notes
+
+# This is out of schedule release with a bugfix that was introduced in version 1.4.5
+
+In version 1.4.5 there was a bug that went unnoticed - if you used pipeline that consisted only of `ImageOnly` transforms but pass bounding boxes into it, you would get an error.
+
+If you had in such pipeline at least one non `ImageOnly` transform, say `HorizontalFlip` or `Crop`, everything would work as expected.
+
+We fixed the issue and added tests to be sure that it will not happen in the future.
+
+## Albumentations 1.4.5 Release Notes
+
+- Support our work
+- Highlights
+- Deprecations
+- Improvements and bug fixes
+
+## Support Our Work
+1. Love the library? You can contribute to its development by becoming a  [sponsor for the library](https://github.com/sponsors/albumentations-team). Your support is invaluable, and every contribution makes a difference.
+2. Haven't starred our repo yet? Show your support with a ⭐! It's just [only one mouse click](https://github.com/albumentations-team/albumentations).
+3. Got ideas or facing issues? We'd love to hear from you. Share your thoughts in our [issues](https://github.com/albumentations-team/albumentations/issues) or join the conversation on our [Discord server for Albumentations](https://discord.gg/AmMnDBdzYs)
+
+## Highlights
+
+### Bbox clipping
+
+Before version 1.4.5 it was assumed that bounding boxes that are fed into the augmentation pipeline should not extend outside of the image.
+
+Now we added an option to clip boxes to the image size before augmenting them. This makes pipeline more robust to inaccurate labeling
+
+**Example:**
+
+Will fail if boxes extend outside of the image:
+```python
+transform = A.Compose([
+    A.HorizontalFlip(p=0.5)
+], bbox_params=A.BboxParams(format='coco'))
+```
+
+Clipping bounding boxes to the image size:
+
+```python
+transform = A.Compose([
+    A.HorizontalFlip(p=0.5)
+], bbox_params=A.BboxParams(format='coco', clip=True))
+```
+
+by @ternaus
+
+### SelectiveChannelTransform
+
+Added [SelectiveChannelTransform](https://albumentations.ai/docs/api_reference/full_reference/?#albumentations.core.composition.SelectiveChannelTransform) that allows to apply transforms to a selected number of channels.
+
+For example it could be helpful when working with multispectral images, when RGB is a subset of the overall multispectral stack which is common when working with satellite imagery.
+
+Example:
+
+```python
+aug = A.Compose(
+        [A.HorizontalFlip(p=0.5),
+        A.SelectiveChannelTransform(transforms=[A.ColorJItter(p=0.5),
+        A.ChromaticAberration(p=0.5))], channels=[1, 2, 18], p=1)],
+    )
+```
+Here HorizontalFlip applied to the whole multispectral image, but pipeline of `ColorJitter` and `ChromaticAberration` only to channels `[1, 2, 18]`
+
+by @ternaus
+
+## Deprecations
+
+### CoarseDropout
+
+Old way:
+```python
+transform = A.Compose([A.CoarseDropout(
+  min_holes = 5,
+  max_holes = 8,
+  min_width = 3,
+  max_width = 12,
+  min_height = 4,
+  max_height = 5
+)])
+```
+
+New way:
+```python
+transform = A.Compose([A.CoarseDropout(
+  num_holes_range=(5, 8),
+  hole_width_range=(3, 12),
+  hole_height_range=(4, 5)
+)])
+```
+
+As of now both ways work and will provide the same result, but old functionality will be removed in later releases.
+
+@ternaus
+
+## Improvements and bug fixes
+- Number of fixes and speedups in the core of the library `Compose` and `BasicTransform` by @ayasyrev
+- Extended `Contributor's guide` by @ternaus
+- Can use `random` for `fill_value` in `CoarseDropout`by @ternaus
+- Fix in [ToGray](https://albumentations.ai/docs/api_reference/full_reference/?#albumentations.augmentations.transforms.ToGray) docstring by @wilderrodrigues
+- BufFix in [D4](https://albumentations.ai/docs/api_reference/full_reference/?#albumentations.augmentations.geometric.transforms.D4) - now works not only with square, but with rectangular images as well. By @ternaus
+- BugFix in [RandomCropFromBorders](https://albumentations.ai/docs/api_reference/full_reference/?#albumentations.augmentations.crops.transforms.RandomCropFromBorders) by @ternaus
+
+
 ## Albumentations 1.4.4 Release Notes
 
 - Support our work
