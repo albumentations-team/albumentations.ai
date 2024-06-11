@@ -24,9 +24,9 @@
   - [Usage](#usage-1)
     - [Supported Image Types](#supported-image-types)
     - [How can I find which augmentations were applied to the input data and which parameters they used?](#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used)
-    - [How to save and load augmentation transforms to HuggingFace Hub?](#how-to-save-and-load-augmentation-transforms-to-huggingface-hub)
+    - [How to save and load images to HuggingFace Hub?](#how-to-save-and-load-images-to-huggingface-hub)
     - [My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?](#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it)
-    - [I want to augment 16-bit TIFF images. Can Albumentations work with them?](#i-want-to-augment-16-bit-tiff-images-can-albumentations-work-with-them)
+    - [How to perform balanced scaling?](#how-to-perform-balanced-scaling)
     - [Augmentations have a parameter named `p` that sets the probability of applying that augmentation. How does `p` work in nested containers?](#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-how-does-p-work-in-nested-containers)
     - [When I use augmentations with the `border_mode` parameter (such as `Rotate`) and set `border_mode` to `cv2.BORDER_REFLECT` or `cv2.BORDER_REFLECT_101` Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?](#when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug)
     - [I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?](#i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations)
@@ -110,10 +110,21 @@ See [this example](../examples/example_hfhub/) for more info.
 
 Yes. You can define additional images, masks, bounding boxes, or keypoints through the `additional_targets` argument to `Compose`. You can then pass those additional targets to the augmentation pipeline, and Albumentations will augment them in the same way. See [this example](../examples/example_multi_target/) for more info.
 
-### I want to augment 16-bit TIFF images. Can Albumentations work with them?
+### How to perform balanced scaling?
 
-Yes. Albumentations can also work with non-8-bit images. See [this example](../examples/example_16_bit_tiff/
-) for more info.
+The default scaling logic in `RandomScale`, `ShiftScaleRotate`, and `Affine` transformations is biased towards upscaling.
+
+For example, if `scale_limit = (0.5, 2)`, a user might expect that the image will be scaled down in half of the cases and scaled up in the other half. However, in reality, the image will be scaled up in 75% of the cases and scaled down in only 25% of the cases. This is because the default behavior samples uniformly from the interval `[0.5, 2]`, and the interval `[0.5, 1]` is three times smaller than `[1, 2]`.
+
+To achieve balanced scaling, you can use the OneOf transform as follows:
+
+```python
+balanced_scale_transform = A.OneOf([
+  A.Affine(scale=(0.5, 1), p=0.5),
+  A.Affine(scale=(1, 2), p=0.5)])
+```
+
+This approach ensures that exactly half of the samples will be upscaled and half will be downscaled.
 
 ### Augmentations have a parameter named `p` that sets the probability of applying that augmentation. How does `p` work in nested containers?
 
@@ -130,6 +141,7 @@ transform = A.Compose([
 In this case, `Resize` has a 90% chance to be applied. This is because there is a 90% chance for `Compose` to be applied (p=0.9). If `Compose` is applied, then `Resize` is applied with 100% probability `(p=1.0)`.
 
 To visualize:
+
 - Probability of `Compose` being applied: 0.9
 - Probability of `Resize` being applied given `Compose` is applied: 1.0
 - Effective probability of `Resize` being applied: 0.9 * 1.0 = 0.9 (or 90%)
@@ -153,5 +165,4 @@ You can change `border_mode` mode to `cv2.BORDER_CONSTANT` if this causes a sign
 
 ### I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?
 
-You need to convert those annotations to one of the formats, supported by Albumentations. For the list of formats, please refer to [this article](getting_started/bounding_boxes_augmentation.md
-). Consult the documentation of the labeling service to see how you can export annotations in those formats.
+You need to convert those annotations to one of the formats, supported by Albumentations. For the list of formats, please refer to [this article](getting_started/bounding_boxes_augmentation.md). Consult the documentation of the labeling service to see how you can export annotations in those formats.
