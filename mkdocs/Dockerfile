@@ -4,9 +4,10 @@ RUN mkdir /mkdocs
 RUN git clone --depth=1 --branch main --single-branch https://github.com/albumentations-team/albumentations.git /albumentations \
 && pip install -e /albumentations
 
+RUN git clone --depth=1 --branch main --single-branch https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
+
 RUN git clone --depth=1 --branch master --single-branch https://github.com/albumentations-team/autoalbument.git /autoalbument
 
-RUN git clone --depth=1 --branch main --single-branch https://github.com/albumentations-team/albumentations_examples.git /albumentations_examples
 
 COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 

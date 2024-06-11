@@ -53,6 +53,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](examples/showcase/)
+- [How to save and load transforms to HuggingFace Hub.](examples/example_hfhub/)
 
 ## Examples of how to use Albumentations with different deep learning frameworks
 
