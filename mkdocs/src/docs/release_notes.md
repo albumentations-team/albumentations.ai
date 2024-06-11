@@ -77,7 +77,7 @@ We need this library to be sure that transforms are:
 - Bugfix in `RandomShadow`. Does not create unexpected purple color on bright white regions with shadow overlay anymore.
 - BugFix in `Compose`. Now `Compose([])` does not throw an error, but just works as `NoOp` by @ayasyrev
 - Bugfix in `min_max` normalization. Now return 0 and not NaN on constant images. by @ternaus
-- Bugfix in `CropAndPad`. Now we can sample pad/crop values for all sides with interface like  `((-0.1, -0.2), (-0.2, -0.3), (0.3, 0.4), (0.4, 0.5))` by @christian-steinmeyer
+ Bugfix in `CropAndPad`. Now we can sample pad/crop values for all sides with interface like `((-0.1, -0.2), (-0.2, -0.3), (0.3, 0.4), (0.4, 0.5))`, allowing for more flexible and precise control over padding and cropping dimensions by @christian-steinmeyer
 - Small refactoring to decrease tech debt by @ternaus and @ayasyrev
 
 
