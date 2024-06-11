@@ -73,7 +73,7 @@ We need this library to be sure that transforms are:
 3. Could be used in other projects, not related to Albumentations.
 
 ## Bugfixes
-- Bugfix in `check_for_updates`. Now the pipeline does not throw an error regardless of why we cannot check for update.
+ Bugfix in `check_for_updates`. Previously, the pipeline would throw an error if it failed to check for updates due to network issues or server unavailability. Now, it handles these exceptions gracefully and continues without interruption.
 - Bugfix in `RandomShadow`. Does not create unexpected purple color on bright white regions with shadow overlay anymore.
 - BugFix in `Compose`. Now `Compose([])` does not throw an error, but just works as `NoOp` by @ayasyrev
 - Bugfix in `min_max` normalization. Now return 0 and not NaN on constant images. by @ternaus
