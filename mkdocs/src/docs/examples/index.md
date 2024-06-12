@@ -1,7 +1,6 @@
 # List of examples
 
 - [Defining a simple augmentation pipeline for image augmentation](example/)
-- [Working with non-8-bit images](example_16_bit_tiff/)
 - [Using Albumentations to augment bounding boxes for object detection tasks](example_bboxes/)
 - [How to use Albumentations for detection tasks if you need to keep all bounding boxes](example_bboxes2/)
 - [Using Albumentations for a semantic segmentation task](example_kaggle_salt/)

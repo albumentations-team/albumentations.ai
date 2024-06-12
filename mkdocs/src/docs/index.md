@@ -36,7 +36,6 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ## Examples
 
 - [Defining a simple augmentation pipeline for image augmentation](examples/example/)
-- [Working with non-8-bit images](examples/example_16_bit_tiff/)
 - [Using Albumentations to augment bounding boxes for object detection tasks](examples/example_bboxes/)
 - [How to use Albumentations for detection tasks if you need to keep all bounding boxes](examples/example_bboxes2/)
 - [Using Albumentations for a semantic segmentation task](examples/example_kaggle_salt/)
