@@ -24,7 +24,7 @@
   - [Usage](#usage-1)
     - [Supported Image Types](#supported-image-types)
     - [How can I find which augmentations were applied to the input data and which parameters they used?](#how-can-i-find-which-augmentations-were-applied-to-the-input-data-and-which-parameters-they-used)
-    - [How to save and load images to HuggingFace Hub?](#how-to-save-and-load-images-to-huggingface-hub)
+    - [How to save and load augmentation transforms to HuggingFace Hub?](#how-to-save-and-load-augmentation-transforms-to-huggingface-hub)
     - [My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?](#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it)
     - [How to perform balanced scaling?](#how-to-perform-balanced-scaling)
     - [Augmentations have a parameter named `p` that sets the probability of applying that augmentation. How does `p` work in nested containers?](#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-how-does-p-work-in-nested-containers)
@@ -72,7 +72,7 @@ Albumentations works with images of type uint8 and float32. uint8 images should 
 
 To save and inspect parameters of augmentations, you can replace Compose with ReplayCompose. ReplayCompose behaves just like regular Compose, but it also saves information about which augmentations were applied and which parameters were uses. Take a look at the example that shows how you can use ReplayCompose.
 
-### How to save and load images to HuggingFace Hub?
+### How to save and load augmentation transforms to HuggingFace Hub?
 
 ```python
 import albumentations as A
