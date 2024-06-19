@@ -11,8 +11,8 @@ RUN git clone --depth=1 --branch master --single-branch https://github.com/album
 
 COPY ./mkdocs/requirements.txt /mkdocs/requirements.txt
 
-RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r /mkdocs/requirements.txt
+RUN pip install --upgrade uv \
+    && uv pip install --system --no-cache-dir -r /mkdocs/requirements.txt
 
 COPY ./mkdocs/entrypoint.sh /mkdocs/entrypoint.sh
 COPY ./mkdocs/replacements.txt /mkdocs/replacements.txt
