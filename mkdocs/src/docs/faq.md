@@ -43,7 +43,7 @@ python3 -m pip install --upgrade pip
 
 ### How to disable automatic checks for new versions?
 
-To disable automatic checks for new versions, set the environment variable `ALBUMENTATIONS_NO_AUTO_UPDATE` to `1`.
+To disable automatic checks for new versions, set the environment variable `NO_ALBUMENTATIONS_UPDATE` to `1`.
 
 ### I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`.
 
