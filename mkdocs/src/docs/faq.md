@@ -116,7 +116,7 @@ The default scaling logic in `RandomScale`, `ShiftScaleRotate`, and `Affine` tra
 
 For example, if `scale_limit = (0.5, 2)`, a user might expect that the image will be scaled down in half of the cases and scaled up in the other half. However, in reality, the image will be scaled up in 75% of the cases and scaled down in only 25% of the cases. This is because the default behavior samples uniformly from the interval `[0.5, 2]`, and the interval `[0.5, 1]` is three times smaller than `[1, 2]`.
 
-To achieve balanced scaling, you can use `Affine` with `balanced_scale=True`
+To achieve balanced scaling, you can use `Affine` with `balanced_scale=True`, which ensures that the probability of scaling up and scaling down is equal.
 
 ```python
 balanced_scale_transform = A.Affine(scale=(0.5, 2), balanced_scale=True)
