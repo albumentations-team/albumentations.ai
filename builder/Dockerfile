@@ -18,8 +18,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY ./builder/requirements.txt /builder/requirements.txt
 
 # Upgrade pip and pre-install Cython and wheel to ensure smooth package installations
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel Cython && \
-    pip install --no-cache-dir -r /builder/requirements.txt
+RUN pip install --upgrade uv && \
+    uv pip install --system --upgrade setuptools wheel Cython && \
+    uv pip install --system -r /builder/requirements.txt
 
 # Copy the rest of your application
 COPY ./builder/entrypoint.sh /builder/entrypoint.sh
