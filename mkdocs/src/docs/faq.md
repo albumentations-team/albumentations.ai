@@ -18,7 +18,7 @@
   - [Installation](#installation-1)
     - [I am receiving an error message `Failed building wheel for imagecodecs` when I am trying to install Albumentations. How can I fix the problem?](#i-am-receiving-an-error-message-failed-building-wheel-for-imagecodecs-when-i-am-trying-to-install-albumentations-how-can-i-fix-the-problem)
     - [How to disable automatic checks for new versions?](#how-to-disable-automatic-checks-for-new-versions)
-    - [I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`.](#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory)
+    - [I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`](#i-successfully-installed-the-library-but-when-i-am-trying-to-import-it-i-receive-an-error-importerror-libxrenderso1-cannot-open-shared-object-file-no-such-file-or-directory)
   - [Examples](#examples-1)
     - [Why do you call `cv2.cvtColor(image, cv2.COLOR_BGR2RGB)` in your examples?](#why-do-you-call-cv2cvtcolorimage-cv2color_bgr2rgb-in-your-examples)
   - [Usage](#usage-1)
@@ -38,14 +38,14 @@
 Try to update `pip` by running the following command:
 
 ```bash
-python3 -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
 ### How to disable automatic checks for new versions?
 
 To disable automatic checks for new versions, set the environment variable `NO_ALBUMENTATIONS_UPDATE` to `1`.
 
-### I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`.
+### I successfully installed the library, but when I am trying to import it I receive an error `ImportError: libXrender.so.1: cannot open shared object file: No such file or directory`
 
 Probably your system doesn't have `libXrender`. To install the `libXrender` package on Ubuntu or Debian run:
 
@@ -116,7 +116,13 @@ The default scaling logic in `RandomScale`, `ShiftScaleRotate`, and `Affine` tra
 
 For example, if `scale_limit = (0.5, 2)`, a user might expect that the image will be scaled down in half of the cases and scaled up in the other half. However, in reality, the image will be scaled up in 75% of the cases and scaled down in only 25% of the cases. This is because the default behavior samples uniformly from the interval `[0.5, 2]`, and the interval `[0.5, 1]` is three times smaller than `[1, 2]`.
 
-To achieve balanced scaling, you can use the OneOf transform as follows:
+To achieve balanced scaling, you can use `Affine` with `balanced_scale=True`, which ensures that the probability of scaling up and scaling down is equal.
+
+```python
+balanced_scale_transform = A.Affine(scale=(0.5, 2), balanced_scale=True)
+```
+
+or use `OneOf` transform as follows:
 
 ```python
 balanced_scale_transform = A.OneOf([
