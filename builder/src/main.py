@@ -5,9 +5,10 @@ import click
 from lib import staticjinja
 from lib.formatters import get_prepared_citations
 from lib.github import GitHubClient
+from lib.pypi import get_pypi_download_count
 
 TOP_REPOSITORIES_LIMIT = 12
-CACHE_FILES = ["stars_count.json", "contributors.json", "top_repositories.json"]
+CACHE_FILES = ["stars_count.json", "contributors.json", "top_repositories.json", "num_downloads.json"]
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
 )
@@ -61,6 +62,7 @@ def build(
     sponsors = json.loads((data_dir_path / "sponsors.json").read_text())
     competitions = json.loads((data_dir_path / "competitions.json").read_text())
     citations = json.loads((data_dir_path / "citations.json").read_text())
+    num_downloads = json.loads((cache_dir_path / "num_downloads.json").read_text())
 
     prepared_citations = get_prepared_citations(citations)
 
@@ -71,7 +73,7 @@ def build(
         use_reloader=use_reloader,
         env_globals={"base_url": base_url, "mkdocs_port": mkdocs_port, "google_analytics_id": google_analytics_id},
         contexts=[
-            ("index.html", {"stars_count": stars_count, "img_industry": img_industry}),
+            ("index.html", {"stars_count": stars_count, "img_industry": img_industry, "num_downloads": num_downloads}),
             (
                 "whos_using.html",
                 {
@@ -98,6 +100,10 @@ def fetch_data(github_token, data_dir, cache_dir, repository, additional_reposit
     client = GitHubClient(access_token=github_token)
     cache_dir_path = Path(cache_dir)
     data_dir_path = Path(data_dir)
+
+    num_downloads = get_pypi_download_count("albumentations")
+
+    (cache_dir_path / "num_downloads.json").write_text(json.dumps(num_downloads))
 
     stars_count = client.get_repository_stars_rounded(repository)
     repo_names = json.loads((data_dir_path / "repo_names.json").read_text())

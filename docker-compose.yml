@@ -19,7 +19,7 @@ services:
       - GOOGLE_ANALYTICS_ID
     volumes:
       - ./data:/data
-      - ./builder/src:/builder/src
+      # - ./builder/src:/builder/src
       - ./html:/builder/src/html
       - _build:/_build
       - _cache:/_cache

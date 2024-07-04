@@ -5,3 +5,9 @@ data/cache/*
 mkdocs.dev.yml
 .ruff_cache/
 .vscode/
+
+.pytest_cache/
+
+albumentationswebsite-62c20277d30c.json
+
+google_credentials.json
