@@ -21,9 +21,11 @@ jobs:
       - name: Set up Python 3.x
         uses: actions/setup-python@v5
         with:
-          python-version: '3.8'
+          python-version: '3.10'
       - name: Install required Python libraries
         run: pip install lxml
+      - name: Save Google credentials to file
+        run: echo "${{ secrets.GOOGLE_CREDENTIALS }}" > ./builder/google_credentials.json
       - name: Build site
         run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
         env:
