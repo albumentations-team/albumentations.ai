@@ -7,8 +7,7 @@ def get_prepared_citations(citations):
         for author in citation["author"]:
             author_link = citation["author_links"].get(author)
             if author_link:
-                author = f'<a href="{author_link}" target="_blank" class="border-link">{author}</a>'
-            authors.append(author)
+                authors += [f'<a href="{author_link}" target="_blank" class="border-link">{author}</a>']
         authors = ", ".join(authors)
 
         if url:

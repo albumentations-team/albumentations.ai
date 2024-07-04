@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.12
 
 # Create the necessary directory
 RUN mkdir /builder
@@ -28,6 +28,8 @@ COPY ./builder/src /builder/src
 
 # Set PYTHONPATH to include the src directory
 ENV PYTHONPATH "${PYTHONPATH}:/builder/src:"
+
+COPY ./google_credentials.json /builder/src/lib/google_credentials.json
 
 # Set the working directory to the src directory
 WORKDIR /builder/src

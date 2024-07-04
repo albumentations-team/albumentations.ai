@@ -46,7 +46,7 @@ csscompressor==0.9.5
     # via mkdocs-minify-plugin
 cssselect2==0.7.0
     # via cairosvg
-debugpy==1.8.1
+debugpy==1.8.2
     # via ipykernel
 decorator==5.1.1
     # via ipython
@@ -64,7 +64,7 @@ htmlmin2==0.1.13
     # via mkdocs-minify-plugin
 idna==3.7
     # via requests
-importlib-metadata==7.2.0
+importlib-metadata==8.0.0
     # via
     #   jupyter-client
     #   markdown
@@ -76,7 +76,7 @@ importlib-resources==6.4.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-ipykernel==6.29.4
+ipykernel==6.29.5
     # via mkdocs-jupyter
 ipython==8.12.3
     # via ipykernel
@@ -164,11 +164,11 @@ mkdocs-exclude==1.0.2
     # via -r requirements.in
 mkdocs-get-deps==0.2.0
     # via mkdocs
-mkdocs-jupyter==0.24.7
+mkdocs-jupyter==0.24.8
     # via -r requirements.in
 mkdocs-macros-plugin==1.0.5
     # via -r requirements.in
-mkdocs-material==9.5.27
+mkdocs-material==9.5.28
     # via
     #   -r requirements.in
     #   mkdocs-jupyter
@@ -215,7 +215,7 @@ pexpect==4.9.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
-pillow==10.3.0
+pillow==10.4.0
     # via
     #   cairosvg
     #   mkdocs-material
