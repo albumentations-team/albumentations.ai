@@ -26,8 +26,6 @@ jobs:
         run: pip install lxml
       - name: Save Google credentials to file
         run: echo "${{ secrets.GOOGLE_CREDENTIALS }}" > ./google_credentials.json
-      - name: Print files
-        run: ls -la ./
       - name: Build site
         run: make prod PROD_BUILD_DIR=${GITHUB_WORKSPACE}/gh_pages
         env:
