@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCXRDR9HJ0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -113,23 +114,36 @@
                 </div>
             </div>
             <div class="mb-3">
-                <div class="row">
-                    <div class="col-12 col-lg-8 col-xl-6">
-                        <a href="https://github.com/albumentations-team/albumentations" target="_blank"
-                            class="btn btn-outline-primary btn-wide mb-0 mb-sm-2 mr-0"
-                            style="padding: 0.65rem 0.25rem;">
-                            <span class="btn-padding"><i class="fab fa-github"></i> View on GitHub</span>
-                            <span class="btn-divider-left btn-padding"><i class="fa fa-star"></i> 13.7k</span>
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-8 col-xl-6 mt-3 mt-xl-0">
-                        <a class="btn btn-outline-primary btn-wide mb-0 mb-sm-2 mr-0" style="padding: 0.65rem 0.875rem;"
-                            href="https://albumentations.ai/docs/">Open documentation</a>
-                    </div>
+                <div>
+                    <a class="btn btn-success btn-wide pl-3 mt-4" href="https://pypistats.org/packages/albumentations"
+                        target="_blank" style="padding: 0.65rem 0.25rem;">
+                        <span><i class="fas fa-download"></i> Downloads (last 30 days)</span>
+                        <span class="btn-divider-left btn-padding" id="downloads-count"></span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://github.com/albumentations-team/albumentations" target="_blank"
+                        class="btn btn-light btn-wide mt-4" style="padding: 0.65rem 0.25rem;">
+                        <span class="btn-padding"><i class="fab fa-github"></i> View on GitHub</span>
+                        <span class="btn-divider-left btn-padding"><i class="fa fa-star"></i> 13.7k</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="mt-4 btn btn-primary btn-wide" href="https://albumentations.ai/docs/">Open documentation</a>
                 </div>
             </div>
-
         </div>
+        <script>
+            function formatDownloads(num) {
+                return (num / 1000000).toFixed(1) + 'M+';
+            }
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const numDownloads = 2049816; // Replace this with your variable
+                const formattedDownloads = formatDownloads(numDownloads);
+                document.getElementById('downloads-count').textContent = formattedDownloads;
+            });
+        </script>
         <div class="col-sm-12 col-lg-4">
             <img src="./assets/img/custom/top_image.jpg" style="width: 350px">
         </div>
@@ -159,7 +173,7 @@
 <div>
     <div class="container space-top-1 space-top-sm-2">
         <div class="w-md-100 w-lg-75 text-center mx-md-auto mb-4">
-            <h2 class="font-weight-medium">Industry leaders use Albumentations</h2>
+            <h2 class="font-weight-medium">Industry users of Albumentations</h2>
         </div>
     </div>
 
