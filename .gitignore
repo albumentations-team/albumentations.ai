@@ -5,3 +5,5 @@ data/cache/*
 mkdocs.dev.yml
 .ruff_cache/
 .vscode/
+
+.pytest_cache/

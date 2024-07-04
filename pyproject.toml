@@ -17,27 +17,6 @@ no_implicit_reexport = true
 disallow_untyped_defs = true
 
 
-[tool.black]
-line-length = 120
-target-version = ["py310"]
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-  | node_modules
-  setup.py
-)/
-'''
-
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
 exclude = [
@@ -81,70 +60,17 @@ target-version = "py310"
 [tool.ruff.lint]
 explicit-preview-rules = true
 
-select = [
-  "F",
-  "E",
-  "W",
-  "C90",
-  "I",
-  "N",
-  "D",
-  "UP",
-  "YTT",
-  "ANN",
-  "ASYNC",
-  "TRIO",
-  "S",
-  "BLE",
-  "FBT",
-  "B",
-  "A",
-  "COM",
-  "CPY",
-  "C4",
-  "DTZ",
-  "T10",
-  "DJ",
-  "EM",
-  "EXE",
-  "ISC",
-  "ICN",
-  "G",
-  "INP",
-  "PIE",
-  "T20",
-  "PYI",
-  "PT",
-  "Q",
-  "RSE",
-  "RET",
-  "SLF",
-  "SLOT",
-  "SIM",
-  "TID",
-  "TCH",
-  "INT",
-  "ARG",
-  "PTH",
-  "TD",
-  "FIX",
-  "ERA",
-  "PD",
-  "PGH",
-  "PL",
-  "TRY",
-  "FLY",
-  "NPY",
-  "PERF",
-  "FURB",
-  "LOG",
-  "RUF",
-]
+select = ["ALL"]
 ignore = [
-  "ANN003",
   "ANN001",
+  "ANN003",
+  "ANN101",
+  "ANN204",
+  "D101",
+  "D102",
   "D103",
   "D104",
+  "D107",
   "ANN201",
   "BLE001",
   "D211",
