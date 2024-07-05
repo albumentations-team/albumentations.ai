@@ -24,8 +24,8 @@ jobs:
           python-version: '3.10'
       - name: Install required Python libraries
         run: pip install lxml
-      - name: Save Google credentials to file
-        run: echo "${{ secrets.GOOGLE_CREDENTIALS }}" > ./google_credentials.json
+      - name: Decode and save Google credentials to file
+        run: echo "${{ secrets.GOOGLE_CREDENTIALS }}" | base64 --decode > ./google_credentials.json
       - name: Print Google credentials file
         run: cat ./google_credentials.json
       - name: Build site
