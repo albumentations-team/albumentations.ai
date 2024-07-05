@@ -30,7 +30,7 @@ RUN cp /albumentations/CONTRIBUTING.md /mkdocs/src/docs/
 
 RUN uv pip install --system --no-cache-dir -r /mkdocs/requirements.txt
 
-RUN uv pip install --system torch
+RUN uv pip install --system torch --index-url https://download.pytorch.org/whl/cpu
 
 WORKDIR /mkdocs/src
 EXPOSE 8000
