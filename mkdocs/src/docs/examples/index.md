@@ -13,6 +13,7 @@
 - [Example of applying Morphological transform](example_documents/)
 - [Example of applying D4 transform](example_d4/)
 - [Example of applying RandomGridShuffle transform](example_gridshuffle/)
+- [Example of applying OverlayElements transform](example_OverlayElements/)
 - [Migrating from torchvision to Albumentations](migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](replay/)
 - [How to save and load parameters of an augmentation pipeline](serialization/)
