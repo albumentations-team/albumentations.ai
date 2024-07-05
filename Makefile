@@ -21,7 +21,7 @@ site-dev: build-builder build-browser-sync
 fetch-data: check-env-github-token build-builder
 	docker-compose run builder fetch-data
 
-prod: check-env-github-token check-env-google-analytics-id build-builder build-mkdocs fetch-data
+prod: check-env-github-token check-env-google-analytics-id fetch-data build-builder build-mkdocs
 	GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} docker-compose run -u $(CURRENT_USER) -v ${PROD_BUILD_DIR}:${PROD_BUILD_DIR} -e BUILD_DIR=$(PROD_BUILD_DIR) builder build --base-url $(PROD_SITE)
 	GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID} docker-compose run -v ${PROD_BUILD_DIR}/docs:/site mkdocs build
 
