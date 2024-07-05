@@ -136,11 +136,11 @@
         </div>
         <script>
             function formatDownloads(num) {
-                return (num / 1000000).toFixed(1) + 'M+';
+                return num.toLocaleString();
             }
 
             document.addEventListener('DOMContentLoaded', (event) => {
-                const numDownloads = 2049816; // Replace this with your variable
+                const numDownloads = parseInt("None");
                 const formattedDownloads = formatDownloads(numDownloads);
                 document.getElementById('downloads-count').textContent = formattedDownloads;
             });
