@@ -19,6 +19,11 @@ def get_pypi_download_count(package_name: str, timeout: int = 120) -> int:
     if not credentials_path.exists():
         raise ValueError("Google credentials file not found.")
 
+    with credentials_path.open("r") as f:
+        logger.info(f"Google credentials: {f.readlines()}")
+        c = json.loads(credentials_path)
+        logger.info(f"Google credentials: {c}")
+
     set_google_credentials_path(credentials_path.as_posix())
 
     command = ["pypinfo", "--json", package_name]
