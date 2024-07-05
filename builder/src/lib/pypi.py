@@ -20,9 +20,16 @@ def get_pypi_download_count(package_name: str, timeout: int = 120) -> int:
         raise ValueError("Google credentials file not found.")
 
     with credentials_path.open("r") as f:
-        logger.info(f"Google credentials: {f.readlines()}")
-        c = json.load(f)
-        logger.info(f"Google credentials: {c}")
+        credentials_content = f.read()
+        logger.info(f"Google credentials raw content: {credentials_content}")
+
+        try:
+            json.loads(credentials_content)
+            logger.info("Google credentials parsed successfully.")
+        except json.JSONDecodeError as e:
+            logger.exception("Failed to parse the Google credentials file as JSON.")
+            logger.exception(f"Error: {e}")
+            raise ValueError(f"Google credentials file is not valid JSON. Error: {e}.") from e
 
     set_google_credentials_path(credentials_path.as_posix())
 
