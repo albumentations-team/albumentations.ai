@@ -13,7 +13,7 @@ def set_google_credentials_path(path: str) -> None:
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path
 
 
-def get_pypi_download_count(package_name: str) -> int:
+def get_pypi_download_count(package_name: str, timeout: int = 120) -> int:
     credentials_path = Path(__file__).parent / "google_credentials.json"
 
     if not credentials_path.exists():
@@ -25,7 +25,7 @@ def get_pypi_download_count(package_name: str) -> int:
 
     command = ["pypinfo", "--json", package_name]
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=timeout)
         output = json.loads(result.stdout)
         return output["rows"][0]["download_count"]
     except subprocess.CalledProcessError as e:
