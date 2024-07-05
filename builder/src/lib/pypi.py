@@ -31,7 +31,7 @@ def get_pypi_download_count(package_name: str, timeout: int = 120) -> int:
     except subprocess.CalledProcessError as e:
         logger.exception(f"Command '{e.cmd}' returned non-zero exit status {e.returncode}.")
         logger.exception(f"Output: {e.output}")
-        raise ValueError(f"Failed to get download count for {package_name}.") from e
+        raise ValueError(f"Failed to get download count. Error: {e}.") from e
     except json.JSONDecodeError as e:
         logger.exception("Failed to parse JSON output.")
         logger.exception(f"Error: {e}")
