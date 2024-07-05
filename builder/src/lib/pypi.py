@@ -21,7 +21,7 @@ def get_pypi_download_count(package_name: str, timeout: int = 120) -> int:
 
     with credentials_path.open("r") as f:
         logger.info(f"Google credentials: {f.readlines()}")
-        c = json.load(credentials_path)
+        c = json.load(f)
         logger.info(f"Google credentials: {c}")
 
     set_google_credentials_path(credentials_path.as_posix())
