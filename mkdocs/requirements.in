@@ -1,6 +1,5 @@
 mkdocs
 mkdocs-material
-mkdocs-jupyter
 Pygments
 mkdocs-autorefs
 mkdocs-awesome-pages-plugin
@@ -13,3 +12,4 @@ pytkdocs
 mkdocstrings[python-legacy]
 mkdocs-material[imaging]
 jupyter
+nbconvert
