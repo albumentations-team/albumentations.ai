@@ -3,3 +3,4 @@ title: Integrations
 nav:
     - HuggingFace: huggingface
     - FiftyOne: fiftyone.md
+    - Roboflow: roboflow

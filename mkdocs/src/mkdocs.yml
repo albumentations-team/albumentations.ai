@@ -9,7 +9,7 @@ plugins:
       htmlmin_opts:
           remove_comments: true
       cache_safe: true
-  - mkdocs-jupyter
+  # - mkdocs-jupyter
   - awesome-pages
   - autorefs
   - mkdocstrings:

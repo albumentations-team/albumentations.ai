@@ -12,3 +12,4 @@ beautifulsoup4
 pytkdocs
 mkdocstrings[python-legacy]
 mkdocs-material[imaging]
+jupyter
