@@ -486,7 +486,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://albumentations.ai/docs/integrations/huggingface/</loc>
+         <lastmod>2024-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/integrations/huggingface/image_classification_albumentations/</loc>
+         <lastmod>2024-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://albumentations.ai/docs/integrations/huggingface/object_detection/</loc>
+         <lastmod>2024-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers/</loc>
          <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
