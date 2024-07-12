@@ -1,4 +1,4 @@
-title: HuggingFace
-
 nav:
-    - Object detection: object_detection.md
+- Home: index.md
+- Image classification: image_classification_albumentations.md
+- Hugging Face Object Detection: object_detection.md

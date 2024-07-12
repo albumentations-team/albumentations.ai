@@ -30,7 +30,7 @@ google-api-core==2.19.1
     # via
     #   google-cloud-bigquery
     #   google-cloud-core
-google-auth==2.31.0
+google-auth==2.32.0
     # via
     #   google-api-core
     #   google-cloud-bigquery
