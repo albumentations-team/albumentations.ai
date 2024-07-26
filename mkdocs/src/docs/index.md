@@ -50,6 +50,7 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Example of applying D4 transform](examples/example_d4/)
 - [Example of applying RandomGridShuffle transform](examples/example_gridshuffle/)
 - [Example of applying OverlayElements transform](examples/example_OverlayElements/)
+- [Example of applying TextImage transform](examples/example_textimage/)
 - [Migrating from torchvision to Albumentations](examples/migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)
