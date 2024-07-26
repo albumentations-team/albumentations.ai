@@ -376,6 +376,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://albumentations.ai/docs/examples/example_textimage/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://albumentations.ai/docs/examples/example_weather_transforms/</loc>
          <lastmod>2024-07-26</lastmod>
          <changefreq>daily</changefreq>
