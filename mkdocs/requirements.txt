@@ -99,7 +99,7 @@ idna==3.7
     #   httpx
     #   jsonschema
     #   requests
-importlib-metadata==8.0.0
+importlib-metadata==8.2.0
     # via
     #   jupyter-client
     #   jupyter-lsp
@@ -190,11 +190,11 @@ jupyter-server==2.14.2
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.2.3
+jupyterlab==4.2.4
     # via notebook
 jupyterlab-pygments==0.3.0
     # via nbconvert
-jupyterlab-server==2.27.2
+jupyterlab-server==2.27.3
     # via
     #   jupyterlab
     #   notebook
@@ -239,7 +239,7 @@ mkdocs-autorefs==1.0.1
     # via
     #   -r requirements.in
     #   mkdocstrings
-mkdocs-awesome-pages-plugin==2.9.2
+mkdocs-awesome-pages-plugin==2.9.3
     # via -r requirements.in
 mkdocs-exclude==1.0.2
     # via -r requirements.in
@@ -247,7 +247,7 @@ mkdocs-get-deps==0.2.0
     # via mkdocs
 mkdocs-macros-plugin==1.0.5
     # via -r requirements.in
-mkdocs-material==9.5.28
+mkdocs-material==9.5.30
     # via -r requirements.in
 mkdocs-material-extensions==1.3.1
     # via mkdocs-material
@@ -255,7 +255,7 @@ mkdocs-minify-plugin==0.8.0
     # via -r requirements.in
 mkdocs-simple-hooks==0.1.5
     # via -r requirements.in
-mkdocstrings==0.25.1
+mkdocstrings==0.25.2
     # via
     #   -r requirements.in
     #   mkdocstrings-python-legacy
@@ -330,7 +330,7 @@ ptyprocess==0.7.0
     # via
     #   pexpect
     #   terminado
-pure-eval==0.2.2
+pure-eval==0.2.3
     # via stack-data
 pycparser==2.22
     # via cffi
@@ -386,7 +386,7 @@ referencing==0.35.1
     #   jsonschema
     #   jsonschema-specifications
     #   jupyter-events
-regex==2024.5.15
+regex==2024.7.24
     # via mkdocs-material
 requests==2.32.3
     # via
@@ -400,13 +400,13 @@ rfc3986-validator==0.1.1
     # via
     #   jsonschema
     #   jupyter-events
-rpds-py==0.19.0
+rpds-py==0.19.1
     # via
     #   jsonschema
     #   referencing
 send2trash==1.8.3
     # via jupyter-server
-setuptools==70.3.0
+setuptools==71.1.0
     # via jupyterlab
 six==1.16.0
     # via
