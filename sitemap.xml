@@ -2,543 +2,543 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://albumentations.ai/docs/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/CONTRIBUTING/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/benchmarking_results/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/faq/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/frameworks_and_libraries/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/release_notes/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/full_reference/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/functional/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/autoalbument/benchmarks/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/blur/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/blur/functional/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/crops/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/crops/functional/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/channel_dropout/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/coarse_dropout/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/functional/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/grid_dropout/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/functional/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/resize/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/core/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/core/bbox_utils/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/core/composition/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/core/keypoints_utils/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/core/serialization/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/core/transforms_interface/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/pytorch/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/api_reference/pytorch/transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/benchmarks/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/custom_model/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/docker/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/faq/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/how_to_use/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/installation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/introduction/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/metrics/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/search_algorithms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/tuning_parameters/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/examples/cifar10/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/examples/cityscapes/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/examples/imagenet/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/examples/list/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/examples/pascal_voc/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/autoalbument/examples/svhn/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_16_bit_tiff/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_OverlayElements/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_bboxes/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_bboxes2/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_chromatic_aberration/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_d4/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_documents/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_domain_adaptation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_gridshuffle/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_hfhub/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_kaggle_salt/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_keypoints/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_mixup/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_multi_target/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_textimage/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_weather_transforms/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/example_xymasking/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/migrating_from_torchvision_to_albumentations/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/pytorch_classification/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/pytorch_semantic_segmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/replay/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/serialization/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/showcase/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/examples/tensorflow-example/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/external_resources/blog_posts_podcasts_talks/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/external_resources/books/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/external_resources/online_courses/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/image_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/installation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/keypoints_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/mask_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/setting_probabilities/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/simultaneous_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/transforms_and_targets/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/integrations/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/integrations/fiftyone/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/integrations/huggingface/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/integrations/huggingface/image_classification_albumentations/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/integrations/huggingface/object_detection/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/introduction/image_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/introduction/why_albumentations/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://albumentations.ai/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation/</loc>
-         <lastmod>2024-08-09</lastmod>
+         <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 <url>
     <loc>https://albumentations.ai</loc>
-    <lastmod>2024-08-09</lastmod>
+    <lastmod>2024-08-10</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/whos_using</loc>
-    <lastmod>2024-08-09</lastmod>
+    <lastmod>2024-08-10</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/people</loc>
-    <lastmod>2024-08-09</lastmod>
+    <lastmod>2024-08-10</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/documentation</loc>
-    <lastmod>2024-08-09</lastmod>
+    <lastmod>2024-08-10</lastmod>
     <changefreq>daily</changefreq>
 </url></urlset>
