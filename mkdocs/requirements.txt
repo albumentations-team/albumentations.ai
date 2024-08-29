@@ -4,10 +4,6 @@ anyio==4.4.0
     # via
     #   httpx
     #   jupyter-server
-appnope==0.1.4
-    # via
-    #   ipykernel
-    #   ipython
 argon2-cffi==23.1.0
     # via jupyter-server
 argon2-cffi-bindings==21.2.0
@@ -16,8 +12,6 @@ arrow==1.3.0
     # via isoduration
 asttokens==2.4.1
     # via stack-data
-astunparse==1.6.3
-    # via pytkdocs
 async-lru==2.0.4
     # via jupyterlab
 attrs==23.2.0
@@ -75,8 +69,6 @@ defusedxml==0.7.1
     # via
     #   cairosvg
     #   nbconvert
-exceptiongroup==1.2.2
-    # via anyio
 executing==2.0.1
     # via stack-data
 fastjsonschema==2.20.0
@@ -99,22 +91,6 @@ idna==3.7
     #   httpx
     #   jsonschema
     #   requests
-importlib-metadata==8.2.0
-    # via
-    #   jupyter-client
-    #   jupyter-lsp
-    #   jupyterlab
-    #   jupyterlab-server
-    #   markdown
-    #   mkdocs
-    #   mkdocs-get-deps
-    #   mkdocstrings
-    #   nbconvert
-importlib-resources==6.4.0
-    # via
-    #   jsonschema
-    #   jsonschema-specifications
-    #   jupyterlab
 ipykernel==6.29.5
     # via
     #   jupyter
@@ -148,7 +124,7 @@ json5==0.9.25
     # via jupyterlab-server
 jsonpointer==3.0.0
     # via jsonschema
-jsonschema==4.23.0
+jsonschema[format-nongpl]==4.23.0
     # via
     #   jupyter-events
     #   jupyterlab-server
@@ -247,7 +223,7 @@ mkdocs-get-deps==0.2.0
     # via mkdocs
 mkdocs-macros-plugin==1.0.5
     # via -r requirements.in
-mkdocs-material==9.5.30
+mkdocs-material[imaging]==9.5.30
     # via -r requirements.in
 mkdocs-material-extensions==1.3.1
     # via mkdocs-material
@@ -255,7 +231,7 @@ mkdocs-minify-plugin==0.8.0
     # via -r requirements.in
 mkdocs-simple-hooks==0.1.5
     # via -r requirements.in
-mkdocstrings==0.25.2
+mkdocstrings[python-legacy]==0.25.2
     # via
     #   -r requirements.in
     #   mkdocstrings-python-legacy
@@ -277,7 +253,7 @@ nbformat==5.10.4
     #   nbconvert
 nest-asyncio==1.6.0
     # via ipykernel
-notebook==7.2.1
+notebook==7.2.2
     # via jupyter
 notebook-shim==0.2.4
     # via
@@ -311,8 +287,6 @@ pillow==10.4.0
     # via
     #   cairosvg
     #   mkdocs-material
-pkgutil-resolve-name==1.3.10
-    # via jsonschema
 platformdirs==4.2.2
     # via
     #   jupyter-core
@@ -358,8 +332,6 @@ pytkdocs==0.16.1
     # via
     #   -r requirements.in
     #   mkdocstrings-python-legacy
-pytz==2024.1
-    # via babel
 pyyaml==6.0.1
     # via
     #   jupyter-events
@@ -406,12 +378,9 @@ rpds-py==0.19.1
     #   referencing
 send2trash==1.8.3
     # via jupyter-server
-setuptools==71.1.0
-    # via jupyterlab
 six==1.16.0
     # via
     #   asttokens
-    #   astunparse
     #   bleach
     #   python-dateutil
     #   rfc3339-validator
@@ -434,8 +403,6 @@ tinycss2==1.3.0
     #   cairosvg
     #   cssselect2
     #   nbconvert
-tomli==2.0.1
-    # via jupyterlab
 tornado==6.4.1
     # via
     #   ipykernel
@@ -463,12 +430,6 @@ traitlets==5.14.3
     #   qtconsole
 types-python-dateutil==2.9.0.20240316
     # via arrow
-typing-extensions==4.12.2
-    # via
-    #   anyio
-    #   async-lru
-    #   ipython
-    #   mkdocstrings
 uri-template==1.3.0
     # via jsonschema
 urllib3==2.2.2
@@ -488,11 +449,5 @@ webencodings==0.5.1
     #   tinycss2
 websocket-client==1.8.0
     # via jupyter-server
-wheel==0.43.0
-    # via astunparse
 widgetsnbextension==4.0.11
     # via ipywidgets
-zipp==3.19.2
-    # via
-    #   importlib-metadata
-    #   importlib-resources
