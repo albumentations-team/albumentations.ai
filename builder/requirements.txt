@@ -20,13 +20,13 @@ click==8.1.7
     # via
     #   -r requirements.in
     #   pypinfo
-cryptography==42.0.8
+cryptography==43.0.1
     # via pyjwt
 deprecated==1.2.14
     # via pygithub
 docopt-ng==0.9.0
     # via staticjinja
-google-api-core==2.19.1
+google-api-core[grpc]==2.19.1
     # via
     #   google-cloud-bigquery
     #   google-cloud-core
@@ -85,7 +85,7 @@ pycparser==2.22
     # via cffi
 pygithub==2.3.0
     # via -r requirements.in
-pyjwt==2.8.0
+pyjwt[crypto]==2.8.0
     # via pygithub
 pynacl==1.5.0
     # via pygithub
