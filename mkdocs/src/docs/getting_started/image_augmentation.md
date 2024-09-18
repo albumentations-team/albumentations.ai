@@ -36,7 +36,7 @@ transform = A.Compose([
 
 ```
 
-In the example, `Compose` receives a list with three augmentations: `A.RandomCrop`, `A.HorizontalFlip`, and `A.RandomBrighntessContrast`. You can find the full list of all available augmentations [in the GitHub repository](https://github.com/albumentations-team/albumentations#pixel-level-transforms) and [in the API Docs](https://albumentations.ai/docs/api_reference/augmentations/). A demo playground that demonstrates how augmentations will transform the input image is available at [https://demo.albumentations.ai](https://demo.albumentations.ai).
+In the example, `Compose` receives a list with three augmentations: `A.RandomCrop`, `A.HorizontalFlip`, and `A.RandomBrighntessContrast`. You can find the full list of all available augmentations [in the GitHub repository](https://github.com/albumentations-team/albumentations#pixel-level-transforms) and [in the API Docs](https://albumentations.ai/docs/api_reference/augmentations/). A demo playground that demonstrates how augmentations will transform the input image is available at [https://explore.albumentations.ai](https://explore.albumentations.ai).
 
 To create an augmentation, you create an instance of the required augmentation class and pass augmentation parameters to it. `A.RandomCrop` receives two parameters, `height` and `width`. `A.RandomCrop(width=256, height=256)` means that `A.RandomCrop` will take an input image, extract a random patch with size 256 by 256 pixels from it and then pass the result to the next augmentation in the pipeline (in this case to `A.HorizontalFlip`).
 
