@@ -44,7 +44,6 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 - [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](examples/example_multi_target/)
 - [Weather augmentations in Albumentations](examples/example_weather_transforms/)
 - [Example of applying XYMasking transform](examples/example_xymasking/)
-- [Example of applying MixUp transform](examples/example_mixup/)
 - [Example of applying ChromaticAberration transform](examples/example_chromatic_aberration/)
 - [Example of applying Morphological transform](examples/example_documents/)
 - [Example of applying D4 transform](examples/example_d4/)

@@ -10,7 +10,6 @@ from make_transforms_docs import (
     Targets,
     get_dual_transforms_info,
     get_image_only_transforms_info,
-    get_mixing_transforms_info,
     make_transforms_targets_links,
     make_transforms_targets_table,
 )
@@ -43,9 +42,21 @@ def extract_benchmarking_results(readme_path: Path) -> str:
     return readme_contents[start_index : end_index if end_index != -1 else None]
 
 
+def filter_out_init_schema(transforms):
+    result = {name: info for name, info in transforms.items() if name != "InitSchema"}
+    return {
+        name: {**info, "subclasses": [sc for sc in info.get("subclasses", []) if sc != "InitSchema"]}
+        for name, info in result.items()
+    }
+
+
 def define_env(env):
     image_only_transforms = dict(get_image_only_transforms_info().items())
-    dual_transforms = dict({**get_mixing_transforms_info(), **get_dual_transforms_info()}.items())
+    dual_transforms = dict(get_dual_transforms_info().items())
+
+    # Filter out InitSchema from both transform types
+    image_only_transforms = filter_out_init_schema(image_only_transforms)
+    dual_transforms = filter_out_init_schema(dual_transforms)
 
     @env.macro
     def image_only_transforms_links(only_anchor=False):

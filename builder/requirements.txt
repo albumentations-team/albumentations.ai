@@ -6,11 +6,11 @@ binary==1.0.0
     # via pypinfo
 bs4==0.0.2
     # via -r requirements.in
-cachetools==5.3.3
+cachetools==5.5.0
     # via google-auth
-certifi==2024.7.4
+certifi==2024.8.30
     # via requests
-cffi==1.16.0
+cffi==1.17.1
     # via
     #   cryptography
     #   pynacl
@@ -20,42 +20,42 @@ click==8.1.7
     # via
     #   -r requirements.in
     #   pypinfo
-cryptography==42.0.8
+cryptography==43.0.1
     # via pyjwt
 deprecated==1.2.14
     # via pygithub
 docopt-ng==0.9.0
     # via staticjinja
-google-api-core==2.19.1
+google-api-core==2.20.0
     # via
     #   google-cloud-bigquery
     #   google-cloud-core
-google-auth==2.32.0
+google-auth==2.35.0
     # via
     #   google-api-core
     #   google-cloud-bigquery
     #   google-cloud-core
-google-cloud-bigquery==3.25.0
+google-cloud-bigquery==3.26.0
     # via pypinfo
 google-cloud-core==2.4.1
     # via google-cloud-bigquery
-google-crc32c==1.5.0
+google-crc32c==1.6.0
     # via google-resumable-media
-google-resumable-media==2.7.1
+google-resumable-media==2.7.2
     # via google-cloud-bigquery
-googleapis-common-protos==1.63.2
+googleapis-common-protos==1.65.0
     # via
     #   google-api-core
     #   grpcio-status
-grpcio==1.64.1
+grpcio==1.66.2
     # via
     #   google-api-core
     #   grpcio-status
-grpcio-status==1.64.1
+grpcio-status==1.66.2
     # via google-api-core
 html5lib==1.1
     # via -r requirements.in
-idna==3.7
+idna==3.10
     # via requests
 jinja2==3.1.4
     # via staticjinja
@@ -65,31 +65,31 @@ packaging==24.1
     # via
     #   google-cloud-bigquery
     #   pypinfo
-platformdirs==4.2.2
+platformdirs==4.3.6
     # via pypinfo
 proto-plus==1.24.0
     # via google-api-core
-protobuf==5.27.2
+protobuf==5.28.2
     # via
     #   google-api-core
     #   googleapis-common-protos
     #   grpcio-status
     #   proto-plus
-pyasn1==0.6.0
+pyasn1==0.6.1
     # via
     #   pyasn1-modules
     #   rsa
-pyasn1-modules==0.4.0
+pyasn1-modules==0.4.1
     # via google-auth
 pycparser==2.22
     # via cffi
-pygithub==2.3.0
+pygithub==2.4.0
     # via -r requirements.in
-pyjwt==2.8.0
+pyjwt==2.9.0
     # via pygithub
 pynacl==1.5.0
     # via pygithub
-pypinfo==21.0.0
+pypinfo==22.0.0
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via google-cloud-bigquery
@@ -105,7 +105,7 @@ six==1.16.0
     # via
     #   html5lib
     #   python-dateutil
-soupsieve==2.5
+soupsieve==2.6
     # via beautifulsoup4
 staticjinja==5.0.0
     # via -r requirements.in
@@ -115,11 +115,11 @@ tinyrecord==0.2.0
     # via pypinfo
 typing-extensions==4.12.2
     # via pygithub
-urllib3==2.2.2
+urllib3==2.2.3
     # via
     #   pygithub
     #   requests
-watchdog==4.0.1
+watchdog==5.0.3
     # via staticjinja
 webencodings==0.5.1
     # via html5lib
