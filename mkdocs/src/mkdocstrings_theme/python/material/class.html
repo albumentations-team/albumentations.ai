@@ -1,79 +1,80 @@
 {% set ns = namespace() %}
 
 {% if config.show_if_no_docstring or class.has_contents %}
-    <div class="doc doc-object doc-class">
-        {% if not root or config.show_root_heading %}
+<div class="doc doc-object doc-class">
+    {% if not root or config.show_root_heading %}
 
-            {% if root %}
-                {% set show_full_path = config.show_root_full_path %}
-            {% else %}
-                {% set show_full_path = config.show_object_full_path %}
-            {% endif %}
+    {% if root %}
+    {% set show_full_path = config.show_root_full_path %}
+    {% else %}
+    {% set show_full_path = config.show_object_full_path %}
+    {% endif %}
 
-            <h{{ heading_level }} id="{{ class.path }}" class="doc doc-heading" data-toc-label="{{ class.name }}">
-                <code>class <strong>
+    <h{{ heading_level }} id="{{ class.path }}" class="doc doc-heading" data-toc-label="{{ class.name }}">
+        <code>class <strong>
                     {% if show_full_path %}{{ class.path }}{% else %}{{ class.name }}{% endif %}</strong></code>
-                <code>
+        <code>
                     {% for child in class.children %}
-                        {% if ns.line_start is not defined %}
-                            {% set ns.line_start = child.source.line_start %}
-                        {% endif %}
-                        {% if child.category == "method" and child.name == "__init__" %}
-                            {% with signature = child.signature, type="class" %}
-                                {% include "signature.html" with context %}
-                            {% endwith %}
+                        {% if child.name != "InitSchema" %}  {# Skip InitSchema class #}
+                            {% if ns.line_start is not defined %}
+                                {% set ns.line_start = child.source.line_start %}
+                            {% endif %}
+                            {% if child.category == "method" and child.name == "__init__" %}
+                                {% with signature = child.signature, type="class" %}
+                                    {% include "signature.html" with context %}
+                                {% endwith %}
+                            {% endif %}
                         {% endif %}
                     {% endfor %}
                 </code> {% if ns.line_start is defined %}<span class="doc-github-link">
-    <a
-            href="https://github.com/albumentations-team/{% if class.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/main/{{ class.relative_file_path }}#L{{ ns.line_start }}"
-            target="_blank">[view source on GitHub]</a>
-</span>{% endif %}<a class="headerlink" href="#{{ class.path }}" title="Permanent link">¶</a>
-                {% with properties = class.properties %}
-                    {% include "properties.html" with context %}
-                {% endwith %}
-            </h{{ heading_level }}>
+            <a href="https://github.com/albumentations-team/{% if class.path.startswith('albumentations_experimental') %}albumentations_experimental{% else %}albumentations{% endif %}/blob/main/{{ class.relative_file_path }}#L{{ ns.line_start }}"
+                target="_blank">[view source on GitHub]</a>
+        </span>{% endif %}<a class="headerlink" href="#{{ class.path }}" title="Permanent link">¶</a>
+        {% with properties = class.properties %}
+        {% include "properties.html" with context %}
+        {% endwith %}
+    </h{{ heading_level }}>
 
-        {% else %}
-            {% if config.show_root_toc_entry %}
-                <h{{ heading_level }} class="hidden-toc" href="#{{ class.path }}" id="{{ class.path }}"
-                                      data-toc-label="{{ class.path }}"
-                                      style="visibility: hidden; width: 0; height: 0;">
-                </h{{ heading_level }}>
-            {% endif %}
-            {% set heading_level = heading_level - 1 %}
+    {% else %}
+    {% if config.show_root_toc_entry %}
+    <h{{ heading_level }} class="hidden-toc" href="#{{ class.path }}" id="{{ class.path }}"
+        data-toc-label="{{ class.path }}" style="visibility: hidden; width: 0; height: 0;">
+    </h{{ heading_level }}>
+    {% endif %}
+    {% set heading_level = heading_level - 1 %}
+    {% endif %}
+
+    <div class="class-signature">
+    </div>
+    <div class="doc doc-contents {% if root %}first{% endif %}">
+        {% with docstring_sections = class.docstring_sections %}
+        {% include "docstring.html" with context %}
+        {% endwith %}
+
+        <div class="admonition info">
+            <p class="admonition-title"><strong>Interactive Tool Available!</strong></p>
+            <p>
+                <strong>Explore this transform visually and adjust parameters interactively using this tool:</strong>
+            </p>
+            <p>
+                <a class="md-button md-button--primary"
+                    href="https://explore.albumentations.ai/transform/{{ class.name }}" target="_blank">Open Tool</a>
+            </p>
+        </div>
+
+        {% if config.show_source and class.source %}
+        <details class="quote">
+            <summary>Source code in <code>{{ class.relative_file_path }}</code></summary>
+            {{ class.source.code|highlight(language="python") }}
+        </details>
         {% endif %}
 
-        <div class="class-signature">
-        </div>
-        <div class="doc doc-contents {% if root %}first{% endif %}">
-            {% with docstring_sections = class.docstring_sections %}
-                {% include "docstring.html" with context %}
-            {% endwith %}
-
-            <div class="admonition info">
-                <p class="admonition-title"><strong>Interactive Tool Available!</strong></p>
-                <p>
-                    <strong>Explore this transform visually and adjust parameters interactively using this tool:</strong>
-                </p>
-                <p>
-                    <a class="md-button md-button--primary" href="https://huggingface.co/spaces/qubvel-hf/albumentations-demo?transform={{ class.name }}" target="_blank">Open Tool</a>
-                </p>
-            </div>
-
-            {% if config.show_source and class.source %}
-                <details class="quote">
-                    <summary>Source code in <code>{{ class.relative_file_path }}</code></summary>
-                    {{ class.source.code|highlight(language="python") }}
-                </details>
-            {% endif %}
-
-            {% with obj = class %}
-                {% set root = False %}
-                {% set heading_level = heading_level + 1 %}
-                {% include "children.html" with context %}
-            {% endwith %}
-        </div>
+        {% with obj = class %}
+        {% set root = False %}
+        {% set heading_level = heading_level + 1 %}
+        {# {% include "children.html" with context %} #}
+        {% endwith %}
     </div>
+</div>
 
 {% endif %}

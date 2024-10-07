@@ -80,5 +80,7 @@ transform = A.Compose([
     A.HorizontalFlip(p=0.5),
 ])
 ```
+
 ## Rigorous testing
+
 A bug in the augmentation pipeline could easily go unnoticed. A buggy pipeline could silently corrupt input data. There won't be any exceptions and code failures, but the performance of trained neural networks will degrade because they received a garbage input during training. Augmentation libraries usually have large test suites that capture regressions during development. Also large user base helps to find unnoticed bugs and report them to developers.

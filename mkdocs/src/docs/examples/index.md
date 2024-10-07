@@ -8,7 +8,6 @@
 - [Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints](example_multi_target/)
 - [Weather augmentations in Albumentations](example_weather_transforms/)
 - [Example of applying XYMasking transform](example_xymasking/)
-- [Example of applying MixUp transform](example_mixup/)
 - [Example of applying ChromaticAberration transform](example_chromatic_aberration/)
 - [Example of applying Morphological transform](example_documents/)
 - [Example of applying D4 transform](example_d4/)
