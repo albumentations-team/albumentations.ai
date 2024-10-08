@@ -6,6 +6,5 @@ nav:
   - crops
   - dropout
   - geometric
-  - mixing
-  - domain_adaptation.md
+  - domain_adaptation
   - functional.md
