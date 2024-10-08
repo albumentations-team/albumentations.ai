@@ -15,7 +15,7 @@
                     {% if show_full_path %}{{ class.path }}{% else %}{{ class.name }}{% endif %}</strong></code>
         <code>
                     {% for child in class.children %}
-                        {% if child.name != "InitSchema" %}  {# Skip InitSchema class #}
+                        {% if "InitSchema" not in child.name %}  {# Skip InitSchema class #}
                             {% if ns.line_start is not defined %}
                                 {% set ns.line_start = child.source.line_start %}
                             {% endif %}
