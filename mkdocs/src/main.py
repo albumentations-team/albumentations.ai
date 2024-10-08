@@ -43,9 +43,9 @@ def extract_benchmarking_results(readme_path: Path) -> str:
 
 
 def filter_out_init_schema(transforms):
-    result = {name: info for name, info in transforms.items() if name != "InitSchema"}
+    result = {name: info for name, info in transforms.items() if "InitSchema" not in name}
     return {
-        name: {**info, "subclasses": [sc for sc in info.get("subclasses", []) if sc != "InitSchema"]}
+        name: {**info, "subclasses": [sc for sc in info.get("subclasses", []) if "InitSchema" not in sc]}
         for name, info in result.items()
     }
 
