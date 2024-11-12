@@ -1,39 +1,24 @@
 services:
-  builder:
-    container_name: builder
+  website:
+    container_name: website
     build:
       context: .
-      dockerfile: ./builder/Dockerfile
+      dockerfile: ./website/Dockerfile
     tty: true
     environment:
-      - BASE_URL=http://localhost:3000
-      - DATA_DIR=/data
-      - BUILD_DIR=/_build
-      - CACHE_DIR=/_cache
-      - SEARCHPATH=html
-      - REPOSITORY=albumentations-team/albumentations
-      - ADDITIONAL_REPOSITORIES=albumentations-team/albumentations_examples albumentations-team/albumentations.ai
+      - NODE_ENV=development
+      - PORT=3000
       - GITHUB_TOKEN
-      - MKDOCS_PORT
       - GOOGLE_ANALYTICS_ID
+      - NEXT_TELEMETRY_DISABLED=1
     volumes:
       - ./data:/data
-      # - ./builder/src:/builder/src
-      - ./html:/builder/src/html
-      - _build:/_build
-      - _cache:/_cache
-    command:
-      build --use-reloader
-  browser_sync:
-    container_name: browser_sync
-    build:
-      context: .
-      dockerfile: ./browser_sync/Dockerfile
+      - ./website:/website  # Mount entire builder directory for hot reloading
+      - ./website/node_modules:/website/node_modules
     ports:
-      - "127.0.0.1:${PORT}:3000"
-    tty: true
-    volumes:
-      - _build:/_build
+      - "127.0.0.1:3000:3000"  # Next.js development server
+    command: run dev
+
   mkdocs:
     container_name: mkdocs
     build:
@@ -51,4 +36,4 @@ services:
 volumes:
   _build:
   _cache:
-  _img_industry_cache:
+  node_modules:  # New volume for node_modules

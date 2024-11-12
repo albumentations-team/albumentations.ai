@@ -11,3 +11,7 @@ mkdocs.dev.yml
 albumentationswebsite-62c20277d30c.json
 
 google_credentials.json
+
+website/node_modules/
+website/.yarn/
+website/.next/
