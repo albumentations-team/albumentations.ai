@@ -4,7 +4,11 @@
 
 @layer components {
   .btn-stats {
-    @apply flex items-center justify-between bg-white border border-gray-300 rounded-md py-2 px-4 text-gray-700 hover:bg-gray-50 transition-colors;
+    @apply flex items-center justify-between w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium;
   }
 
   .industry-carousel {

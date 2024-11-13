@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './Button'
 import { MobileMenu } from './MobileMenu'
+import SponsorButton from './SponsorButton'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -24,7 +25,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/img/custom/albumentations_logo.png"
+              src="/assets/albumentations_logo.png"
               alt="Albumentations"
               width={32}
               height={32}
@@ -56,6 +57,8 @@ export default function Navbar() {
                 </Link>
               )
             ))}
+
+            <SponsorButton />
 
             <Button
               href="https://github.com/albumentations-team/albumentations"

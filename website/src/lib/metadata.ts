@@ -28,7 +28,7 @@ export function generateMetadata({
       siteName: 'Albumentations',
       images: [
         {
-          url: `${baseUrl}/assets/img/custom/albumentations_card.png`,
+          url: "assets/albumentations_card.png",
           width: 1200,
           height: 630,
           alt: 'Albumentations',
@@ -43,7 +43,7 @@ export function generateMetadata({
       creator: '@viglovikov',
       title: title || defaultTitle,
       description: description || defaultDescription,
-      images: [`${baseUrl}/assets/img/custom/albumentations_card.png`],
+      images: ["assets/albumentations_card.png"],
     },
     robots: {
       index: true,
