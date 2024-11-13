@@ -14,18 +14,24 @@ const features: Feature[] = [
   {
     title: 'Different tasks',
     description: 'Albumentations supports different computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, and pose estimation.',
-    image: '/assets/img/custom/tasks.png',
+    image: '/assets/custom/tasks.png',
     imageAlt: 'Computer vision tasks',
     reverse: false,
   },
   {
     title: 'Different domains',
     description: 'Albumentations works well with data from different domains: photos, medical images, satellite imagery, manufacturing and industrial applications, Generative Adversarial Networks.',
-    image: '/assets/img/custom/domains.png',
+    image: '/assets/custom/domains.png',
     imageAlt: 'Different domains',
     reverse: true,
   },
-  // Add more features...
+  {
+    title: 'Seamless integration with deep learning frameworks',
+    description: 'Albumentations can work with various deep learning frameworks such as PyTorch and Keras. The library is a part of the PyTorch ecosystem. MMDetection and YOLOv5 use Albumentations.',
+    image: '/assets/custom/deep_learning_frameworks.png',
+    imageAlt: 'Deep learning frameworks',
+    reverse: false,
+  },
 ]
 
 function FeatureBlock({ title, description, image, imageAlt, reverse }: Feature) {
