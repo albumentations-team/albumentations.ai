@@ -15,3 +15,5 @@ google_credentials.json
 website/node_modules/
 website/.yarn/
 website/.next/
+
+website/.env.local

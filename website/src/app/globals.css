@@ -2,20 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .btn-stats {
+    @apply flex items-center justify-between bg-white border border-gray-300 rounded-md py-2 px-4 text-gray-700 hover:bg-gray-50 transition-colors;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .industry-carousel {
+    @apply py-8;
+  }
+
+  .industry-carousel .swiper-button-next,
+  .industry-carousel .swiper-button-prev {
+    @apply text-blue-600 hover:text-blue-800 transition-colors;
+  }
+
+  .tooltip {
+    @apply invisible absolute z-10 py-2 px-3 text-sm text-white bg-gray-900 rounded-lg opacity-0 transition-opacity duration-300;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible opacity-100;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-gray-900 transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-blue-600 hover:text-blue-700;
+  }
 }
