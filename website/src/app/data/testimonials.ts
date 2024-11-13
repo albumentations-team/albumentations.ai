@@ -6,6 +6,28 @@ export interface Testimonials {
   }
 
 
+  export const featuredTestimonials: Testimonials[] = [
+    {
+        imageUrl: '/assets/testimonials/datature.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7261972596458438656/',
+        platform: 'linkedin',
+        note: "CEO of Datature"
+    },
+    {
+        imageUrl: '/assets/testimonials/christof_henkel.png',
+        socialUrl: 'https://x.com/kagglingdieter/status/1775760029754253659',
+        platform: 'twitter',
+        note: "Kaggle Competitions Grandmaster. Top 1 in the world."
+    },
+    {
+        imageUrl: '/assets/testimonials/alexandr_simonyan.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7259736304416874497/',
+        platform: 'linkedin',
+        note: "Computer Vision Engineer"
+    },
+  ]
+
+
 
 export const testimonials: Testimonials[] = [
     {
@@ -38,7 +60,8 @@ export const testimonials: Testimonials[] = [
     {
         imageUrl: '/assets/testimonials/alexandr_simonyan.png',
         socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7259736304416874497/',
-        platform: 'linkedin'
+        platform: 'linkedin',
+        note: "Computer Vision Engineer"
     },
     {
         imageUrl: '/assets/testimonials/anmol_sharan.png',
@@ -49,7 +72,7 @@ export const testimonials: Testimonials[] = [
         imageUrl: '/assets/testimonials/christof_henkel.png',
         socialUrl: 'https://x.com/kagglingdieter/status/1775760029754253659',
         platform: 'twitter',
-        note: "Kaggle CompetitionsGrandmaster. Top 1 in the world."
+        note: "Kaggle Competitions Grandmaster. Top 1 in the world."
     },
     {
         imageUrl: '/assets/testimonials/deepneuralnetwork.png',
