@@ -7,22 +7,14 @@ import { Section } from '@/app/components/Section'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-interface Company {
-  name: string
-  url: string
-  imgFilename: string
-}
-
-const companies: Company[] = [
-  // Add your company data here
-]
+import { industryUsers } from '@/app/data/industry_users'
 
 export default function IndustryUsers() {
   return (
     <Section title="Industry users of Albumentations">
       <Swiper
         modules={[Autoplay, Navigation]}
-        spaceBetween={30}
+        spaceBetween={10}
         slidesPerView={5}
         autoplay={{
           delay: 3000,
@@ -31,37 +23,39 @@ export default function IndustryUsers() {
         navigation
         loop
         breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 5 },
+          320: { slidesPerView: 1, spaceBetween: 10  },
+          640: { slidesPerView: 2, spaceBetween: 15 },
+          768: { slidesPerView: 3, spaceBetween: 15 },
+          1024: { slidesPerView: 5, spaceBetween: 20 },
         }}
-        className="industry-carousel"
+        className="industry-carousel px-2"
       >
-        {companies.map((company) => (
+        {industryUsers.map((company) => (
           <SwiperSlide key={company.name}>
-            <div className="h-[200px] flex items-center justify-center px-4">
+            {/* Increased height and added better flex alignment */}
+            <div className="h-[160px] flex items-center justify-center">
               <a
                 href={company.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full"
+                className="block w-full px-4 transition-transform hover:scale-105"
               >
                 <Image
-                  src={`/assets/img/industry/${company.imgFilename}`}
+                  src={`/assets/industry/${company.img_filename}`}
                   alt={company.name}
-                  width={200}
+                  width={100}
                   height={100}
-                  className="w-full h-auto object-contain"
+                  className="w-auto h-auto max-h-[100px] mx-auto object-contain"
                 />
               </a>
             </div>
-            <div className="text-center mt-4 hidden md:block">
+            {/* Enhanced company name styling */}
+            <div className="text-center mt-6 hidden md:block">
               <a
                 href={company.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors"
               >
                 {company.name}
               </a>

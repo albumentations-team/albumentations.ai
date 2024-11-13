@@ -60,7 +60,7 @@ export default function HeroSection({ starsCount, downloadsCount }: HeroSectionP
                   View on GitHub
                 </span>
                 <span className="border-l pl-4 font-medium">
-                  <i className="fa fa-star text-yellow-400 mr-1" />
+                  <i className="fa fa-star mr-1" />
                   {formatNumber(starsCount)}
                 </span>
               </a>

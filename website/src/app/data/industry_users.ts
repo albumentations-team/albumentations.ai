@@ -1,4 +1,11 @@
-[
+
+export interface Company {
+  name: string
+  url: string
+  img_filename: string
+}
+
+export const industryUsers: Company[] = [
   {
     "url": "https://www.apple.com/",
     "name": "Apple",
