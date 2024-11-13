@@ -9,6 +9,8 @@ import Citation from '@/app/components/Citation'
 import { getGitHubStats } from '@/lib/github'
 import { getDownloadsCount } from '@/lib/download'
 import WhySection from './components/WhySection'
+import Sponsors from './components/Sponsors'
+import TestimonialPreview from './components/TestimonialPreview'
 
 export const metadata: Metadata = generateMetadata()
 
@@ -22,7 +24,9 @@ export default async function HomePage() {
         starsCount={starsCount}
         downloadsCount={downloadsCount}
       />
+      <Sponsors />
       <WhySection />
+      <TestimonialPreview />
       <IndustryUsers />
       <Features />
       <GettingStarted />
