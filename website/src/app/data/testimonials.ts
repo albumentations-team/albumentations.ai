@@ -14,11 +14,6 @@ export const testimonials: Testimonials[] = [
       platform: 'linkedin'  // or 'linkedin', etc.
     },
     {
-        imageUrl: '/assets/testimonials/venkatkumar_r.png',
-        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7262002222035546112/',
-        platform: 'linkedin'
-    },
-    {
         imageUrl: '/assets/testimonials/datature.png',
         socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7261972596458438656/',
         platform: 'linkedin',
@@ -60,5 +55,10 @@ export const testimonials: Testimonials[] = [
         imageUrl: '/assets/testimonials/deepneuralnetwork.png',
         socialUrl: 'https://www.reddit.com/r/computervision/comments/1gju7oe/comment/lvh4w6s/',
         platform: 'reddit'
+    },
+    {
+        imageUrl: '/assets/testimonials/venkatkumar_r.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7262002222035546112/',
+        platform: 'linkedin'
     }
-  ]
+]
