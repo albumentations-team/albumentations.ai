@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/app/components/Button'
+import { useEffect, useState } from 'react'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -16,7 +17,15 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
-  return createPortal(
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  const menuContent = (
     <AnimatePresence>
       {isOpen && (
         <>
@@ -91,7 +100,8 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
           </motion.div>
         </>
       )}
-    </AnimatePresence>,
-    document.body
+    </AnimatePresence>
   )
+
+  return mounted ? createPortal(menuContent, document.body) : null
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { Section } from './Section'
 import { sponsors } from '../data/sponsors'
 
 export default function Sponsors() {

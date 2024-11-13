@@ -1,4 +1,4 @@
-export interface Sponsors {
+export interface Sponsor {
     name: string
     tier: string
     url: string
@@ -7,7 +7,7 @@ export interface Sponsors {
   }
 
 
-export const sponsors: Sponsors[] = [
+export const sponsors: Sponsor[] = [
     {
       name: 'Datature',
       tier: 'silver',

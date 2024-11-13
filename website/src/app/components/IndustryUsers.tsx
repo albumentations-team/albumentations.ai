@@ -41,7 +41,7 @@ export default function IndustryUsers() {
                 className="block w-full px-4 transition-transform hover:scale-105"
               >
                 <Image
-                  src={`/assets/industry/${company.img_filename}`}
+                  src={`/assets/industry/${company.imgFilename}`}
                   alt={company.name}
                   width={100}
                   height={100}

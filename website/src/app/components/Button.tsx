@@ -35,7 +35,7 @@ export function Button({
     'outline-primary': 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50',
     'outline-success': 'border-2 border-green-600 text-green-600 hover:bg-green-50',
     light: 'bg-gray-100 text-gray-800 hover:bg-gray-200',
-    stats: 'bg-white border text-gray-700 hover:bg-gray-50 w-full md:w-auto'
+    stats: 'bg-white border text-gray-700 hover:bg-gray-50 w-full md:w-auto',
   }
 
   const sizes = {

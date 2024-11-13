@@ -17,3 +17,5 @@ website/.yarn/
 website/.next/
 
 website/.env.local
+
+*.ipynb

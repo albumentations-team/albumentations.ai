@@ -10,7 +10,6 @@ import SponsorButton from './SponsorButton'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/docs', label: 'Documentation' },
-  { href: '/whos_using', label: "Who's using" },
   { href: 'https://explore.albumentations.ai', label: 'Explore', external: true },
   { href: '/people', label: 'People' },
 ]
