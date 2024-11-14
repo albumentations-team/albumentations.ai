@@ -19,21 +19,16 @@ services:
       - "127.0.0.1:3000:3000"  # Next.js development server
     command: run dev
 
-  mkdocs:
-    container_name: mkdocs
+  docs:
+    container_name: docs
     build:
       context: .
-      dockerfile: ./mkdocs/Dockerfile
+      dockerfile: ./docs/Dockerfile
     ports:
       - "127.0.0.1:${MKDOCS_PORT}:8000"
     tty: true
     environment:
       - GOOGLE_ANALYTICS_ID
-      - CONFIG_FILE=/mkdocs/src/mkdocs.yml
+      - CONFIG_FILE=/docs/src/mkdocs.yml
     command:
       serve --dev-addr 0.0.0.0:8000
-
-volumes:
-  _build:
-  _cache:
-  node_modules:  # New volume for node_modules

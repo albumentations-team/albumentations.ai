@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy package files
-COPY ./website/package.json ./website/package-lock.json* ./
+COPY ./website/package.json ./
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Set environment variables
 ENV NODE_ENV=development
@@ -23,6 +23,6 @@ ENV PATH /website/node_modules/.bin:$PATH
 # We'll mount everything at runtime
 EXPOSE 3000
 
-# Use npm commands directly
-ENTRYPOINT ["npm"]
+# Use yarn commands directly
+ENTRYPOINT ["yarn"]
 CMD ["run", "dev"]

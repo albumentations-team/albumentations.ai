@@ -5,6 +5,7 @@ import "./globals.css";
 import { generateMetadata } from "@/lib/metadata";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,6 +44,7 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
     </html>
   );
 }

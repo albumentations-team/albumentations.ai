@@ -9,25 +9,21 @@ PROD_BUILD_DIR = _build
 export PORT
 export MKDOCS_PORT
 
-.PHONY: dev prod fetch-data build-website build-docs build-all check-env
+.PHONY: dev prod build-website build-docs build-all check-env
 
 # Development commands
 dev: build-all
 	docker-compose up -V website docs
 
 website-dev: build-website
-	cd website && npm install
+	cd website && yarn install
 	docker-compose up website
 
 docs-dev: build-docs
 	docker-compose up docs
 
-# Data management
-fetch-data: check-env-github-token
-	cd website && npm run fetch-data
-
 # Production build commands
-prod: check-env fetch-data build-all generate-sitemap
+prod: check-env build-all generate-sitemap
 	docker-compose run -u $(CURRENT_USER) \
 		-v ${PROD_BUILD_DIR}:${PROD_BUILD_DIR} \
 		-e BUILD_DIR=$(PROD_BUILD_DIR) \

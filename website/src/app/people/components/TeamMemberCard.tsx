@@ -18,7 +18,7 @@ export function TeamMemberCard({ member, size = 'normal' }: { member: TeamMember
             className="img-fluid"
           />
         </div>
-        <h4 className={`h5 h-[60px] ${size === 'large' ? 'text-xl' : ''}`}>{member.name}</h4>
+        <h4 className={`h5 h-[60px] font-bold ${size === 'large' ? 'text-2xl' : 'text-xl'}`}>{member.name}</h4>
         <ul className="list-none flex gap-2 mb-0 mt-2">
           {member.linkedin && (
             <li>
