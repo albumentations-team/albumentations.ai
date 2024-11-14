@@ -76,6 +76,20 @@ export function TeamMemberCard({ member, size = 'normal' }: { member: TeamMember
               </Button>
             </li>
           )}
+          {member.google_scholar && (
+            <li>
+              <Button
+                href={`https://scholar.google.com/citations?user=${member.google_scholar}`}
+                variant="outline-primary"
+                size="sm"
+                icon="fab fa-google"
+                external
+                className="rounded"
+              >
+                {''}
+              </Button>
+            </li>
+          )}
 
           {member.instagram && (
             <li>

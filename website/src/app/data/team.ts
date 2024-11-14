@@ -6,6 +6,7 @@ export interface TeamMember {
     linkedin: string
     kaggle: string
     instagram?: string
+    google_scholar?: string
   }
 
 export const team: TeamMember[] = [
@@ -16,7 +17,8 @@ export const team: TeamMember[] = [
         "github": "ternaus",
         "linkedin": "iglovikov",
         "instagram": "ternaus",
-        "kaggle": "iglovikov"
+        "kaggle": "iglovikov",
+        "google_scholar": "vkjh9X0AAAAJ"
     }
 ]
 
