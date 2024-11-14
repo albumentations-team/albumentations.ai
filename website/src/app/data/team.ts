@@ -4,6 +4,7 @@ export interface TeamMember {
     twitter: string,
     github: string,
     linkedin: string
+    instagram?: string
   }
 
 export const team: TeamMember[] = [
@@ -12,7 +13,8 @@ export const team: TeamMember[] = [
         "photo": "iglovikov.jpg",
         "twitter": "viglovikov",
         "github": "ternaus",
-        "linkedin": "iglovikov"
+        "linkedin": "iglovikov",
+        "instagram": "ternaus"
     }
 ]
 

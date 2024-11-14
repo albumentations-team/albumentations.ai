@@ -24,7 +24,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/albumentations_logo.png"
+              src="/favicon.png"
               alt="Albumentations"
               width={32}
               height={32}

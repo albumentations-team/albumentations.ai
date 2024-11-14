@@ -7,6 +7,8 @@ import Link from 'next/link'
 export default function WhySection() {
   const [isTooltipVisible, setTooltipVisible] = useState(false)
 
+  const benchmarkUrl = "https://albumentations.ai/docs/benchmarking_results/"
+
   return (
     <Section
       title="Why Albumentations"
@@ -28,9 +30,9 @@ export default function WhySection() {
             <h3 className="text-xl font-medium mb-3">Lightning Fast</h3>
             <p className="text-gray-600">
               Up to 10x faster than other libraries.{' '}
-              <Link href="/benchmark" className="text-blue-600 hover:underline">
+              <a href={benchmarkUrl} className="text-blue-600 hover:underline">
                 See benchmarks
-              </Link>
+              </a>
             </p>
           </div>
 
@@ -89,13 +91,13 @@ export default function WhySection() {
 
         {/* Benchmark CTA */}
         <div className="text-center mt-8">
-          <Link
-            href="/benchmark"
+          <a
+            href={benchmarkUrl}
             className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
           >
             Compare Albumentations with other libraries
             <i className="fas fa-arrow-right" />
-          </Link>
+          </a>
         </div>
       </div>
     </Section>
