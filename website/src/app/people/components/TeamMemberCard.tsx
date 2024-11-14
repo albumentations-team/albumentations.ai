@@ -62,6 +62,21 @@ export function TeamMemberCard({ member, size = 'normal' }: { member: TeamMember
               </Button>
             </li>
           )}
+          {member.kaggle && (
+            <li>
+              <Button
+                href={`https://kaggle.com/${member.kaggle}`}
+                variant="outline-primary"
+                size="sm"
+                icon="fab fa-kaggle"
+                external
+                className="rounded"
+              >
+                {''}
+              </Button>
+            </li>
+          )}
+
           {member.instagram && (
             <li>
               <Button
