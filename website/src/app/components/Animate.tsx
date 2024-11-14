@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, type Variant } from 'framer-motion'
+import { motion} from 'framer-motion'
 import { type ReactNode } from 'react'
 
 interface AnimateProps {
@@ -10,20 +10,20 @@ interface AnimateProps {
   delay?: number
 }
 
-const animations: Record<string, { initial: Variant; animate: Variant }> = {
+const animations = {
   fadeIn: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
+    initial: { opacity: 0 } as const,
+    animate: { opacity: 1 } as const,
   },
   slideUp: {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 20 } as const,
+    animate: { opacity: 1, y: 0 } as const,
   },
   slideIn: {
-    initial: { opacity: 0, x: -20 },
-    animate: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: -20 } as const,
+    animate: { opacity: 1, x: 0 } as const,
   },
-}
+} as const
 
 export function Animate({
   children,

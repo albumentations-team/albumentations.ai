@@ -11,8 +11,7 @@ RUN git clone --depth=1 --branch main --single-branch https://github.com/albumen
 
 RUN git clone --depth=1 --branch master --single-branch https://github.com/albumentations-team/autoalbument.git /autoalbument
 
-
-RUN mkdir /mkdocs
+RUN mkdir /docs
 
 COPY ./docs/requirements.txt /docs/requirements.txt
 COPY ./docs/entrypoint.sh /docs/entrypoint.sh
@@ -39,7 +38,7 @@ RUN wget -O /docs/src/docs/integrations/huggingface/object_detection.md \
 RUN wget -O /docs/src/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.ipynb \
     https://raw.githubusercontent.com/roboflow/notebooks/main/notebooks/train-rt-detr-on-custom-dataset-with-transformers.ipynb
 
-ENV PYTHONPATH "${PYTHONPATH}:/mkdocs/src:/albumentations"
+ENV PYTHONPATH "${PYTHONPATH}:/docs/src:/albumentations"
 
 RUN cp /albumentations/CONTRIBUTING.md /docs/src/docs/
 

@@ -15,7 +15,7 @@ export default function Sponsors() {
             Community-Driven Project, Supported By
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Albumentations thrives on developer contributions. We appreciate our sponsors who help sustain the project's infrastructure.
+            Albumentations thrives on developer contributions. We appreciate our sponsors who help sustain the project`&apos;`s infrastructure.
           </p>
         </div>
 
