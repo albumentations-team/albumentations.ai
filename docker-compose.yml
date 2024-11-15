@@ -4,12 +4,16 @@ services:
     build:
       context: .
       dockerfile: ./website/Dockerfile
+      args:
+        - NODE_ENV=${NODE_ENV:-development}
+        - BUILD_DIR=${BUILD_DIR:-/_build}
     tty: true
     environment:
-      - NODE_ENV=development
-      - PORT=3000
+      - NODE_ENV=${NODE_ENV:-development}
+      - BUILD_DIR=${BUILD_DIR:-/_build}
+      - PORT=${PORT:-3000}
+      - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
       - GITHUB_TOKEN
-      - GOOGLE_ANALYTICS_ID
       - NEXT_TELEMETRY_DISABLED=1
     volumes:
       - ./data:/data
@@ -19,7 +23,7 @@ services:
       - _cache:/_cache
     ports:
       - "127.0.0.1:3000:3000"  # Next.js development server
-    command: run dev
+    command: yarn dev
 
   docs:
     container_name: docs
@@ -30,13 +34,13 @@ services:
       - "127.0.0.1:${MKDOCS_PORT}:8000"
     tty: true
     environment:
-      - GOOGLE_ANALYTICS_ID
+      - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
       - CONFIG_FILE=/docs/src/mkdocs.yml
     command:
       serve --dev-addr 0.0.0.0:8000
     volumes:
-      - ${PWD}/_build:/_build      # Changed to use PWD
-      - ${PWD}/_cache:/_cache      # Changed to use PWD
+      - ./_build:/_build
+      - ./_cache:/_cache
 
 
 volumes:

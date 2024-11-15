@@ -1,37 +1,41 @@
 SHELL := /bin/bash
 
 CURRENT_DIR := $(shell pwd)
-PROD_BUILD_DIR := $(CURRENT_DIR)/_build
+BUILD_DIR := $(CURRENT_DIR)/_build
 
 PORT = 3000
 MKDOCS_PORT = 8000
 PROD_SITE = https://albumentations.ai
 CURRENT_USER := $(shell id -u):$(shell id -g)
-PROD_BUILD_DIR = _build
+
 
 export PORT
 export MKDOCS_PORT
+export NODE_ENV
 
 .PHONY: dev prod build-website build-docs build-all check-env
 
 # Development commands
+dev: export NODE_ENV=development
 dev: build-all
 	docker-compose up -V website docs
 
+website-dev: export NODE_ENV=development
 website-dev: build-website
-	cd website && yarn install
 	docker-compose up website
 
 docs-dev: build-docs
 	docker-compose up docs
 
 # Production build commands
+prod: export NODE_ENV=production
 prod: check-env build-all
 	docker-compose run -u $(CURRENT_USER) \
-		-v "$(PROD_BUILD_DIR):/_build" \
-		-e BUILD_DIR=/_build \
+		-v "$(BUILD_DIR):$(BUILD_DIR)" \
+		-e BUILD_DIR=$(BUILD_DIR) \
+		-e CURRENT_DIR=$(CURRENT_DIR) \
 		website yarn build
-	docker-compose run -v "$(PROD_BUILD_DIR)/docs:/site" docs build
+	# docker-compose run -v "$(BUILD_DIR)/docs:/site" docs build
 
 # Build commands
 build-website:
