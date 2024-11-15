@@ -18,6 +18,7 @@ ENV BUILD_DIR=${BUILD_DIR}
 COPY website/package.json website/yarn.lock ./
 
 # Setup Yarn
+RUN corepack enable
 RUN yarn set version 4.5.1
 
 # Copy the rest of the application
