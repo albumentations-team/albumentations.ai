@@ -22,9 +22,9 @@ ENV NODE_ENV=${NODE_ENV}
 ENV BUILD_DIR=${BUILD_DIR}
 ENV YARN_CACHE_FOLDER=/home/node/.cache/yarn
 ENV COREPACK_HOME=/home/node/.cache/node/corepack
-ENV PATH /website/node_modules/.bin:$PATH
 
-# Copy package files with correct ownership
+# Copy configuration files first
+COPY --chown=node:node website/.yarnrc.yml ./
 COPY --chown=node:node website/package.json website/yarn.lock ./
 
 # Install dependencies using Yarn 4
@@ -34,14 +34,14 @@ RUN corepack yarn install
 COPY --chown=node:node website .
 
 # Run another install to ensure everything is linked properly
-RUN corepack yarn install --immutable
+RUN corepack yarn install
 
 # Expose port
 EXPOSE 3000
 
-# Set the command using yarn from node_modules
+# Set the command
 CMD if [ "$NODE_ENV" = "production" ]; then \
-        corepack yarn build; \
+        yarn build; \
     else \
-        corepack yarn dev; \
+        yarn dev; \
     fi
