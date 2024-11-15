@@ -15,8 +15,16 @@ ENV NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID \
     GITHUB_TOKEN=$GITHUB_TOKEN \
     NODE_ENV=production
 
+# Copy only necessary files
 COPY --from=deps /website/node_modules ./node_modules
-COPY website .
+COPY website/src ./src
+COPY website/public ./public
+COPY website/next.config.ts ./
+COPY website/postcss.config.mjs ./
+COPY website/tailwind.config.ts ./
+COPY website/tsconfig.json ./
+COPY website/package.json ./
+COPY website/yarn.lock ./
 
 # Add verbose output to debug the build
 RUN set -x && \

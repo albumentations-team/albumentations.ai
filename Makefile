@@ -44,6 +44,9 @@ build-website:
 	docker cp temp_website:/website/build/. website/build/
 	# Clean up
 	docker rm temp_website
+	# copy the build to the build directory
+	mkdir -p $(BUILD_DIR)
+	cp -r website/build/* $(BUILD_DIR)
 
 build-docs:
 	docker-compose build docs
