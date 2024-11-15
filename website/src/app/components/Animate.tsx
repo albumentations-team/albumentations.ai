@@ -1,7 +1,6 @@
 'use client'
 
-import { motion} from 'framer-motion'
-import { type ReactNode } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 
 interface AnimateProps {
   children: ReactNode
@@ -12,16 +11,19 @@ interface AnimateProps {
 
 const animations = {
   fadeIn: {
-    initial: { opacity: 0 } as const,
-    animate: { opacity: 1 } as const,
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: 'opacity 0.5s ease',
   },
   slideUp: {
-    initial: { opacity: 0, y: 20 } as const,
-    animate: { opacity: 1, y: 0 } as const,
+    initial: { opacity: 0, transform: 'translateY(20px)' },
+    animate: { opacity: 1, transform: 'translateY(0)' },
+    transition: 'opacity 0.5s ease, transform 0.5s ease',
   },
   slideIn: {
-    initial: { opacity: 0, x: -20 } as const,
-    animate: { opacity: 1, x: 0 } as const,
+    initial: { opacity: 0, transform: 'translateX(-20px)' },
+    animate: { opacity: 1, transform: 'translateX(0)' },
+    transition: 'opacity 0.5s ease, transform 0.5s ease',
   },
 } as const
 
@@ -31,16 +33,26 @@ export function Animate({
   animation = 'fadeIn',
   delay = 0,
 }: AnimateProps) {
-  const { initial, animate } = animations[animation]
+  const [isVisible, setIsVisible] = useState(false)
+  const { initial, animate, transition } = animations[animation]
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, delay * 1000)
+
+    return () => clearTimeout(timer)
+  }, [delay])
+
+  const style = {
+    ...initial,
+    ...(isVisible ? animate : {}),
+    transition,
+  }
 
   return (
-    <motion.div
-      initial={initial}
-      animate={animate}
-      transition={{ duration: 0.5, delay }}
-      className={className}
-    >
+    <div className={className} style={style}>
       {children}
-    </motion.div>
+    </div>
   )
 }

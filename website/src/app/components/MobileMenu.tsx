@@ -1,7 +1,6 @@
 'use client'
 
 import { createPortal } from 'react-dom'
-import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/app/components/Button'
 import { useEffect, useState } from 'react'
@@ -18,30 +17,39 @@ interface MobileMenuProps {
 
 export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
   const [mounted, setMounted] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    if (isOpen) {
+      setIsAnimating(true)
+    } else {
+      const timer = setTimeout(() => {
+        setIsAnimating(false)
+      }, 300) // Match transition duration
+      return () => clearTimeout(timer)
+    }
+  }, [isOpen])
+
   if (!mounted) return null
 
   const menuContent = (
-    <AnimatePresence>
-      {isOpen && (
+    <>
+      {(isOpen || isAnimating) && (
         <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          <div
+            className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 ${
+              isOpen ? 'bg-opacity-50 opacity-100' : 'bg-opacity-0 opacity-0'
+            }`}
             onClick={onClose}
           />
-          <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed right-0 top-0 h-full w-64 bg-white z-50 shadow-xl"
+          <div
+            className={`fixed right-0 top-0 h-full w-64 bg-white z-50 shadow-xl transition-transform duration-300 ${
+              isOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
           >
             <div className="p-4">
               <button
@@ -97,10 +105,10 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
                 </div>
               </nav>
             </div>
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
+    </>
   )
 
   return mounted ? createPortal(menuContent, document.body) : null
