@@ -20,48 +20,48 @@ export BUILD_DIR
 # Development commands
 dev: export NODE_ENV=development
 dev: build-all
-	docker-compose up -V website docs
+	docker compose up -V website docs
 
 docs-dev: export NODE_ENV=development
 docs-dev:
-	docker-compose up docs
+	docker compose up docs
 
 # Production build commands
 prod: export NODE_ENV=production
 prod: check-env build-all
 
-build-website:
-	@if [ -z "$$GITHUB_TOKEN" ]; then \
-		echo "Error: GITHUB_TOKEN is not set"; \
-		exit 1; \
-	fi
+build-website: check-env
 	@echo "Using BUILD_DIR: $(BUILD_DIR)"
+	# Clean up any existing temporary container
+	docker rm temp_website 2>/dev/null || true
 	# Build website container
 	docker compose build website
 	# Extract build artifacts
-	@mkdir -p $(BUILD_DIR)
+	@mkdir -p "$(BUILD_DIR)"
 	docker create --name temp_website albumentationsai-website
-	docker cp temp_website:/website/build/. $(BUILD_DIR)/
+	docker cp "temp_website:/website/build/." "$(BUILD_DIR)/"
 	# Ensure proper permissions
-	chmod -R 755 $(BUILD_DIR)
+	chmod -R 755 "$(BUILD_DIR)"
+	# Clean up
 	docker rm temp_website
 
 build-docs:
 	@echo "Building docs container..."
-	docker-compose build docs
+	@echo "Using BUILD_DIR: $(BUILD_DIR)"
+	# Clean up any existing temporary container
+	docker rm temp_docs 2>/dev/null || true
+	# Build docs container
+	docker compose build docs
 	@if [ "$(NODE_ENV)" = "production" ]; then \
-		echo "Creating build directory at $(BUILD_DIR)/docs"; \
-		mkdir -p "$(BUILD_DIR)/docs"; \
-		echo "Creating temporary container..."; \
-		docker create --name temp_docs albumentationsai-docs; \
-		echo "Copying files from container..."; \
-		docker cp temp_docs:/workspace/docs/src/site/. "$(BUILD_DIR)/docs/"; \
-		echo "Removing temporary container..."; \
-		docker rm temp_docs; \
-		echo "Files in $(BUILD_DIR)/docs:"; \
+		mkdir -p "$(BUILD_DIR)/docs" && \
+		docker create --name temp_docs albumentationsai-docs && \
+		docker cp "temp_docs:/workspace/docs/src/site/." "$(BUILD_DIR)/docs/" && \
+		docker rm temp_docs && \
 		ls -la "$(BUILD_DIR)/docs"; \
 	fi
 
+# Define build-all to explicitly depend on both targets
+.PHONY: build-all
 build-all: build-website build-docs
 
 # Environment checks
@@ -81,22 +81,23 @@ endif
 clean:
 	rm -rf website/.next
 	rm -rf docs/src/site
-	rm -rf $(BUILD_DIR)
-	docker-compose down -v
+	rm -rf "$(BUILD_DIR)"
+	docker compose down -v
+	docker rm temp_website temp_docs 2>/dev/null || true
 	docker volume rm -f albumentations_docs_cache || true
 
 # Helper commands
 logs:
-	docker-compose logs -f
+	docker compose logs -f
 
 ps:
-	docker-compose ps
+	docker compose ps
 
 restart:
-	docker-compose restart
+	docker compose restart
 
 stop:
-	docker-compose stop
+	docker compose stop
 
 # Development helpers
 setup:
