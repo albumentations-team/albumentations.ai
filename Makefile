@@ -20,26 +20,30 @@ dev: export NODE_ENV=development
 dev: build-all
 	docker-compose up -V website docs
 
-website-dev: export NODE_ENV=development
-website-dev: build-website
-	docker-compose up website
-
 docs-dev: build-docs
 	docker-compose up docs
 
 # Production build commands
 prod: export NODE_ENV=production
 prod: check-env
-	docker-compose run \
-		-v "$(BUILD_DIR):$(BUILD_DIR)" \
-		-e BUILD_DIR=$(BUILD_DIR) \
-		website sh -c "npm run build"
-	cp -r $(CURRENT_DIR)/website/build/* $(BUILD_DIR)
-	docker-compose run -v "$(BUILD_DIR)/docs:/site" docs build
-
-# Build commands
-build-website:
 	docker-compose build website
+	cp -r website/build/* $(BUILD_DIR)
+
+build-website:
+	@if [ -z "$$GITHUB_TOKEN" ]; then \
+		echo "Error: GITHUB_TOKEN is not set"; \
+		exit 1; \
+	fi
+	# First build the container
+	docker-compose build website
+	# Create a temporary container
+	docker create --name temp_website albumentationsai-website
+	# Ensure the local build directory exists
+	mkdir -p website/build
+	# Copy the build files from the container
+	docker cp temp_website:/website/build/. website/build/
+	# Clean up
+	docker rm temp_website
 
 build-docs:
 	docker-compose build docs
