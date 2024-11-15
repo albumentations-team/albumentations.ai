@@ -10,6 +10,7 @@ ENV BUILD_DIR=${BUILD_DIR}
 # Copy package files
 COPY website/package.json website/yarn.lock ./
 
+RUN corepack enable
 RUN yarn set version 4.5.1
 
 RUN yarn install
@@ -20,4 +21,9 @@ COPY website .
 # Build the application if in production
 EXPOSE 3000
 
-CMD yarn dev
+# Set the command
+CMD if [ "$NODE_ENV" = "production" ]; then \
+        yarn build; \
+    else \
+        yarn dev; \
+    fi
