@@ -17,15 +17,11 @@ ENV BUILD_DIR=${BUILD_DIR}
 # Copy package files with correct ownership
 COPY website/package.json website/yarn.lock ./
 
-# Setup Yarn
-RUN corepack enable
-RUN yarn set version 4.5.1
-
 # Copy the rest of the application
 COPY website .
 
 # Install dependencies
-RUN yarn install
+RUN npm install
 
 # Expose port
 EXPOSE 3000
