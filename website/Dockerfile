@@ -31,16 +31,12 @@ RUN yarn install
 # Copy the rest of the application
 COPY --chown=node:node website .
 
-# Verify next is installed
-RUN ls -la node_modules/.bin/next
-RUN which next
-
 # Expose port
 EXPOSE 3000
 
 # Set the command
 CMD if [ "$NODE_ENV" = "production" ]; then \
-        yarn build; \
+        yarn dlx next build; \
     else \
-        yarn dev; \
+        yarn dlx next dev; \
     fi
