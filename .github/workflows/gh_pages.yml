@@ -35,9 +35,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           NODE_ENV: production
+          GITHUB_PAGES: 'true'
+          REPOSITORY_NAME: 'albumentations'  # or whatever your repo name is
           BUILD_DIR: ${GITHUB_WORKSPACE}/gh_pages
         run: |
-          # Build both website and docs
           make prod
 
       - name: Generate sitemap
