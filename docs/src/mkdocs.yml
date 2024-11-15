@@ -1,0 +1,121 @@
+site_name: Albumentations Documentation
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
+  - awesome-pages
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          rendering:
+            show_source: false
+            show_if_no_docstring: false
+            show_object_full_path: true
+          parsing:
+            paths:
+              - /albumentations
+          selection:
+            docstring_style: google
+            docstring_options:
+              replace_admonitions: no
+      custom_templates: mkdocstrings_theme
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_page: "hooks:on_pre_page"
+        on_page_content: "hooks:on_page_content"
+        on_nav: "hooks:on_nav"
+  - macros
+
+markdown_extensions:
+  - codehilite
+  - attr_list
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.caret
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+      line_spans: __span
+  - pymdownx.mark
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.critic:
+      mode: view
+
+theme:
+  name: material
+  palette:
+    primary: white
+    accent: white
+  custom_dir: custom_theme/
+  logo: images/logo.png
+  favicon: images/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.sections
+    - navigation.path
+    - navigation.prune
+    - navigation.expand
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - toc.integrate
+    - announce.dismiss
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/MathJax.js?config=TeX-MML-AM_CHTML
+  - js/extra.js
+
+repo_name: albumentations
+repo_url: https://github.com/albumentations-team/albumentations
+site_url: https://albumentations.ai/docs/
+
+edit_uri: 'https://github.com/albumentations-team/albumentations.ai/tree/main/docs/src/docs'
+notebook_github_uri: https://github.com/albumentations-team/albumentations_examples/tree/main/notebooks/
+notebook_colab_uri: https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/
+
+site_dir: /site
+
+site_description: "Albumentations provides a comprehensive, high-performance framework for augmenting images to improve machine learning models. Ideal for computer vision applications, supporting a wide range of augmentations."
+
+extra:
+  analytics:
+    provider: google
+    property: unknown
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/albumentations
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/100504475/
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/AKPrrDYNAt
+  generator: false
