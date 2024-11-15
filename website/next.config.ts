@@ -1,10 +1,16 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+
+// Get repository name from environment or default to 'albumentations'
+const repoName = process.env.REPOSITORY_NAME || 'albumentations';
+
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  basePath: '',
-  assetPrefix: '/', // Keep the leading slash for local fonts
+  basePath: isGitHubPages ? `/${repoName}` : '',
+  assetPrefix: isGitHubPages ? `/${repoName}/` : '/',
   trailingSlash: true,
   images: {
     unoptimized: true,
