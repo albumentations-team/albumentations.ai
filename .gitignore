@@ -19,3 +19,7 @@ website/.next/
 website/.env.local
 
 *.ipynb
+
+website/build/
+
+_cache/

@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
+  assetPrefix: '/',  // Changed to leading slash
   images: {
     unoptimized: true,
     remotePatterns: [
