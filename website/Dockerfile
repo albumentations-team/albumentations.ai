@@ -27,21 +27,23 @@ ENV COREPACK_HOME=/home/node/.cache/node/corepack
 COPY --chown=node:node website/.yarnrc.yml ./
 COPY --chown=node:node website/package.json website/yarn.lock ./
 
-# Install dependencies using Yarn 4
-RUN corepack yarn install
+# Install dependencies using Yarn 4 and ensure node_modules exists
+RUN corepack yarn install && \
+    [ -d "node_modules" ] || mkdir node_modules
 
 # Copy the rest of the application
 COPY --chown=node:node website .
 
-# Run another install to ensure everything is linked properly
-RUN corepack yarn install
+# Ensure node_modules exists and has correct permissions
+RUN corepack yarn install && \
+    chmod -R 755 node_modules
 
 # Expose port
 EXPOSE 3000
 
 # Set the command
 CMD if [ "$NODE_ENV" = "production" ]; then \
-        yarn build; \
+        yarn install && yarn build; \
     else \
-        yarn dev; \
+        yarn install && yarn dev; \
     fi

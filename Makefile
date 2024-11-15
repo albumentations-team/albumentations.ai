@@ -33,7 +33,7 @@ prod: check-env
 	docker-compose run -u $(CURRENT_USER) \
 		-v "$(BUILD_DIR):$(BUILD_DIR)" \
 		-e BUILD_DIR=$(BUILD_DIR) \
-		website corepack yarn build
+		website sh -c "yarn install && yarn build"
 	cp -r $(CURRENT_DIR)/website/build/* $(BUILD_DIR)
 	docker-compose run -v "$(BUILD_DIR)/docs:/site" docs build
 
