@@ -16,13 +16,11 @@ services:
       - GITHUB_TOKEN
       - NEXT_TELEMETRY_DISABLED=1
     volumes:
-      - ./website:/website  # Mount entire builder directory for hot reloading
-      # - ./website/node_modules:/website/node_modules
       - _build:/_build
       - _cache:/_cache
     ports:
       - "127.0.0.1:3000:3000"  # Next.js development server
-    command: yarn dev
+    command: npm run dev
 
   docs:
     container_name: docs
