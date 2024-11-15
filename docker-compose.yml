@@ -19,20 +19,25 @@ services:
       args:
         - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
     ports:
-      - "127.0.0.1:${MKDOCS_PORT}:8000"
+      - "127.0.0.1:${MKDOCS_PORT:-8000}:8000"
     tty: true
     environment:
       - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
-      - CONFIG_FILE=/docs/src/mkdocs.yml
       - JUPYTER_PLATFORM_DIRS=1
+      - WORKSPACE_DIR=/workspace
+      - DOCS_DIR=/workspace/docs
+      - ALBUMENTATIONS_DIR=/workspace/albumentations
     volumes:
-      - ./docs:/docs  # For development only
-    entrypoint: ["/docs/entrypoint.sh"]
-    command: serve --dev-addr 0.0.0.0:8000
+      # - ./docs:/workspace/docs  # For development only
+      - docs_cache:/workspace/docs/src/.cache  # Cache notebooks and other generated content
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    command: mkdocs serve -a 0.0.0.0:8000
 
 
 volumes:
-  _build:
-    driver: local
-  _cache:
+  docs_cache:
     driver: local

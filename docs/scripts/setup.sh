@@ -1,20 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
-# Get absolute paths
-WORKSPACE_DIR=$(cd "${WORKSPACE_DIR:-$(pwd)/..}" && pwd)
-ALBUMENTATIONS_DIR=${WORKSPACE_DIR}/albumentations
-DOCS_DIR=${WORKSPACE_DIR}/docs
-
-# Export paths for Python scripts
-export WORKSPACE_DIR
-export DOCS_DIR
-export ALBUMENTATIONS_DIR
+# Use environment variables if set, otherwise calculate paths
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export DOCS_DIR="${DOCS_DIR:-$(dirname "$SCRIPT_DIR")}"
+export WORKSPACE_DIR="${WORKSPACE_DIR:-$(dirname "$DOCS_DIR")}"
+export ALBUMENTATIONS_DIR="${ALBUMENTATIONS_DIR:-$WORKSPACE_DIR/albumentations}"
 
 echo "Using paths:"
-echo "WORKSPACE_DIR: $WORKSPACE_DIR"
 echo "DOCS_DIR: $DOCS_DIR"
+echo "WORKSPACE_DIR: $WORKSPACE_DIR"
 echo "ALBUMENTATIONS_DIR: $ALBUMENTATIONS_DIR"
+
+# Create required directories
+mkdir -p "$DOCS_DIR/src/docs/examples"
+mkdir -p "$DOCS_DIR/src/docs/integrations/huggingface"
+mkdir -p "$DOCS_DIR/src/docs/integrations/roboflow"
 
 # Clone repositories if they don't exist
 if [ ! -d "$ALBUMENTATIONS_DIR" ]; then
@@ -22,11 +23,6 @@ if [ ! -d "$ALBUMENTATIONS_DIR" ]; then
     git clone --depth=1 --branch main --single-branch \
         https://github.com/albumentations-team/albumentations.git "$ALBUMENTATIONS_DIR"
 fi
-
-# Create required directories
-mkdir -p "$DOCS_DIR/src/docs/examples"
-mkdir -p "$DOCS_DIR/src/docs/integrations/huggingface"
-mkdir -p "$DOCS_DIR/src/docs/integrations/roboflow"
 
 # Copy CONTRIBUTING.md from albumentations
 echo "Copying CONTRIBUTING.md..."
