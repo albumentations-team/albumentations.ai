@@ -7,35 +7,59 @@
 - [pre-commit](https://pre-commit.com/#install)
 - [GNU Make](https://www.gnu.org/software/make/)
 
-To run the site locally, you also need to download the required data from the GitHub API.
-To do that, you need to generate a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
-
 ## Getting Started
 
 1. Clone the repository.
 2. Install the git hook scripts for pre-commit: `pre-commit install`.
-3. If you need to work with the main site, fetch required data from GitHub API: `GITHUB_TOKEN=<PERSONAL_ACCESS_TOKEN> make fetch-data`, e.g. `GITHUB_TOKEN=123a make fetch-data`. If you need to work only with documentation, you can skip that step.
-4. Start development servers both for the main site and for the documentation: `make dev`. You can also start only the development server for documentation by running `make mkdocs-dev`.
-5. Open http://localhost:3000 in your browser to see the current version of the main site.
-6. Open http://localhost:8000 in your browser to see the current version of the documentation.
-7. When you change templates or static assets, the browser will reload all changed pages.
+3. Start development servers both for the main site and for the documentation: `make dev`. You can also start only the development server for the main site by running `make website-dev` or documentation by running `make docs-dev`.
+4. Open http://localhost:3000 in your browser to see the current version of the main site.
+5. Open http://localhost:8000 in your browser to see the current version of the documentation.
+6. When you change files, the browser will automatically reload the changed pages.
 
 ## Directory structure
 
-- [browser_sync](./browser_sync) - Files for a Docker service that automatically reloads changes pages in the browser.
-- [builder](./builder) - Files for a Docker service that builds the static site from templates, static assets, and JSON files with data.
-- [mkdocs](./mkdocs) - Files for a Docker service that uses [MkDocs](https://www.mkdocs.org/) to build the documentation.
-- [data](./data) - A directory with JSON files that contain data for building the site.
-- [html](./html) - A directory with Jinja2 templates and static assets.
+- [website](./website) - Next.js application for the main site
+- [docs](./docs) - MkDocs configuration and source files for the documentation
+- [tools](./tools) - Helper scripts and utilities
 
-## To update site
+## Building for Production
 
-It may happen that we add / remove files in the [Albumentations repository](https://github.com/albumentations-team/albumentations/)
+To build the site for production:
 
-To update the site, you need to update [mkdocs/src]
-
-After that run
-
+1. Set required environment variables:
 ```bash
-make
+export GOOGLE_ANALYTICS_ID=<your_ga_id>
 ```
+
+2. Run the production build:
+```bash
+make prod
+```
+
+This will create a `_build` directory containing the static site files.
+
+## Updating Documentation
+
+When you add or remove files in the [Albumentations repository](https://github.com/albumentations-team/albumentations/), you need to:
+
+1. Update the documentation source in [docs/src](./docs/src)
+2. Rebuild the site:
+```bash
+make prod
+```
+
+## Development Commands
+
+- `make dev` - Start both website and docs development servers
+- `make website-dev` - Start only the website development server
+- `make docs-dev` - Start only the docs development server
+- `make clean` - Clean build artifacts
+- `make prod` - Build for production
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Install pre-commit hooks: `pre-commit install`
+4. Make your changes
+5. Submit a pull request
