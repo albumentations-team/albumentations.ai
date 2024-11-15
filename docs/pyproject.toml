@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "albumentations_docs"
+version = "0.1"
+authors = [{ name = "Albumentations Team" }]
+description = "Documentation tools for Albumentations"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["albumentations_docs"]

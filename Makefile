@@ -24,10 +24,11 @@ docs-dev: build-docs
 	docker-compose up docs
 
 # Production build commands
+# Production build commands
 prod: export NODE_ENV=production
-prod: check-env
-	docker-compose build website
-	cp -r website/build/* $(BUILD_DIR)
+prod: check-env build-all  # build-all includes both build-website and build-docs
+	# No additional copying needed as build-website already handles website files
+	# and build-docs handles docs files
 
 build-website:
 	@if [ -z "$$GITHUB_TOKEN" ]; then \
@@ -50,6 +51,12 @@ build-website:
 
 build-docs:
 	docker-compose build docs
+	if [ "$(NODE_ENV)" = "production" ]; then \
+		mkdir -p $(BUILD_DIR)/docs && \
+		docker create --name temp_docs albumentationsai-docs && \
+		docker cp temp_docs:/export/. $(BUILD_DIR)/docs/ && \
+		docker rm temp_docs; \
+	fi
 
 build-all: build-website build-docs
 
