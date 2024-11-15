@@ -26,15 +26,18 @@ COPY website/tsconfig.json ./
 COPY website/package.json ./
 COPY website/yarn.lock ./
 
-# Add verbose output to debug the build
+# Build and verify output
 RUN set -x && \
     echo "Starting build..." && \
-    yarn build --debug && \
-    echo "Build complete. Contents of current directory:" && \
-    ls -la && \
+    yarn build && \
+    echo "Build complete. Verifying output..." && \
+    # Ensure all necessary files are present
+    test -d build/_next && \
+    test -f build/index.html && \
+    # Copy static assets to maintain relative paths
+    cp -r build/_next build/static && \
+    # List contents for verification
     echo "Contents of build directory:" && \
-    ls -la build || true && \
-    echo "Contents of .next directory:" && \
-    ls -la .next || true && \
-    echo "Contents of out directory:" && \
-    ls -la out || true
+    ls -la build && \
+    echo "Contents of static assets:" && \
+    ls -la build/static

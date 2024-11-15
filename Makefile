@@ -35,12 +35,15 @@ build-website:
 		echo "Error: GITHUB_TOKEN is not set"; \
 		exit 1; \
 	fi
+	@echo "Using BUILD_DIR: $(BUILD_DIR)"
 	# Build website container
-	docker-compose build website
+	docker compose build website
 	# Extract build artifacts
-	mkdir -p "$(BUILD_DIR)"
+	@mkdir -p $(BUILD_DIR)
 	docker create --name temp_website albumentationsai-website
-	docker cp temp_website:/website/build/. "$(BUILD_DIR)/"
+	docker cp temp_website:/website/build/. $(BUILD_DIR)/
+	# Ensure proper permissions
+	chmod -R 755 $(BUILD_DIR)
 	docker rm temp_website
 
 build-docs:

@@ -3,7 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  assetPrefix: '/',  // Changed to leading slash
+  basePath: '',
+  assetPrefix: '/', // Keep the leading slash for local fonts
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [
