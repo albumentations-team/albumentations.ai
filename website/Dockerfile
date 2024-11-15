@@ -4,6 +4,9 @@ FROM node:20-slim
 RUN mkdir -p /website /home/node/.cache/node/corepack && \
     chown -R node:node /website /home/node/.cache
 
+# Enable corepack before switching to non-root user
+RUN corepack enable
+
 # Switch to non-root user
 USER node
 
@@ -20,7 +23,6 @@ ENV PATH /website/node_modules/.bin:$PATH
 COPY --chown=node:node website/package.json website/yarn.lock ./
 
 # Setup Yarn
-RUN corepack enable
 RUN yarn set version 4.5.1
 
 # Install dependencies
