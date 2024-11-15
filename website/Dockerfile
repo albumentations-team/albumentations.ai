@@ -9,7 +9,7 @@ ENV NODE_ENV=${NODE_ENV} \
     HOME=/home/node
 
 # Copy configuration files first
-COPY website/package.json website/yarn.lock ./
+COPY website/package.json ./
 
 # Copy the rest of the application
 COPY website .
