@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 CURRENT_DIR := $(shell pwd)
-BUILD_DIR := $(CURRENT_DIR)/_build
+BUILD_DIR ?= $(CURRENT_DIR)/_build  # Use ?= for default value
 WORKSPACE_DIR := $(CURRENT_DIR)
 
 PORT = 3000
@@ -13,6 +13,7 @@ export PORT
 export MKDOCS_PORT
 export NODE_ENV
 export WORKSPACE_DIR
+export BUILD_DIR
 
 .PHONY: dev prod build-website build-docs build-all check-env clean
 
@@ -37,9 +38,9 @@ build-website:
 	# Build website container
 	docker-compose build website
 	# Extract build artifacts
-	mkdir -p $(BUILD_DIR)
+	mkdir -p "$(BUILD_DIR)"
 	docker create --name temp_website albumentationsai-website
-	docker cp temp_website:/website/build/. $(BUILD_DIR)/
+	docker cp temp_website:/website/build/. "$(BUILD_DIR)/"
 	docker rm temp_website
 
 build-docs:
@@ -47,15 +48,15 @@ build-docs:
 	docker-compose build docs
 	@if [ "$(NODE_ENV)" = "production" ]; then \
 		echo "Creating build directory at $(BUILD_DIR)/docs"; \
-		mkdir -p $(BUILD_DIR)/docs; \
+		mkdir -p "$(BUILD_DIR)/docs"; \
 		echo "Creating temporary container..."; \
 		docker create --name temp_docs albumentationsai-docs; \
 		echo "Copying files from container..."; \
-		docker cp temp_docs:/workspace/docs/src/site/. $(BUILD_DIR)/docs/; \
+		docker cp temp_docs:/workspace/docs/src/site/. "$(BUILD_DIR)/docs/"; \
 		echo "Removing temporary container..."; \
 		docker rm temp_docs; \
 		echo "Files in $(BUILD_DIR)/docs:"; \
-		ls -la $(BUILD_DIR)/docs; \
+		ls -la "$(BUILD_DIR)/docs"; \
 	fi
 
 build-all: build-website build-docs
