@@ -30,10 +30,10 @@ docs-dev: build-docs
 # Production build commands
 prod: export NODE_ENV=production
 prod: check-env
-	# docker-compose run -u $(CURRENT_USER) \
-	# 	-v "$(BUILD_DIR):$(BUILD_DIR)" \
-	# 	-e BUILD_DIR=$(BUILD_DIR) \
-	# 	website yarn build
+	docker-compose run -u $(CURRENT_USER) \
+		-v "$(BUILD_DIR):$(BUILD_DIR)" \
+		-e BUILD_DIR=$(BUILD_DIR) \
+		website yarn build
 	cp -r $(CURRENT_DIR)/website/build/* $(BUILD_DIR)
 	docker-compose run -v "$(BUILD_DIR)/docs:/site" docs build
 
