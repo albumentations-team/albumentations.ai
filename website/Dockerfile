@@ -13,15 +13,20 @@ WORKDIR /website
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 ENV BUILD_DIR=${BUILD_DIR}
+ENV YARN_CACHE_FOLDER=/home/node/.cache/yarn
 
 # Copy package files with correct ownership
-COPY website/package.json website/yarn.lock ./
+COPY --chown=node:node website/package.json website/yarn.lock ./
 
-# Copy the rest of the application
-COPY website .
+# Setup Yarn
+RUN corepack enable
+RUN yarn set version 4.5.1
 
 # Install dependencies
-RUN npm install
+RUN yarn install
+
+# Copy the rest of the application
+COPY --chown=node:node website .
 
 # Expose port
 EXPOSE 3000
