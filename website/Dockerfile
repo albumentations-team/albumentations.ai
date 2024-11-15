@@ -13,26 +13,25 @@ WORKDIR /website
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 ENV BUILD_DIR=${BUILD_DIR}
-ENV YARN_CACHE_FOLDER=/home/node/.cache/yarn
 
 # Copy package files with correct ownership
-COPY --chown=node:node website/package.json website/yarn.lock ./
+COPY website/package.json website/yarn.lock ./
 
 # Setup Yarn
 RUN yarn set version 4.5.1
 
+# Copy the rest of the application
+COPY website .
+
 # Install dependencies
 RUN yarn install
-
-# Copy the rest of the application
-COPY --chown=node:node website .
 
 # Expose port
 EXPOSE 3000
 
 # Set the command
 CMD if [ "$NODE_ENV" = "production" ]; then \
-        npm run build; \
+        yarn build; \
     else \
-        yarn run dev; \
+        yarn dev; \
     fi
