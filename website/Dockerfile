@@ -20,9 +20,11 @@ RUN npm --force install
 # Expose port
 EXPOSE 3000
 
-# Set the command
-CMD if [ "$NODE_ENV" = "production" ]; then \
-        npm run build; \
-    else \
-        npm run dev; \
-    fi
+# # Set the command
+# CMD if [ "$NODE_ENV" = "production" ]; then \
+#         npm run build; \
+#     else \
+#         npm run dev; \
+#     fi
+
+CMD npm run dev
