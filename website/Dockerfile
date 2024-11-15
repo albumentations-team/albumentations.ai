@@ -1,23 +1,32 @@
-FROM node:20-slim
+FROM node:20-alpine AS deps
+WORKDIR /website
+COPY website/package.json website/yarn.lock ./
+RUN yarn install
 
+FROM node:20-alpine AS builder
 WORKDIR /website
 
-# Set environment variables
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV} \
-    BUILD_DIR=${BUILD_DIR} \
-    GITHUB_TOKEN=${GITHUB_TOKEN}
+# Add build arguments
+ARG GOOGLE_ANALYTICS_ID
+ARG GITHUB_TOKEN
 
-# Copy configuration files first
-COPY website/package.json ./
+# Set them as environment variables for the build
+ENV NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID \
+    GITHUB_TOKEN=$GITHUB_TOKEN \
+    NODE_ENV=production
 
-# Copy the rest of the application
+COPY --from=deps /website/node_modules ./node_modules
 COPY website .
 
-# Second install after copying all files with cleanup
-RUN npm --force install --include=dev
-
-# Expose port
-EXPOSE 3000
-
-CMD npm run dev
+# Add verbose output to debug the build
+RUN set -x && \
+    echo "Starting build..." && \
+    yarn build --debug && \
+    echo "Build complete. Contents of current directory:" && \
+    ls -la && \
+    echo "Contents of build directory:" && \
+    ls -la build || true && \
+    echo "Contents of .next directory:" && \
+    ls -la .next || true && \
+    echo "Contents of out directory:" && \
+    ls -la out || true

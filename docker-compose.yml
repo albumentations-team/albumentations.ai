@@ -4,23 +4,13 @@ services:
     build:
       context: .
       dockerfile: ./website/Dockerfile
+      target: builder
       args:
-        - NODE_ENV=${NODE_ENV:-development}
-        - BUILD_DIR=${BUILD_DIR:-/_build}
-    tty: true
-    environment:
-      - NODE_ENV=${NODE_ENV:-development}
-      - BUILD_DIR=${BUILD_DIR:-/_build}
-      - PORT=${PORT:-3000}
-      - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
-      - GITHUB_TOKEN
-      - NEXT_TELEMETRY_DISABLED=1
+        - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
+        - GITHUB_TOKEN=${GITHUB_TOKEN}
     volumes:
-      - _build:/_build
-      - _cache:/_cache
-    ports:
-      - "127.0.0.1:3000:3000"  # Next.js development server
-    command: npm run dev
+       - ./website/build:/website/build
+
 
   docs:
     container_name: docs
