@@ -70,7 +70,6 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 
 ## Other topics
 
-- [Release notes](release_notes.md)
 - [Contributing](CONTRIBUTING.md)
 
 ## API Reference

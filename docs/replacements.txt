@@ -1,2 +1,0 @@
-\(int, int\) → [int, int]
-\(float, float\) → [float, float]

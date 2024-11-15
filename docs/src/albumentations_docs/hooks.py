@@ -10,8 +10,8 @@ def on_pre_page(page, config, files):
     if isinstance(page.file, NotebookFile):
         filename = Path(page.file.src_path).name
         page.is_jupyter_notebook = True
-        page.notebook_github_url = urljoin(config["notebook_github_uri"], filename)
-        page.notebook_colab_url = urljoin(config["notebook_colab_uri"], filename)
+        page.notebook_github_url = urljoin(config["extra"]["notebook_github_uri"], filename)
+        page.notebook_colab_url = urljoin(config["extra"]["notebook_colab_uri"], filename)
     return page
 
 

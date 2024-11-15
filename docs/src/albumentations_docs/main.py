@@ -1,10 +1,8 @@
 import copy
+import os
 import re
 import sys
 from pathlib import Path
-
-sys.path.append("/albumentations/tools")
-
 
 from make_transforms_docs import (
     Targets,
@@ -13,6 +11,14 @@ from make_transforms_docs import (
     make_transforms_targets_links,
     make_transforms_targets_table,
 )
+
+# Get the directory where the script is located
+SCRIPT_DIR = Path(__file__).parent
+DOCS_DIR = Path(os.environ.get("DOCS_DIR", SCRIPT_DIR.parent.parent))  # Use env var if available
+WORKSPACE_DIR = DOCS_DIR.parent
+ALBUMENTATIONS_DIR = WORKSPACE_DIR / "albumentations"  # This will be correct now
+
+sys.path.append(str(ALBUMENTATIONS_DIR / "tools"))
 
 
 def replace_path(transforms):
@@ -27,19 +33,38 @@ def replace_path(transforms):
 
 
 def extract_benchmarking_results(readme_path: Path) -> str:
-    with readme_path.open(encoding="utf-8") as f:
-        readme_contents = f.read()
+    """Extract benchmarking results from README.md."""
+    print(f"Looking for README at: {readme_path}")
+    print(f"Current working directory: {Path.cwd()}")
+    print(f"SCRIPT_DIR: {SCRIPT_DIR}")
+    print(f"DOCS_DIR: {DOCS_DIR}")
+    print(f"WORKSPACE_DIR: {WORKSPACE_DIR}")
+    print(f"ALBUMENTATIONS_DIR: {ALBUMENTATIONS_DIR}")
+    print(f"README exists: {readme_path.exists()}")
 
-    # Define start and end markers for the benchmarking section
-    start_marker = "## Benchmarking results"
-    end_marker = "##"  # Assuming each section starts with "## "
-    start_index = readme_contents.find(start_marker)
+    if not readme_path.exists():
+        return "README.md file not found in albumentations repository"
+    try:
+        with readme_path.open(encoding="utf-8") as f:
+            readme_contents = f.read()
 
-    # Find the start of the next section to determine the end of the current section
-    end_index = readme_contents.find(end_marker, start_index + len(start_marker))
+        # Define start and end markers for the benchmarking section
+        start_marker = "## Benchmarking results"
+        end_marker = "## Contributing"  # Assuming each section starts with "## "
+        start_index = readme_contents.find(start_marker)
 
-    # Extract and return the section; if end_index is -1, it's the last section
-    return readme_contents[start_index : end_index if end_index != -1 else None]
+        if start_index == -1:
+            return "Benchmarking results section not found"
+
+        # Find the start of the next section to determine the end of the current section
+        end_index = readme_contents.find(end_marker, start_index + len(start_marker))
+
+        # Extract and return the section; if end_index is -1, it's the last section
+        return readme_contents[start_index : end_index if end_index != -1 else None]
+    except FileNotFoundError:
+        return "README.md file not found in albumentations repository"
+    except Exception as e:
+        return f"Error reading benchmarking results: {e!s}"
 
 
 def filter_out_init_schema(transforms):
@@ -81,5 +106,5 @@ def define_env(env):
 
     @env.macro
     def benchmarking_results():
-        readme_path = Path("/albumentations/README.md")
+        readme_path = ALBUMENTATIONS_DIR / "README.md"
         return extract_benchmarking_results(readme_path)

@@ -23,3 +23,9 @@ website/.env.local
 website/build/
 
 _cache/
+
+*.egg-info/
+
+docs/src/site/
+
+albumentations/
