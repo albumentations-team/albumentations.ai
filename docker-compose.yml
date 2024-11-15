@@ -6,8 +6,11 @@ services:
       dockerfile: ./website/Dockerfile
       target: builder
       args:
+        args:
         - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
         - GITHUB_TOKEN=${GITHUB_TOKEN}
+        - GITHUB_PAGES=${GITHUB_PAGES:-false}
+        - REPOSITORY_NAME=${REPOSITORY_NAME:-albumentations}
 
 
   docs:
