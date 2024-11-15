@@ -18,10 +18,6 @@ ENV YARN_CACHE_FOLDER=/home/node/.cache/yarn
 # Copy package files with correct ownership
 COPY --chown=node:node website/package.json website/yarn.lock ./
 
-# Setup Yarn
-RUN corepack enable
-RUN yarn set version 4.5.1
-
 # Install dependencies
 RUN yarn install
 
