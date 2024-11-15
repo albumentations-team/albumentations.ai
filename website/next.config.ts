@@ -1,15 +1,18 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-
-// Get repository name from environment or default to 'albumentations'
 const repoName = process.env.REPOSITORY_NAME || 'albumentations';
+
+// Get the base URL for assets
+const baseURL = isGitHubPages
+  ? `https://albumentations.ai/${repoName}`  // Production URL
+  : '';
 
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
   basePath: isGitHubPages ? `/${repoName}` : '',
-  assetPrefix: isGitHubPages ? `/${repoName}/` : '/',
+  assetPrefix: baseURL,  // Use full URL in production
   trailingSlash: true,
   images: {
     unoptimized: true,
