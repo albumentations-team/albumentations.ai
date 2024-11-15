@@ -1,32 +1,19 @@
 #!/bin/bash
 set -euo pipefail
 
-# Get the directory where the script is located
+# Use environment variables if set, otherwise calculate paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DOCS_DIR="$(dirname "$SCRIPT_DIR")"
-WORKSPACE_DIR="$(dirname "$DOCS_DIR")"
-ALBUMENTATIONS_DIR="$WORKSPACE_DIR/albumentations"
+export DOCS_DIR="${DOCS_DIR:-$(dirname "$SCRIPT_DIR")}"
+export WORKSPACE_DIR="${WORKSPACE_DIR:-$(dirname "$DOCS_DIR")}"
+export ALBUMENTATIONS_DIR="${ALBUMENTATIONS_DIR:-$WORKSPACE_DIR/albumentations}"
 
 echo "Building documentation..."
-echo "SCRIPT_DIR: $SCRIPT_DIR"
 echo "DOCS_DIR: $DOCS_DIR"
 echo "WORKSPACE_DIR: $WORKSPACE_DIR"
+echo "ALBUMENTATIONS_DIR: $ALBUMENTATIONS_DIR"
 
-# Clone albumentations if not exists
-if [ ! -d "$ALBUMENTATIONS_DIR" ]; then
-    echo "Cloning albumentations repository..."
-    git clone --depth=1 --branch main https://github.com/albumentations-team/albumentations.git "$ALBUMENTATIONS_DIR"
-fi
-
-# Install the docs package in development mode with PEP 517
-pip install --use-pep517 -e "$DOCS_DIR"
-
-# Set Jupyter platform dirs
-export JUPYTER_PLATFORM_DIRS=1
-
-# Set up Python path with default empty value if not set
-PYTHONPATH=${PYTHONPATH:-}
-export PYTHONPATH="$ALBUMENTATIONS_DIR/tools:$PYTHONPATH"
+# Set up Python path
+export PYTHONPATH="${DOCS_DIR}/src:${ALBUMENTATIONS_DIR}/tools:${PYTHONPATH:-}"
 
 cd "$DOCS_DIR/src"
 
