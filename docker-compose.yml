@@ -16,9 +16,8 @@ services:
       - GITHUB_TOKEN
       - NEXT_TELEMETRY_DISABLED=1
     volumes:
-      - ./data:/data
-      - ./website:/website  # Mount entire builder directory for hot reloading
-      - ./website/node_modules:/website/node_modules
+      # - ./website:/website  # Mount entire builder directory for hot reloading
+      # - ./website/node_modules:/website/node_modules
       - _build:/_build
       - _cache:/_cache
     ports:
