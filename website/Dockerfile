@@ -28,6 +28,8 @@ RUN yarn set version 4.5.1
 # Install dependencies
 RUN yarn install
 
+RUN yarn add next
+
 # Copy the rest of the application
 COPY --chown=node:node website .
 
