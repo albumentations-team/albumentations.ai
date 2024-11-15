@@ -1,12 +1,12 @@
 FROM node:20-slim
 
-# Create all necessary directories with correct permissions
-RUN mkdir -p /website /home/node/.cache/node/corepack/v1 /home/node/.yarn && \
-    chown -R node:node /website /home/node/.cache /home/node/.yarn && \
-    chmod -R 755 /home/node/.cache /home/node/.yarn
-
-# Remove system yarn and enable corepack as root
+# Create all necessary directories with correct permissions as root
 USER root
+RUN mkdir -p /website/node_modules /home/node/.cache/node/corepack/v1 /home/node/.yarn && \
+    chown -R node:node /website /home/node/.cache /home/node/.yarn && \
+    chmod -R 755 /website /home/node/.cache /home/node/.yarn
+
+# Remove system yarn and enable corepack
 RUN rm -rf /usr/local/bin/yarn && \
     corepack enable && \
     corepack prepare yarn@4.5.1 --activate
@@ -28,23 +28,21 @@ ENV HOME=/home/node
 COPY --chown=node:node website/.yarnrc.yml ./
 COPY --chown=node:node website/package.json website/yarn.lock ./
 
-# Install dependencies using Yarn 4 and ensure node_modules exists
-RUN corepack yarn install && \
-    [ -d "node_modules" ] || mkdir node_modules
+# Install dependencies
+RUN corepack yarn install
 
 # Copy the rest of the application
 COPY --chown=node:node website .
 
-# Ensure node_modules exists and has correct permissions
-RUN corepack yarn install && \
-    chmod -R 755 node_modules
+# Install dependencies again after copying all files
+RUN corepack yarn install
 
 # Expose port
 EXPOSE 3000
 
 # Set the command
 CMD if [ "$NODE_ENV" = "production" ]; then \
-        yarn install && yarn build; \
+        yarn build; \
     else \
-        yarn install && yarn dev; \
+        yarn dev; \
     fi
