@@ -32,7 +32,7 @@ EXPOSE 3000
 
 # Set the command
 CMD if [ "$NODE_ENV" = "production" ]; then \
-        yarn build; \
+        npm run build; \
     else \
-        yarn dev; \
+        yarn run dev; \
     fi
