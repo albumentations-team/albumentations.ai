@@ -33,8 +33,7 @@ prod: check-env
 	docker-compose run \
 		-v "$(BUILD_DIR):$(BUILD_DIR)" \
 		-e BUILD_DIR=$(BUILD_DIR) \
-		-e HOME=/home/node \
-		website sh -c "cd /website && npm run build"
+		website sh -c "npm run build"
 	cp -r $(CURRENT_DIR)/website/build/* $(BUILD_DIR)
 	docker-compose run -v "$(BUILD_DIR)/docs:/site" docs build
 
