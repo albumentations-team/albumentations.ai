@@ -1,9 +1,9 @@
 FROM node:20-slim
 
-# Create app directory and cache directories with correct permissions
-RUN mkdir -p /website /home/node/.cache/node/corepack/v1 && \
-    chown -R node:node /website /home/node/.cache && \
-    chmod -R 755 /home/node/.cache
+# Create all necessary directories with correct permissions
+RUN mkdir -p /website /home/node/.cache/node/corepack/v1 /home/node/.yarn && \
+    chown -R node:node /website /home/node/.cache /home/node/.yarn && \
+    chmod -R 755 /home/node/.cache /home/node/.yarn
 
 # Remove system yarn and enable corepack as root
 USER root
@@ -22,6 +22,7 @@ ENV NODE_ENV=${NODE_ENV}
 ENV BUILD_DIR=${BUILD_DIR}
 ENV YARN_CACHE_FOLDER=/home/node/.cache/yarn
 ENV COREPACK_HOME=/home/node/.cache/node/corepack
+ENV HOME=/home/node
 
 # Copy configuration files first
 COPY --chown=node:node website/.yarnrc.yml ./
