@@ -6,7 +6,7 @@ WORKDIR /website
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV} \
     BUILD_DIR=${BUILD_DIR} \
-    HOME=/home/node
+    GITHUB_TOKEN=${GITHUB_TOKEN}
 
 # Copy configuration files first
 COPY website/package.json ./
@@ -19,12 +19,5 @@ RUN npm --force install
 
 # Expose port
 EXPOSE 3000
-
-# # Set the command
-# CMD if [ "$NODE_ENV" = "production" ]; then \
-#         npm run build; \
-#     else \
-#         npm run dev; \
-#     fi
 
 CMD npm run dev
