@@ -5,7 +5,7 @@ RUN mkdir -p /website /home/node/.cache/node/corepack && \
     chown -R node:node /website /home/node/.cache
 
 # Enable corepack before switching to non-root user
-RUN corepack enable
+# RUN corepack enable
 
 # Switch to non-root user
 USER node
