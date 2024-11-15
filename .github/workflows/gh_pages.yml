@@ -36,9 +36,10 @@ jobs:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           NODE_ENV: production
           GITHUB_PAGES: 'true'
-          REPOSITORY_NAME: 'albumentations'  # or whatever your repo name is
+          REPOSITORY_NAME: 'albumentations'
           BUILD_DIR: ${GITHUB_WORKSPACE}/gh_pages
         run: |
+          echo "Building with GITHUB_PAGES=${GITHUB_PAGES} and REPOSITORY_NAME=${REPOSITORY_NAME}"
           make prod
 
       - name: Generate sitemap
