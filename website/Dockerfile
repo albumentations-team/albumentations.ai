@@ -15,7 +15,7 @@ COPY website/package.json ./
 COPY website .
 
 # Second install after copying all files with cleanup
-RUN npm --force install
+RUN npm --force install --include=dev
 
 # Expose port
 EXPOSE 3000
