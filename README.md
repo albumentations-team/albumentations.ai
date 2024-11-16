@@ -72,6 +72,7 @@ The documentation will be available at `http://localhost:8000`
 - `make build-all` - Build everything
 
 #### Utility Commands
+
 - `make clean` - Clean all build artifacts
 - `make logs` - Show container logs
 - `make ps` - List running containers
@@ -89,6 +90,7 @@ The documentation will be available at `http://localhost:8000`
   - Cache: `docs_cache:/workspace/docs/src/.cache`
 
 ### Environment Variables
+
 - `WORKSPACE_DIR=/workspace`
 - `DOCS_DIR=/workspace/docs`
 - `ALBUMENTATIONS_DIR=/workspace/albumentations`

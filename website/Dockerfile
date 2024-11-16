@@ -34,13 +34,9 @@ RUN set -x && \
     echo "Starting build..." && \
     yarn build && \
     echo "Build complete. Verifying output..." && \
-    # Ensure all necessary files are present
     test -d build/_next && \
     test -f build/index.html && \
-    # Copy static assets to maintain relative paths
-    cp -r build/_next build/static && \
-    # List contents for verification
     echo "Contents of build directory:" && \
     ls -la build && \
-    echo "Contents of static assets:" && \
-    ls -la build/static
+    echo "Contents of _next directory:" && \
+    ls -la build/_next

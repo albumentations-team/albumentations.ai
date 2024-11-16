@@ -2,14 +2,11 @@ import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 
-// Site is served at the root domain
-const baseURL = 'https://albumentations.ai';
-
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  basePath: '',  // No base path needed since it's served at root
-  assetPrefix: isGitHubPages ? baseURL : '',  // Use full domain in production
+  basePath: '',  // No base path needed
+  assetPrefix: isGitHubPages ? 'https://albumentations.ai' : '',
   trailingSlash: true,
   images: {
     unoptimized: true,

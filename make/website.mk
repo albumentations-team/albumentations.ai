@@ -1,4 +1,3 @@
-# Website build commands
 build-website:
 	@if [ -z "$$GITHUB_TOKEN" ]; then \
 		echo "Error: GITHUB_TOKEN is not set"; \
@@ -14,6 +13,9 @@ build-website:
 	@mkdir -p "$(BUILD_DIR)"
 	docker create --name temp_website albumentationsai-website
 	docker cp "temp_website:/website/build/." "$(BUILD_DIR)/"
+	# Verify the structure
+	ls -la "$(BUILD_DIR)"
+	ls -la "$(BUILD_DIR)/_next" || true
 	# Ensure proper permissions
 	chmod -R 755 "$(BUILD_DIR)"
 	# Clean up
