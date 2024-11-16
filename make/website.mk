@@ -4,7 +4,6 @@ build-website:
 		exit 1; \
 	fi
 	@echo "Using BUILD_DIR: $(BUILD_DIR)"
-	@echo "GitHub Pages: $(GITHUB_PAGES)"
 	# Clean up any existing temporary container
 	docker rm temp_website 2>/dev/null || true
 	# Build website container

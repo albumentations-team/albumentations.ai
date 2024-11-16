@@ -14,7 +14,6 @@ export MKDOCS_PORT ?= 8000
 export NODE_ENV
 export WORKSPACE_DIR
 export BUILD_DIR
-export GITHUB_PAGES
 export REPOSITORY_NAME
 
 .PHONY: dev prod build-all check-env clean

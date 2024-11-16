@@ -35,7 +35,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           NODE_ENV: production
-          GITHUB_PAGES: 'true'
           BUILD_DIR: ${GITHUB_WORKSPACE}/gh_pages
         run: |
           echo "Building with GITHUB_PAGES=${GITHUB_PAGES}"

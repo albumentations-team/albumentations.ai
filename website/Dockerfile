@@ -9,14 +9,13 @@ WORKDIR /website
 # Add build arguments
 ARG GOOGLE_ANALYTICS_ID
 ARG GITHUB_TOKEN
-ARG GITHUB_PAGES
 
 
 # Set them as environment variables for the build
 ENV NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID \
     GITHUB_TOKEN=$GITHUB_TOKEN \
-    NODE_ENV=production \
-    GITHUB_PAGES=$GITHUB_PAGES
+    NODE_ENV=production
+
 
 # Copy only necessary files
 COPY --from=deps /website/node_modules ./node_modules
