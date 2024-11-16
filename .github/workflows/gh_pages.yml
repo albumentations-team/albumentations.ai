@@ -40,27 +40,27 @@ jobs:
           NODE_ENV: production
           BUILD_DIR: ${{ github.workspace }}/gh_pages
         run: |
-          # Create .nojekyll file to disable Jekyll processing
-          touch "${BUILD_DIR}/.nojekyll"
           make prod
 
-          # Ensure all static assets are in the correct location
-          if [ -d "${BUILD_DIR}/build/_next" ]; then
-            mv "${BUILD_DIR}/build/_next" "${BUILD_DIR}/_next"
+          # Create .nojekyll file to disable Jekyll processing
+          touch "${BUILD_DIR}/.nojekyll"
+
+          # Set permissions for _next and assets directories
+          if [ -d "${BUILD_DIR}/_next" ]; then
+            chmod -R 755 "${BUILD_DIR}/_next"
           fi
 
-          if [ -d "${BUILD_DIR}/build/static" ]; then
-            mv "${BUILD_DIR}/build/static" "${BUILD_DIR}/static"
+          if [ -d "${BUILD_DIR}/assets" ]; then
+            chmod -R 755 "${BUILD_DIR}/assets"
           fi
-
-          # Fix permissions
-          chmod -R 755 "${BUILD_DIR}"
 
           # Verify the structure
           echo "Main build directory contents:"
           ls -la "${BUILD_DIR}"
           echo "_next directory contents:"
           ls -la "${BUILD_DIR}/_next" || true
+          echo "Assets directory contents:"
+          ls -la "${BUILD_DIR}/assets" || true
 
       - name: Generate sitemap
         run: |
