@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
   basePath: '',  // Always served at root
-  assetPrefix: isProd ? 'https://albumentations.ai' : '',  // Use full URL in production
+  assetPrefix: isProd ? '.' : '',  // Use relative path in production
   trailingSlash: true,
   images: {
     unoptimized: true,
