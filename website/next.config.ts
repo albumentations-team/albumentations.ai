@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
   basePath,
-  assetPrefix: isProd ? '//' : '',  // Changed to // for production
   trailingSlash: true,
   images: {
     unoptimized: true,

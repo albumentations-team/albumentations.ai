@@ -39,26 +39,26 @@ jobs:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           NODE_ENV: production
           BUILD_DIR: ${{ github.workspace }}/gh_pages
-          NEXT_PUBLIC_BASE_PATH: ''  # Add this for Next.js
         run: |
           make prod
 
-          # Ensure _next directory exists and has correct permissions
-          mkdir -p "${BUILD_DIR}/_next"
-          chmod -R 755 "${BUILD_DIR}/_next"
-
-          # Copy static assets if they exist in a separate location
-          if [ -d "website/public" ]; then
-            cp -r website/public/* "${BUILD_DIR}/"
+          # Ensure all static assets are in the correct location
+          if [ -d "${BUILD_DIR}/build/_next" ]; then
+            mv "${BUILD_DIR}/build/_next" "${BUILD_DIR}/_next"
           fi
+
+          if [ -d "${BUILD_DIR}/build/static" ]; then
+            mv "${BUILD_DIR}/build/static" "${BUILD_DIR}/static"
+          fi
+
+          # Fix permissions
+          chmod -R 755 "${BUILD_DIR}"
 
           # Verify the structure
           echo "Main build directory contents:"
           ls -la "${BUILD_DIR}"
           echo "_next directory contents:"
           ls -la "${BUILD_DIR}/_next" || true
-          echo "Static directory contents:"
-          ls -la "${BUILD_DIR}/static" || true
 
       - name: Generate sitemap
         run: |
