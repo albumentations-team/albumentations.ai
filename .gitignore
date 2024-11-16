@@ -31,3 +31,5 @@ docs/src/site/
 albumentations/
 
 _build/
+
+.DS_Store
