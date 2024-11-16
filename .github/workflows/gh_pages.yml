@@ -18,12 +18,15 @@ jobs:
         with:
           path: gh_pages
           ref: gh-pages
+
       - name: Set up Python 3.x
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Install required Python libraries
         run: pip install lxml
+
       - name: Install Docker Compose
         run: |
           sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -35,9 +38,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           NODE_ENV: production
-          BUILD_DIR: ${GITHUB_WORKSPACE}/gh_pages
+          BUILD_DIR: ${{ github.workspace }}/gh_pages
         run: |
-          echo "Building with GITHUB_PAGES=${GITHUB_PAGES}"
           make prod
           # Verify the structure
           ls -la ${BUILD_DIR}
@@ -46,11 +48,11 @@ jobs:
       - name: Generate sitemap
         run: |
           pip install lxml
-          python tools/generate_sitemap.py ${GITHUB_WORKSPACE}/gh_pages
+          python tools/generate_sitemap.py "${{ github.workspace }}/gh_pages"
 
       - name: Commit and push changes
         run: |
-          cd ${GITHUB_WORKSPACE}/gh_pages
+          cd "${{ github.workspace }}/gh_pages"
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add .
