@@ -40,6 +40,8 @@ jobs:
           NODE_ENV: production
           BUILD_DIR: ${{ github.workspace }}/gh_pages
         run: |
+          # Create .nojekyll file to disable Jekyll processing
+          touch "${BUILD_DIR}/.nojekyll"
           make prod
 
           # Ensure all static assets are in the correct location

@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
   basePath,
-  assetPrefix: '/',
+  assetPrefix: './',
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -17,16 +17,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  // Add this to ensure all assets are included
-  webpack: (config, { isServer }) => {
-    // Add file-loader for fonts
-    config.module.rules.push({
-      test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      type: 'asset/resource',
-    });
-    return config;
-  },
+  }
 };
 
 export default nextConfig;
