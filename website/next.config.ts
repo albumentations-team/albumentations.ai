@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  basePath: '',  // No base path needed
-  assetPrefix: isGitHubPages ? 'https://albumentations.ai' : '',
+  basePath: '',  // Always served at root
+  assetPrefix: isProd ? 'https://albumentations.ai' : '',  // Use full URL in production
   trailingSlash: true,
   images: {
     unoptimized: true,
