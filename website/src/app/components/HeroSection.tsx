@@ -55,10 +55,10 @@ export default function HeroSection({ starsCount, downloadsCount }: HeroSectionP
                 rel="noopener noreferrer"
                 className="btn-stats group"
               >
-                <span className="flex items-center gap-2">
-                  <i className="fab fa-github text-gray-500 group-hover:text-gray-700" />
-                  View on GitHub
-                </span>
+              <span className="flex items-center gap-2">
+                <i className="fab fa-github text-gray-500 group-hover:text-gray-700" />
+                Star on GitHub
+              </span>
                 <span className="border-l pl-4 font-medium">
                   <i className="fa fa-star mr-1" />
                   {formatNumber(starsCount)}
