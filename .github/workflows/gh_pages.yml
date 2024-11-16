@@ -30,7 +30,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose --version
 
-      - name: Build documentation
+      - name: Build website and documentation
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
@@ -38,8 +38,11 @@ jobs:
           GITHUB_PAGES: 'true'
           BUILD_DIR: ${GITHUB_WORKSPACE}/gh_pages
         run: |
-          echo "Building with GITHUB_PAGES=${GITHUB_PAGES} and REPOSITORY_NAME=${REPOSITORY_NAME}"
+          echo "Building with GITHUB_PAGES=${GITHUB_PAGES}"
           make prod
+          # Verify the structure
+          ls -la ${BUILD_DIR}
+          ls -la ${BUILD_DIR}/_next || true
 
       - name: Generate sitemap
         run: |
