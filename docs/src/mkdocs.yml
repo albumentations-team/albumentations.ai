@@ -66,6 +66,10 @@ plugins:
   - macros:
       modules:
         - albumentations_docs.main
+  - redirects:
+      redirect_maps:
+        'docs/contributing/environment_setup.md': 'contributing/environment_setup.md'
+        'docs/contributing/coding_guidelines.md': 'contributing/coding_guidelines.md'
   - minify:
       minify_html: true
       minify_js: true
@@ -102,6 +106,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.critic:
       mode: view
+  - pymdownx.pathconverter:
+      base_path: 'src/docs'
+      relative_path: true
 
 extra_css:
   - css/extra.css

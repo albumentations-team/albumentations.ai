@@ -12,4 +12,4 @@ pytkdocs
 mkdocstrings[python-legacy]
 mkdocs-material[imaging]
 jupyter
-nbconvert
+mkdocs-redirects
