@@ -236,6 +236,14 @@
          <xmlns:lastmod>2024-11-20</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/contributing/coding_guidelines/</xmlns:loc>
+         <xmlns:lastmod>2024-11-20</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/contributing/environment_setup/</xmlns:loc>
+         <xmlns:lastmod>2024-11-20</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/examples/</xmlns:loc>
          <xmlns:lastmod>2024-11-20</xmlns:lastmod>
     </xmlns:url>
