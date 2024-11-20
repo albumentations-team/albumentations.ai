@@ -9,5 +9,6 @@ nav:
   - integrations
   - frameworks_and_libraries.md
   - api_reference
+  - Contributing: CONTRIBUTING.md
+  - contributing
   - autoalbument
-  - CONTRIBUTING.md
