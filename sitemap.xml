@@ -296,6 +296,10 @@
          <xmlns:lastmod>2024-12-04</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/integrations/fiftyone/</xmlns:loc>
+         <xmlns:lastmod>2024-12-04</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/</xmlns:loc>
          <xmlns:lastmod>2024-12-04</xmlns:lastmod>
     </xmlns:url>
