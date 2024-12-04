@@ -12,11 +12,24 @@ echo "DOCS_DIR: $DOCS_DIR"
 echo "WORKSPACE_DIR: $WORKSPACE_DIR"
 echo "ALBUMENTATIONS_DIR: $ALBUMENTATIONS_DIR"
 
+# Install dependencies
+if command -v uv &> /dev/null; then
+    PIP_CMD="uv pip install --system"
+else
+    PIP_CMD="pip install"
+fi
+
+# Install Jupyter if not already installed
+if ! command -v jupyter &> /dev/null; then
+    echo "Jupyter is not installed. Installing Jupyter..."
+    $PIP_CMD jupyter
+fi
+
 # Create all required directories
 mkdir -p "$DOCS_DIR/src/docs/examples"
 mkdir -p "$DOCS_DIR/src/docs/integrations/huggingface"
 mkdir -p "$DOCS_DIR/src/docs/integrations/roboflow"
-mkdir -p "$DOCS_DIR/src/docs/contributing"  # Added this line
+mkdir -p "$DOCS_DIR/src/docs/contributing"
 
 # Clone repositories if they don't exist
 if [ ! -d "$ALBUMENTATIONS_DIR" ]; then
@@ -43,7 +56,6 @@ else
     echo "Warning: Contributing documentation directory not found in albumentations repo"
 fi
 
-# Download HuggingFace files
 # Download HuggingFace files
 echo "Downloading HuggingFace files..."
 mkdir -p "$DOCS_DIR/src/docs/integrations/huggingface"
@@ -74,14 +86,6 @@ wget -O "$DOCS_DIR/src/docs/integrations/roboflow/train-rt-detr-on-custom-datase
 # Convert the Roboflow Jupyter notebook to markdown
 jupyter nbconvert --to markdown "$DOCS_DIR/src/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.ipynb" \
     --output "$DOCS_DIR/src/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.md"
-
-
-# Install dependencies
-if command -v uv &> /dev/null; then
-    PIP_CMD="uv pip install --system"
-else
-    PIP_CMD="pip install"
-fi
 
 $PIP_CMD -e "$ALBUMENTATIONS_DIR"
 $PIP_CMD -r "$DOCS_DIR/requirements.txt"
