@@ -1,4 +1,4 @@
 nav:
 - Home: index.md
 - Image classification: image_classification_albumentations.md
-- Hugging Face Object Detection: object_detection.md
+- Object Detection: object_detection.md
