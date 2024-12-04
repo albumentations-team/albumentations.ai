@@ -43,18 +43,14 @@ echo "Copying and fixing CONTRIBUTING.md..."
 sed 's|docs/contributing/|contributing/|g' "$ALBUMENTATIONS_DIR/CONTRIBUTING.md" > "$DOCS_DIR/src/docs/CONTRIBUTING.md"
 
 # Copy contributing directory contents and create .pages
-if [ -d "$ALBUMENTATIONS_DIR/docs/contributing" ]; then
-    echo "Copying contributing documentation..."
-    mkdir -p "$DOCS_DIR/src/docs/contributing"
-    cp -r "$ALBUMENTATIONS_DIR/docs/contributing/"* "$DOCS_DIR/src/docs/contributing/"
+echo "Copying contributing documentation..."
+mkdir -p "$DOCS_DIR/src/docs/contributing"
+cp -r "$ALBUMENTATIONS_DIR/docs/contributing/"* "$DOCS_DIR/src/docs/contributing/"
 
-    # Create contributing .pages file
-    echo "nav:
-  - Coding Guidelines: coding_guidelines.md
-  - Environment Setup: environment_setup.md" > "$DOCS_DIR/src/docs/contributing/.pages"
-else
-    echo "Warning: Contributing documentation directory not found in albumentations repo"
-fi
+# Create contributing .pages file
+echo "nav:
+- Coding Guidelines: coding_guidelines.md
+- Environment Setup: environment_setup.md" > "$DOCS_DIR/src/docs/contributing/.pages"
 
 # Download HuggingFace files
 echo "Downloading HuggingFace files..."
@@ -66,15 +62,16 @@ wget -O "$DOCS_DIR/src/docs/integrations/huggingface/image_classification_albume
 jupyter nbconvert --to markdown "$DOCS_DIR/src/docs/integrations/huggingface/image_classification_albumentations.ipynb" \
     --output "$DOCS_DIR/src/docs/integrations/huggingface/image_classification_albumentations.md"
 
-
 wget -O "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md" \
     https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/tasks/object_detection.md
 
-# Check if the file exists before running sed
-if [ -f "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md" ]; then
+# Use sed with cross-platform compatibility
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
     sed -i '' 's/\[\[open-in-colab\]\]//g' "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md"
 else
-    echo "File not found: $DOCS_DIR/src/docs/integrations/huggingface/object_detection.md"
+    # Linux and other Unix-like systems
+    sed -i 's/\[\[open-in-colab\]\]//g' "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md"
 fi
 
 # Download Roboflow Notebook
