@@ -83,5 +83,10 @@ export const testimonials: Testimonials[] = [
         imageUrl: '/assets/testimonials/venkatkumar_r.png',
         socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7262002222035546112/',
         platform: 'linkedin'
+    },
+    {
+        imageUrl: '/assets/testimonials/Natalia_Pavlovskaya.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7270124370264506371/',
+        platform: 'linkedin'
     }
 ]
