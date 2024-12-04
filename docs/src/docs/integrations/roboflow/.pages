@@ -1,4 +1,4 @@
 title: Roboflow
 
 nav:
-    - How to Train RT-DETR on Custom Dataset with Roboflow, HuggingFace and Albumentations: train-rt-detr-on-custom-dataset-with-transformers
+    - How to Train RT-DETR on Custom Dataset with Roboflow, HuggingFace and Albumentations: train-rt-detr-on-custom-dataset-with-transformers.md

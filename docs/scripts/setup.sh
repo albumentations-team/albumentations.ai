@@ -43,6 +43,39 @@ else
     echo "Warning: Contributing documentation directory not found in albumentations repo"
 fi
 
+# Download HuggingFace files
+# Download HuggingFace files
+echo "Downloading HuggingFace files..."
+mkdir -p "$DOCS_DIR/src/docs/integrations/huggingface"
+wget -O "$DOCS_DIR/src/docs/integrations/huggingface/image_classification_albumentations.ipynb" \
+    https://raw.githubusercontent.com/huggingface/notebooks/main/examples/image_classification_albumentations.ipynb
+
+# Convert the Jupyter notebook to markdown
+jupyter nbconvert --to markdown "$DOCS_DIR/src/docs/integrations/huggingface/image_classification_albumentations.ipynb" \
+    --output "$DOCS_DIR/src/docs/integrations/huggingface/image_classification_albumentations.md"
+
+
+wget -O "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md" \
+    https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/tasks/object_detection.md
+
+# Check if the file exists before running sed
+if [ -f "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md" ]; then
+    sed -i '' 's/\[\[open-in-colab\]\]//g' "$DOCS_DIR/src/docs/integrations/huggingface/object_detection.md"
+else
+    echo "File not found: $DOCS_DIR/src/docs/integrations/huggingface/object_detection.md"
+fi
+
+# Download Roboflow Notebook
+echo "Downloading Roboflow Notebook..."
+mkdir -p "$DOCS_DIR/src/docs/integrations/roboflow"
+wget -O "$DOCS_DIR/src/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.ipynb" \
+    https://raw.githubusercontent.com/roboflow/notebooks/main/notebooks/train-rt-detr-on-custom-dataset-with-transformers.ipynb
+
+# Convert the Roboflow Jupyter notebook to markdown
+jupyter nbconvert --to markdown "$DOCS_DIR/src/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.ipynb" \
+    --output "$DOCS_DIR/src/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.md"
+
+
 # Install dependencies
 if command -v uv &> /dev/null; then
     PIP_CMD="uv pip install --system"
