@@ -2,5 +2,5 @@ title: Integrations
 
 nav:
     - HuggingFace: huggingface
-    - FiftyOne: fiftyone.md
     - Roboflow: roboflow
+    - Voxel51: fiftyone.md

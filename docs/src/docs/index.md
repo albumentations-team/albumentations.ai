@@ -31,8 +31,8 @@ The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate 
 ## Integrations
 
 - [HuggingFace](integrations/huggingface/)
-- [FiftyOne](integrations/fiftyone.md)
 - [Roboflow](integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.md)
+- [Voxel51](integrations/fiftyone.md)
 
 ## Examples
 
