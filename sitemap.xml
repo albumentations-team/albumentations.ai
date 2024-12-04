@@ -296,11 +296,19 @@
          <xmlns:lastmod>2024-12-04</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
-         <xmlns:loc>https://albumentations.ai/docs/integrations/fiftyone/</xmlns:loc>
+         <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/</xmlns:loc>
          <xmlns:lastmod>2024-12-04</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
-         <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/</xmlns:loc>
+         <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/image_classification_albumentations/</xmlns:loc>
+         <xmlns:lastmod>2024-12-04</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/object_detection/</xmlns:loc>
+         <xmlns:lastmod>2024-12-04</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers/</xmlns:loc>
          <xmlns:lastmod>2024-12-04</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
