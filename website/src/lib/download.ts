@@ -1,6 +1,6 @@
-import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
 
-export const getDownloadsCount = cache(async (): Promise<number> => {
+export const getDownloadsCount = unstable_cache(async (): Promise<number> => {
   const response = await fetch(
     'https://pypistats.org/api/packages/albumentations/recent',
     {
