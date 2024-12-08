@@ -28,8 +28,8 @@
     - [My computer vision pipeline works with a sequence of images. I want to apply the same augmentations with the same parameters to each image in the sequence. Can Albumentations do it?](#my-computer-vision-pipeline-works-with-a-sequence-of-images-i-want-to-apply-the-same-augmentations-with-the-same-parameters-to-each-image-in-the-sequence-can-albumentations-do-it)
     - [How to perform balanced scaling?](#how-to-perform-balanced-scaling)
     - [Augmentations have a parameter named `p` that sets the probability of applying that augmentation. How does `p` work in nested containers?](#augmentations-have-a-parameter-named-p-that-sets-the-probability-of-applying-that-augmentation-how-does-p-work-in-nested-containers)
-    - [When I use augmentations with the `border_mode` parameter (such as `Rotate`) and set `border_mode` to `cv2.BORDER_REFLECT` or `cv2.BORDER_REFLECT_101` Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?](#when-i-use-augmentations-with-the-border_mode-parameter-such-as-rotate-and-set-border_mode-to-cv2border_reflect-or-cv2border_reflect_101-albumentations-mirrors-regions-of-images-and-masks-but-doesnt-mirror-bounding-boxes-and-keypoints-is-it-a-bug)
     - [I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?](#i-created-annotations-for-bounding-boxes-using-labeling-service-or-labeling-software-how-can-i-use-those-annotations-in-albumentations)
+    - [How do I migrate from other augmentation libraries to Albumentations?](#how-do-i-migrate-from-other-augmentation-libraries-to-albumentations)
 
 ## Installation
 
@@ -164,11 +164,22 @@ transform = A.Compose([
 
 In this example, Resize has an effective probability of being applied as `0.9 * 0.5` = 0.45 or 45%. This is because `Compose` is applied 90% of the time, and within that 90%, `Resize` is applied 50% of the time.
 
-### When I use augmentations with the `border_mode` parameter (such as `Rotate`) and set `border_mode` to `cv2.BORDER_REFLECT` or `cv2.BORDER_REFLECT_101` Albumentations mirrors regions of images and masks but doesn't mirror bounding boxes and keypoints. Is it a bug?
-
-Unfortunately, adding extra bounding boxes or keypoints to reflected regions of the image is not supported.
-You can change `border_mode` mode to `cv2.BORDER_CONSTANT` if this causes a significant impact on the training of your model.
-
 ### I created annotations for bounding boxes using labeling service or labeling software. How can I use those annotations in Albumentations?
 
 You need to convert those annotations to one of the formats, supported by Albumentations. For the list of formats, please refer to [this article](getting_started/bounding_boxes_augmentation.md). Consult the documentation of the labeling service to see how you can export annotations in those formats.
+
+### How do I migrate from other augmentation libraries to Albumentations?
+
+If you're migrating from other libraries like torchvision or Kornia, you can refer to our [Library Comparison & Benchmarks](getting_started/library_comparison.md) guide. This guide provides:
+
+1. Mapping tables showing equivalent transforms between libraries
+2. Performance benchmarks demonstrating Albumentations' speed advantages
+3. Code examples for common migration scenarios
+4. Key differences in implementation and parameter handling
+
+For a quick visual comparison of different augmentations, you can also use our interactive tool at [explore.albumentations.ai](https://explore.albumentations.ai) to see how transforms affect images before implementing them.
+
+For specific migration examples, see:
+
+- [Migrating from torchvision](examples/migrating_from_torchvision_to_albumentations/)
+- [Performance comparison with other libraries](getting_started/library_comparison.md#performance-comparison)
