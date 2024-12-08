@@ -48,7 +48,7 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 ## Migration Guides
 
 - [From torchvision](examples/migrating_from_torchvision_to_albumentations/)
-- [Library Comparison & Benchmarks](getting_started/library_comparison.md)
+- [Library Comparison & Benchmarks](getting_started/augmentation_mapping.md)
 
 ## Examples
 
