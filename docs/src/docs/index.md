@@ -47,7 +47,7 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 
 ## Library Comparisons
 
-- [Performance Benchmarks](getting_started/augmentation_mapping.md) - Find equivalent transforms between Albumentations and other libraries (torchvision, Kornia)
+- [Transform Library Comparison](getting_started/augmentation_mapping.md) - Find equivalent transforms between Albumentations and other libraries (torchvision, Kornia)
 - [Migration from torchvision](examples/migrating_from_torchvision_to_albumentations/) - Step-by-step migration guide
 
 ## Examples
