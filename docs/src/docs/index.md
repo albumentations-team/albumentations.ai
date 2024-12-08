@@ -2,37 +2,53 @@
 
 Albumentations is a fast and flexible image augmentation library. The library is widely used in [industry](https://albumentations.ai/whos_using#industry), [deep learning research](https://albumentations.ai/whos_using#research), [machine learning competitions](https://albumentations.ai/whos_using#competitions), and [open source projects](https://albumentations.ai/whos_using#open-source). Albumentations is written in Python, and it is licensed under the MIT license. The source code is available at [https://github.com/albumentations-team/albumentations](https://github.com/albumentations-team/albumentations).
 
-If you are new to image augmentation, start with articles in the ["Introduction to image augmentation"](#introduction-to-image-augmentation) section. They describe what image augmentation is, how it can boost deep neural networks' performance, and why you should use Albumentations.
+If you are new to image augmentation, start with our ["Learning Path"](#learning-path) for beginners. It describes what image augmentation is, how it can boost deep neural networks' performance, and why you should use Albumentations.
 
-Articles in the ["Getting started with Albumentations"](#getting-started-with-albumentations) section show how you can use the library for different computer vision tasks: image classification, semantic segmentation, instance segmentation, and object detection, keypoint detection.
+For hands-on experience, check out our ["Quick Start Guide"](#quick-start-guide) and ["Examples"](#examples) sections. They show how you can use the library for different computer vision tasks: image classification, semantic segmentation, instance segmentation, object detection, and keypoint detection. Each example includes a link to Google Colab, where you can run the code by yourself.
 
-The ["Examples"](#examples) section contains Jupyter Notebooks that demonstrate how to use various features of Albumentations. Each notebook includes a link to Google Colab, where you can run the code by yourself.
+You can also visit [explore.albumentations.ai](https://explore.albumentations.ai) to visually explore and experiment with different augmentations in your browser. This interactive tool helps you better understand how each transform affects images before implementing it in your code.
 
 ["API Reference"](#api-reference) contains the description of Albumentations' methods and classes.
 
-## Introduction to image augmentation
-
-- [What is image augmentation and how it can improve the performance of deep neural networks](introduction/image_augmentation.md)
-- [Why you need a dedicated library for image augmentation](introduction/why_you_need_a_dedicated_library_for_image_augmentation.md)
-- [Why Albumentations](introduction/why_albumentations.md)
-
-## Getting started with Albumentations
+## Quick Start Guide
 
 - [Installation](getting_started/installation.md)
 - [Frequently Asked Questions](faq.md)
-- [Image augmentation for classification](getting_started/image_augmentation.md)
-- [Mask augmentation for segmentation](getting_started/mask_augmentation.md)
-- [Bounding boxes augmentation for object detection](getting_started/bounding_boxes_augmentation.md)
-- [Keypoints augmentation](getting_started/keypoints_augmentation.md)
-- [Simultaneous augmentation of multiple targets: masks, bounding boxes, keypoints](getting_started/simultaneous_augmentation.md)
-- [A list of transforms and their supported targets](getting_started/transforms_and_targets.md)
-- [Setting probabilities for transforms in an augmentation pipeline](getting_started/setting_probabilities.md)
+- [Your First Augmentation Pipeline](examples/example/)
 
-## Integrations
+## Learning Path
 
+### Beginners
+
+- [What is Image Augmentation?](introduction/image_augmentation.md)
+- [Why Choose Albumentations?](introduction/why_albumentations.md)
+- [Basic Image Classification](getting_started/image_augmentation.md)
+
+### Intermediate
+
+- [Semantic Segmentation](getting_started/mask_augmentation.md)
+- [Object Detection](getting_started/bounding_boxes_augmentation.md)
+- [Keypoint Detection](getting_started/keypoints_augmentation.md)
+- [Multi-target Augmentation](getting_started/simultaneous_augmentation.md)
+
+### Advanced
+
+- [Pipeline Configuration](getting_started/setting_probabilities.md)
+- [Debugging with ReplayCompose](examples/replay/)
+- [Serialization](examples/serialization/)
+
+## Framework Integration
+
+- [PyTorch](examples/pytorch_classification/)
+- [TensorFlow](examples/tensorflow-example/)
 - [HuggingFace](integrations/huggingface/)
 - [Roboflow](integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.md)
 - [Voxel51](integrations/fiftyone.md)
+
+## Migration Guides
+
+- [From torchvision](examples/migrating_from_torchvision_to_albumentations/)
+- [Library Comparison & Benchmarks](getting_started/library_comparison.md)
 
 ## Examples
 
