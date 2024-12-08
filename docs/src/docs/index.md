@@ -45,10 +45,10 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 - [Roboflow](integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.md)
 - [Voxel51](integrations/fiftyone.md)
 
-## Migration Guides
+## Library Comparisons
 
-- [From torchvision](examples/migrating_from_torchvision_to_albumentations/)
-- [Library Comparison & Benchmarks](getting_started/augmentation_mapping.md)
+- [Performance Benchmarks](getting_started/augmentation_mapping.md) - Find equivalent transforms between Albumentations and other libraries (torchvision, Kornia)
+- [Migration from torchvision](examples/migrating_from_torchvision_to_albumentations/) - Step-by-step migration guide
 
 ## Examples
 
@@ -66,7 +66,6 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 - [Example of applying RandomGridShuffle transform](examples/example_gridshuffle/)
 - [Example of applying OverlayElements transform](examples/example_OverlayElements/)
 - [Example of applying TextImage transform](examples/example_textimage/)
-- [Migrating from torchvision to Albumentations](examples/migrating_from_torchvision_to_albumentations/)
 - [Debugging an augmentation pipeline with ReplayCompose](examples/replay/)
 - [How to save and load parameters of an augmentation pipeline](examples/serialization/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](examples/showcase/)

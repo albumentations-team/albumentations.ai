@@ -1,8 +1,24 @@
-# Mapping Augmentations from Other Libraries
+# Transform Library Comparison Guide
 
-This guide helps you find Albumentations equivalents for augmentations from other popular libraries like torchvision and Kornia.
+This guide helps you find equivalent transforms between Albumentations and other popular libraries (torchvision and Kornia).
 
-## TorchVision to Albumentations
+## Key Differences
+
+### Compared to TorchVision
+- Albumentations operates on numpy arrays (TorchVision uses PyTorch tensors)
+- More parameters for fine-tuning transformations
+- Built-in support for mask augmentation
+- Better handling of bounding boxes and keypoints
+
+### Compared to Kornia
+- CPU-based numpy operations (Kornia uses GPU tensors)
+- More comprehensive support for detection/segmentation
+- Generally better CPU performance
+- Simpler API for common tasks
+
+## Common Transform Mappings
+
+### Basic Geometric Transforms
 
 | TorchVision Transform | Albumentations Equivalent | Notes |
 |----------------------|-----------------------|-------|
