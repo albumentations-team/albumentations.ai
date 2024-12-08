@@ -1,11 +1,11 @@
-import { cache } from 'react'
+import { unstable_cache } from "next/cache"
 
 interface GitHubStats {
   starsCount: number
   forksCount: number
 }
 
-export const getGitHubStats = cache(async (): Promise<GitHubStats> => {
+export const getGitHubStats = unstable_cache(async (): Promise<GitHubStats> => {
   if (!process.env.GITHUB_TOKEN) {
     throw new Error('GITHUB_TOKEN is required')
   }
