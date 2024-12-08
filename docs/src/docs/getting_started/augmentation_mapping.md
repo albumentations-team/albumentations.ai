@@ -110,7 +110,7 @@ This guide helps you find Albumentations equivalents for augmentations from othe
 - Albumentations typically offers better performance for CPU-based augmentations
 
 ## Performance Comparison
-According to [benchmarking results](../bencharking_results.md), Albumentations generally offers superior CPU performance compared to TorchVision and Kornia for most transforms. Here are some key highlights:
+According to [benchmarking results](../benchmarking_results.md), Albumentations generally offers superior CPU performance compared to TorchVision and Kornia for most transforms. Here are some key highlights:
 Common Transforms Performance (images/second, higher is better)
 
 | Transform | Albumentations | TorchVision | Kornia | Notes |
