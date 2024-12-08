@@ -9,4 +9,5 @@ nav:
 - keypoints_augmentation.md
 - simultaneous_augmentation.md
 - transforms_and_targets.md
+- augmentation_mapping.md
 - Setting probabilities for transforms: setting_probabilities.md
