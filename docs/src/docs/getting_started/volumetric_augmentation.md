@@ -194,6 +194,4 @@ transformed = transform(volume=volume, mask3d=mask)
 
 ## Next Steps
 
-- Check out our [3D Transform Examples](examples/example_3d_medical/) for more detailed use cases
 - Learn about [Video Augmentation](getting_started/video_augmentation.md) for sequential data
-- Explore [Advanced 3D Transforms](api_reference/augmentations/3d_transforms.md) for specialized use cases

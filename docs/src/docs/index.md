@@ -18,16 +18,12 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 
 ## Working with Multi-dimensional Data
 
-### Medical Volumetric Data (3D)
-- [Introduction to 3D Medical Image Augmentation](getting_started/volumetric_augmentation.md)
-- [Working with CT/MRI Volumes](examples/example_3d_medical/)
-- [Available 3D Transforms](api_reference/augmentations/3d_transforms.md)
+### Volumetric Data (3D)
+- [Introduction to 3D (Volumetric) Image Augmentation](getting_started/volumetric_augmentation.md)
+- [Available 3D Transforms](api_reference/augmentations/transforms3d/index.md)
 
 ### Video and Sequential Data
 - [Video Frame Augmentation](getting_started/video_augmentation.md) 
-- [Working with Video Sequences](examples/example_video/)
-- [Temporal Consistency in Augmentations](advanced/temporal_augmentation.md)
-
 
 ## Learning Path
 
