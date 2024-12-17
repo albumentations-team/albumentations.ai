@@ -1,2 +1,2 @@
-- [3D (Volumetric) functional transforms (albumentations.augmentations.transforms3d.functional)](functional.md)
 - [3D (Volumetric) transforms (augmentations.transforms3d.transforms)](transforms.md)
+- [3D (Volumetric) functional transforms (albumentations.augmentations.transforms3d.functional)](functional.md)
