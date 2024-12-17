@@ -194,4 +194,4 @@ transformed = transform(volume=volume, mask3d=mask)
 
 ## Next Steps
 
-- Learn about [Video Augmentation](getting_started/video_augmentation.md) for sequential data
+- Learn about [Video Augmentation](./video_augmentation.md) for sequential data

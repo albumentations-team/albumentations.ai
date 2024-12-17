@@ -108,4 +108,4 @@ def create_video_pipeline(
 
 ## Next Steps
 
-- Learn about [Volumetric Data (3D)](getting_started/volumetric_augmentation.md) for volumetric data
+- Learn about [Volumetric Data (3D)](./volumetric_augmentation.md) for volumetric data
