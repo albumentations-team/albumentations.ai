@@ -1,15 +1,18 @@
 # Full API Reference on a single page
 
-## Pixel-level transforms
+## Transform Types
 
-Here is a list of all available pixel-level transforms. You can apply a pixel-level transform to any target, and under the hood, the transform will change only the input image and return any other input targets such as masks, bounding boxes, or keypoints unchanged.
+### 1. Pixel-level transforms
+Transforms that modify pixel values without changing spatial relationships. These can be safely applied to any target as they only affect the input image, leaving other targets (masks, bounding boxes, keypoints) unchanged.
 
 {{ image_only_transforms_links(only_anchor=True) }}
 
-## Spatial-level transforms
-
-Here is a table with spatial-level transforms and targets they support. If you try to apply a spatial-level transform to an unsupported target, Albumentations will raise an error.
+### 2. Spatial-level transforms
+Transforms that modify the spatial arrangement of pixels/features. Different targets have different spatial transform support - see the compatibility table below:
 
 {{ dual_transforms_table(only_anchor=True) }}
 
-::: albumentations
+### 3. Volumetric (3D) transforms
+Transforms designed for three-dimensional data (D, H, W). These operate on volumes and their corresponding 3D masks, supporting both single-channel and multi-channel data.
+
+{{ transforms3d_table(only_anchor=True) }}

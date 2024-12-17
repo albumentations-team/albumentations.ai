@@ -8,6 +8,7 @@ from make_transforms_docs import (
     Targets,
     get_dual_transforms_info,
     get_image_only_transforms_info,
+    get_3d_transforms_info,
     make_transforms_targets_links,
     make_transforms_targets_table,
 )
@@ -78,7 +79,7 @@ def filter_out_init_schema(transforms):
 def define_env(env):
     image_only_transforms = dict(get_image_only_transforms_info().items())
     dual_transforms = dict(get_dual_transforms_info().items())
-
+    transforms3d = dict(get_3d_transforms_info().items())
     # Filter out InitSchema from both transform types
     image_only_transforms = filter_out_init_schema(image_only_transforms)
     dual_transforms = filter_out_init_schema(dual_transforms)
@@ -91,6 +92,14 @@ def define_env(env):
     @env.macro
     def dual_transforms_table(only_anchor=False):
         transforms = replace_path(dual_transforms) if only_anchor else dual_transforms
+        return make_transforms_targets_table(
+            transforms,
+            header=["Transform"] + [target.value for target in Targets],
+        )
+
+    @env.macro
+    def transforms3d_table(only_anchor=False):
+        transforms = replace_path(transforms3d) if only_anchor else transforms3d
         return make_transforms_targets_table(
             transforms,
             header=["Transform"] + [target.value for target in Targets],
