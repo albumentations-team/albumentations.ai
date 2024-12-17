@@ -137,6 +137,30 @@
          <lastmod>2024-12-17</lastmod>
     </url>
     <url>
+         <loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/functional/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/transforms/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/functional/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/transforms/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
          <loc>https://albumentations.ai/docs/api_reference/core/</loc>
          <lastmod>2024-12-17</lastmod>
     </url>
@@ -294,6 +318,14 @@
     </url>
     <url>
          <loc>https://albumentations.ai/docs/getting_started/transforms_and_targets/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/getting_started/video_augmentation/</loc>
+         <lastmod>2024-12-17</lastmod>
+    </url>
+    <url>
+         <loc>https://albumentations.ai/docs/getting_started/volumetric_augmentation/</loc>
          <lastmod>2024-12-17</lastmod>
     </url>
     <url>

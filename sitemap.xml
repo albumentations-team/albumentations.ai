@@ -136,6 +136,30 @@
          <xmlns:lastmod>2024-12-17</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/functional/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/transforms/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/functional/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/transforms/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/</xmlns:loc>
          <xmlns:lastmod>2024-12-17</xmlns:lastmod>
     </xmlns:url>
@@ -293,6 +317,14 @@
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/transforms_and_targets/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/getting_started/video_augmentation/</xmlns:loc>
+         <xmlns:lastmod>2024-12-17</xmlns:lastmod>
+    </xmlns:url>
+    <xmlns:url>
+         <xmlns:loc>https://albumentations.ai/docs/getting_started/volumetric_augmentation/</xmlns:loc>
          <xmlns:lastmod>2024-12-17</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
