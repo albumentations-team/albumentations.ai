@@ -1,0 +1,2 @@
+- [Mixing transforms (augmentations.mixing.transforms)](transforms.md)
+- [Mixing functional transforms (albumentations.augmentations.mixing.functional)](functional.md)
