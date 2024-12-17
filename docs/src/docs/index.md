@@ -16,6 +16,19 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 - [Frequently Asked Questions](faq.md)
 - [Your First Augmentation Pipeline](examples/example/)
 
+## Working with Multi-dimensional Data
+
+### Medical Volumetric Data (3D)
+- [Introduction to 3D Medical Image Augmentation](getting_started/volumetric_augmentation.md)
+- [Working with CT/MRI Volumes](examples/example_3d_medical/)
+- [Available 3D Transforms](api_reference/augmentations/3d_transforms.md)
+
+### Video and Sequential Data
+- [Video Frame Augmentation](getting_started/video_augmentation.md) 
+- [Working with Video Sequences](examples/example_video/)
+- [Temporal Consistency in Augmentations](advanced/temporal_augmentation.md)
+
+
 ## Learning Path
 
 ### Beginners
