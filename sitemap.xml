@@ -1,378 +1,378 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns:xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/CONTRIBUTING/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/benchmarking_results/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/faq/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/frameworks_and_libraries/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/full_reference/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/autoalbument/benchmarks/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/blur/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/blur/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/crops/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/crops/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/crops/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/domain_adaptation/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/channel_dropout/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/coarse_dropout/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/grid_dropout/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/mask_dropout/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/resize/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/rotate/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/geometric/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/mixing/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/functional/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/augmentations/transforms3d/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/bbox_utils/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/composition/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/keypoints_utils/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/serialization/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/core/transforms_interface/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/pytorch/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/api_reference/pytorch/transforms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/benchmarks/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/custom_model/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/docker/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/faq/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/how_to_use/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/installation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/introduction/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/metrics/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/search_algorithms/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/tuning_parameters/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/examples/cifar10/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/examples/cityscapes/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/examples/imagenet/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/examples/list/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/examples/pascal_voc/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/autoalbument/examples/svhn/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/contributing/coding_guidelines/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/contributing/environment_setup/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/examples/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/external_resources/blog_posts_podcasts_talks/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/external_resources/books/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/external_resources/online_courses/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/augmentation_mapping/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/image_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/installation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/keypoints_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/mask_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/setting_probabilities/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/simultaneous_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/transforms_and_targets/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/video_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/getting_started/volumetric_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/fiftyone/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/image_classification_albumentations/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/huggingface/object_detection/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/introduction/image_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/introduction/why_albumentations/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
     <xmlns:url>
          <xmlns:loc>https://albumentations.ai/docs/introduction/why_you_need_a_dedicated_library_for_image_augmentation/</xmlns:loc>
-         <xmlns:lastmod>2025-01-04</xmlns:lastmod>
+         <xmlns:lastmod>2025-01-05</xmlns:lastmod>
     </xmlns:url>
 <url>
     <loc>https://albumentations.ai</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/people</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>daily</changefreq>
 </url><url>
     <loc>https://albumentations.ai/testimonials</loc>
-    <lastmod>2025-01-04</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>daily</changefreq>
 </url></urlset>
