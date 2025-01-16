@@ -88,5 +88,11 @@ export const testimonials: Testimonials[] = [
         imageUrl: '/assets/testimonials/Natalia_Pavlovskaya.png',
         socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7270124370264506371/',
         platform: 'linkedin'
+    },
+    {
+        imageUrl: '/assets/testimonials/subham_agraval.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7285433611720237056?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7285433611720237056%2C7285643413771722752%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287285643413771722752%2Curn%3Ali%3Aactivity%3A7285433611720237056%29',
+        platform: 'linkedin',
+        note: "Founder at Neurabit Solution"
     }
 ]
