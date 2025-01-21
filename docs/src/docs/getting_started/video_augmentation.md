@@ -14,7 +14,7 @@ Albumentations accepts video data as numpy arrays in the following formats:
 Where:
 - N = Number of frames
 - H = Height
-- W = Width 
+- W = Width
 - C = Channels (e.g., 3 for RGB)
 
 ### Video Masks

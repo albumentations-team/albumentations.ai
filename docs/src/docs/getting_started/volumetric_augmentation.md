@@ -37,7 +37,7 @@ Albumentations expects 3D volumes as numpy arrays in the following formats:
 Where:
 - D = Depth (number of slices)
 - H = Height
-- W = Width 
+- W = Width
 - C = Channels (optional)
 
 ### 3D Masks
@@ -57,7 +57,7 @@ import numpy as np
 ```python
 transform = A.Compose([
     # Crop volume to a fixed size for memory efficiency
-    A.RandomCrop3D(size=(64, 128, 128), p=1.0),    
+    A.RandomCrop3D(size=(64, 128, 128), p=1.0),
     # Randomly remove cubic regions to simulate occlusions
     A.CoarseDropout3D(
         num_holes_range=(2, 6),
@@ -65,7 +65,7 @@ transform = A.Compose([
         hole_height_range=(0.1, 0.3),
         hole_width_range=(0.1, 0.3),
         p=0.5
-    ),    
+    ),
 ])
 ```
 

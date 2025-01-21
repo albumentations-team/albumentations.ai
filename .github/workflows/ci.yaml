@@ -24,4 +24,4 @@ jobs:
     - name: Install dev requirements
       run: pip install pre-commit
     - name: Run checks
-      run: pre-commit run --files $(find mkdocs -type f)
+      run: pre-commit run --files $(find docs -type f)

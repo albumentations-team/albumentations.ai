@@ -23,7 +23,7 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 - [Available 3D Transforms](api_reference/augmentations/transforms3d/index.md)
 
 ### Video and Sequential Data
-- [Video Frame Augmentation](getting_started/video_augmentation.md) 
+- [Video Frame Augmentation](getting_started/video_augmentation.md)
 
 ## Learning Path
 

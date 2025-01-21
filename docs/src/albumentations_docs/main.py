@@ -6,9 +6,9 @@ from pathlib import Path
 
 from make_transforms_docs import (
     Targets,
+    get_3d_transforms_info,
     get_dual_transforms_info,
     get_image_only_transforms_info,
-    get_3d_transforms_info,
     make_transforms_targets_links,
     make_transforms_targets_table,
 )
