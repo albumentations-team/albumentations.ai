@@ -4,7 +4,7 @@
 # character.
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.12"
 ignore_missing_imports = true
 follow_imports = "silent"
 warn_redundant_casts = true
@@ -55,42 +55,26 @@ line-length = 120
 indent-width = 4
 
 # Assume Python 3.10
-target-version = "py310"
+target-version = "py312"
 
 [tool.ruff.lint]
 explicit-preview-rules = true
 
 select = ["ALL"]
 ignore = [
-  "ANN001",
-  "ANN003",
-  "ANN101",
-  "ANN204",
-  "D101",
-  "D102",
+  "D100",
   "D103",
   "D104",
-  "D107",
-  "ANN201",
+  "D203",
   "BLE001",
-  "D211",
+  "ANN001",
+  "ANN003",
+  "ANN201",
   "ANN202",
+  "ANN401",
   "FBT002",
-  "D212",
-  "D100",
-  "ARG001",
-  "INP001",
-  "T201",
-  "S320",
-  "PLR0913",
   "FBT001",
-  "ISC001",
-  "G004",
-  "TRY003",
-  "EM101",
-  "S603",
-  "TRY401",
-  "EM102",
+  "ARG001"
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.

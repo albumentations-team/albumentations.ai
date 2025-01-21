@@ -33,7 +33,27 @@ os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
 os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
 os.environ["NUMEXPR_NUM_THREADS"] = "1"
+
+# Disable OpenCV multithreading and OpenCL
+import cv2
+cv2.setNumThreads(0)
+cv2.ocl.setUseOpenCL(False)
 ```
+
+### Experiencing slow performance with PyTorch DataLoader multi-processing?
+
+Some users have reported performance issues when using Albumentations with PyTorch's DataLoader in a multi-processing setup. This can occur on certain hardware/software configurations because OpenCV (cv2), which Albumentations uses under the hood, may spawn multiple threads within each DataLoader worker process. These threads can potentially interfere with each other, leading to CPU blocking and slower data loading.
+
+If you encounter this issue, you can try disabling OpenCV's internal multithreading and OpenCL acceleration by calling:
+
+```python
+import cv2
+cv2.setNumThreads(0)
+cv2.ocl.setUseOpenCL(False)
+```
+
+This should be done at the beginning of your script or before creating the DataLoader. Note that this solution may not be necessary for all users, and you should only apply it if you're experiencing performance problems with your specific setup.
+
 
 ## Data Formats and Basic Usage
 ### Supported Image Types
@@ -222,4 +242,3 @@ For specific migration examples, see:
 
 - [Migrating from torchvision](examples/migrating_from_torchvision_to_albumentations/)
 - [Performance comparison with other libraries](getting_started/library_comparison.md#performance-comparison)
-
