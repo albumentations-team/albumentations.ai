@@ -105,3 +105,8 @@ def define_env(env: Any) -> None:
                 return f.read()
         except Exception:
             return ""
+
+    @env.macro
+    def benchmarking_results() -> str:
+        readme_path = ALBUMENTATIONS_DIR / "README.md"
+        return extract_benchmarking_results(readme_path)
