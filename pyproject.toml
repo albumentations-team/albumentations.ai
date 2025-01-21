@@ -62,9 +62,11 @@ explicit-preview-rules = true
 
 select = ["ALL"]
 ignore = [
+  "D103",
   "BLE001",
   "ANN001",
-  "ANN202"
+  "ANN202",
+  "FBT002"
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
