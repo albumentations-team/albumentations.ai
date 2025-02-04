@@ -43,7 +43,7 @@ def extract_benchmarking_results(readme_path: Path) -> str:
             readme_contents = f.read()
 
         # Define start and end markers for the benchmarking section
-        start_marker = "## Benchmarking results"
+        start_marker = "## Benchmarking Results"
         end_marker = "## Contributing"  # Assuming each section starts with "## "
         start_index = readme_contents.find(start_marker)
 
