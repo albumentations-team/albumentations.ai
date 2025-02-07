@@ -32,7 +32,7 @@ transform = A.Compose([
     A.RandomCrop(width=256, height=256),
     A.HorizontalFlip(p=0.5),
     A.RandomBrightnessContrast(p=0.2),
-])
+], seed=137, strict=True)
 
 ```
 
@@ -63,11 +63,8 @@ import cv2
 To read an image with OpenCV
 
 ```python
-
-image = cv2.imread("/path/to/image.jpg")
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv2.imread("/path/to/image.jpg", cv2.IMREAD_COLOR_RGB)
 ```
-Note the usage of `cv2.cvtColor`. [For historical reasons](https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/), OpenCV reads an image in BGR format (so color channels of the image have the following order: Blue, Green, Red). Albumentations uses the most common and popular RGB image format. So when using OpenCV, we need to convert the image format to RGB explicitly.
 
 !!! note ""
     Besides OpenCV, you can use other image processing libraries.
@@ -133,6 +130,5 @@ another_transformed_image = transform(image=another_image)["image"]
 
 ## Examples
 - [Defining a simple augmentation pipeline for image augmentation](../../examples/example/)
-- [Working with non-8-bit images](../../examples/example_16_bit_tiff/)
 - [Weather augmentations in Albumentations](../../examples/example_weather_transforms/)
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](../../examples/showcase/)
