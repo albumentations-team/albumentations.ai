@@ -49,7 +49,6 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 ## Framework Integration
 
 - [PyTorch](examples/pytorch_classification/)
-- [TensorFlow](examples/tensorflow-example/)
 - [HuggingFace](integrations/huggingface/)
 - [Roboflow](integrations/roboflow/train-rt-detr-on-custom-dataset-with-transformers.md)
 - [Voxel51](integrations/fiftyone.md)
@@ -84,7 +83,6 @@ You can also visit [explore.albumentations.ai](https://explore.albumentations.ai
 
 - [PyTorch and Albumentations for image classification](examples/pytorch_classification/)
 - [PyTorch and Albumentations for semantic segmentation](examples/pytorch_semantic_segmentation/)
-- [Using Albumentations with Tensorflow](examples/tensorflow-example/)
 
 ## External resources
 

@@ -20,10 +20,7 @@
 - [Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.](showcase/)
 - [How to save and load transforms to HuggingFace Hub.](example_hfhub/)
 
-## Examples of how to use Albumentations with different deep learning frameworks
+## Examples of how to use Albumentations with PyTorch
 
-- PyTorch
-  - [PyTorch and Albumentations for image classification](pytorch_classification/)
-  - [PyTorch and Albumentations for semantic segmentation](pytorch_semantic_segmentation/)
-- TensorFlow 2
-  - [Using Albumentations with Tensorflow](tensorflow-example/)
+- [PyTorch and Albumentations for image classification](pytorch_classification/)
+- [PyTorch and Albumentations for semantic segmentation](pytorch_semantic_segmentation/)
