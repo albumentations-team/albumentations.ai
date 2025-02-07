@@ -40,7 +40,7 @@ repos:
     -   id: trailing-whitespace
     -   id: requirements-txt-fixer
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.2
+    rev: v0.9.5
     hooks:
     -   id: ruff
         args:
@@ -55,14 +55,14 @@ repos:
     -   id: python-use-type-annotations
     -   id: text-unicode-replacement-char
 -   repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
     -   id: codespell
         additional_dependencies:
         - tomli
         args: ['--ignore-words-list=fo']
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.14.1
+    rev: v1.15.0
     hooks:
     -   id: mypy
         files: ^docs/
