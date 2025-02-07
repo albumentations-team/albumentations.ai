@@ -115,6 +115,36 @@ But if you want only to the sequence of images, you may just use `images` target
 
 ## Advanced Usage
 
+### How to have reproducible augmentations?
+
+To have reproducible augmentations, set the `seed` parameter in your transform pipeline. This will ensure that the same random parameters are used for each augmentation, resulting in the same output for the same input.
+
+Note that Albumentations uses its own internal random state that is completely independent from global random seeds. This means:
+
+1. Setting `np.random.seed()` or `random.seed()` will NOT affect Albumentations' randomization
+2. Two Compose instances with the same seed will produce identical augmentation sequences
+3. Each call to the same Compose instance still produces random augmentations, but these sequences are reproducible between different instances
+
+Example of reproducible augmentations:
+```python
+# These two transforms will produce identical sequences
+transform1 = A.Compose([
+    A.RandomCrop(height=256, width=256),
+    A.HorizontalFlip(p=0.5),
+    A.RandomBrightnessContrast(p=0.2),
+], seed=137)
+
+transform2 = A.Compose([
+    A.RandomCrop(height=256, width=256),
+    A.HorizontalFlip(p=0.5),
+    A.RandomBrightnessContrast(p=0.2),
+], seed=137)
+
+# This will NOT affect Albumentations randomization
+np.random.seed(137)
+random.seed(137)
+```
+
 ### How can I find which augmentations were applied to the input data and which parameters they used?
 
 You may pass `save_applied_params=True` to `Compose` to save the parameters of the applied augmentations. You can access them later using `applied_transforms`.
