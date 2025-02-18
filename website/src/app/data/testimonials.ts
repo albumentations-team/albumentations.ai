@@ -80,11 +80,6 @@ export const testimonials: Testimonials[] = [
         platform: 'reddit'
     },
     {
-        imageUrl: '/assets/testimonials/venkatkumar_r.png',
-        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7262002222035546112/',
-        platform: 'linkedin'
-    },
-    {
         imageUrl: '/assets/testimonials/Natalia_Pavlovskaya.png',
         socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7270124370264506371/',
         platform: 'linkedin'
@@ -94,5 +89,15 @@ export const testimonials: Testimonials[] = [
         socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7285433611720237056?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7285433611720237056%2C7285643413771722752%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287285643413771722752%2Curn%3Ali%3Aactivity%3A7285433611720237056%29',
         platform: 'linkedin',
         note: "Founder at Neurabit Solution"
+    },
+    {
+        imageUrl: '/assets/testimonials/claudia_vanea.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7295198950033145857?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7295198950033145857%2C7295208972779712512%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287295208972779712512%2Curn%3Ali%3Aactivity%3A7295198950033145857%29',
+        platform: 'linkedin',
+    },
+    {
+        imageUrl: '/assets/testimonials/venkatkumar_r.png',
+        socialUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7262002222035546112/',
+        platform: 'linkedin'
     }
 ]
